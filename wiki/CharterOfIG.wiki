@@ -49,12 +49,12 @@ Because of the development of LOD and the Semantic Web, we can identify resource
 
 The RDF Interest Group has the following goals:
 
-  # Enable the use of GUIDs (specifically HTTP URI GUIDs?) by developing a consensus on the appropriate class/rdf:type designations for biodiversity resources and the basic metadata properties (described using RDF) that should be returned when those GUIDs are resolved.
-  #  Develop recommendations for linkage models to other domains of biodiversity data (taxonomic complexity, observations, phylogenies, etc), carefully critiquing existing ontologies and indicating where development of new ontologies may be needed.
-  # Meet the needs for standardized data exchange by adopting terms from existing vocabularies and ontologies that are suitable for use as data properties of biodiversity resources.  Whenever possible, terms should be taken from existing TDWG standards, or vocabularies that are well-known within the Linked Data and Semantic Web communities.
-  # Develop use-cases and competency questions that include tests of data discovery, exchange and semantic reasoning.
-  # Develop documentation (guides and working examples) to make it easier for others to participate and contribute.  
-  # Focus on the _practical_ with a goal of deployment in the near term.  Accomplish this by leveraging existing vocabularies and ontologies whenever possible.
+  # Enable the use of GUIDs (specifically HTTP URI GUIDs?) by developing a consensus on the appropriate *class/rdf:type designations for biodiversity resources* and the basic metadata properties (described using RDF) that should be returned when those GUIDs are resolved.
+  #  Develop *recommendations for linkage models* to other domains of biodiversity data (taxonomic complexity, observations, phylogenies, etc), carefully critiquing existing ontologies and indicating where development of new ontologies may be needed.
+  # Meet the needs for standardized data exchange by adopting terms from *existing vocabularies and ontologies* that are suitable for use as data properties of biodiversity resources.  Whenever possible, terms should be taken from existing TDWG standards, or vocabularies that are well-known within the Linked Data and Semantic Web communities.
+  # Develop *use-cases and competency questions* that include tests of data discovery, exchange and semantic reasoning.
+  # Develop *documentation* (guides and working examples) to make it easier for others to participate and contribute.  
+  # Focus on the practical with a goal of deployment in the *near term*.  Accomplish this by leveraging existing vocabularies and ontologies whenever possible.
 
 
 == Resources ==
