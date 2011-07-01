@@ -1,6 +1,6 @@
 #summary Charter document for formation of RDF IG
 
-= Resource Description Framework (RDF) Interest Group Charter =
+= Resource Description Framework (RDF) Interest Group Charter (Draft) =
 
 == Co-convenors ==
 
