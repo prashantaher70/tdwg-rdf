@@ -60,5 +60,4 @@ The RDF Interest Group has the following goals:
 == Resources ==
 
   * Google Code site: http://code.google.com/p/tdwg-rdf/
-I could also create a Google Group for a mailing list if you want.
   * Links to the online resources used and promoted by the group - Wiki, mailing list, presentations, tutorials, repository.
