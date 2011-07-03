@@ -2,6 +2,8 @@
 
 = Resource Description Framework (RDF) Interest Group Charter (Draft) =
 
+(see the Downloads area for the charter template upon which this is based)
+
 == Co-convenors ==
 
   * Joel Sachs 
