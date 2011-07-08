@@ -18,7 +18,7 @@
 == Motivation ==
 
   * Within TDWG there is interest in and a need for integration and analysis of metadata for diverse types of resources, using RDF.
-  * RDF encoding of data is a highly appropriate approach to meeting TDWG goals of development of an infrastructure that would facilitate interoperability among TDWG standards and other standards outside the TDWG domain (see History below).
+  * RDF representation of data is a highly appropriate approach to meeting TDWG goals of development of an infrastructure that would facilitate interoperability among TDWG standards and other standards outside the TDWG domain (see History below).
 
 === Why is this group needed?  What is its niche? ===
 
