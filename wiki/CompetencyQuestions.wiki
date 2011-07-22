@@ -3,7 +3,7 @@
 = Introduction =
 
 A number of Darwin Core related efforts are underway, including 
-  * extending Darwin Core to include new terms.
+  * [http://code.google.com/p/darwincore/issues/list extending Darwin Core to include new terms].
   * representing Darwin Core in RDF.
   * harmonizing Darwin Core with genomic metadata standards.
 
