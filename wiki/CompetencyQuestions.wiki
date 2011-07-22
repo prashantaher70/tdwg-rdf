@@ -11,11 +11,11 @@ Until a better home is found for competency questions for the above efforts, we 
 
 = Details =
 
-  # Find all occurrences of <taxon>.
-  # Find all occurrences of <taxon> satisfying <spatial or temporal constraint>.
-  # Find all occurrences of <taxa of concern> (e.g. Find all occurrences of endangered or invasive species)
+  # Find all occurrences of *_taxon_*.
+  # Find all occurrences of *_taxon_* satisfying *_spatial or temporal constraint_*.
+  # Find all occurrences of *_taxa of concern_*. (e.g. "Find all occurrences of endangered or invasive species.")
   # Find all occurrences for which there are no identifications.	
   # Find all occurrences for which there are multiple identifications.
-  # Find all identifications for <occurrence>.
-  # Find all occurrences of <individual>.
-  # Find all identifications of <individual>.
+  # Find all identifications for *_occurrence_*.
+  # Find all identifications of *_individual_*.
+  # Find all occurrences of *_individual_*.
