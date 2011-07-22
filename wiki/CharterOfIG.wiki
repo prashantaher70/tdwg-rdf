@@ -17,8 +17,7 @@
 
 == Motivation ==
 
-  * Within TDWG there is interest in and a need for integration and analysis of metadata for diverse types of resources, using RDF.
-  * RDF representation of data is a highly appropriate approach to meeting TDWG goals of development of an infrastructure that would facilitate interoperability among TDWG standards and other standards outside the TDWG domain (see History below).
+  * TDWG has embraced a semantic web approach to data discovery and integration for the last several years. Semantic web usage patterns have evolved over this period, and continue to evolve. Biodiversity data providers, aggregators, and consumers need examples of usage patterns that work in our domain, and that represent current best practice. The group will determine these usage patterns through experimentation, and will provide well documented examples of using RDF to represent biodiversity data, and SPARQL to query that data.
 
 === Why is this group needed?  What is its niche? ===
 
@@ -43,7 +42,7 @@ In its 2006 ‘roadmap’ (http://www.tdwg.org/uploads/media/TAG_Roadmap_01.doc)
   * “Biodiversity research is typically carried out by combining data of different kinds from multiple sources. The providers of data do not know who will use their data or how it will be combined with data from other sources. The consumer needs some level of commonality across all the data received so that it can be combined for analysis without the need to write computer software for every new combination.” (2007 TAG Roadmap; http://www.tdwg.org/fileadmin/subgroups/tag/TAG_Roadmap_2007_final.pdf) 
   * “If GUIDs are used to uniquely identify 'pieces' of data we need to have a shared understanding of what we mean by a 'piece of data' i.e. what kind of thing is it that a particular id applies to, a specimen, a person, an observation, a complete data set. We also need to have a shared understanding of at least some of the properties we use to describe these things.” (2008 TAG Roadmap; http://www.tdwg.org/fileadmin/subgroups/tag/TAG_Roadmap_2008.pdf)
 
-The 2006 stressed that the Semantic Hub would work across multiple technologies.  One such technology is Resource Description Framework (RDF).  Since 2006, RDF has become an integral part of the development of Linked Open Data (LOD) and the Semantic Web.  LOD and the Semantic Web now span a broad section of the informatics universe and the biodiversity community has an opportunity to participate in this broader effort by adapting its standards to a form (RDF) that is compatible with this broader effort.
+The 2006 roadmap stressed that the Semantic Hub would work across multiple technologies.  One such technology is Resource Description Framework (RDF).  Since 2006, RDF has become an integral part of the development of Linked Open Data (LOD) and the Semantic Web.  LOD and the Semantic Web now span a broad section of the informatics universe and the biodiversity community has an opportunity to participate in this broader effort by adapting its standards to a form (RDF) that is compatible with this broader effort.
 
 Because of the development of LOD and the Semantic Web, we can identify resources globally using HTTP URIs, describe the resources using RDF, and transfer information across the Internet using the HTTP protocol.  Thus a technology now exists to satisfy the three-pronged approach described in 2006.  The primary challenge remaining for implementation is arriving at a common understanding of how RDF should be used to describe biodiversity resources.
 
@@ -51,11 +50,12 @@ Because of the development of LOD and the Semantic Web, we can identify resource
 
 The RDF Interest Group has the following goals:
 
+  # Develop *use-cases and competency questions* that include tests of data discovery, exchange and semantic reasoning.
+  # Experiment with a variety of approaches to addressing the use cases.
+  # Develop documentation (guides and working examples) to make it easier for others to participate and contribute.
   # Enable the use of GUIDs (specifically HTTP URI GUIDs?) by developing a consensus on the appropriate *class/rdf:type designations for biodiversity resources* and the basic metadata properties (described using RDF) that should be returned when those GUIDs are resolved.
   #  Develop *recommendations for linkage models* to other domains of biodiversity data (taxonomic complexity, observations, phylogenies, etc), carefully critiquing existing ontologies and indicating where development of new ontologies may be needed.
-  # Meet the needs for standardized data exchange by adopting terms from *existing vocabularies and ontologies* that are suitable for use as data properties of biodiversity resources.  Whenever possible, terms should be taken from existing TDWG standards, or vocabularies that are well-known within the Linked Data and Semantic Web communities.
-  # Develop *use-cases and competency questions* that include tests of data discovery, exchange and semantic reasoning.
-  # Develop *documentation* (guides and working examples) to make it easier for others to participate and contribute.  
+  # Meet the needs for standardized data exchange by adopting terms from *existing vocabularies and ontologies* that are suitable for use as data properties of biodiversity resources.  Whenever possible, terms should be taken from existing TDWG standards, or vocabularies that are well-known within the Linked Data and Semantic Web communities.  
   # Focus on the practical with a goal of deployment in the *near term*.  Accomplish this by leveraging existing vocabularies and ontologies whenever possible.
 
 
