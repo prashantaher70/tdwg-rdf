@@ -5,7 +5,7 @@
 A number of Darwin Core related efforts are underway, including 
   * [http://code.google.com/p/darwincore/issues/list extending Darwin Core to include new terms].
   * [CharterOfIG representing Darwin Core in RDF].
-  * harmonizing Darwin Core with genomic metadata standards.
+  * [http://gensc.org/gc_wiki/index.php/Biodiversity_Working_Group relating Darwin Core to genomic metadata standards].
 
 Until a better home is found for competency questions for the above efforts, we will collect them here. 
 
