@@ -28,7 +28,25 @@ Terms in *_bold italic_* represent the GUID that would appear in a query.
   # Find all occurrences of taxa whose genome includes a homolog of *_gene_*.
  
 
-== Possible SPARQL queries corresponding to above ==
+== Example and potential SPARQL queries corresponding to above ==
+DwC 1b (query for invasive occurrences):
+{{{PREFIX rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:      <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dwc:       <http://rs.tdwg.org/dwc/terms/#>
+PREFIX issg:       <http://spire.umbc.edu/ontologies/lists/ISSG-GISD.rdf#>
+
+select ?occurrenceID ?taxon
+
+FROM <http://www.csee.umbc.edu/~jsachs/occurrences/TechnoBioblitzOccurrences.rdf>
+FROM <http://spire.umbc.edu/ontologies/lists/ISSG-GISD.rdf>
+
+WHERE {?occurrence dwc:occurrenceID ?occurrenceID .
+       ?occurrence dwc:Identification ?identification .
+       ?identification dwc:taxonConceptID ?taxon .
+       ?taxon rdfs:subClassOf issg:ISSG-GISDThing}
+}}}
+
+
 Dwc 4:
 {{{
 select ?identification
