@@ -7,10 +7,10 @@ A number of Darwin Core related efforts are underway, including
   * [CharterOfIG representing Darwin Core in RDF].
   * [http://gensc.org/gc_wiki/index.php/Biodiversity_Working_Group relating Darwin Core to genomic metadata standards].
 
-A BoF at iEvoBio2011 [http://www.piratepad.net/iEvoBio11-BoF-reportouts discussed] the above (as well as collections-related perspectives), and amongst the agreed next steps was to establish a common repository for use cases and competency questions. Until a better home is found for the competency questions, we will collect them here. 
+A BoF at iEvoBio2011 [http://www.piratepad.net/iEvoBio11-BoF-reportouts discussed] the above (as well as collections-related perspectives), and amongst the agreed next steps was to establish a common repository for use cases and competency questions. Until a better home is found for the competency questions, we will collect them here. [http://marinemetadata.org/references/competencyquestionsoverview Here]'s a nice overview of what competency questions are all about.
 
 = Competency questions =
-
+=== Pure Darwin Core (including proposed new classes) ===
   # Find all occurrences of *_taxon_*.
     * Find all occurrences of *_taxon_* satisfying *_spatial or temporal constraint_*.
     * Find all occurrences of *_taxa of concern_*. (e.g. "Find all occurrences of endangered or invasive species.")
@@ -22,9 +22,26 @@ A BoF at iEvoBio2011 [http://www.piratepad.net/iEvoBio11-BoF-reportouts discusse
   # Find all evidence for *_occurrence_*.
   # Find all evidence to support the identification of *_individual_*
 
+=== Querying biodivesity occurrences based on genomic characters ===
   # Find all occurrences of taxa whose genome includes a homolog of *_gene_*.
  
 
 == Possible SPARQL queries corresponding to above ==
+Dwc 4:
+{{{
+select ?identification
+where {
+        ?identification rdf:type dwc:Identification .
+        ?identification dwc:ofIndividual [individual] .
+}
+}}}
 
-  
+DwC 6:
+{{{
+select ?identification
+where {
+        ?identification rdf:type dwc:Identification .
+        ?identification dwc:ofIndividual [individual] .
+}
+}}}
+
