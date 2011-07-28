@@ -9,13 +9,22 @@ A number of Darwin Core related efforts are underway, including
 
 A BoF at iEvoBio2011 [http://www.piratepad.net/iEvoBio11-BoF-reportouts discussed] the above (as well as collections-related perspectives), and amongst the agreed next steps was to establish a common repository for use cases and competency questions. Until a better home is found for the competency questions, we will collect them here. 
 
-= Competency Questions =
+= Competency questions =
 
   # Find all occurrences of *_taxon_*.
-  # Find all occurrences of *_taxon_* satisfying *_spatial or temporal constraint_*.
-  # Find all occurrences of *_taxa of concern_*. (e.g. "Find all occurrences of endangered or invasive species.")
+    * Find all occurrences of *_taxon_* satisfying *_spatial or temporal constraint_*.
+    * Find all occurrences of *_taxa of concern_*. (e.g. "Find all occurrences of endangered or invasive species.")
   # Find all occurrences for which there are no identifications.	
   # Find all occurrences for which there are multiple identifications.
+  # Find all occurrences of *_individual_*.  
   # Find all identifications for *_occurrence_*.
   # Find all identifications of *_individual_*.
-  # Find all occurrences of *_individual_*.
+  # Find all evidence for *_occurrence_*.
+  # Find all evidence to support the identification of *_individual_*
+
+  # Find all occurrences of taxa whose genome includes a homolog of *_gene_*.
+ 
+
+== Possible SPARQL queries corresponding to above ==
+
+  
