@@ -10,6 +10,8 @@ A number of Darwin Core related efforts are underway, including
 A BoF at iEvoBio2011 [http://www.piratepad.net/iEvoBio11-BoF-reportouts discussed] the above (as well as collections-related perspectives), and amongst the agreed next steps was to establish a common repository for use cases and competency questions. Until a better home is found for the competency questions, we will collect them here. [http://marinemetadata.org/references/competencyquestionsoverview Here]'s a nice overview of what competency questions are all about.
 
 = Competency questions =
+Terms in *_bold italic_* represent the GUID that would appear in a query.
+
 === Darwin Core (including proposed new classes) ===
   # Find all occurrences of *_taxon_*.
     * Find all occurrences of *_taxon_* satisfying *_spatial or temporal constraint_*.
