@@ -62,5 +62,6 @@ The RDF Interest Group has the following goals:
 == Resources ==
 
   * Google Code site: http://code.google.com/p/tdwg-rdf/
+  * Development platform ("sandbox"): http://tdwg-rdf.net/
 
   (“Links to the online resources used and promoted by the group - Wiki, mailing list, presentations, tutorials, repository.”)
