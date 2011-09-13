@@ -1,6 +1,6 @@
 #summary Charter document for formation of RDF IG
 
-= Resource Description Framework (RDF) Interest Group Charter (Draft) =
+= RDF/OWL Task Group Charter (Draft) =
 
 (see http://www.tdwg.org/activities/documentation/templates/ or the Downloads area for the charter template upon which this is based)
 
