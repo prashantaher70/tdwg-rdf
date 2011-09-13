@@ -1,4 +1,4 @@
-#summary Charter document for formation of RDF IG
+#summary Charter document for formation of RDF/OWL TG
 
 = RDF/OWL Task Group Charter (Draft) =
 
@@ -51,12 +51,10 @@ These will be written up, and will help to define the scope of a workshop to be 
   * Persons having practical experience creating RDF, using RDF for metadata integration, and performing reasoning tasks would be valued participants in the group.  
   * Because the focus of this group is on practical applications, metadata providers, consumers, and aggregators can make important contributions to the group, particularly through contribution of use cases and testing of models.  
   * Please contact one of the convenors to register your interest.
-
-  (“This section is required. How could an individual reading this help the group? What skills are currently in need? Who should be contacted?”)
  
 == History/Context ==
 
-In its 2006 ‘roadmap’ (http://www.tdwg.org/uploads/media/TAG_Roadmap_01.doc) the TDWG Technical Architecture Group (TAG) described a three-pronged approach to the development of an infrastructure that would facilitate interoperability among TDWG standards and other standards outside the TDWG domain.  This approach consisted of: a Semantic Hub (a type catalogue or ontology), a system of Globally Unique Identifiers (GUIDs), and well defined data exchange protocols.  Key to the functioning of this infrastructure is a common understanding of the types and properties used to describe resources.  This imperative was expressed in subsequent Roadmaps:
+In its 2006 ‘roadmap’ (http://www.tdwg.org/uploads/media/TAG_Roadmap_01.doc) the TDWG Technical Architecture Group (TAG) described a three-pronged approach to the development of an infrastructure that would facilitate interoperability among TDWG standards and other standards outside the TDWG domain.  This approach consisted of: a Semantic Hub (a type catalog or ontology), a system of Globally Unique Identifiers (GUIDs), and well defined data exchange protocols.  Key to the functioning of this infrastructure is a common understanding of the types and properties used to describe resources.  This imperative was expressed in subsequent Roadmaps:
 
   * “Biodiversity research is typically carried out by combining data of different kinds from multiple sources. The providers of data do not know who will use their data or how it will be combined with data from other sources. The consumer needs some level of commonality across all the data received so that it can be combined for analysis without the need to write computer software for every new combination.” (2007 TAG Roadmap; http://www.tdwg.org/fileadmin/subgroups/tag/TAG_Roadmap_2007_final.pdf) 
   * “If GUIDs are used to uniquely identify 'pieces' of data we need to have a shared understanding of what we mean by a 'piece of data' i.e. what kind of thing is it that a particular id applies to, a specimen, a person, an observation, a complete data set. We also need to have a shared understanding of at least some of the properties we use to describe these things.” (2008 TAG Roadmap; http://www.tdwg.org/fileadmin/subgroups/tag/TAG_Roadmap_2008.pdf)
@@ -66,6 +64,8 @@ The 2006 roadmap stressed that the Semantic Hub would work across multiple techn
 Because of the development of LOD and the Semantic Web, we can identify resources globally using HTTP URIs, describe the resources using RDF, and transfer information across the Internet using the HTTP protocol.  Thus a technology now exists to satisfy the three-pronged approach described in 2006.  The primary challenge remaining for implementation is arriving at a common understanding of how RDF should be used to describe biodiversity resources.
 
 == Summary ==
+The main output of this task group will be well documented examples of using rdf and sparql to address a wide range of biodiversity informatics use cases. Our first order of business will be to collect use cases and competency questions, and to make them easily available for reference and update on a wiki. Our next order of business will be to experiment with a variety of patterns for addressing these use cases on the semantic web, noting carefully the advantages and limitations of each approach. Since semantic web usage evolves over time, our deliverable will be a living document, to be maintained either by the TAG, or by a new Semantic Web Interest Group to be spun-off after our outputs are delivered.
+
 
 == Resources ==
 
