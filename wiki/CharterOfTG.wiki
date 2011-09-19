@@ -33,7 +33,7 @@ The RDF/OWL Task Group has the following goals:
   # Develop *use-cases and competency questions* that include tests of data discovery, exchange and semantic reasoning.
   # Experiment with a variety of approaches to addressing the use cases.
   # Develop documentation (guides and working examples) to make it easier for others to participate and contribute.
-  # Enable the use of GUIDs (specifically HTTP URI GUIDs?) by developing a consensus on the appropriate *class/rdf:type designations for biodiversity resources* and the basic metadata properties (described using RDF) that should be returned when those GUIDs are resolved.
+  # Enable the use of GUIDs (specifically HTTP URI GUIDs) by developing a consensus on the appropriate *class/rdf:type designations for biodiversity resources* and the basic metadata properties (described using RDF) that should be returned when those GUIDs are resolved.
   #  Develop *recommendations for linkage models* to other domains of biodiversity data (taxonomic complexity, observations, phylogenies, etc), carefully critiquing existing ontologies and indicating where development of new ontologies may be needed.
   # Meet the needs for standardized data exchange by identifying terms from *existing vocabularies and ontologies* that are suitable for use as data properties of biodiversity resources.  Whenever possible, terms should be taken from existing TDWG standards, or vocabularies that are well-known within the Linked Data and Semantic Web communities.  
   # Focus on the practical with a goal of deployment in the *near term*.  Accomplish this by leveraging existing vocabularies and ontologies whenever possible.
