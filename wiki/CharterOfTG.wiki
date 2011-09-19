@@ -24,7 +24,7 @@
 
 == Motivation ==
 
-  * TDWG has embraced a semantic web approach to data discovery and integration for the last several years. As discussion on tdwg-content has demonstrated, there is disagreement over almost every aspect of this vision. Further, semantic web usage patterns have evolved over this period, and continue to evolve. Biodiversity data providers, aggregators, and consumers need examples of usage patterns that work in our domain, and that represent current best practice. The group will determine such usage patterns through experimentation, and will provide well documented examples of using RDF to represent biodiversity data, and SPARQL to query that data.
+  * TDWG has embraced a semantic web approach to data discovery and integration for the last several years. As discussion on tdwg-content has demonstrated, there is disagreement over many details of this vision. Further, semantic web usage patterns have evolved over this period, and continue to evolve. Biodiversity data providers, aggregators, and consumers need examples of usage patterns that work in our domain, and that represent current best practice. The group will determine such usage patterns through experimentation, and will provide well documented examples of using RDF to represent biodiversity data, and SPARQL to query that data.
 
 == Goals, Outputs, and Outcomes ==
 
