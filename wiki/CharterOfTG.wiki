@@ -38,6 +38,7 @@ The RDF/OWL Task Group has the following goals:
   # Meet the needs for standardized data exchange by identifying terms from *existing vocabularies and ontologies* that are suitable for use as data properties of biodiversity resources.  Whenever possible, terms should be taken from existing TDWG standards, or vocabularies that are well-known within the Linked Data and Semantic Web communities.  
   # Focus on the practical with a goal of deployment in the *near term*.  Accomplish this by leveraging existing vocabularies and ontologies whenever possible.
 
+*Outputs*
 Our primary deliverable will be an on-line document comprising i) use cases and competency questions covering a range of biodiversity informatics; and ii) well documented examples of using rdf/owl and sparql to address those use cases. We will deliver this to the TAG and to the broader community one year after our charter is received.
 
 == Strategy ==
