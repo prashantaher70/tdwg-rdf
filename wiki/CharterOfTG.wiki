@@ -45,7 +45,7 @@ Our primary deliverable will be an on-line document comprising i) use cases and 
 == Strategy ==
 
 The cost of entry to our kickoff meeting at TDWG 2011 will be to present *something*, e.g. a use case, an example, a question, a proposed solution, or a stumbling block (encountered or anticipated). 
-These will be written up, and will help to define the scope of a workshop to be held in early 2012. The output of the workshop will be a draft of our deliverable, which will live on-line to be edited my group members. 
+These will be written up, and will help to define the scope of a workshop to be held in early 2012. The output of the workshop will be a draft of our deliverable, which will live on-line to be edited by group members. 
 
 == Becoming Involved ==
 
