@@ -26,37 +26,33 @@
 
 Semantic web approaches to data discovery and integration have gained increasing traction across many data-driven domains and sciences. Biodiversity information is no exception to that. While the Biodiversity Information Standards (TDWG) organization has embraced semantic web approaches in recent years, the practices, patterns, and conventions that would best further the data and knowledge discovery objectives yet  keep the barrier to entry low are still being openly debated and often contentious.  At the same time, semantic web usage patterns continue to evolve as the technology becomes more widely adopted and faces new requirements both from data publishers as well as consumers. 
 
-These issues are far from unique to the field of biodiversity data and information, and are actively being addressed by a large and engaged  community of expert practitioners and researchers, a large part of which organizes itself in W3C standards initiatives, domain-agnostic semantic web events, etc.  By necessity, the pattern and best practice recommendations resulting from these efforts are typically documented using general-purpose use-cases, data, and query applications, which often fail to relate in obvious ways to biodiversity science-driven use-cases of data publication and consumption.  As a result, there is considerable confusion and uncertainty about how to apply general semantic web publishing patterns for biodiversity science applications, and how to stay on top of the rapidly evolving landscape of applicable technologies and conventions.
+These issues are far from unique to the field of biodiversity data and information, and are actively being addressed by a large and engaged  community of expert practitioners and researchers, a large part of which organizes itself in W3C standards initiatives, domain-agnostic semantic web events, etc.  By necessity, the pattern and best practice recommendations resulting from these efforts are typically documented using general-purpose use-cases, data, and query applications, which often fail to relate in obvious ways to biodiversity science-driven use-cases of data publication and consumption.  As a result, there is considerable confusion and uncertainty about how to apply general semantic web publishing patterns in biodiversity science applications, and how to stay on top of the rapidly evolving landscape of applicable technologies and conventions.
 
-This Task Group will serve as a bridge from and to the semantic web research, development, and standardization initiatives that are more general in scope or more advanced than the biodiversity information field. The group aims to leverage semantic web advances made in those initiatives to lower the barriers to wider adoption and application of semantic web approaches within biodiversity science, and to feed back to the larger semantic web community the technological and standards needs arising from biodiversity data.  Whenever possible, the group will demonstrate and validate its findings through practical experimentation with using RDF and OWL to represent, integrate, and query biodiversity data in ways that emulate actual needs of biodiversity data providers, aggregators, and consumers.
+This Task Group will serve as a bridge from and to the semantic web research, development, and standardization initiatives that are more general in scope or more advanced than the biodiversity information field. The group aims to leverage advances made in those initiatives to lower the barriers to wider adoption and application of semantic web approaches within biodiversity science, and to feed back to the larger semantic web community the technological and standards needs arising from biodiversity data.  Whenever possible, the group will demonstrate and validate its findings through practical experimentation with RDF and OWL to represent, integrate, and query biodiversity data in ways that emulate actual needs of biodiversity data providers, aggregators, and consumers.
 
 == Goals, Outputs, and Outcomes ==
 
-The RDF/OWL Task Group has the following goals:
+The goals of the RDF/OWL Task Group will continuously evolve in response to technology and standards advances, but will initially include the following:
 
-  # Develop *use-cases and competency questions* that include tests of data discovery, exchange and semantic reasoning.
-  # Experiment with a variety of approaches to addressing the use cases.
+  # Develop *use-cases and competency questions* that include tests of biodiversity data discovery, exchange and semantic reasoning.
+  # Experiment with a variety of technical and RDF/OWL modeling approaches to addressing the use cases.
   # Develop documentation (guides and working examples) to make it easier for others to participate and contribute.
-  # Enable the use of GUIDs (specifically HTTP URI GUIDs) by developing a consensus on the appropriate *class/rdf:type designations for biodiversity resources* and the basic metadata properties (described using RDF) that should be returned when those GUIDs are resolved.
-  #  Develop *recommendations for linkage models* to other domains of biodiversity data (taxonomic complexity, observations, phylogenies, etc), carefully critiquing existing ontologies and indicating where development of new ontologies may be needed.
-  # Meet the needs for standardized data exchange by identifying terms from *existing vocabularies and ontologies* that are suitable for use as data properties of biodiversity resources.  Whenever possible, terms should be taken from existing TDWG standards, or vocabularies that are well-known within the Linked Data and Semantic Web communities.  
-  # Focus on the practical with a goal of deployment in the *near term*.  Accomplish this by leveraging existing vocabularies and ontologies whenever possible.
+  # Enable the use of GUIDs (specifically HTTP URIs) by developing a consensus on the appropriate *class/rdf:type designations for biodiversity resources* and the basic metadata properties (described using RDF or OWL) that are needed to describe the resources identified by those GUIDs
+  #  Develop *recommendations for linkage models* to other domains of biodiversity data (taxonomic complexity, observations, phylogenies, etc), including the review of existing ontologies and vocabularies, and the identification of new ontology development needs.
+
+In pursuing these, the group will focus on the practical with a goal of deployment in the *near term*. As a consequence, priority will be placed on leveraging existing vocabularies, ontologies, conventions, and other resources whenever possible.
 
 ===Outputs===
 
-Our primary deliverable will be an on-line document comprising i) use cases and competency questions covering a range of biodiversity informatics; and ii) well documented examples of using rdf/owl and sparql to address those use cases. We will deliver this to the TAG and to the broader community one year after our charter is received.
-
-== Strategy ==
-
-The cost of entry to our kickoff meeting at TDWG 2011 will be to present *something*, e.g. a use case, an example, a question, a proposed solution, or a stumbling block (encountered or anticipated). 
-These will be written up, and will help to define the scope of a workshop to be held in early 2012. The output of the workshop will be a draft of our deliverable, which will live on-line to be edited by group members. 
+Our primary deliverables consist of on-line documents comprising i) use cases and competency questions covering a range of biodiversity informatics; and ii) well documented and validated examples of using RDF/OWL and SPARQL to address those use cases. All documents will be published so that they facilitate continued community maintenance.
 
 == Becoming Involved ==
 
   * The TDWG community includes users from across the spectrum of biodiversity informatics who can share knowledge and practical experience in the application of RDF.  Anyone with an interest in applying RDF in a biodiversity context is welcome to be involved in the group.
   * Persons having practical experience creating RDF, using RDF for metadata integration, and performing reasoning tasks would be valued participants in the group.  
   * Because the focus of this group is on practical applications, metadata providers, consumers, and aggregators can make important contributions to the group, particularly through contribution of use cases and testing of models.  
-  * Please contact one of the convenors to register your interest.
+ 
+Please contact one of the convenors to register your interest.
  
 == History/Context ==
 
@@ -65,8 +61,7 @@ In its 2006 ‘roadmap’ (http://www.tdwg.org/uploads/media/TAG_Roadmap_01.doc)
 There is broad sentiment within TDWG that we should pursue this approach via the Semantic Web/Linked Open Data. We can identify resources globally using HTTP URIs, describe the resources using RDF, and transfer information across the Internet using the HTTP protocol. The primary challenge  for implementation is arriving at a common understanding of how RDF should be used to describe biodiversity resources. 
 
 == Summary ==
-The main output of this task group will be well documented examples of using rdf and sparql to address a wide range of biodiversity informatics use cases. Our first order of business will be to collect use cases and competency questions, and to make them easily available for reference and update on a wiki. Our next order of business will be to experiment with a variety of patterns for addressing these use cases on the semantic web, noting carefully the advantages and limitations of each approach. Since semantic web usage evolves over time, our deliverable will be a living document, to be maintained either by the TAG, or by a new Semantic Web Interest Group to be spun-off after our outputs are delivered.
-
+The main output of this task group will be well documented and validated examples of using and querying RDF / OWL to address a wide range of biodiversity informatics use cases. We will collect such use cases, or competency questions, and make them easily available for reference and update on a wiki. Our approach will focus on experimenting with a variety of semantic web tools and patterns for addressing the use cases, while documenting the lessons learned. Since semantic web usage is still rapidly evolving, our deliverables will be living documents that can be maintained in a collaborative and distributed manner.
 
 == Resources ==
 
