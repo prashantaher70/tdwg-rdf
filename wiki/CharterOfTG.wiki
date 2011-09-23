@@ -20,11 +20,15 @@
   * Paul Murray
   * ... Please join us!
 
-  (TDWG TG guidelines: “Core members are not people who may have contributed in the past. This is not a credits list. Members of the group will be identified through the membership. Core members could explain to an outsider the purpose, justification and current activities of the group. Any core member could substitute for the Convener when required.”)
+  (TDWG TG guidelines: “Core members [...] could explain to an outsider the purpose, justification and current activities of the group. Any core member could substitute for the Convener when required.”)
 
 == Motivation ==
 
-  * TDWG has embraced a semantic web approach to data discovery and integration for the last several years. But, as discussion on tdwg-content has demonstrated, there is disagreement over many details of this vision. Further, semantic web usage patterns have evolved over this period, and continue to evolve. Biodiversity data providers, aggregators, and consumers need examples of usage patterns that work in our domain, and that represent current best practice. The group will determine such usage patterns through experimentation, and will provide well documented examples of using RDF to represent biodiversity data, and SPARQL to query that data.
+Semantic web approaches to data discovery and integration have gained increasing traction across many data-driven domains and sciences. Biodiversity information is no exception to that. While the Biodiversity Information Standards (TDWG) organization has embraced semantic web approaches in recent years, the practices, patterns, and conventions that would best further the data and knowledge discovery objectives yet  keep the barrier to entry low are still being openly debated and often contentious.  At the same time, semantic web usage patterns continue to evolve as the technology becomes more widely adopted and faces new requirements both from data publishers as well as consumers. 
+
+These issues are far from unique to the field of biodiversity data and information, and are actively being addressed by a large and engaged  community of expert practitioners and researchers, a large part of which organizes itself in W3C standards initiatives, domain-agnostic semantic web events, etc.  By necessity, the pattern and best practice recommendations resulting from these efforts are typically documented using general-purpose use-cases, data, and query applications, which often fail to relate in obvious ways to biodiversity science-driven use-cases of data publication and consumption.  As a result, there is considerable confusion and uncertainty about how to apply general semantic web publishing patterns for biodiversity science applications, and how to stay on top of the rapidly evolving landscape of applicable technologies and conventions.
+
+This Task Group will serve as a bridge from and to the semantic web research, development, and standardization initiatives that are more general in scope or more advanced than the biodiversity information field. The group aims to leverage semantic web advances made in those initiatives to lower the barriers to wider adoption and application of semantic web approaches within biodiversity science, and to feed back to the larger semantic web community the technological and standards needs arising from biodiversity data.  Whenever possible, the group will demonstrate and validate its findings through practical experimentation with using RDF and OWL to represent, integrate, and query biodiversity data in ways that emulate actual needs of biodiversity data providers, aggregators, and consumers.
 
 == Goals, Outputs, and Outcomes ==
 
@@ -66,7 +70,7 @@ The main output of this task group will be well documented examples of using rdf
 
 == Resources ==
 
-  * Google Code site: http://code.google.com/p/tdwg-rdf/
+Online resources used and promoted by the group, including Wiki, mailing list, presentations, tutorials, repository.
+  * [http://code.google.com/p/tdwg-rdf/ Code and Interest Group on Google Code]
+  * [http://code.google.com/p/tdwg-rdf/w/list Wiki] 
   * Development platform ("sandbox"): http://tdwg-rdf.net/
-
-  (“Links to the online resources used and promoted by the group - Wiki, mailing list, presentations, tutorials, repository.”)
