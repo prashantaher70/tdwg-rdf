@@ -18,13 +18,14 @@
   * Hilmar Lapp
   * John Deck
   * Paul Murray
+  * Dag Endresen
   * ... Please join us!
 
   (TDWG TG guidelines: “Core members [...] could explain to an outsider the purpose, justification and current activities of the group. Any core member could substitute for the Convener when required.”)
 
 == Motivation ==
 
-Semantic web approaches to data discovery and integration have gained increasing traction across many data-driven domains and sciences. Biodiversity information is no exception to that. While the Biodiversity Information Standards (TDWG) organization has embraced semantic web approaches in recent years, the practices, patterns, and conventions that would best further the data and knowledge discovery objectives yet  keep the barrier to entry low are still being openly debated and often contentious.  At the same time, semantic web usage patterns continue to evolve as the technology becomes more widely adopted and faces new requirements both from data publishers as well as consumers. 
+Semantic web approaches to data discovery and integration have gained increasing traction across many data-driven domains and sciences. Biodiversity information is no exception to that. While the Biodiversity Information Standards (TDWG) organization has embraced semantic web approaches in recent years, the practices, patterns, and conventions that would best further the data and knowledge discovery objectives yet  keep the barrier to entry low are still being openly debated, often contentiously.  At the same time, semantic web usage patterns continue to evolve as the technology becomes more widely adopted and faces new requirements both from data publishers as well as consumers. 
 
 These issues are far from unique to the field of biodiversity data and information, and are actively being addressed by a large and engaged  community of expert practitioners and researchers, a large part of which organizes itself in W3C standards initiatives, domain-agnostic semantic web events, etc.  By necessity, the pattern and best practice recommendations resulting from these efforts are typically documented using general-purpose use-cases, data, and query applications, which often fail to relate in obvious ways to biodiversity science-driven use-cases of data publication and consumption.  As a result, there is considerable confusion and uncertainty about how to apply general semantic web publishing patterns in biodiversity science applications, and how to stay on top of the rapidly evolving landscape of applicable technologies and conventions.
 
