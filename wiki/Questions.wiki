@@ -1,13 +1,12 @@
 #summary One-sentence summary of this page.
 
-= Introduction =
+== Introduction ==
 
 Do you have questions about using RDF/OWL for biodiversity data that you would like answered by the Task Group? Ask them here. Do you have questions about the group itself? You can ask those to.
 
 
-= Details =
+== Example 1 ==
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Is this my first question?
+     - Joel
+----
