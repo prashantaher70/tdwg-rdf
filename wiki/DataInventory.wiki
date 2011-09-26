@@ -1,0 +1,9 @@
+#summary One-sentence summary of this page.
+
+== Introduction ==
+
+In response to [http://lists.tdwg.org/pipermail/tdwg-tag/2011-September/002381.html Rod Page's challenge], in follow-up to [http://piratepad.net/iEvoBio11-BoF-reportouts discussions on creating a biodiversity RDF sandbox], and in furtherance of our mission, we will load as much biodiversity data as we can into a triplestore. We'll use this page to inventory the data we probably want to include. Where possible, include links to rdf representations of the data (data dumps, sparql endpoints, etc.)
+
+== Biodiversity RDF datasets and other semantic web infrastructure == 
+
+
