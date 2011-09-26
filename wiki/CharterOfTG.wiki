@@ -19,6 +19,7 @@
   * John Deck
   * Paul Murray
   * Dag Endresen
+  * Paul Morris
   * ... Please join us!
 
   (TDWG TG guidelines: “Core members [...] could explain to an outsider the purpose, justification and current activities of the group. Any core member could substitute for the Convener when required.”)
