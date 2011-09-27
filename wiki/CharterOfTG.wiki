@@ -20,6 +20,7 @@
   * Paul Murray
   * Dag Endresen
   * Paul Morris
+  * Greg Whitbread
   * ... Please join us!
 
   (TDWG TG guidelines: “Core members [...] could explain to an outsider the purpose, justification and current activities of the group. Any core member could substitute for the Convener when required.”)
@@ -46,7 +47,7 @@ In pursuing these, the group will focus on the practical with a goal of deployme
 
 ===Outputs===
 
-Our primary deliverables consist of on-line documents comprising i) use cases and competency questions covering a range of biodiversity informatics; and ii) well documented and validated examples of using RDF/OWL and SPARQL to address those use cases. All documents will be published so that they facilitate continued community maintenance.
+Our primary deliverables consist of on-line documents comprising i) use cases and competency questions covering a range of biodiversity informatics; and ii) well documented and validated examples of using RDF/OWL and SPARQL to address those use cases. We will deliver these to the TAG and to the broader community one year after our charter is received. All documents will be published so that they facilitate continued community maintenance.
 
 == Becoming Involved ==
 
