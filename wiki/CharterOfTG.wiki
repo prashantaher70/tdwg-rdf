@@ -1,6 +1,6 @@
 #summary Charter document for formation of RDF/OWL TG
 
-= RDF/OWL Task Group Charter (Draft) =
+= RDF/OWL Task Group Charter =
 
 
 == Co-convenors ==
