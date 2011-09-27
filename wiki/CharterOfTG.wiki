@@ -2,7 +2,6 @@
 
 = RDF/OWL Task Group Charter (Draft) =
 
-(see http://www.tdwg.org/activities/documentation/templates/ or the Downloads area for the charter template upon which this is based)
 
 == Co-convenors ==
 
@@ -23,7 +22,6 @@
   * Greg Whitbread
   * ... Please join us!
 
-  (TDWG TG guidelines: “Core members [...] could explain to an outsider the purpose, justification and current activities of the group. Any core member could substitute for the Convener when required.”)
 
 == Motivation ==
 
