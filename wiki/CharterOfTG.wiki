@@ -45,7 +45,7 @@ In pursuing these, the group will focus on the practical with a goal of deployme
 
 ===Outputs===
 
-Our primary deliverables consist of on-line documents comprising i) use cases and competency questions covering a range of biodiversity informatics; and ii) well documented and validated examples of using RDF/OWL and SPARQL to address those use cases. We will deliver these to the TAG and to the broader community within a one year time frame. 
+Our primary deliverables consist of on-line documents comprising i) use cases and competency questions covering a range of biodiversity informatics; and ii) well documented and validated examples of using RDF/OWL and SPARQL to address those use cases. We will deliver these to the TAG and to the broader community within a one year time frame.  All documents will be published so that they facilitate continued community maintenance. 
 
 == Becoming Involved ==
 
