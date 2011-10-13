@@ -1,7 +1,7 @@
 #summary Charter document for formation of RDF/OWL TG
 
 = RDF/OWL Task Group Charter =
-
+The RDF/OWL group is a task group of the [http://www.tdwg.org/activities/tag/ | TAG] (the TDWG Technical Architecture Group).
 
 == Co-convenors ==
 
@@ -39,6 +39,7 @@ The goals of the RDF/OWL Task Group will continuously evolve in response to tech
   # Experiment with a variety of technical and RDF/OWL modeling approaches to addressing the use cases.
   # Develop documentation (guides and working examples) to make it easier for others to participate and contribute.
   # Enable the use of [http://www.tdwg.org/standards/150/ GUIDs] (specifically [http://www.w3.org/TR/cooluris/ HTTP URIs]) by developing a consensus on the appropriate *[http://www.w3.org/TR/rdf-primer/#schemaclasses class/rdf:type] designations for biodiversity resources* and the basic metadata properties (described using RDF or OWL) that are needed to describe the resources identified by those GUIDs
+  # Identify specific ontologies and vocabularies for use in the domain.
   #  Develop *recommendations for linkage models* to other domains of biodiversity data (taxonomic complexity, observations, phylogenies, etc), including the review of existing ontologies and vocabularies, and the identification of new ontology development needs.
 
 In pursuing these, the group will focus on the practical with a goal of deployment in the *near term*. As a consequence, priority will be placed on leveraging existing vocabularies, ontologies, conventions, and other resources whenever possible.
@@ -57,9 +58,9 @@ Please contact one of the convenors to register your interest.
  
 == History/Context ==
 
-In its 2006 ‘roadmap’ (http://www.tdwg.org/uploads/media/TAG_Roadmap_01.doc) the [http://www.tdwg.org/activities/tag/ TDWG Technical Architecture Group (TAG)] described a three-pronged approach to the development of an infrastructure that would facilitate interoperability among TDWG standards and other standards outside the TDWG domain.  This approach consisted of: a Semantic Hub (a type catalog or ontology), a system of Globally Unique Identifiers (GUIDs), and well defined data exchange protocols. 
+In its [http://www.tdwg.org/uploads/media/TAG_Roadmap_01.doc 2006 Roadmap] the [http://www.tdwg.org/activities/tag/ TDWG Technical Architecture Group (TAG)] described a three-pronged approach to the development of an infrastructure that would facilitate interoperability among TDWG standards and other standards outside the TDWG domain.  This approach consisted of: a Semantic Hub (a type catalog or ontology), a system of Globally Unique Identifiers (GUIDs), and well defined data exchange protocols. 
 
-There is broad sentiment within TDWG that we should pursue this approach via the Semantic Web/[http://linkeddata.org/ Linked Open Data]. We can identify resources globally using HTTP URIs, describe the resources using RDF, and transfer information across the Internet using the [http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol HTTP protocol]. The primary challenge  for implementation is arriving at a common understanding of how RDF should be used to describe biodiversity resources. 
+There is broad sentiment within TDWG that we should pursue this approach via the Semantic Web/[http://linkeddata.org/ Linked Open Data]. We can identify resources globally using HTTP URIs, describe the resources using RDF, and transfer information across the Internet using the [http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol HTTP protocol]. The primary challenge  for implementation is arriving at a common understanding of how RDF should be used to describe biodiversity resources. Thus, we see the group as paving the way for implementation of the [http://wiki.tdwg.org/twiki/pub/TAG/RoadMap2008/TDWG_TAG_Roadmap_2008.pdf | latest version (2008) of the Roadmap].
 
 == Summary ==
 The main output of this task group will be well documented and validated examples of using and querying RDF / OWL to address a wide range of biodiversity informatics use cases. We will collect use cases and competency questions, and make them easily available for reference and update on a wiki. Our approach will focus on experimenting with a variety of semantic web tools and patterns for addressing the use cases, while documenting the lessons learned. Since semantic web usage is still rapidly evolving, our deliverables will be living documents that can be maintained in a collaborative and distributed manner.
