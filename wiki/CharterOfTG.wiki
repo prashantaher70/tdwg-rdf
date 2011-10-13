@@ -1,7 +1,7 @@
 #summary Charter document for formation of RDF/OWL TG
 
 = RDF/OWL Task Group Charter =
-The RDF/OWL group is a task group of the [http://www.tdwg.org/activities/tag/ | TAG] (the TDWG Technical Architecture Group).
+The RDF/OWL group is a task group of the [http://www.tdwg.org/activities/tag/ TAG] (the TDWG Technical Architecture Group).
 
 == Co-convenors ==
 
