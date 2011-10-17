@@ -20,8 +20,8 @@ The RDF/OWL group is a task group of the [http://www.tdwg.org/activities/tag/ TA
   * Dag Endresen
   * Paul Morris
   * Greg Whitbread
+  * Ben Richardson
   * ... Please join us!
-
 
 == Motivation ==
 
