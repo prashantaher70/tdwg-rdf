@@ -178,3 +178,13 @@ Below are snippets (in turtle) of the data objects provided:
     tdwg_co:publishedInCitation <http://dx.doi.org/10.1111/j.1096-3642.1988.tb00880.x> ;
     a tdwg_tn:TaxonName .
 }}}
+
+=== Uniprot x Wikipedia: linkout.rdf ===
+
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://purl.uniprot.org/taxonomy/888540>
+    rdfs:seeAlso <http://dbpedia.org/resource/Telmatobius_yuracare> .
+}}}
