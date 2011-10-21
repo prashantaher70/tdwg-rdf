@@ -1,0 +1,109 @@
+#summary Rod Page set a challenge to actually use a set of RDF data
+
+= Rod Page's Challenge =
+
+
+== Appendix: Data provided by Rod ==
+
+Below are snippets (in turtle) of the data objects provided:
+
+=== crossref.rdf ===
+
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns0: <http://purl.org/dc/terms/> .
+
+<http://dx.doi.org/10.1111/j.1096-3642.1988.tb00880.x>
+    <http://prismstandard.org/namespaces/basic/2.1/doi> "10.1111/j.1096-3642.1988.tb00880.x" ;
+    <http://prismstandard.org/namespaces/basic/2.1/endingPage> "38" ;
+    <http://prismstandard.org/namespaces/basic/2.1/startingPage> "1" ;
+    <http://prismstandard.org/namespaces/basic/2.1/volume> "94" ;
+    ns0:creator <http://id.crossref.org/contributor/david-c-cannatella-1zt56awxdhgrh>, <http://id.crossref.org/contributor/linda-trueb-1zt56awxdhgrh> ;
+    ns0:date "1988-09-15Z"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    ns0:identifier "10.1111/j.1096-3642.1988.tb00880.x" ;
+    ns0:isPartOf <http://id.crossref.org/issn/0024-4082> ;
+    ns0:title "Evolution of pipoid frogs: intergeneric relationships of the aquatic frog family Pipidae (Anura)" ;
+    <http://purl.org/ontology/bibo/doi> "10.1111/j.1096-3642.1988.tb00880.x" ;
+    <http://purl.org/ontology/bibo/pageEnd> "38" ;
+    <http://purl.org/ontology/bibo/pageStart> "1" ;
+    <http://purl.org/ontology/bibo/volume> "94" ;
+    a <http://purl.org/ontology/bibo/Article> ;
+    <http://www.w3.org/2002/07/owl#sameAs> <doi:10.1111/j.1096-3642.1988.tb00880.x>, <info:doi/10.1111/j.1096-3642.1988.tb00880.x> .
+
+<http://id.crossref.org/issn/0024-4082>
+    <http://prismstandard.org/namespaces/basic/2.1/eIssn> "1096-3642" ;
+    <http://prismstandard.org/namespaces/basic/2.1/issn> "0024-4082" ;
+    ns0:hasPart <http://dx.doi.org/10.1111/j.1096-3642.1988.tb00880.x>, <http://dx.doi.org/10.1111/j.1096-3642.1995.tb01427.x>, <http://dx.doi.org/10.1111/j.1096-3642.2006.00223.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00397.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00424.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00440.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00466.x>, <http://dx.doi.org/10.1111/j.1096-3642.2009.00579.x>, <http://dx.doi.org/10.1111/j.1096-3642.2010.00641.x>, <http://dx.doi.org/10.1111/j.1096-3642.2010.00652.x> ;
+    ns0:identifier "0024-4082" ;
+    ns0:title "Zoological Journal of the Linnean Society" ;
+    <http://purl.org/ontology/bibo/eissn> "1096-3642" ;
+    <http://purl.org/ontology/bibo/issn> "0024-4082" ;
+    a <http://purl.org/ontology/bibo/Journal> ;
+    <http://www.w3.org/2002/07/owl#sameAs> <urn:issn:0024-4082> .
+
+<http://id.crossref.org/contributor/david-c-cannatella-1zt56awxdhgrh>
+    a <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/familyName> "CANNATELLA" ;
+    <http://xmlns.com/foaf/0.1/givenName> "DAVID C." ;
+    <http://xmlns.com/foaf/0.1/name> "DAVID C. CANNATELLA" .
+}}}
+
+=== dbpedia.rdf ===
+
+*Note* Rod's original file had a error: a `</rdf:RDF>` at line 7502.  The fixed file is at http://tdwd-rdf.net/static/rdmpage/dbpedia.rdf.
+
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbpedia-owl: <http://dbpedia.org/ontology/> .
+@prefix dbpprop: <http://dbpedia.org/property/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix grs: <http://www.georss.org/georss/> .
+
+<http://dbpedia.org/resource/Acanthixalus_spinosus>
+    dbpedia-owl:abstract "Acanthixalus spinosus es una especie de anfibios de la familia Hyperoliidae. Habita en Camerún, República del Congo, República Democrática del Congo, Gabón, Nigeria y, posiblemente Angola, República Centroafricana y Guinea Ecuatorial. Su hábitat natural incluye bosques tropicales o subtropicales secos y a baja altitud y zonas previamente boscosas ahora degradadas. Está amenazada de extinción por la pérdida de su hábitat natural."@es, "Acanthixalus spinosus est une espèce d'amphibien de la famille des Hyperoliidae."@fr, "Acanthixalus spinosus is a species of frog in the Hyperoliidae family. It is found in Cameroon, Republic of the Congo, Democratic Republic of the Congo, Gabon, Nigeria, possibly Angola, possibly Central African Republic, and possibly Equatorial Guinea. Its natural habitats are subtropical or tropical moist lowland forests and heavily degraded former forest. It is threatened by habitat loss."@en ;
+    dbpedia-owl:class <http://dbpedia.org/resource/Amphibian> ;
+    dbpedia-owl:conservationStatus "LC"@en ;
+    dbpedia-owl:conservationStatusSystem "IUCN3.1"@en ;
+    dbpedia-owl:family <http://dbpedia.org/resource/Hyperoliidae> ;
+    dbpedia-owl:genus <http://dbpedia.org/resource/Acanthixalus> ;
+    dbpedia-owl:kingdom <http://dbpedia.org/resource/Animal> ;
+    dbpedia-owl:order <http://dbpedia.org/resource/Frog> ;
+    dbpedia-owl:phylum <http://dbpedia.org/resource/Chordate> ;
+    dbpprop:binomial "Acanthixalus spinosus"@en ;
+    dbpprop:classis <http://dbpedia.org/resource/Amphibian> ;
+    dbpprop:familia <http://dbpedia.org/resource/Hyperoliidae> ;
+    dbpprop:genus "Acanthixalus"@en ;
+    dbpprop:name "Acanthixalus spinosus"@en ;
+    dbpprop:ordo <http://dbpedia.org/resource/Frog> ;
+    dbpprop:phylum <http://dbpedia.org/resource/Chordate> ;
+    dbpprop:regnum <http://dbpedia.org/resource/Animal> ;
+    dbpprop:species "A. spinosus"@en ;
+    dbpprop:status "LC"@en ;
+    dbpprop:statusSystem "IUCN3.1"@en ;
+    dbpprop:wikiPageUsesTemplate <http://dbpedia.org/resource/Template:Taxobox> ;
+    dcterms:subject <http://dbpedia.org/resource/Category:Acanthixalus> ;
+    a dbpedia-owl:Amphibian, dbpedia-owl:Animal, dbpedia-owl:Eukaryote, dbpedia-owl:Species, <http://umbel.org/umbel/rc/Amphibian>, owl:Thing ;
+    rdfs:comment "Acanthixalus spinosus es una especie de anfibios de la familia Hyperoliidae. Habita en Camerún, República del Congo, República Democrática del Congo, Gabón, Nigeria y, posiblemente Angola, República Centroafricana y Guinea Ecuatorial. Su hábitat natural incluye bosques tropicales o subtropicales secos y a baja altitud y zonas previamente boscosas ahora degradadas. Está amenazada de extinción por la pérdida de su hábitat natural."@es, "Acanthixalus spinosus est une espèce d'amphibien de la famille des Hyperoliidae."@fr, "Acanthixalus spinosus is a species of frog in the Hyperoliidae family. It is found in Cameroon, Republic of the Congo, Democratic Republic of the Congo, Gabon, Nigeria, possibly Angola, possibly Central African Republic, and possibly Equatorial Guinea. Its natural habitats are subtropical or tropical moist lowland forests and heavily degraded former forest. It is threatened by habitat loss."@en ;
+    rdfs:label "Acanthixalus spinosus"@en, "Acanthixalus spinosus"@es, "Acanthixalus spinosus"@fr ;
+    owl:sameAs <http://dbpedia.org/resource/Acanthixalus_spinosus>, <http://rdf.freebase.com/ns/m/02w2206> ;
+    foaf:name "Acanthixalus spinosus"@en ;
+    foaf:page <http://en.wikipedia.org/wiki/Acanthixalus_spinosus> .
+
+<http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Acanthixalus>
+    owl:sameAs <http://dbpedia.org/resource/Acanthixalus> .
+
+<http://en.wikipedia.org/wiki/Acanthixalus>
+    foaf:primaryTopic <http://dbpedia.org/resource/Acanthixalus> .
+
+<http://www4.wiwiss.fu-berlin.de/flickrwrappr/photos/Acanthixalus_spinosus>
+    owl:sameAs <http://dbpedia.org/resource/Acanthixalus_spinosus> .
+
+<http://en.wikipedia.org/wiki/Acanthixalus_spinosus>
+    foaf:primaryTopic <http://dbpedia.org/resource/Acanthixalus_spinosus> .
+}}}
+
+*to be continued...*
