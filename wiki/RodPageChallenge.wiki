@@ -8,48 +8,7 @@ Rod posted a [http://lists.tdwg.org/pipermail/tdwg-tag/2011-September/002381.htm
 
 Below are snippets (in turtle) of the data objects provided:
 
-=== Crossref: crossref.rdf ===
-
-{{{
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix ns0: <http://purl.org/dc/terms/> .
-
-<http://dx.doi.org/10.1111/j.1096-3642.1988.tb00880.x>
-    <http://prismstandard.org/namespaces/basic/2.1/doi> "10.1111/j.1096-3642.1988.tb00880.x" ;
-    <http://prismstandard.org/namespaces/basic/2.1/endingPage> "38" ;
-    <http://prismstandard.org/namespaces/basic/2.1/startingPage> "1" ;
-    <http://prismstandard.org/namespaces/basic/2.1/volume> "94" ;
-    ns0:creator <http://id.crossref.org/contributor/david-c-cannatella-1zt56awxdhgrh>, <http://id.crossref.org/contributor/linda-trueb-1zt56awxdhgrh> ;
-    ns0:date "1988-09-15Z"^^<http://www.w3.org/2001/XMLSchema#date> ;
-    ns0:identifier "10.1111/j.1096-3642.1988.tb00880.x" ;
-    ns0:isPartOf <http://id.crossref.org/issn/0024-4082> ;
-    ns0:title "Evolution of pipoid frogs: intergeneric relationships of the aquatic frog family Pipidae (Anura)" ;
-    <http://purl.org/ontology/bibo/doi> "10.1111/j.1096-3642.1988.tb00880.x" ;
-    <http://purl.org/ontology/bibo/pageEnd> "38" ;
-    <http://purl.org/ontology/bibo/pageStart> "1" ;
-    <http://purl.org/ontology/bibo/volume> "94" ;
-    a <http://purl.org/ontology/bibo/Article> ;
-    <http://www.w3.org/2002/07/owl#sameAs> <doi:10.1111/j.1096-3642.1988.tb00880.x>, <info:doi/10.1111/j.1096-3642.1988.tb00880.x> .
-
-<http://id.crossref.org/issn/0024-4082>
-    <http://prismstandard.org/namespaces/basic/2.1/eIssn> "1096-3642" ;
-    <http://prismstandard.org/namespaces/basic/2.1/issn> "0024-4082" ;
-    ns0:hasPart <http://dx.doi.org/10.1111/j.1096-3642.1988.tb00880.x>, <http://dx.doi.org/10.1111/j.1096-3642.1995.tb01427.x>, <http://dx.doi.org/10.1111/j.1096-3642.2006.00223.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00397.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00424.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00440.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00466.x>, <http://dx.doi.org/10.1111/j.1096-3642.2009.00579.x>, <http://dx.doi.org/10.1111/j.1096-3642.2010.00641.x>, <http://dx.doi.org/10.1111/j.1096-3642.2010.00652.x> ;
-    ns0:identifier "0024-4082" ;
-    ns0:title "Zoological Journal of the Linnean Society" ;
-    <http://purl.org/ontology/bibo/eissn> "1096-3642" ;
-    <http://purl.org/ontology/bibo/issn> "0024-4082" ;
-    a <http://purl.org/ontology/bibo/Journal> ;
-    <http://www.w3.org/2002/07/owl#sameAs> <urn:issn:0024-4082> .
-
-<http://id.crossref.org/contributor/david-c-cannatella-1zt56awxdhgrh>
-    a <http://xmlns.com/foaf/0.1/Person> ;
-    <http://xmlns.com/foaf/0.1/familyName> "CANNATELLA" ;
-    <http://xmlns.com/foaf/0.1/givenName> "DAVID C." ;
-    <http://xmlns.com/foaf/0.1/name> "DAVID C. CANNATELLA" .
-}}}
-
-=== Wikipedia/DBpedia: dbpedia.rdf ===
+=== General info: Wikipedia/DBpedia (dbpedia.rdf) ===
 
 *Note* Rod's original file had a error: a `</rdf:RDF>` at line 7502.  The fixed file is at http://tdwd-rdf.net/static/rdmpage/dbpedia.rdf.
 
@@ -107,7 +66,7 @@ Below are snippets (in turtle) of the data objects provided:
     foaf:primaryTopic <http://dbpedia.org/resource/Acanthixalus_spinosus> .
 }}}
 
-=== Genbank: genbank.rdf ===
+=== Occurrences: Genbank (genbank.rdf) ===
 
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -140,7 +99,7 @@ Below are snippets (in turtle) of the data objects provided:
 }}}
 
 
-=== Index of organism names: ion.rdf ===
+=== Names: Index of organism names (ion.rdf) ===
 
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -163,7 +122,75 @@ Below are snippets (in turtle) of the data objects provided:
     rdfs:seeAlso <http://www.organismnames.com/namedetails.htm?lsid=3152799> .
 }}}
 
-=== ION x DOI: ion_doi.rdf ===
+
+=== Taxonomy hierarchy: Uniprot taxonomy (uniprot.rdf) ===
+
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://purl.uniprot.org/core/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<file:///home/cam/Desktop/rdf/uniprot.rdf>
+    a owl:Ontology ;
+    owl:imports <http://purl.uniprot.org/core/> .
+
+<http://purl.uniprot.org/taxonomy/1001626>
+    :otherName "Bufo shaartusiensis Pisanets, Mezhzherin, and Shcherbak, 1996", "Bufo viridis shaartusiensis" ;
+    :partOfLineage false ;
+    :rank :Species ;
+    :scientificName "Bufo shaartusiensis" ;
+    a :Taxon ;
+    rdfs:subClassOf <http://purl.uniprot.org/taxonomy/651673> .
+}}}
+
+=== Literature: Crossref (crossref.rdf) ===
+
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns0: <http://purl.org/dc/terms/> .
+
+<http://dx.doi.org/10.1111/j.1096-3642.1988.tb00880.x>
+    <http://prismstandard.org/namespaces/basic/2.1/doi> "10.1111/j.1096-3642.1988.tb00880.x" ;
+    <http://prismstandard.org/namespaces/basic/2.1/endingPage> "38" ;
+    <http://prismstandard.org/namespaces/basic/2.1/startingPage> "1" ;
+    <http://prismstandard.org/namespaces/basic/2.1/volume> "94" ;
+    ns0:creator <http://id.crossref.org/contributor/david-c-cannatella-1zt56awxdhgrh>, <http://id.crossref.org/contributor/linda-trueb-1zt56awxdhgrh> ;
+    ns0:date "1988-09-15Z"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    ns0:identifier "10.1111/j.1096-3642.1988.tb00880.x" ;
+    ns0:isPartOf <http://id.crossref.org/issn/0024-4082> ;
+    ns0:title "Evolution of pipoid frogs: intergeneric relationships of the aquatic frog family Pipidae (Anura)" ;
+    <http://purl.org/ontology/bibo/doi> "10.1111/j.1096-3642.1988.tb00880.x" ;
+    <http://purl.org/ontology/bibo/pageEnd> "38" ;
+    <http://purl.org/ontology/bibo/pageStart> "1" ;
+    <http://purl.org/ontology/bibo/volume> "94" ;
+    a <http://purl.org/ontology/bibo/Article> ;
+    <http://www.w3.org/2002/07/owl#sameAs> <doi:10.1111/j.1096-3642.1988.tb00880.x>, <info:doi/10.1111/j.1096-3642.1988.tb00880.x> .
+
+<http://id.crossref.org/issn/0024-4082>
+    <http://prismstandard.org/namespaces/basic/2.1/eIssn> "1096-3642" ;
+    <http://prismstandard.org/namespaces/basic/2.1/issn> "0024-4082" ;
+    ns0:hasPart <http://dx.doi.org/10.1111/j.1096-3642.1988.tb00880.x>, <http://dx.doi.org/10.1111/j.1096-3642.1995.tb01427.x>, <http://dx.doi.org/10.1111/j.1096-3642.2006.00223.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00397.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00424.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00440.x>, <http://dx.doi.org/10.1111/j.1096-3642.2008.00466.x>, <http://dx.doi.org/10.1111/j.1096-3642.2009.00579.x>, <http://dx.doi.org/10.1111/j.1096-3642.2010.00641.x>, <http://dx.doi.org/10.1111/j.1096-3642.2010.00652.x> ;
+    ns0:identifier "0024-4082" ;
+    ns0:title "Zoological Journal of the Linnean Society" ;
+    <http://purl.org/ontology/bibo/eissn> "1096-3642" ;
+    <http://purl.org/ontology/bibo/issn> "0024-4082" ;
+    a <http://purl.org/ontology/bibo/Journal> ;
+    <http://www.w3.org/2002/07/owl#sameAs> <urn:issn:0024-4082> .
+
+<http://id.crossref.org/contributor/david-c-cannatella-1zt56awxdhgrh>
+    a <http://xmlns.com/foaf/0.1/Person> ;
+    <http://xmlns.com/foaf/0.1/familyName> "CANNATELLA" ;
+    <http://xmlns.com/foaf/0.1/givenName> "DAVID C." ;
+    <http://xmlns.com/foaf/0.1/name> "DAVID C. CANNATELLA" .
+}}}
+
+
+=== Glue: ION x DOI (ion_doi.rdf) ===
 
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -179,7 +206,7 @@ Below are snippets (in turtle) of the data objects provided:
     a tdwg_tn:TaxonName .
 }}}
 
-=== Uniprot x Wikipedia: linkout.rdf ===
+=== Glue: Uniprot x Wikipedia (linkout.rdf) ===
 
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
