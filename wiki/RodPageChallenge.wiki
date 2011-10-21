@@ -107,4 +107,50 @@ Below are snippets (in turtle) of the data objects provided:
     foaf:primaryTopic <http://dbpedia.org/resource/Acanthixalus_spinosus> .
 }}}
 
-*to be continued...*
+=== genbank.rdf ===
+
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix tcommon: <http://rs.tdwg.org/ontology/voc/Common#> .
+@prefix toccurrence: <http://rs.tdwg.org/ontology/voc/TaxonOccurrence#> .
+@prefix uniprot: <http://purl.uniprot.org/core/> .
+
+<http://bio2rdf.org/genbank:EU566842>
+    dcterms:created "2008-07-06" ;
+    dcterms:description "Xenopus borealis voucher MHNG:Herp:2644.64 cytochrome oxidase subunit I (COI) gene, partial cds; mitochondrial." ;
+    dcterms:modified "2010-12-23" ;
+    dcterms:relation [
+        dcterms:identifier "MHNG:Herp:2644.64" ;
+        toccurrence:country "Kenya" ;
+        toccurrence:decimalLatitude "0.66" ;
+        toccurrence:decimalLongitude "37.5" ;
+        toccurrence:identifiedToString "Xenopus borealis" ;
+        toccurrence:verbatimCoordinates "0.66 N 37.5 E" ;
+        a toccurrence:TaxonOccurrence ;
+        geo:lat "0.66" ;
+        geo:long "37.5"
+    ] ;
+    dcterms:subject <http://purl.uniprot.org/taxonomy/8354> ;
+    dcterms:title "EU566842" ;
+    a uniprot:Molecule .
+}}}
+
+=== ion_doi.rdf ===
+
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix tdwg_pc: <http://rs.tdwg.org/ontology/voc/PublicationCitation#> .
+@prefix tdwg_co: <http://rs.tdwg.org/ontology/voc/Common#> .
+@prefix tdwg_tn: <http://rs.tdwg.org/ontology/voc/TaxonName#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<urn:lsid:organismnames.com:name:701301>
+    tdwg_co:publishedInCitation <http://dx.doi.org/10.1111/j.1096-3642.1988.tb00880.x> ;
+    a tdwg_tn:TaxonName .
+}}}
