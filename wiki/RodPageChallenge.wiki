@@ -8,7 +8,7 @@ Rod posted a [http://lists.tdwg.org/pipermail/tdwg-tag/2011-September/002381.htm
 
 Below are snippets (in turtle) of the data objects provided:
 
-=== crossref.rdf ===
+=== Crossref: crossref.rdf ===
 
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -49,7 +49,7 @@ Below are snippets (in turtle) of the data objects provided:
     <http://xmlns.com/foaf/0.1/name> "DAVID C. CANNATELLA" .
 }}}
 
-=== dbpedia.rdf ===
+=== Wikipedia/DBpedia: dbpedia.rdf ===
 
 *Note* Rod's original file had a error: a `</rdf:RDF>` at line 7502.  The fixed file is at http://tdwd-rdf.net/static/rdmpage/dbpedia.rdf.
 
@@ -107,7 +107,7 @@ Below are snippets (in turtle) of the data objects provided:
     foaf:primaryTopic <http://dbpedia.org/resource/Acanthixalus_spinosus> .
 }}}
 
-=== genbank.rdf ===
+=== Genbank: genbank.rdf ===
 
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -139,7 +139,31 @@ Below are snippets (in turtle) of the data objects provided:
     a uniprot:Molecule .
 }}}
 
-=== ion_doi.rdf ===
+
+=== Index of organism names: ion.rdf ===
+
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix tdwg_pc: <http://rs.tdwg.org/ontology/voc/PublicationCitation#> .
+@prefix tdwg_co: <http://rs.tdwg.org/ontology/voc/Common#> .
+@prefix tdwg_tn: <http://rs.tdwg.org/ontology/voc/TaxonName#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<urn:lsid:organismnames.com:name:3152799>
+    dc:Title "Xenopus laevis borealis" ;
+    dc:creator <http://www.organismnames.com> ;
+    dc:identifier "urn:lsid:organismnames.com:name:3152799" ;
+    tdwg_co:PublishedIn "Reptiles and Amphibians collected by the Lake Rudolf Rift Valley Expedition, 1934. Annals & Magazine of Natural History Series 10, 18 1936: pp. 594-609.   [Zoological Record Volume 73]" ;
+    tdwg_co:microreference "" ;
+    tdwg_tn:nameComplete "Xenopus laevis borealis" ;
+    tdwg_tn:nomenclaturalCode tdwg_tn:ICZN ;
+    a tdwg_tn:TaxonName ;
+    rdfs:seeAlso <http://www.organismnames.com/namedetails.htm?lsid=3152799> .
+}}}
+
+=== ION x DOI: ion_doi.rdf ===
 
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
