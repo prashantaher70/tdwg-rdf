@@ -2,6 +2,7 @@
 
 = Rod Page's Challenge =
 
+Rod posted a [http://lists.tdwg.org/pipermail/tdwg-tag/2011-September/002381.html challenge] to the community, which he developed [http://iphylo.blogspot.com/2011/10/tdwg-challenge-what-is-rdf-good-for.html further] before the 2011 TDWG meeting.  He offered a set of RDF-ized data on frogs.  These data are now loaded into at least two triplestores ([http://tdwg-rdf.net/store1/ here] and [http://82.96.149.133:8890/sparql here]).
 
 == Appendix: Data provided by Rod ==
 
