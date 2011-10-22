@@ -8,10 +8,61 @@ As a first prize, Rod offered to announce in his [http://iphylo.blogspot.com blo
 
 == Linking data ==
 
-As an example of linking up the different datasets, but not making new inferences, try this SPARQL query in the http://tdwg-rdf.net/store2/ triplestore:
+As an example of linking up the different datasets, but not making new inferences, here's a question: *Find all the species in the genus _Bufo_ which have long/lats in Genbank, and optionally get their conservations status from Wikipedia*. Try the SPARQL query for yourself in the http://tdwg-rdf.net/store2/ triplestore:
 
+{{{
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX uni: <http://purl.uniprot.org/core/> 
+PREFIX dcterms: <http://purl.org/dc/terms/> 
+PREFIX dbp: <http://dbpedia.org/ontology/> 
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> 
 
+CONSTRUCT {
+  ?gb dcterms:subject ?sp .
+  ?sp uni:scientificName ?sn .
+  ?sp rdfs:seeAlso ?dbp .
+  ?dbp dbp:conservationStatus ?cons .
+  ?gb dcterms:relation _:occ .
+  _:occ geo:long ?long .
+  _:occ geo:lat ?lat .
+}
+WHERE {
+  # Where name is Bufo and rank is genus
+  ?gen uni:scientificName "Bufo" .
+  ?gen uni:rank uni:Genus .
+  # go down two subclasses, check it's a species
+  ?sect rdfs:subClassOf ?gen .
+  ?sp rdfs:subClassOf ?sect .
+  ?sp uni:rank uni:Species .
+  ?sp uni:scientificName ?sn .
+  # link to genbank and find those with occurrences
+  ?gb dcterms:subject ?sp .
+  ?gb dcterms:relation [
+     geo:long ?long ;
+     geo:lat ?lat ] .
+  # optionally, link to DBpedia and get the conservation status
+  OPTIONAL {
+    ?sp rdfs:seeAlso ?dbp .
+    ?dbp dbp:conservationStatus ?cons . }
+}	  
+}}}
 
+This gives results (here serialized in turtle) of the form:
+{{{
+<http://bio2rdf.org/genbank:HM770001>
+    dcterms:relation [
+        geo:lat "14.83" ;
+        geo:long "-24.73"
+    ] ;
+    dcterms:subject <http://purl.uniprot.org/taxonomy/8390> .
+
+<http://purl.uniprot.org/taxonomy/8390>
+    uni:scientificName "Amietophrynus regularis" ;
+    rdfs:seeAlso <http://dbpedia.org/resource/Amietophrynus_regularis> .
+
+<http://dbpedia.org/resource/Amietophrynus_regularis>
+    dbp:conservationStatus "LC"@en .
+}}}
 
 == Appendix: Data provided by Rod ==
 
