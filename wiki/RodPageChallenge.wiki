@@ -47,7 +47,7 @@ WHERE {
 }	  
 }}}
 
-This gives results (here serialized in turtle) of the form:
+This gives results for 254 occurrences of the form (here serialized in turtle):
 {{{
 <http://bio2rdf.org/genbank:HM770001>
     dcterms:relation [
