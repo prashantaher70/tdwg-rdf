@@ -64,6 +64,23 @@ This gives results for 254 occurrences of the form (here serialized in turtle):
     dbp:conservationStatus "LC"@en .
 }}}
 
+== Basic inference ==
+
+With the 4sr reasoner for 4store, reasoning over rdfs concepts is possible.  Try this query:
+
+{{{
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX uni: <http://purl.uniprot.org/core/>
+
+SELECT ?n WHERE {
+  ?s uni:scientificName ?n .
+  ?s rdfs:subClassOf <http://purl.uniprot.org/taxonomy/651673> .
+}
+}}}	  
+
+in a [http://tdwg-rdf.net/store2/ tdwg test triplestore], both with and without inference.
+
 == Appendix: Data provided by Rod ==
 
 Below are snippets (in turtle) of the data objects provided:
