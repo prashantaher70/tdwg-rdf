@@ -10,20 +10,18 @@ Please answer these questions by entering a comment below. (You'll need to be si
 
 
 === Expectations ===
+*1.* What would you like to see the group focus on? (Possibilities discussed in New Orleans included guidelines for using RDF in the TDWG arena; a domain model for TDWG; an RDF playpen/sandbox for experimenting with a variety of approaches; responding to [http://iphylo.blogspot.com/2011/10/tdwg-challenge-what-is-rdf-good-for.html Rod Page's challenge]; and assisting in the broader interpretation and/or representation of existing standards.)
 
-1. What would you like to see the group focus on? (Possibilities discussed in New Orleans included guidelines for using RDF in the TDWG arena; a domain model for TDWG; an RDF playpen/sandbox for experimenting with a variety of approaches; responding to [http://iphylo.blogspot.com/2011/10/tdwg-challenge-what-is-rdf-good-for.html Rod Page's challenge]; and assisting in the broader interpretation and/or representation of existing standards.)
-
-2. Do you have any current issues that you hope this new group will help solve?
+*2.* Do you have any current issues that you hope this new group will help solve?
 
 
 === Current Practices ===
-
-3. Are you currently using, or do you have immediate plans to use RDF? If yes, can you give a brief description of the data being served, and/or provide links (if possible) to:
+*3.* Are you currently using, or do you have immediate plans to use RDF? If yes, can you give a brief description of the data being served, and/or provide links (if possible) to:
   * data dumps,
   * SPARQL endpoints,
   * design documents or project proposals,
   * a bubble diagram (or even just a list) of the classes and properties you are using (with namespaces, of course),
   * a list of classes and properties that you need but that are not readily available,
-  *anything elses that would shed light on what you're up to?
+  * anything elses that would shed light on what you're up to?
 
-4. What identifiers are you using?  (Includes taxa, people, institutions, protected areas, etc.)
+*4.* What identifiers are you using?  (Includes taxa, people, institutions, protected areas, etc.)
