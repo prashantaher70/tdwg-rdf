@@ -3,7 +3,7 @@
 == Background ==
 
 There are two goals to this survey, both of which will inform and guide task group activity:
-  # to determine what TDWG (through you, its participants) needs the RDF/OWL group to work on.
+  # to determine what TDWG (i.e. you) wants the RDF/OWL task group to work on.
   # to understand the "state of the semantic web in TDWG", by inventorying classes and properties being used; identifiers being used; sparql endpoints and data dumps available; and projects' near-term plans.
 
 Please answer these questions by entering a comment below. (You'll need to be signed in to your Google account.)
