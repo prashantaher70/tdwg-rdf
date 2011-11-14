@@ -6,7 +6,7 @@ There are two goals to this survey, both of which will inform and guide task gro
   # to determine what TDWG (i.e. you) wants the RDF/OWL task group to work on.
   # to understand the "state of the semantic web in TDWG", by inventorying classes and properties being used; identifiers being used; sparql endpoints and data dumps available; and projects' near-term plans.
 
-Please answer these questions by entering a comment below. (You'll need to be signed in to your Google account.)
+Please answer these questions by entering a comment (or multiple comments below). (You'll need to be signed in to your Google account.)
 
 
 === Expectations ===
