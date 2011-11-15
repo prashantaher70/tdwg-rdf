@@ -16,9 +16,8 @@ Please answer these questions by entering a comment (or multiple comments below)
 
 
 === Current Practices ===
-*3.* Are you currently using, or do you have immediate plans to use RDF? If yes, can you give a brief description of the data being served, and/or provide links (if possible) to:
-  * data dumps,
-  * SPARQL endpoints,
+*3.* Are you currently using, or do you have immediate plans to use RDF? If yes, can you give a brief description of the data being served, and/or provide links to:
+  * sources of data (data dumps, SPARQL endpoints), 
   * design documents or project proposals,
   * a bubble diagram (or even just a list) of the classes and properties you are using (with namespaces, of course),
   * a list of classes and properties that you need but that are not readily available,
