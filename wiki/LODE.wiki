@@ -2,9 +2,8 @@
 
 = Linked Open Data of Ecology =
 
-See: http://ecowlim.tfri.gov.tw/lode/
+See: http://ecowlim.tfri.gov.tw/lode/ a product of the [http://ecoinformatics.tfri.gov.tw/ternwork/member Ecoinformatics Working Group] of the TFRI
 
 = Core classes =
 
 http://xmalesia.info/doc/img/lode.jpg
-
