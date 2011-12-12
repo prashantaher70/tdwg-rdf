@@ -1,0 +1,10 @@
+#summary Taiwanese Ecology LOD
+
+= Linked Open Data of Ecology =
+
+See: http://ecowlim.tfri.gov.tw/lode/
+
+= Core classes =
+
+http://xmalesia.info/doc/img/lode.jpg
+
