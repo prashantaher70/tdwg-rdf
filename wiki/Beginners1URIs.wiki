@@ -90,11 +90,14 @@ http://tools.ietf.org/html/rfc3986
 
 ===2. An RFC is not actually a request for comments.=== 
 It's a memo published by the Internet Engineering Task Force (IETF; http://www.ietf.org/) which is responsible for managing the standards of the Internet.  An RFC starts out as a somewhat informal proposal or description of a new idea.  The RFC may eventually be adopted as an Internet standard.  
-Search for an RFC: http://www.ietf.org/rfc.html .  
+
+Search for an RFC: http://www.ietf.org/rfc.html 
+
 Full list: http://www.ietf.org/download/rfc-index.txt 
 
 ===3. RFC 4395.  Guidelines and Registration Procedures for New URI Schemes===
 http://tools.ietf.org/html/rfc4395
+
 A list of registered URI schemes and the RFCs that describe them is at:
 http://www.iana.org/assignments/uri-schemes.html
 
