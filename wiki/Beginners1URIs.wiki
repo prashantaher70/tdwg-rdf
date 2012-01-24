@@ -140,3 +140,6 @@ http://tools.ietf.org/html/rfc2616#section-1.3
 ===13. Content Negotiation in HTTP===
 Content negotiation is described at:
 http://tools.ietf.org/html/rfc2616#section-12
+
+-------------------
+Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
