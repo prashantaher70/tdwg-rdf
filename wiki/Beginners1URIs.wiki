@@ -88,6 +88,14 @@ http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/CreditLine
 }}}
 represents an abstract non-information resource: the credit line for a media item.  Entering this URI into a Web browser doesn't do anything.  In this case, attaching "{{{http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/}}}" to the term "{{{CreditLine}}}" simply makes the identifier globally unique but doesn’t actually make use of the HTTP protocol to do anything.
 
+===1.4. Testing a URI===
+Vapour is a "Linked Data Validator" [#14._Vapour_Linded_Data_validator_for_checking_URIs (14)] which can be used to test whether a URI is dereferenceable and if it dereferences, to determine based on the server response whether the resource identified by the URI is an information resource or not. 
+
+http://validator.linkeddata.org/vapour
+
+You can test the above examples to see what happens.
+
+
 = References: =
 ===1. RFC 3986.  Uniform Resource Identifier (URI): Generic Syntax=== 
 http://tools.ietf.org/html/rfc3986
@@ -142,6 +150,10 @@ http://tools.ietf.org/html/rfc2616#section-1.3
 ===13. Content Negotiation in HTTP===
 Content negotiation is described at:
 http://tools.ietf.org/html/rfc2616#section-12
+
+===14. Vapour Linded Data validator for checking URIs=== 
+http://validator.linkeddata.org/vapour
+
 
 -------------------
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
