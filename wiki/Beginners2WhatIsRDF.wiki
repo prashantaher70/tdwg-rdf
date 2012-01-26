@@ -3,6 +3,7 @@
 = 2. What is RDF and what is it for? =
 
 [Beginners1URIs go to part 1: Resources and URIs]
+[Beginners3RDFbasics go to part 3: RDF basics]
 
 *Contents*
 
