@@ -3,6 +3,7 @@
 = 2. What is RDF and what is it for? =
 
 [Beginners1URIs go to part 1: Resources and URIs]
+
 [Beginners3RDFbasics go to part 3: RDF basics]
 
 *Contents*
@@ -102,63 +103,66 @@ provides most of the same information as the non-normative human-readable defini
 The RDF/OWL Task Group (TG) is attempting to determine what RDF and OWL can reasonably be expected to do in the biodiversity informatics context and to recommend approaches that can be used to achieve these expectations.  We seek to use the experience of other communities and to follow an experimental approach to find out what will and will not work on a practical level.  In particular, we hope to leverage existing infrastructure (i.e. existing TDWG vocabularies and existing delivery systems such as HTTP) to accomplish this in a reasonable amount of time.  For further information, see the [CharterOfTG TG charter].
 
 =References=
-===(1) RDF Motivation and Goals===
+===1 RDF Motivation and Goals===
 http://www.w3.org/TR/rdf-concepts/#section-Overview
 
-===(2) Tim Berners-Lee on the Semantic Web===
+===2 Tim Berners-Lee on the Semantic Web===
 Berners-Lee, Tim and Mark Fischetti. 1999. Weaving the Web: the original design and ultimate destiny of the World Wide Web by its inventor.  San Francisco, Harper.  isbn:9780062515872
 
-===(3) Resource Description Framework (RDF) Model and Syntax Specification===
+===3 Resource Description Framework (RDF) Model and Syntax Specification===
 http://www.w3.org/TR/1999/REC-rdf-syntax-19990222/
 superseded by
 http://www.w3.org/TR/REC-rdf-syntax/
 
-===(4) W3C Recommendations===
+===4 W3C Recommendations===
 are the final product of a technical report development process described at
 http://www.w3.org/2005/10/Process-20051014/tr.html#Reports
 
-===(5) Classes and types are described in the RDF Schema (RDFS)===
+===5 Classes and types are described in the RDF Schema (RDFS)===
 http://www.w3.org/TR/rdf-schema/
 
-===(6) Linked Open Data Project===
+===6 Linked Open Data Project===
 http://linkeddata.org/
 
-===(7) Frequently asked questions about LOD===
+===7 Frequently asked questions about LOD===
 http://linkeddata.org/faq
 
-===(8) Linked Data vs. the Semantic Web===
+===8 Linked Data vs. the Semantic Web===
 http://tomheath.com/blog/2009/03/linked-data-web-of-data-semantic-web-wtf/
 
 http://blogs.nature.com/jhendler/2009/06/16/what-is-the-semantic-web-really-all-about
 
-===(9) TDWG home page===
+===9 TDWG home page===
 http://www.tdwg.org/
 
-===(10) About TDWG===
+===10 About TDWG===
 http://www.tdwg.org/about-tdwg/
 
-===(11) TDWG Standards===
+===11 TDWG Standards===
 http://www.tdwg.org/standards/
 
-===(12) TDWG TAG 2006 roadmap===
+===12 TDWG TAG 2006 roadmap===
 http://www.tdwg.org/uploads/media/TAG_Roadmap_01.doc
 
-===(13) LSID Best Practices===
+===13 LSID Best Practices===
 http://www.ibm.com/developerworks/opensource/library/os-lsidbp/
 See also http://www.omg.org/cgi-bin/doc?dtc/04-05-01 and http://xml.coverpages.org/lsid.html
 
-===(14) TDWG Ontology Google Code repository===
+===14 TDWG Ontology Google Code repository===
 code.google.com/p/tdwg-ontology/source/browse/
 
-===(15) GUID and Life Sciences Identifiers Applicability Statements===
+===15 GUID and Life Sciences Identifiers Applicability Statements===
 http://www.tdwg.org/standards/150/
 
-===(16) DCMI Abstract Model===
+===16 DCMI Abstract Model===
 http://dublincore.org/documents/abstract-model/
 
-===(17) The TDWG Standards Documentation Specification===
+===17 The TDWG Standards Documentation Specification===
 http://www.tdwg.org/standards/147/
 is an ungratified standard which prescribes how TDWG standards should be described.  In that specification, a normative (Type 1) document which forms part of a standard is tightly controlled and defines the standard.  A non-normative (Type 2) document is also tightly controlled but explains and justifies the standard rather than defining it.  Other documents (Type 3) may provide additional information to support the standard without actually forming a part of it.
 
-===(18) Darwin Core expressed in RDF/XML===
+===18 Darwin Core expressed in RDF/XML===
 http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf
+
+-------------------
+Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
