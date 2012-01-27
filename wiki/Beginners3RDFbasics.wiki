@@ -14,7 +14,7 @@ This guide is intended to help people understand what RDF is and what it is used
 The basic unit of RDF is a statement called a triple.  One can think of a triple as a type of sentence that states a single "fact" about a resource.  
 
 ===3.1.1. Subject===
-The first part of the triple, the resource being described, is known as the subject of the triple.  The subject is a URI reference to that resource which identifies it unambiguously, i.e. is a globally unique identifier (GUID) for described resource. [#(1)_Blank_nodes. (1)]
+The first part of the triple, the resource being described, is known as the subject of the triple.  The subject is a URI reference to that resource which identifies it unambiguously, i.e. is a globally unique identifier (GUID) for described resource. [#1_Blank_nodes. (1)]
 
 ===3.1.2. Predicate===
 The subject is followed by the predicate which indicates the kind of relationship that is being described by the triple.  The predicate is also called a property.  Like the subject, the predicate is also described by a URI.  The predicate is generally a term from a well-known vocabulary or ontology.  The URI is often constructed from a term name in such a way that when abbreviated it will impart to a human a sense of what kind of property the predicate is describing.  For example, the URI predicate 
@@ -66,10 +66,10 @@ kimage:ac1490  dcterms:rights  "(c) 2011 Bruce K. Kirchoff"
 kimage:ac1490  rdf:type  dctype:StillImage
 }}}
 
-The first describes the copyright statement associated with the image.  The second statement uses a special predicate which is defined in the RDF specification for the specific purpose of indicating the kind of thing (the type) of the subject. [#(2)_rdf:type (2)]
+The first describes the copyright statement associated with the image.  The second statement uses a special predicate which is defined in the RDF specification for the specific purpose of indicating the kind of thing (the type) of the subject. [#2_rdf:type (2)]
 
 ==3.3. Serializations of RDF==
-RDF is a model for representing statements about properties of resources. [#(3)_Formal_definition_of_the_RDF_model (3)]  However, the RDF model is independent of any specific serialization syntax. [#(4)_Design_goals_of_RDF (4)]  What this means is that there are a number of methods of expressing the information that is contained in RDF triples and the information expressed by these methods is equivalent.  
+RDF is a model for representing statements about properties of resources. [#3_Formal_definition_of_the_RDF_model (3)]  However, the RDF model is independent of any specific serialization syntax. [#4_Design_goals_of_RDF (4)]  What this means is that there are a number of methods of expressing the information that is contained in RDF triples and the information expressed by these methods is equivalent.  
 
 The following examples will illustrate how the following information can be expressed in various serializations of RDF: "The still image having the identifier {{{kimage:ac1490}}} was made by {{{agents:kirchoff#coble}}} (a person named Ashley Coble) on 1 September 2010 at 3:41:31 AM.  It is copyright 2011 by Bruce K. Kirchoff."  
 
@@ -107,7 +107,7 @@ The convention for graphical representations of RDF are:
   * literals are represented as rectangles
   * predicates are represented as arrows pointing from the subject to the object.
 
-In the RDF model, a set of triples is referred to as a graph.  This is a general term and does not specifically refer to a graphical representation such as the one shown here.  The subjects and objects are referred to as nodes.  The predicates are referred to as arcs.  A graph represents the network of relationships that are described by all of the triples that are included in the set. [#(5)_Graph_data_model_of_RDF (5)]  
+In the RDF model, a set of triples is referred to as a graph.  This is a general term and does not specifically refer to a graphical representation such as the one shown here.  The subjects and objects are referred to as nodes.  The predicates are referred to as arcs.  A graph represents the network of relationships that are described by all of the triples that are included in the set. [#5_Graph_data_model_of_RDF (5)]  
 
 ===3.3.3. XML representation===
 
@@ -132,7 +132,7 @@ xmlns:foaf="http://xmlns.com/foaf/0.1/"
 </rdf:RDF>
 }}}
 
-Although RDF can be expressed in any of a number of serializations, XML has a special status.  The W3C specification for RDF specifically recommends XML as the form of serialization used for the exchange of information among applications. [#(6)_XML-based_syntax (6)]  Exchange of data using other serializations is not prohibited, but making RDF data available in XML is a best practice because it is widely understood.  XML serialization has been criticized as not easily "read" by humans, but since its primary purpose is information exchange among machines and since most RDF/XML will probably be generated automatically, this should not be a major impediment to its implementation.  There are converters (discussed in [#3.3.5._RDF_validation_and_conversion_from_one_serialization_to_a section 3.3.5.]) that can readily convert RDF/XML into other serializations.
+Although RDF can be expressed in any of a number of serializations, XML has a special status.  The W3C specification for RDF specifically recommends XML as the form of serialization used for the exchange of information among applications. [#6_XML-based_syntax (6)]  Exchange of data using other serializations is not prohibited, but making RDF data available in XML is a best practice because it is widely understood.  XML serialization has been criticized as not easily "read" by humans, but since its primary purpose is information exchange among machines and since most RDF/XML will probably be generated automatically, this should not be a major impediment to its implementation.  There are converters (discussed in [#3.3.5._RDF_validation_and_conversion_from_one_serialization_to_a section 3.3.5.]) that can readily convert RDF/XML into other serializations.
 
 In [#3.2.3._Additional_triple_examples section 3.2.3.] it was noted that the predicate {{{rdf:type}}} has the special role in RDF of indicating class membership.  As a shortcut method in RDF/XML, the XML container element for the object being described can be named as the class of which the described resource is an instance rather than using the generic {{{rdf:Description}}} container name.  When this is done, there is an implied {{{rdf:type}}} statement that is not shown in the actual XML but which exists and will be listed in any set of triples or shown in any graphical representation.  So the two XML snippets:
 
@@ -213,47 +213,47 @@ A converter is available at
 http://www.rdfabout.com/demo/validator/
 
 ==3.4. Learn more about RDF==
-The W3C has a Recommendation known as the RDF Primer [#(7)_W3C_RDF_Primer (7)]
+The W3C has a Recommendation known as the RDF Primer [#7_W3C_RDF_Primer (7)]
 
 http://www.w3.org/TR/rdf-primer/
 
-which elaborates on the information provided here as well as covering a number of topics beyond the scope of this guide.  The References section [#(8)_RDF_Primer_Reference_section (8)] provides a comprehensive list of other informational resources related to RDF.  
+which elaborates on the information provided here as well as covering a number of topics beyond the scope of this guide.  The References section [#8_RDF_Primer_Reference_section (8)] provides a comprehensive list of other informational resources related to RDF.  
 
-The w3schools  website also provides an RDF tutorial [#(9)_w3schools.com_RDF_tutorial (9)] at
+The w3schools  website also provides an RDF tutorial [#9_w3schools.com_RDF_tutorial (9)] at
 
 http://www.w3schools.com/rdf/default.asp
 
 =References=
-===(1) Blank nodes.===
+===1 Blank nodes.===
 Technically either the subject or the object can be a blank node which is not identified explicitly by a URI.  However, that is beyond the scope of this guide.  See http://www.w3.org/TR/rdf-primer/#structuredproperties for a description of blank nodes and their use.
 
-===(2) rdf:type===
+===2 rdf:type===
 The predicate {{{rdf:type}}} has special properties that are defined in the RDF schema:
 
 http://www.w3.org/TR/rdf-schema/#ch_type
 
 In particular, use of that predicate implies class membership for the subject resource.  However, there is not (yet) any standard list of types and classes which should be used with particular kinds of resources in our community.  The digital image is typed as {{{dctype:StillImage}}} for illustrative purposes.  
 
-===(3) Formal definition of the RDF model===
+===3 Formal definition of the RDF model===
 http://www.w3.org/TR/1999/REC-rdf-syntax-19990222/#model
 
-===(4) Design goals of RDF===
+===4 Design goals of RDF===
 http://www.w3.org/TR/rdf-concepts/#section-simple-data-model
 
-===(5) Graph data model of RDF===
+===5 Graph data model of RDF===
 http://www.w3.org/TR/rdf-concepts/#section-data-model
 
-===(6) XML-based syntax===
+===6 XML-based syntax===
 http://www.w3.org/TR/rdf-concepts/#section-xml-serialization which references
 http://www.w3.org/TR/2004/REC-rdf-syntax-grammar-20040210/
 
-===(7) W3C RDF Primer===
+===7 W3C RDF Primer===
 http://www.w3.org/TR/rdf-primer/
 
-===(8) RDF Primer Reference section===
+===8 RDF Primer Reference section===
 http://www.w3.org/TR/rdf-primer/#references
 
-===(9) w3schools.com RDF tutorial===
+===9 w3schools.com RDF tutorial===
 http://www.w3schools.com/rdf/default.asp
 
 
