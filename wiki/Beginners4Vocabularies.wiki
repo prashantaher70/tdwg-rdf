@@ -2,8 +2,6 @@
 
 = 4. Vocabularies, DCAM, and RDFS =
 
-Note: this is still under construction (formatting, linking, etc.)
-
 [Beginners3RDFbasics go to part 3: RDF basics]
 
 *Contents*
@@ -23,7 +21,7 @@ Although there is no strict definition of an ontology, it is generally recognize
 
 There are tradeoffs involved in choosing to describe terms using an ontology rather than a simpler controlled vocabulary.  Terms that are described as part of an ontology carry much more meaning and can be used to do more sophisticated machine reasoning.  On the other hand, terms that are described by an ontology are far more encumbered and may have a much more restricted utility that terms that are described in a simple controlled vocabulary.  
 
-For example, Audubon Core is very vague about the types of resources that can be the subjects and objects of {{{ac:derivedFrom}}}.  Because Audubon Core is concerned with media items, one might assume that it is intended to describe how one media item (e.g. an image) is related to another.  For instance a particular StillImage might be {{{ac:derivedFrom}}} some particular MovingImage . However, there is nothing in the formal description of {{{ac:derivedFrom}}} that would prohibit someone from making the statement that an offspring is {{{ac:derivedFrom}}} its mother.  Thus a simple description of a term allows it to be adapted to uses that were not conceived by the original creators of the term.
+For example, Audubon Core is very vague about the types of resources that can be the subjects and objects of {{{ac:derivedFrom}}}.  Because Audubon Core is concerned with media items, one might assume that it is intended to describe how one media item (e.g. an image) is related to another.  For instance a particular !StillImage might be {{{ac:derivedFrom}}} some particular !MovingImage . However, there is nothing in the formal description of {{{ac:derivedFrom}}} that would prohibit someone from making the statement that an offspring is {{{ac:derivedFrom}}} its mother.  Thus a simple description of a term allows it to be adapted to uses that were not conceived by the original creators of the term.
 
 In contrast, the darwin-sw ontology defines {{{dsw:derivedFrom}}} to be a transitive property (i.e. if {{{A dsw:derivedFrom B}}} and {{{B  dsw:derivedFrom C}}}, then {{{A dsw:derivedFrom C}}}) and is also defined to have the inverse property {{{dsw:hasDerivative}}} (i.e. if {{{A dsw:derivedFrom B}}}, then {{{B dsw:hasDerivative A}}}).  So persons who are not careful in using {{{dsw:derivedFrom}}} may end up saying things that they do not intend.  The problem of making unintended statements is particularly acute when an ontology declares terms to have range and domain properties (see sections [#4.3.2.5._has_domain 4.3.2.5.] and [#4.3.2.6._has_range 4.3.2.6.]).  
 
@@ -247,7 +245,7 @@ or in abbreviated form
 {{{
 kimage:ac1490  rdf:type  dctype:StillImage
 }}}
-not only does it assert that {{{kimage:ac1490}}} is a {{{dctype:StillImage}}}, but it also declares {{{dctype:StillImage}}} to be an {{{rdfs:Class}}}.  As it turns out, {{{dctype:StillImage}}} is already declared to be an {{{rdfs:Class}}} in its term definition [#23_Definition_of_dcterms: (23)], but if it hadn't already been a class, one would be asserting that it was one by using it as the object of the type declaration.  
+not only does it assert that {{{kimage:ac1490}}} is an instance of {{{dctype:StillImage}}}, but it also declares {{{dctype:StillImage}}} to be an {{{rdfs:Class}}}.  As it turns out, {{{dctype:StillImage}}} is already declared to be an {{{rdfs:Class}}} in its term definition [#23_Definition_of_dcterms: (23)], but if it hadn't already been a class, one would be asserting that it was one by using it as the object of the type declaration.  
 
 ===4.7.2. What can we find classes to use in {{{rdf:type}}} statements?===
 The RDFS schema is silent about what constitutes appropriate classes or types in a particular situation.  Users are free to use any pre-existing types/classes or to define their own.  
@@ -302,7 +300,7 @@ OnlineAccount
 PersonalProfileDocument subclass of Document
 }}}
 ====4.7.2.4.  Classes in the TDWG Ontologies [#27_TDWG_Ontology (27)]====
-  This ontology defines many classes which to some degree correspond to the Darwin Core classes, although they are not explicitly declared to be the same as those classes.  The ontology consists of a number of classes and terms which are defined under their own namespaces.  Most of the classes are declared to be subclasses of other classes in the Base or Core Ontologies.  Unless otherwise stated, in the list below all are subclass of {{{base:BaseThing}}}.  The overall ontology is in an unfinished state.  Several of the individual ontology documents are apparently unfinished and therefore contain errors.  Those ontologies are noted.
+This ontology defines many classes which to some degree correspond to the Darwin Core classes, although they are not explicitly declared to be the same as those classes.  The ontology consists of a number of classes and terms which are defined under their own namespaces.  Most of the classes are declared to be subclasses of other classes in the Base or Core Ontologies.  Unless otherwise stated, in the list below all are subclass of {{{base:BaseThing}}}.  The overall ontology is in an unfinished state.  Several of the individual ontology documents are apparently unfinished and therefore contain errors.  Those ontologies are noted.
 
 The Taxon Concept and Taxon Name Ontologies differ somewhat from the others in that their classes are not linked to the Base Ontology through subclassing.  So they essentially stand alone.  Although those ontologies are not TDWG standards, they are specifically designed to be an RDF representation of the Taxonomic Concept Transfer Schema standard [#28_Taxonomic_Concept_Transfer_Schema (28)] which itself is not expressed in RDF.
 
@@ -497,7 +495,9 @@ The creators of RDFS and the DCMI Abstract Model considered identification of th
 
 ===1  Definition of a vocabulary===
 For some descriptions of what a vocabulary is and how it is related to terms such as taxonomy, thesaurus, and ontology, see
+
 http://infogrid.org/wiki/Reference/PidcockArticle
+
 http://semwebtec.wordpress.com/2010/11/23/contolled-vocabulary-vs-ontology/
 
 ===2 Term list for Audubon Core draft TDWG standard===
@@ -519,9 +519,13 @@ http://www.w3.org/TR/rdf-schema/
 
 ===7 Comparison of DCMI Abstract Model with RDF/RDFS===
 The information in this table is taken from 
+
 http://dublincore.org/documents/abstract-model/#sect-5
+
 using the following namespace abbreviations to simplify the table:
+
 rdf: = http://www.w3.org/1999/02/22-rdf-syntax-ns#
+
 rdfs: = http://www.w3.org/2000/01/rdf-schema#
 
 ===8 Description of rdf:type===
@@ -547,8 +551,11 @@ http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#introduction
 
 ===15  Darwin Core terms described in RDF/XML===
 can be downloaded from
+
 http://rs.tdwg.org/dwc/rdf/dwcterms.rdf
+
 using most web browsers.  It is not possible to view the file using most web browsers.
+
 The file at http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf (viewable in a browser) may be the same.  
 
 ===16 Darwin Core Quick Reference Guide===
@@ -556,13 +563,18 @@ http://rs.tdwg.org/dwc/terms/index.htm
 
 ===17 Darwin Core term history===
 can be downloaded from
+
 http://rs.tdwg.org/dwc/rdf/dwcterm-history.rdf
+
 using most web browsers and which can be viewed in human-readable form at
+
 http://darwincore.googlecode.com/svn/trunk/terms/history/index.htm
 
 ===18 Darwin Core attributes vocabulary===
 http://rs.tdwg.org/dwc/terms/attributes/
+
 which is described by the document
+
 http://rs.tdwg.org/dwc/terms/attributes/dwcattributes.rdf
 
 ===19 The Access to Biological Collections Data (ABCD) schema===
@@ -579,6 +591,7 @@ http://www.w3.org/TR/rdf-schema/#ch_type
 
 ===23 Definition of dcterms:StillImage===
 http://dublincore.org/2010/10/11/dctype.rdf  in RDF
+
 http://dublincore.org/documents/dcmi-type-vocabulary/ in human-readable form
 
 ===24 Typing using well-known vocabularies===
@@ -588,14 +601,17 @@ states in Recommendation 11 that "Objects in the biodiversity domain that are id
 
 ===25 Dublin Core classes===
 Human readable at http://dublincore.org/documents/dcmi-terms/#H6
+
 RDF at http://dublincore.org/2010/10/11/dcterms.rdf
 
 ===26 FOAF vocabulary===
 Human readable at http://xmlns.com/foaf/spec/
+
 RDF at http://xmlns.com/foaf/spec/index.rdf
 
 ===27 TDWG Ontology===
 Human readable at http://wiki.tdwg.org/twiki/bin/view/TAG/TDWGOntology
+
 RDF at: http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/
 
 ===28 Taxonomic Concept Transfer Schema===
@@ -603,21 +619,29 @@ http://www.tdwg.org/standards/117/
 
 ===29 Natural Collections Descriptions (NCD) draft TDWG standard===
 Human readable http://www.tdwg.org/standards/312/
+
 RDF at 
+
 http://rs.tdwg.org/ontology/voc/Collection
+
 http://rs.tdwg.org/ontology/voc/Institution
+
 http://rs.tdwg.org/ontology/voc/InstitutionType
+
 http://rs.tdwg.org/ontology/voc/ContactDetails
- Use view page source to view RDF; however, a note at that page says management of the vocabulary is now at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/
+
+Use view page source to view RDF; however, a note at that page says management of the vocabulary is now at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/
 
 ===30 DCMI Type Vocabulary===
 Human readable at http://dublincore.org/documents/dcmi-type-vocabulary/
+
 RDF at http://dublincore.org/2010/10/11/dctype.rdf
 
 See the section "The Vocabulary Encoding Scheme 'DCMI Type Vocabulary' and its member terms" at http://dublincore.org/usage/decisions/2008/dcterms-changes/#sect-2 for a history of the evolution of the DCMI Type vocabulary
 
 ===31 Darwin Core Type Vocabulary===
 Human readable at http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm
+
 RDF at http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf
 
 ===32 Simple Darwin Core===
