@@ -218,6 +218,8 @@ Of the possible DCAM/RDFS relationships which allow a machine to infer additiona
   * {{{dwc:ownerInstitutionCode}}} which is declared an {{{rdfs:subProperty}}} of {{{http://rs.tdwg.org/ncd/terms/Institution#Code}}}
   * {{{dwc:ResourceRelationship}}} (a Darwin Core class) which is declared an {{{rdfs:subProperty}}} of {{{dcterms:relation}}} [#20__dwc:_is_both_a_class_and_a_property (20)]
 
+Note: the URIs having namespace {{{http://rs.tdwg.org/ncd/terms/Institution#}}} seem to be incorrect as the namespace for the Natural Collection Description vocabulary is defined as {{{http://rs.tdwg.org/ontology/voc/Collection#}}} in the draft standard. [#29_Natural_Collections_Descriptions_(NCD)_draft_TDWG_standard (29)]
+
 ===4.6.3. Darwin Core terms not defined by Darwin Core===
 There are a number of terms included in the Darwin Core standard which are not defined by Darwin Core itself.   Most of these terms are record-level property terms that are defined by Dublin Core [#21_DCMI_Metadata_Terms (21)], e.g. {{{dcterms:type}}}, {{{dcterms:modified}}}, etc.  The exception is {{{dcterms:Location}}} which serves as one of the classes under which Darwin Core terms are organized.
 
@@ -652,3 +654,6 @@ http://rs.tdwg.org/dwc/terms/guides/xml/index.htm
 
 ===34 Notes on semantics of Dublin Core as RDF===
 http://dublincore.org/documents/dc-rdf/#sect-5
+
+-------------------
+Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
