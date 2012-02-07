@@ -8,7 +8,6 @@ This guide is intended to help people understand what RDF is and what it is used
 
 [Beginners4Vocabularies go to part 4: Vocabularies, DCAM, and RDFS]
 
-Beginners4Vocabularies
 *Contents*
 
 <wiki:toc max_depth="3" />
