@@ -39,7 +39,7 @@ The URI {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}} represents an abstra
 
 4. The client decodes the XML and interprets it as RDF triples.  Those triples will hopefully describe properties that will help the client understand the nature of the resource {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}}.
 
-===5.2.2. Using the retrieved document to understand the identified resource and other resources related to it---
+===5.2.2. Using the retrieved document to understand the identified resource and other resources related to it===
 
 The RDF in the retrieved document {{{ http://lod.taxonconcept.org/ses/z9oqP.rdf}}} contains the following information (including many additional properties are not shown here) about the the identified resource (click on http://lod.taxonconcept.org/ses/z9oqP.rdf to view the actual document):
 {{{
@@ -57,10 +57,10 @@ in N3:
      wdrs:describedby <http://lod.taxonconcept.org/ses/z9oqP.rdf>;
      dcterms:isPartOf <http://lod.taxonconcept.org/ontology/void#TaxonConcept>.
 }}}
-From this information, we know that the resource has two types: {{{owl:Class}}}[#6_owl:Class (6)] and {{{txn:SpeciesConcept}}} (where{{{owl:}}} is an abbreviation for {{{ http://www.w3.org/2002/07/owl# }}} and {{{txn:}}} is an abbreviation for {{{http://lod.taxonconcept.org/ontology/txn.owl#}}}).  
+From this information, we know that the resource has two types: {{{owl:Class}}}[#6_owl:Class (6)] and {{{txn:SpeciesConcept}}} (where {{{owl:}}} is an abbreviation for {{{ http://www.w3.org/2002/07/owl# }}} and {{{txn:}}} is an abbreviation for {{{http://lod.taxonconcept.org/ontology/txn.owl#}}}).  
 
 ====5.2.2.1. Linking the non-information resource to the document that describes it====
-The description also says that the resource is wdrs:describedby [#7_Protocol_for_Web_Description_Resources_(POWDER) (7)] the RDF/XML document that was returned by the server.  This property links the non-information, abstract resource (the taxon concept) to the information resource that describes it in RDF.  The term foaf:isPrimaryTopicOf [#8_FOAF_Vocabulary_Specification (8)] can also be used to relate resources to documents that describe them.  By providing this triple, a semantic client can know precisely how the delivered document is related to the described resource.  The client can then examine the RDF describing the delivered document (also included in the delivered document) to find out things such as its language, modification date, and many other properties not shown here:
+The description also says that the resource is {{{wdrs:describedby}}} [#7_Protocol_for_Web_Description_Resources_(POWDER) (7)] the RDF/XML document that was returned by the server.  This property links the non-information, abstract resource (the taxon concept) to the information resource that describes it in RDF.  The term {{{foaf:isPrimaryTopicOf}}} [#8_FOAF_Vocabulary_Specification (8)] can also be used to relate resources to documents that describe them.  By providing this triple, a semantic client can know precisely how the delivered document is related to the described resource.  The client can then examine the RDF describing the delivered document (also included in the delivered document) to find out things such as its language, modification date, and many other properties not shown here:
 {{{
 in XML:
 <bibo:Document rdf:about="http://lod.taxonconcept.org/ses/z9oqP.rdf">
@@ -77,16 +77,18 @@ in N3:
 
 ====5.2.2.2. Linking the non-information resource to a vocabulary or dataset of which it is a part====
 
-The description of the species concept contains a triple which says that the resource dcterms:isPartOf another resource that is not described by the delivered RDF document itself.  If possible, that URI could be dereferenced to find out more about that collective entity and perhaps to discover the URIs of other resources similar to the one being described.  In Dublin and Darwin Cores, each term is described as rdfs:isDefinedBy the vocabulary which contains it.  [#9_Dublin_Core_RDF_definitions (9)]  In those cases, the RDF describing the vocabulary (with URI {{{http://purl.org/dc/terms/}}}) is included in the same document which contains the RDF describing the term (which has the URI {{{http://purl.org/dc/terms/creator}}}) and is delivered along with it when there is a request to dereference the term URI.  
+The description of the species concept contains a triple which says that the resource {{{dcterms:isPartOf}}} another resource that is not described by the delivered RDF document itself.  If possible, that URI could be dereferenced to find out more about that collective entity and perhaps to discover the URIs of other resources similar to the one being described.  In Dublin and Darwin Cores, each term is described as {{{rdfs:isDefinedBy}}} the vocabulary which contains it.  [#9_Dublin_Core_RDF_definitions (9)]  In those cases, the RDF describing the vocabulary (with URI {{{http://purl.org/dc/terms/}}}) is included in the same document which contains the RDF describing the term (which has the URI {{{http://purl.org/dc/terms/creator}}}) and is delivered along with it when there is a request to dereference the term URI.  
 
-Resources which are part of a dataset and described in separate documents can be backlinked to a file which describes the dataset using the void:inDataset property.  This method is described in section 5.3.3.
+Resources which are part of a dataset and described in separate documents can be backlinked to a file which describes the dataset using the {{{void:inDataset}}} property.  This method is described in section 5.3.3.
 
 ===5.2.3. Summary of this strategy===
 
 The RDF descriptions of several related resources can be provided in a single document which is delivered when any of the URIs of those resources is dereferenced.  This can be accomplished using hash URIs where non-information resources are differentiated by assigning them various hash tags such as 
 {{{
 http://lod.taxonconcept.org/ses/z9oqP#Image
-http://lod.taxonconcept.org/ses/z9oqP#Occurrence http://lod.taxonconcept.org/ses/z9oqP#Individual http://lod.taxonconcept.org/ses/z9oqP#Identification 
+http://lod.taxonconcept.org/ses/z9oqP#Occurrence 
+http://lod.taxonconcept.org/ses/z9oqP#Individual 
+http://lod.taxonconcept.org/ses/z9oqP#Identification 
 }}}
 The document (an information resource) is delivered by the server based on some rule which tells it how to process the base URI {{{ http://lod.taxonconcept.org/ses/z9oqP}}}.  Differentiating non-information resources by hash tags is a commonly used convention, but not a requirement.  
 
@@ -104,6 +106,7 @@ RSS [#10_RSS_specification (10)] was formerly an abbreviation for "RDF Site Summ
 ====5.3.1.1. Example====
 The following example is a fragment from the page http://bioimages.vanderbilt.edu/rdf/images.rss 
 {{{
+In RDF/XML:
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 xmlns:rss="http://purl.org/rss/1.0/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -139,11 +142,12 @@ xmlns:dcterms="http://purl.org/dc/terms/"
   </rss:item>
 </rdf:RDF>
 }}}
+(This example is not presented in N3 due to complications involving the blank node required by the rdf:Seq container.)
 
 ====5.3.1.2. Explanation of the example====
-An instance of the class {{{rss:channel}}} is a descriptive document that contains the list of resources being described in the "feed".  The instances of the class {{{rss:item}}} are the individual resources that are being described.  In this case the rss:item instances are the described resources whose URIs will be dereferenced to acquire the metadata which describes them.  The {{{rss:items}}} property of the channel points to an instance of the rdf:Seq class, a container class used to group related resources.  The {{{rdf:li}}} properties of the rdf:Seq instance point to the items that are being described on the site.
+An instance of the class {{{rss:channel}}} is a descriptive document that contains the list of resources being described in the "feed".  The instances of the class {{{rss:item}}} are the individual resources that are being described.  In this case the {{{rss:item}}} instances are the described resources whose URIs will be dereferenced to acquire the metadata which describes them.  The {{{rss:items}}} property of the channel points to an instance of the rdf:Seq class, a container class used to group related resources.  The {{{rdf:li}}} properties of the {{{rdf:Seq}}} instance point to the items that are being described on the site.
 
-Within the individual rss:channel and rss:item descriptions, the {{{rss:title}}} property is a human readable description of the resource; {{{rss:title}}} is a subproperty of {{{dcterms:title}}}.  The {{{rss:link}}} property is a URL which points to an html rendering of the resource.  The {{{dc:date}}} is understood to be the date on which the resource was updated and effectively serves as the modification date which a semantic client would use to determine whether the resource needed to be crawled again.  It is the {{{<rss:item rdf:about="…">}}} tag which provides the actual link to the resource which is to be crawled.  {{{rss:title}}} and {{{rss:link}}} do not really provide any useful information for a semantic client, although they make the RSS page readable in an RSS reader.  
+Within the individual {{{rss:channel}}} and {{{rss:item}}} descriptions, the {{{rss:title}}} property is a human readable description of the resource; {{{rss:title}}} is a subproperty of {{{dcterms:title}}}.  The {{{rss:link}}} property is a URL which points to an html rendering of the resource.  The {{{dc:date}}} is understood to be the date on which the resource was updated and effectively serves as the modification date which a semantic client would use to determine whether the resource needed to be crawled again.  It is the {{{<rss:item rdf:about="…">}}} tag which provides the actual link to the resource which is to be crawled.  {{{rss:title}}} and {{{rss:link}}} do not really provide any useful information for a semantic client, although they make the RSS page readable in an RSS reader.  
 
 ====5.3.1.3. Limitations of using RSS to index a site====
 Although an RSS document reduces the number of documents which a crawler would need to dereference to update its store of information about a database, a single RSS document would be too large to index more than a few thousand resources.  One option would be to have several RSS documents, but even this would be problematic for an RDF database that contained millions of triples.  
@@ -156,16 +160,16 @@ It is possible to implement an interface which allows a traditional relational d
 
 The D2QR Platform [#13_The_D2RQ_Platform_v0.7_user_manual_and_language_specification (13)] provides a mapping language that facilitates mapping and translation.  With this interface, the database can served the data as Linked Data and can also respond to SPARQL queries (reference to section not yet written).  D2QR also permits dumping the entire database into a file as RDF in various forms. [#14_D2RQ_RDF_data_dumps (14)]  
 
- Virtuoso [#15_Virtuoso (15)] can transparently access native relational data as well as RDF data stored in its database.  It allows SPARQL queries.
+Virtuoso [#15_Virtuoso (15)] can transparently access native relational data as well as RDF data stored in its database.  It allows SPARQL queries.
 
 Triplify [#16_Triplify (16)] is an application that can make content of small (less than 100MB database content) web-accessible databases also available as RDF.  It converts the results of SQL queries into RDF.  
 
 ====5.3.2.2. Loading RDF data into a triple store====
-There are a number of applications [#17_Wikipedia_article_on_triplestore (17)] which permit the storage of RDF as raw triples.  Triple stores are relatively efficient at storing large amounts of data [#18_Large_triplestores (18)] to the range of hundreds of billions to trillions of triples.  They are also efficiently queried using the SPARQL query language.  The total number triples stored can be increased if the store also infers triples based on properties such as owl:sameAs, rdfs:subClassOf, owl:TransitiveProperty which relate explicitly declared triples.  
+There are a number of applications [#17_Wikipedia_article_on_triplestore (17)] which permit the storage of RDF as raw triples.  Triple stores are relatively efficient at storing large amounts of data [#18_Large_triplestores (18)] to the range of hundreds of billions to trillions of triples.  They are also efficiently queried using the SPARQL query language.  The total number triples stored can be increased if the store also infers triples based on properties such as {{{owl:sameAs}}}, {{{rdfs:subClassOf}}}, {{{owl:TransitiveProperty}}} which relate explicitly declared triples.  
 
-A user can set up a locally managed triple store for whatever purpose is desired.  The user can then choose which RDF sources to load into that store and exert quality control over those data by loading only sources which are trusted.  Examples are TaxonConcept [#19_TaxonConcept_datasets (19)] and a TDWG-RDF/OWL Task Group sandbox. [#20_TDWG_RDF/OWL_Task_Group_sandbox (20)]
+A user can set up a locally managed triple store for whatever purpose is desired.  The user can then choose which RDF sources to load into that store and exert quality control over those data by loading only sources which are trusted.  Examples are !TaxonConcept [#19_TaxonConcept_datasets (19)] and a TDWG-RDF/OWL Task Group sandbox. [#20_TDWG_RDF/OWL_Task_Group_sandbox (20)]
 
-There are also a number of "public" triple stores which scrape other sources and subsequently provide access to those data.  Dbpedia [#21_DBpedia_home_page (21)] extracts data from Wikipedia and makes it available as RDF triples.  OpenLink has extracted [#22_OpenLink_Search (22)] over 15 billion triples which are searchable.  Sindice provides a "Semantic Web Index" [#23_Sindice_Semantic_Web_Index (23)] which accesses hundreds of millions of documents and makes the data in those documents available.  Adding data to one of the sources scraped by these organizations makes those triples publically accessible.  However, these sources are only as reliable as the data sources they include in their triplestore.
+There are also a number of "public" triple stores which scrape other sources and subsequently provide access to those data.  Dbpedia [#21_DBpedia_home_page (21)] extracts data from Wikipedia and makes it available as RDF triples.  !OpenLink has extracted [#22_OpenLink_Search (22)] over 15 billion triples which are searchable.  Sindice provides a "Semantic Web Index" [#23_Sindice_Semantic_Web_Index (23)] which accesses hundreds of millions of documents and makes the data in those documents available.  Adding data to one of the sources scraped by these organizations makes those triples publically accessible.  However, these sources are only as reliable as the data sources they include in their triplestore.
 
 ===5.3.3. Providing information about what data are available using VoID===
 
@@ -173,7 +177,7 @@ VoID is a vocabulary for expressing metadata about RDF datasets [#24_Describing_
 
 Within the dataset description, the term {{{void:rootResource}}} can be used to describe one or a few central entry points for a dataset which could provide starting points for crawling the dataset.  
 
-Discovery of the dataset description can be supported by using the property void:inDataset in the description of an RDF document.  For example, if the document document.rdf is provided upon dereferencing of a URI, the description of document.rdf could include the triple
+Discovery of the dataset description can be supported by using the property {{{void:inDataset}}} in the description of an RDF document.  For example, if the document document.rdf is provided upon dereferencing of a URI, the description of document.rdf could include the triple
 {{{
 http://example.org/document.rdf   void:inDataset   http://example.org/void.rdf#dataset
 }}}
@@ -263,8 +267,8 @@ Note the following features of this description:
  * The descriptive document is identified by the URI {{{http://bioimages.vanderbilt.edu/index.rdf}}} and that document is described separately from the dataset.  
  * The collection is identified by its Biodiversity Collections Index identifier {{{http://biocol.org/urn:lsid:biocol.org:col:35115}}} (an HTTP proxied LSID) and is considered a distinct resource which is the creator and publisher of the dataset.
  * The HTML homepage of the website {{{http://bioimages.vanderbilt.edu/index.htm}}} is also a resource which is distinct from the three resources listed above.  
- * void:rootResource is used to point to the RSS document which links to individual image records in the dataset
- * void:exampleResource is used to point to an example document which describes one of the image records in the dataset
+ * {{{void:rootResource}}} is used to point to the RSS document which links to individual image records in the dataset
+ * {{{void:exampleResource}}} is used to point to an example document which describes one of the image records in the dataset
 
 If content negation were set up to redirect dereferencing requests for {{{http://bioimages.vanderbilt.edu/}}} preferring {{{content-type: application/rdf+xml}}} to the document {{{http://bioimages.vanderbilt.edu/index.rdf}}} (unfortunately it is not at the present), the property {{{<void:inDataset rdf:resource="http://bioimages.vanderbilt.edu/"/>}}} could be assigned to individual RDF image records as a backlink to the VoID file.  
 
@@ -300,7 +304,7 @@ are also sometimes referred to as MIME (Multipurpose Internet Mail Extensions) t
 http://www.iana.org/assignments/media-types/index.html
 
 ===6 owl:Class===
-In the XML serialization, using owl:Class as the name of the container element implicitly makes the rdf:type assertion.  In the Axiomatic Triples for the Classes of the OWL 2 RDF-Based Vocabulary, {{{owl:Class}}} is an {{{rdfs:subClassOf   rdfs:Class}}}.  So by inference this also makes the statement
+In the XML serialization, using {{{owl:Class}}} as the name of the container element implicitly makes the {{{rdf:type}}} assertion.  In the Axiomatic Triples for the Classes of the OWL 2 RDF-Based Vocabulary, {{{owl:Class}}} is an {{{rdfs:subClassOf   rdfs:Class}}}.  So by inference this also makes the statement
 {{{
 http://lod.taxonconcept.org/ses/z9oqP#Species  rdf:type  rdfs:Class
 }}} 
@@ -316,7 +320,7 @@ http://xmlns.com/foaf/spec/
 
 ===9 Dublin Core RDF definitions===
 
-dublincore.org/2010/10/11/dcterms.rdf
+http://dublincore.org/2010/10/11/dcterms.rdf
 
 ===10 RSS specification===
 The definition in RDF can be seen using "view page source" on a web browser.
@@ -330,7 +334,6 @@ It is now also known as Really Simple Syndication.
 http://en.wikipedia.org/wiki/RSS
 
 ===12 Publishing Web Data by Sindice===
-See section 2.2
 
 http://sindice.com/developers/publishing
 
