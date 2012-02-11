@@ -1,6 +1,6 @@
 #summary Beginner's guide to RDF: 2. What is RDF and what is it for?
 
-= 2. What is RDF and what is it for? =
+= Beginner's guide to RDF: 2. What is RDF and what is it for? =
 
 [Beginners1URIs go to part 1: Resources and URIs]
 
