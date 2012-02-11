@@ -1,6 +1,6 @@
-#summary 5. Beginner's guide to RDF: 5. Discovery, Transmission, and Storage of RDF data
+#summary Beginner's guide to RDF: 5. Discovery, Transmission, and Storage of RDF data
 
-= 5. Discovery, Transmission, and Storage of RDF data =
+= Beginner's guide to RDF: 5. Discovery, Transmission, and Storage of RDF data =
 
 [Beginners4Vocabularies go to part 4: Vocabularies, DCAM, and RDFS]
 
@@ -14,7 +14,7 @@ The URI
 {{{
 urn:isbn:0893273651
 }}}
-follows the general rules of URI syntax (1) and the specific rules for describing ISBN numbers as URIs (2).  However, there is no obvious way to use this identifier as a means to dereference it, i.e. to retrieve information about the thing that it represents.  In contrast, the URI
+follows the general rules of URI syntax [#1._RFC_3986._Uniform_Resource_Identifier_(URI):_Generic_Syntax (1)] and the specific rules for describing ISBN numbers as URIs [#2._Using_International_Standard_Book_Numbers_as_Uniform_Resource (2)].  However, there is no obvious way to use this identifier as a means to dereference it, i.e. to retrieve information about the thing that it represents.  In contrast, the URI
 {{{
 http://www.w3.org/History/19921103-hypertext/hypertext/WWW/TheProject.html
 }}}
@@ -22,16 +22,16 @@ not only follows serves as an identifier for one of the world's first web pages,
 {{{
 urn:lsid:biocol.org:col:12599
 }}}
-is dereferenceable using the LSID protocol (3).  However, the LSID can't be dereferenced without installing special software, i.e. it can't be entered in a standard web browser.  
+is dereferenceable using the LSID protocol [#3_References_for_LSIDs (3)].  However, the LSID can't be dereferenced without installing special software, i.e. it can't be entered in a standard web browser.  
 
-There is no requirement that a URI be dereferenceable and RDF statements can use any URI as the subject or object of a triple.  Advocates of Linked Data (4) prefer to use HTTP URIs to refer to resources because the HTTP protocol is in widespread use and because HTTP URIs provide not only a unique identifier but also the means to access a representation of the thing being identified.  
+There is no requirement that a URI be dereferenceable and RDF statements can use any URI as the subject or object of a triple.  Advocates of Linked Data [#4_Linked_Data (4)] prefer to use HTTP URIs to refer to resources because the HTTP protocol is in widespread use and because HTTP URIs provide not only a unique identifier but also the means to access a representation of the thing being identified.  
 
 ==5.2. Using a document served through URI dereferencing to facilitate discovery of metadata associated with the URI==
 
 ===5.2.1. Getting the descriptive document.===
 The URI {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}} represents an abstract resource which is a species concept for _Apis melifera_, the European honeybee.  Because this identifier is an HTTP URI, a client (computer program) can use the HTTP protocol to dereference the identifier in an attempt to obtain information about the resource through the process described below.  The Vapour Linked Data Validator (http://validator.linkeddata.org/vapour) can be used to examine the details of this process.  
 
-1. The client contacts the server {{{http://lod.taxonconcept.org}}} and requests the resource identified by {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}}.  In the request, the client will indicate its preference of form of response.  If the client is a web browser, it will request {{{content-type: text/html}}} (5).  If it is a semantic client it will request {{{content-type: application/rdf+xml}}}.
+1. The client contacts the server {{{http://lod.taxonconcept.org}}} and requests the resource identified by {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}}.  In the request, the client will indicate its preference of form of response.  If the client is a web browser, it will request {{{content-type: text/html}}} [#5_Internet_media_types (5)].  If it is a semantic client it will request {{{content-type: application/rdf+xml}}}.
 
 2. The server strips ignores the "#" character and everything after it in the URI.  A URI which ends in a "hash tag" like this is called a hash URI.  Hash URIs are commonly used to identify non-information resources.  The server determines that the base URI {{{http://lod.taxonconcept.org/ses/z9oqP}}} is not an information resource that can be returned to the client, so based on some kind of information or rule that it knows, it determines an appropriate representation of the resource based on the content-type requested by the client.  In the case where {{{content-type: application/rdf+xml}}} is requested, the server responds to the client that it should "See Also" the representation provided by {{{http://lod.taxonconcept.org/ses/z9oqP.rdf}}}.  This process is called content negotiation.
 
@@ -57,10 +57,10 @@ in N3:
      wdrs:describedby <http://lod.taxonconcept.org/ses/z9oqP.rdf>;
      dcterms:isPartOf <http://lod.taxonconcept.org/ontology/void#TaxonConcept>.
 }}}
-From this information, we know that the resource has two types: {{{owl:Class}}}(6) and {{{txn:SpeciesConcept}}} (where{{{owl:}}} is an abbreviation for {{{ http://www.w3.org/2002/07/owl# }}} and {{{txn:}}} is an abbreviation for {{{http://lod.taxonconcept.org/ontology/txn.owl#}}}).  
+From this information, we know that the resource has two types: {{{owl:Class}}}[#6_owl:Class (6)] and {{{txn:SpeciesConcept}}} (where{{{owl:}}} is an abbreviation for {{{ http://www.w3.org/2002/07/owl# }}} and {{{txn:}}} is an abbreviation for {{{http://lod.taxonconcept.org/ontology/txn.owl#}}}).  
 
 ====5.2.2.1. Linking the non-information resource to the document that describes it====
-The description also says that the resource is wdrs:describedby (7) the RDF/XML document that was returned by the server.  This property links the non-information, abstract resource (the taxon concept) to the information resource that describes it in RDF.  The term foaf:isPrimaryTopicOf (8) can also be used to relate resources to documents that describe them.  By providing this triple, a semantic client can know precisely how the delivered document is related to the described resource.  The client can then examine the RDF describing the delivered document (also included in the delivered document) to find out things such as its language, modification date, and many other properties not shown here:
+The description also says that the resource is wdrs:describedby [#7_Protocol_for_Web_Description_Resources_(POWDER) (7)] the RDF/XML document that was returned by the server.  This property links the non-information, abstract resource (the taxon concept) to the information resource that describes it in RDF.  The term foaf:isPrimaryTopicOf [#8_FOAF_Vocabulary_Specification (8)] can also be used to relate resources to documents that describe them.  By providing this triple, a semantic client can know precisely how the delivered document is related to the described resource.  The client can then examine the RDF describing the delivered document (also included in the delivered document) to find out things such as its language, modification date, and many other properties not shown here:
 {{{
 in XML:
 <bibo:Document rdf:about="http://lod.taxonconcept.org/ses/z9oqP.rdf">
@@ -77,7 +77,7 @@ in N3:
 
 ====5.2.2.2. Linking the non-information resource to a vocabulary or dataset of which it is a part====
 
-The description of the species concept contains a triple which says that the resource dcterms:isPartOf another resource that is not described by the delivered RDF document itself.  If possible, that URI could be dereferenced to find out more about that collective entity and perhaps to discover the URIs of other resources similar to the one being described.  In Dublin and Darwin Cores, each term is described as rdfs:isDefinedBy the vocabulary which contains it.  (9)  In those cases, the RDF describing the vocabulary (with URI {{{http://purl.org/dc/terms/}}}) is included in the same document which contains the RDF describing the term (which has the URI {{{http://purl.org/dc/terms/creator}}}) and is delivered along with it when there is a request to dereference the term URI.  
+The description of the species concept contains a triple which says that the resource dcterms:isPartOf another resource that is not described by the delivered RDF document itself.  If possible, that URI could be dereferenced to find out more about that collective entity and perhaps to discover the URIs of other resources similar to the one being described.  In Dublin and Darwin Cores, each term is described as rdfs:isDefinedBy the vocabulary which contains it.  [#9_Dublin_Core_RDF_definitions (9)]  In those cases, the RDF describing the vocabulary (with URI {{{http://purl.org/dc/terms/}}}) is included in the same document which contains the RDF describing the term (which has the URI {{{http://purl.org/dc/terms/creator}}}) and is delivered along with it when there is a request to dereference the term URI.  
 
 Resources which are part of a dataset and described in separate documents can be backlinked to a file which describes the dataset using the void:inDataset property.  This method is described in section 5.3.3.
 
@@ -99,7 +99,7 @@ In this manner, a semantic client can "crawl" the web of links to discover other
 The method described in the previous section is adequate for a small number of URIs, such as those identifying terms in a vocabulary.  However, it is a relatively inefficient way of collecting larger amounts of RDF metadata. If the only description of the resources identified by the URIs is found in individual documents, a client would have to periodically crawl all of the linked documents to discover any changes that might have occurred in the metadata.  
 
 ===5.3.1. Using RSS to summarize the content of a small dataset===
-RSS (10) was formerly an abbreviation for "RDF Site Summary" (11).  Since that is exactly what we want to do (summarize a site in RDF), RSS can be used to inform web crawlers what metadata files are available to be crawled. (12)  Importantly, RSS can also allow the crawlers to detect new files and to know when existing pages have changed.  
+RSS [#10_RSS_specification (10)] was formerly an abbreviation for "RDF Site Summary" [#11_History_of_RSS_in_Wikipedia (11)].  Since that is exactly what we want to do (summarize a site in RDF), RSS can be used to inform web crawlers what metadata files are available to be crawled. [#12_Publishing_Web_Data_by_Sindice (12)]  Importantly, RSS can also allow the crawlers to detect new files and to know when existing pages have changed.  
 
 ====5.3.1.1. Example====
 The following example is a fragment from the page http://bioimages.vanderbilt.edu/rdf/images.rss 
@@ -154,22 +154,22 @@ If a database is large, it is not practical to convert those data to static docu
 ====5.3.2.1. Serving data from an existing relational database as RDF====
 It is possible to implement an interface which allows a traditional relational database to serve RDF metadata.  
 
-The D2QR Platform (13) provides a mapping language that facilitates mapping and translation.  With this interface, the database can served the data as Linked Data and can also respond to SPARQL queries (sec x.x.x.).  D2QR also permits dumping the entire database into a file as RDF in various forms. (14)  
+The D2QR Platform [#13_The_D2RQ_Platform_v0.7_user_manual_and_language_specification (13)] provides a mapping language that facilitates mapping and translation.  With this interface, the database can served the data as Linked Data and can also respond to SPARQL queries (reference to section not yet written).  D2QR also permits dumping the entire database into a file as RDF in various forms. [#14_D2RQ_RDF_data_dumps (14)]  
 
- Virtuoso (15) can transparently access native relational data as well as RDF data stored in its database.  It allows SPARQL queries.
+ Virtuoso [#15_Virtuoso (15)] can transparently access native relational data as well as RDF data stored in its database.  It allows SPARQL queries.
 
-Triplify (16) is an application that can make content of small (less than 100MB database content) web-accessible databases also available as RDF.  It converts the results of SQL queries into RDF.  
+Triplify [#16_Triplify (16)] is an application that can make content of small (less than 100MB database content) web-accessible databases also available as RDF.  It converts the results of SQL queries into RDF.  
 
 ====5.3.2.2. Loading RDF data into a triple store====
-There are a number of applications (17) which permit the storage of RDF as raw triples.  Triple stores are relatively efficient at storing large amounts of data (18) to the range of hundreds of billions to trillions of triples.  They are also efficiently queried using the SPARQL query language.  The total number triples stored can be increased if the store also infers triples based on properties such as owl:sameAs, rdfs:subClassOf, owl:TransitiveProperty which relate explicitly declared triples.  
+There are a number of applications [#17_Wikipedia_article_on_triplestore (17)] which permit the storage of RDF as raw triples.  Triple stores are relatively efficient at storing large amounts of data [#18_Large_triplestores (18)] to the range of hundreds of billions to trillions of triples.  They are also efficiently queried using the SPARQL query language.  The total number triples stored can be increased if the store also infers triples based on properties such as owl:sameAs, rdfs:subClassOf, owl:TransitiveProperty which relate explicitly declared triples.  
 
-A user can set up a locally managed triple store for whatever purpose is desired.  The user can then choose which RDF sources to load into that store and exert quality control over those data by loading only sources which are trusted.  Examples are TaxonConcept (19) and a TDWG-RDF/OWL Task Group sandbox. (20)
+A user can set up a locally managed triple store for whatever purpose is desired.  The user can then choose which RDF sources to load into that store and exert quality control over those data by loading only sources which are trusted.  Examples are TaxonConcept [#19_TaxonConcept_datasets (19)] and a TDWG-RDF/OWL Task Group sandbox. [#20_TDWG_RDF/OWL_Task_Group_sandbox (20)]
 
-There are also a number of "public" triple stores which scrape other sources and subsequently provide access to those data.  Dbpedia (21) extracts data from Wikipedia and makes it available as RDF triples.  OpenLink has extracted (22) over 15 billion triples which are searchable.  Sindice provides a "Semantic Web Index" (23) which accesses hundreds of millions of documents and makes the data in those documents available.  Adding data to one of the sources scraped by these organizations makes those triples publically accessible.  However, these sources are only as reliable as the data sources they include in their triplestore.
+There are also a number of "public" triple stores which scrape other sources and subsequently provide access to those data.  Dbpedia [#21_DBpedia_home_page (21)] extracts data from Wikipedia and makes it available as RDF triples.  OpenLink has extracted [#22_OpenLink_Search (22)] over 15 billion triples which are searchable.  Sindice provides a "Semantic Web Index" [#23_Sindice_Semantic_Web_Index (23)] which accesses hundreds of millions of documents and makes the data in those documents available.  Adding data to one of the sources scraped by these organizations makes those triples publically accessible.  However, these sources are only as reliable as the data sources they include in their triplestore.
 
 ===5.3.3. Providing information about what data are available using VoID===
 
-VoID is a vocabulary for expressing metadata about RDF datasets (24)  ({{{void: = http://rdfs.org/ns/void# }}}).   It provides basic information about the dataset, such as the project's homepage, name, publisher, size of dataset, etc.  The database description can also provide access information about documents which can serve as the starting point for crawling the database, SPARQL endpoints, and compressed or uncompressed RDF data dumps of the database content.  The description can also link to example resources which illustrate the types of data available.  
+VoID is a vocabulary for expressing metadata about RDF datasets [#24_Describing_Linked_Datasets_with_the_VoID_Vocabulary (24)]  ({{{void: = http://rdfs.org/ns/void# }}}).   It provides basic information about the dataset, such as the project's homepage, name, publisher, size of dataset, etc.  The database description can also provide access information about documents which can serve as the starting point for crawling the database, SPARQL endpoints, and compressed or uncompressed RDF data dumps of the database content.  The description can also link to example resources which illustrate the types of data available.  
 
 Within the dataset description, the term {{{void:rootResource}}} can be used to describe one or a few central entry points for a dataset which could provide starting points for crawling the dataset.  
 
@@ -362,11 +362,11 @@ http://en.wikipedia.org/wiki/Triplestore
 
 http://www.w3.org/wiki/LargeTripleStores
 
-===19 TaxonConcept datasets===
+===19 !TaxonConcept datasets===
 
 http://www.taxonconcept.org/sparql-endpoint/
 
-===20 TDWG RDF/OWL Task Group sandbox
+===20 TDWG RDF/OWL Task Group sandbox===
 
 http://tdwg-rdf.net/
 
@@ -374,11 +374,15 @@ http://tdwg-rdf.net/
 
 http://dbpedia.org/About
 
-===22 OpenLink Search===
+===22 !OpenLink Search===
 http://lod.openlinksw.com/
 
 ===23 Sindice Semantic Web Index===
 http://sindice.com/
+
+The Sindice triplestore can be searched interactively using the Sig.ma Semantic Information Mashup which allows you to create a set of triples from multiple sources either cached by Sindice or loaded from URIs.
+
+http://sig.ma/search
 
 ===24 Describing Linked Datasets with the VoID Vocabulary===
 Note: VoID is not a W3C Recommendation.  However, it seems to be the primary existing vocabulary for describing linked datasets.
