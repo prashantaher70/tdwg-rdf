@@ -4,6 +4,8 @@
 
 [Beginners3RDFbasics go to part 3: RDF basics]
 
+[Beginners5RDFdata go to part 5: Discovery, Transmission, and Storage of RDF data]
+
 *Contents*
 
 <wiki:toc max_depth="4" />
