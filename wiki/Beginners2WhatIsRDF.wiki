@@ -1,4 +1,4 @@
-#summary 2. Beginner's guide to RDF: What is RDF and what is it for?
+#summary Beginner's guide to RDF: 2. What is RDF and what is it for?
 
 = 2. What is RDF and what is it for? =
 
