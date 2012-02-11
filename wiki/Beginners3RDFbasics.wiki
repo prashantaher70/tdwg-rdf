@@ -1,4 +1,4 @@
-#summary 3. RDF basics
+#summary Beginner's guide to RDF: 3. RDF basics
 
 = 3. RDF basics =
 
@@ -10,7 +10,7 @@ This guide is intended to help people understand what RDF is and what it is used
 
 *Contents*
 
-<wiki:toc max_depth="3" />
+<wiki:toc max_depth="4" />
 
 == 3.1. What is a triple?==
 The basic unit of RDF is a statement called a triple.  One can think of a triple as a type of sentence that states a single "fact" about a resource.  
