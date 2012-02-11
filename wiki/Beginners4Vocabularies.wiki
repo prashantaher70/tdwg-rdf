@@ -1,6 +1,6 @@
-#summary 4. Vocabularies, DCAM, and RDFS
+#summary Beginner's guide to RDF: 4. Vocabularies, DCAM, and RDFS
 
-= 4. Vocabularies, DCAM, and RDFS =
+= Beginner's guide to RDF: 4. Vocabularies, DCAM, and RDFS =
 
 [Beginners3RDFbasics go to part 3: RDF basics]
 
