@@ -1,6 +1,6 @@
-#summary 1. Beginner's guide to RDF: Resources and URIs
+#summary Beginner's guide to RDF: 1. Resources and URIs
 
-= 1. Beginner's guide to RDF: Resources and URIs =
+= Beginner's guide to RDF: 1. Resources and URIs =
 
 [Beginners2WhatIsRDF go to part 2: What is RDF and what is it for?]
 
