@@ -57,6 +57,10 @@ in N3:
      wdrs:describedby <http://lod.taxonconcept.org/ses/z9oqP.rdf>;
      dcterms:isPartOf <http://lod.taxonconcept.org/ontology/void#TaxonConcept>.
 }}}
+In graphical form:
+
+http://bioimages.vanderbilt.edu/pages/rdf-related-resource-links.jpg
+
 From this information, we know that the resource has two types: {{{owl:Class}}}[#6_owl:Class (6)] and {{{txn:SpeciesConcept}}} (where {{{owl:}}} is an abbreviation for {{{ http://www.w3.org/2002/07/owl# }}} and {{{txn:}}} is an abbreviation for {{{http://lod.taxonconcept.org/ontology/txn.owl#}}}).  
 
 ====5.2.2.1. Linking the non-information resource to the document that describes it====
@@ -79,7 +83,11 @@ in N3:
 
 The description of the species concept contains a triple which says that the resource {{{dcterms:isPartOf}}} another resource that is not described by the delivered RDF document itself.  If possible, that URI could be dereferenced to find out more about that collective entity and perhaps to discover the URIs of other resources similar to the one being described.  In Dublin and Darwin Cores, each term is described as {{{rdfs:isDefinedBy}}} the vocabulary which contains it.  [#9_Dublin_Core_RDF_definitions (9)]  In those cases, the RDF describing the vocabulary (with URI {{{http://purl.org/dc/terms/}}}) is included in the same document which contains the RDF describing the term (which has the URI {{{http://purl.org/dc/terms/creator}}}) and is delivered along with it when there is a request to dereference the term URI.  
 
-Resources which are part of a dataset and described in separate documents can be backlinked to a file which describes the dataset using the {{{void:inDataset}}} property.  This method is described in section 5.3.3.
+In graphical form this can be represented as:
+
+http://bioimages.vanderbilt.edu/pages/rdf-terms-related-to-vocabulary.jpg
+
+Resources which are part of a dataset and described in separate documents can be backlinked to a file which describes the dataset using the {{{void:inDataset}}} property.  This method is described in [#5.3.3._Providing_information_about_what_data_are_available_using section 5.3.3.]
 
 ===5.2.3. Summary of this strategy===
 
