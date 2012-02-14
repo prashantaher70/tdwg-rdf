@@ -157,14 +157,30 @@ Click on the Run Query (play button) icon.  Mouse over the results link to see t
 
 To see what the query results look like in machine-friendly form, repeat them at the URL http://uriburner.com/sparql/
 
+====6.4.2.1. Eliminating duplicate results using DISTINCT====
+The endpoint http://tdwg-rdf.net/store2/ contains more metadata described using Darwin-SW.  Using the same prefixes as above, enter the following query:
+{{{
+SELECT ?y WHERE {
+?y dsw:hasOccurrence ?a.
+ ?b dsw:evidenceFor ?a.
+ ?b dcterms:type dcmitype:StillImage.
+}
+}}}
+This query selects individual organisms (trees) which have occurrences that are documented by images.  If you run the query, you will find that there are numerous duplicate results because there are numerous images.  Replace the first line with 
+{{{
+SELECT DISTINCT ?y WHERE {
+}}}
+to remove duplicate results.  
+
+
 ===6.4.3. DESCRIBE query form ===
 
 ====6.4.3.1. Describing a single resource identified by URI====
-Replace the SELECT query with the following:
+Return to the http://uriburner.com/isparql/ endpoint.  Enter the following query:
 {{{
 DESCRIBE <http://bioimages.vanderbilt.edu/baskauf/04005#loc>
 }}}
-which contains the URI solution for the variable {{{?Location}}} in the first query above.  Try changing the View from Navigator to Raw Triples as described in section 6.2.2.2.  The description of the resource identified by the URI contains triples in which the URI is the subject (grouped together) and a triple where the URI was the object.  Change the View to Google Maps v3.  Zoom out and change the view to Satellite if desired. 
+which contains the URI solution for the variable {{{?Location}}} in the query of section 6.4.2.  Try changing the View from Navigator to Raw Triples as described in section 6.2.2.2.  The description of the resource identified by the URI contains triples in which the URI is the subject (grouped together) and a triple where the URI was the object.  Change the View to Google Maps v3.  Zoom out and change the view to Satellite if desired. 
 
 ====6.4.3.2. Describing a set of resources that match a variable in a triple pattern====
 
@@ -208,23 +224,20 @@ DESCRIBE ?u WHERE {
 }}}
 requests a description of the Lower Quality ServiceAccessPoints (downloadable versions) of images which serve as evidenceFor occurrences documented atEvents which are locatedAt Locations which are in the stateProvince of Hawaii.  
 
-===6.4.4. Eliminating duplicate results using DISTINCT===
-The endpoint http://tdwg-rdf.net/store2/ contains more metadata described using Darwin-SW.  Using the same prefixes as above, enter the following query:
+===6.4.4. Creating RDF graphs using CONSTRUCT===
+In the example given in section 6.4.3.1., the result described the resource identified by the URI by presenting all triples in the dataset which referenced that URI, including triples where the URI was the object rather than the subject.  The CONSTRUCT query form returns an RDF graph which contains only triples in the solution that conform to the graph template.  A result similar to the query in 6.4.3.1. can be achieved by the query
 {{{
-SELECT ?y WHERE {
-?y dsw:hasOccurrence ?a.
- ?b dsw:evidenceFor ?a.
- ?b dcterms:type dcmitype:StillImage.
+CONSTRUCT {
+  <http://bioimages.vanderbilt.edu/kirchoff/em2164#occ> ?predicate ?object.
+}
+WHERE {
+  <http://bioimages.vanderbilt.edu/kirchoff/em2164#occ> ?predicate ?object.
 }
 }}}
-This query selects individual organisms (trees) which have occurrences that are documented by images.  If you run the query, you will find that there are numerous duplicate results because there are numerous images.  Replace the first line with 
-{{{
-SELECT DISTINCT ?y WHERE {
-}}}
-to remove duplicate results.  
+View the result using the Raw Triples view.  Note that this time only triples which contain the URI as the subject are included.
 
 ==6.5. Examples of more complex queries==
-A more complex query can be made as follows:
+A more complex query can be made at the endpoint http://tdwg-rdf.net/store2/ as follows:
 {{{
 SELECT DISTINCT ?y WHERE {
  ?y dsw:hasOccurrence ?a.
@@ -268,15 +281,15 @@ http://semanticweb.org/wiki/SPARQL_endpoint
 http://www.w3.org/TR/sparql11-protocol/
 
 ===4 Strategy for creating URIs for famous dead people===
-This was suggested by Pete DeVries.
+This was suggested by Pete !DeVries.
 
 ===5 Demonstration of capabilities of URIBurner===
 
 http://www.taxonconcept.org/example-sparql-queries/
 
-thanks to Pete DeVries.  This page also contains URLs which provide examples of embedding the SPARQL queries within the URL so that the results are displayed when the URL is clicked.
+thanks to Pete !DeVries.  This page also contains URLs which provide examples of embedding the SPARQL queries within the URL so that the results are displayed when the URL is clicked.
 
-===6 TaxonConcept project===
+===6 !TaxonConcept project===
 Homepage:
 
 http://www.taxonconcept.org/
