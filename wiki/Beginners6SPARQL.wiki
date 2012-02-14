@@ -1,0 +1,302 @@
+#summary Beginner's guide to RDF: 6. Querying with SPARQL
+
+= Beginner's guide to RDF: 6. Querying with SPARQL =
+
+Note: this page is still undergoing proofreading, linking, and formatting
+
+[Beginners5RDFdata go to part 5: Discovery, Transmission, and Storage of RDF data]
+
+*Contents*
+
+<wiki:toc max_depth="4" />
+
+==6.1. What is SPARQL?==
+
+SPARQL is a query language designed specifically to query RDF databases. (1)  SPARQL queries are sent from a client to a service known as a SPARQL end point (2) using the HTTP protocol.  The interaction between the client and the endpoint is defined in a machine-friendly protocol (3) that is not intended to be interpreted by humans, so use of SPARQL requires an interface that allows the user to enter the queries and to display the results in a meaningful way.
+
+==6.2. Public SPARQL interfaces ==
+
+===6.2.1. DBpedia==
+====6.2.1.1. Creating RDF metadata and URIs via DBpedia====
+
+DBpedia transforms data that is entered in Wikipedia into RDF triples.  So creating a page in Wikipedia creates RDF in DBpedia.  Creating a page for a taxonomist creates a URI and other metadata about the person. (4)  For example, the page
+
+http://en.wikipedia.org/wiki/Johan_Christian_Fabricius
+
+describes Fabricus.  DBpedia creates a URI of the format
+{{{
+http://dbpedia.org/resource/wikipedia_page_name
+}}}
+where wikipedia_page_name is the name of the page with underscore characters replacing spaces (as is done for the page URLs).  In the case of Fabricus, his URI is:
+{{{
+http://dbpedia.org/resource/Johan_Christian_Fabricius
+}}}
+
+====6.2.1.2. Querying DBpedia====
+
+DBpedia can be queried at http://dbpedia.org/sparql .  The interface uses the Virtuoso SPARQL Query Editor to query the DBpedia endpoing.  Enter the query
+{{{
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+SELECT ?y WHERE {
+ ?y dbpedia-owl:binomialAuthority dbres:Johan_Christian_Fabricius.
+ }
+
+limit 10
+}}}
+into the Query Text box.  Drop down the Results Format selection to HTML.  The resulting display should provide a table of 10 species for which their binomial authority was Fabricus.  Note that because the resources are described by the Wikipedia page names, there is no consistency in the URIs - some are given as scientific names and some are given as common names.  Other output formats are possible but most aren't human-friendly.  
+
+DBpedia has an ontology for categorizing information systematically.  It includes properties such as dbpedia-owl:family and other taxonomic levels.  Enter the following query:
+{{{
+PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+PREFIX dbpprop: <http://dbpedia.org/property/>
+PREFIX dbres: <http://dbpedia.org/resource/>
+
+DESCRIBE ?x WHERE {
+ ?x dbpedia-owl:family dbres:Crambidae.
+ ?x dbpedia-owl:binomialAuthority dbres:Johan_Christian_Fabricius.
+ }
+
+limit 10
+}}}
+and select Results Format RDF/XML or some other format.  Depending on your browser you may be able to view the output directly or you may have to save the file and open it using a text editor.  The results show all of the triples that describe the 5 or so Crambidae species described by Fabricus which have articles in Wikipedia.  You should note that DBpedia routinely provides the language attribute for literals.  So a query containing a literal must have an "@" language tag.  For example:
+{{{
+PREFIX dbpprop: <http://dbpedia.org/property/>
+
+DESCRIBE ?x WHERE {
+ ?x dbpprop:binomial "Diatraea saccharalis"@en.
+ }
+}}}
+will result in results even though the binomial is in Latin because Wikipedia apparently assumes that text entered in English wiki pages is in English.
+
+===6.2.2. URIBurner
+====6.2.2.1. Pushing metadata into URIBurner LOD cloud====
+URIBurner (a  Virtuoso-based product of OpenLink software) provides a web-based mechanism to "sponge" data from an RDF file which is on the Web.  As of 12 Feb 2012, the URIBurner home page http://uriburner.com provides a text box into which the URL of a file containing RDF (in RDF/XML, N3, or RDFa) can be entered.  After clicking on the Sponge! button, the triples in the file get added to the uriburner.com SPARQL host where they can be accessed through a public endpoint.  The metadata isn't really in the "cloud" any more than it was before, but forcing URIBurner to sponge the file makes the metadata available to anyone who conducts a search using a URIBurner interface.  
+
+====6.2.2.2. Querying the URIBurner triplestore====
+URIBurner provides a basic Virtuoso-based SPARQL endpoint similar to the DBpedia interface at http://uriburner.com/sparql (.  The results are as un-human friendly as those of DBpedia.  However, URIBurner has an enhanced service at http://uriburner.com/isparql/ which provides output in a number of forms that is more readable to humans.  As of 12 Feb 2012, TDWG BioBlitz metadata were present on URIBurner.  With the Advanced tab selected, enter the following query in the SPARQL Query text box 
+{{{
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX txn: <http://lod.taxonconcept.org/ontology/txn.owl#>
+PREFIX tdwg: <http://rs.tdwg.org/dwc/terms/#>
+
+DESCRIBE ?x WHERE {
+ ?x a txn:Occurrence.
+ ?x dcterms:date "2010-09-29".
+ ?x tdwg:recordedBy "Peter Desmet".
+}
+limit 10
+}}}
+and click the Run Query button which has an icon like a "play" button.  This should display the results of the query under the Results tab.  The default view is Navigator, which behaves like the OpenLink Navigator linked data browser.  Dropping down the view to Raw Triples lists property-value pairs under the heading of each subject URI.  If the value is an image URL, the image is displayed on the screen.  If a described resource contains geo:lat and geo:long triples, dropping down the Google Maps v3 view will display markers on a Google Map display.  Clicking on a marker displays the triples for the resource whose properties include the geo:lat and geo:long values.  
+
+== 6.3. Loading metadata into a private triple store for querying==
+
+The TDWG TDF/OWL Task Group has several sandboxes for experimenting with SPARQL queries at http://tdwg-rdf.net/ .  To obtain access, contact Cam Webb via the link on the page.  The query interfaces are similar to those described in the previous sections.  However, loaded datasets are restricted to those loaded by participants in the Task Group, so the results may be somewhat more predictable.  Also, the stability of the triples might be somewhat better than the unknown stability of the public stores.  
+
+==6.4. Basic SPARQL queries==
+
+These examples use data currently loaded as of 13 February 2012, so in theory they should produce results until the triples are unloaded at some future time.  Additional information about constructing queries is at http://www.w3.org/TR/sparql11-query/#basicpatterns
+
+===6.4.1. Representing literals, URIs, and variables===
+
+Literals are placed in quotation marks, e.g. "Hawaii". (6)  URIs (7) are placed inside angled brackets, e.g. <http://xmalesia.info/sw/event/3e2c5f3711> .  
+
+====6.4.1.1. PREFIX declarations====
+SPARQL queries allow the user to abbreviate URIs by declaring prefix abbreviations.  For example, the declaration
+{{{
+PREFIX dcterms: <http://purl.org/dc/terms/>
+}}}
+allows the URI {{{http://purl.org/dc/terms/Location}}} to be abbreviated as {{{dcterms:Location}}}.  Note: this behavior is similar to the use of namespace abbreviations for URIs in RDF.  
+
+====6.4.1.2. Variables====
+If a string is preceded by a question mark, it is treated as a variable which can represent a URI or a literal, e.g. ?x  or ?person .
+
+===6.4.2. Triple patterns===
+SPARQL is based on matching parts of an RDF graph (8) with triple patterns that may contain variables.  For example, the triple pattern
+{{{
+?location  dwc:stateProvince "Hawaii"
+}}}
+would match the triple 
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/04005#loc>  dwc:stateProvince  "Hawaii"
+}}}
+The solution sequence is the set of triples which match the triple pattern.  There can be zero, one, or many solutions in the sequence.  A triple pattern can also contain zero, one, two, or three variables.  
+
+As in N3 notation, the URI {{{http://www.w3.org/1999/02/22-rdf-syntax-ns#type}}} or {{{rdf:type}}} can be abbreviated as {{{a}}}.  So the pattern
+{{{?location a dcterms:Location}}}
+is the same as 
+{{{?location rdf:type dcterms:Location}}}
+
+===6.4.2. SELECT query form===
+To investigate the use of the SELECT query form, go to http://uriburner.com/isparql/ and in the query box, enter the following prefix declarations which will be used in the examples to follow: 
+{{{
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX tdwg: <http://rs.tdwg.org/dwc/terms/#>
+PREFIX mrtg: <http://xxx.org/XXX/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX txn:   <http://lod.taxonconcept.org/ontology/txn.owl#>
+PREFIX dsw: <http://purl.org/dsw/>
+}}}
+Skip a line then enter the triple pattern shown above followed by a period.
+{{{
+SELECT ?location WHERE {
+ ?location  dwc:stateProvince "Hawaii".
+ }
+}}}
+
+Click on the Run Query (play button) icon.  Mouse over the results link to see the URI (http://bioimages.vanderbilt.edu/baskauf/04005#loc) which can substitute for the variable {{{?location}}} in the triple pattern.  Click on the Advanced tab and try replacing "{{{Hawaii}}}" with "{{{Tennessee}}}" and "{{{Indiana}}}".  (If you click on one of the links in the Results view, it will take you to a Linked Data browser.  To return back to the query results, click on the blue left-facing arrow before clicking on the Advanced tab again.)
+
+To see what the query results look like in machine-friendly form, repeat them at the URL http://uriburner.com/sparql/
+
+===6.4.3. DESCRIBE query form ===
+
+====6.4.3.1. Describing a single resource identified by URI====
+Replace the SELECT query with the following:
+{{{
+DESCRIBE <http://bioimages.vanderbilt.edu/baskauf/04005#loc>
+}}}
+which contains the URI solution for the variable {{{?Location}}} in the first query above.  Try changing the View from Navigator to Raw Triples as described in section 6.2.2.2.  The description of the resource identified by the URI contains triples in which the URI is the subject (grouped together) and a triple where the URI was the object.  Change the View to Google Maps v3.  Zoom out and change the view to Satellite if desired. 
+
+====6.4.3.2. Describing a set of resources that match a variable in a triple pattern====
+
+Replace the previous query with 
+{{{
+DESCRIBE ?location WHERE {
+ ?location  dwc:stateProvince "Tennessee".
+ }
+}}}
+The Linked Data browser which results shows all of the URIs which can substitute for {{{?location}}} in the triple pattern used in the query.  Again, use Raw Triples and Google Maps v3 to examine the Results.  
+
+====6.4.3.3. Describing a set of resources that match a variable in several triple patterns====
+Replace the previous query with the query similar to that given in section 6.2.2.2.:
+{{{ 
+DESCRIBE ?x WHERE {
+ ?x a txn:Occurrence.
+ ?x dcterms:date "2010-09-29".
+}
+limit 10
+}}}
+There are many records in the TDWG Bioblitz.  We want to limit the description set by requiring the record URIs to match several criteria.  We want to examine records that are only txn:Occurrences (9) that were recorded on September 29, 2010.  Because there are still many possible results, {{{limit 10}}} is specified to try out the query without getting an inordinate number of results.  
+
+The query can be further limited by adding the triple pattern
+{{{
+?x tdwg:recordedBy "Peter Desmet".
+}}}
+to the list and removing the {{{limit 10}}} restriction.  Other possible literals that could be used are "Donald Hobern", "Cyndy Sims Parr", "test", and "Dmitry Mozzherin"
+
+====6.4.3.4. Describing a set of resources that match several triple patterns with multiple variables====
+Because the structure of the TDWG Bioblitz metadata was very flat with all properties ascribed to the occurrence, the single variable {{{?x}}} could represent the URIs of the desired occurrence resources.  The Bioimages RDF graph uses the Darwin-SW ontology (10) which is highly normalized (NOT flat) and therefore separates the metadata among instances of all of many of the Darwin Core classes.  The query
+{{{
+DESCRIBE ?u WHERE {
+ ?u mrtg:variant "Lower Quality".
+ ?w mrtg:hasServiceAccessPoint ?u.
+ ?w dsw:evidenceFor ?z.
+ ?z dsw:atEvent ?y.
+ ?y dsw:locatedAt ?x.
+ ?x a dcterms:Location.
+ ?x dwc:stateProvince "Hawaii".
+}
+}}}
+requests a description of the Lower Quality ServiceAccessPoints (downloadable versions) of images which serve as evidenceFor occurrences documented atEvents which are locatedAt Locations which are in the stateProvince of Hawaii.  
+
+===6.4.4. Eliminating duplicate results using DISTINCT===
+The endpoint http://tdwg-rdf.net/store2/ contains more metadata described using Darwin-SW.  Using the same prefixes as above, enter the following query:
+{{{
+SELECT ?y WHERE {
+?y dsw:hasOccurrence ?a.
+ ?b dsw:evidenceFor ?a.
+ ?b dcterms:type dcmitype:StillImage.
+}
+}}}
+This query selects individual organisms (trees) which have occurrences that are documented by images.  If you run the query, you will find that there are numerous duplicate results because there are numerous images.  Replace the first line with 
+{{{
+SELECT DISTINCT ?y WHERE {
+}}}
+to remove duplicate results.  A more complex query can be made as follows:
+{{{
+SELECT DISTINCT ?y WHERE {
+ ?y dsw:hasOccurrence ?a.
+ ?b dsw:evidenceFor ?a.
+ ?b dcterms:type dcmitype:StillImage.
+ ?y dsw:hasOccurrence ?x.
+ ?z dsw:evidenceFor ?x.
+ ?z a dsw:PreservedSpecimen.
+}
+}}}
+The first three triple patterns select trees that are have occurrences that are documented by images.  The last three triple patterns similarly select trees that have occurrences that are documented by preserved specimens.  By using the same variable {{{?y}}} to refer to the trees in both screens, the resulting set must be documented by both images and specimens.  
+
+The query
+{{{
+DESCRIBE ?z WHERE {
+ ?y dsw:hasOccurrence ?a.
+ ?b dsw:evidenceFor ?a.
+ ?b dcterms:type dcmitype:StillImage.
+ ?y dsw:hasOccurrence ?x.
+ ?z dsw:evidenceFor ?x.
+ ?z a dsw:PreservedSpecimen.
+}
+}}}
+performs a similar screen but requests the query to describe the specimen rather than list the URI of the tree.
+
+==6.6. More complex queries==
+More complex queries can be constructed using filters, negation, optional patterns, and other features of SPARQL that are beyond the scope of this guide.  See
+
+http://www.w3.org/TR/sparql11-query/
+
+for an exhaustive description of SPARQL queries.  
+
+=References=
+===1 SPARQL 1.1 Query Language===
+http://www.w3.org/TR/sparql11-query/
+
+===2  Definition of SPARQL endpoint===
+http://semanticweb.org/wiki/SPARQL_endpoint
+
+===3 Communication protocol for SPARQL===
+http://www.w3.org/TR/sparql11-protocol/
+
+===4 Strategy for creating URIs for famous dead people===
+This was suggested by Pete DeVries.
+
+===5 Demonstration of capabilities of URIBurner===
+
+http://www.taxonconcept.org/example-sparql-queries/
+
+thanks to Pete DeVries.  This page also contains URLs which provide examples of embedding the SPARQL queries within the URL so that the results are displayed when the URL is clicked.
+
+===6 Literals that are typed or which have language tags===
+If literal strings are typed or have language tags, they are not considered equivalent to the same simple literal string.  For example, "cat" is not equivalent to "cat"@en ("cat" tagged as English).  See http://www.w3.org/TR/sparql11-query/#matchingRDFLiterals for more information.  
+
+===7 Internationalized Resource Identifiers (IRIs)===
+Technically, SPARQL uses IRIs which are a generalization of URIs that allow non-ASCII characters.  See
+
+http://www.ietf.org/rfc/rfc3987.txt
+
+However, as a matter of convenience, IRIs will be referred to as URIs in this guide.
+
+===8 RDF graph===
+"Graph" is the term for a set of RDF triples which are interconnected by having nodes (URIs or literals) in common.  Graphically, this is shown as nodes connected by arrows which represent predicates.  However, the term "graph" represents the set of triples regardless of serialization and not specifically a graphical representation.  For more information, see
+
+http://www.w3.org/TR/rdf-primer/#intro 
+
+===9 !TaxonConcept ontology===
+The TDWG Bioblitz used some terms from the TaxonConcept ontology which defines "light-weight tags" (many classes) that can be used to create very flat database records.  For more details, see
+
+http://www.taxonconcept.org/ontologies/
+
+===10 Darwin-SW ontology===
+The Darwin-SW (DSW) ontology is a fully normalized model which has relatively few classes (based primarily on the Darwin Core classes) but which results in very deeply nested records.  See the diagram at
+
+http://code.google.com/p/darwin-sw/
+
+which diagrams the relationships among the classes and 
+
+http://code.google.com/p/darwin-sw/wiki/DesignPrinciples
+
+for a description of the design principles on which it is based.  
