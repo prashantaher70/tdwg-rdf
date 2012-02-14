@@ -34,7 +34,7 @@ http://dbpedia.org/resource/Johan_Christian_Fabricius
 
 ====6.2.1.2. Querying DBpedia====
 
-DBpedia can be queried at http://dbpedia.org/sparql .  The interface uses the Virtuoso SPARQL Query Editor to query the DBpedia endpoing.  Enter the query
+DBpedia can be queried at http://dbpedia.org/sparql .  The interface uses the Virtuoso SPARQL Query Editor to query the DBpedia endpoint.  Enter the query
 {{{
 PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
 PREFIX dbpprop: <http://dbpedia.org/property/>
@@ -46,7 +46,7 @@ SELECT ?y WHERE {
 
 limit 10
 }}}
-into the Query Text box.  Drop down the Results Format selection to HTML.  The resulting display should provide a table of 10 species for which their binomial authority was Fabricus.  Note that because the resources are described by the Wikipedia page names, there is no consistency in the URIs - some are given as scientific names and some are given as common names.  Other output formats are possible but most aren't human-friendly.  
+into the Query Text box.  Drop down the Results Format selection to HTML then click Run Query.  The resulting display should provide a table of 10 species for which the binomial authority was Fabricus.  Note that because the resources are described by the Wikipedia page names, there is no consistency in the URIs - some are given as scientific names and some are given as common names.  Output formats other than HTML are possible with this query editor but most aren't human-friendly.  
 
 DBpedia has an ontology for categorizing information systematically.  It includes properties such as dbpedia-owl:family and other taxonomic levels.  Enter the following query:
 {{{
@@ -72,11 +72,11 @@ DESCRIBE ?x WHERE {
 will result in results even though the binomial is in Latin because Wikipedia apparently assumes that text entered in English wiki pages is in English.
 
 ===6.2.2. URIBurner===
-====6.2.2.1. Pushing metadata into URIBurner LOD cloud====
-URIBurner (a  Virtuoso-based product of OpenLink software) provides a web-based mechanism to "sponge" data from an RDF file which is on the Web.  As of 12 Feb 2012, the URIBurner home page http://uriburner.com provides a text box into which the URL of a file containing RDF (in RDF/XML, N3, or RDFa) can be entered.  After clicking on the Sponge! button, the triples in the file get added to the uriburner.com SPARQL host where they can be accessed through a public endpoint.  The metadata isn't really in the "cloud" any more than it was before, but forcing URIBurner to sponge the file makes the metadata available to anyone who conducts a search using a URIBurner interface.  
+====6.2.2.1. Pushing metadata into URIBurner cloud====
+URIBurner (a  Virtuoso-based product of !OpenLink software) provides a web-based mechanism to "sponge" data from an RDF file which is on the Web.  As of 12 Feb 2012, the URIBurner home page http://uriburner.com provides a text box into which the URL of a file containing RDF (in RDF/XML, N3, or RDFa) can be entered.  After clicking on the Sponge! button, the triples in the file get added to the uriburner.com SPARQL host where they can be accessed through a public endpoint.  The metadata isn't really in the Linked Open Data (LOD) "cloud" any more than it was before, but forcing URIBurner to sponge the file makes the metadata available to anyone who conducts a search using a URIBurner interface.  
 
 ====6.2.2.2. Querying the URIBurner triplestore====
-URIBurner provides a basic Virtuoso-based SPARQL endpoint similar to the DBpedia interface at http://uriburner.com/sparql [#5_Demonstration_of_capabilities_of_URIBurner (5)].  The results are as un-human friendly as those of DBpedia.  However, URIBurner has an enhanced service at http://uriburner.com/isparql/ which provides output in a number of forms that is more readable to humans.  As of 12 Feb 2012, TDWG BioBlitz metadata were present on URIBurner.  With the Advanced tab selected, enter the following query in the SPARQL Query text box 
+URIBurner provides a basic Virtuoso-based SPARQL endpoint similar to the DBpedia interface at http://uriburner.com/sparql [#5_Demonstration_of_capabilities_of_URIBurner (5)].  The results are as un-human friendly as those of DBpedia.  However, URIBurner has an enhanced service at http://uriburner.com/isparql/ which provides output in a number of forms that is more readable to humans.  As of 12 Feb 2012, TDWG !BioBlitz metadata were present on URIBurner.  Using the enhanced interface with the Advanced tab selected, enter the following query in the SPARQL Query text box 
 {{{
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX txn: <http://lod.taxonconcept.org/ontology/txn.owl#>
@@ -89,7 +89,7 @@ DESCRIBE ?x WHERE {
 }
 limit 10
 }}}
-and click the Run Query button which has an icon like a "play" button.  This should display the results of the query under the Results tab.  The default view is Navigator, which behaves like the OpenLink Navigator linked data browser.  Dropping down the view to Raw Triples lists property-value pairs under the heading of each subject URI.  If the value is an image URL, the image is displayed on the screen.  If a described resource contains geo:lat and geo:long triples, dropping down the Google Maps v3 view will display markers on a Google Map display.  Clicking on a marker displays the triples for the resource whose properties include the geo:lat and geo:long values.  
+and click the Run Query button which has an icon like a "play" button.  This should display the results of the query under the Results tab.  The default view is Navigator, which behaves like the !OpenLink Navigator linked data browser.  Dropping down the view to Raw Triples lists property-value pairs under the heading of each subject URI.  If the value is an image URL, the image is displayed on the screen.  If a described resource contains geo:lat and geo:long triples, dropping down the Google Maps v3 view will display markers on a Google Map display.  Clicking on a marker displays the triples for the resource whose properties include the geo:lat and geo:long values.  
 
 ===6.2.3. !TaxonConcept ===
 The !TaxonConcept database [#6_TaxonConcept_project (6)] is a very large public triplestore which contains metadata on many species and which has loaded other datasets of interest.  It contains over 23 million triples (as of 14 Feb 2012).  
@@ -100,11 +100,11 @@ The TDWG TDF/OWL Task Group has several sandboxes for experimenting with SPARQL 
 
 ==6.4. Basic SPARQL queries==
 
-These examples use data currently loaded as of 13 February 2012, so in theory they should produce results until the triples are unloaded at some future time.  Additional information about constructing queries is at http://www.w3.org/TR/sparql11-query/#basicpatterns
+These examples use metadata currently loaded as of 13 February 2012, so in theory they should produce results until the datasets are unloaded at some future time.  Additional information about constructing queries is at http://www.w3.org/TR/sparql11-query/#basicpatterns
 
 ===6.4.1. Representing literals, URIs, and variables===
 
-Literals are placed in quotation marks, e.g. "Hawaii". [#7_Literals_that_are_typed_or_which_have_language_tags (7)]  URIs [#8_Internationalized_Resource_Identifiers_(IRIs) (8)] are placed inside angled brackets, e.g. <http://xmalesia.info/sw/event/3e2c5f3711> .  
+Literals are placed in quotation marks, e.g. "Hawaii".  [#7_Literals_that_are_typed_or_which_have_language_tags (7)]  URIs [#8_Internationalized_Resource_Identifiers_(IRIs) (8)] are placed inside angled brackets, e.g. {{{<http://xmalesia.info/sw/event/3e2c5f3711>}}} .  
 
 ====6.4.1.1. PREFIX declarations====
 SPARQL queries allow the user to abbreviate URIs by declaring prefix abbreviations.  For example, the declaration
@@ -114,7 +114,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 allows the URI {{{http://purl.org/dc/terms/Location}}} to be abbreviated as {{{dcterms:Location}}}.  Note: this behavior is similar to the use of namespace abbreviations for URIs in RDF.  
 
 ====6.4.1.2. Variables====
-If a string is preceded by a question mark, it is treated as a variable which can represent a URI or a literal, e.g. ?x  or ?person .
+If a string is preceded by a question mark, it is treated as a variable which can represent a URI or a literal, e.g. {{{?x}}}  or {{{?person}}}.
 
 ===6.4.2. Triple patterns===
 SPARQL is based on matching parts of an RDF graph [#9_RDF_graph (9)] with triple patterns that may contain variables.  For example, the triple pattern
@@ -127,13 +127,29 @@ would match the triple
 }}}
 The solution sequence is the set of triples which match the triple pattern.  There can be zero, one, or many solutions in the sequence.  A triple pattern can also contain zero, one, two, or three variables.  
 
-As in N3 notation, the URI {{{http://www.w3.org/1999/02/22-rdf-syntax-ns#type}}} or {{{rdf:type}}} can be abbreviated as {{{a}}}.  So the pattern
-{{{?location a dcterms:Location}}}
+As in N3 notation, the URI 
+{{{
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+}}}
+ or 
+{{{
+rdf:type
+}}} 
+can be abbreviated as 
+{{{
+a
+}}}
+So the pattern
+{{{
+?location a dcterms:Location
+}}}
 is the same as 
-{{{?location rdf:type dcterms:Location}}}
+{{{
+?location rdf:type dcterms:Location
+}}}
 
 ===6.4.2. SELECT query form===
-To investigate the use of the SELECT query form, go to http://uriburner.com/isparql/ and in the query box, enter the following prefix declarations which will be used in the examples to follow: 
+To investigate the use of the SELECT query form, go to http://uriburner.com/isparql/ click on the Advanced tab if necessary, and in the query box, enter the following prefix declarations which will be used in the examples to follow: 
 {{{
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -146,7 +162,7 @@ PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX txn:   <http://lod.taxonconcept.org/ontology/txn.owl#>
 PREFIX dsw: <http://purl.org/dsw/>
 }}}
-Skip a line then enter the triple pattern shown above followed by a period.
+Skip a line then enter the query below which contains the triple pattern given in the previous example.
 {{{
 SELECT ?location WHERE {
  ?location  dwc:stateProvince "Hawaii".
@@ -155,13 +171,13 @@ SELECT ?location WHERE {
 
 Click on the Run Query (play button) icon.  Mouse over the results link to see the URI (http://bioimages.vanderbilt.edu/baskauf/04005#loc) which can substitute for the variable {{{?location}}} in the triple pattern.  Click on the Advanced tab and try replacing "{{{Hawaii}}}" with "{{{Tennessee}}}" and "{{{Indiana}}}".  (If you click on one of the links in the Results view, it will take you to a Linked Data browser.  To return back to the query results, click on the blue left-facing arrow before clicking on the Advanced tab again.)
 
-To see what the query results look like in machine-friendly form, repeat them at the URL http://uriburner.com/sparql/
+To see what the query results look like in machine-friendly form, repeat them at the URL http://uriburner.com/sparql/ and select a non-HTML Results Format.
 
 ====6.4.2.1. Eliminating duplicate results using DISTINCT====
-The endpoint http://tdwg-rdf.net/store2/ contains more metadata described using Darwin-SW.  Using the same prefixes as above, enter the following query:
+The endpoint http://tdwg-rdf.net/store2/ contains more metadata described using Darwin-SW.  Open that interface, then using the same prefix list as above, enter the following query:
 {{{
 SELECT ?y WHERE {
-?y dsw:hasOccurrence ?a.
+ ?y dsw:hasOccurrence ?a.
  ?b dsw:evidenceFor ?a.
  ?b dcterms:type dcmitype:StillImage.
 }
@@ -184,7 +200,7 @@ which contains the URI solution for the variable {{{?Location}}} in the query of
 
 ====6.4.3.2. Describing a set of resources that match a variable in a triple pattern====
 
-Replace the previous query with 
+Click on the Advanced tab to return to the query interface and replace the previous query with 
 {{{
 DESCRIBE ?location WHERE {
  ?location  dwc:stateProvince "Tennessee".
@@ -318,7 +334,7 @@ However, as a matter of convenience, IRIs will be referred to as URIs in this gu
 http://www.w3.org/TR/rdf-primer/#intro 
 
 ===10 !TaxonConcept ontology===
-The TDWG Bioblitz used some terms from the TaxonConcept ontology which defines "light-weight tags" (many classes) that can be used to create very flat database records.  For more details, see
+The TDWG !BioBlitz used some terms from the !TaxonConcept ontology which defines "light-weight tags" (many classes) that can be used to create very flat database records.  For more details, see
 
 http://www.taxonconcept.org/ontologies/
 
