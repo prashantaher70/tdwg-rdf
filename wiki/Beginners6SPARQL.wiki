@@ -91,8 +91,8 @@ limit 10
 }}}
 and click the Run Query button which has an icon like a "play" button.  This should display the results of the query under the Results tab.  The default view is Navigator, which behaves like the OpenLink Navigator linked data browser.  Dropping down the view to Raw Triples lists property-value pairs under the heading of each subject URI.  If the value is an image URL, the image is displayed on the screen.  If a described resource contains geo:lat and geo:long triples, dropping down the Google Maps v3 view will display markers on a Google Map display.  Clicking on a marker displays the triples for the resource whose properties include the geo:lat and geo:long values.  
 
-===6.2.3. TaxonConcept ===
-The TaxonConcept database (6) is a very large public triplestore which contains metadata on many species and which has loaded other datasets of interest.  It contains over 23 million triples (as of 14 Feb 2012).  
+===6.2.3. !TaxonConcept ===
+The !TaxonConcept database (6) is a very large public triplestore which contains metadata on many species and which has loaded other datasets of interest.  It contains over 23 million triples (as of 14 Feb 2012).  
 
 == 6.3. Loading metadata into a private triple store for querying==
 
