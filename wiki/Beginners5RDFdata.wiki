@@ -4,6 +4,8 @@
 
 [Beginners4Vocabularies go to part 4: Vocabularies, DCAM, and RDFS]
 
+[Beginners6SPARQL go to part 6. Querying with SPARQL]
+
 *Contents*
 
 <wiki:toc max_depth="4" />
