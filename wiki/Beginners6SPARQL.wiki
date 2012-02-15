@@ -2,8 +2,6 @@
 
 = Beginner's guide to RDF: 6. Querying with SPARQL =
 
-Note: this page is still undergoing proofreading, linking, and formatting
-
 [Beginners5RDFdata go to part 5: Discovery, Transmission, and Storage of RDF data]
 
 *Contents*
@@ -352,3 +350,6 @@ which diagrams the relationships among the classes and
 http://code.google.com/p/darwin-sw/wiki/DesignPrinciples
 
 for a description of the design principles on which it is based.  
+
+-------------------
+Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
