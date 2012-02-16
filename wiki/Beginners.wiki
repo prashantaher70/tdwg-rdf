@@ -76,7 +76,11 @@ The mention of any document or tool in this guide does not imply the endorsement
 ===0.4.3. Related to the Dublin Core Metadata Initiative (DCMI) Abstract Model===
 [http://dublincore.org/documents/abstract-model/ DCMI Abstract Model (DCAM) specification]   ([http://dublincore.org/documents/abstract-model/#sect-5 Relationship between DCAM and RDFS])
 
+[http://dublincore.org/documents/dc-rdf/#sect-4 Representing DCAM constructs using the RDF Model]
 
+[http://dublincore.org/documents/2008/01/14/dc-rdf-notes/ Notes on DCMI specifications for Dublin Core metadata in RDF]
+
+[http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm Darwin Core abstract model (vs. DCAM)]
 
 ===0.4.4. Related to Web Ontology Language (OWL)===
 [http://www.w3.org/TR/owl-primer/ OWL 2 Web Ontology Language Primer (for beginners)]
@@ -84,6 +88,8 @@ The mention of any document or tool in this guide does not imply the endorsement
 [http://www.w3.org/TR/owl2-overview/ OWL 2 Web Ontology Language Document Overview]
 
 [http://www.w3.org/TR/owl2-rdf-based-semantics/ OWL 2 Web Ontology Language RDF-Based Semantics]
+
+[http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools]
 
 ===0.4.5. Software tools===
 [http://protege.stanford.edu/ Protégé ontology editor] ([http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ guide])
@@ -98,25 +104,36 @@ The mention of any document or tool in this guide does not imply the endorsement
 [http://sig.ma/search Semantic Information Mashup (sig.ma) using Sindice's semantic web index]
 
 ===0.4.6. Vocabularies and ontologies===
-[http://xmlns.com/foaf/spec/ FOAF Vocabulary Specification 0.98] ([http://xmlns.com/foaf/spec/index.rdf expressed in RDF])
+[http://species-id.net/wiki/Audubon_Core Audubon Core draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
+
+[http://bibotools.googlecode.com/svn/bibo-ontology/trunk/doc/index.html Bibliographic Ontology Specification (BIBO)] ([http://code.google.com/p/bibotools/source/browse/bibo-ontology/tags/1.0/bibo.n3 in RDF/N3])
+
+[http://www.tdwg.org/standards/450/ Darwin Core TDWG Standard] ([http://rs.tdwg.org/dwc/ homepage]) ([http://rs.tdwg.org/dwc/terms/index.htm term quick reference guide]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf term definitions in RDF]) ([http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm type vocabulary]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf type definitions in RDF])
+
+[http://code.google.com/p/darwin-sw/ darwin-sw Ontology] ([http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl in RDF])
 
 [http://dublincore.org/documents/dcmi-terms/ Dublin Core terms] ([http://dublincore.org/2010/10/11/dcterms.rdf in RDF]) ([http://dublincore.org/documents/dcmi-type-vocabulary/ type vocabulary])  ([http://dublincore.org/2010/10/11/dctype.rdf in RDF])
 
-[http://www.tdwg.org/standards/450/ Darwin Core Standard] ([http://rs.tdwg.org/dwc/ homepage]) ([http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm abstract model])  ([http://rs.tdwg.org/dwc/terms/index.htm term quick reference guide]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf term definitions in RDF]) ([http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm type vocabulary]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf type definitions in RDF])
+[http://xmlns.com/foaf/spec/ FOAF Vocabulary Specification 0.98] ([http://xmlns.com/foaf/spec/index.rdf in RDF])
 
-[http://species-id.net/wiki/Audubon_Core Audubon Core draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
-
-[http://wiki.tdwg.org/twiki/bin/view/TAG/TDWGOntology TDWG Ontology (human readable)]  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/ in RDF])
+[http://www.tdwg.org/standards/312/ Natural Collections Descriptions (NCD) draft TDWG Standard] ([http://bioimages.vanderbilt.edu/pages/NCD-v090_TDWG-NonNormative.pdf PDF non-normative document viewable in browser]) ([http://bioimages.vanderbilt.edu/pages/NCD-v090_TDWG-Normative.pdf PDF normative document viewable in browser]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Collection.rdf Collection in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Institution.rdf Institution in RDF]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/InstitutionType.rdf InstitutionType in RDF]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/ContactDetails.rdf ContactDetails in RDF])
 
 [http://www.plantontology.org/ Plant Ontology] ([http://owlfiles.plantontology.org/ in RDF])
 
+[http://www.w3.org/2009/08/skos-reference/skos.html SKOS Simple Knowledge Organization System Namespace Document] ([http://www.w3.org/2009/08/skos-reference/skos.rdf in RDF])
+
+[http://www.tdwg.org/standards/117/ Taxonomic Concept Transfer Schema (TCS) (TDWG Standard)] [http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf (PDF viewable in browser)] ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.owl TaxonConcept in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonName.owl TaxonName in RDF])
+
 [http://www.taxonconcept.org/ontologies/ TaxonConcept Ontologies] ([http://lod.taxonconcept.org/ontology/txn.owl in RDF])
 
-[http://code.google.com/p/darwin-sw/ darwin-sw Ontology] ([http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl in RDF])
+[http://wiki.tdwg.org/twiki/bin/view/TAG/TDWGOntology TDWG Ontology (human readable)]  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/ in RDF])
 
 [http://www.w3.org/TR/void/ VoID vocabulary] ([http://vocab.deri.ie/void see also])
 
 
 ===0.4.7. RDF in the wild===
-[http://www.taxonconcept.org/ TaxonConcept (species concepts)] ([http://lod.taxonconcept.org/ses/dwAmr example resource])
+[http://www.biodiversitycollectionsindex.org/static/index.html Biodiversity Collections Index] ([http://www.biodiversitycollectionsindex.org/collection/rdf/id/12599 example resource])
 
+[http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF] ([http://dx.doi.org/10.1525/auk.2009.09022 example resource])
+
+[http://www.taxonconcept.org/ TaxonConcept (species concepts)] ([http://lod.taxonconcept.org/ses/dwAmr example resource])
