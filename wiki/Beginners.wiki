@@ -103,7 +103,23 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 [http://lsid.tdwg.org/ TDWG LSID resolver]
 
+[http://www.w3.org/RDF/Validator/ W3C RDF Validation Service (includes graphical display]
+
+[http://www.rdfabout.com/demo/validator/ rdfabout.com RDF Validator and Converter (converts from XML to N3 and vice versa)]
+
+[http://www5.wiwiss.fu-berlin.de/marbles Marbles Linked Data browser]
+
+[http://linkeddata.uriburner.com/ode/ OpenLink Data Explorer Linked Data Browser]
+
+[http://dataviewer.zitgist.com/ Zitgist Linked Data viewer]
+
+[http://www4.wiwiss.fu-berlin.de/rdf_browser/ Disco Hyperdata Browser]
+
 [http://sig.ma/search Semantic Information Mashup (sig.ma) using Sindice's semantic web index]
+
+[http://uriburner.com/sparql URIBurner test basic SPARQL endpoint]
+
+[http://uriburner.com/isparql URIBurner enhanced SPARQL endpoint]
 
 ===0.4.6. Vocabularies and ontologies===
 [http://species-id.net/wiki/Audubon_Core Audubon Core draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
@@ -114,7 +130,7 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 [http://www.tdwg.org/standards/450/ Darwin Core TDWG Standard] ([http://rs.tdwg.org/dwc/ homepage]) ([http://rs.tdwg.org/dwc/terms/index.htm term quick reference guide]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf term definitions in RDF]) ([http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm type vocabulary]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf type definitions in RDF])
 
-[http://code.google.com/p/darwin-sw/ darwin-sw (DSW) Ontology] ([http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl in RDF])
+[http://code.google.com/p/darwin-sw/ darwin-sw (DSW) ontology] ([http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl in RDF])
 
 [http://dublincore.org/documents/dcmi-terms/ Dublin Core terms] ([http://dublincore.org/2010/10/11/dcterms.rdf in RDF]) ([http://dublincore.org/documents/dcmi-type-vocabulary/ type vocabulary])  ([http://dublincore.org/2010/10/11/dctype.rdf in RDF])
 
@@ -142,14 +158,14 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 
 ===0.4.7. RDF in the wild===
-In some cases the RDF is viewable via web browser.  In others one can use Marbles (http://www5.wiwiss.fu-berlin.de/marbles) to view. 
-
 [http://www.biodiversity.org.au/confluence/display/bdv/NSL%2bServices Atlas of Living Australia (ALA) National Species List (NSL) Linked Data Services; uses Dublin Core, TCS, APNI] ([http://biodiversity.org.au/apni.taxon/118883.rdf example resource])
 
 [http://www.biodiversitycollectionsindex.org/static/index.html Biodiversity Collections Index; uses Dublin Core, vCard, and NCD] ([http://www.biodiversitycollectionsindex.org/collection/rdf/id/12599 example resource])
 
 [http://bioimages.vanderbilt.edu/ Bioimages; uses Dublin Core, Darwin Core, TCS, FOAF, Audubon Core, DSW, and others] ([http://bioimages.vanderbilt.edu/baskauf/10531.rdf example resource]) ([http://bioimages.vanderbilt.edu/vanderbilt/7-16.rdf example resource])
 
-[http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF; uses Dublin Core, BIBO, PRISM] ([http://dx.doi.org/10.1525/auk.2009.09022 example resource])
+[http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF; uses Dublin Core, BIBO, PRISM] ([http://www5.wiwiss.fu-berlin.de/marbles?uri=http%3A%2F%2Fdx.doi.org%2F10.1525%2Fauk.2009.09022 example resource])
 
-[http://www.taxonconcept.org/ TaxonConcept; uses Dublin Core, FOAF, BIBO, TaxonConcept, SKOS, and others] ([http://lod.taxonconcept.org/ses/dwAmr example resource])
+[http://www.taxonconcept.org/ TaxonConcept; uses Dublin Core, FOAF, BIBO, TaxonConcept, SKOS, and others] ([http://lod.taxonconcept.org/ses/dwAmr.rdf example resource])
+
+[http://www.ubio.org/ uBio; uses Dublin Core and locally defined predicates] ([http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:463007 example resource])
