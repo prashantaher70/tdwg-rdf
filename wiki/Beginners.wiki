@@ -121,7 +121,7 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 [http://uriburner.com/isparql URIBurner enhanced SPARQL endpoint]
 
-===0.4.6. Vocabularies and ontologies===
+===0.4.6. Biodiversity-related and General vocabularies and ontologies===
 [http://species-id.net/wiki/Audubon_Core Audubon Core (AC) draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
 
 Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/voc/apni/APNI.rdf in RDF])
@@ -159,7 +159,7 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 [http://www.w3.org/TR/void/ VoID vocabulary] ([http://vocab.deri.ie/void see also])
 
 
-===0.4.7. RDF in the wild===
+===0.4.7. Biodiversity-related RDF in the wild===
 [http://www.biodiversity.org.au/confluence/display/bdv/NSL%2bServices Atlas of Living Australia (ALA) National Species List (NSL) Linked Data Services; uses DC, TCS, APNI] ([http://biodiversity.org.au/apni.taxon/118883.rdf example resource])
 
 [http://www.biodiversitycollectionsindex.org/static/index.html Biodiversity Collections Index; uses DC, vCard, and NCD] ([http://www.biodiversitycollectionsindex.org/collection/rdf/id/12599 example resource])
