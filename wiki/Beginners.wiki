@@ -173,3 +173,6 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 [http://www.taxonconcept.org/ TaxonConcept; uses DC, FOAF, BIBO, TaxonConcept, SKOS, and others] ([http://lod.taxonconcept.org/ses/dwAmr.rdf example resource])
 
 [http://www.ubio.org/ uBio; uses DC and locally defined predicates] ([http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:463007 example resource])
+
+-------------------
+Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
