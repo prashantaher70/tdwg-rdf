@@ -47,6 +47,8 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 [http://www.tdwg.org/standards/150/ GUID Applicability Statement - Current TDWG Standard]  ([http://bioimages.vanderbilt.edu/pages/guid-applicability-final-2011-01.pdf click here for PDF viewable via browser])
 
+[http://www.gbif.org/orc/?doc_id=2428 A Beginner's Guide to Persistent Identifiers] published by the [http://www.gbif.org/ Global Biodiversity Information Facility(GBIF)]
+
 [http://www.tdwg.org/standards/150/ Life Sciences Identifiers Applicability Statement - Current TDWG Standard]   ([http://bioimages.vanderbilt.edu/pages/LSID%20AS_2011_01_final.pdf click here for PDF viewable via browser])
 
 [http://www.ibm.com/developerworks/opensource/library/os-lsidbp/ LSID Best Practices]
@@ -106,13 +108,17 @@ The mention of any document or tool in this guide does not imply the endorsement
 ===0.4.6. Vocabularies and ontologies===
 [http://species-id.net/wiki/Audubon_Core Audubon Core draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
 
+Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/voc/apni/APNI.rdf in RDF])
+
 [http://bibotools.googlecode.com/svn/bibo-ontology/trunk/doc/index.html Bibliographic Ontology Specification (BIBO)] ([http://code.google.com/p/bibotools/source/browse/bibo-ontology/tags/1.0/bibo.n3 in RDF/N3])
 
 [http://www.tdwg.org/standards/450/ Darwin Core TDWG Standard] ([http://rs.tdwg.org/dwc/ homepage]) ([http://rs.tdwg.org/dwc/terms/index.htm term quick reference guide]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf term definitions in RDF]) ([http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm type vocabulary]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf type definitions in RDF])
 
-[http://code.google.com/p/darwin-sw/ darwin-sw Ontology] ([http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl in RDF])
+[http://code.google.com/p/darwin-sw/ darwin-sw (DSW) Ontology] ([http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl in RDF])
 
 [http://dublincore.org/documents/dcmi-terms/ Dublin Core terms] ([http://dublincore.org/2010/10/11/dcterms.rdf in RDF]) ([http://dublincore.org/documents/dcmi-type-vocabulary/ type vocabulary])  ([http://dublincore.org/2010/10/11/dctype.rdf in RDF])
+
+[http://www.w3.org/2003/01/geo/ Basic Geo WGS84 lat/long (GEO) Vocabulary] ([http://www.w3.org/2003/01/geo/wgs84_pos in RDF])
 
 [http://xmlns.com/foaf/spec/ FOAF Vocabulary Specification 0.98] ([http://xmlns.com/foaf/spec/index.rdf in RDF])
 
@@ -120,20 +126,30 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 [http://www.plantontology.org/ Plant Ontology] ([http://owlfiles.plantontology.org/ in RDF])
 
+[http://www.idealliance.org/specifications/prism/ Publishing Requirements for Industry Standard Metadata (PRISM)] (RDF???)
+
 [http://www.w3.org/2009/08/skos-reference/skos.html SKOS Simple Knowledge Organization System Namespace Document] ([http://www.w3.org/2009/08/skos-reference/skos.rdf in RDF])
 
-[http://www.tdwg.org/standards/117/ Taxonomic Concept Transfer Schema (TCS) (TDWG Standard)] [http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf (PDF viewable in browser)] ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.owl TaxonConcept in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonName.owl TaxonName in RDF])
+[http://www.tdwg.org/standards/117/ Taxonomic Concept Transfer Schema (TCS) (TDWG Standard)] [http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf (PDF viewable in browser)] ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.owl TaxonConcept in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonName.owl TaxonName in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Common.rdf Common in RDF])
 
 [http://www.taxonconcept.org/ontologies/ TaxonConcept Ontologies] ([http://lod.taxonconcept.org/ontology/txn.owl in RDF])
 
 [http://wiki.tdwg.org/twiki/bin/view/TAG/TDWGOntology TDWG Ontology (human readable)]  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/ in RDF])
 
+[http://www.w3.org/Submission/vcard-rdf/ vCard] ([http://www.w3.org/2006/vcard/ns in RDF])
+
 [http://www.w3.org/TR/void/ VoID vocabulary] ([http://vocab.deri.ie/void see also])
 
 
 ===0.4.7. RDF in the wild===
-[http://www.biodiversitycollectionsindex.org/static/index.html Biodiversity Collections Index] ([http://www.biodiversitycollectionsindex.org/collection/rdf/id/12599 example resource])
+In some cases the RDF is viewable via web browser.  In others one can use Marbles (http://www5.wiwiss.fu-berlin.de/marbles) to view. 
 
-[http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF] ([http://dx.doi.org/10.1525/auk.2009.09022 example resource])
+[http://www.biodiversity.org.au/confluence/display/bdv/NSL%2bServices Atlas of Living Australia (ALA) National Species List (NSL) Linked Data Services; uses Dublin Core, TCS, APNI] ([http://biodiversity.org.au/apni.taxon/118883.rdf example resource])
 
-[http://www.taxonconcept.org/ TaxonConcept (species concepts)] ([http://lod.taxonconcept.org/ses/dwAmr example resource])
+[http://www.biodiversitycollectionsindex.org/static/index.html Biodiversity Collections Index; uses Dublin Core, vCard, and NCD] ([http://www.biodiversitycollectionsindex.org/collection/rdf/id/12599 example resource])
+
+[http://bioimages.vanderbilt.edu/ Bioimages; uses Dublin Core, Darwin Core, TCS, FOAF, Audubon Core, DSW, and others] ([http://bioimages.vanderbilt.edu/baskauf/10531.rdf example resource]) ([http://bioimages.vanderbilt.edu/vanderbilt/7-16.rdf example resource])
+
+[http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF; uses Dublin Core, BIBO, PRISM] ([http://dx.doi.org/10.1525/auk.2009.09022 example resource])
+
+[http://www.taxonconcept.org/ TaxonConcept; uses Dublin Core, FOAF, BIBO, TaxonConcept, SKOS, and others] ([http://lod.taxonconcept.org/ses/dwAmr example resource])
