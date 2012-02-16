@@ -6,6 +6,8 @@
 
 [Beginners3RDFbasics go to part 3: RDF basics]
 
+[Beginners Introduction to the Guide]
+
 *Contents*
 
 <wiki:toc max_depth="3" />
