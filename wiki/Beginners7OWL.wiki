@@ -1,4 +1,4 @@
-#summary Beginner's guide to RDF: . Ontologies and OWL
+#summary Beginner's guide to RDF: 7. Ontologies and OWL
 
 = Beginner's guide to RDF: 7. Ontologies and OWL =
 
@@ -97,7 +97,7 @@ or should it be a URI?
 {{{
 urn:lsid:ubio.org:namebank:2472422   dwc:nameAccordingTo http://dx.doi.org/10.1525/auk.2009.09022
 }}}
-There is no clear answer to this question.  (14)  However, in OWL the distinction is clear ({{{tc: = http://rs.tdwg.org/ontology/voc/TaxonConcept#}}})
+(14) There is no clear answer to this question.  (15)  However, in OWL the distinction is clear ({{{tc: = http://rs.tdwg.org/ontology/voc/TaxonConcept#}}})
 {{{
 urn:lsid:ubio.org:namebank:2472422   tc:accordingToString  "Claramunt Derryberry et al. 2010"
 }}}
@@ -105,16 +105,16 @@ or
 {{{
 urn:lsid:ubio.org:namebank:2472422   tc:accordingTo http://dx.doi.org/10.1525/auk.2009.09022
 }}}
-because {{{tc:accordingToString}}} is defined as an {{{owl:DatatypeProperty}}}, while {{{tc:accordingTo}}} is defined as an {{{owl:ObjectProperty}}}.  (15)
+because {{{tc:accordingToString}}} is defined as an {{{owl:DatatypeProperty}}}, while {{{tc:accordingTo}}} is defined as an {{{owl:ObjectProperty}}}.  (16)
 
 ===7.6.4. Statements of equivalence in OWL===
 OWL provides a means of indicating that resources are equivalent.  
 
 ====7.6.4.1. owl:equivalentClass====
-Making the statement {{{X owl:equivalentClass Y}}} essentially means that two named classes are synonymous, i.e. that all instances of class X are instances of class Y and vice versa.  For example, in the TDWG Taxon Concept Ontology (15), the tc:Taxon class and the tc:TaxonConcept class are declared to be equivalent.  
+Making the statement {{{X owl:equivalentClass Y}}} essentially means that two named classes are synonymous, i.e. that all instances of class X are instances of class Y and vice versa.  For example, in the TDWG Taxon Concept Ontology (16), the tc:Taxon class and the tc:TaxonConcept class are declared to be equivalent.  
 
 ====7.6.4.2. owl:equivalentProperty====
-In OWL, if two properties are declared to be equivalent, they relate an individual to the same set of other individuals.  (16)  For example, Dublin Core has declared that {{{dcterms:creator owl:equivalentProperty foaf:maker}}}.  This means that
+In OWL, if two properties are declared to be equivalent, they relate an individual to the same set of other individuals.  (17)  For example, Dublin Core has declared that {{{dcterms:creator owl:equivalentProperty foaf:maker}}}.  This means that
 {{{
  kimage:ac1490  dcterms:creator   "Ashley Coble"
 }}}
@@ -122,11 +122,11 @@ implies
 {{{
  kimage:ac1490  foaf:maker   "Ashley Coble"
 }}}
-However, the definition in OWL of {{{foaf:maker}}}  (17) declares that {{{foaf:maker}}} is an {{{owl:ObjectProperty}}} which means that the object of a triple using that property should be a URI, as in:
+However, the definition in OWL of {{{foaf:maker}}}  (18) declares that {{{foaf:maker}}} is an {{{owl:ObjectProperty}}} which means that the object of a triple using that property should be a URI, as in:
 {{{
  kimage:ac1490  foaf:maker   agents:kirchoff#coblea
 }}}
-So here we have confusion over whether we are referring to a person or a person's name.  The FOAF guidelines suggest that {{{dc:creator}}} should be used for textual names and {{{foaf:maker}}} should be used to refer to the creators as identified by URIs.  (18)
+So here we have confusion over whether we are referring to a person or a person's name.  The FOAF guidelines suggest that {{{dc:creator}}} should be used for textual names and {{{foaf:maker}}} should be used to refer to the creators as identified by URIs.  (19)
 
 ====7.6.4.3. owl:sameAs====
 The property owl:sameAs is used to state that two individuals (i.e. class instances) are the same.  The practical effect of this is to say that if {{{uri1 owl:sameAs uri2}}}, when a statement is made by creating a triple containing {{{uri1}}},  the triple in which {{{uri1}}} is replaced with {{{uri2}}} can be inferred to exist.    For example, if 
@@ -240,27 +240,30 @@ http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/
 
 http://www.w3.org/TR/owl2-rdf-based-semantics/#A_Set_of_Axiomatic_Triples
 
-===14 Should Darwin Core terms have literals or URIs as objects?===
+===14 Expressing DOIs as HTTP URIs===
+http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html
+
+===15 Should Darwin Core terms have literals or URIs as objects?===
 Darwin Core includes "ID" versions of terms.  For example {{{dwc:nameAccordingTo}}} shows strings as its examples, while its corresponding ID term {{{dwc:nameAccordingToID}}} which is defined to be an identifier.  However, since Darwin Core does not have a RDF Guide indicating how its terms should be used and since the normative definition of terms in RDF describe them as {{{rdf:type rdf:Property}}}, there are no clear guidelines for how the ID terms might be used in RDF triples.  The example given in the XML Guide (http://rs.tdwg.org/dwc/terms/guides/xml/index.htm) uses {{{dwc:locationID}}} as both an identifier for the subject resource and as an ID reference for the object of a property.  
 
 In some cases (such as dwc:recordedBy), the definition clearly states that the object of the property should be text.  
 
-===15 TDWG Taxon Concept Ontology===
+===16 TDWG Taxon Concept Ontology===
 http://rs.tdwg.org/ontology/voc/TaxonConcept
 
 viewable at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.owl
 
-===16 Equivalent properties in RDFS===
+===17 Equivalent properties in RDFS===
 In RDFS, the same thing can be accomplished by declaring two classes to be subclasses of each other, e.g. 
 {{{
 A rdfs:subClassOf B
 B rdfs:subClassOf A
 }}}
 
-===17 Definition of the FOAF vocabulary in RDF===
+===18 Definition of the FOAF vocabulary in RDF===
 http://xmlns.com/foaf/spec/index.rdf
 
-===18 Definition of foaf:maker===
+===19 Definition of foaf:maker===
 http://xmlns.com/foaf/spec/#term_maker
 
 For additional discussion of this issue, see 
