@@ -299,7 +299,7 @@ http://dublincore.org/documents/2008/01/14/dc-rdf-notes/#sect-3
 
 which describes the best practices for this situation in Dublin Core.  Use of {{{rdf:value}}} is described at
 
-http://www.w3.org/TR/2004/REC-rdf-primer-20040210/#rdfvalue
+http://www.w3.org/TR/rdf-primer/#rdfvalue
 
 The DCMI notes on the specifications for Dublin Core metadata in RDF specifies that multiple value strings for a value should be expressed using the {{{rdf:value}}} property
 
