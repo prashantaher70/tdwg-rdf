@@ -79,11 +79,9 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 
 ===0.4.4. Related to Web Ontology Language (OWL)===
-[http://www.w3.org/TR/owl-primer/ OWL 2 Web Ontology Language
-Primer (for beginners)]
+[http://www.w3.org/TR/owl-primer/ OWL 2 Web Ontology Language Primer (for beginners)]
 
-[http://www.w3.org/TR/owl2-overview/ OWL 2 Web Ontology Language
-Document Overview]
+[http://www.w3.org/TR/owl2-overview/ OWL 2 Web Ontology Language Document Overview]
 
 [http://www.w3.org/TR/owl2-rdf-based-semantics/ OWL 2 Web Ontology Language RDF-Based Semantics]
 
@@ -120,7 +118,5 @@ Document Overview]
 
 
 ===0.4.7. RDF in the wild===
-[http://www.taxonconcept.org/ TaxonConcept (species concepts)] ([lod.taxonconcept.org/ses/dwAmr example resource])
-
-
+[http://www.taxonconcept.org/ TaxonConcept (species concepts)] ([http://lod.taxonconcept.org/ses/dwAmr example resource])
 
