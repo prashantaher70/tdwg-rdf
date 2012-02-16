@@ -4,6 +4,8 @@
 
 [Beginners5RDFdata go to part 5: Discovery, Transmission, and Storage of RDF data]
 
+[Beginners7OWL go to part 7: Ontologies and OWL]
+
 *Contents*
 
 <wiki:toc max_depth="4" />
