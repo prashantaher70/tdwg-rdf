@@ -151,7 +151,7 @@ http://www.ibm.com/developerworks/opensource/library/os-lsidbp/
 See also http://www.omg.org/cgi-bin/doc?dtc/04-05-01 and http://xml.coverpages.org/lsid.html
 
 ===14 TDWG Ontology Google Code repository===
-code.google.com/p/tdwg-ontology/source/browse/
+http://code.google.com/p/tdwg-ontology/source/browse/
 
 ===15 GUID and Life Sciences Identifiers Applicability Statements===
 http://www.tdwg.org/standards/150/
