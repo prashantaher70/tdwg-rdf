@@ -2,11 +2,13 @@
 
 = Beginner's guide to RDF: 3. RDF basics =
 
-This guide is intended to help people understand what RDF is and what it is used for.  It is not intended to teach people how to write RDF.  [#3.4._Learn_more_about_RDF Section 3.4.] provides links to some Web resources for people who want to actually learn RDF. 
+This guide is intended to help people understand what RDF is and what it is used for.  (For more information, see the [Beginners Introduction].)  It is not intended to teach people how to write RDF.  [#3.4._Learn_more_about_RDF Section 3.4.] provides links to some Web resources for people who want to actually learn to create documents in RDF. 
 
 [Beginners2WhatIsRDF go to part 2: What is RDF and what is it for?]
 
 [Beginners4Vocabularies go to part 4: Vocabularies, DCAM, and RDFS]
+
+[Beginners Introduction to the Guide]
 
 *Contents*
 
