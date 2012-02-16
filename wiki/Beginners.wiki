@@ -1,0 +1,53 @@
+#summary Beginner's guide to RDF: Introduction
+
+= Beginner's guide to RDF: 0. Introduction =
+
+[http://code.google.com/p/tdwg-rdf/ TDWG RDF/OWL Task Group homepage]
+
+[Beginners1URIs go to part 1: Resources and URIs]
+
+*Contents*
+
+<wiki:toc max_depth="4" />
+
+==0.1. Purpose==
+
+The purpose of this guide is to provide concise information about topics related to RDF and OWL which are significant to the work of the [http://www.tdwg.org/ TDWG] RDF/OWL Task Group (RDF/OWL TG) in particular and to the Biodiversity Informatics community in general.  It is intended as an introduction for persons who are not already familiar with RDF and OWL and as a reference for persons who are familiar but would like organized access to additional reference material.  Although it is intended that the information provided be correct, because it is intended as an introduction the amount of technical jargon and formal language has been kept to a minimum.  For those who are interested in normative descriptions of the concepts and technologies discussed here, footnotes are provided to hyperlinks to more detailed information.
+
+==0.2. Format==
+
+The guide is laid out into sections, each of which deals with a major issue relevant to the work of the RDF/OWL TG.  This allows users who wish to access the guide as a reference to jump quickly to the point of interest.  However, the later sections presuppose knowledge of concepts discussed in earlier sections, so a beginner may have difficulty stating at a later section.  
+
+Within each section, subsections are laid out hierarchically and linked in a Table of Contents at the top of the section page.  At the end of each section is a numbered reference list which is also linked to the Table of Contents as well as the actual references in the text.  
+
+A beginner who wants to gain a basic understanding of RDF and OWL should start with section 1 and work through the guide sequentially.  However, it is not intended that this guide be a tutorial capable of enabling a beginner to write RDF or OWL.  Consulting additional references will undoubtedly be required.  
+
+==0.3 Sections of the guide==
+[Beginners1URIs 1. Resources and URIs]
+
+[Beginners2WhatIsRDF 2. What is RDF and what is it for?]
+
+[Beginners3RDFbasics 3. RDF basics]
+
+[Beginners4Vocabularies 4. Vocabularies, DCAM, and RDFS]
+
+[Beginners5RDFdata 5. Discovery, Transmission, and Storage of RDF data]
+
+[Beginners6SPARQL 6. Querying with SPARQL]
+
+[Beginners7OWL 7. Ontologies and OWL]
+
+==0.4 Significant documents, tools, and RDF implementations==
+The mention of any document or tool in this guide does not imply the endorsement of TDWG or the RDF/OWL TG.  (The exception to this is ratified [http://www.tdwg.org/standards/ TDWG standards] which are official recommendations of TDWG.)  The referenced items are simply ones which have been found to be helpful.  The list is also not exhaustive; resources may be added when discovered or removed if they cease to be available.  
+
+===0.4.1. Related to Uniform Resource Identifier (URI) and GUID/Persistent Identifier===
+
+===0.4.2. Related to the Resource Description Framework (RDF) model===
+
+===0.4.3. Related to the Dublin Core Metadata Initiative (DCMI) Abstract Model===
+
+===0.4.4. Related to Web Ontology Language (OWL)===
+
+===0.4.5. Software tools===
+
+===0.4.6. Web interfaces===
