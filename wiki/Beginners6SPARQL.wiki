@@ -6,6 +6,8 @@
 
 [Beginners7OWL go to part 7: Ontologies and OWL]
 
+[Beginners Introduction to the Guide]
+
 *Contents*
 
 <wiki:toc max_depth="4" />
