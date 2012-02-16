@@ -2,8 +2,6 @@
 
 = Beginner's guide to RDF: 7. Ontologies and OWL =
 
-This page is still under construction 
-
 [Beginners6SPARQL go to part 6. Querying with SPARQL]
 
 *Contents*
