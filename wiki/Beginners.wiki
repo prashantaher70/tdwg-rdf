@@ -103,7 +103,7 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 [http://lsid.tdwg.org/ TDWG LSID resolver]
 
-[http://www.w3.org/RDF/Validator/ W3C RDF Validation Service (includes graphical display]
+[http://www.w3.org/RDF/Validator/ W3C RDF Validation Service (includes graphical display)]
 
 [http://www.rdfabout.com/demo/validator/ rdfabout.com RDF Validator and Converter (converts from XML to N3 and vice versa)]
 
@@ -122,25 +122,27 @@ The mention of any document or tool in this guide does not imply the endorsement
 [http://uriburner.com/isparql URIBurner enhanced SPARQL endpoint]
 
 ===0.4.6. Vocabularies and ontologies===
-[http://species-id.net/wiki/Audubon_Core Audubon Core draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
+[http://species-id.net/wiki/Audubon_Core Audubon Core (AC) draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
 
 Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/voc/apni/APNI.rdf in RDF])
 
 [http://bibotools.googlecode.com/svn/bibo-ontology/trunk/doc/index.html Bibliographic Ontology Specification (BIBO)] ([http://code.google.com/p/bibotools/source/browse/bibo-ontology/tags/1.0/bibo.n3 in RDF/N3])
 
-[http://www.tdwg.org/standards/450/ Darwin Core TDWG Standard] ([http://rs.tdwg.org/dwc/ homepage]) ([http://rs.tdwg.org/dwc/terms/index.htm term quick reference guide]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf term definitions in RDF]) ([http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm type vocabulary]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf type definitions in RDF])
+[http://www.tdwg.org/standards/450/ Darwin Core (DwC) TDWG Standard] ([http://rs.tdwg.org/dwc/ homepage]) ([http://rs.tdwg.org/dwc/terms/index.htm term quick reference guide]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf term definitions in RDF]) ([http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm type vocabulary]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf type definitions in RDF])
 
 [http://code.google.com/p/darwin-sw/ darwin-sw (DSW) ontology] ([http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl in RDF])
 
-[http://dublincore.org/documents/dcmi-terms/ Dublin Core terms] ([http://dublincore.org/2010/10/11/dcterms.rdf in RDF]) ([http://dublincore.org/documents/dcmi-type-vocabulary/ type vocabulary])  ([http://dublincore.org/2010/10/11/dctype.rdf in RDF])
+[http://dublincore.org/documents/dcmi-terms/ Dublin Core (DC) terms] ([http://dublincore.org/2010/10/11/dcterms.rdf in RDF]) ([http://dublincore.org/documents/dcmi-type-vocabulary/ type vocabulary])  ([http://dublincore.org/2010/10/11/dctype.rdf in RDF])
 
 [http://www.w3.org/2003/01/geo/ Basic Geo WGS84 lat/long (GEO) Vocabulary] ([http://www.w3.org/2003/01/geo/wgs84_pos in RDF])
 
 [http://xmlns.com/foaf/spec/ FOAF Vocabulary Specification 0.98] ([http://xmlns.com/foaf/spec/index.rdf in RDF])
 
+[http://ecowlim.tfri.gov.tw/lode/resource/eco/ Linked Open Data of Ecology (LODE) vocabulary] ([http://ecoinformatics.tfri.gov.tw/ternwork/member Ecoinformatics Working Group of the TFRI])
+
 [http://www.tdwg.org/standards/312/ Natural Collections Descriptions (NCD) draft TDWG Standard] ([http://bioimages.vanderbilt.edu/pages/NCD-v090_TDWG-NonNormative.pdf PDF non-normative document viewable in browser]) ([http://bioimages.vanderbilt.edu/pages/NCD-v090_TDWG-Normative.pdf PDF normative document viewable in browser]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Collection.rdf Collection in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Institution.rdf Institution in RDF]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/InstitutionType.rdf InstitutionType in RDF]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/ContactDetails.rdf ContactDetails in RDF])
 
-[http://www.plantontology.org/ Plant Ontology] ([http://owlfiles.plantontology.org/ in RDF])
+[http://www.plantontology.org/ Plant Ontology (PO)] ([http://owlfiles.plantontology.org/ in RDF])
 
 [http://www.idealliance.org/specifications/prism/ Publishing Requirements for Industry Standard Metadata (PRISM)] (RDF???)
 
@@ -158,14 +160,16 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 
 ===0.4.7. RDF in the wild===
-[http://www.biodiversity.org.au/confluence/display/bdv/NSL%2bServices Atlas of Living Australia (ALA) National Species List (NSL) Linked Data Services; uses Dublin Core, TCS, APNI] ([http://biodiversity.org.au/apni.taxon/118883.rdf example resource])
+[http://www.biodiversity.org.au/confluence/display/bdv/NSL%2bServices Atlas of Living Australia (ALA) National Species List (NSL) Linked Data Services; uses DC, TCS, APNI] ([http://biodiversity.org.au/apni.taxon/118883.rdf example resource])
 
-[http://www.biodiversitycollectionsindex.org/static/index.html Biodiversity Collections Index; uses Dublin Core, vCard, and NCD] ([http://www.biodiversitycollectionsindex.org/collection/rdf/id/12599 example resource])
+[http://www.biodiversitycollectionsindex.org/static/index.html Biodiversity Collections Index; uses DC, vCard, and NCD] ([http://www.biodiversitycollectionsindex.org/collection/rdf/id/12599 example resource])
 
-[http://bioimages.vanderbilt.edu/ Bioimages; uses Dublin Core, Darwin Core, TCS, FOAF, Audubon Core, DSW, and others] ([http://bioimages.vanderbilt.edu/baskauf/10531.rdf example resource]) ([http://bioimages.vanderbilt.edu/vanderbilt/7-16.rdf example resource])
+[http://bioimages.vanderbilt.edu/ Bioimages; uses DC, DwC, TCS, FOAF, AC, DSW, and others] ([http://bioimages.vanderbilt.edu/baskauf/10531.rdf example resource]) ([http://bioimages.vanderbilt.edu/vanderbilt/7-16.rdf example resource])
 
-[http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF; uses Dublin Core, BIBO, PRISM] ([http://www5.wiwiss.fu-berlin.de/marbles?uri=http%3A%2F%2Fdx.doi.org%2F10.1525%2Fauk.2009.09022 example resource])
+[http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF; uses DC, BIBO, PRISM] ([http://www5.wiwiss.fu-berlin.de/marbles?uri=http%3A%2F%2Fdx.doi.org%2F10.1525%2Fauk.2009.09022 example resource])
 
-[http://www.taxonconcept.org/ TaxonConcept; uses Dublin Core, FOAF, BIBO, TaxonConcept, SKOS, and others] ([http://lod.taxonconcept.org/ses/dwAmr.rdf example resource])
+[http://ecowlim.tfri.gov.tw/lode/ Linked Open Data of Ecology; uses DwC, FOAF, GEO, LODE] ([http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023 example resource]) 
 
-[http://www.ubio.org/ uBio; uses Dublin Core and locally defined predicates] ([http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:463007 example resource])
+[http://www.taxonconcept.org/ TaxonConcept; uses DC, FOAF, BIBO, TaxonConcept, SKOS, and others] ([http://lod.taxonconcept.org/ses/dwAmr.rdf example resource])
+
+[http://www.ubio.org/ uBio; uses DC and locally defined predicates] ([http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:463007 example resource])
