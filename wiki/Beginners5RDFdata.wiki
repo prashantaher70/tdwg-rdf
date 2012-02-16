@@ -6,6 +6,8 @@
 
 [Beginners6SPARQL go to part 6. Querying with SPARQL]
 
+[Beginners Introduction to the Guide]
+
 *Contents*
 
 <wiki:toc max_depth="4" />
