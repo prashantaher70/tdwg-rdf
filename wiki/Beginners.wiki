@@ -53,6 +53,11 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 [http://www.omg.org/cgi-bin/doc?dtc/04-05-01.pdf LSID Specification]
 
+[http://www.ietf.org/rfc/rfc3987.txt RFC 3987. Internationalized Resource Identifiers (IRIs)]
+
+[http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs as HTTP URIs]
+
+
 ===0.4.2. Related to the Resource Description Framework (RDF) model===
 [http://www.w3.org/TR/2004/REC-rdf-primer-20040210/ RDF Primer (intended for beginners)]
 
@@ -66,14 +71,24 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 [http://web.resource.org/rss/1.0/ RSS specification (view source to see RDF)]
 
+[http://www.w3.org/TR/sparql11-query/ SPARQL 1.1 Query Language] ([http://www.w3.org/TR/sparql11-protocol/ communication protocol])
+
 ===0.4.3. Related to the Dublin Core Metadata Initiative (DCMI) Abstract Model===
 [http://dublincore.org/documents/abstract-model/ DCMI Abstract Model (DCAM) specification]   ([http://dublincore.org/documents/abstract-model/#sect-5 Relationship between DCAM and RDFS])
 
 
 
 ===0.4.4. Related to Web Ontology Language (OWL)===
+[http://www.w3.org/TR/owl-primer/ OWL 2 Web Ontology Language
+Primer (for beginners)]
+
+[http://www.w3.org/TR/owl2-overview/ OWL 2 Web Ontology Language
+Document Overview]
+
+[http://www.w3.org/TR/owl2-rdf-based-semantics/ OWL 2 Web Ontology Language RDF-Based Semantics]
 
 ===0.4.5. Software tools===
+[http://protege.stanford.edu/ Protégé ontology editor] ([http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ guide])
 
 ===0.4.6. Web interfaces===
 [http://validator.linkeddata.org/vapour Vapour Linked Data Validator for examining the dereferencing process for a URI]
@@ -91,6 +106,21 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 [http://www.tdwg.org/standards/450/ Darwin Core Standard] ([http://rs.tdwg.org/dwc/ homepage]) ([http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm abstract model])  ([http://rs.tdwg.org/dwc/terms/index.htm term quick reference guide]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf term definitions in RDF]) ([http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm type vocabulary]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf type definitions in RDF])
 
-[http://species-id.net/wiki/Audubon_Core Audubon Core draft TDWG standard] (http://species-id.net/wiki/Audubon_Core_Term_List term list])
+[http://species-id.net/wiki/Audubon_Core Audubon Core draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
 
 [http://wiki.tdwg.org/twiki/bin/view/TAG/TDWGOntology TDWG Ontology (human readable)]  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/ in RDF])
+
+[http://www.plantontology.org/ Plant Ontology] ([http://owlfiles.plantontology.org/ in RDF])
+
+[http://www.taxonconcept.org/ontologies/ TaxonConcept Ontologies] ([http://lod.taxonconcept.org/ontology/txn.owl in RDF])
+
+[http://code.google.com/p/darwin-sw/ darwin-sw Ontology] ([http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl in RDF])
+
+[http://www.w3.org/TR/void/ VoID vocabulary] ([http://vocab.deri.ie/void see also])
+
+
+===0.4.7. RDF in the wild===
+[http://www.taxonconcept.org/ TaxonConcept (species concepts)] ([lod.taxonconcept.org/ses/dwAmr example resource])
+
+
+
