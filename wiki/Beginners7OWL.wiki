@@ -178,13 +178,33 @@ then
 {{{
 x property z
 }}}
+For example, in the Plant Ontology, {{{is_a}}} is a transitive property.  If  
+{{{
+po:0020045 (pinnate leaf)  is_a  po:0020043 (compound leaf)
+}}}
+and
+{{{
+po:0020043 (compound leaf) is_a po:0009025 (vascular leaf)
+}}}
+then it can be inferred that
+{{{
+po:0020045 (pinnate leaf) is_a po:0009025 (vascular leaf)
+}}}
+
 ====7.6.5.3. owl:!FunctionalProperty====
-has at most one unique value   foaf:primaryTopic
+A property that is declared to be an {{{owl:FunctionalProperty}}} can have only one unique value as an object.  An example is {{{foaf:primaryTopic}}} which relates a document to the thing which its main topic.  A document is allowed to have only one {{{foaf:primaryTopic}}}.  Having more than one {{{foaf:primaryTopic}}} would cause a reasoner to detect an inconsistency.  
+
+====7.6.5.4. Other property characteristics====
+{{{owl:InverseFunctionalProperty}}} and {{{owl:SymmetricProperty}}} are two additional properties which can be used to describe the characteristics of properties more fully. (9) (12) 
 
 ==7.7. What is reasoning?==
+Software applications which are designed to examine sets of OWL statements and draw inferences from them are called reasoners.  The function of reasoners can be described as follows:
 
-logical deductions based on facts expressed in OWL
+"When humans think, they draw consequences from their knowledge. An important feature of OWL is that it captures this aspect of human intelligence for the forms of knowledge that it can represent. But what does it mean, generally speaking, that a statement is a consequence of other statements? Essentially it means that this statement is true whenever the other statements are. In OWL terms: we say, a set of statements A entails a statement a if in any state of affairs wherein all statements from A are true, also a is true. Moreover, a set of statements may be consistent (that is, there is a possible state of affairs in which all the statements in the set are jointly true) or inconsistent (there is no such state of affairs). The formal semantics of OWL specifies, in essence, for which possible “states of affairs” a particular set of OWL statements is true.  There are OWL tools – reasoners – that can automatically compute consequences." (21) 
 
+One basic function that a reasoner can perform is to check an OWL ontology for _consistency_, i.e. whether it is possible for a class to have any instances.  It can also infer an ontology class hierarchy which may go beyond the hierarchy asserted explicitly by OWL statements. (22)  
+
+Some reasonsers which are available are listed at (11).
 
 =References=
 ===1 FOAF Vocabulary Specification===
@@ -231,8 +251,7 @@ http://protege.stanford.edu/
 
 http://www.w3.org/TR/2009/REC-owl2-primer-20091027/#OWL_Tools
 
-===12 A Practical Guide To Building OWL Ontologies Using Protégé 4
-and CO-ODE Tools===
+===12 A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools===
 
 http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ 
 
@@ -244,9 +263,9 @@ http://www.w3.org/TR/owl2-rdf-based-semantics/#A_Set_of_Axiomatic_Triples
 http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html
 
 ===15 Should Darwin Core terms have literals or URIs as objects?===
-Darwin Core includes "ID" versions of terms.  For example {{{dwc:nameAccordingTo}}} shows strings as its examples, while its corresponding ID term {{{dwc:nameAccordingToID}}} which is defined to be an identifier.  However, since Darwin Core does not have a RDF Guide indicating how its terms should be used and since the normative definition of terms in RDF describe them as {{{rdf:type rdf:Property}}}, there are no clear guidelines for how the ID terms might be used in RDF triples.  The example given in the XML Guide (http://rs.tdwg.org/dwc/terms/guides/xml/index.htm) uses {{{dwc:locationID}}} as both an identifier for the subject resource and as an ID reference for the object of a property.  
+Darwin Core includes "ID" versions of several terms.  For example {{{dwc:nameAccordingTo}}} shows strings as its examples, while its corresponding ID term {{{dwc:nameAccordingToID}}} is defined to be an identifier.  However, since Darwin Core does not have a RDF Guide indicating how its terms should be used and since the normative definition of terms in RDF describe the property terms as {{{rdf:type rdf:Property}}}, there are no clear guidelines for how the ID terms might be used in RDF triples.  The example given in the XML Guide (http://rs.tdwg.org/dwc/terms/guides/xml/index.htm) uses {{{dwc:locationID}}} as both an identifier for the subject resource and as an ID reference for the object of a property.  
 
-In some cases (such as dwc:recordedBy), the definition clearly states that the object of the property should be text.  
+In some cases (such as dwc:recordedBy), the definition clearly states that the object of the property should be text.  But in many other cases, usage is not clear.
 
 ===16 TDWG Taxon Concept Ontology===
 http://rs.tdwg.org/ontology/voc/TaxonConcept
@@ -254,7 +273,7 @@ http://rs.tdwg.org/ontology/voc/TaxonConcept
 viewable at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.owl
 
 ===17 Equivalent properties in RDFS===
-In RDFS, the same thing can be accomplished by declaring two classes to be subclasses of each other, e.g. 
+In RDFS, the same thing can be accomplished by declaring two properties to be subproperties of each other, e.g. 
 {{{
 A rdfs:subClassOf B
 B rdfs:subClassOf A
@@ -266,7 +285,7 @@ http://xmlns.com/foaf/spec/index.rdf
 ===19 Definition of foaf:maker===
 http://xmlns.com/foaf/spec/#term_maker
 
-For additional discussion of this issue, see 
+For additional discussion of {{{dcterms:creator}}} and {{{foaf:maker}}}, see 
 
 http://wiki.foaf-project.org/w/UsingDublinCoreCreator
 
@@ -274,10 +293,28 @@ Section 4.3 of the document
 
 http://dublincore.org/documents/dc-rdf/#sect-4
 
-suggests a strategy involving the use of {{{rdf:value}}} to represent literal values for resources that should be represented as URI references.  
+suggests a strategy involving the use of {{{rdf:value}}} to represent literal values for resources that should be represented as URI references.  This strategy is clarified at
+
+http://dublincore.org/documents/2008/01/14/dc-rdf-notes/#sect-3
+
+which describes the best practices for this situation in Dublin Core.  Use of {{{rdf:value}}} is described at
+
+http://www.w3.org/TR/2004/REC-rdf-primer-20040210/#rdfvalue
+
+The DCMI notes on the specifications for Dublin Core metadata in RDF specifies that multiple value strings for a value should be expressed using the {{{rdf:value}}} property
+
+http://dublincore.org/documents/2008/01/14/dc-rdf-notes/#sect-4
 
 ===20 Life Science Identifiers (LSID) Applicability Statement===
 The LSID Applicability Statement states in Recommendation 30 that descriptions of objects identified by LSIDs must contain an OWL statement of equivalence (e.g. owl:sameAs) that relates the LSID to its HTTP proxied form.
+
+===21 Description of reasoning in basic notions on modeling knowledge===
+http://www.w3.org/TR/2009/REC-owl2-primer-20091027/#Modeling_Knowledge:_Basic_Notions
+
+===22 Inconsisten Classes===
+Refer to section 4.9.2. of _A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools_ at
+
+http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/
 
 -------------------
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
