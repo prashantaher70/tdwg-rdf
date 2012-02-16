@@ -221,11 +221,11 @@ http://www.obofoundry.org/
 ===4 OWL 2 Web Ontology Language Primer===
 OWL is a W3C Recommendation with a number of normative documents.  This particular document was designed for novices.
 
-http://www.w3.org/TR/2009/REC-owl2-primer-20091027/
+http://www.w3.org/TR/owl-primer/
 
 ===5 What is OWL 2?===
 
-http://www.w3.org/TR/2009/REC-owl2-primer-20091027/#What_is_OWL_2.3F
+http://www.w3.org/TR/owl2-primer/#What_is_OWL_2.3F
 
 ===6 OMG Unified Modeling Language (UML)===
 
@@ -237,7 +237,7 @@ http://www.w3.org/TR/owl2-overview/#Overview
 
 === 8 OWL 2 DL and OWL 2 Full===
 
-http://www.w3.org/TR/2009/REC-owl2-primer-20091027/#OWL_2_DL_and_OWL_2_Full
+http://www.w3.org/TR/owl2-primer/#OWL_2_DL_and_OWL_2_Full
 
 === 9 OWL Lite Feature Synopsis===
 
@@ -249,7 +249,7 @@ http://protege.stanford.edu/
 
 ===11 OWL tools===
 
-http://www.w3.org/TR/2009/REC-owl2-primer-20091027/#OWL_Tools
+http://www.w3.org/TR/owl2-primer/#OWL_Tools
 
 ===12 A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools===
 
@@ -309,7 +309,7 @@ http://dublincore.org/documents/2008/01/14/dc-rdf-notes/#sect-4
 The LSID Applicability Statement states in Recommendation 30 that descriptions of objects identified by LSIDs must contain an OWL statement of equivalence (e.g. owl:sameAs) that relates the LSID to its HTTP proxied form.
 
 ===21 Description of reasoning in basic notions on modeling knowledge===
-http://www.w3.org/TR/2009/REC-owl2-primer-20091027/#Modeling_Knowledge:_Basic_Notions
+http://www.w3.org/TR/owl2-primer/#Modeling_Knowledge:_Basic_Notions
 
 ===22 Inconsisten Classes===
 Refer to section 4.9.2. of _A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools_ at
