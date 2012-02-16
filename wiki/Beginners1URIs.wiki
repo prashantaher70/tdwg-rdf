@@ -4,6 +4,8 @@
 
 [Beginners2WhatIsRDF go to part 2: What is RDF and what is it for?]
 
+[Beginners Introduction to the Guide]
+
 *Contents*
 
 <wiki:toc max_depth="3" />
