@@ -311,7 +311,7 @@ The LSID Applicability Statement states in Recommendation 30 that descriptions o
 ===21 Description of reasoning in basic notions on modeling knowledge===
 http://www.w3.org/TR/owl2-primer/#Modeling_Knowledge:_Basic_Notions
 
-===22 Inconsisten Classes===
+===22 Inconsistent Classes===
 Refer to section 4.9.2. of _A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools_ at
 
 http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/
