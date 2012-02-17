@@ -40,10 +40,18 @@ A beginner who wants to gain a basic understanding of RDF and OWL should start w
 ==0.4 Significant documents, tools, and RDF implementations==
 The mention of any document or tool in this guide does not imply the endorsement of TDWG or the RDF/OWL TG.  (The exception to this is ratified [http://www.tdwg.org/standards/ TDWG standards] which are official recommendations of TDWG.)  The referenced items are simply ones which have been found to be helpful.  The list is also not exhaustive; resources may be added when discovered or removed if they cease to be available.  
 
+The document [http://www4.wiwiss.fu-berlin.de/bizer/pub/linkeddatatutorial/ How to Publish Linked Data on the Web] is somewhat out of date, but provides a general overview of Linked Data issues.
+
+See also a list of [http://www.w3.org/DesignIssues/ design issues] intended to avoid repetition of discussions once resolved.
+
 ===0.4.1. Related to Uniform Resource Identifier (URI) and GUID/Persistent Identifier===
 [http://tools.ietf.org/html/rfc3986 RFC 3986. Uniform Resource Identifier (URI): Generic Syntax]  ([http://tools.ietf.org/html/rfc3986#section-1.2.2 section 1.2.2. defining "dereference", "resolution", and "representation"])
 
+[http://www.w3.org/TR/cooluris/ Cool URIs for the Semantic Web]
+
 [http://tools.ietf.org/html/rfc2616 RFC 2616. Hypertext Transfer Protocol -- HTTP/1.1]  ([http://tools.ietf.org/html/rfc2616#section-1.3 section 1.3 Terminology including definition of "resource" and "representation"])  ([http://tools.ietf.org/html/rfc2616#section-12 section 12 on Content Negotiation])
+
+[http://httpd.apache.org/docs/current/rewrite/ Apache mod_rewrite (URL rewriting)]
 
 [http://www.tdwg.org/standards/150/ GUID Applicability Statement - Current TDWG Standard]  ([http://bioimages.vanderbilt.edu/pages/guid-applicability-final-2011-01.pdf click here for PDF viewable via browser])
 
@@ -82,6 +90,8 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 [http://dublincore.org/documents/2008/01/14/dc-rdf-notes/ Notes on DCMI specifications for Dublin Core metadata in RDF]
 
+[http://dublincore.org/documents/domain-range/ Domains and Ranges for DCMI Properties]
+
 [http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm Darwin Core abstract model (vs. DCAM)]
 
 ===0.4.4. Related to Web Ontology Language (OWL)===
@@ -100,6 +110,8 @@ The mention of any document or tool in this guide does not imply the endorsement
 
 [http://protege.stanford.edu/ Protégé ontology editor] ([http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ guide])
 
+See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
+
 ===0.4.6. Web interfaces===
 [http://validator.linkeddata.org/vapour Vapour Linked Data Validator for examining the dereferencing process for a URI]
 
@@ -110,6 +122,10 @@ The mention of any document or tool in this guide does not imply the endorsement
 [http://www.w3.org/RDF/Validator/ W3C RDF Validation Service (includes graphical display)]
 
 [http://www.rdfabout.com/demo/validator/ rdfabout.com RDF Validator and Converter (converts from XML to N3 and vice versa)]
+
+[http://www.validome.org/rss-atom/ RSS validator (also XML validation)]
+
+[http://owl.cs.manchester.ac.uk/validator/ OWL Validator]
 
 [http://www5.wiwiss.fu-berlin.de/marbles Marbles Linked Data browser]
 
