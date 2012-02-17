@@ -94,6 +94,10 @@ The mention of any document or tool in this guide does not imply the endorsement
 [http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools]
 
 ===0.4.5. Software tools===
+[http://www.dotnetrdf.org/content.asp?pageID=rdfEditor rdfEditor (syntax highlighting, validates and converts)]
+
+[http://www.jedit.org/ jEdit (plugin for XML will validate, no RDF plugin)]
+
 [http://protege.stanford.edu/ Protégé ontology editor] ([http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ guide])
 
 ===0.4.6. Web interfaces===
