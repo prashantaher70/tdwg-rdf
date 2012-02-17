@@ -14,6 +14,8 @@
 
 The purpose of this guide is to provide concise information about topics related to RDF and OWL which are significant to the work of the [http://www.tdwg.org/ TDWG] RDF/OWL Task Group (RDF/OWL TG) in particular and to the Biodiversity Informatics community in general.  It is intended as an introduction for persons who are not already familiar with RDF and OWL and as a reference for persons who are familiar but would like organized access to additional reference material.  Although it is intended that the information provided be correct, because it is intended as an introduction the amount of technical jargon and formal language has been kept to a minimum.  For those who are interested in normative descriptions of the concepts and technologies discussed here, footnotes are provided to hyperlinks to more detailed information.
 
+It should also be noted that in almost every instance, the URIs that are used in the examples are "real" URIs (no fake "example.org" URIs) from the wild which in most cases will actually dereference (at least in the case of HTTP URIs and LSIDs).  This is not to imply that there is something special about those URIs or that the examples that they provide are a model of any sort, but rather it is to give the reader an opportunity to actually try out the tools that have been provided for validating, describing, browsing, etc.
+
 ==0.2. Format==
 
 The guide is laid out into sections, each of which deals with a major issue relevant to the work of the RDF/OWL TG.  This allows users who wish to access the guide as a reference to jump quickly to the point of interest.  However, the later sections presuppose knowledge of concepts discussed in earlier sections, so a beginner may have difficulty starting at a later section.  
