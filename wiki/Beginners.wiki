@@ -25,19 +25,19 @@ Within each section, subsections are laid out hierarchically and linked in a Tab
 A beginner who wants to gain a basic understanding of RDF and OWL should start with section 1 and work through the guide sequentially.  However, it is not intended that this guide be a tutorial capable of enabling a beginner to write RDF or OWL.  Consulting additional references will undoubtedly be required.  
 
 ==0.3 Sections of the guide==
-[Beginners1URIs 1. Resources and URIs]
+===[Beginners1URIs 1. Resources and URIs]1. Resources and URIs===
 
-[Beginners2WhatIsRDF 2. What is RDF and what is it for?]
+===[Beginners2WhatIsRDF 2. What is RDF and what is it for?]2. What is RDF and what is it for?===
 
-[Beginners3RDFbasics 3. RDF basics]
+===[Beginners3RDFbasics 3. RDF basics]3. RDF basics===
 
-[Beginners4Vocabularies 4. Vocabularies, DCAM, and RDFS]
+===[Beginners4Vocabularies 4. Vocabularies, DCAM, and RDFS]4. Vocabularies, DCAM, and RDFS===
 
-[Beginners5RDFdata 5. Discovery, Transmission, and Storage of RDF data]
+===[Beginners5RDFdata 5. Discovery, Transmission, and Storage of RDF data]5. Discovery, Transmission, and Storage of RDF data===
 
-[Beginners6SPARQL 6. Querying with SPARQL]
+===[Beginners6SPARQL 6. Querying with SPARQL]6. Querying with SPARQL===
 
-[Beginners7OWL 7. Ontologies and OWL]
+===[Beginners7OWL 7. Ontologies and OWL]7. Ontologies and OWL===
 
 ==0.4 Significant documents, tools, and RDF implementations==
 The mention of any document or tool in this guide does not imply the endorsement of TDWG or the RDF/OWL TG.  (The exception to this is ratified [http://www.tdwg.org/standards/ TDWG standards] which are official recommendations of TDWG.)  The referenced items are simply ones which have been found to be helpful.  The list is also not exhaustive; resources may be added when discovered or removed if they cease to be available.  
