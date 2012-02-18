@@ -41,14 +41,14 @@ A beginner who wants to gain a basic understanding of RDF and OWL should start w
 
 
 
-==0.4 Significant documents, tools, and RDF implementations==
+==0.3 Significant documents, tools, and RDF implementations==
 The mention of any document or tool in this guide does not imply the endorsement of TDWG or the RDF/OWL TG.  (The exception to this is ratified [http://www.tdwg.org/standards/ TDWG standards] which are official recommendations of TDWG.)  The referenced items are simply ones which have been found to be helpful.  The list is also not exhaustive; resources may be added when discovered or removed if they cease to be available.  
 
 The document [http://www4.wiwiss.fu-berlin.de/bizer/pub/linkeddatatutorial/ How to Publish Linked Data on the Web] is somewhat out of date, but provides a general overview of Linked Data issues.
 
 See also a list of [http://www.w3.org/DesignIssues/ design issues] intended to avoid repetition of discussions once resolved.
 
-===0.4.1. Related to Uniform Resource Identifier (URI) and GUID/Persistent Identifier===
+===0.3.1. Related to Uniform Resource Identifier (URI) and GUID/Persistent Identifier===
 [http://tools.ietf.org/html/rfc3986 RFC 3986. Uniform Resource Identifier (URI): Generic Syntax]  ([http://tools.ietf.org/html/rfc3986#section-1.2.2 section 1.2.2. defining "dereference", "resolution", and "representation"])
 
 [http://www.w3.org/TR/cooluris/ Cool URIs for the Semantic Web]
@@ -72,7 +72,7 @@ See also a list of [http://www.w3.org/DesignIssues/ design issues] intended to a
 [http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs as HTTP URIs]
 
 
-===0.4.2. Related to the Resource Description Framework (RDF) model===
+===0.3.2. Related to the Resource Description Framework (RDF) model===
 [http://www.w3.org/TR/2004/REC-rdf-primer-20040210/ RDF Primer (intended for beginners)]
 
 [http://www.w3.org/TR/rdf-concepts/ RDF Concepts and Abstract Syntax (normative description of namespace, datatypes, and abstract syntax)]
@@ -87,7 +87,7 @@ See also a list of [http://www.w3.org/DesignIssues/ design issues] intended to a
 
 [http://www.w3.org/TR/sparql11-query/ SPARQL 1.1 Query Language] ([http://www.w3.org/TR/sparql11-protocol/ communication protocol])
 
-===0.4.3. Related to the Dublin Core Metadata Initiative (DCMI) Abstract Model===
+===0.3.3. Related to the Dublin Core Metadata Initiative (DCMI) Abstract Model===
 [http://dublincore.org/documents/abstract-model/ DCMI Abstract Model (DCAM) specification]   ([http://dublincore.org/documents/abstract-model/#sect-5 Relationship between DCAM and RDFS])
 
 [http://dublincore.org/documents/dc-rdf/#sect-4 Representing DCAM constructs using the RDF Model]
@@ -98,7 +98,7 @@ See also a list of [http://www.w3.org/DesignIssues/ design issues] intended to a
 
 [http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm Darwin Core abstract model (vs. DCAM)]
 
-===0.4.4. Related to Web Ontology Language (OWL)===
+===0.3.4. Related to Web Ontology Language (OWL)===
 [http://www.w3.org/TR/owl-primer/ OWL 2 Web Ontology Language Primer (for beginners)]
 
 [http://www.w3.org/TR/owl2-overview/ OWL 2 Web Ontology Language Document Overview]
@@ -107,7 +107,7 @@ See also a list of [http://www.w3.org/DesignIssues/ design issues] intended to a
 
 [http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools]
 
-===0.4.5. Software tools===
+===0.3.5. Software tools===
 [http://www.dotnetrdf.org/content.asp?pageID=rdfEditor rdfEditor (syntax highlighting, validates and converts)]
 
 [http://www.jedit.org/ jEdit (plugin for XML will validate, no RDF plugin)]
@@ -116,7 +116,7 @@ See also a list of [http://www.w3.org/DesignIssues/ design issues] intended to a
 
 See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 
-===0.4.6. Web interfaces===
+===0.3.6. Web interfaces===
 [http://validator.linkeddata.org/vapour Vapour Linked Data Validator for examining the dereferencing process for a URI]
 
 [http://darwin.zoology.gla.ac.uk/~rpage/lsid/tester/ Rod Page's LSID tester]
@@ -145,7 +145,7 @@ See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 
 [http://uriburner.com/isparql URIBurner enhanced SPARQL endpoint]
 
-===0.4.6. Biodiversity-related and General vocabularies and ontologies===
+===0.3.6. Biodiversity-related and General vocabularies and ontologies===
 [http://species-id.net/wiki/Audubon_Core Audubon Core (AC) draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
 
 Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/voc/apni/APNI.rdf in RDF])
@@ -183,7 +183,7 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 [http://www.w3.org/TR/void/ VoID vocabulary] ([http://vocab.deri.ie/void see also])
 
 
-===0.4.7. Biodiversity-related RDF in the wild===
+===0.3.7. Biodiversity-related RDF in the wild===
 [http://www.biodiversity.org.au/confluence/display/bdv/NSL%2bServices Atlas of Living Australia (ALA) National Species List (NSL) Linked Data Services; uses DC, TCS, APNI] ([http://biodiversity.org.au/apni.taxon/118883.rdf example resource])
 
 [http://www.biodiversitycollectionsindex.org/static/index.html Biodiversity Collections Index; uses DC, vCard, and NCD] ([http://www.biodiversitycollectionsindex.org/collection/rdf/id/12599 example resource])
