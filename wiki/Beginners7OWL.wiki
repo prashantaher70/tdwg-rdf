@@ -289,21 +289,21 @@ For additional discussion of {{{dcterms:creator}}} and {{{foaf:maker}}}, see
 
 http://wiki.foaf-project.org/w/UsingDublinCoreCreator
 
-Section 4.3 of the document
+The DCMI notes on the specifications for Dublin Core metadata in RDF specifies that literal value strings for a value should be expressed using the {{{rdf:value}}} property for resources that should be represented as URI references.  
 
 http://dublincore.org/documents/dc-rdf/#sect-4
 
-suggests a strategy involving the use of {{{rdf:value}}} to represent literal values for resources that should be represented as URI references.  This strategy is clarified at
+This strategy is clarified at
 
-http://dublincore.org/documents/2008/01/14/dc-rdf-notes/#sect-3
+http://dublincore.org/documents/dc-rdf-notes/#sect-3
 
 which describes the best practices for this situation in Dublin Core.  Use of {{{rdf:value}}} is described at
 
 http://www.w3.org/TR/rdf-primer/#rdfvalue
 
-The DCMI notes on the specifications for Dublin Core metadata in RDF specifies that multiple value strings for a value should be expressed using the {{{rdf:value}}} property
 
-http://dublincore.org/documents/2008/01/14/dc-rdf-notes/#sect-4
+
+
 
 ===20 Life Science Identifiers (LSID) Applicability Statement===
 The LSID Applicability Statement states in Recommendation 30 that descriptions of objects identified by LSIDs must contain an OWL statement of equivalence (e.g. owl:sameAs) that relates the LSID to its HTTP proxied form.
