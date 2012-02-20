@@ -40,7 +40,7 @@ In 2007, the Dublin Core Metadata Initiative (DCMI) [#4_Dublin_Core_Metadata_Ini
 Resources that are described using the DCAM are identified by URIs or are expressed as string literals.  The nature of literals can be clarified by applying an ISO language tag or by indicating the structure of the string by associating it with a syntax encoding scheme (e.g. it is an integer or formatted date).  
 
 ====4.3.2.2. Resource description set====
-A subject resource is described by a set of statements.  Each statement is made up of a property-value pairs.  
+A subject resource is described by a set of statements.  Each statement is made up of a property-value pair.  
 
 ====4.3.2.3. Property-value pair====
 In statement about a subject resource which constitutes a property-value pair, the property (also known as an element) is a term from the vocabulary (i.e. e.g. the DC vocabulary) which relates the subject resource to the value.  The value of the statement can be either a URI or a literal.  For example a book (the subject) could be described by the property {{{dcterms:title}}} and the literal value "{{{A Tale of Two Cities}}}".  Optionally, the literal could have the tag {{{xml:lang="en"}}} or {{{xml:lang="es"}}} for property-value pair {{{dcterms:title}}}  "{{{Historia De Dos Ciudades}}}".  
