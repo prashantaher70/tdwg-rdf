@@ -64,9 +64,9 @@ Many DC terms which are properties do not have domain assignments. Thus, althoug
 ====4.3.2.6. has range==== 
 In some cases, it may be assumed that all values associated with a particular property would be instances of a particular class.  For example, if a subject resource has a creator, it can be inferred that the creator is some kind of agent which is capable of creating.  Therefore, the definition of the property {{{dcterms:creator}}} states that it has the range {{{dcterms:Agent}}}.  So if one makes a statement about the painting Starry Night that
 {{{
-dcterms:creator  "Vincent van Gogh"
+dcterms:creator  people:Vincent_van_Gogh
 }}}
-one can infer that "{{{Vincent van Gogh}}}" is a {{{dcterms:Agent}}}
+one can infer that {{{people:Vincent_van_Gogh}}} is a {{{dcterms:Agent}}}
 
 As was the case with domain, there is no requirement that any property term have a range assignment.  
 
@@ -75,11 +75,11 @@ The DCMI Abstract Model allows a class to be related to another class by a sub-c
 
 The DCAM also allows a property to be related to another property by a sub-property relationship.  A property is a sub-property of another property if all instances of the first property also have the same relationship as the second property.  For example {{{dcterms:creator}}} is a sub-property of {{{dcterms:contributor}}}.  So if the painting Starry Night is described by the property value pair:
 {{{
-dcterms:creator  "Vincent van Gogh"
+dcterms:creator  people:Vincent_van_Gogh
 }}}
 then it can also be known that the property value pair:
 {{{
-dcterms:contributor  "Vincent van Gogh"
+dcterms:contributor  people:Vincent_van_Gogh
 }}}
 also applies to Starry Night even if it is not stated explicitly.
 
