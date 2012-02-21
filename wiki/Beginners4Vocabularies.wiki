@@ -105,24 +105,24 @@ A described resource of the DCAM corresponds to the subject of an RDF triple.  T
 {{{
 Described resource: http://bioimages.vanderbilt.edu/kirchoff/ac1490
 Property-value pairs:
-dcterms:creator "Ashley Coble"
+dcterms:title "Quercus michauxii (Fagaceae) - leaf"
 dcterms:created "2010-09-01T03:41:31"
-dcterms:rights "(c) 2011 Bruce K. Kirchoff"
+dcterms:dateCopyrighted "2011"
 }}}
 can be expressed in RDF/XML as:
 {{{
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/kirchoff/ac1490">
-  <dcterms:creator>Ashley Coble</dcterms:creator> 
+  <dcterms:title>Quercus michauxii (Fagaceae) - leaf</dcterms:title> 
   <dcterms:created>2010-09-01T03:41:31</dcterms:created>
-  <dcterms:rights>(c) 2011 Bruce K. Kirchoff</dcterms:rights>
+  <dcterms:dateCopyrighted>2011</dcterms:dateCopyrighted>
 </rdf:Description>
 }}}
 or in N3 as
 {{{
 <http://bioimages.vanderbilt.edu/kirchoff/ac1490> 
-        dcterms:creator "Ashley Coble"
+        dcterms:title "Quercus michauxii (Fagaceae) - leaf"
         dcterms:created "2010-09-01T03:41:31";
-        dcterms:rights "(c) 2011 Bruce K. Kirchoff".
+        dcterms:dateCopyrighted "2011".
 }}}
 
 In both of these RDF serializations, the predicates and objects which describe the subject are presented in a list of pairs which are analogous to property-value pairs as described in the DCAM.  
