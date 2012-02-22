@@ -174,18 +174,22 @@ The D2QR Platform [#13_The_D2RQ_Platform_v0.7_user_manual_and_language_specifica
 
 Virtuoso [#15_Virtuoso (15)] can transparently access native relational data as well as RDF data stored in its database.  It allows SPARQL queries.
 
-Triplify [#16_Triplify (16)] is an application that can make content of small (less than 100MB database content) web-accessible databases also available as RDF.  It converts the results of SQL queries into RDF.  
+Triplify [#16_Triplify (16)] is an application that can make content of small (less than 100MB database content) web-accessible databases also available as RDF.  It converts the results of SQL queries into RDF. 
+
+Triplifier [#17_Triplifier (17)]is being developed by the BiSciCol project (http://biscicol.blogspot.com/) to input data from flat data formats (spreadsheets, Darwin Core Archives) and relational databases and output RDF triples.  
+
+ezDBDB [#18_ezDBDB (18)]converts metadata from simple data sources like spreadsheets into RDF and provides an opportunity to cache the resulting data in a triplestore and make it available to the LOD cloud. 
 
 ====5.3.2.2. Loading RDF data into a triple store====
-There are a number of applications [#17_Wikipedia_article_on_triplestore (17)] which permit the storage of RDF as raw triples.  Triple stores are relatively efficient at storing large amounts of data [#18_Large_triplestores (18)] to the range of hundreds of billions to trillions of triples.  They are also efficiently queried using the SPARQL query language.  The total number triples stored can be increased if the store also infers triples based on properties such as {{{owl:sameAs}}}, {{{rdfs:subClassOf}}}, {{{owl:TransitiveProperty}}} which relate explicitly declared triples.  
+There are a number of applications [#19_Wikipedia_article_on_triplestore (19)] which permit the storage of RDF as raw triples.  Triple stores are relatively efficient at storing large amounts of data [#20_Large_triplestores (20)] to the range of hundreds of billions to trillions of triples.  They are also efficiently queried using the SPARQL query language.  The total number triples stored can be increased if the store also infers triples based on properties such as {{{owl:sameAs}}}, {{{rdfs:subClassOf}}}, {{{owl:TransitiveProperty}}} which relate explicitly declared triples.  
 
-A user can set up a locally managed triple store for whatever purpose is desired.  The user can then choose which RDF sources to load into that store and exert quality control over those data by loading only sources which are trusted.  Examples are !TaxonConcept [#19_TaxonConcept_datasets (19)] and a TDWG-RDF/OWL Task Group sandbox. [#20_TDWG_RDF/OWL_Task_Group_sandbox (20)]
+A user can set up a locally managed triple store for whatever purpose is desired.  The user can then choose which RDF sources to load into that store and exert quality control over those data by loading only sources which are trusted.  Examples are !TaxonConcept [#21_TaxonConcept_datasets (21)] and a TDWG-RDF/OWL Task Group sandbox. [#22_TDWG_RDF/OWL_Task_Group_sandbox (22)]
 
-There are also a number of "public" triple stores which scrape other sources and subsequently provide access to those data.  Dbpedia [#21_DBpedia_home_page (21)] extracts data from Wikipedia and makes it available as RDF triples.  !OpenLink has extracted [#22_OpenLink_Search (22)] over 15 billion triples which are searchable.  Sindice provides a "Semantic Web Index" [#23_Sindice_Semantic_Web_Index (23)] which accesses hundreds of millions of documents and makes the data in those documents available.  Adding data to one of the sources scraped by these organizations makes those triples publically accessible.  However, these sources are only as reliable as the data sources they include in their triplestore.
+There are also a number of "public" triple stores which scrape other sources and subsequently provide access to those data.  Dbpedia [#23_DBpedia_home_page (23)] extracts data from Wikipedia and makes it available as RDF triples.  !OpenLink has extracted [#24_OpenLink_Search (24)] over 15 billion triples which are searchable.  Sindice provides a "Semantic Web Index" [#25_Sindice_Semantic_Web_Index (25)] which accesses hundreds of millions of documents and makes the data in those documents available.  Adding data to one of the sources scraped by these organizations makes those triples publically accessible.  However, these sources are only as reliable as the data sources they include in their triplestore.
 
 ===5.3.3. Providing information about what data are available using VoID===
 
-VoID is a vocabulary for expressing metadata about RDF datasets [#24_Describing_Linked_Datasets_with_the_VoID_Vocabulary (24)]  ({{{void: = http://rdfs.org/ns/void# }}}).   It provides basic information about the dataset, such as the project's homepage, name, publisher, size of dataset, etc.  The database description can also provide access information about documents which can serve as the starting point for crawling the database, SPARQL endpoints, and compressed or uncompressed RDF data dumps of the database content.  The description can also link to example resources which illustrate the types of data available.  
+VoID is a vocabulary for expressing metadata about RDF datasets [#26_Describing_Linked_Datasets_with_the_VoID_Vocabulary (26)]  ({{{void: = http://rdfs.org/ns/void# }}}).   It provides basic information about the dataset, such as the project's homepage, name, publisher, size of dataset, etc.  The database description can also provide access information about documents which can serve as the starting point for crawling the database, SPARQL endpoints, and compressed or uncompressed RDF data dumps of the database content.  The description can also link to example resources which illustrate the types of data available.  
 
 Within the dataset description, the term {{{void:rootResource}}} can be used to describe one or a few central entry points for a dataset which could provide starting points for crawling the dataset.  
 
@@ -412,37 +416,45 @@ http://virtuoso.openlinksw.com/white-papers/
 
 http://triplify.org/Overview
 
-===17 Wikipedia article on triplestore===
+===17 Triplifier===
+
+http://code.google.com/p/biscicol/
+
+===18 ezDBDB===
+
+http://xmalesia.info/ezdbdb/
+
+===19 Wikipedia article on triplestore===
 
 http://en.wikipedia.org/wiki/Triplestore
 
-===18 Large triplestores===
+===20 Large triplestores===
 
 http://www.w3.org/wiki/LargeTripleStores
 
-===19 !TaxonConcept datasets===
+===21 !TaxonConcept datasets===
 
 http://www.taxonconcept.org/sparql-endpoint/
 
-===20 TDWG RDF/OWL Task Group sandbox===
+===22 TDWG RDF/OWL Task Group sandbox===
 
 http://tdwg-rdf.net/
 
-===21 DBpedia home page===
+===23 DBpedia home page===
 
 http://dbpedia.org/About
 
-===22 !OpenLink Search===
+===24 !OpenLink Search===
 http://lod.openlinksw.com/
 
-===23 Sindice Semantic Web Index===
+===25 Sindice Semantic Web Index===
 http://sindice.com/
 
 The Sindice triplestore can be searched interactively using the Sig.ma Semantic Information Mashup which allows you to create a set of triples from multiple sources either cached by Sindice or loaded from URIs.
 
 http://sig.ma/search
 
-===24 Describing Linked Datasets with the VoID Vocabulary===
+===26 Describing Linked Datasets with the VoID Vocabulary===
 Note: VoID is not a W3C Recommendation.  However, it seems to be the primary existing vocabulary for describing linked datasets.
 
 http://www.w3.org/TR/void/
