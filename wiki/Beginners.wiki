@@ -190,7 +190,7 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 [http://bioimages.vanderbilt.edu/ Bioimages; uses DC, DwC, TCS, FOAF, AC, DSW, and others] ([http://bioimages.vanderbilt.edu/baskauf/10531.rdf example resource]) ([http://bioimages.vanderbilt.edu/vanderbilt/7-16.rdf example resource])
 
-[http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF; uses DC, BIBO, PRISM] ([http://www5.wiwiss.fu-berlin.de/marbles?uri=http%3A%2F%2Fdx.doi.org%2F10.1525%2Fauk.2009.09022 example resource])
+[http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF; uses DC, BIBO, PRISM] ([http://www5.wiwiss.fu-berlin.de/marbles?uri=http%3A%2F%2Fdx.doi.org%2F10.1525%2Fauk.2009.09022 example resource] URI is {{{http://dx.doi.org/10.1525/auk.2009.09022}}} but RDF can't be viewed in a browser directly)
 
 [http://ecowlim.tfri.gov.tw/lode/ Linked Open Data of Ecology; uses DwC, FOAF, GEO, LODE] ([http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023 example resource]) 
 
