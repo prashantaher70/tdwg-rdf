@@ -176,9 +176,9 @@ Virtuoso [#15_Virtuoso (15)] can transparently access native relational data as 
 
 Triplify [#16_Triplify (16)] is an application that can make content of small (less than 100MB database content) web-accessible databases also available as RDF.  It converts the results of SQL queries into RDF. 
 
-Triplifier [#17_Triplifier (17)]is being developed by the BiSciCol project (http://biscicol.blogspot.com/) to input data from flat data formats (spreadsheets, Darwin Core Archives) and relational databases and output RDF triples.  
+Triplifier [#17_Triplifier (17)] is being developed by the !BiSciCol project (http://biscicol.blogspot.com/) to input data from flat data formats (spreadsheets, Darwin Core Archives) and relational databases and output RDF triples.  
 
-ezDBDB [#18_ezDBDB (18)]converts metadata from simple data sources like spreadsheets into RDF and provides an opportunity to cache the resulting data in a triplestore and make it available to the LOD cloud. 
+ezDBDB [#18_ezDBDB (18)] converts metadata from simple data sources like spreadsheets into RDF and provides an opportunity to cache the resulting data in a triplestore and make it available to the LOD cloud. 
 
 ====5.3.2.2. Loading RDF data into a triple store====
 There are a number of applications [#19_Wikipedia_article_on_triplestore (19)] which permit the storage of RDF as raw triples.  Triple stores are relatively efficient at storing large amounts of data [#20_Large_triplestores (20)] to the range of hundreds of billions to trillions of triples.  They are also efficiently queried using the SPARQL query language.  The total number triples stored can be increased if the store also infers triples based on properties such as {{{owl:sameAs}}}, {{{rdfs:subClassOf}}}, {{{owl:TransitiveProperty}}} which relate explicitly declared triples.  
@@ -288,19 +288,19 @@ Note the following features of this description:
 
 If content negation were set up to redirect dereferencing requests for {{{http://bioimages.vanderbilt.edu/}}} preferring {{{content-type: application/rdf+xml}}} to the document {{{http://bioimages.vanderbilt.edu/index.rdf}}} (unfortunately it is not at the present), the property {{{<void:inDataset rdf:resource="http://bioimages.vanderbilt.edu/"/>}}} could be assigned to individual RDF image records as a backlink to the VoID file.  
 
-==5.3. The Linked Open Data (LOD) Cloud==
+==5.4. The Linked Open Data (LOD) Cloud==
 
-===5.3.1. What is the LOD Cloud?===
+===5.4.1. What is the LOD Cloud?===
 The "Linked Open Data" (LOD) or simply "Linked Data" model [#4_Linked_Data (4)] embraces the idea that information (in the form of RDF triples) about resources identified by URIs is accessible through HTTP, and that links from one resource to another would permit the discovery of this information by machines (i.e. computer software).  In theory, these machines could collect and interpret this information to do useful things.  In this sense, the LOD "Cloud" (web of linked data) is the machine counterpart of the World Wide Web, which is designed to be understood by humans.  
 
 The LOD cloud doesn't exist in a single place any more than the Web does.  Like the Web, it exists as documents and databases on servers distributed around the world.  An RDF document or database sitting on an un-networked computer isn't any more a part of the LOD Cloud than an HTML document sitting on a desktop computer is a part of the Web.  The fact that the RDF can be retrieved through an attempt to dereference the URI of the resource described by the RDF is what makes the RDF part of the Cloud.  
 
-===5.3.2. How can information be discovered in the Cloud?===
+===5.4.2. How can information be discovered in the Cloud?===
 
-====5.3.2.1. Linked Data browsers===
+====5.4.2.1. Linked Data browsers===
 Information in the form of triples can be discovered and collected in a manner similar to the way that web pages were discovered and read in the early Web: by accessing an RDF document through dereferencing a URI, then discovering additional triples by traversing links which dereference other URIs.  A Linked Data browser can be installed directly on a computer, or it can be accessed through a Web interface on a regular web browser.  The Linked Data browser may collect triples that it encounters during the session and refer to this cache later without the need to dereference the URI again.  The following URLs link to several web-based Linked Data browsers.  They are not always functional and they have differing abilities to dereference and follow links given in the collected metadata.  So a URI which dereferences easily on one browser may produce no results or an error message on another.  Good luck!
 
-*OpenLink Data Explorer* (click Describe)
+*!OpenLink Data Explorer* (click Describe)
 
 http://demo.openlinksw.com/rdfbrowser2/
 
@@ -316,7 +316,7 @@ http://www5.wiwiss.fu-berlin.de/marbles/
 
 http://www4.wiwiss.fu-berlin.de/rdf_browser/
 
-====5.3.2.2. Linked Data scrapers===
+====5.4.2.2. Linked Data scrapers===
 Some organizations actively search for and archive triples, then make them available through search interfaces or SPARQL queries [Beginners6SPARQL (see part 6)].  This phenomenon is similar to web search engines which utilize Web Bots to crawl the Web, then index and cache what they find.  Here are some examples.
 
 *Sindice Semantic Web Index*
