@@ -145,7 +145,7 @@ See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 
 [http://uriburner.com/isparql URIBurner enhanced SPARQL endpoint]
 
-===0.3.6. Biodiversity-related and General vocabularies and ontologies===
+===0.3.7. Biodiversity-related and General vocabularies and ontologies===
 [http://species-id.net/wiki/Audubon_Core Audubon Core (AC) draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
 
 Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/voc/apni/APNI.rdf in RDF])
@@ -161,6 +161,8 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 [http://www.w3.org/2003/01/geo/ Basic Geo WGS84 lat/long (GEO) Vocabulary] ([http://www.w3.org/2003/01/geo/wgs84_pos in RDF])
 
 [http://xmlns.com/foaf/spec/ FOAF Vocabulary Specification 0.98] ([http://xmlns.com/foaf/spec/index.rdf in RDF])
+
+[http://id.loc.gov/ Library of Congress Authorities and Vocabularies: ISO639 languages, MARC countries and geographic areas] (Use view page source: [http://id.loc.gov/vocabulary/iso639-1.rdf ISO639], [http://id.loc.gov/vocabulary/geographicAreas.rdf MARC geographic areas], etc. in RDF)
 
 [http://ecowlim.tfri.gov.tw/lode/resource/eco/ Linked Open Data of Ecology (LODE) vocabulary] ([http://ecoinformatics.tfri.gov.tw/ternwork/member Ecoinformatics Working Group of the TFRI])
 
@@ -183,7 +185,7 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 [http://www.w3.org/TR/void/ VoID vocabulary] ([http://vocab.deri.ie/void see also])
 
 
-===0.3.7. Biodiversity-related RDF in the wild===
+===0.3.8. Biodiversity-related RDF in the wild===
 [http://www.biodiversity.org.au/confluence/display/bdv/NSL%2bServices Atlas of Living Australia (ALA) National Species List (NSL) Linked Data Services; uses DC, TCS, APNI] ([http://biodiversity.org.au/apni.taxon/118883.rdf example resource])
 
 [http://www.biodiversitycollectionsindex.org/static/index.html Biodiversity Collections Index; uses DC, vCard, and NCD] ([http://www.biodiversitycollectionsindex.org/collection/rdf/id/12599 example resource])
