@@ -458,10 +458,10 @@ If the Audubon Core and Darwin Core vocabulary terms are used as RDF predicates,
 
 So adoption of the DCMI metadata terms comes with the responsibility to use them in accordance with the semantics ascribed to them by their definitions relative to the DCAM.  This causes a problem when the described application of a DCMI term within a TDWG vocabulary conflicts with the range declared for that term in the Dublin Core term definition, i.e. if a TDWG vocabulary description states that the value should be text where Dublin Core defines a non-literal range, or where the TDWG vocabulary implies that the value should be a URI (presumably capable of being a non-literal value surrogate URI) where Dublin Core defines a literal range.  
 
-==2.3 Possible courses of action to solve range conflicts==
+==2.3 Possible courses of action to solve conflicts where terms with non-literal ranges are used with literal objects==
 
-===2.3.1. Change the namespaces of DCMI terms from {{{dcterms:}}} to {{{dc:}}} wherever possible===
-The terms {{{creator}}}, {{{type}}}, {{{ rights}}}, {{{language}}}, and {{{format}}} which have non-literal ranges in the {{{dcterms:}}} namespace have corresponding {{{dc:}}} terms which do not have range declarations.  From a semantic point of view nothing would be "broken", since each {{{dcterms:}}} term is {{{rdfs:subClassOf}}} the corresponding {{{dc:}}} term. So any pre-existing statement of
+===2.3.1. Change the namespaces of problematic DCMI terms from {{{dcterms:}}} to {{{dc:}}} wherever possible===
+The terms {{{creator}}}, {{{type}}}, {{{ rights}}}, {{{language}}}, and {{{format}}} which have non-literal ranges in the {{{dcterms:}}} namespace have corresponding {{{dc:}}} terms which do not have range declarations.  From a semantic point of view nothing would be "broken", since each {{{dcterms:}}} term is {{{rdfs:subPropertyOf}}} the corresponding {{{dc:}}} term. So any pre-existing statement of
 {{{
 subjectResource  dcterm:term  literalValue
 }}}
@@ -473,8 +473,84 @@ From the standpoint of text-based records, there might be no problem since the o
 
 The terms {{{rightsHolder}}}, {{{accessRights}}}, {{{temporal}}}, and {{{extent}}} in the {{{dcterms:}}} namespace do not have corresponding {{{dc:}}} namespace counterparts.  However, only {{{rightsHolder}}} and {{{accessRights}}} are used by Darwin Core.  Since Audubon Core is not yet adopted, alternatives to {{{dcterms:temporal}}} and {{{dcterms:extent}}} could be found or perhaps created as a literal analogue within the Audubon Core namespace (i.e. {{{ac:temporal}}} and {{{ac:extent}}}.  Since {{{dcterms:rightsHolder}}} and {{{dcterms:accessRights}}} are related to intellectual property issues, which are not the major focus of Darwin Core, it is possible that they are not in wide-enough use that changing their term URIs to {{{dwc:rightsHolder}}} and {{{dwc:accessRights}}} would cause a problem.  
 
-===2.3.2. Declare a {{{dc:}}} conversion as a Best Practice for converting TDWG metadata to RDF===
+===2.3.2. Declare a {{{dc:}}} conversion of problematic DCMI terms as a Best Practice for converting TDWG metadata to RDF===
 Under this scenario, one would simply not attempt to "fix" term URIs in existing text- or XML- based records.  Instead, declare it a Best Practice to map all {{{creator}}}, {{{type}}}, {{{ rights}}}, {{{language}}}, and {{{format}}} property/value pairs in DwC records from {{{dcterms:}}} to {{{dc:}}} when converting to an RDF representation.  Again, since Audubon Core is still a draft standard, this could be fixed before adoption by changing the term URIs to the {{{dc:}}} namespace.  
 
 This would not fix the problem for {{{dcterms:rightsHolder}}} and {{{dcterms:accessRights}}}.  However, it would be possible to declare new DwC terms {{{dwc:rightsHolder}}} and {{{dwc:accessRights}}} (with no range declarations) for use in RDF and specify in that an equivalent mapping be made to those terms during RDF conversion.
 
+===2.3.3. Express the literal values of problematic Dublin Core terms as {{{rdf:value}}} properties of a blank node===
+An alternative that would be perfectly valid under the DCAM would be to leave the term URIs as they are and when converting to RDF let the text values form the literal objects of an {{{rdf:value}}}.  For example:
+
+Database:
+||GUID||dcterms:rights||dcterms:format||
+||http://bioimages.vanderbilt.edu/baskauf/15313#bq||(c) 2002 Steven J. Baskauf||image/jpeg||
+||http://bioimages.vanderbilt.edu/kirchoff/ac1501#bq||(c) 2011 Bruce K. Kirchoff||image/gif||
+
+RDF model 1:
+{{{
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/15313#bq">
+     <dcterms:rights>
+          <dcterms:RightsStatement>
+               <rdf:value>(c) 2002 Steven J. Baskauf</rdf:value>
+          </dcterms:RightsStatement>
+     </dcterms:rights>
+     <dcterms:format>
+          <dcterms:MediaTypeOrExtent>
+               <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+               <rdf:value>image/jpeg</rdf:value>
+          </dcterms:MediaTypeOrExtent>
+     </dcterms:format>
+</rdf:Description>
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/kirchoff/ac1501#bq">
+     <dcterms:rights>
+          <dcterms:RightsStatement>
+               <rdf:value>(c) 2011 Bruce K. Kirchoff</rdf:value>
+          </dcterms:RightsStatement>
+     </dcterms:rights>
+     <dcterms:format>
+          <dcterms:MediaTypeOrExtent>
+               <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+               <rdf:value>image/gif</rdf:value>
+          </dcterms:MediaTypeOrExtent>
+     </dcterms:format>
+<</rdf:Description>
+}}}
+as opposed to a much simpler and less verbose RDF model 2:
+{{{
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/15313#bq">
+     <dc:rights>(c) 2002 Steven J. Baskauf</dc:rights>
+     <dc:format>image/jpeg</dc:format>
+</rdf:Description>
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/kirchoff/ac1501#bq">
+     <dc:rights>(c) 2011 Bruce K. Kirchoff</dc:rights>
+     <dc:format>image/gif</dc:format>
+<</rdf:Description>
+}}}
+under the "convert namespace to {{{dc:}}}" model.
+
+A SPARQL query under model 1 could be:
+{{{
+SELECT DISTINCT ?image WHERE {
+ ?image dcterms:format?x.
+ ?x rdf:value "image/gif".
+}
+}}}
+vs.
+{{{
+SELECT DISTINCT ?image WHERE {
+ ?image dc:format "image/gif".
+}
+}}}
+under model 2.  In addition to being simpler, model 2 does not require people performing queries to think of the possibility that someone might be using the {{{rdf:value}}} property.  
+
+===2.3.4. Tell people they can't convert those property values to RDF===
+Dumb idea but still one of the options.
+
+===2.3.5. Do nothing ===
+Under this scenario, people just use {{{dcterm:}}} properties which have non-literal ranges to create triples with literal objects.  This would have the advantage of being the easiest given that it would require no changes or additions to any TDWG standard and wouldn't "break" anything that anyone has done so far.  Most validators would not complain and "dumb" applications would never know the difference.  But it would be the most irresponsible course of action in the long run if we ever get to the point of doing any kind of inferencing on the RDF triples that we generate.  
+
+==2.4. Possible courses of action to solve conflicts where terms with literal ranges might be used with non-literal objects==
+
+The problem here is with the "ID" terms of Darwin Core.  In their RDF definitions, they are declared to be {{{rdfs:subPropertyOf dcterms:identifier}}} which has a range of {{{rdfs:Literal}}}.  See section 1.3.2.4. for more details.
+
+===2.4.1. 
