@@ -1,4 +1,6 @@
-#summary Use of Dublin Core in RDF
+#summary Dublin Core in RDF
+
+= Dublin Core in RDF=
 
 Steve Baskauf - TDWG RDF/OWL Best Practices Task Group
 
@@ -8,11 +10,11 @@ Steve Baskauf - TDWG RDF/OWL Best Practices Task Group
 
 ==1.1. Background==
 
-===1.1.1. Legacy dc: terms vs. current dcterms: terms===
+===1.1.1. Legacy {{{dc:}}} terms vs. current {{{dcterms:}}} terms===
 In 2008, the Dublin Core Metadata Initiative (DCMI) issued a new set of terms under the current DCMI namespace namespace: {{{http://purl.org/dc/terms/}}} (commonly abbreviated as {{{dcterms:}}}) to refine the terms in the Dublin Core legacy namespace: {{{http://purl.org/dc/elements/1.1/}}} (commonly abbreviated {{{dc:}}}).  The issuing of these terms followed the specification of the DCMI Abstract Model (DCAM) in 2007.  The development of the DCAM was in part a response to the development of the RDF Schema (RDFS) which it closely mirrors (see http://dublincore.org/documents/abstract-model/#sect-1).  
 
 ===1.1.2. Range and domain assignments for terms in the dcterms: namespace===
-When the new terms in the {{{dcterms:}}} namespace were issued, some of them were assigned domain and range properties as described at http://dublincore.org/documents/2008/01/14/domain-range/#sect-3 .  The rationale for this was described in the section "Addition of domains and ranges for existing properties and creation of new properties" in http://dublincore.org/usage/decisions/2008/dcterms-changes/#sect-2 .  To avoid conflicts with existing implementations of terms from the {{{dc:}}} namespace, no domain and range properties were assigned to those terms. 
+When the new terms in the {{{dcterms:}}} namespace were issued, some of them were assigned domain and range properties as described at http://dublincore.org/documents/2008/01/14/domain-range/#sect-3 .  The rationale for this was described in the section "Addition of domains and ranges for existing properties and creation of new properties" in http://dublincore.org/usage/decisions/2008/dcterms-changes/#sect-2 .  To avoid conflicts with existing implementations of terms from the {{{dc:}}} namespace, no domain and range properties were assigned to the terms in the {{{dc:}}} namespace. 
 
 ===1.1.3. Subproperty relationships between terms in the dcterms: and dc: namespaces===
 As described in the section "Addition of domains and ranges for existing properties and creation of new properties" in http://dublincore.org/usage/decisions/2008/dcterms-changes/#sect-2 , each of the terms in the {{{dcterms:}}} namespaces which had corresponding terms in the legacy {{{dc:}}} namespace were defined to be subproperties of those legacy terms.  Thus an assertion made in RDF such as 
@@ -26,27 +28,35 @@ uri1 dc:date  "2012-02-20"
 while the reverse is not true because there is no subproperty relationship in the opposite direction.  
 
 ===1.1.4. Notes on terminology of the DCAM and its relationship to RDF===
-The DCAM, described at http://dublincore.org/documents/abstract-model/ is illustrated graphically by Fig. 2: 
+The DCAM, described at http://dublincore.org/documents/abstract-model/ is illustrated graphically by Fig. 2 from section 2.2. of that page: 
 http://dublincore.org/documents/2007/06/04/abstract-model/description-set-model.jpg
-The terms in this diagram are described in the section http://dublincore.org/documents/abstract-model/#sect-7.  Although the DCAM is an abstract model, it was designed considering the structure of RDF and RDFS and is therefore easily translatable to RDF terms as follows.  The DCAM makes use of the term "value" to represent a physical entity, conceptual entity or literal associated with a property.  In RDF terms, a "value" corresponds to a resource.  An RDF object corresponds to a DCAM "value surrogate" which may be of two forms.  If the resource is a literal, the value surrogate is the string that encodes the value as shown in this diagram from section 4.7 of http://dublincore.org/documents/dc-rdf/#sect-4
+
+The terms used in this diagram are described in the section http://dublincore.org/documents/abstract-model/#sect-7.  Block arrows represent "is a" relationships in the direction of the arrow.  Block diamonds represent "has a" relationships away from the diamond.
+
+Although the DCAM is an abstract model, it was designed considering the structure of RDF and RDFS and is therefore easily translatable to RDF terms as described below.  The DCAM makes use of the term "value" to represent a physical entity, conceptual entity or literal associated with a property.  A "value" corresponds to a resource in RDF terms.  An object in an RDF triple corresponds approximately to a DCAM "value surrogate".  The value surrogate is the thing (literal string or URI) that represents the resource as opposed to the resource itself.  Value surrogates may be of two forms: literal value surrogates and non-literal value surrogates.    
+
+====1.1.4.1. Structure of DCAM literal value surrogates====
+If the object resource is a literal, the value surrogate is simply the string that encodes the value as shown in this diagram from section 4.7 of http://dublincore.org/documents/dc-rdf/#sect-4
 http://dublincore.org/documents/2008/01/14/dc-rdf/literalfig.png
 
-In the case of resources which are non-literal, the Description Set Model of DCAM (section 2.2) says "A non-literal value surrogate is a value surrogate for a non-literal value, and is made up of zero or one value URI (a URI that identifies the non-literal value associated with the property), zero or one vocabulary encoding scheme URI (a URI that identifies the vocabulary encoding scheme of which the non-literal value is a member), and zero or more value strings. Each value string is a literal which represents the non-literal value."  Thus,the RDF representation of this is more complex than that of a literal value
-This is shown in the following figure from section 4.3 of http://dublincore.org/documents/dc-rdf/#sect-4
+====1.1.4.2. Structure of DCAM non-literal value surrogates====
+In the case of object resources which are non-literal, the Description Set Model of DCAM (section 2.2) says "A non-literal value surrogate is a value surrogate for a non-literal value, and is made up of zero or one value URI (a URI that identifies the non-literal value associated with the property), zero or one vocabulary encoding scheme URI (a URI that identifies the vocabulary encoding scheme of which the non-literal value is a member), and zero or more value strings. Each value string is a literal which represents the non-literal value."  Thus,the RDF representation of a non-literal value surrogate is far more complex than that of a literal value surrogate.  The structure of a non-literal value surrogate is shown in the following figure from section 4.3 of http://dublincore.org/documents/dc-rdf/#sect-4
 
 http://dublincore.org/documents/2008/01/14/dc-rdf/overviewfig.png
 
-From the point of view of the abstract model, a non-literal value (i.e. an object resource) technically includes several features shown in the RDF diagram above beyond the object node of the triple which includes the property URI.  However, since all of these features are optional, one could consider that the essential feature of the value surrogate is the node itself.  Since the value URI is optional, the node may be a blank node.
+From the point of view of the abstract model, a non-literal value surrogate technically includes several features shown in the above RDF diagram which lie beyond the object node of the triple which includes the property URI.  However, since these additional features are optional, one could consider that the essential feature of the non-literal value surrogate is the node itself.  Since the value URI is optional, that node may be a blank node.
 
-The value string component of the value surrogate requires further elaboration.  In an RDF representation of DCAM, the value string is the object of a triple using {{{rdf:value}}} as the predicate.  The description of {{{rdf:value}}} at http://www.w3.org/TR/rdf-primer/#rdfvalue notes that {{{rdf:value}}} has no particular meaning other than as a convenience for creating structured values.  However, as the designated means for expressing the value string in the abstract model, DCMI has assigned meaning to {{{rdf:value}}} in the context of the DCAM.  What exactly that meaning is could be a subject of debate.  However, in reading the entirety of the documents related to the history behind the development of the {{{dcterms:}}} terms and the explanation of how the DCAM should be used to describe resources, it appears that the object of the triple containing {{{rdf:value}}} should be a string which would have been used as a surrogate for the resource itself in the pre-DCAM versions of Dublin Core.  This is perhaps best understood through the history of the use of {{{dc:creator}}} as described in section 1.3.4.1. below.  
+====1.1.4.3. The value string of a non-literal value surrogate====
 
-The name of the term {{{rdf:value}}} should not be misinterpreted to infer that the string literal object of a triple containing {{{rdf:value}}} as the predicate must be the actual "value" of the subject.  In the case of a property/value pair where the property is {{{dcterms:rights}}} which has the range {{{dcterms:RightsStatement}}}, the non-literal value surrogate could have a value string which actually is the "value" of the dcterms:RightsStatement instance itself, since a rights statement can be expressed as a string literal.  However, in the case of a property/value pair where the property is {{{dcterms:creator}}} which has the range {{{dcterms:Agent}}}, the value string cannot be the actual "value" of the {{{dcterms:Agent}}} instance because that agent is a physical person, not a string.  However, from the section "Literal values of properties without Literal ranges" of http://dublincore.org/documents/dc-rdf-notes/#sect-3 , it is clear that DCMI intends for the object of the {{{rdf:value}}} triple to be a literal which is commonly used to stand in for the resource itself in databases where all entities are strings (vs. databases which can include non-information resources represented by URIs).  
+The value string component requires further elaboration.  In an RDF representation of DCAM, the value string is the object of a triple using {{{rdf:value}}} as the predicate.  The description of {{{rdf:value}}} at http://www.w3.org/TR/rdf-primer/#rdfvalue notes that {{{rdf:value}}} has no particular meaning other than as a convenience for creating structured values.  However, as the designated means for expressing the value string in the abstract model, DCMI has assigned meaning to {{{rdf:value}}} in the context of the DCAM.  Figure 2 (above) indicates that the value string *represents* the non-literal value (i.e. the resource).  The entirety of the documents related to the history behind the development of the {{{dcterms:}}} terms and the explanation of how the DCAM should be used to describe resources, clarifies to some extent what it means for the value string to represent the resource.  This material suggests that object of the triple containing {{{rdf:value}}} is a string which would have been used as a surrogate for the resource itself in the pre-DCAM versions of Dublin Core.  This is perhaps best understood through the history of the use of {{{dc:creator}}} as described in section 1.3.4.1. below.  
 
-The use of {{{rdf:value}}} as an integral component of the RDF implementation of the DCAM model is somewhat problematic because like {{{rdf:Bag}}}, {{{rdf:Seq}}}, and {{{rdf:Alt}}} (components of RDF designed to allow construction of structured "containers"), {{{rdf:value}}} does not seem to be in widespread use.  However, since the DCAM model considers a value string optional and permits the non-literal value surrogate to be itself described by other property/value pairs, the {{{rdf:value}}} triple could simply be replaced by another one containing a predicate which has a well-known meaning, such as {{{foaf:name}}}.  Of course, including the value string would not cause a problem - it would simply be ignored by clients who did not ascribe to it the special meaning imparted to it by DCMI.
+The name of the term {{{rdf:value}}} should not be misinterpreted to infer that the string literal object of a triple containing {{{rdf:value}}} as the predicate must be the actual "value" of the subject.  In the case of a property/value pair where the property is {{{dcterms:rights}}} (which has the range {{{dcterms:RightsStatement}}}) the non-literal value surrogate could have a value string which actually is the "value" of the {{{dcterms:RightsStatement}}} instance itself, since a rights statement can be expressed as a string literal.  However, in the case of a property/value pair where the property is {{{dcterms:creator}}} (which has the range {{{dcterms:Agent}}}) the value string cannot be the actual "value" of the {{{dcterms:Agent}}} instance because that agent is a physical person, not a string.  However, from the section "Literal values of properties without Literal ranges" of http://dublincore.org/documents/dc-rdf-notes/#sect-3 , it is clear that DCMI intends for the object of the {{{rdf:value}}} triple to be a literal which is commonly used to stand in for the resource itself in databases where all entities are strings (as opposed to databases which can include non-information resources represented by URIs).  
 
-Similarly, the vocabulary encoding scheme designation which involves use of the {{{dcam:memberOf}}} predicate and which has a special place in the DCAM may or may not have any special meaning to clients.  DCMI provides URIs for several at http://dublincore.org/documents/dcmi-terms/#H4 , however the lack of defined URIs to use with this predicate might render the use of {{{dcam:memberOf}}} somewhat less useful than predicates such as {{{skos:inScheme}}} which may have broader implementation.  Of course, as with {{{rdf:value}}}, there would be no harm to using {{{dcam:memberOf}}} and having it simply ignored by clients.  
+The use of {{{rdf:value}}} as an integral component of the RDF implementation of the DCAM model is somewhat problematic because like {{{rdf:Bag}}}, {{{rdf:Seq}}}, and {{{rdf:Alt}}} (components of RDF designed to allow construction of structured "containers"), {{{rdf:value}}} does not seem to be in widespread use.  However, since the DCAM model considers a value string optional and permits the non-literal value surrogate to be itself described by other property/value pairs, the {{{rdf:value}}} triple could simply be replaced by another triple containing a predicate which has a well-known meaning, such as {{{foaf:name}}} (see the examples of section 1.3.4.1.).  Of course, also including the value string would not cause a problem - it would simply be a property of meaning unknown to clients who do not ascribe to it the special meaning imparted by DCMI.
 
-*Note relevant to Audubon Core: the DCAM encoding guidelines http://dublincore.org/documents/abstract-model/#sect-6 specify that particular encoding guidelines do not need to incorporate all aspects of the model, but they should refer to the DCAM and indicate which parts are encoded and which are not.  In particular, they should indicate how non-literal values can be treated as a described resource when they don't have a URI.*
+====1.1.4.4. The vocabulary encoding scheme URI of a non-literal value surrogate====
+
+In a manner similar to the value string, the vocabulary encoding scheme designation, which involves use of the {{{dcam:memberOf}}} predicate and which has a special place in the DCAM, may or may not have any special meaning to clients.  DCMI provides URIs for several well-known vocabulary encoding schemes at http://dublincore.org/documents/dcmi-terms/#H4 , however the lack of very many other defined URIs to use with this predicate might render the use of {{{dcam:memberOf}}} somewhat less useful than predicates such as {{{skos:inScheme}}} which may have broader implementation.  Of course, as with {{{rdf:value}}}, there would be no harm in providing a {{{dcam:memberOf}}} triple and having it simply be not understood by clients who do not ascribe to it the special meaning intended by the DCAM.  
 
 ==1.2. Implications of the domain, range, and subproperty declarations of {{{dcterms:}}} terms==
 Because of the range declarations of the terms in the {{{dcterms:}}} namespace, those terms should be used carefully in RDF to avoid collisions of {{{rdf:type}}}.  For example, the term {{{dcterms:bibliographicCitation}}} has the range {{{rdfs:Literal}}} (i.e. {{{http://www.w3.org/2000/01/rdf-schema#Literal}}}.  Thus it is expected that the object of a triple using this property as a predicate would be a string literal.  Using this term with a URI reference as the object would assert that the URI was a literal, which would be a logical inconsistency.  
@@ -62,17 +72,18 @@ The intention behind these range declarations is described at http://dublincore.
 ==1.3. Guidelines for expressing Dublin Core metadata using RDF==
 DCMI provides some explicit guidelines for how to express Dublin Core metadata in RDF at http://dublincore.org/documents/dc-rdf/#sect-4 .  
 
-The notes on the specifications for DCMI metadata in RDF, http://dublincore.org/documents/dc-rdf-notes/#sect-3 , note that "the appropriate range of a term has become reasonably obvious through a decade of implementation practice", although there has been inconsistency in the application of some terms.  The following sections describe Dublin Core terms that form part of existing or proposed TDWG standards according to the ranges defined by DCMI and discuss how they specifically might be represented in RDF.  
+The notes on the specifications for DCMI metadata in RDF, http://dublincore.org/documents/dc-rdf-notes/#sect-3 , note that in many cases "the appropriate range of a term has become reasonably obvious through a decade of implementation practice", although there has been inconsistency in the application of other terms.  A number of Dublin Core terms that form part of existing or proposed TDWG standards are drawn from Dublin Core.  In the following sections these terms are grouped according to the ranges defined by DCMI with notes on how specific terms might be represented in RDF.  
 
-===1.3.1. Dublin Core terms having range rdfs:Literal===
+===1.3.1. Dublin Core terms having range {{{rdfs:Literal}}}===
 http://dublincore.org/documents/2008/01/14/dc-rdf/literalfig.png
-The RDF representation of terms having range {{{rdfs:Literal}}} is straightforward.  The Dublin Core property is the predicate and the literal value surrogate is the object.  The literal value surrogate can have an optional XML language attribute ({{{xml:lang}}}), see http://www.ietf.org/rfc/rfc4646.txt ) or RDF datatype (rdf:datatype).  Note: {{{xsd:}}} abbreviates {{{http://www.w3.org/2001/XMLSchema#}}}.  The datatype {{{xsd:int}}} is used in the examples provided in the RDF guide, but there is no guidance as to what other datatype URIs would be appropriate for other terms.  
 
-Two of the terms used by TDWG are subproperties of {{{dcterms:date}}}.  The definition of that terms states that best practice to use encoding scheme such as W3CDTF profile of ISO 8601: http://www.w3.org/TR/NOTE-datetime .  This profile represents a restricted subset of formats allowed in ISO 8601.  The W3CDTF profile does not elaborate on how an adopting standard should specify which of the available options it permits.  As a practical matter, using one of the XML Schema datatypes follows the model given in the DCMI RDF guide.  There are two appropriate datatypes: {{{xsd:date}}}, which represents on-day intervals on the timeline and {{{xsd:dateTime}}} which represents a point on the timeline.  See http://www.w3.org/TR/xmlschema-2/#date and http://www.w3.org/TR/xmlschema-2/#dateTime for the distinction between these two datatypes.  Using {{{xsd:dateTime}}} would permit representing time to any degree of precision desired and in the interest of maximum flexibility might be preferred over {{{xsd:date}}} unless it were important to make the distinction that day-long intervals were intended rather than points in time.
+The RDF representation of terms having range {{{rdfs:Literal}}} is straightforward.  The Dublin Core property is the predicate and the literal value surrogate is the object.  The RDF literal object can be typed using an optional attribute within the predicate tag.  These include an optional XML language attribute ({{{xml:lang}}}), see http://www.ietf.org/rfc/rfc4646.txt ) or RDF datatype ({{{rdf:datatype}}}).  Note: {{{xsd:}}} abbreviates {{{http://www.w3.org/2001/XMLSchema#}}}.  Presumably, any XML Schema defined datatypes ( http://www.w3.org/TR/xmlschema-2/ ) such as xsd:dateTime would be widely understood and appropriate for use with the {{{rdf:datatype}}} attribute.  The guidelines also specify that the {{{rdf:datatype}}} can be specified by reference to a "syntax encoding scheme URI".  Dublin Core defines URIs for a number of commonly used schemes at http://dublincore.org/documents/dcmi-terms/#H5 , however, from the examples given it seems expected that users may define their own syntax encoding scheme URIs.  It seems likely that only custom consuming applications would know how to make use of this information.  Section 1.3.4.5. contains an example using a DCMI syntax encoding scheme URI.  
 
-====1.3.2. Some terms in the dcterms: namespace having literal ranges====
+Two of the terms used by TDWG are subproperties of {{{dcterms:date}}}.  The Dublin Core definition of that terms states that best practice to use encoding scheme such as W3CDTF profile of ISO 8601 describe at http://www.w3.org/TR/NOTE-datetime .  This profile represents a restricted subset of formats allowed in ISO 8601.  The W3CDTF profile does not elaborate on how an adopting standard should specify which of the available options it permits.  As a practical matter, using one of the XML Schema datatypes follows the model given in the DCMI RDF guide.  There are two appropriate datatypes: {{{xsd:date}}}, which represents on-day intervals on the timeline and {{{xsd:dateTime}}} which represents a point on the timeline.  See http://www.w3.org/TR/xmlschema-2/#date and http://www.w3.org/TR/xmlschema-2/#dateTime for the distinction between these two datatypes.  Using {{{xsd:dateTime}}} would permit representing time to any degree of precision desired and in the interest of maximum flexibility might be preferred over {{{xsd:date}}} unless it were important to make the distinction that day-long intervals were intended rather than points in time.
 
-Note: the following generic RDF tag contains the namespace declarations necessary to test the examples given here.
+===1.3.2. Some terms in the dcterms: namespace having literal ranges===
+
+Note: the following generic RDF tag contains the namespace declarations necessary to test the example descriptions given here.
 {{{
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -90,8 +101,10 @@ xmlns:xsd ="http://www.w3.org/2001/XMLSchema#"
 </rdf:RDF>
 }}}
 
+The terms listed here are those that have been incorporated into the Darwin Core standard (DwC) and the Audubon Core draft standard (AC).
+
 ====1.3.2.1. {{{dcterms:available}}} and {{{dcterms:modified}}}====
-Both {{{dcterms:available}}} and {{{dcterms:modified}}} are subproperties of {{{dcterms:date}}}.  Therefore, use of {{{xsd:dateTime}}} would be appropriate as a syntax encoding scheme URI (sensu DCAM) used as an RDF datatype URI as shown in the following examples.
+Both {{{dcterms:available}}} and {{{dcterms:modified}}} are subproperties of {{{dcterms:date}}}.  Therefore, use of {{{xsd:dateTime}}} would be appropriate as an RDF datatype URI as shown in the following examples.
 {{{
 <dctype:StillImage rdf:about="http://bioimages.vanderbilt.edu/baskauf/10849">
      <dcterms:available rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-11-28</dcterms:available>
@@ -105,7 +118,7 @@ Both {{{dcterms:available}}} and {{{dcterms:modified}}} are subproperties of {{{
 }}}
 
 ====1.3.2.2. {{{dcterms:bibliographicCitation}}}====
-No guidance is provided for the specific use of this term, so presumably any text string would be acceptable as long as it is unambiguous.  Indicating the XML language attribute would be appropriate, particularly if the article title is presented in multiple languages.  Note: the domain of this term is declared to be dcterms:BibliographicResource, so the object can be inferred to be an instance of this class even if it is not explicitly stated as in the following example.
+No guidance is provided for the specific use of this term, so presumably any text string would be acceptable as long as it is unambiguous.  Indicating the XML language attribute would be appropriate, particularly if the article title is presented in multiple languages.  Note: the domain of this term is declared to be {{{dcterms:BibliographicResource}}}, so the object can be inferred to be an instance of this class even if it is not explicitly stated as it is in the following example.
 {{{
 <dcterms:BibliographicResource rdf:about="http://dx.doi.org/10.1525/auk.2009.09022">
      <dcterms:bibliographicCitation xml:lang="en">S. Claramunt, et al. 2009. Polyphyly of Campylorhamphus, and Description of a New Genus for C. pucherani (Dendrocolaptinae). The Awk 127(2):430-439.</dcterms:bibliographicCitation>
@@ -114,7 +127,7 @@ No guidance is provided for the specific use of this term, so presumably any tex
 }}}
 
 ====1.3.2.3. {{{dcterms:title}}}====
-There are no domain or range declarations for {{{dcterms:title}}}.  As with {{{dcterms:bibliographicCitation}}}, XML language attributes could be used to provide multiple versions of the title.
+As with {{{dcterms:bibliographicCitation}}}, XML language attributes could be used to provide multiple versions of the title.
 {{{
 <dctype:StillImage rdf:about="http://bioimages.vanderbilt.edu/baskauf/10849">
      <dcterms:title xml:lang="en">Asimina triloba (Annonaceae) - inflorescence - frontal view of flower</dcterms:title>
@@ -136,19 +149,21 @@ The identifier term is useful in the situation where a globally unique or well-k
 
 In this example, the UUID assigned to the scientific name is the literal value of dcterms:identifier, while the LSID created from the UUID is the primary URI for the subject resource.  In accordance with the TDWG LSID Applicability statement, the HTTP-proxied form of the LSID is declared {{{owl:sameAs}}} the LSID.  
 
-Note that all Darwin Core "ID" properties ({{{institutionID, collectionID, datasetID, occurrenceID, individualID, eventID, locationID, higherGeographyID, geologicalContextID, identificationID, taxonID, scientificNameID, acceptedNameUsageID, parentNameUsageID, originalNameUsageID, nameAccordingToID, namePublishedInID, taxonConceptID, resourceRelationshipID, resourceID, relatedResourceID, measurementID}}} are declared to be subproperties of {{{dcterms:identifier}}}.  Therefore, each of those properties inherit the properties of {{{dcterms:identifier}}}, including the range declaration of {{{rdfs:Literal}}}.  This is an example of the priority over subsumption inference rule: 
+Note that all Darwin Core "ID" properties ({{{institutionID, collectionID, datasetID, occurrenceID, individualID, eventID, locationID, higherGeographyID, geologicalContextID, identificationID, taxonID, scientificNameID, acceptedNameUsageID, parentNameUsageID, originalNameUsageID, nameAccordingToID, namePublishedInID, taxonConceptID, resourceRelationshipID, resourceID, relatedResourceID, measurementID}}} are declared to be subproperties of {{{dcterms:identifier}}}.  Therefore, each of those properties inherit the properties of {{{dcterms:identifier}}}, including the range declaration of {{{rdfs:Literal}}}.  According to the "priority over subsumption" inference rule: 
 
-if 
+If {{{A subclass B}}} and if {{{B relation C}}} then {{{A relation C}}}
+
+So if 
 {{{
-dwc:scientificNameID   rdfs:subClassOf   dcterms:identifier   (A subclass B)
+dwc:scientificNameID   rdfs:subClassOf   dcterms:identifier
 }}}
-and 
+and if
 {{{
-dcterms:identifier  rdfs:range  rdfs:Literal  (B relation C)
+dcterms:identifier  rdfs:range  rdfs:Literal
 }}}
 then 
 {{{
-dwc:scientificNameID  rdfs:range  rdfs:Literal  (A relation C)
+dwc:scientificNameID  rdfs:range  rdfs:Literal
 }}}
 
  This means that an inconsistency would be created if a statement were made such as 
@@ -173,8 +188,12 @@ although the benefit of this might be questionable.
 
 ===1.3.3. Dublin Core terms having non-literal ranges===
 
-====1.3.4. Some terms in the dcterms: namespace having non-literal ranges====
-The terms listed here are those that have been incorporated into the Darwin Core standard and the Audubon Core draft standard.
+See section 1.1.4. for a discussion of the structuring of non-literal value surrogates.  
+
+The guidelines for expressing Dublin Core in RDF note that the typed literals that represent value strings have exactly the same characteristics as literal value surrogates.  So the same attributes can be used with value strings (i.e. language tags, XML Schema datatype URIs, and syntax encoding scheme URIs).
+
+===1.3.4. Some terms in the {{{dcterms:}}} namespace having non-literal ranges===
+The terms listed here are those that have been incorporated into the Darwin Core standard (DwC) and the Audubon Core draft standard (AC).  
 
 ====1.3.4.1. {{{dcterms:creator}}} (range: {{{dcterms:Agent}}}====
 The use of dcterms:creator has been discussed extensively.  The most straightforward summary and the one which provides the clearest indication of how DCMI intends for the DCAM to apply in RDF is the section entitled "Literal values of properties without Literal ranges" in http://dublincore.org/documents/dc-rdf-notes/#sect-3 .  This approach is an attempt to fix years of confusion involving the use of the {{{dc:creator}}} term.  See http://wiki.foaf-project.org/w/UsingDublinCoreCreator for historical background.  The suggestion that FOAF create a term {{{foaf:maker}}} came to pass, and the point of view discussed in the previous document came to be accepted, namely that {{{foaf:maker}}} have an object which represents the agent itself, while {{{dc:creator}}} could be used for textual names that stand for the creator.  Because the range of the "new" term {{{dcterms:creator}}} is {{{dcterms:Agent}}} rather than {{{rdfs:Literal}}}, it clearly should not be used with textual names.  There is a unique connection between DCMI and FOAF in that in their definitions {{{dcterms:creator}}} and {{{foaf:maker}}} are declared an {{{owl:equivalentProperty}}} relationship between them.  
@@ -236,6 +255,8 @@ There might be some utility in using a vocabulary encoding scheme URI and value 
 }}}
 Whether this is appropriate is debatable and whether any client would be sophisticated enough to understand what it meant is not known.  
 
+* Special note about* {{{dcterms:type}}}*:*  In section 5.2. of http://dublincore.org/documents/dc-rdf/#sect-5 , it says "It is recommended that RDF applications implementing this specification primarily use and understand {{{rdf:type}}} in place of {{{dcterms:type}}} when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of {{{rdf:type}}}."  
+
 ====1.3.4.4. {{{dcterms:rights}}} (range: {{{dcterms:RightsStatement}}}) and {{{dcterms:accessRights}}} (range: {{{dcterms:RightsStatement}}}) ====
 
 The definition of dcterms:rights notes that typically "rights information includes a statement about various property rights".  However, since the range of {{{dcterms:rights}}} is a non-literal value, it would not be appropriate to simply provide a text statement as a literal object.  Here would be an option for expressing this property:
@@ -270,14 +291,14 @@ A possible way to represent the language property in RDF which would conform to 
      <dcterms:language>
           <dcterms:LinguisticSystem rdf:about="http://id.loc.gov/vocabulary/iso639-1/en">
                <dcam:memberOf rdf:resource= "http://id.loc.gov/vocabulary/iso639-1"/>
-               <rdf:value>en</rdf:value>
+               <rdf:value rdf:datatype="http://purl.org/dc/terms/RFC5646">en</rdf:value>
           </dcterms:LinguisticSystem>
      </dcterms:language>
 </rdf:Description>
 }}}
 In this RDF, I have explicitly declared {{{http://id.loc.gov/vocabulary/iso639-1/en}}} to be a {{{dcterms:LinguisticSystem}}}, although that could be inferred from the range of {{{dcterms:language}}} anyway.  It could be questioned whether {{{http://id.loc.gov/vocabulary/iso639-1/en}}} is actually an instance of a linguistic system or if it represents an instance of a label for linguistic system.  The RDF types {{{http://id.loc.gov/vocabulary/iso639-1/en}}} as "http://www.loc.gov/mads/rdf/v1#Authority" which is "A concept with a controlled label." and as an {{{skos:Concept}}} so it is clearly a concept of something if not a concept of the language English.  I think to some extent this may be a moot point since the URI gets the job done (i.e. identifies the intended language, provides labels for it, and connects equivalent labels).  
 
-Note: http://purl.org/dc/terms/RFC5646 is a syntax encoding scheme, not a vocabulary encoding scheme.
+The {{{rdf:datatype}}} attribute value of {{{http://purl.org/dc/terms/RFC5646}}} is a DCMI-created syntax encoding scheme URI for RFC 5646.
 
 *In the example I gave, I specified the value of {{{dcam:memberOf}}}  to be {{{http://purl.org/dc/terms/RFC5646}}}, a {{{dcam:VocabularyEncodingScheme}}} ("An enumerated set of resources.").  One could argue about whether {{{http://id.loc.gov/vocabulary/iso639-1/en}}} is actually a member of any coding scheme, since it seems to represent the language English, not a code for English.  However, I think this could be said for any resource which is described using the DCAM - it's actually the literal object of {{{rdf:value}}} that is part of the coding scheme, not the actual subject of {{{dcam:memberOf}}}.  This just seems to be the way DCAM works.  It is not that different from {{{http://id.loc.gov/vocabulary/iso639-1}}} which is an instance of both {{{skos:ConceptScheme}}} and {{{http://www.loc.gov/mads/rdf/v1#MADSScheme}}} and of which {{{http://id.loc.gov/vocabulary/iso639-1/en}}} is a member.*  
 
@@ -391,3 +412,9 @@ This term is defined as "a related resource from which the described resource is
 
 ====1.3.8.3. {{{dcterms:description}}} ====
 The lack of range declaration and the comment that it may include "a free-text account of the resource" indicates that it could be appropriate to use this term with a literal value.  However, since it is possible that some users might want to link to a description which is a separate resource under its own URI, it might be a better practice to reserve {{{dcterms:description}}} for use with non-literal objects and to use {{{dc:description}}} for use with literal objects.
+
+=2. Implications of Dublin Core RDF Guidelines for the TDWG vocabularies=
+
+Section 5.1 of the RDF guidelines for Dublin Core, http://dublincore.org/documents/dc-rdf/#sect-5 , state unequivocally "The RDF expression of the DCMI Abstract Model has a special status among the DCMI encoding specifications. As the semantics of the notions DCMI Abstract Model is based on the semantics of the corresponding notions in RDF (as defined by [http://www.w3.org/TR/rdf-mt/ RDF-SEMANTICS]), it is of fundamental importance that the RDF expression preserves any semantics of the DCAM. Also, any valid inferences that can be made using RDF semantics need to be valid when interpreted in terms of the DCMI Abstract Model."
+--------------
+*Note relevant to Audubon Core: the DCAM encoding guidelines http://dublincore.org/documents/abstract-model/#sect-6 specify that particular encoding guidelines do not need to incorporate all aspects of the model, but they should refer to the DCAM and indicate which parts are encoded and which are not.  In particular, they should indicate how non-literal values can be treated as a described resource when they don't have a URI.*
