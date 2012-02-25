@@ -417,16 +417,17 @@ It is also possible to provide descriptions of a resource using both literal (us
 }}}
 Since the Dublin Core type vocabulary is well known, there might be some advantage to using {{{dctype:StillImage}}} as the non-literal object of {{{dcterms:type}}} rather than simply providing a text literal object of {{{dc:type}}}.  However, it seems questionable as to whether there is a benefit to providing a non-literal object to {{{dcterms:rights}}} when that object is not identified by a URI (i.e. a blank node) and is therefore not likely to be reused or referenced by others.  Unless there is a need to describe the conceptual entity using other properties (e.g. to indicate creation date, authorship, etc.) there seems to be little benefit over simply relaying the information in the form of a literal.
 
-====1.3.6. {{{dc:}}} counterparts for Dublin Core terms used in the TDWG community ===
+===1.3.6. {{{dc:}}} counterparts for Dublin Core terms used in the TDWG community ===
 The following terms in the {{{dcterms:}}} namespace have  superproperties in the {{{dc:}}} namespace and could therefore be expressed as literals without "breaking" anything: {{{creator}}}, {{{type}}}, {{{ rights}}}, {{{language}}}, and {{{format}}}.
 
 The following terms in the {{{dcterms:}}} do not have counterparts in the {{{dc:}}}namespace:  {{{rightsHolder}}}, {{{accessRights}}}, {{{temporal}}}, and {{{extent}}}.
-Using them with a literal would introduce an inconsistency due to their range declarations.
+
+Using them with a literal would introduce an inconsistency due to the term's range declarations.
 
 ===1.3.7. Dublin Core terms having no declared range===
 There are a number of terms in the in the {{{dcterms:}}} namespace which do not have a declared range, but whose metadata notes "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."  As of February 2012, these terms still do not have formal {{{rdfs:range}}} declarations.  So it would not introduce any inconsistencies to use them with literal values, but to be consistent with the expressed intent of DCMI, it would seem to be a best practice to use them with non-literal objects and to use the corresponding terms in the {{{dc:}}} namespace (if available) for literal objects.
 
-====1.3.8. Some terms in the {{{dcterms:}}} namespace having no declared range====
+===1.3.8. Some terms in the {{{dcterms:}}} namespace having no declared range===
 
 ====1.3.8.1. {{{dcterms:references}}} ====
 This term is defined as "a related resource that is referenced, cited, or otherwise pointed to by the described resource."  It is also declared to be a subproperty of {{{dcterms:relation}}}.  It has no corresponding term in the {{{dc:}}} namespace, so there is no appropriate way to use a literal with this term.  {{{dcterms:references}}} is a subproperty of {{{dc:relation}}} which could have a literal object.  So it would be possible to use {{{dc:relation}}} as a substitute for which a literal value would be appropriate.  However, {{{dc:relation}}} does not indication the direction of the relationship and its use would therefore make it difficult to distinguish the type of relationship from {{{dcterms:isReferencedBy}}} which is apparently (but not declared to be) an inverse property of {{{dcterms:references}}}, and which is also a subproperty of {{{dc:relation}}}.
