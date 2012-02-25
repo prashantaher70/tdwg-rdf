@@ -438,6 +438,43 @@ The following terms in the {{{dcterms:}}} namespace do not have counterparts in 
 
 =2. Implications of Dublin Core RDF Guidelines for the TDWG vocabularies=
 
-Section 5.1 of the RDF guidelines for Dublin Core, http://dublincore.org/documents/dc-rdf/#sect-5 , state unequivocally "The RDF expression of the DCMI Abstract Model has a special status among the DCMI encoding specifications. As the semantics of the notions DCMI Abstract Model is based on the semantics of the corresponding notions in RDF (as defined by [http://www.w3.org/TR/rdf-mt/ RDF-SEMANTICS]), it is of fundamental importance that the RDF expression preserves any semantics of the DCAM. Also, any valid inferences that can be made using RDF semantics need to be valid when interpreted in terms of the DCMI Abstract Model."
+==2.1 Description of the models which underlie TDWG vocabularies==
+Both Darwin Core and Audubon Core include terms that are defined as DCMI metadata terms.  Each of the TDWG vocabularies provides guidelines for how they can be applied by users in particular situations (e.g. as fielded text or XML).  To what extent do the DCMI guidelines dictate how the Dublin Core terms should be applied and interpreted in other vocabularies that adopt them?
 
-The DCAM encoding guidelines http://dublincore.org/documents/abstract-model/#sect-6 specify that particular encoding guidelines do not need to incorporate all aspects of the DCAM, but they should refer to the DCAM and indicate which parts are encoded and which are not.  In particular, they should indicate how non-literal values can be treated as a described resource when they don't have a URI.  In the case of Audubon Core, the current draft (as of 2012-02-25) states at http://species-id.net/wiki/Audubon_Core that "we will follow closely (sometimes verbatim) a portion of the Dublin Core Metadata Initiative (DCMI) metadata nomenclature as described in Section 2.3 of the DCMI Abstract Model" ( dublincore.org/documents/abstract-model/#sect-2 ).  This section describes 
+Audubon Core states clearly that it intends for its terminology to be "flat" and that the specification is independent of how these vocabularies may be represented for machine use (see http://species-id.net/wiki/Audubon_Core_Non_normative_document and http://species-id.net/wiki/Audubon_Core#Multiplicity ).  Thus Audubon Core seeks to escape complications which would result from being wedded to a complex and highly normalized data structure which might be demanded by a particular encoding system.  
+
+Likewise, Darwin Core provides guidelines for creating "Simple Darwin Core" records which are completely "flat" ( http://rs.tdwg.org/dwc/terms/simple/index.htm ) as well as an XML guide ( http://rs.tdwg.org/dwc/terms/guides/xml/index.htm ).  An underlying syntax-neutral abstract metadata model is also described at http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#abstractmodel .  
+
+The DCAM encoding guidelines http://dublincore.org/documents/abstract-model/#sect-6 specify that particular encoding guidelines do not need to incorporate all aspects of the DCAM, but they should refer to the DCAM and indicate which parts are encoded and which are not.  In particular, they should indicate how non-literal values can be treated as a described resource when they don't have a URI.  
+
+In the case of Audubon Core, the current draft (as of 2012-02-25) states at http://species-id.net/wiki/Audubon_Core that "we will follow closely (sometimes verbatim) a portion of the Dublin Core Metadata Initiative (DCMI) metadata nomenclature as described in Section 2.3 of the DCMI Abstract Model" ( dublincore.org/documents/abstract-model/#sect-2 ).  Section 2.3 describes the basic terminology of the DCAM in terms of properties and classes and property/value pairs.  It also lays out how properties are related to classes through range and domain relationships.  
+
+The Darwin Core abstract model "follows the Dublin Core Metadata Initiative Abstract Model [http://dublincore.org/documents/abstract-model/ ABSTRACTMODEL] except that the Darwin Core record is roughly equivalent to the Dublin Core resource."
+
+So both Audubon Core and Darwin Core claim that their underlying models follow the DCAM to some extent. They accept the idea of property/value pairs and some loose aspects of class organization, but do not reference any range or domain restrictions that would force class membership through the use of particular properties.  For simple text-based representations (e.g. CSV) this is fine because no complex relationships are implied or required.  
+
+==2.2 Problems with adoption of TDWG vocabularies for use in RDF==
+If the Audubon Core and Darwin Core vocabulary terms are used as RDF predicates, the property/class associations declared for the "adopted" Dublin Core terms cannot be ignored.  Section 5.1 of the RDF guidelines for Dublin Core, http://dublincore.org/documents/dc-rdf/#sect-5 , state "The RDF expression of the DCMI Abstract Model has a special status among the DCMI encoding specifications. As the semantics of the notions DCMI Abstract Model is based on the semantics of the corresponding notions in RDF (as defined by [http://www.w3.org/TR/rdf-mt/ RDF-SEMANTICS]), it is of fundamental importance that the RDF expression preserves any semantics of the DCAM. Also, any valid inferences that can be made using RDF semantics need to be valid when interpreted in terms of the DCMI Abstract Model."
+
+So adoption of the DCMI metadata terms comes with the responsibility to use them in accordance with the semantics ascribed to them by their definitions relative to the DCAM.  This causes a problem when the described application of a DCMI term within a TDWG vocabulary conflicts with the range declared for that term in the Dublin Core term definition, i.e. if a TDWG vocabulary description states that the value should be text where Dublin Core defines a non-literal range, or where the TDWG vocabulary implies that the value should be a URI (presumably capable of being a non-literal value surrogate URI) where Dublin Core defines a literal range.  
+
+==2.3 Possible courses of action to solve range conflicts==
+
+===2.3.1. Change the namespaces of DCMI terms from {{{dcterms:}}} to {{{dc:}}} wherever possible===
+The terms {{{creator}}}, {{{type}}}, {{{ rights}}}, {{{language}}}, and {{{format}}} which have non-literal ranges in the {{{dcterms:}}} namespace have corresponding {{{dc:}}} terms which do not have range declarations.  From a semantic point of view nothing would be "broken", since each {{{dcterms:}}} term is {{{rdfs:subClassOf}}} the corresponding {{{dc:}}} term. So any pre-existing statement of
+{{{
+subjectResource  dcterm:term  literalValue
+}}}
+automatically implies the new accepted term relationship
+{{{
+subjectResource  dc:term  literalValue
+}}}
+From the standpoint of text-based records, there might be no problem since the only change required would be changing the field name string in the database.  From the standpoint of XML based records, things would be badly broken since the system would not see {{{dcterm:term}}} as the same thing as {{{dc:term}}}.  In addition to the problem of "breaking" things, this would also require changes to the terms through the DwC Namespace Policy, which could take eons.
+
+The terms {{{rightsHolder}}}, {{{accessRights}}}, {{{temporal}}}, and {{{extent}}} in the {{{dcterms:}}} namespace do not have corresponding {{{dc:}}} namespace counterparts.  However, only {{{rightsHolder}}} and {{{accessRights}}} are used by Darwin Core.  Since Audubon Core is not yet adopted, alternatives to {{{dcterms:temporal}}} and {{{dcterms:extent}}} could be found or perhaps created as a literal analogue within the Audubon Core namespace (i.e. {{{ac:temporal}}} and {{{ac:extent}}}.  Since {{{dcterms:rightsHolder}}} and {{{dcterms:accessRights}}} are related to intellectual property issues, which are not the major focus of Darwin Core, it is possible that they are not in wide-enough use that changing their term URIs to {{{dwc:rightsHolder}}} and {{{dwc:accessRights}}} would cause a problem.  
+
+===2.3.2. Declare a {{{dc:}}} conversion as a Best Practice for converting TDWG metadata to RDF===
+Under this scenario, one would simply not attempt to "fix" term URIs in existing text- or XML- based records.  Instead, declare it a Best Practice to map all {{{creator}}}, {{{type}}}, {{{ rights}}}, {{{language}}}, and {{{format}}} property/value pairs in DwC records from {{{dcterms:}}} to {{{dc:}}} when converting to an RDF representation.  Again, since Audubon Core is still a draft standard, this could be fixed before adoption by changing the term URIs to the {{{dc:}}} namespace.  
+
+This would not fix the problem for {{{dcterms:rightsHolder}}} and {{{dcterms:accessRights}}}.  However, it would be possible to declare new DwC terms {{{dwc:rightsHolder}}} and {{{dwc:accessRights}}} (with no range declarations) for use in RDF and specify in that an equivalent mapping be made to those terms during RDF conversion.
+
