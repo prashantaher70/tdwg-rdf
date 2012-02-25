@@ -390,7 +390,21 @@ There seems to be little value in creating this level of complexity, especially 
 }}}
 where the properties are defined to refer to number of pixels.  
 
-===1.3.5. Alternative strategy involving use of terms in the {{{dc:}}} namespace===
+===1.3.5. Dublin Core terms having no declared range===
+There are a number of terms in the in the {{{dcterms:}}} namespace which do not have a declared range, but whose metadata notes "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."  As of February 2012, these terms still do not have formal {{{rdfs:range}}} declarations.  So it would not introduce any inconsistencies to use them with literal values, but to be consistent with the expressed intent of DCMI and in the interest of avoiding problems if there are future non-literal range declarations, it would seem to be a best practice to use them with non-literal objects and to use the corresponding terms in the {{{dc:}}} namespace (if available) for literal objects (see section 1.3.7.).
+
+===1.3.6. Some terms in the {{{dcterms:}}} namespace having no declared range===
+
+====1.3.6.1. {{{dcterms:references}}} (DwC; intended to be used with non-literal values)====
+The term [http://dublincore.org/documents/dcmi-terms/#terms-references dcterms:references] ([http://rs.tdwg.org/dwc/terms/index.htm#dcterms:references DwC]) is defined as "a related resource that is referenced, cited, or otherwise pointed to by the described resource."  It is also declared to be a subproperty of {{{dcterms:relation}}}.  It has no corresponding term in the {{{dc:}}} namespace, so there is no appropriate way to use a literal with this term.  {{{dcterms:references}}} is a subproperty of {{{dc:relation}}} which could have a literal object.  So it would be possible to use {{{dc:relation}}} as a substitute for which a literal value would be appropriate.  However, {{{dc:relation}}} does not indication the direction of the relationship and its use would therefore make it difficult to distinguish the type of relationship from {{{dcterms:isReferencedBy}}} which is apparently (but not declared to be) an inverse property of {{{dcterms:references}}}, and which is also a subproperty of {{{dc:relation}}}.
+
+====1.3.6.2.  {{{dcterms:source}}} (AC; intended to be used with non-literal values)====
+The term [http://dublincore.org/documents/dcmi-terms/#terms-source dcterms:source] ([http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:source AC])is defined as "a related resource from which the described resource is derived."  It is also declared to be a subproperty of {{{dcterms:relation}}}.  In this case, the term {{{dc:source}}} could be used of the user preferred to use a literal value rather than a non-literal value.  
+
+====1.3.6.3. {{{dcterms:description}}} (AC; no indication given whether the value should be literal or non-literal)====
+The lack of a range declaration for [http://dublincore.org/documents/dcmi-terms/#terms-description dcterms:description] ([http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:description AC]) and the comment that it may include "a free-text account of the resource" indicates that it could be appropriate to use this term with a literal value.  However, since it is possible that some users might want to link to a description which is a separate resource under its own URI, it might be a better practice to reserve {{{dcterms:description}}} for use with non-literal objects and to use {{{dc:description}}} for use with literal objects.
+
+===1.3.7. Strategy to avoid range conflicts by use of terms in the {{{dc:}}} namespace===
 If one preferred to use literal value surrogates the corresponding terms in the {{{dc:}}} namespace could be used rather than the terms in the {{{dcterms:}}}namespace.  For example:
 {{{
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/kirchoff/em2132">
@@ -417,29 +431,13 @@ It is also possible to provide descriptions of a resource using both literal (us
 }}}
 Since the Dublin Core type vocabulary is well known, there might be some advantage to using {{{dctype:StillImage}}} as the non-literal object of {{{dcterms:type}}} rather than simply providing a text literal object of {{{dc:type}}}.  However, it seems questionable as to whether there is a benefit to providing a non-literal object to {{{dcterms:rights}}} when that object is not identified by a URI (i.e. a blank node) and is therefore not likely to be reused or referenced by others.  Unless there is a need to describe the conceptual entity using other properties (e.g. to indicate creation date, authorship, etc.) there seems to be little benefit over simply relaying the information in the form of a literal.
 
-===1.3.6. {{{dc:}}} counterparts for Dublin Core terms used in the TDWG community ===
+===1.3.8. {{{dc:}}} counterparts for Dublin Core terms used in the TDWG community ===
 The following terms in the {{{dcterms:}}} namespace have  superproperties in the {{{dc:}}} namespace and could therefore be expressed as literals without "breaking" anything: {{{creator}}}, {{{type}}}, {{{ rights}}}, {{{language}}}, and {{{format}}}.
 
-The following terms in the {{{dcterms:}}} do not have counterparts in the {{{dc:}}}namespace:  {{{rightsHolder}}}, {{{accessRights}}}, {{{temporal}}}, and {{{extent}}}.
-
-Using them with a literal would introduce an inconsistency due to the term's range declarations.
-
-===1.3.7. Dublin Core terms having no declared range===
-There are a number of terms in the in the {{{dcterms:}}} namespace which do not have a declared range, but whose metadata notes "This term is intended to be used with non-literal values as defined in the DCMI Abstract Model (http://dublincore.org/documents/abstract-model/).  As of December 2007, the DCMI Usage Board is seeking a way to express this intention with a formal range declaration."  As of February 2012, these terms still do not have formal {{{rdfs:range}}} declarations.  So it would not introduce any inconsistencies to use them with literal values, but to be consistent with the expressed intent of DCMI and in the interest of avoiding problems if there are future non-literal range declarations, it would seem to be a best practice to use them with non-literal objects and to use the corresponding terms in the {{{dc:}}} namespace (if available) for literal objects.
-
-===1.3.8. Some terms in the {{{dcterms:}}} namespace having no declared range===
-
-====1.3.8.1. {{{dcterms:references}}} (DwC; intended to be used with non-literal values)====
-The term [http://dublincore.org/documents/dcmi-terms/#terms-references dcterms:references] ([http://rs.tdwg.org/dwc/terms/index.htm#dcterms:references DwC]) is defined as "a related resource that is referenced, cited, or otherwise pointed to by the described resource."  It is also declared to be a subproperty of {{{dcterms:relation}}}.  It has no corresponding term in the {{{dc:}}} namespace, so there is no appropriate way to use a literal with this term.  {{{dcterms:references}}} is a subproperty of {{{dc:relation}}} which could have a literal object.  So it would be possible to use {{{dc:relation}}} as a substitute for which a literal value would be appropriate.  However, {{{dc:relation}}} does not indication the direction of the relationship and its use would therefore make it difficult to distinguish the type of relationship from {{{dcterms:isReferencedBy}}} which is apparently (but not declared to be) an inverse property of {{{dcterms:references}}}, and which is also a subproperty of {{{dc:relation}}}.
-
-====1.3.8.2.  {{{dcterms:source}}} (AC; intended to be used with non-literal values)====
-The term [http://dublincore.org/documents/dcmi-terms/#terms-source dcterms:source] ([http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:source AC])is defined as "a related resource from which the described resource is derived."  It is also declared to be a subproperty of {{{dcterms:relation}}}.  In this case, the term {{{dc:source}}} could be used of the user preferred to use a literal value rather than a non-literal value.  
-
-====1.3.8.3. {{{dcterms:description}}} (AC; no indication given whether the value should be literal or non-literal)====
-The lack of a range declaration for [http://dublincore.org/documents/dcmi-terms/#terms-description dcterms:description] ([http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:description AC]) and the comment that it may include "a free-text account of the resource" indicates that it could be appropriate to use this term with a literal value.  However, since it is possible that some users might want to link to a description which is a separate resource under its own URI, it might be a better practice to reserve {{{dcterms:description}}} for use with non-literal objects and to use {{{dc:description}}} for use with literal objects.
+The following terms in the {{{dcterms:}}} namespace do not have counterparts in the {{{dc:}}}namespace:  {{{rightsHolder}}}, {{{accessRights}}}, {{{temporal}}}, and {{{extent}}}.  Using one of them with a literal would introduce an inconsistency due to the term's range declarations.
 
 =2. Implications of Dublin Core RDF Guidelines for the TDWG vocabularies=
 
 Section 5.1 of the RDF guidelines for Dublin Core, http://dublincore.org/documents/dc-rdf/#sect-5 , state unequivocally "The RDF expression of the DCMI Abstract Model has a special status among the DCMI encoding specifications. As the semantics of the notions DCMI Abstract Model is based on the semantics of the corresponding notions in RDF (as defined by [http://www.w3.org/TR/rdf-mt/ RDF-SEMANTICS]), it is of fundamental importance that the RDF expression preserves any semantics of the DCAM. Also, any valid inferences that can be made using RDF semantics need to be valid when interpreted in terms of the DCMI Abstract Model."
---------------
-*Note relevant to Audubon Core: the DCAM encoding guidelines http://dublincore.org/documents/abstract-model/#sect-6 specify that particular encoding guidelines do not need to incorporate all aspects of the model, but they should refer to the DCAM and indicate which parts are encoded and which are not.  In particular, they should indicate how non-literal values can be treated as a described resource when they don't have a URI.*
+
+The DCAM encoding guidelines http://dublincore.org/documents/abstract-model/#sect-6 specify that particular encoding guidelines do not need to incorporate all aspects of the DCAM, but they should refer to the DCAM and indicate which parts are encoded and which are not.  In particular, they should indicate how non-literal values can be treated as a described resource when they don't have a URI.  In the case of Audubon Core, the current draft (as of 2012-02-25) states at http://species-id.net/wiki/Audubon_Core that "we will follow closely (sometimes verbatim) a portion of the Dublin Core Metadata Initiative (DCMI) metadata nomenclature as described in Section 2.3 of the DCMI Abstract Model" ( dublincore.org/documents/abstract-model/#sect-2 ).  This section describes 
