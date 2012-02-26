@@ -157,13 +157,11 @@ urn:uuid:3a9a7f78-c144-4220-b5ad-22bd0c10f0cd
 }}}
 Note that the URI scheme designator "urn", the URN namespace identifier "uuid", and the UUID itself are all case insensitive.  However, it seems as though there is little benefit to proliferate the number of available URI identifiers for this resource by adding an additional URI when UUID URNs are not dereferenceable anyway.
 
-Note that all [http://rs.tdwg.org/dwc/terms/index.htm Darwin Core "ID" properties] ({{{institutionID, collectionID, datasetID, occurrenceID, individualID, eventID, locationID, higherGeographyID, geologicalContextID, identificationID, taxonID, scientificNameID, acceptedNameUsageID, parentNameUsageID, originalNameUsageID, nameAccordingToID, namePublishedInID, taxonConceptID, resourceRelationshipID, resourceID, relatedResourceID, measurementID}}} are declared to be subproperties of {{{dcterms:identifier}}}.  Therefore, each of those properties inherit the properties of {{{dcterms:identifier}}}, including the range declaration of {{{rdfs:Literal}}}.  According to the "priority over subsumption" inference rule (Blondé et al. 2011 [http://bioinformatics.oxfordjournals.org/content/27/11/1562.short doi: 10.1093/bioinformatics/btr164]): 
-
-If {{{A subclass B}}} and if {{{B relation C}}} then {{{A relation C}}}
-
+Note that all [http://rs.tdwg.org/dwc/terms/index.htm Darwin Core "ID" properties] ({{{institutionID, collectionID, datasetID, occurrenceID, individualID, eventID, locationID, higherGeographyID, geologicalContextID, identificationID, taxonID, scientificNameID, acceptedNameUsageID, parentNameUsageID, originalNameUsageID, nameAccordingToID, namePublishedInID, taxonConceptID, resourceRelationshipID, resourceID, relatedResourceID, measurementID}}} are declared to be subproperties of {{dcterms:identifier}}}.  "When a property is a subproperty of another, then the domain and range classes of the first must be the domain and range of the second." (Y. Velegrakas, Semantic Web Information Management p. 50.)
+Therefore, each of those properties inherit the properties of {{{dcterms:identifier}}}, including the range declaration of {{{rdfs:Literal}}}.  
 So if 
 {{{
-dwc:scientificNameID   rdfs:subClassOf   dcterms:identifier
+dwc:scientificNameID   rdfs:subPropertyOf   dcterms:identifier
 }}}
 and if
 {{{
