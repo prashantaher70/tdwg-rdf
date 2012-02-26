@@ -157,9 +157,9 @@ urn:uuid:3a9a7f78-c144-4220-b5ad-22bd0c10f0cd
 }}}
 Note that the URI scheme designator "urn", the URN namespace identifier "uuid", and the UUID itself are all case insensitive.  However, it seems as though there is little benefit to proliferate the number of available URI identifiers for this resource by adding an additional URI when UUID URNs are not dereferenceable anyway.
 
-Note that all [http://rs.tdwg.org/dwc/terms/index.htm Darwin Core "ID" properties] ({{{institutionID, collectionID, datasetID, occurrenceID, individualID, eventID, locationID, higherGeographyID, geologicalContextID, identificationID, taxonID, scientificNameID, acceptedNameUsageID, parentNameUsageID, originalNameUsageID, nameAccordingToID, namePublishedInID, taxonConceptID, resourceRelationshipID, resourceID, relatedResourceID, measurementID}}} are declared to be subproperties of {{dcterms:identifier}}}.  "When a property is a subproperty of another, then the domain and range classes of the first must be the domain and range of the second." (Y. Velegrakas, Semantic Web Information Management p. 50.)
-Therefore, each of those properties inherit the properties of {{{dcterms:identifier}}}, including the range declaration of {{{rdfs:Literal}}}.  
-So if 
+Note that all [http://rs.tdwg.org/dwc/terms/index.htm Darwin Core "ID" properties] ({{{institutionID, collectionID, datasetID, occurrenceID, individualID, eventID, locationID, higherGeographyID, geologicalContextID, identificationID, taxonID, scientificNameID, acceptedNameUsageID, parentNameUsageID, originalNameUsageID, nameAccordingToID, namePublishedInID, taxonConceptID, resourceRelationshipID, resourceID, relatedResourceID, measurementID}}} are declared to be subproperties of {{{dcterms:identifier}}}.  "When a property is a subproperty of another, then the domain and range classes of the first must be the domain and range of the second." (Y. Velegrakas, Semantic Web Information Management p. 50.)
+Therefore, each of those properties inherit the range and domain properties of {{{dcterms:identifier}}}, in particular its range declaration of  {{{rdfs:Literal}}}.  
+For example, if 
 {{{
 dwc:scientificNameID   rdfs:subPropertyOf   dcterms:identifier
 }}}
@@ -437,13 +437,13 @@ The following terms in the {{{dcterms:}}} namespace do not have counterparts in 
 =2. Implications of Dublin Core RDF Guidelines for the TDWG vocabularies=
 
 ==2.1 Description of the models which underlie TDWG vocabularies==
-Both Darwin Core and Audubon Core include terms that are defined as DCMI metadata terms.  Each of the TDWG vocabularies provides guidelines for how they can be applied by users in particular situations (e.g. as fielded text or XML).  To what extent do the DCMI guidelines dictate how the Dublin Core terms should be applied and interpreted in other vocabularies that adopt them?
+Both Darwin Core and Audubon Core include terms that are defined as DCMI metadata terms.  Each of the TDWG vocabularies provides guidelines for how its terms can be applied by users in particular situations (e.g. as fielded text or XML).  To what extent do the DCMI guidelines dictate how the Dublin Core terms should be applied and interpreted in other vocabularies that adopt them?
 
-Audubon Core states clearly that it intends for its terminology to be "flat" and that the specification is independent of how these vocabularies may be represented for machine use (see http://species-id.net/wiki/Audubon_Core_Non_normative_document and http://species-id.net/wiki/Audubon_Core#Multiplicity ).  Thus Audubon Core seeks to escape complications which would result from being wedded to a complex and highly normalized data structure which might be demanded by a particular encoding system.  
+Audubon Core states clearly that it intends for its terminology to be "flat" and that the specification is independent of how the vocabulary may be represented for machine use (see http://species-id.net/wiki/Audubon_Core_Non_normative_document and http://species-id.net/wiki/Audubon_Core#Multiplicity ).  Thus Audubon Core seeks to escape complications which would result from being wedded to a complex and highly normalized data structure which might be demanded by a particular encoding system.  
 
 Likewise, Darwin Core provides guidelines for creating "Simple Darwin Core" records which are completely "flat" ( http://rs.tdwg.org/dwc/terms/simple/index.htm ) as well as an XML guide ( http://rs.tdwg.org/dwc/terms/guides/xml/index.htm ).  An underlying syntax-neutral abstract metadata model is also described at http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#abstractmodel .  
 
-The DCAM encoding guidelines http://dublincore.org/documents/abstract-model/#sect-6 specify that particular encoding guidelines do not need to incorporate all aspects of the DCAM, but they should refer to the DCAM and indicate which parts are encoded and which are not.  In particular, they should indicate how non-literal values can be treated as a described resource when they don't have a URI.  
+The DCAM guidelines http://dublincore.org/documents/abstract-model/#sect-6 specify that guidelines for particular encodings of Dublin Core terms do not need to incorporate all aspects of the DCAM, but they should refer to the DCAM and indicate which parts are encoded and which are not.  In particular, they should indicate how non-literal values can be treated as a described resource when these values don't have a URI.  
 
 In the case of Audubon Core, the current draft (as of 2012-02-25) states at http://species-id.net/wiki/Audubon_Core that "we will follow closely (sometimes verbatim) a portion of the Dublin Core Metadata Initiative (DCMI) metadata nomenclature as described in Section 2.3 of the DCMI Abstract Model" ( dublincore.org/documents/abstract-model/#sect-2 ).  Section 2.3 describes the basic terminology of the DCAM in terms of properties and classes and property/value pairs.  It also lays out how properties are related to classes through range and domain relationships.  
 
@@ -451,7 +451,7 @@ The Darwin Core abstract model "follows the Dublin Core Metadata Initiative Abst
 
 So both Audubon Core and Darwin Core claim that their underlying models follow the DCAM to some extent. They accept the idea of property/value pairs and some loose aspects of class organization, but do not reference any range or domain restrictions that would force class membership through the use of particular properties.  For simple text-based representations (e.g. CSV) this is fine because no complex relationships are implied or required.  
 
-==2.2 Problems with adoption of TDWG vocabularies for use in RDF==
+==2.2 Problems with adaptation of TDWG vocabularies for use in RDF==
 If the Audubon Core and Darwin Core vocabulary terms are used as RDF predicates, the property/class associations declared for the "adopted" Dublin Core terms cannot be ignored.  Section 5.1 of the RDF guidelines for Dublin Core, http://dublincore.org/documents/dc-rdf/#sect-5 , state "The RDF expression of the DCMI Abstract Model has a special status among the DCMI encoding specifications. As the semantics of the notions DCMI Abstract Model is based on the semantics of the corresponding notions in RDF (as defined by [http://www.w3.org/TR/rdf-mt/ RDF-SEMANTICS]), it is of fundamental importance that the RDF expression preserves any semantics of the DCAM. Also, any valid inferences that can be made using RDF semantics need to be valid when interpreted in terms of the DCMI Abstract Model."
 
 So adoption of the DCMI metadata terms comes with the responsibility to use them in accordance with the semantics ascribed to them by their definitions relative to the DCAM.  This causes a problem when the described application of a DCMI term within a TDWG vocabulary conflicts with the range declared for that term in the Dublin Core term definition, i.e. if a TDWG vocabulary description states that the value should be text where Dublin Core defines a non-literal range, or where the TDWG vocabulary implies that the value should be a URI (presumably capable of being a non-literal value surrogate URI) where Dublin Core defines a literal range.  
@@ -477,14 +477,14 @@ Under this scenario, one would simply not attempt to "fix" term URIs in existing
 This would not fix the problem for {{{dcterms:rightsHolder}}} and {{{dcterms:accessRights}}}.  However, it would be possible to declare new DwC terms {{{dwc:rightsHolder}}} and {{{dwc:accessRights}}} (with no range declarations) for use in RDF and specify in that an equivalent mapping be made to those terms during RDF conversion.
 
 ===2.3.3. Express the literal values of problematic Dublin Core terms as {{{rdf:value}}} properties of a blank node===
-An alternative that would be perfectly valid under the DCAM would be to leave the term URIs as they are and when converting to RDF let the text values form the literal objects of an {{{rdf:value}}}.  For example:
+An alternative that would be valid and consistent with the DCAM would be to leave the term URIs as they are and when converting to RDF let the text values form the literal objects of an {{{rdf:value}}}.  For example:
 
 Database:
 ||GUID||dcterms:rights||dcterms:format||
 ||http://bioimages.vanderbilt.edu/baskauf/15313#bq||(c) 2002 Steven J. Baskauf||image/jpeg||
 ||http://bioimages.vanderbilt.edu/kirchoff/ac1501#bq||(c) 2011 Bruce K. Kirchoff||image/gif||
 
-RDF model 1:
+RDF model 1 based on DCAM:
 {{{
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/15313#bq">
      <dcterms:rights>
@@ -513,7 +513,7 @@ RDF model 1:
      </dcterms:format>
 <</rdf:Description>
 }}}
-as opposed to a much simpler and less verbose RDF model 2:
+as opposed to a much simpler and less verbose RDF model 2 based on conversion to {{{dc:}}} terms:
 {{{
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/15313#bq">
      <dc:rights>(c) 2002 Steven J. Baskauf</dc:rights>
@@ -524,7 +524,6 @@ as opposed to a much simpler and less verbose RDF model 2:
      <dc:format>image/gif</dc:format>
 <</rdf:Description>
 }}}
-under the "convert namespace to {{{dc:}}}" model.
 
 A SPARQL query under model 1 could be:
 {{{
@@ -541,14 +540,21 @@ SELECT DISTINCT ?image WHERE {
 }}}
 under model 2.  In addition to being simpler, model 2 does not require people performing queries to think of the possibility that someone might be using the {{{rdf:value}}} property.  
 
-===2.3.4. Tell people they can't convert those property values to RDF===
+===2.3.4. Find alternative properties in other vocabularies===
+Use terms from other vocabularies that are equivalent to the ones which can't be used with literals.  This strategy would be contingent on such properties actually existing.
+
+===2.3.5. Tell people they can't convert those property values to RDF===
 Dumb idea but still one of the options.
 
-===2.3.5. Do nothing ===
+===2.3.6. Do nothing and use the{{{dcterms:}}} terms incorrectly in RDF===
 Under this scenario, people just use {{{dcterm:}}} properties which have non-literal ranges to create triples with literal objects.  This would have the advantage of being the easiest given that it would require no changes or additions to any TDWG standard and wouldn't "break" anything that anyone has done so far.  Most validators would not complain and "dumb" applications would never know the difference.  But it would be the most irresponsible course of action in the long run if we ever get to the point of doing any kind of inferencing on the RDF triples that we generate.  
 
 ==2.4. Possible courses of action to solve conflicts where terms with literal ranges might be used with non-literal objects==
 
-The problem here is with the "ID" terms of Darwin Core.  In their RDF definitions, they are declared to be {{{rdfs:subPropertyOf dcterms:identifier}}} which has a range of {{{rdfs:Literal}}}.  See section 1.3.2.4. for more details.
+The problem here is with {{{dcterms:identifier}}} in Audubon Core and the "ID" terms of Darwin Core.  The Audubon Core problem could be fixed by changing the namespace to {{{dc:identifier}}}.  In the RDF definitions of the ID terms, they are declared to be {{{rdfs:subPropertyOf dcterms:identifier}}} which has a range of {{{rdfs:Literal}}}.  See section 1.3.2.4. for more details.
 
-===2.4.1. 
+===2.4.1. Remove subproperty declarations for DwC ID terms===
+The most straightforward solution would be to remove the subproperty declarations for all of the "ID" terms.  However, this would require going through the term change process for DwC which is long and time-consuming.
+
+===2.4.2. Don't use the ID terms in RDF===
+This may be the preferred solution.  In the example shown at http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#classes the term {{{dwc:locationID}}} is used both as in indication of the identifier of the subject Location resource {{{http://guid.mvz.org/sites/arg/127}}}, but also as an ID reference to the Location as an object of a property of the Occurrence.  The {{{dwc:occurrenceID}}} is similarly used in both ways.  If it is unclear how the ID terms are to be used, it might be better to create new terms that are not ambiguous (the approach taken by [http://code.google.com/p/darwin-sw/ Darwin-SW]).
