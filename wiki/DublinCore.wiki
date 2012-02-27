@@ -4,8 +4,6 @@
 
 Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - 2012-02-26
 
-<wiki:toc max_depth="4" />
-
 =1. Use of Dublin Core terms in RDF=
 
 Note: whenever possible, examples use actual URIs or persistent identifiers.  Use of these identifiers does not imply endorsement of any particular organization or style of description.  In addition, although the statements made in the RDF examples are generally true, although they may or may not have actually been made in RDF which is returned when URI is dereferenced.
