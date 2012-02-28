@@ -2,6 +2,8 @@
 
 = Resource Description Framework (RDF) Interest Group Charter (Draft) =
 
+NOTE: this is an obsolete draft.  To view the approved charter, see the [CharterOfTG Charter of Task Group].
+
 (see http://www.tdwg.org/activities/documentation/templates/ or the Downloads area for the charter template upon which this is based)
 
 == Co-convenors ==
