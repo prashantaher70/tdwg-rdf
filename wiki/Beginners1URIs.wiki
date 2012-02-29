@@ -158,7 +158,7 @@ http://validator.linkeddata.org/vapour
 
 
 -------------------
-Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
+Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
 
 .
 
