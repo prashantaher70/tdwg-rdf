@@ -135,7 +135,7 @@ See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 
 [http://owl.cs.manchester.ac.uk/validator/ OWL Validator]
 
-[bioguid.info/status/ Rod Page's "Status of Biodiversity Services" checker (takes a long time to run so be patient)]
+[http://bioguid.info/status/ Rod Page's "Status of Biodiversity Services" checker (takes a long time to run so be patient)]
 
 [http://www5.wiwiss.fu-berlin.de/marbles Marbles Linked Data browser]
 
