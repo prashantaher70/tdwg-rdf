@@ -123,6 +123,10 @@ See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 
 [http://lsid.tdwg.org/ TDWG LSID resolver]
 
+[http://bioguid.info/lsid.php Rod Page's LSID resolver]
+
+[http://bioguid.info/openurl/ Rod Page's OpenURL Resolver which can be used to proxy some identifiers as HTTP URIs which return RDF]
+
 [http://www.w3.org/RDF/Validator/ W3C RDF Validation Service (includes graphical display)]
 
 [http://www.rdfabout.com/demo/validator/ rdfabout.com RDF Validator and Converter (converts from XML to N3 and vice versa)]
@@ -130,6 +134,8 @@ See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 [http://www.validome.org/rss-atom/ RSS validator (also XML validation)]
 
 [http://owl.cs.manchester.ac.uk/validator/ OWL Validator]
+
+[bioguid.info/status/ Rod Page's "Status of Biodiversity Services" checker (takes a long time to run so be patient)]
 
 [http://www5.wiwiss.fu-berlin.de/marbles Marbles Linked Data browser]
 
