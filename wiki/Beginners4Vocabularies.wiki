@@ -443,7 +443,7 @@ InteractionTerm  subclass of base:DefinedTerm
 TaxonRankTerm  subclass of base:DefinedTerm
 }}}
 
-*Team Ontology (team: = http://rs.tdwg.org/ontology/voc/Team#) *
+*Team Ontology (team: = {{{http://rs.tdwg.org/ontology/voc/Team#}}}) *
 {{{
 Team  subclass of core:Team
 TeamMember 
@@ -488,7 +488,7 @@ NomenclaturalChecklist
 
 ====4.7.3.3. Why the DCMI and Darwin Core type vocabularies are defined separately from other terms====
 
-These type vocabulary terms are defined separately from the classes defined in the general terms vocabularies because these terms are intended to be used as controlled values for other property terms in the respective vocabularies.  The DCMI Type Vocabulary provides a list of approved terms that may be used as controlled values for the dcterms:type property, while the Darwin Core Type Vocabulary "extends the DCMI Type Vocabulary and provides a list of approved values that may be used for the basisOfRecord term to identify the specific type of a resource." [#31_Darwin_Core_Type_Vocabulary (31)]  In the case of a Simple Darwin Core [#32_Simple_Darwin_Core (32)] serialization, values are expressed as text literals.  {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} can be used as field names in a text file with the literals from the type vocabularies given as values for that field in a record.  In Darwin Core XML [#33_Darwin_Core_XML_Guide (33)], the type values are expressed as string literal content of {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} elements.  
+These type vocabulary terms are defined separately from the classes defined in the general terms vocabularies because these terms are intended to be used as controlled values for other property terms in the respective vocabularies.  The DCMI Type Vocabulary provides a list of approved terms that may be used as controlled values for the {{{dcterms:type}}} property, while the Darwin Core Type Vocabulary "extends the DCMI Type Vocabulary and provides a list of approved values that may be used for the {{{dwc:basisOfRecord}}} term to identify the specific type of a resource." [#31_Darwin_Core_Type_Vocabulary (31)]  In the case of a Simple Darwin Core [#32_Simple_Darwin_Core (32)] serialization, values are expressed as text literals.  {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} can be used as field names in a text file with the literals from the type vocabularies given as values for that field in a record.  In Darwin Core XML [#33_Darwin_Core_XML_Guide (33)], the type values are expressed as string literal content of {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} elements.  
 
 In RDF, a type vocabulary term could be used as an object of {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} properties.  For example:
 {{{
@@ -500,7 +500,7 @@ However, as an {{{rdfs:Class}}} each of these type terms could also be used as t
 http://bioimages.vanderbilt.edu/kirchoff/ac1490  rdf:type  dctype:StillImage
 http://bioimages.vanderbilt.edu/specimen/ncu592805 rdf:type  dwctype:LivingSpecimen
 }}}
-The guidelines for expressing Dublin Core metadata as RDF [#34_Notes_on_semantics_of_Dublin_Core_as_RDF (34)] state that "It is recommended that RDF applications implementing this specification primarily use and understand rdf:type in place of dcterms:type when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of rdf:type."  It also notes that {{{dcterms:type}}} has semantics that are similar to {{{rdf:type}}}, but that the precise relationship between those properties is undecided.  There is no similar guideline for use of {{{dwc:basisOfRecord}}} vs. {{{rdf:type}}}, but using the same rationale, it would seem preferable to use rdf:type when Darwin Core is expressed in RDF.
+The guidelines for expressing Dublin Core metadata as RDF [#34_Notes_on_semantics_of_Dublin_Core_as_RDF (34)] state that "It is recommended that RDF applications implementing this specification primarily use and understand {{{rdf:type}}} in place of dcterms:type when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of {{{rdf:type}}}."  It also notes that {{{dcterms:type}}} has semantics that are similar to {{{rdf:type}}}, but that the precise relationship between those properties is undecided.  There is no similar guideline for use of {{{dwc:basisOfRecord}}} vs. {{{rdf:type}}}, but using the same rationale, it would seem preferable to use {{{rdf:type}}} when Darwin Core is expressed in RDF.
 
 Interestingly, Darwin Core includes two classes borrowed from Dublin Core: {{{dcterms:Location}}} as a class defined in the Darwin Core Terms vocabulary and {{{dctype:Event}}} in the Darwin Core Type vocabulary.  However, Darwin Core also defines classes {{{dwctype:Location}}} and {{{dwc:Event}}}.  Nothing in the RDF ties these similarly-named classes together, so a machine would not consider a resource with {{{rdf:type dctype:Event}}} to be an instance of the same class as another resource with {{{rdf:type dwc:Event}}}; likewise resources typed as {{{dcterms:Location}}} and {{{dwctype:Location}}} would be considered instances of different classes.  In a serialization where the types were expressed as text literals rather than URIs, they would simple be "{{{Event}}}" and "{{{Location}}}" and not differentiable.  
 
@@ -540,9 +540,9 @@ http://dublincore.org/documents/abstract-model/#sect-5
 
 using the following namespace abbreviations to simplify the table:
 
-rdf: = http://www.w3.org/1999/02/22-rdf-syntax-ns#
+rdf: = {{{http://www.w3.org/1999/02/22-rdf-syntax-ns#}}}
 
-rdfs: = http://www.w3.org/2000/01/rdf-schema#
+rdfs: = {{{http://www.w3.org/2000/01/rdf-schema#}}}
 
 ===8 Description of rdf:type===
 http://www.w3.org/TR/rdf-schema/#ch_type
