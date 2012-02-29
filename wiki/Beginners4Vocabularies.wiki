@@ -14,7 +14,7 @@
 
 == 4.1. What is a vocabulary? ==
 
-A vocabulary is a list of terms and their definitions. [#1__Definition_of_a_vocabulary (1)]    In this context, vocabulary refers specifically to a controlled vocabulary in the sense that terms are included in the list by the consensus of some sponsoring body.  Within a vocabulary, the best practice is to have only one term for a single thing and to have only a single definition for each term.  Terms are usually identified by a text string which is generally understandable to humans to be related to the concept that is embodied in the term.  
+A vocabulary is a list of terms and their definitions. [#1__Definition_of_a_vocabulary (1)]    In this context, "vocabulary" refers specifically to a controlled vocabulary in the sense that terms are included in the list by the consensus of some sponsoring body.  Within a vocabulary, the best practice is to have only one term for a single thing and to have only a single definition for each term.  Terms are usually identified by a text string which is generally understandable to humans to be related to the concept that is embodied in the term.  
 
 Because the strings used to identify terms may have different meanings in different contexts, terms are usually qualified to make it clear which vocabulary defines their meaning.  For example, the term "derivedFrom" can represent "a reference to an original resource from which the current one is derived" (the sense in which it is used in the draft Audubon Core standard [#2_Term_list_for_Audubon_Core_draft_TDWG_standard (2)] ).   However, "derivedFrom" can also be a term representing the organism or Token from which another Token is derived (the sense in which it is used in darwin-sw [#3_Description_of_the_Token_class_of_Darwin-sw (3)] ).  To differentiate between different definitions of terms, a namespace abbreviation is placed in front of the term to make it unique.  In this example, {{{ac:}}} can abbreviate "{{{http://rs.tdwg.org/ac/terms/}}}" and {{{dsw:}}} can abbreviate "{{{http://purl.org/dsw/}}}".  So when one writes {{{ac:derivedFrom}}} it is an abbreviation for the URI {{{http://rs.tdwg.org/ac/terms/derivedFrom}}} while {{{dsw:derivedFrom}}} is an abbreviation for the URI {{{http://purl.org/dsw/derivedFrom}}} .  In this convention, the namespace provides a way to identify the defining vocabulary while the entire URI provides a globally unique identifier for the term. 
 
@@ -29,40 +29,42 @@ For example, Audubon Core is very vague about the types of resources that can be
 
 In contrast, the darwin-sw ontology defines {{{dsw:derivedFrom}}} to be a transitive property (i.e. if {{{A dsw:derivedFrom B}}} and {{{B  dsw:derivedFrom C}}}, then {{{A dsw:derivedFrom C}}}) and is also defined to have the inverse property {{{dsw:hasDerivative}}} (i.e. if {{{A dsw:derivedFrom B}}}, then {{{B dsw:hasDerivative A}}}).  So persons who are not careful in using {{{dsw:derivedFrom}}} may end up saying things that they do not intend.  The problem of making unintended statements is particularly acute when an ontology declares terms to have range and domain properties (see sections [#4.3.2.5._has_domain 4.3.2.5.] and [#4.3.2.6._has_range 4.3.2.6.]).  
 
+Ontologies and a language to describe them (OWL) are described in more detail in [Beginners7OWL section 7.] of this guide.
+
 ==4.3. The DCMI Abstract Model (DCAM)==
 
 ===4.3.1. What is the DCMI Abstract Model?===
-In 2007, the Dublin Core Metadata Initiative (DCMI) [#4_Dublin_Core_Metadata_Initiative (4)] produced a Recommendation describing an abstract model for Dublin Core (DC) metadata. [#5_DCMI_Abstract_Model (5)]  Because DC is a widely recognized and used vocabulary, the DCMI Abstract Model (DCAM) has been used as a model for other vocabularies outside DCMI, with Darwin Core as a notable example within our community.  The proposed Audubon Core TDWG standard is also modeled after the DCMI Abstract Model.  As an abstract model, the DCMI Abstract Model is independent of any particular coding scheme.  Thus it can be used as a model for vocabularies such as Audubon Core, whose normative definition is in human-readable terms and assumes no particular serialization.  Nevertheless, the DCAM was built upon concepts defined in the World Wide Web Consortium's (W3C's) Resource Description Framework (RDF).  So even vocabularies which are based on the DCAM but which are not expressed in RDF are structured in a way analogous to the structure of RDF.
+In 2007, the Dublin Core Metadata Initiative (DCMI) [#4_Dublin_Core_Metadata_Initiative (4)] produced a Recommendation describing an abstract model for Dublin Core (DC) metadata. [#5_DCMI_Abstract_Model (5)]  Because DC is a widely recognized and used vocabulary, the DCMI Abstract Model (DCAM) has been used as a model for other vocabularies outside DCMI, with [http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#abstractmodel Darwin Core as a notable example] within our community.  The proposed [http://species-id.net/wiki/Audubon_Core Audubon Core TDWG standard is also modeled after the DCMI Abstract Model].  As an abstract model, the DCMI Abstract Model is independent of any particular coding scheme.  Thus it can be used as a model for vocabularies such as Audubon Core, whose normative definition is in human-readable terms and assumes no particular serialization.  Nevertheless, the DCAM was built upon concepts defined in the World Wide Web Consortium's (W3C's) [Beginners2WhatIsRDF#2.1._What_is_RDF? Resource Description Framework (RDF)].  So even vocabularies which are based on the DCAM but which are not expressed in RDF are structured in a way analogous to the structure of RDF.
 
 ===4.3.2. Main features of the DCMI Abstract Model===
 
 ====4.3.2.1. Use of URIs and literals====
-Resources that are described using the DCAM are identified by URIs or are expressed as string literals.  The nature of literals can be clarified by applying an ISO language tag or by indicating the structure of the string by associating it with a syntax encoding scheme (e.g. it is an integer or formatted date).  
+Resources that are described using the DCAM are identified by URIs or are expressed as string literals.  The nature of literals can be clarified by applying an ISO language tag or by indicating the structure of the string by associating it with a syntax encoding scheme (e.g. it is an integer or formatted date).  See [DublinCore#1.3.1._Dublin_Core_terms_which_have_range_rdfs:Literal this] for details of DCAM literal value surrogates.  
 
 ====4.3.2.2. Resource description set====
-A subject resource is described by a set of statements.  Each statement is made up of a property-value pair.  
+A subject resource is described by a set of statements.  Each statement is made up of a _property-value_ pair.  
 
 ====4.3.2.3. Property-value pair====
-In statement about a subject resource which constitutes a property-value pair, the property (also known as an element) is a term from the vocabulary (i.e. e.g. the DC vocabulary) which relates the subject resource to the value.  The value of the statement can be either a URI or a literal.  For example a book (the subject) could be described by the property {{{dcterms:title}}} and the literal value "{{{A Tale of Two Cities}}}".  Optionally, the literal could have the tag {{{xml:lang="en"}}} or {{{xml:lang="es"}}} for property-value pair {{{dcterms:title}}}  "{{{Historia De Dos Ciudades}}}".  
+In statement about a subject resource which constitutes a property-value pair, the property (also known as an _element_) is a term from the vocabulary (i.e. e.g. the DC vocabulary) which relates the subject resource to the value.  The value of the statement can be represented by either a URI or a literal.  For example a book (the subject) could be described by the property {{{dcterms:title}}} and the literal value "{{{A Tale of Two Cities}}}".  Optionally, the literal could have the tag {{{xml:lang="en"}}} or {{{xml:lang="es"}}} for property-value pair {{{dcterms:title}}}  "{{{Historia De Dos Ciudades}}}".  
 
-The value could also be a URI as in the property-value pair: 
+The _value surrogate_ (which represents the value resource) could also be a URI as in the property-value pair: 
 {{{
 dcterms:type   http://purl.org/dc/dcmitype/Text
 }}}
 where {{{http://purl.org/dc/dcmitype/Text}}} is a URI which identifies the type of things that consist primarily of words for reading.  
 
 ====4.3.2.4. Class====
-The DCAM defines a special type of vocabulary term called a class.  A class is a mechanism defining a group of resources of a particular type.  A resource which is a member of a particular class of resources is called an instance of that class.  
+The DCAM defines a special type of vocabulary term called a _class_.  A class is a mechanism defining a group of resources of a particular type.  A resource which is a member of a particular class of resources is called an _instance_ of that class.  
 
 Note: a common convention is to capitalize the names of classes and to write the names of properties in {{{camelCase}}}.  However, this convention is one of convenience and it is not safe to make assumptions about the nature of a term based on its capitalization.
 
 ====4.3.2.5. has domain====
-Terms in a vocabulary which are properties that can describe all instances of a particular class are said to have a domain relationship with that class.  For example, the property term {{{dcterms:medium}}} has a domain which is the class {{{dcterms:PhysicalResource}}}.  So the property {{{dcterms:medium}}} will apply to all {{{dcterms:PhysicalResource}}} instances.  
+Terms in a vocabulary which are properties that can describe all instances of a particular class are said to have a _domain_ relationship with that class.  For example, the property term {{{dcterms:medium}}} has a domain which is the class {{{dcterms:PhysicalResource}}}.  So the property {{{dcterms:medium}}} will apply to all {{{dcterms:PhysicalResource}}} instances.  
 
 Many DC terms which are properties do not have domain assignments. Thus, although a resource which is an instance of the class {{{dcterms:BibliographicResource}}} may have the property {{{dcterms:publisher}}}, there is nothing which says that a thing which has the property {{{dcterms:publisher}}} must be an instance of the {{{dcterms:BibliographicResource}}} class.  However, any thing which has the property {{{dcterms:medium}}} can be inferred to be an instance of the class {{{dcterms:PhysicalResource}}} because of the domain assignment in the definition of {{{dcterms:medium}}}.  
 
 ====4.3.2.6. has range==== 
-In some cases, it may be assumed that all values associated with a particular property would be instances of a particular class.  For example, if a subject resource has a creator, it can be inferred that the creator is some kind of agent which is capable of creating.  Therefore, the definition of the property {{{dcterms:creator}}} states that it has the range {{{dcterms:Agent}}}.  So if one makes a statement about the painting Starry Night that
+In some cases, it may be assumed that all values associated with a particular property would be instances of a particular class.  This is called a _range_ relationship between the property and the class.  For example, if a subject resource has a creator, it can be inferred that the creator is some kind of agent which is capable of creating.  Therefore, the definition of the property {{{dcterms:creator}}} states that it has the range {{{dcterms:Agent}}}.  So if one makes a statement about the painting Starry Night that
 {{{
 dcterms:creator  people:Vincent_van_Gogh
 }}}
@@ -71,9 +73,9 @@ one can infer that {{{people:Vincent_van_Gogh}}} is a {{{dcterms:Agent}}}
 As was the case with domain, there is no requirement that any property term have a range assignment.  
 
 ====4.3.2.7. Sub-classes and sub-properties====
-The DCMI Abstract Model allows a class to be related to another class by a sub-class relationship.  One class is a sub-class of another class if all instances of the first class are also instances of the second class.  For example {{{dcterms:FileFormat}}} is defined to be a sub-class of {{{dcterms:MediaType}}}.  Therefore, anything which is a {{{dcterms:FileFormat}}} is also a {{{dcterms:MediaType}}}.  It is NOT true that anything which is a {{{dcterms:MediaType}}} will also be a {{{dcterms:FileFormat}}}.  
+The DCMI Abstract Model allows a class to be related to another class by a _sub-class_ relationship.  One class is a sub-class of another class if all instances of the first class are also instances of the second class.  For example {{{dcterms:FileFormat}}} is defined to be a sub-class of {{{dcterms:MediaType}}}.  Therefore, anything which is a {{{dcterms:FileFormat}}} is also a {{{dcterms:MediaType}}}.  It is NOT true that anything which is a {{{dcterms:MediaType}}} will also be a {{{dcterms:FileFormat}}}.  
 
-The DCAM also allows a property to be related to another property by a sub-property relationship.  A property is a sub-property of another property if all instances of the first property also have the same relationship as the second property.  For example {{{dcterms:creator}}} is a sub-property of {{{dcterms:contributor}}}.  So if the painting Starry Night is described by the property value pair:
+The DCAM also allows a property to be related to another property by a _sub-property_ relationship.  A property is a sub-property of another property if all instances of the first property also have the same relationship as the second property.  For example {{{dcterms:creator}}} is a sub-property of {{{dcterms:contributor}}}.  So if the painting Starry Night is described by the property value pair:
 {{{
 dcterms:creator  people:Vincent_van_Gogh
 }}}
@@ -86,11 +88,11 @@ also applies to Starry Night even if it is not stated explicitly.
 ===4.3.3. Implications of using the DCMI Abstract Model as the basis for a vocabulary===
 If the DCAM is used as the basis for a vocabulary, one can assume: 
   * that the purpose of the vocabulary is to describe resources using sets of property-value pairs. 
-  * that a described (subject) resource may be described by a URI, although this is not required.
-  * that resources which are values may be described using URIs or literals.
-  * that the properties will be described by qualified URIs.  
+  * that a described (subject) resource may be identified by a URI, although this is not required.
+  * that resources which are values may be described using URI references or literals.
+  * that the properties will be identified by qualified URIs.  
 
-It does NOT assume that the subject resources will be identified by URIs.  Although it assumes the existence of classes, it does NOT require that the vocabulary define any classes.  If the vocabulary defines classes it allows but does NOT require that those classes must be associated with any property terms through domain or range assignments.  
+Although it assumes the existence of classes, it does NOT require that the vocabulary define any classes.  If the vocabulary defines classes it allows but does NOT require that those classes must be associated with any property terms through domain or range assignments.  
 
 Although the DCAM was designed to be compatible with RDF, it is a generic information model and does not assume any particular encoding syntax.  
 
@@ -146,7 +148,7 @@ Because of the basis of the DCMI Abstract Model on the ideas embodied in RDF and
 The DCAM model presents the concept that a vocabulary term can be a class.  However, it does not provide a direct means of declaring that a resource is an instance of a class.  This can be done explicitly in RDF using the predicate {{{rdf:type}}}.  If a triple states that the subject resource has {{{rdf:type}}} C, then C is inferred to be an {{{rdfs:Class}}} and the triple states that the subject resource is an instance of that class. [#8_Description_of_rdf:type (8)] 
 
 ====4.4.4.2. Inferring an instance of a class based on {{{rdfs:range}}} and {{{rdfs:domain}}} properties of a RDF predicate====
-Because the RDFS terms {{{rdfs:range}}} and {{{rdfs:domain}}} correspond directly to the has range and has domain relationships described in the DCAM, the explanation provided in sections [#4.3.2.5._has_domain 4.3.2.5.] and [#4.3.2.6._has_range 4.3.2.6.] apply. [#9_Definitions_of_rdfs:range_and_rdfs:domain (9)]  In the following example, 
+Because the RDFS terms {{{rdfs:range}}} and {{{rdfs:domain}}} correspond directly to the has range and has domain relationships described in the DCAM, the explanation provided in sections [#4.3.2.5._has_domain 4.3.2.5.] and [#4.3.2.6._has_range 4.3.2.6.] apply to RDFS as well. [#9_Definitions_of_rdfs:range_and_rdfs:domain (9)]  In the following example, 
 {{{
 foaf: = "http://xmlns.com/foaf/0.1/" and 
 kimage: = "http://bioimages.vanderbilt.edu/kirchoff/
@@ -171,7 +173,7 @@ The following example illustrates the danger of using a property term having an 
 {{{
 http://dbpedia.org/resource/The_Lord_of_the_Rings   foaf:depicts   myNmspc:goodVsEvil
 }}}
-However, making this statement asserts that the novel is an instance of the class {{{foaf:Image}}} which doesn't make very much sense.  
+However, making this statement asserts that my descriptive term for novels {{{myNmspc:goodVsEvil}}} is an instance of the class {{{foaf:Image}}} which doesn't make very much sense.  
 
 ====4.4.4.3. Implying an instance of a class using the class name as the name of a container element in XML serialization of RDF====
 When the name of a class is used as the name of the XML container element for the description of a resource (instead of the generic {{{rdf:Description}}} element), a {{{rdf:type}}} statement is implied which indicates that the resource is an instance of that class.  See section [Beginners3RDFbasics#3.3.3._XML_representation 3.3.3.] for an example.
