@@ -171,7 +171,7 @@ is an unratified standard which prescribes how TDWG standards should be describe
 Normative (I think) at http://rs.tdwg.org/dwc/rdf/dwcterms.rdf.  Directly browsable at http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf but not normative.
 
 -------------------
-Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
+Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
 
 
 .
