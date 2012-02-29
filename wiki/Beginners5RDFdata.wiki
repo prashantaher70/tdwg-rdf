@@ -37,7 +37,7 @@ The URI {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}} represents an abstra
 
 1. The client contacts the server {{{http://lod.taxonconcept.org}}} and requests the resource identified by {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}}.  In the request, the client will indicate its preference of form of response.  If the client is a web browser, it will request {{{content-type: text/html}}} [#5_Internet_media_types (5)].  If it is a semantic client it will request {{{content-type: application/rdf+xml}}}.
 
-2. The server strips ignores the "#" character and everything after it in the URI.  A URI which ends in a "hash tag" like this is called a hash URI.  Hash URIs are commonly used to identify non-information resources.  The server determines that the base URI {{{http://lod.taxonconcept.org/ses/z9oqP}}} is not an information resource that can be returned to the client, so based on some kind of information or rule that it knows, it determines an appropriate representation of the resource based on the content-type requested by the client.  In the case where {{{content-type: application/rdf+xml}}} is requested, the server responds to the client that it should "See Also" the representation provided by {{{http://lod.taxonconcept.org/ses/z9oqP.rdf}}}.  This process is called content negotiation.
+2. The server ignores the "#" character and everything after it in the URI.  A URI which ends in a "hash tag" like this is called a hash URI.  (Another name for the part of the URI after the # character is "fragment".) Hash URIs are commonly used to identify non-information resources.  In this case, the server determines that the base URI {{{http://lod.taxonconcept.org/ses/z9oqP}}} is not an information resource that can be returned to the client, so based on some kind of information or rule that it knows, it determines an appropriate representation of the resource based on the content-type requested by the client.  In the case where {{{content-type: application/rdf+xml}}} is requested, the server responds to the client that it should "See Also" the representation provided by the URI {{{http://lod.taxonconcept.org/ses/z9oqP.rdf}}}.  This process is called content negotiation.
 
 3. The client requests the resource {{{http://lod.taxonconcept.org/ses/z9oqP.rdf}}} from the server and the server sends it.
 
@@ -110,7 +110,7 @@ In this manner, a semantic client can "crawl" the web of links to discover other
 
 ==5.3. Facilitating the discovery of RDF metadata which is incorporated in a dataset==
 
-The method described in the previous section is adequate for a small number of URIs, such as those identifying terms in a vocabulary.  However, it is a relatively inefficient way of collecting larger amounts of RDF metadata. If the only description of the resources identified by the URIs is found in individual documents, a client would have to periodically crawl all of the linked documents to discover any changes that might have occurred in the metadata.  
+The method described in the previous section is adequate for a small number of URIs, such as those identifying terms in a vocabulary.  However, it is a relatively inefficient way of collecting larger amounts of RDF metadata. If the only descriptions of the resources identified by the URIs are found in individual documents, a client would have to periodically crawl all of the linked documents to discover any changes that might have occurred in the metadata.  
 
 ===5.3.1. Using RSS to summarize the content of a small dataset===
 RSS [#10_RSS_specification (10)] was formerly an abbreviation for "RDF Site Summary" [#11_History_of_RSS_in_Wikipedia (11)].  Since that is exactly what we want to do (summarize a site in RDF), RSS can be used to inform web crawlers what metadata files are available to be crawled. [#12_Publishing_Web_Data_by_Sindice (12)]  Importantly, RSS can also allow the crawlers to detect new files and to know when existing pages have changed.  
@@ -154,10 +154,10 @@ xmlns:dcterms="http://purl.org/dc/terms/"
   </rss:item>
 </rdf:RDF>
 }}}
-(This example is not presented in N3 due to complications involving the blank node required by the rdf:Seq container.)
+(This example is not presented in N3 due to complications involving the blank node required by the {{{rdf:Seq}}} container.)
 
 ====5.3.1.2. Explanation of the example====
-An instance of the class {{{rss:channel}}} is a descriptive document that contains the list of resources being described in the "feed".  The instances of the class {{{rss:item}}} are the individual resources that are being described.  In this case the {{{rss:item}}} instances are the described resources whose URIs will be dereferenced to acquire the metadata which describes them.  The {{{rss:items}}} property of the channel points to an instance of the rdf:Seq class, a container class used to group related resources.  The {{{rdf:li}}} properties of the {{{rdf:Seq}}} instance point to the items that are being described on the site.
+An instance of the class {{{rss:channel}}} is a descriptive document that contains the list of resources being described in the "feed".  The instances of the class {{{rss:item}}} are the individual resources that are being described.  In this case the {{{rss:item}}} instances are the described resources whose URIs will be dereferenced to acquire the metadata which describes them.  The {{{rss:items}}} property of the channel points to an instance of the {{{rdf:Seq}}} class, a container class used to group related resources.  The {{{rdf:li}}} properties of the {{{rdf:Seq}}} instance point to the items that are being described on the site.  Note: the RDF container classes are not widely used outside of RSS because they make it more difficult to query the data using SPARQL (see [Beginners6SPARQL section 6.] of this guide).
 
 Within the individual {{{rss:channel}}} and {{{rss:item}}} descriptions, the {{{rss:title}}} property is a human readable description of the resource; {{{rss:title}}} is a subproperty of {{{dcterms:title}}}.  The {{{rss:link}}} property is a URL which points to an html rendering of the resource.  The {{{dc:date}}} is understood to be the date on which the resource was updated and effectively serves as the modification date which a semantic client would use to determine whether the resource needed to be crawled again.  It is the {{{<rss:item rdf:about="…">}}} tag which provides the actual link to the resource which is to be crawled.  {{{rss:title}}} and {{{rss:link}}} do not really provide any useful information for a semantic client, although they make the RSS page readable in an RSS reader.  
 
@@ -170,7 +170,7 @@ If a database is large, it is not practical to convert those data to static docu
 ====5.3.2.1. Serving data from an existing relational database as RDF====
 It is possible to implement an interface which allows a traditional relational database to serve RDF metadata.  
 
-The D2QR Platform [#13_The_D2RQ_Platform_v0.7_user_manual_and_language_specification (13)] provides a mapping language that facilitates mapping and translation.  With this interface, the database can served the data as Linked Data and can also respond to SPARQL queries (reference to section not yet written).  D2QR also permits dumping the entire database into a file as RDF in various forms. [#14_D2RQ_RDF_data_dumps (14)]  
+The D2QR Platform [#13_The_D2RQ_Platform_v0.7_user_manual_and_language_specification (13)] provides a mapping language that facilitates mapping and translation.  With this interface, the database can served the data as Linked Data and can also respond to SPARQL queries (see [Beginners6SPARQL section 6.]).  D2QR also permits dumping the entire database into a file as RDF in various forms. [#14_D2RQ_RDF_data_dumps (14)]  
 
 Virtuoso [#15_Virtuoso (15)] can transparently access native relational data as well as RDF data stored in its database.  It allows SPARQL queries.
 
@@ -181,13 +181,13 @@ Triplifier [#17_Triplifier (17)] is being developed by the !BiSciCol project (ht
 ezDBDB [#18_ezDBDB (18)] converts metadata from simple data sources like spreadsheets into RDF and provides an opportunity to cache the resulting data in a triplestore and make it available to the LOD cloud. 
 
 ====5.3.2.2. Loading RDF data into a triple store====
-There are a number of applications [#19_Wikipedia_article_on_triplestore (19)] which permit the storage of RDF as raw triples.  Triple stores are relatively efficient at storing large amounts of data [#20_Large_triplestores (20)] to the range of hundreds of billions to trillions of triples.  They are also efficiently queried using the SPARQL query language.  The total number triples stored can be increased if the store also infers triples based on properties such as {{{owl:sameAs}}}, {{{rdfs:subClassOf}}}, {{{owl:TransitiveProperty}}} which relate explicitly declared triples.  
+There are a number of applications [#19_Wikipedia_article_on_triplestore (19)] which permit the storage of RDF as raw triples.  Triple stores are relatively efficient at storing large amounts of data [#20_Large_triplestores (20)] to the range of hundreds of billions to trillions of triples.  They are also efficiently queried using the SPARQL query language.  The total number triples available can be increased if the store also infers triples based on properties such as {{{owl:sameAs}}}, {{{rdfs:subClassOf}}}, {{{owl:TransitiveProperty}}} which relate explicitly declared triples. See [#7.6.4._Statements_of_equivalence_in_OWL section 7.6.4.] and [#7.6.5._OWL_property_characteristics section 7.6.5.] for more on these OWL properties.
 
 A user can set up a locally managed triple store for whatever purpose is desired.  The user can then choose which RDF sources to load into that store and exert quality control over those data by loading only sources which are trusted.  Examples are !TaxonConcept [#21_TaxonConcept_datasets (21)] and a TDWG-RDF/OWL Task Group sandbox. [#22_TDWG_RDF/OWL_Task_Group_sandbox (22)]
 
 There are also a number of "public" triple stores which scrape other sources and subsequently provide access to those data.  Dbpedia [#23_DBpedia_home_page (23)] extracts data from Wikipedia and makes it available as RDF triples.  !OpenLink has extracted [#24_OpenLink_Search (24)] over 15 billion triples which are searchable.  Sindice provides a "Semantic Web Index" [#25_Sindice_Semantic_Web_Index (25)] which accesses hundreds of millions of documents and makes the data in those documents available.  Adding data to one of the sources scraped by these organizations makes those triples publically accessible.  However, these sources are only as reliable as the data sources they include in their triplestore.
 
-===5.3.3. Providing information about what data are available using VoID===
+===5.3.3. Providing information about the data which are available using VoID===
 
 VoID is a vocabulary for expressing metadata about RDF datasets [#26_Describing_Linked_Datasets_with_the_VoID_Vocabulary (26)]  ({{{void: = http://rdfs.org/ns/void# }}}).   It provides basic information about the dataset, such as the project's homepage, name, publisher, size of dataset, etc.  The database description can also provide access information about documents which can serve as the starting point for crawling the database, SPARQL endpoints, and compressed or uncompressed RDF data dumps of the database content.  The description can also link to example resources which illustrate the types of data available.  
 
@@ -353,6 +353,10 @@ LSID web resolver
 
 http://lsid.tdwg.org/
 
+Rod Page's LSID resolver
+
+http://bioguid.info/lsid.php
+
 ===4 Linked Data===
 
 http://linkeddata.org/
@@ -445,7 +449,7 @@ http://tdwg-rdf.net/
 http://dbpedia.org/About
 
 ===24 !OpenLink Search===
-http://lod.openlinksw.com/
+{{{http://lod.openlinksw.com/}}}  Bad link - investigate!
 
 ===25 Sindice Semantic Web Index===
 http://sindice.com/
@@ -462,4 +466,65 @@ http://www.w3.org/TR/void/
 http://vocab.deri.ie/void
 
 -------------------
-Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
+Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
