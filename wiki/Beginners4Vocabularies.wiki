@@ -321,7 +321,7 @@ Name
 DefinedTerm
 MediaObject
 }}}
-*Core Ontology (core: = http://rs.tdwg.org/ontology/Core#) *
+*Core Ontology (core: = http://rs.tdwg.org/ontology/Core#) Note apparent error with Person subclassing*
 {{{
 ContactInformation
 Organisation subclass of base:Actor
@@ -363,7 +363,7 @@ ContactTypeTerm  subclass of base:DefinedTerm
 {{{
 CyclicityTerm  subclass of base:DefinedTerm
 }}}
-*Digital Image Ontology (not functional) *
+*Digital Image Ontology (not functional: defines the ontology as {{{http://rs.tdwg.org/ontology/voc/ContactDetails}}} and is incomplete) *
 
 *Geographic Region Ontology (geographic: = http://rs.tdwg.org/ontology/voc/GeographicRegion#) *
 {{{
@@ -399,7 +399,7 @@ IntroducedOccurrenceStatusTerm  subclass of occurencestatus:OccurrenceStatusTerm
 Person  subclass of core:Person
 PersonNameAlias  subclass of  core:Name
 }}}
-*Procedure Ontology (not functional) *
+*Procedure Ontology (not functional: defines the ontology as {{{http://rs.tdwg.org/ontology/voc/ContactDetails}}} and is incomplete) *
 
 *Publication Citation Ontology (pubcitation: = http://rs.tdwg.org/ontology/voc/PublicationCitation#) *
 {{{
@@ -407,7 +407,7 @@ PublicationCitation  subclass of core:PublicationCitation
 PublicationTypeTerm  subclass of base:DefinedTerm
 }}}
 
-*Species Profile Model !InfoItems Ontology (not functional) *
+*Species Profile Model !InfoItems Ontology (labeled as "experimental"; contains about 38 classes to be used as a controlled vocabulary) *
 
 *Taxon Concept Ontology (taxonconcept: = http://rs.tdwg.org/ontology/voc/TaxonConcept#) *
 {{{
@@ -434,14 +434,20 @@ BasisOfRecordTerm
 TaxonOccurrenceInteraction (no subclassing) 
 InteractionTerm  subclass of base:DefinedTerm
 }}}
-*Taxon Rank Ontology (not functional) *
+*Taxon Rank Ontology (ontology incorrectly identified as {{{http://rs.tdwg.org/ontology/voc/TaxonName}}}) *
+{{{
+TaxonRankTerm  subclass of base:DefinedTerm
+}}}
 
 *Team Ontology (team: = http://rs.tdwg.org/ontology/voc/Team#) *
 {{{
 Team  subclass of core:Team
 TeamMember 
 }}}
-*Term with Source Ontology (not functional) *
+*Term with Source Ontology (ontology incorrectly identified as {{{http://rs.tdwg.org/ontology/voc/CollectionType}}}) *
+{{{
+TermWithSource
+}}}
 
 
 ===4.7.3. Type vocabularies===
