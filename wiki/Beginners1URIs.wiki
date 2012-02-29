@@ -14,7 +14,7 @@
 
 A resource is anything that can be defined and which can be assigned an identifier.  As a matter of convenience, resources can be divided into two categories:
 
-_information resource_ - A resource for which all essential characteristics can be transmitted in a message (i.e. a digital resource).  Historically, information resources have been the primary focus of the Internet.  When most users enter a URL into a web browser, they assume that the result will be the return of an information resource in the form of a digital file.  Examples: html web page, digital image, pfd file.
+_information resource_ - A resource for which all essential characteristics can be transmitted in a message (i.e. a digital resource).  Historically, information resources have been the primary focus of the Web.  When most users enter a URL into a web browser, they assume that the result will be the return of an information resource in the form of a digital file.  Examples: html web page, digital image, pfd file.
 
 _non-information resource_ - A resource that cannot be transmitted electronically.  Non-information resources can be further subdivided into the following categories:
 	- _physical resource_ - a material thing.  Examples: an animal, a specimen, a 35 mm slide
@@ -38,7 +38,7 @@ urn:isbn:0893273651
 uniquely and permanently identifies the book "Manual of Vascular Plants of Northeastern United States and Adjacent Canada", but a Web browser is unlikely to be able to do anything with that URI. [#6._RFC_2141.__URN_Syntax (6)]
 
 === 1.2.1  Rules about the format of URIs ===
-In addition to the requirement that a URI follow a standardized scheme, there are syntax rules that must be followed in order for the URI to be valid.  URIs follow a hierarchical sequence of components [#7._URI_syntax_components (7)] and also are restricted to certain characters [#8._Characters_in_URIs (8)].  If a URI scheme makes use of text characters that are not allowed by the URI standard, they must be encoded in UTF-8 format [#9._RFC_3629._RTF-8 (9)].  For example, the URI for a Google search for the Spanish word "niña" would be encoded in the URI as 
+In addition to the requirement that a URI follow a standardized scheme, there are syntax rules that must be followed in order for the URI to be valid.  URI components are arranged in a hierarchical sequence [#7._URI_syntax_components (7)] and also are restricted to being composed of certain characters [#8._Characters_in_URIs (8)].  If a URI scheme makes use of text characters that are not allowed by the URI standard, they must be encoded in UTF-8 format [#9._RFC_3629._RTF-8 (9)].  For example, the URI for a Google search for the Spanish word "niña" would be encoded in the URI as 
 {{{
 http://www.google.com/search?q=ni%F1a
 }}}
@@ -119,7 +119,7 @@ http://www.iana.org/assignments/uri-schemes.html
 http://tools.ietf.org/html/rfc2368
 
 ===5. Resolving vs. dereferencing===
-The terms "resolving" and "dereferencing" a URI are sometimes used interchangeably colloquially.  Technically, "URI 'resolution' is the process of determining an access mechanism and the appropriate parameters necessary to dereference a URI; this resolution may require several iterations.  To use that access mechanism to perform an action on the URI's resource is to 'dereference' the URI."  (Definition from RFC3986 at http://tools.ietf.org/html/rfc3986#section-1.2.2)
+The terms "resolving" and "dereferencing" a URI are sometimes colloquially used interchangeably.  Technically, "URI 'resolution' is the process of determining an access mechanism and the appropriate parameters necessary to dereference a URI; this resolution may require several iterations.  To use that access mechanism to perform an action on the URI's resource is to 'dereference' the URI."  (Definition from RFC3986 at http://tools.ietf.org/html/rfc3986#section-1.2.2)
 
 ===6. RFC 2141.  URN Syntax===
 For more information on the URN URI scheme, see:
@@ -159,3 +159,37 @@ http://validator.linkeddata.org/vapour
 
 -------------------
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
