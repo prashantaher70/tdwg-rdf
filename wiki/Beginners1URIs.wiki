@@ -49,7 +49,7 @@ The most well-known URI scheme is the Hypertext Transfer Protocol (HTTP) [#10._R
 
 In 2002, a controversy arose whether it was acceptable for an HTTP URI to represent a resource that was not a deliverable, electronic document. [#11._httpRange-14 (11)]  Ultimately, the consensus was reached that HTTP URIs could identify non-information resources.  A user could determine the nature of the resource in a very practical way: the client could request the resource identified by the URI and if the client was successful in retrieving it, the resource was an information resource.  However, if the client's initial request did not result in retrieving the resource there were two possible outcomes.  The server could redirect the client to a different URI that was capable of providing a document containing information about the resource; this would serve as an indication that the resource was NOT an information resource.  The server could also return an error message in which case the user could conclude nothing about the resource.  
 
-From this decision, a general consensus arose that in the case of a non-information resource identified by an HTTP URI, it was a best practice to provide information about the resource (a "representation" [#12._Terminology_of_HTTP (12)]) in the form requested by the user (e.g. in HTML if requested by a Web browser).  This can be done through a process called content negotiation. [#13._Content_Negotiation_in_HTTP (13)]  However, there are still many cases where the HTTP URI does not provide any information about the resource at all, or leads the user to information indirectly.  
+From this decision, a general consensus arose that in the case of a non-information resource identified by an HTTP URI, it was a best practice to provide information about the resource (a "representation" [#12._Terminology_of_HTTP (12)] ) in the form requested by the user (e.g. in HTML if requested by a Web browser).  This can be done through a process called content negotiation. [#13._Content_Negotiation_in_HTTP (13)]  However, there are still many cases where an HTTP URI does not provide any information about the resource at all, or leads the user to information indirectly.  
 
 == 1.3  Examples ==
 Here are several examples of different types of resources identified by HTTP URIs which have various responses to an attempt to dereference the URI:
@@ -159,6 +159,34 @@ http://validator.linkeddata.org/vapour
 
 -------------------
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
 
 .
 
