@@ -69,7 +69,7 @@ The organization Biodiversity Information Standards (TDWG) [#9_TDWG_home_page (9
 Despite the failure of GUIDs expressed as URIs and the Semantic Hub expressed as OWL/RDF to quickly materialize as the backbone architecture of TDWG, several aspects of the URI/RDF model have already found their way into the workings of TDWG in two ways.  
 
 ===2.5.1. Use of URIs to identify vocabulary terms===
-Following the example of the Dublin Core Metadata Initiative (DCMI) Abstract Model [#16_DCMI_Abstract_Model (16)], URIs are used as the means to unambiguously refer to terms in TDWG standard vocabularies: [http://rs.tdwg.org/dwc/terms/ Darwin Core (DwC)] and the draft http://species-id.net/wiki/Audubon_Core Audubon Core] for media resources.  For example, 
+Following the example of the Dublin Core Metadata Initiative (DCMI) Abstract Model [#16_DCMI_Abstract_Model (16)], URIs are used as the means to unambiguously refer to terms in TDWG standard vocabularies: [http://rs.tdwg.org/dwc/terms/ Darwin Core (DwC)] and the draft [http://species-id.net/wiki/Audubon_Core Audubon Core] for media resources.  For example, 
 {{{
 dwc:eventTime
 }}}
@@ -165,7 +165,7 @@ The DCMI Abstract Model is discussed in greater detail in [Beginners4Vocabularie
 
 ===17 The TDWG Standards Documentation Specification===
 http://www.tdwg.org/standards/147/
-is an ungratified standard which prescribes how TDWG standards should be described.  In that specification, a normative (Type 1) document which forms part of a standard is tightly controlled and defines the standard.  A non-normative (Type 2) document is also tightly controlled but explains and justifies the standard rather than defining it.  Other documents (Type 3) may provide additional information to support the standard without actually forming a part of it.
+is an unratified standard which prescribes how TDWG standards should be described.  In that specification, a normative (Type 1) document which forms part of a standard is tightly controlled and defines the standard.  A non-normative (Type 2) document is also tightly controlled but explains and justifies the standard rather than defining it.  Other documents (Type 3) may provide additional information to support the standard without actually forming a part of it.
 
 ===18 Darwin Core expressed in RDF/XML===
 Normative (I think) at http://rs.tdwg.org/dwc/rdf/dwcterms.rdf.  Directly browsable at http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf but not normative.
