@@ -40,6 +40,7 @@ rdf: is an abbreviation for "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 kimage: is an abbreviation for "http://bioimages.vanderbilt.edu/kirchoff/",
 agents: is an abbreviation for "http://bioimages.vanderbilt.edu/contact/",
 foaf: is an abbreviation for "http://xmlns.com/foaf/0.1/", 
+dc: is an abbreviation for "http://purl.org/dc/elements/1.1/",
 dctype: is an abbreviation for "http://purl.org/dc/dcmitype/", and 
 dcterms: is an abbreviation for "http://purl.org/dc/terms/".
 }}}
@@ -66,7 +67,7 @@ can be interpreted by a human to say that the image was made the person or organ
 Here are two more statements in RDF about the image:
 
 {{{
-kimage:ac1490  dcterms:rights  "(c) 2011 Bruce K. Kirchoff"
+kimage:ac1490  dc:rights  "(c) 2011 Bruce K. Kirchoff"
 kimage:ac1490  rdf:type  dctype:StillImage
 }}}
 
@@ -83,16 +84,16 @@ The following table shows the six triples that are required to express the infor
 ||http://bioimages.vanderbilt.edu/kirchoff/ac1490	||http://www.w3.org/1999/02/22-rdf-syntax-ns#type	||http://purl.org/dc/dcmitype/StillImage||
 ||http://bioimages.vanderbilt.edu/kirchoff/ac1490	||http://xmlns.com/foaf/0.1/maker	||http://bioimages.vanderbilt.edu/contact/kirchoff#coblea||
 ||http://bioimages.vanderbilt.edu/kirchoff/ac1490	||http://purl.org/dc/terms/created	||"2010-09-01T03:41:31"||
-||http://bioimages.vanderbilt.edu/kirchoff/ac1490	||http://purl.org/dc/terms/rights	||"(c) 2011 Bruce K. Kirchoff"||
+||http://bioimages.vanderbilt.edu/kirchoff/ac1490	||http://purl.org/dc/elements/1.1/rights	||"(c) 2011 Bruce K. Kirchoff"||
 ||http://bioimages.vanderbilt.edu/contact/kirchoff#coblea	||http://www.w3.org/1999/02/22-rdf-syntax-ns#type	||http://xmlns.com/foaf/0.1/Person||
 ||http://bioimages.vanderbilt.edu/contact/kirchoff#coblea	||http://xmlns.com/foaf/0.1/name	||"Ashley Coble"||
 
 The table below contains the same six triples, but using the namespace abbreviations for brevity:
 ||Subject	||Predicate	||Object||
-||kimage:ac1490	||rdf:type	||dctype:StillImage||
+||kimage:ac1490	||rdf:type	||dctype:!StillImage||
 ||kimage:ac1490	||foaf:maker	||agents:kirchoff#coblea||
 ||kimage:ac1490	||dcterms:created	||"2010-09-01T03:41:31"||
-||kimage:ac1490	||dcterms:rights	||"(c) 2011 Bruce K. Kirchoff"||
+||kimage:ac1490	||dc:rights	||"(c) 2011 Bruce K. Kirchoff"||
 ||agents:kirchoff#coblea	||rdf:type	||foaf:Person||
 ||agents:kirchoff#coblea	||foaf:name	||"Ashley Coble"||
 
@@ -118,6 +119,7 @@ In the RDF model, a set of triples is referred to as a graph.  This is a general
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 >
@@ -126,7 +128,7 @@ xmlns:foaf="http://xmlns.com/foaf/0.1/"
   <rdf:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
   <foaf:maker rdf:resource="http://bioimages.vanderbilt.edu/contact/kirchoff#coblea"/>
   <dcterms:created>2010-09-01T03:41:31</dcterms:created>
-  <dcterms:rights>(c) 2011 Bruce K. Kirchoff</dcterms:rights>
+  <dc:rights>(c) 2011 Bruce K. Kirchoff</dcterms:rights>
 </rdf:Description>
 
 <foaf:Person rdf:about="http://bioimages.vanderbilt.edu/contact/kirchoff#coblea">
@@ -162,6 +164,7 @@ It is also possible to accomplish the description of both resources (the !StillI
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 >
@@ -174,7 +177,7 @@ xmlns:foaf="http://xmlns.com/foaf/0.1/"
     </foaf:Person>
   </foaf:maker> 
   <dcterms:created>2010-09-01T03:41:31</dcterms:created>
-  <dcterms:rights>(c) 2011 Bruce K. Kirchoff</dcterms:rights>
+  <dc:rights>(c) 2011 Bruce K. Kirchoff</dcterms:rights>
 </rdf:Description>
 
 </rdf:RDF>
@@ -187,13 +190,14 @@ Again, this would produce exactly the same triples and graphical representation 
 {{{
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 <http://bioimages.vanderbilt.edu/contact/kirchoff#coblea> 
 	a foaf:Person;
 	foaf:name "Ashley Coble".
 <http://bioimages.vanderbilt.edu/kirchoff/ac1490> 
 	dcterms:created "2010-09-01T03:41:31";
-	dcterms:rights "(c) 2011 Bruce K. Kirchoff";
+	dc:rights "(c) 2011 Bruce K. Kirchoff";
 	a <http://purl.org/dc/dcmitype/StillImage>;
 	foaf:maker <http://bioimages.vanderbilt.edu/contact/kirchoff#coblea>.
 }}}
