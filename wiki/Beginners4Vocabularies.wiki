@@ -202,7 +202,7 @@ implies that {{{kimage:ac1490}}} is an instance of the {{{foaf:Image}}} class.  
 The examples given above show that careless application of the {{{rdfs:subClassOf}}}, {{{rdfs:range}}}, and {{{rdfs:domain}}} properties in the definitions of terms or the careless use of terms having such properties can result in unintended consequences if users are not aware of the implications of their actions.  For this reason, the three properties listed above (as well as {{{rdfs:subPropertyOf}}}) are generally used sparingly in term definitions of general purpose vocabularies.  
 
 ==4.5. The Darwin Core vocabulary as an implementation of the DCMI Abstract Model==
-The Darwin Core vocabulary [#11__Darwin_Core (11)] is a TDWG technical specification standard.  [#12_Categories_of_TDWG_standards (12)]  It follows the DCMI Abstract Model [#13_Darwin_Core_abstract_model (13)].  In accordance with the DCAM, Darwin Core has terms that are classes or properties.  Those properties may have domains which are the Darwin Core class terms.  The properties are associated with values to form property-value pairs that describe the subject.  
+The Darwin Core vocabulary [#11__Darwin_Core (11)] is a TDWG technical specification standard.  [#12_Categories_of_TDWG_standards (12)]  It follows the DCMI Abstract Model [#13_Darwin_Core_abstract_model (13)].  In accordance with the DCAM, Darwin Core has terms that are classes or properties.  Those properties could have domains which are the Darwin Core class terms (but don't have any that are explicitly declared in the term definitions).  The properties are associated with values to form property-value pairs that describe the subject.  
 
 However, this particular version of the abstract model is described in the context of the guidelines for implementing application schemas as XML, so some of the statements made in those guidelines are more restrictive than the DCAM.  In particular, they allow a property to have at most one class as its domain.  This is to promote consistency in implementation of the containment system that is described in the guide.  The XML guide also restricts values to be literal strings contained within property elements as opposed to allowing values to be specified as XML attributes.  So although the model described is considered an abstract model, it is focused on describing "flat" records ("Simple Darwin Core").  The guidelines specifically state that they apply in situations where RDF/XML are not appropriate and that they are NOT guidelines for the implementation of RDF/XML. [#14_Introduction_to_the_Darwin_Core_XML_Guide (14)]  So the restrictive modifications of the DCAM described in the Darwin Core abstract model should not be considered to apply to any RDF implementation of Darwin Core.
 
@@ -222,7 +222,7 @@ Of the possible DCAM/RDFS relationships which allow a machine to infer additiona
   * {{{dwc:institutionCode}}} which is declared an {{{rdfs:subProperty}}} of {{{http://rs.tdwg.org/ncd/terms/Institution#Code}}}
   * {{{dwc:institutionID}}} which is declared an {{{rdfs:subProperty}}} of {{{http://rs.tdwg.org/ncd/terms/Institution#Id}}}
   * {{{dwc:ownerInstitutionCode}}} which is declared an {{{rdfs:subProperty}}} of {{{http://rs.tdwg.org/ncd/terms/Institution#Code}}}
-  * {{{dwc:ResourceRelationship}}} (a Darwin Core class) which is declared an {{{rdfs:subProperty}}} of {{{dcterms:relation}}} [#20__dwc:_is_both_a_class_and_a_property (20)]
+  * {{{dwc:ResourceRelationship}}} (a Darwin Core class) which is declared an {{{rdfs:subProperty}}} of {{{dcterms:relation}}} [#20__dwc:_ResourceRelationship_is_both_a_class_and_a_property (20)]
 
 Note: the URIs having namespace {{{http://rs.tdwg.org/ncd/terms/Institution#}}} seem to be incorrect as the namespace for the Natural Collection Description vocabulary is defined as {{{http://rs.tdwg.org/ontology/voc/Collection#}}} in the draft standard. [#29_Natural_Collections_Descriptions_(NCD)_draft_TDWG_standard (29)]
 
@@ -568,9 +568,9 @@ can be downloaded from
 
 http://rs.tdwg.org/dwc/rdf/dwcterms.rdf
 
-using most web browsers.  It is not possible to view the file using most web browsers.
+using most web browsers.  However, it is not possible to *view* the file using most web browsers.
 
-The file at http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf (viewable in a browser) may be the same.  
+The file at http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf (viewable in a browser) is similar but may be an outdated version.  
 
 ===16 Darwin Core Quick Reference Guide===
 http://rs.tdwg.org/dwc/terms/index.htm
@@ -583,6 +583,8 @@ http://rs.tdwg.org/dwc/rdf/dwcterm-history.rdf
 using most web browsers and which can be viewed in human-readable form at
 
 http://darwincore.googlecode.com/svn/trunk/terms/history/index.htm
+
+but which is not necessarily up to date.
 
 ===18 Darwin Core attributes vocabulary===
 http://rs.tdwg.org/dwc/terms/attributes/
@@ -669,3 +671,64 @@ http://dublincore.org/documents/dc-rdf/#sect-5
 
 -------------------
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
