@@ -42,7 +42,7 @@ A beginner who wants to gain a basic understanding of RDF and OWL should start w
 
 
 ==0.3 Significant documents, tools, and RDF implementations==
-The mention of any document or tool in this guide does not imply the endorsement of TDWG or the RDF/OWL TG.  (The exception to this is ratified [http://www.tdwg.org/standards/ TDWG standards] which are official recommendations of TDWG.)  The referenced items are simply ones which have been found to be helpful.  The list is also not exhaustive; resources may be added when discovered or removed if they cease to be available.  
+The mention of any document or tool in this guide does not imply the endorsement of TDWG or the RDF/OWL TG.  (The exception to this is ratified [http://www.tdwg.org/standards/ TDWG standards] which are official recommendations of TDWG.)  The referenced items below are simply ones which have been found to be helpful.  The lists are not exhaustive; resources may be added when discovered or removed if they cease to be available.  
 
 The document [http://www4.wiwiss.fu-berlin.de/bizer/pub/linkeddatatutorial/ How to Publish Linked Data on the Web] is somewhat out of date, but provides a general overview of Linked Data issues.
 
