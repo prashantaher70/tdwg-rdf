@@ -56,7 +56,7 @@ Although the PO uses few properties to relate its terms, there are many terms.  
 
 The PO is an abstract model without a particular serialization, although it does have an OWL representation at http://owlfiles.plantontology.org/ .  
 
-===7.3.3. TaxonConcept Ontology (txn) ===
+===7.3.3. !TaxonConcept Ontology (txn) ===
 This is a large and complex ontology that imports terms from other vocabularies and ontologies as well as coining new terms.  It is beyond the scope of this guide to describe the TaxonConcept ontology, but it can be explored at http://lod.taxonconcept.org/ontology/doc/index.html or by examining the raw RDF at http://lod.taxonconcept.org/ontology/txn.owl .
 
 ==7.4. What is Web Ontology Language (OWL)?==
