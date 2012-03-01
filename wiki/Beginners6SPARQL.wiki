@@ -240,10 +240,10 @@ DESCRIBE ?u WHERE {
  ?x dwc:stateProvince "Hawaii".
 }
 }}}
-requests a description of the Lower Quality !ServiceAccessPoints (downloadable versions) of images which serve as evidenceFor occurrences documented atEvents which are locatedAt Locations which are in the stateProvince of Hawaii.  The variables ({{{?u}}}, {{{?w}}}, etc.) represent intermediate resources (instances of Location, Event, Occurrence, etc.) that link the string "Hawaii" with the URI for the !ServiceAccessPoint ({{{http://bioimages.vanderbilt.edu/baskauf/04005#lq}}}) and the URL which provides access to the actual image ({{{http://bioimages.vanderbilt.edu/lq/baskauf/wmetro-br04005.jpg}}}) that is the sole solution to the query.
+requests a description of the {{{Lower Quality}}} {{{ServiceAccessPoint}}}s (downloadable versions) of images which serve as {{{evidenceFor}}} occurrences documented {{{atEvents}}} which are {{{locatedAt}}} Locations which are in the {{{stateProvince}}} of {{{Hawaii}}}.  The variables ({{{?u}}}, {{{?w}}}, etc.) represent intermediate resources (instances of Location, Event, Occurrence, etc.) that link the string "{{{Hawaii}}}" with the URI for the {{{ServiceAccessPoint}}} ({{{http://bioimages.vanderbilt.edu/baskauf/04005#lq}}}) and the URL which provides access to the actual image ({{{http://bioimages.vanderbilt.edu/lq/baskauf/wmetro-br04005.jpg}}}) that is the sole solution to the query.
 
 ===6.4.4. Creating RDF graphs using CONSTRUCT===
-In the example given in section 6.4.3.1., the result described the resource identified by the URI by presenting all triples in the dataset which referenced that URI, including triples where the URI was the object rather than the subject.  The CONSTRUCT query form returns an RDF graph which contains only triples in the solution that conform to the graph template.  A result similar to the query in 6.4.3.1. can be achieved by the query
+In the example given in [#6.4.3.1._Describing_a_single_resource_identified_by_URI section 6.4.3.1.], the result described the resource identified by the URI by presenting all triples in the dataset which referenced that URI, including triples where the URI was the object rather than the subject.  The CONSTRUCT query form returns an RDF graph which contains only triples in the solution that conform to the graph template.  A result similar to the query in [#6.4.3.1._Describing_a_single_resource_identified_by_URI section 6.4.3.1.] can be achieved by the query
 {{{
 CONSTRUCT {
   <http://bioimages.vanderbilt.edu/kirchoff/em2164#occ> ?predicate ?object.
@@ -255,7 +255,7 @@ WHERE {
 View the result using the Raw Triples view.  Note that this time only triples which contain the URI as the subject are included, in constrast to the DESCRIBE example which included triples where the URI was the object.
 
 ==6.5. Examples of more complex queries==
-A more complex version of the query in section 6.4.2.1. can be made at the endpoint http://tdwg-rdf.net/store2/ as follows:
+A more complex version of the query in [#6.4.2.1._Eliminating_duplicate_results_using_DISTINCT section 6.4.2.1.] can be made at the endpoint http://tdwg-rdf.net/store2/ as follows:
 {{{
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
@@ -270,7 +270,7 @@ SELECT DISTINCT ?y WHERE {
  ?z a dsw:PreservedSpecimen.
 }
 }}}
-As in the example of section 6.4.2.1., the first three triple patterns select trees that are have occurrences that are documented by images.  The last three triple patterns similarly select trees that have occurrences that are documented by preserved specimens.  By using the same variable {{{?y}}} to refer to trees document by images and trees documented by specimens, the resulting set must be documented by both images and specimens.  
+As in the example of [#6.4.2.1._Eliminating_duplicate_results_using_DISTINCT section 6.4.2.1.], the first three triple patterns select trees that are have occurrences that are documented by images.  The last three triple patterns similarly select trees that have occurrences that are documented by preserved specimens.  By using the same variable {{{?y}}} to refer to trees document by images and trees documented by specimens, trees described by the resulting set must be documented by both images and specimens.  
 
 The query
 {{{
@@ -283,7 +283,7 @@ DESCRIBE ?z WHERE {
  ?z a dsw:PreservedSpecimen.
 }
 }}}
-performs a similar screen but requests the query to describe the specimen rather than list the URI of the tree.
+performs a similar screen but requests the query to describe the specimen ({{{?z}}}) rather than list the URI of the tree.
 
 ==6.6. For further information==
 More complex queries can be constructed using filters, negation, optional patterns, and other features of SPARQL that are beyond the scope of this guide.  See
@@ -330,7 +330,7 @@ If literal strings are typed or have language tags, they are not considered equi
 ===8 Internationalized Resource Identifiers (IRIs)===
 Technically, SPARQL uses IRIs which are a generalization of URIs that allow non-ASCII characters.  See
 
-http://www.ietf.org/rfc/rfc3987.txt
+http://tools.ietf.org/html/rfc3987
 
 However, as a matter of convenience, IRIs will be referred to as URIs in this guide.
 
