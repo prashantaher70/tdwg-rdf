@@ -96,6 +96,14 @@ and click the Run Query button which has an icon like a "play" button.  This sho
 ===6.2.3. !TaxonConcept ===
 The !TaxonConcept database [#6_TaxonConcept_project (6)] is a very large public triplestore which contains metadata on many species and which has loaded other datasets of interest.  It contains over 23 million triples (as of 14 Feb 2012).  
 
+Go to the human-friendly interface at http://lsd.taxonconcept.org/isparql .  Replace the default query with 
+{{{
+DESCRIBE ?y WHERE {
+ ?y skos:closeMatch <http://lod.taxonconcept.org/ses/z9oqP#Species>.
+}
+}}}
+Click on the "54 more..." link.  The results show the many concepts which have been used to represent entities that are nearly the same as {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}} which represents a species concept for _Apis mellifera_ (the European honey bee).  If you drop down the View: to Images, you can see images which are associated with these various resources which represent the European honey bee.
+
 == 6.3. Loading metadata into a private triple store for querying==
 
 The TDWG TDF/OWL Task Group has several sandboxes for experimenting with SPARQL queries at http://tdwg-rdf.net/ .  To obtain access, contact Cam Webb via the link on the page.  The query interfaces are similar to those described in the previous sections.  However, loaded datasets are restricted to those loaded by participants in the Task Group, so the results may be somewhat more predictable.  Also, the stability of the triples might be somewhat better than the unknown stability of the public stores (assuming the members of the TDWG-RDF group do not unload datasets that are currently present there).  
@@ -163,6 +171,7 @@ PREFIX mrtg: <http://xxx.org/XXX/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX txn:   <http://lod.taxonconcept.org/ontology/txn.owl#>
 PREFIX dsw: <http://purl.org/dsw/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 }}}
 Skip a line then enter the query below which contains the triple pattern given in the previous example.
 {{{
