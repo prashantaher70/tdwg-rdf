@@ -21,7 +21,7 @@ SPARQL is a query language designed specifically to query RDF databases. [#1_SPA
 ===6.2.1. DBpedia==
 ====6.2.1.1. Creating RDF metadata and URIs via DBpedia====
 
-DBpedia transforms data that is entered in Wikipedia into RDF triples.  So creating a page in Wikipedia creates RDF in DBpedia.  Creating a page for a taxonomist creates a URI and other metadata about the person. [#4_Strategy_for_creating_URIs_for_famous_dead_people (4)]  For example, the page
+DBpedia transforms into RDF triples data that are entered in Wikipedia.  So creating a page in Wikipedia creates RDF in DBpedia.  Creating a page for a taxonomist creates a URI and other metadata about the person. [#4_Strategy_for_creating_URIs_for_famous_dead_people (4)]  For example, the page
 
 http://en.wikipedia.org/wiki/Johan_Christian_Fabricius
 
@@ -29,14 +29,14 @@ describes Fabricus.  DBpedia creates a URI of the format
 {{{
 http://dbpedia.org/resource/wikipedia_page_name
 }}}
-where wikipedia_page_name is the name of the page with underscore characters replacing spaces (as is done for the page URLs).  In the case of Fabricus, his URI is:
+where wikipedia_page_name is the name of the regular Wikipedia html page.  Note that underscore characters replace spaces, the strategy used for creating the regular page URLs.  In the case of Fabricus, his URI is:
 {{{
 http://dbpedia.org/resource/Johan_Christian_Fabricius
 }}}
 
 ====6.2.1.2. Querying DBpedia====
 
-DBpedia can be queried at http://dbpedia.org/sparql .  The interface uses the Virtuoso SPARQL Query Editor to query the DBpedia endpoint.  Enter the query
+DBpedia can be queried at http://dbpedia.org/sparql .  The interface uses the [http://virtuoso.openlinksw.com/ Virtuoso] SPARQL Query Editor to query the DBpedia endpoint.  Enter the query
 {{{
 PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
 PREFIX dbpprop: <http://dbpedia.org/property/>
@@ -63,7 +63,7 @@ DESCRIBE ?x WHERE {
 
 limit 10
 }}}
-and select Results Format RDF/XML or some other format.  Depending on your browser you may be able to view the output directly or you may have to save the file and open it using a text editor.  The results show all of the triples that describe the 5 or so Crambidae species described by Fabricus which have articles in Wikipedia.  You should note that DBpedia routinely provides the language attribute for literals.  So a query containing a literal must have an "@" language tag.  For example:
+and select Results Format RDF/XML or some other format.  Depending on your browser you may be able to view the output directly or you may have to save the file and open it using a text editor.  (Some dedicated RDF and XML editors are listed in [Beginners#0.3.5._Software_tools sectin 0.3.5.) of this guide.)  The results show all of the triples that describe the 5 or so Crambidae species described by Fabricus which have articles in Wikipedia.  You should note that DBpedia routinely provides the language attribute for literals.  So a query containing a literal must have an "@" language tag.  For example:
 {{{
 PREFIX dbpprop: <http://dbpedia.org/property/>
 
@@ -91,14 +91,14 @@ DESCRIBE ?x WHERE {
 }
 limit 10
 }}}
-and click the Run Query button which has an icon like a "play" button.  This should display the results of the query under the Results tab.  The default view is Navigator, which behaves like the !OpenLink Navigator linked data browser.  Dropping down the view to Raw Triples lists property-value pairs under the heading of each subject URI.  If the value is an image URL, the image is displayed on the screen.  If a described resource contains geo:lat and geo:long triples, dropping down the Google Maps v3 view will display markers on a Google Map display.  Clicking on a marker displays the triples for the resource whose properties include the geo:lat and geo:long values.  
+and click the Run Query button which has an icon like a "play" button.  This should display the results of the query under the Results tab.  The default view is Navigator, which behaves like the !OpenLink Navigator linked data browser (see [Beginners#0.3.6._Web_interfaces section 0.3.6.] of this guide).  Dropping down the view to Raw Triples lists property-value pairs under the heading of each subject URI.  If the value is an image URL, the image is displayed on the screen.  If a described resource contains {{{geo:lat}}} and {{{geo:long}}} triples, dropping down the Google Maps v3 view will display markers on a Google Map display.  Clicking on a marker displays the triples for the resource whose properties include the {{{geo:lat}}} and {{{geo:long}}} values.  
 
 ===6.2.3. !TaxonConcept ===
 The !TaxonConcept database [#6_TaxonConcept_project (6)] is a very large public triplestore which contains metadata on many species and which has loaded other datasets of interest.  It contains over 23 million triples (as of 14 Feb 2012).  
 
 == 6.3. Loading metadata into a private triple store for querying==
 
-The TDWG TDF/OWL Task Group has several sandboxes for experimenting with SPARQL queries at http://tdwg-rdf.net/ .  To obtain access, contact Cam Webb via the link on the page.  The query interfaces are similar to those described in the previous sections.  However, loaded datasets are restricted to those loaded by participants in the Task Group, so the results may be somewhat more predictable.  Also, the stability of the triples might be somewhat better than the unknown stability of the public stores.  
+The TDWG TDF/OWL Task Group has several sandboxes for experimenting with SPARQL queries at http://tdwg-rdf.net/ .  To obtain access, contact Cam Webb via the link on the page.  The query interfaces are similar to those described in the previous sections.  However, loaded datasets are restricted to those loaded by participants in the Task Group, so the results may be somewhat more predictable.  Also, the stability of the triples might be somewhat better than the unknown stability of the public stores (assuming the members of the TDWG-RDF group do not unload datasets that are currently present there).  
 
 ==6.4. Basic SPARQL queries==
 
@@ -106,14 +106,14 @@ These examples use metadata currently loaded as of 13 February 2012, so in theor
 
 ===6.4.1. Representing literals, URIs, and variables===
 
-Literals are placed in quotation marks, e.g. "Hawaii".  [#7_Literals_that_are_typed_or_which_have_language_tags (7)]  URIs [#8_Internationalized_Resource_Identifiers_(IRIs) (8)] are placed inside angled brackets, e.g. {{{<http://xmalesia.info/sw/event/3e2c5f3711>}}} .  
+Literals are placed in quotation marks, e.g. "Hawaii".  [#7_Literals_that_are_typed_or_which_have_language_tags (7)]  URIs [#8_Internationalized_Resource_Identifiers_(IRIs) (8)] are placed inside angled brackets, e.g. {{{<http://xmalesia.info/sw/event/3e2c5f3711>}}} .  This is similar to the format used in the N3 RDF serialization (see[Beginners3RDFbasics#3.3.4._Notation_3_(N3)_representation section 3.3.4.] of this guide).
 
 ====6.4.1.1. PREFIX declarations====
 SPARQL queries allow the user to abbreviate URIs by declaring prefix abbreviations.  For example, the declaration
 {{{
 PREFIX dcterms: <http://purl.org/dc/terms/>
 }}}
-allows the URI {{{http://purl.org/dc/terms/Location}}} to be abbreviated as {{{dcterms:Location}}}.  Note: this behavior is similar to the use of namespace abbreviations for URIs in RDF.  
+allows the URI {{{http://purl.org/dc/terms/Location}}} to be abbreviated as {{{dcterms:Location}}}.  Note: this behavior is similar to the use of namespace abbreviations for URIs in N3 RDF serializations (see[Beginners3RDFbasics#3.3.4._Notation_3_(N3)_representation section 3.3.4.] of this guide).  
 
 ====6.4.1.2. Variables====
 If a string is preceded by a question mark, it is treated as a variable which can represent a URI or a literal, e.g. {{{?x}}}  or {{{?person}}}.
@@ -129,7 +129,7 @@ would match the triple
 }}}
 The solution sequence is the set of triples which match the triple pattern.  There can be zero, one, or many solutions in the sequence.  A triple pattern can also contain zero, one, two, or three variables.  
 
-As in N3 notation, the URI 
+As in N3 serialization, the URI 
 {{{
 http://www.w3.org/1999/02/22-rdf-syntax-ns#type
 }}}
@@ -194,11 +194,11 @@ to remove duplicate results.
 ===6.4.3. DESCRIBE query form ===
 
 ====6.4.3.1. Describing a single resource identified by URI====
-Return to the http://uriburner.com/isparql/ endpoint.  Enter the following query:
+Return to the http://uriburner.com/isparql/ endpoint.  Using the same prefixes as before, enter the following query:
 {{{
 DESCRIBE <http://bioimages.vanderbilt.edu/baskauf/04005#loc>
 }}}
-which contains the URI solution for the variable {{{?Location}}} in the query of section 6.4.2.  Try changing the View from Navigator to Raw Triples as described in section 6.2.2.2.  The description of the resource identified by the URI contains triples in which the URI is the subject (grouped together) and a triple where the URI was the object.  Change the View to Google Maps v3.  Zoom out and change the view to Satellite if desired. 
+which contains the URI solution for the variable {{{?Location}}} in the query of [#6.4.2._SELECT_query_form section 6.4.2].  Try changing the View from Navigator to Raw Triples as described in [#6.2.2.2._Querying_the_URIBurner_triplestore section 6.2.2.2.] .  The description of the resource identified by the URI contains triples in which the URI is the subject (grouped together) and a triple where the URI was the object.  Change the View to Google Maps v3.  Zoom out and change the view to Satellite if desired. 
 
 ====6.4.3.2. Describing a set of resources that match a variable in a triple pattern====
 
@@ -211,7 +211,7 @@ DESCRIBE ?location WHERE {
 The Linked Data browser which results shows all of the URIs which can substitute for {{{?location}}} in the triple pattern used in the query.  Again, use Raw Triples and Google Maps v3 to examine the Results.  
 
 ====6.4.3.3. Describing a set of resources that match a variable in several triple patterns====
-Replace the previous query with the query similar to that given in section 6.2.2.2.:
+Replace the previous query with the query similar to that given in [#6.2.2.2._Querying_the_URIBurner_triplestore section 6.2.2.2.]:
 {{{ 
 DESCRIBE ?x WHERE {
  ?x a txn:Occurrence.
@@ -219,7 +219,7 @@ DESCRIBE ?x WHERE {
 }
 limit 10
 }}}
-There are many records in the TDWG Bioblitz.  We want to limit the description set by requiring the record URIs to match several criteria.  We want to examine records that are only txn:Occurrences [#10_TaxonConcept_ontology (10)] that were recorded on September 29, 2010.  Because there are still many possible results, {{{limit 10}}} is specified to try out the query without getting an inordinate number of results.  
+There are many records in the TDWG Bioblitz.  We want to limit the description set by requiring the record URIs to match several criteria.  We want to examine records that are only {{{txn:Occurrences}}} [#10_TaxonConcept_ontology (10)] that were recorded on September 29, 2010.  Because there are still many possible results, {{{limit 10}}} is specified to try out the query without getting an inordinate number of results.  
 
 The query can be further limited by adding the triple pattern
 {{{
@@ -354,6 +354,67 @@ which diagrams the relationships among the classes and
 http://code.google.com/p/darwin-sw/wiki/DesignPrinciples
 
 for a description of the design principles on which it is based.  
-
 -------------------
-Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
+Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
