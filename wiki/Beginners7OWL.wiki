@@ -56,6 +56,9 @@ Although the PO uses few properties to relate its terms, there are many terms.  
 
 The PO is an abstract model without a particular serialization, although it does have an OWL representation at http://owlfiles.plantontology.org/ .  
 
+===7.3.3. TaxonConcept Ontology (txn) ===
+This is a large and complex ontology that imports terms from other vocabularies and ontologies as well as coining new terms.  It is beyond the scope of this guide to describe the TaxonConcept ontology, but it can be explored at http://lod.taxonconcept.org/ontology/doc/index.html or by examining the raw RDF at http://lod.taxonconcept.org/ontology/txn.owl .
+
 ==7.4. What is Web Ontology Language (OWL)?==
 
 Web Ontology Language (OWL) is a declarative language for expressing ontologies. [#4_OWL_2_Web_Ontology_Language_Primer (4)]  This means that it is used to describe a state of affairs in a domain of interest in a logical way. [#5_What_is_OWL_2? (5)]  It is a  knowledge representation language - it does not "do" anything in the sense that a computer language does something by providing instructions for the functioning of a computer.  However, applications called "reasoners" can infer information about the state of affairs by assessing statements made using the language of an OWL ontology.  
