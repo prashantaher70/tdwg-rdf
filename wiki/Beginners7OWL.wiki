@@ -11,12 +11,12 @@
 <wiki:toc max_depth="4" />
 
 ==7.1.  What is an ontology (again)?==
-In section 4.2. it was noted that there is no strict definition of an ontology although in general an ontology describes the formal constraints of the terms in a vocabulary and expresses relationships among terms in the vocabulary using some kind of ontology representation language.  The transition from simple vocabulary to complex ontology is a continuum without a distinct boundary.  On the one extreme are vocabularies such as Darwin Core where, although defined in RDF, properties have few or no expressed relationships to other properties or classes, and there are no defined relationships among the classes.  On the other extreme are complex ontologies which exhibit many of the features described in the following section.  
+In [Beginners4Vocabularies#4.2._What_is_an_ontology? section 4.2.] it was noted that there is no strict definition of an ontology. However, in general an ontology describes the formal constraints of the terms in a vocabulary and expresses relationships among terms in the vocabulary using some kind of ontology representation language.  The transition from simple vocabulary to complex ontology is a continuum without a distinct boundary.  At one extreme are vocabularies such as Darwin Core where, although defined in RDF, properties have few or no expressed relationships to other properties or classes, and there are no defined relationships among the classes.  At the other extreme are complex ontologies which exhibit many of the features described in the following section.  
 
 ==7.2. Some features that may apply to ontologies==
 
 ===7.2.1.  Hierarchical relationships===
-Ontologies can express how one term is related hierarchically to another, e.g. a class is a subclass of another, a class is broader than another, class x is part of class y, etc.
+Ontologies can express how one term is related hierarchically to another, e.g. a class is a subclass of another, a class is broader than another, class x is {{{partOf}}} class y, etc.
 
 ===7.2.2. Characteristics of properties===
 Ontologies can define the characteristics of properties using terms that are well known to machines.  For example, a property can be the inverse of another, a property can be transitive, symmetric, or functional, etc.
@@ -29,7 +29,7 @@ The relationships and restrictions expressed in an ontology can allow facts to b
 
 ==7.3. Examples of ontologies==
 ===7.3.1. Friend of a Friend (FOAF) vocabulary===
-The FOAF vocabulary ({{{foaf: = http://xmlns.com/foaf/0.1/}}}) is a very simple ontology used to describe people and their relationships to information. [#1_FOAF_Vocabulary_Specification (1])  Some terms in the vocabulary, such as {{{foaf:fundedBy}}} have a meaning that is understood through a human-readable text description, but whose definition implies nothing about either the subject or the object of the term.  It also has no relationships to other terms in the ontology.  Other terms have range, domain, subclass, and subproperty assignments as described in the DCMI abstract model and RDF (section 4.3 and 4.4).  For example, because of its range declaration, using the term {{{foaf:publications}}} implies that the object of the statement is a {{{foaf:Document}}}.  Instances of the class {{{foaf:Person}}} are also instances of {{{foaf:Agent}}} because the {{{foaf:Person}}} class is a subclass of the {{{foaf:Agent}}} class.  There are also properties that are declared to be the inverse of other properties.  For example, {{{foaf:maker}}} and {{{foaf:made}}} are inverse properties.  So if A {{{foaf:made}}} B, then it can be inferred that B had {{{foaf:maker}}} A.  Because of these declarations of the properties of FOAF properties, it is possible to infer additional facts that are not explicitly expressed.  
+The FOAF vocabulary ({{{foaf: = http://xmlns.com/foaf/0.1/}}}) is a very simple ontology used to describe people and their relationships to information. [#1_FOAF_Vocabulary_Specification (1])  Some terms in the vocabulary, such as {{{foaf:fundedBy}}} have a meaning that is understood through a human-readable text description, but whose definition implies nothing about either the subject or the object of the term.  It also has no relationships to other terms in the ontology.  Other terms have range, domain, subclass, and subproperty assignments as described in the DCMI abstract model and RDFS ([Beginners4Vocabularies#4.3._The_DCMI_Abstract_Model_(DCAM) section 4.3] and [Beginners4Vocabularies#4.4._RDF_Schema_and_the_relationship_of_the_DCMI_Abstract_Model section 4.4]).  For example, because of its range declaration, using the term {{{foaf:publications}}} implies that the object of the statement is a {{{foaf:Document}}}.  Instances of the class {{{foaf:Person}}} are also instances of {{{foaf:Agent}}} because the {{{foaf:Person}}} class is a subclass of the {{{foaf:Agent}}} class.  There are also properties that are declared to be the inverse of other properties.  For example, {{{foaf:maker}}} and {{{foaf:made}}} are inverse properties.  So if A {{{foaf:made}}} B, then it can be inferred that B has {{{foaf:maker}}} A.  Because of these declarations of the characteristics of FOAF properties, it is possible to infer additional facts that are not explicitly expressed.  
 
 ===7.3.2. The Plant Ontology (PO) ===
 The Plant Ontology is a controlled vocabulary ({{{po: = http://owlfiles.plantontology.org/PO_}}}) that describes plant morphology and developmental stages.  [#2_Plant_Ontology (2)]  It is follows the principles of the The Open Biological and Biomedical Ontologies (OBO) Foundry.  [#3_The_Open_Biological_and_Biomedical_Ontologies (3)]  The PO is currently used to describe patterns of gene expression and the phenotypes of genetic variants.  
@@ -60,7 +60,7 @@ The PO is an abstract model without a particular serialization, although it does
 
 Web Ontology Language (OWL) is a declarative language for expressing ontologies. [#4_OWL_2_Web_Ontology_Language_Primer (4)]  This means that it is used to describe a state of affairs in a domain of interest in a logical way. [#5_What_is_OWL_2? (5)]  It is a  knowledge representation language - it does not "do" anything in the sense that a computer language does something by providing instructions for the functioning of a computer.  However, applications called "reasoners" can infer information about the state of affairs by assessing statements made using the language of an OWL ontology.  
 
-An OWL ontology can be considered an abstraction and expressed in logical symbolism such as UML [#6_OMG_Unified_Modeling_Language_(UML) (6)].  However, OWL was designed so that ontologies could be expressed as RDF graphs, with a default exchange serialization of RDF/XML. [#7_OWL_2_Overview (7)]  In this form, it is a more expressive extension of RDF than of its precursor RDFS or generic RDF.  However, this increased expressivity comes at the expense of increased complexity.
+An OWL ontology can be considered an abstraction and expressed in logical symbolism such as UML [#6_OMG_Unified_Modeling_Language_(UML) (6)].  However, OWL was designed so that ontologies could be expressed as RDF graphs, with a default exchange serialization of RDF/XML. [#7_OWL_2_Overview (7)]  As an RDF serialization, OWL is a more expressive extension of RDF than of its precursor RDFS or generic RDF.  However, this increased expressivity comes at the expense of increased complexity.
 
 === 7.4.1. Varieties of OWL===
 
@@ -76,7 +76,7 @@ Because of the complexity of OWL, OWL-based ontologies are nearly always constru
 The namespace abbreviation for OWL terms is {{{owl: = http://www.w3.org/2002/07/owl#}}}
 
 ===7.6.1. OWL and RDFS===
-Since OWL is an extension of RDFS, it contains some of the concepts introduced to RDF by RDFS.  OWL uses classes and properties, and includes terms from RDFS and RDF including {{{rdf:Property}}}, {{{rdfs:subClassOf}}}, {{{rdfs:subPropertyOf}}}, {{{rdfs:range}}}, and {{{rdfs:domain}}} which were discussed in sections 4.3 and 4.4.  
+Since OWL is an extension of RDFS, it contains some of the concepts introduced to RDF by RDFS.  OWL uses classes and properties, and includes terms from RDFS and RDF including {{{rdf:Property}}}, {{{rdfs:subClassOf}}}, {{{rdfs:subPropertyOf}}}, {{{rdfs:range}}}, and {{{rdfs:domain}}} which were discussed in [Beginners4Vocabularies#4.3._The_DCMI_Abstract_Model_(DCAM) section 4.3] and [Beginners4Vocabularies#4.4._RDF_Schema_and_the_relationship_of_the_DCMI_Abstract_Model section 4.4].  
 
 ===7.6.2. owl:Class and individuals===
 The concept of a class in OWL is similar to its meaning in RDFS.  In fact, 
@@ -86,7 +86,7 @@ owl:Class rdfs:subClassOf rdfs:Class
 [#13_Axiomatic_Triples_for_the_Classes_of_the_OWL_2_RDF-Based_Voca (13)]  In OWL, there is a built-in most general class named {{{owl:Thing}}}.  All other OWL classes are automatically subclasses of {{{owl:Thing}}}.  In OWL, instances of classes are called _individuals_.  
 
 ====7.6.2.1. owl:!DisjointClasses====
-OWL allows any two classes to be declared disjoint, i.e. it is not allowable for an individual to be an instance of both classes.  Unless disjointness is declared explicitly, it is allowable for an individual to be simultaneously a member of two or more classes.  
+OWL allows any two classes to be declared _disjoint_, i.e. not allowable for an individual to be an instance of both classes.  Unless disjointness is declared explicitly, it is allowable for an individual to be simultaneously a member of two or more classes.  
 
 ===7.6.3. Properties in OWL===
 In OWL, properties state relationships involving individuals, just as in RDFS properties state relationships involving instances of classes.  OWL defines two types of properties: {{{owl:ObjectProperty}}} which relates individuals to other individuals and {{{owl:DatatypeProperty}}} which relates individuals to data values (strings, numbers, etc.).  Both of these kinds of properties are {{{rdfs:subClassOf rdf:Property}}}.  
@@ -97,7 +97,7 @@ urn:lsid:ubio.org:namebank:2472422   dwc:nameAccordingTo  "Claramunt Derryberry 
 }}}
 or should it be a URI?
 {{{
-urn:lsid:ubio.org:namebank:2472422   dwc:nameAccordingTo http://dx.doi.org/10.1525/auk.2009.09022
+urn:lsid:ubio.org:namebank:2472422   dwc:nameAccordingTo  http://dx.doi.org/10.1525/auk.2009.09022
 }}}
 [#14_Expressing_DOIs_as_HTTP_URIs (14]) There is no clear answer to this question.  [#15_Should_Darwin_Core_terms_have_literals_or_URIs_as_objects? (15)]  However, in OWL the distinction is clear.  In the following example the appropriate type of the object resource is unambiguous. ({{{tc: = http://rs.tdwg.org/ontology/voc/TaxonConcept#}}})
 {{{
@@ -105,7 +105,7 @@ urn:lsid:ubio.org:namebank:2472422   tc:accordingToString  "Claramunt Derryberry
 }}}
 or
 {{{
-urn:lsid:ubio.org:namebank:2472422   tc:accordingTo http://dx.doi.org/10.1525/auk.2009.09022
+urn:lsid:ubio.org:namebank:2472422   tc:accordingTo  http://dx.doi.org/10.1525/auk.2009.09022
 }}}
 because {{{tc:accordingToString}}} is defined as an {{{owl:DatatypeProperty}}}, while {{{tc:accordingTo}}} is defined as an {{{owl:ObjectProperty}}}.  [#16_TDWG_Taxon_Concept_Ontology (16)]
 
@@ -113,7 +113,7 @@ because {{{tc:accordingToString}}} is defined as an {{{owl:DatatypeProperty}}}, 
 OWL provides a means of indicating that resources are equivalent.  
 
 ====7.6.4.1. owl:equivalentClass====
-Making the statement {{{X owl:equivalentClass Y}}} essentially means that two named classes are synonymous, i.e. that all instances of class X are instances of class Y and vice versa.  For example, in the TDWG Taxon Concept Ontology [#16_TDWG_Taxon_Concept_Ontology (16)], the {{{tc:Taxon class}}} and the {{{tc:TaxonConcept}}} class are declared to be equivalent.  
+Making the statement {{{X owl:equivalentClass Y}}} essentially means that two named classes are synonymous, i.e. that all instances of class X are instances of class Y and vice versa.  For example, in the TDWG Taxon Concept Ontology [#16_TDWG_Taxon_Concept_Ontology (16)], the {{{tc:Taxon}}} class and the {{{tc:TaxonConcept}}} class are declared to be equivalent.  
 
 ====7.6.4.2. owl:equivalentProperty====
 In OWL, if two properties are declared to be equivalent, they relate an individual to the same set of other individuals.  [#17_Equivalent_properties_in_RDFS (17)]  For example, Dublin Core has declared that 
@@ -122,17 +122,13 @@ dcterms:creator owl:equivalentProperty foaf:maker
 }}}
 This means that
 {{{
- kimage:ac1490  dcterms:creator   "Ashley Coble"
+ kimage:ac1490  dcterms:creator   agents:kirchoff#coblea
 }}}
 implies
 {{{
- kimage:ac1490  foaf:maker   "Ashley Coble"
-}}}
-This particular example illustrates a problem because the definition in OWL of {{{foaf:maker}}}  [#18_Definition_of_the_FOAF_vocabulary_in_RDF (18)] which is written in OWL declares that {{{foaf:maker}}} is an {{{owl:ObjectProperty}}} which means that the object of a triple using that property should be a URI, as in:
-{{{
  kimage:ac1490  foaf:maker   agents:kirchoff#coblea
 }}}
-This problem illustrated here is caused by confusion over whether we are referring to a person or a person's name.  The FOAF guidelines suggest that {{{dc:creator}}} should be used for textual names and {{{foaf:maker}}} should be used to refer to the creators as identified by URIs.  [#19_Definition_of_foaf:maker (19)]
+The definition of {{{foaf:maker}}}  [#18_Definition_of_the_FOAF_vocabulary_in_RDF (18)] which is written in OWL declares that {{{foaf:maker}}} is an {{{owl:ObjectProperty}}} which means that the object of a triple using that property should be a URI.  The [http://purl.org/dc/terms/creator definition] of {{{dcterms:creator}}} which primarily uses RDFS, specifies a non-literal range ({{{dcterms:Agent}}}), so there is no inconsistency.  However, there is commonly confusion over whether a term should refer to a person or a person's name.  The FOAF guidelines suggest that {{{dc:creator}}} (as opposed to {{{dcterms:creator}}}) should be used for textual names and {{{foaf:maker}}} should be used to refer to the creators as identified by URIs.  [#19_Definition_of_foaf:maker (19)]
 
 ====7.6.4.3. owl:sameAs====
 The property owl:sameAs is used to state that two individuals (i.e. class instances) are the same.  The practical effect of this is to say that if we declare {{{uri1 owl:sameAs uri2}}}, and a statement is made in the form of a triple containing {{{uri1}}}, one can infer that the triple formed by substituting {{{uri1}}} for {{{uri2}}} exists.    For example, if 
@@ -198,13 +194,13 @@ A property that is declared to be an {{{owl:FunctionalProperty}}} can have only 
 {{{owl:InverseFunctionalProperty}}} and {{{owl:SymmetricProperty}}} are two additional properties which can be used to describe the characteristics of properties more fully. [#9_OWL_Lite_Feature_Synopsis (9)] [#12_A_Practical_Guide_To_Building_OWL_Ontologies_Using_Prot%C3%A9g%C3%A9 (12)] 
 
 ==7.7. What is reasoning?==
-Software applications which are designed to examine sets of OWL statements and draw inferences from them are called reasoners.  The function of reasoners can be described as follows:
+Software applications which are designed to examine sets of OWL statements and draw inferences from them are called _reasoners_.  The function of reasoners can be described as follows:
 
 "When humans think, they draw consequences from their knowledge. An important feature of OWL is that it captures this aspect of human intelligence for the forms of knowledge that it can represent. But what does it mean, generally speaking, that a statement is a consequence of other statements? Essentially it means that this statement is true whenever the other statements are. In OWL terms: we say, a set of statements A entails a statement a if in any state of affairs wherein all statements from A are true, also a is true. Moreover, a set of statements may be consistent (that is, there is a possible state of affairs in which all the statements in the set are jointly true) or inconsistent (there is no such state of affairs). The formal semantics of OWL specifies, in essence, for which possible “states of affairs” a particular set of OWL statements is true.  There are OWL tools – reasoners – that can automatically compute consequences." [#21_Description_of_reasoning_in_basic_notions_on_modeling_knowled (21)] 
 
-One basic function that a reasoner can perform is to check an OWL ontology for _consistency_, i.e. whether it is possible for a class to have any instances.  It can also infer an ontology class hierarchy which may go beyond the hierarchy asserted explicitly by OWL statements. [#22_Inconsisten_Classes (22)]  
+One basic function that a reasoner can perform is to check an OWL ontology for _consistency_, i.e. whether it is possible for a class to have any instances.  It can also infer an ontology class hierarchy which may go beyond the hierarchy asserted explicitly by OWL statements. [#22_Inconsistent_Classes (22)]  
 
-Some reasonsers which are available are listed at (11).
+Some reasoners which are available are listed at [#11_OWL_tools (11)].
 
 =References=
 ===1 FOAF Vocabulary Specification===
@@ -263,9 +259,9 @@ http://www.w3.org/TR/owl2-rdf-based-semantics/#A_Set_of_Axiomatic_Triples
 http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html
 
 ===15 Should Darwin Core terms have literals or URIs as objects?===
-Darwin Core includes "ID" versions of several terms.  For example {{{dwc:nameAccordingTo}}} shows strings as its examples, while its corresponding ID term {{{dwc:nameAccordingToID}}} is defined to be an identifier.  However, since Darwin Core does not have a RDF Guide indicating how its terms should be used and since the normative definition of terms in RDF describe the property terms as {{{rdf:type rdf:Property}}}, there are no clear guidelines for how the ID terms might be used in RDF triples.  The example given in the XML Guide (http://rs.tdwg.org/dwc/terms/guides/xml/index.htm) uses {{{dwc:locationID}}} as both an identifier for the subject resource and as an ID reference for the object of a property.  
+Darwin Core includes "ID" versions of several terms.  For example {{{dwc:nameAccordingTo}}} shows strings as its examples, while its corresponding ID term {{{dwc:nameAccordingToID}}} is defined to be an identifier.  However, since Darwin Core does not have a RDF Guide indicating how its terms should be used and since the normative definition of terms in RDF describe the property terms as {{{rdf:type rdf:Property}}}, there are no clear guidelines for how the ID terms might be used in RDF triples.  The example given in the XML Guide (http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#classes) uses {{{dwc:locationID}}} as both an identifier for the subject resource and as an ID reference for the object of a property.  The situation is further complicated by the fact that all of the ID terms are declared to be subproperties of {{{dcterms:identifier}}} which has range {{{rdfs:Literal}}}.  This implies that the ID terms also have range {{{rdfs:Literal}}}, which might not be the intent of Darwin Core.  See [#1.3.2.4._dcterms:identifier_(AC) this] for more information.
 
-In some cases (such as dwc:recordedBy), the definition clearly states that the object of the property should be text.  But in many other cases, usage is not clear.
+In some cases (such as {{{dwc:recordedBy}}}), the definition clearly states that the object of the property should be text.  But in many other cases, usage is not clear.
 
 ===16 TDWG Taxon Concept Ontology===
 http://rs.tdwg.org/ontology/voc/TaxonConcept
@@ -275,8 +271,8 @@ viewable at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/
 ===17 Equivalent properties in RDFS===
 In RDFS, the same thing can be accomplished by declaring two properties to be subproperties of each other, e.g. 
 {{{
-A rdfs:subClassOf B
-B rdfs:subClassOf A
+A rdfs:subPropertyOf B
+B rdfs:subPropertyOf A
 }}}
 
 ===18 Definition of the FOAF vocabulary in RDF===
@@ -301,12 +297,8 @@ which describes the best practices for this situation in Dublin Core.  Use of {{
 
 http://www.w3.org/TR/rdf-primer/#rdfvalue
 
-
-
-
-
 ===20 Life Science Identifiers (LSID) Applicability Statement===
-The LSID Applicability Statement states in Recommendation 30 that descriptions of objects identified by LSIDs must contain an OWL statement of equivalence (e.g. owl:sameAs) that relates the LSID to its HTTP proxied form.
+The [http://www.tdwg.org/standards/150/ LSID Applicability Statement] ([http://bioimages.vanderbilt.edu/pages/LSID%20AS_2011_01_final.pdf pdf viewable in browser]) states in Recommendation 30 that descriptions of objects identified by LSIDs must contain an OWL statement of equivalence (e.g. {{{owl:sameAs}}}) that relates the LSID to its HTTP proxied form.
 
 ===21 Description of reasoning in basic notions on modeling knowledge===
 http://www.w3.org/TR/owl2-primer/#Modeling_Knowledge:_Basic_Notions
@@ -317,4 +309,66 @@ Refer to section 4.9.2. of _A Practical Guide To Building OWL Ontologies Using P
 http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/
 
 -------------------
-Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu Steve Baskauf]
+Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
+
+.
