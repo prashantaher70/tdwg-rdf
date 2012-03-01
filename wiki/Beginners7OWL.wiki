@@ -202,6 +202,8 @@ One basic function that a reasoner can perform is to check an OWL ontology for _
 
 Some reasoners which are available are listed at [#11_OWL_tools (11)].
 
+Another method of reasoning which uses rules to infer triples from an OBO ontology, followed by SPARQL queries is described in [http://bioinformatics.oxfordjournals.org/content/27/11/1562.abstract Blondé et al. 2011] ([http://dx.doi.org/10.1093/bioinformatics/btr164 doi: 10.1093/bioinformatics/btr164]).
+
 =References=
 ===1 FOAF Vocabulary Specification===
 http://xmlns.com/foaf/spec/
