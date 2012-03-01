@@ -1,10 +1,10 @@
 #summary Beginner's guide to RDF: Introduction
 
-http://bioimages.vanderbilt.edu/pages/tdwg-logo.png Biodiversity Information Standards (TDWG) - [http://www.tdwg.org/ http://www.tdwg.org]
+http://bioimages.vanderbilt.edu/pages/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 29 February 2012
+*Date:* (Created) 17 February 2012; (Last modified) 1 March 2012
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -89,6 +89,19 @@ See also a list of [http://www.w3.org/DesignIssues/ design issues] intended to a
 
 [http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs as HTTP URIs]
 
+To locate DOIs for _titles_ (books, monographs, or whole journal runs) in the [http://www.biodiversitylibrary.org/ Biodiversity Heritage Library] (BHL), locate the title through searching, then access the URL 
+{{{
+http://www.biodiversitylibrary.org/bibliography/[title_number]
+}}}
+or
+{{{
+http://www.biodiversitylibrary.org/title/[title_number]
+}}}
+where {{{[title_number]}}} is the BHL-assigned identifying number for the title.  Currently, BHL does not assign DOIs to individual articles unless they happen to correspond to a monograph.  
+
+DOIs can be exported _en masse_ through BHLs data export at http://biodivlib.wikispaces.com/Data+Exports and are exposed at the BHL API and OpenURL resolver http://biodivlib.wikispaces.com/Developer+Tools+and+API .
+
+Thanks to Rod Page and Chris Freeland for this information.
 
 ===0.3.2. Related to the Resource Description Framework (RDF) model===
 [http://www.w3.org/TR/2004/REC-rdf-primer-20040210/ RDF Primer (intended for beginners)]
