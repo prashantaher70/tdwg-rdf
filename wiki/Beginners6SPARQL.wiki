@@ -102,7 +102,7 @@ DESCRIBE ?y WHERE {
  ?y skos:closeMatch <http://lod.taxonconcept.org/ses/z9oqP#Species>.
 }
 }}}
-Click on the "54 more..." link.  The results show the many concepts which have been used to represent entities that are nearly the same as {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}} which represents a species concept for _Apis mellifera_ (the European honey bee).  If you drop down the View: to Images, you can see images which are associated with these various resources which represent the European honey bee.
+Click the Run Query button ("play").  on the Results tab, click on the "54 more..." link.  The results show the many concepts which have been used to represent entities that are nearly the same as {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}} which represents a species concept for _Apis mellifera_ (the European honey bee).  If you drop down the View: to Images, you can see images which are associated with these various resources which represent the European honey bee.
 
 == 6.3. Loading metadata into a private triple store for querying==
 
