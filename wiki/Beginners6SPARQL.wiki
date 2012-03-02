@@ -225,7 +225,7 @@ DESCRIBE ?Location WHERE {
 If you are not patient, you can use LIMIT 50.  The results shows all of the location URIs which can substitute for {{{?Location}}} in the triple pattern used in the query.  Again, use Raw Triples and Google Maps v3 to examine the Results.  
 
 ====6.4.3.3. Describing a set of resources that match a variable in several triple patterns====
-Go to http://uriburner.com/isparql/ and paste in the list of prefixes from [#6.4.2._SELECT_query_form section 6.4.2.].  Replace the existing query with the query similar to that given in [#6.2.2.2._Querying_the_URIBurner_triplestore section 6.2.2.2.]:
+Go to the http://uriburner.com/isparql/ endpoint and paste in the list of prefixes from [#6.4.2._SELECT_query_form section 6.4.2.].  Replace the existing query with the query similar to that given in [#6.2.2.2._Querying_the_URIBurner_triplestore section 6.2.2.2.]:
 {{{ 
 DESCRIBE ?x WHERE {
  ?x a txn:Occurrence.
@@ -233,7 +233,7 @@ DESCRIBE ?x WHERE {
 }
 LIMIT 10
 }}}
-There are many records in the TDWG Bioblitz.  We want to limit the description set by requiring the record URIs to match several criteria.  We want to examine records that are only {{{txn:Occurrences}}} [#10_TaxonConcept_ontology (10)] that were recorded on September 29, 2010.  
+There are many records in the TDWG Bioblitz.  We want to limit the description set by requiring the record URIs to match several criteria.  We want to examine records that are only {{{txn:Occurrences}}} [#10_TaxonConcept_ontology (10)] that were recorded on September 29, 2010.  Experiment with various views.
 
 The query can be further limited by adding the triple pattern
 {{{
@@ -242,7 +242,9 @@ The query can be further limited by adding the triple pattern
 to the list and removing the {{{LIMIT 10}}} restriction.  Other possible literals that could be used are "Donald Hobern", "Cyndy Sims Parr", "test", and "Dmitry Mozzherin"
 
 ====6.4.3.4. Describing a set of resources that match several triple patterns with multiple variables====
-Because the structure of the TDWG Bioblitz metadata was very flat with all properties ascribed to the occurrence, the single variable {{{?x}}} could represent the URIs of the desired occurrence resources.  The Bioimages RDF graph uses the Darwin-SW ontology [#11_Darwin-SW_ontology (11)] which is highly normalized (NOT flat) and therefore separates the metadata among instances of all of many of the Darwin Core classes.  The query
+Because the structure of the TDWG Bioblitz metadata was very flat with all properties ascribed to the occurrence, the single variable {{{?x}}} could represent the URIs of the desired occurrence resources.  The Bioimages RDF graph uses the Darwin-SW ontology [#11_Darwin-SW_ontology (11)] which is highly normalized (NOT flat) and therefore separates the metadata among instances of all of many of the Darwin Core classes.  
+
+Return to the http://lsd.taxonconcept.org/isparql/ endpoint. The query
 {{{
 DESCRIBE ?SAP WHERE {
  ?SAP mrtg:variant "Lower Quality".
