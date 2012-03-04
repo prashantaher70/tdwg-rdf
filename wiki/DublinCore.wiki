@@ -1,8 +1,12 @@
 #summary Dublin Core in RDF
 
-= Dublin Core in RDF=
+<h1>Dublin Core in RDF</h1>
 
-Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Modified: 2012-02-26
+Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Modified: 2012-03-04
+
+*Table of Contents:*
+
+<wiki:toc max_depth="2" />
 
 =1. Use of Dublin Core terms in RDF=
 
