@@ -6,7 +6,7 @@ Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Modified: 2012-03-04
 
 *Table of Contents:*
 
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="3" />
 
 =1. Use of Dublin Core terms in RDF=
 
