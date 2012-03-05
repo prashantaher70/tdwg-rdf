@@ -1,5 +1,9 @@
 #summary Beginner's guide to RDF: 3. RDF basics
 
+<wiki:comment>
+ToDo: write something about blank nodes
+</wiki:comment>
+
 = Beginner's guide to RDF: 3. RDF basics =
 
 This guide is intended to help people understand what RDF is and what it is used for.  (For more information, see the [Beginners Introduction].)  It is not intended to teach people how to write RDF.  [#3.4._Learn_more_about_RDF Section 3.4.] provides links to some Web resources for people who want to actually learn to create documents in RDF. 
@@ -21,14 +25,14 @@ The basic unit of RDF is a statement called a triple.  One can think of a triple
 The first part of the triple, the resource being described, is known as the subject of the triple.  The subject is a URI reference to that resource which identifies it unambiguously, i.e. is a globally unique identifier (GUID) for described resource. [#1_Blank_nodes. (1)]
 
 ===3.1.2. Predicate===
-The subject is followed by the predicate which indicates the kind of relationship that is being described by the triple.  The predicate is also called a property.  Like the subject, the predicate is also described by a URI.  The predicate is generally a term from a well-known vocabulary or ontology (see [Beginners#0.3.7._Biodiversity-related_and_General_vocabularies_and_ontolog section 0.3.7.] for examples of vocabularies and ontologies relevant to the biodiversity community).  The URI is often constructed from a term name in such a way that when abbreviated it will impart to a human a sense of what kind of property the predicate is describing.  For example, the URI predicate 
+The subject is followed by the predicate which indicates the kind of relationship that is being described by the triple.  The predicate is also called the _property_.  Like the subject, the predicate is also described by a URI.  The predicate is generally a term from a well-known vocabulary or ontology (see [Beginners#0.3.7._Biodiversity-related_and_General_vocabularies_and_ontolog section 0.3.7.] for examples of vocabularies and ontologies relevant to the biodiversity community).  The URI is often constructed from a term name in such a way that when abbreviated it will impart to a human a sense of what kind of property the predicate is describing.  For example, the URI predicate 
 
 http://purl.org/dc/terms/creator
 
 can be written as {{{dcterms:creator}}} where {{{dcterms:}}} is an abbreviation for "{{{http://purl.org/dc/terms/}}}".  A human will see this term abbreviation as a property that describes the creator of the subject.  However, a computer will simply see the URI as a unique string unless it uses other sources of information to "understand" what that URI "means" as a property.  
 
 ===3.1.3. Object===
-The last part of the triple is the object.  The object represents something that is related to the subject through the relationship described by the predicate.  The object can be of two types: literals (character strings) and URIs.  Although there is technically no defined difference between predicates whose object is a literal, and predicates whose object is a URI, predicates whose objects are literals probably tend to be simple properties of the object, while predicates whose objects are URIs are more likely to express relationships between the object and some other resource that is itself likely to be the object of additional RDF descriptions.  
+The last part of the triple is the object.  The object represents something that is related to the subject through the relationship described by the predicate.  The object can be of two types: literals (character strings) and URIs.  Although in basic RDF there is technically no defined difference between predicates whose object is a literal, and predicates whose object is a URI, predicates whose objects are literals probably tend to be simple properties of the object, while predicates whose objects are URIs are more likely to express relationships between the object and some other resource that is itself likely to be the object of additional RDF descriptions.  Web Ontology Language (OWL) provides a means to declare whether a predicate is a literal or a URI reference (see [Beginners7OWL#7.6.3._Properties_in_OWL section 7.6.3.] for more on this).
 
 ==3.2. Examples of triples==
 The examples given in the remainder of this section use actual functional URIs which should dereference to HTML in a web browser and RDF/XML in a semantic client such as an RDF browser.  Since these represent resources "in the wild" the actual RDF triples are subject to change.  (Note: as of 2012-01-26 the server responding to requests to dereference the {{{bioimages.vanderbilt.edu}}} URIs does not correctly identify the RDF/XML files as "Content-type: application/rdf+xml".  This may cause clients to misinterpret the type of response when the client requests an RDF/XML representation of a URI.)
@@ -54,7 +58,7 @@ The triple
 {{{
 kimage:ac1490  dcterms:created  "2010-09-01T03:41:31"
 }}}
-can be interpreted by a human to say that the image was created on 1 September 2010.  A computer would "know" this if it were programmed to recognize that the URI dcterms:created represented the creation date of a resource and if it were programmed to parse and interpret ISO 8601 formatted date strings.  
+can be interpreted by a human to say that the image was created on 1 September 2010.  A computer would "know" this if it were programmed to recognize that the URI dcterms:created represented the creation date of a resource and if it were programmed to parse and interpret ISO 8601 formatted date strings.  Literals can also be _typed_ to indicate explicitly their language or datatype. (1a) 
 
 ===3.2.3. Example of a triple having a URI as its object===
 The triple
@@ -236,7 +240,10 @@ http://www.w3schools.com/rdf/default.asp
 
 =References=
 ===1 Blank nodes.===
-Technically either the subject or the object can be a blank node which is not identified explicitly by a URI.  However, that is beyond the scope of this guide.  See http://www.w3.org/TR/rdf-primer/#structuredproperties for a description of blank nodes and their use.  It is generally considered a less-desirable practice to introduce blank nodes because it is not possible to link to them through external documents.
+Technically either the subject or the object can be a blank node which is not identified explicitly by a URI.  See http://www.w3.org/TR/rdf-primer/#structuredproperties for a description of blank nodes and their use.  It is generally considered a less-desirable practice to introduce blank nodes because it is not possible to link to them through external documents.  However, in some cases blank nodes are unavoidable if identifiers don't exist or if the creator of the RDF does not want to be responsible for minting and maintaining an identifier for the described resource.  
+
+===1a Typed literals.===
+An RDF literal object can be typed using an optional attribute within the predicate tag.  These include an optional XML language attribute ([http://www.w3.org/TR/REC-xml/#sec-lang-tag xml:lang], see also [http://www.ietf.org/rfc/rfc4646.txt RFC 4646] ) or RDF datatype ([http://www.w3.org/TR/rdf-concepts/#section-Datatypes rdf:datatype]).  Note: {{{xsd:}}} abbreviates {{{http://www.w3.org/2001/XMLSchema#}}}.  Presumably, any XML Schema defined datatype ( http://www.w3.org/TR/xmlschema-2/ ) such as [http://www.w3.org/TR/xmlschema-2/#dateTime xsd:dateTime] would be widely understood and appropriate for use with the {{{rdf:datatype}}} attribute.  It is also possible for users to define their own {{{rdf:datatype}}}, although it seems likely that only custom-designed consuming applications would know how to make use of this information. The guidelines for Dublin Core as RDF specify that the {{{rdf:datatype}}} can be specified by reference to a "syntax encoding scheme URI".  Dublin Core defines URIs for a number of commonly used schemes at http://dublincore.org/documents/dcmi-terms/#H5 .  
 
 ===2 rdf:type===
 The predicate {{{rdf:type}}} has special properties that are defined in the RDF schema:
@@ -269,6 +276,8 @@ http://www.w3schools.com/rdf/default.asp
 
 
 -------------------
+Thanks to Paul Murray for helpful comments and suggestions on this page.
+
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
 
 .
