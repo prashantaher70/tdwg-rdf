@@ -58,7 +58,7 @@ The triple
 {{{
 kimage:ac1490  dcterms:created  "2010-09-01T03:41:31"
 }}}
-can be interpreted by a human to say that the image was created on 1 September 2010.  A computer would "know" this if it were programmed to recognize that the URI dcterms:created represented the creation date of a resource and if it were programmed to parse and interpret ISO 8601 formatted date strings.  Literals can also be _typed_ to indicate explicitly their language or datatype. (1a) 
+can be interpreted by a human to say that the image was created on 1 September 2010.  A computer would "know" this if it were programmed to recognize that the URI dcterms:created represented the creation date of a resource and if it were programmed to parse and interpret ISO 8601 formatted date strings.  Literals can also be _typed_ to indicate explicitly their language or datatype. [#1a_Typed_literals. (1a)] 
 
 ===3.2.3. Example of a triple having a URI as its object===
 The triple
