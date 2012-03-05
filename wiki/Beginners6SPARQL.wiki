@@ -63,7 +63,7 @@ DESCRIBE ?x WHERE {
 
 limit 10
 }}}
-and select Results Format RDF/XML or some other format.  Depending on your browser you may be able to view the output directly or you may have to save the file and open it using a text editor.  (Some dedicated RDF and XML editors are listed in [Beginners#0.3.5._Software_tools sectin 0.3.5.) of this guide.)  The results show all of the triples that describe the 5 or so Crambidae species described by Fabricus which have articles in Wikipedia.  You should note that DBpedia routinely provides the language attribute for literals.  So a query containing a literal must have an "@" language tag.  For example:
+and select Results Format RDF/XML or some other format.  Depending on your browser you may be able to view the output directly or you may have to save the file and open it using a text editor.  (Some dedicated RDF and XML editors are listed in [Beginners#0.3.5._Software_tools section 0.3.5.] of this guide.)  The results show all of the triples that describe the 5 or so Crambidae species described by Fabricus which have articles in Wikipedia.  You should note that DBpedia routinely provides the language attribute for literals.  So a query containing a literal must have an "@" language tag.  For example:
 {{{
 PREFIX dbpprop: <http://dbpedia.org/property/>
 
