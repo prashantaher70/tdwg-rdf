@@ -19,7 +19,7 @@ In [Beginners4Vocabularies#4.2._What_is_an_ontology? section 4.2.] it was noted 
 Ontologies can express how one term is related hierarchically to another, e.g. a class is a subclass of another, a class is broader than another, class x is {{{partOf}}} class y, etc.
 
 ===7.2.2. Characteristics of properties===
-Ontologies can define the characteristics of properties using terms that are well known to machines.  For example, a property can be the inverse of another, a property can be transitive, symmetric, or functional, etc.
+Ontologies can define the characteristics of properties using terms that are well known to machines.  For example, a property can be the inverse of another, a property can be transitive, symmetric, or functional, etc.  _Annotation properties_ (e.g. {{{rdfs:label}}} can be applied as properties to describe the characteristics of other properties.  However, they cannot be used as a part of machine reasoning (since the machine would never know when it was finished).  
 
 ===7.2.3. Properties with assumed types of values ===
 Properties can be defined to have values that are identifiable objects, or defined to have values that are literals.
@@ -314,6 +314,8 @@ Refer to section 4.9.2. of _A Practical Guide To Building OWL Ontologies Using P
 http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/
 
 -------------------
+Thanks to Paul Murray for helpful suggestions on this page.
+
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
 
 .
