@@ -259,7 +259,7 @@ DESCRIBE ?SAP WHERE {
 requests a description of the {{{Lower Quality}}} {{{ServiceAccessPoint}}}s (downloadable versions) of images which serve as {{{evidenceFor}}} occurrences documented {{{atEvents}}} which are {{{locatedAt}}} Locations which are in the {{{stateProvince}}} of {{{Hawaii}}}.  The variables ({{{?Location}}}, {{{?Event}}}, etc.) represent intermediate resources (instances of Location, Event, Occurrence, etc.) that link the string "{{{Hawaii}}}" with the URI for the {{{ServiceAccessPoint}}} (e.g. {{{http://bioimages.vanderbilt.edu/baskauf/04005#lq}}}) and the URL which provides access to the actual images (e.g. {{{http://bioimages.vanderbilt.edu/lq/baskauf/wmetro-br04005.jpg}}}) that are the solutions to the query.  Select the Raw Triples view to see the actual images.  Replace "DESCRIBE ?SAP" with "DESCRIBE ?Location ", run the query and select the Google Maps v3 View to see the locations where the images were taken.
 
 ===6.4.4. Creating RDF graphs using CONSTRUCT===
-In the example given in [#6.4.3.1._Describing_a_single_resource_identified_by_URI section 6.4.3.1.], the result described the resource identified by the URI by presenting all triples in the dataset which referenced that URI, including triples where the URI was the object rather than the subject.  The CONSTRUCT query form returns an RDF graph which contains only triples in the solution that conform to the graph template.  A result similar to the query in [#6.4.3.1._Describing_a_single_resource_identified_by_URI section 6.4.3.1.] can be achieved by the query
+In the example given in [#6.4.3.1._Describing_a_single_resource_identified_by_URI section 6.4.3.1.], the result described the resource identified by the URI by presenting all triples in the dataset which referenced that URI, including triples where the URI was the object rather than the subject.  The CONSTRUCT query form constructs an RDF graph which contains only triples in the solution that conform to the graph template.  A result similar to the query in [#6.4.3.1._Describing_a_single_resource_identified_by_URI section 6.4.3.1.] can be achieved by the query
 {{{
 CONSTRUCT {
   <http://bioimages.vanderbilt.edu/baskauf/04005#loc> ?predicate ?object.
@@ -268,7 +268,32 @@ WHERE {
   <http://bioimages.vanderbilt.edu/baskauf/04005#loc> ?predicate ?object.
 }
 }}}
-View the result using the Raw Triples view.  Note that this time only triples which contain the URI as the subject are included, in constrast to the DESCRIBE example which included triples where the URI was the object.
+View the result using the Raw Triples view.  Note that this time only triples which contain the URI as the subject are included, in contrast to the DESCRIBE example which included triples where the URI was the object.  This is achieved by placing no restrictions on the values of the predicate and object in the WHERE section.  The constructed triples simply place each predicate and object value in the same position in which they occurred in the match.  
+
+The values of the constructed triples can be constrained by several triple patterns.  For example, in the following query
+{{{
+CONSTRUCT { ?x txn:scientificName ?name }
+WHERE {
+ ?x txn:scientificName ?name.
+ ?x a txn:SpeciesConcept.
+ ?x txn:kingdom "Plantae".
+ }
+
+LIMIT 10
+}}}
+the species concept must represent a plant.  The constructed triples contain the name string as the object.  There is no requirement that the constructed triples contain the same values as are present in any triple in the graph, nor do the values have to be in the same position as they were in the patterns used to do the screening.  For example in this query:
+{{{
+CONSTRUCT { ?article dwc:articleTaxonName ?name }
+WHERE {
+ ?x txn:hasWikipediaArticle ?article.
+ ?x txn:scientificName ?name.
+ ?x a txn:SpeciesConcept.
+ ?x txn:kingdom "Plantae".
+ }
+
+LIMIT 10
+}}}
+the resulting triples contain a subject which was the object of a different triple from the source triple of the object used in the constructed triple.  The constructed triple also has a completely different predicate (not actually even present in the dwc:namespace!).  CONSTRUCT will create whatever triple you specify regardless of whether the statements made by the created triples make sense or are actually true.
 
 ==6.5. Examples of more complex queries==
 A more complex version of the query in [#6.4.2.1._Eliminating_duplicate_results_using_DISTINCT section 6.4.2.1.] can be made at the endpoint http://tdwg-rdf.net/store2/ as follows:
