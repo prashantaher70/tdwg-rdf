@@ -2,7 +2,7 @@
 
 <h1>Dublin Core in RDF</h1>
 
-Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Modified: 2012-03-04
+Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Created: 2012-02-24; Modified: 2012-03-06
 
 *Table of Contents:*
 
@@ -263,6 +263,17 @@ There might be some utility in using a vocabulary encoding scheme URI and value 
 }}}
 This essentially says that there is a class in Audubon Core not identified by a URI which has the value string "!PanAndZoomImage".  The DCMI model allows this (i.e. zero value URI) but whether that is appropriate is debatable, and whether any client would be sophisticated enough to understand what it meant is not known.  
 
+A more succinct way of expressing this would be
+{{{
+<rdf:Description rdf:about="http://example.org/coolImage">
+     <dcterms:type rdf:parseType="Resource">
+          <dcam:memberOf rdf:resource="http://rs.tdwg.org/ac/terms"/>
+          <rdf:value>PanAndZoomImage</rdf:value>
+     </dcterms:type>
+</rdf:Description>
+}}}
+which follows the syntax described at http://www.w3.org/TR/REC-rdf-syntax/#section-Syntax-parsetype-resource.  In this case, the {{{rdf:type}}} of the object of the {{{dcterms:type}}} triple (which is {{{rdfs:Class}}}) would have to be inferred from the range of {{{dcterms:type}}} since it is not explicitly stated.
+
 * Special note about {{{dcterms:type}}}:*  Section 5.2. of http://dublincore.org/documents/dc-rdf/#sect-5 , says "It is recommended that RDF applications implementing this specification primarily use and understand {{{rdf:type}}} in place of {{{dcterms:type}}} when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of {{{rdf:type}}}."  Thus, although it may be desirable to include the property {{{dcterms:type}}} in the RDF description of a resource due to requirements such as the Audubon Core required terms designation (see http://species-id.net/wiki/Audubon_Core_Non_normative_document), terms in the {{{dctype:}}} namespace should be declared as a {{{rdf:type}}} property of the resource.
 
 ====1.3.4.4. {{{dcterms:rights}}} (AC, DwC; range: {{{dcterms:RightsStatement}}}) and {{{dcterms:accessRights}}} (DwC; range: {{{dcterms:RightsStatement}}}) ====
@@ -280,6 +291,16 @@ The definition of [http://dublincore.org/documents/dcmi-terms/#terms-rights dcte
 }}}
 
 Note that this creates a blank node for the {{{dcterms:RightsStatement}}} instance.  As is also the case with {{{dcterms:extent}}} ([#1.3.4.8._dcterms:extent_(AC;_range:_dcterms:SizeOrDuration section 1.3.4.8.]) it seems silly to create this level of complexity, especially when no one is likely to coin URIs for each possible value of {{{dcterms:RightsStatement}}} and when a simple literal value would suffice.  
+
+However, following the model described in [#1.3.4.3._dcterms:type_(AC,_DwC;_range:_rdfs:Class_) section 1.3.4.3.], this could be written more succinctly as 
+{{{
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/kirchoff/em2132">
+     <dcterms:rights rdf:parseType="Resource">
+          <dcterms:created>2011</dcterms:created>
+          <rdf:value>(c) 2011 Bruce K. Kirchoff</rdf:value>
+     </dcterms:rights>
+</rdf:Description>
+}}}
 
 ====1.3.4.5. {{{dcterms:language}}} (AC, DwC; range: {{{dcterms:LinguisticSystem}}})====
 
@@ -353,7 +374,18 @@ This diagram shows that the property [http://dublincore.org/documents/dcmi-terms
      </dcterms:format>
 </dctype:Text>
 }}}
-Note that this introduces a blank node in the absence of a well-recognized URI for media types.  DCMI defines a URI for the Internet Media Type vocabulary encoding scheme but it is not clear how to indicate other format description systems such as file extensions like {{{.jpg}}}, {{{.gif}}}, etc.  Alternatively, the term {{{dc:format}}} could be used with a literal object.
+Note that this introduces a blank node in the absence of a well-recognized URI for media types.  DCMI defines a URI for the Internet Media Type vocabulary encoding scheme but it is not clear how to indicate other format description systems such as file extensions like {{{.jpg}}}, {{{.gif}}}, etc. 
+
+Again, as was done in [#1.3.4.3._dcterms:type_(AC,_DwC;_range:_rdfs:Class_) section 1.3.4.3.], the RDF could be written more succinctly as:
+{{{
+<dctype:Text rdf:about="http://example.org/document.html">
+     <dcterms:format rdf:parseType="Resource">
+          <dcam:memberOf rdf:resource="http://purl.org/dc/terms/IMT"/>
+          <rdf:value>text/html</rdf:value>
+     </dcterms:format>
+</dctype:Text>
+}}}
+Alternatively, the term {{{dc:format}}} could be used with a literal object.
 
 ====1.3.4.8. {{{dcterms:extent}}} (AC; range: {{{dcterms:SizeOrDuration}}}====
 
@@ -380,8 +412,16 @@ Note: {{{dcterms:extent}}} is a subproperty of {{{dcterms:format}}} while {{{dct
      </dcterms:format>
 </rdf:Description>
 }}}
+As in [#1.3.4.3._dcterms:type_(AC,_DwC;_range:_rdfs:Class_) section 1.3.4.3.], the RDF could be written more succinctly as:
+{{{
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/04005#tn">
+     <dcterms:format rdf:parseType="Resource">
+          <rdf:value>70 x 100 px</rdf:value>
+     </dcterms:format>
+</rdf:Description>
+}}}
 
-There seems to be little value in creating this level of complexity, especially when no one is likely to coin URIs for each possible value of {{{dcterms:MediaTypeOrExtent}}}.  Also, given the lack of a standardized syntax encoding scheme or vocabulary encoding scheme, clients would have little guidance in interpreting the value.
+There seems to be little value in creating this level of complexity (i.e. creating blank nodes), especially when no one is likely to coin URIs for each possible value of {{{dcterms:MediaTypeOrExtent}}}.  Also, given the lack of a standardized syntax encoding scheme or vocabulary encoding scheme, clients would have little guidance in interpreting the value.
 
 The strategy of utilizing terms with specific kinds of literal objects seems more beneficial for RDF, e.g. 
 {{{
