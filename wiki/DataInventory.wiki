@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Links to data sources and SPARQL endpoints
 
 == Introduction ==
 
@@ -6,6 +6,6 @@ In response to [http://lists.tdwg.org/pipermail/tdwg-tag/2011-September/002381.h
 
 == Biodiversity RDF datasets and other semantic web infrastructure == 
 
-  * taxonconcept.org http://www.taxonconcept.org/sparql-endpoint/ This SPARQL endpoint has 23 million triples and includes some other related databases.  I don't know if this is too many to load in the sandbox.  Perhaps some queries could be done directly on that endpoint or subsets of the data could be loaded into our sandbox to play with.  Anyway, the list on the page includes some of the datasets we should probably be looking at in addition to taxonconcept.org itself: namely the Global Name Initiative (GNI), DBpedia, geonames, etc.
+  * taxonconcept.org http://www.taxonconcept.org/sparql-endpoint/ This SPARQL endpoint has 23 million triples and includes some other related databases. Queries can be done directly on that endpoint at http://lsd.taxonconcept.org/sparql for a generic web interface and at http://lsd.taxonconcept.org/isparql for a human-friendly interface.  Datasets include the Global Name Index (GNI), DBpedia, geonames, etc. in addition to Pete's taxonconcept.org database.  The Bioimages images and IndividualOrganism datasets are also loaded into the triplestore, so queries based on Darwin-SW can also be tested here.
   * Natural Solutions virtuoso triple store: so far we have put in Rod's datasets on frogs.http://82.96.149.133:8890/sparql
 Feel Free to play with the sparql interface.
