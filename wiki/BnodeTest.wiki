@@ -198,7 +198,7 @@ WHERE {
 The purpose of this query was to display the type of the book's author.  If the type of dcterms:creator is not known, the book will not be listed.  Note that the predicate is a fake - CONSTRUCT doesn't care!
 {{{
 CONSTRUCT {
-?book dctype:authorType ?class.
+?book dcterms:authorType ?class.
 } 
 WHERE {
   ?author a ?class.
