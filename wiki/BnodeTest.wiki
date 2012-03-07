@@ -139,7 +139,7 @@ I tried these on FireFox, Opera, IE, Chrome, and Safari.
 
 FireFox and Opera ask to open the first query with a helper application (text or RDF editor) so if you don't want to bother doing that, skip to the second query and you can see the results directly in the browser window.  IE, Safari, and Chrome wanted to use a helper application for all of them.  So if you don't want to configure an editor use either FireFox or Opera for the minimum time and annoyance.  
 
-The queries were performed on the dataset http://bioimages.vanderbilt.edu/rdf/examples/bnode-test.rdf loaded into the TG sandbox at http://tdwg-rdf.net/store2/ .  Apparently the sandbox can only parse XML, so if you want to load Turtle or N3, you will have to convert it first.
+The queries were performed on the dataset http://bioimages.vanderbilt.edu/rdf/examples/bnode-test.rdf loaded into the TG sandbox at http://tdwg-rdf.net/store2/ .  Apparently the sandbox can only parse XML, so if in the future you want to experiment and have created RDF in Turtle or N3, you will have to convert it to XML first.  I used rdfEditor http://www.dotnetrdf.org/content.asp?pageID=rdfEditor on a Windows platform to make the conversions.
 
 All queries use the following prefixes:
 {{{
