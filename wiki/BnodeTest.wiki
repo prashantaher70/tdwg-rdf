@@ -135,6 +135,12 @@ _:autos4 a <http://purl.org/dc/terms/Agent>;
 }}}
 
 =SPARQL queries=
+I tried these on FireFox, Opera, IE, Chrome, and Safari. 
+
+FireFox and Opera ask to open the first query with a helper application (text or RDF editor) so if you don't want to bother doing that, skip to the second query and you can see the results directly in the browser window.  IE, Safari, and Chrome wanted to use a helper application for all of them.  So if you don't want to configure an editor use either FireFox or Opera for the minimum time and annoyance.  
+
+The queries were performed on the dataset http://bioimages.vanderbilt.edu/rdf/examples/bnode-test.rdf loaded into the TG sandbox at http://tdwg-rdf.net/store2/
+
 All queries use the following prefixes:
 {{{
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -142,9 +148,10 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 }}}
-The queries were performed on the dataset http://bioimages.vanderbilt.edu/rdf/examples/bnode-test.rdf loaded into the TG sandbox at http://tdwg-rdf.net/store2/
+Replace the default text in the box with this text, then skip a line and enter the queries below one at at time.
+
 ==query 1==
-The purpose of this query was to see if all books can be found.
+The purpose of this query was to see if all books can be found.  
 {{{
 SELECT ?book 
 WHERE {
@@ -152,7 +159,7 @@ WHERE {
 } 
 }}}
 ==query 2==
-The purpose of this query was to construct a list of author names.
+The purpose of this query was to construct a list of author names.  
 {{{
 CONSTRUCT {
 ?author rdf:value ?name.
