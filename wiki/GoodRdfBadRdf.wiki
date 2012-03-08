@@ -150,3 +150,41 @@ PREFIX dctype: <http://purl.org/dc/dcmitype/>
 
 Replace the default text in the box with this text, then skip a line and enter the queries below one at at time. 
 ==query 1==
+The purpose of this query is to see how the {{{dcterms:creator}}} is listed.
+{{{
+CONSTRUCT {
+?book dcterms:creator ?author.
+} 
+WHERE {
+  ?book dcterms:creator ?author.
+  ?book dcterms:isPartOf <http://example.org/bookSeries1>.
+} 
+}}}
+Result same whether inferencing is turned on or not: bnode ID given for document 5, URIs for documents 6 and 8, literal given for document 9.  
+
+==query 2==
+The purpose of this query is to find out what the SPARQL query will say is the class is of the author.  Note: the constructed triples are nonsense because the predicate is not a property.  However, the predicate serves to identify the book associated with the author.
+{{{
+CONSTRUCT {
+?class ?book ?author.
+} 
+WHERE {
+  ?author a ?class.
+  ?book dcterms:creator ?author.
+  ?book dcterms:isPartOf <http://example.org/bookSeries1>.
+} 
+}}}
+Result without inferencing: documents 6 and 8 identified as type {{{dcterms:Agent}}} because of the XML container element name.  With inferencing: documents 5, 6, 8, and 9 are identified as type {{{dcterms:Agent}}} with documents 5 and 9 inferred from the range of {{{dcterms:creator}}}.  Note that the reasoner has no problem inferring that the literal object of the {{{dcterms:creator}}} of document 9 is an instance of the {{{dcterms:Agent}}} class.  The reasoner does not give {{{rdfs:Literal}}} as the class of the literal object of the {{{dcterms:creator}}} of document 9.  
+
+==query 3==
+The purpose of this query is to figure out what triples are inferred to have {{{dc:creator}}} as a predicate.
+{{{
+CONSTRUCT {
+  ?book dc:creator ?author.
+} 
+WHERE {
+  ?book dc:creator ?author.
+  ?book dcterms:isPartOf <http://example.org/bookSeries1>.
+} 
+}}}
+Result with inferencing off: the two documents which have explicit {{{dc:creator}}} predicates are given.  With inferencing turned on the result is the same.  Despite the fact that "4sr reasons over ... subProperty", it does not seem to infer {{{dc:creator}}} triples from triples containing {{{dcterms:creator}}} even though the definition of {{{dcterms:creator}}} in RDF states that {{{dcterms:creator rdfs:subPropertyOf dc:creator}}}.
