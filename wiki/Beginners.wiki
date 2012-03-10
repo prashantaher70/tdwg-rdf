@@ -4,7 +4,7 @@ http://bioimages.vanderbilt.edu/pages/tdwg-logo.png  [http://www.tdwg.org/ http:
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 4 March 2012
+*Date:* (Created) 17 February 2012; (Last modified) 10 March 2012
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
