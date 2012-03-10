@@ -166,7 +166,9 @@ See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 
 [http://www.validome.org/rss-atom/ RSS validator (also XML validation)]
 
-[http://owl.cs.manchester.ac.uk/validator/ OWL Validator]
+[http://owl.cs.manchester.ac.uk/validator/ Manchester OWL Validator]
+
+[http://www.mygrid.org.uk/OWL/Validator WonderWeb OWL Ontology Validator]
 
 [http://bioguid.info/status/ Rod Page's "Status of Biodiversity Services" checker (takes a long time to run so be patient)]
 
