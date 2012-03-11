@@ -4,7 +4,7 @@ http://bioimages.vanderbilt.edu/pages/tdwg-logo.png  [http://www.tdwg.org/ http:
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 10 March 2012
+*Date:* (Created) 17 February 2012; (Last modified) 11 March 2012
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -120,7 +120,7 @@ Thanks to Rod Page and Chris Freeland for this information.
 
 [https://docs.google.com/a/nescent.org/document/d/1XzdsjCfPylcyOoNtDfAgz15HwRdCD-0e0ixh21_U0y0/edit?hl=en_US W3C Interest Group note: Mapping and linking life science data using RDF] (Thanks to Hilmar Lapp for providing the link.) 
 
-[http://www.w3.org/egov/wiki/Linked_Environment_Data Early draft of expressing Darwin Core taxonomies in SKOS]
+[http://www.w3.org/egov/wiki/Linked_Environment_Data Early draft of expressing Darwin Core taxonomies in SKOS] (Thomas Bandholtz)
 
 ===0.3.3. Related to the Dublin Core Metadata Initiative (DCMI) Abstract Model===
 [http://dublincore.org/documents/abstract-model/ DCMI Abstract Model (DCAM) specification]   ([http://dublincore.org/documents/abstract-model/#sect-5 Relationship between DCAM and RDFS])
