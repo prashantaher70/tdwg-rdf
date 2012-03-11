@@ -12,6 +12,8 @@ A BoF at iEvoBio2011 [http://www.piratepad.net/iEvoBio11-BoF-reportouts discusse
 = Competency questions =
 For some examples of competency questions, see http://www.w3.org/TR/rdf-dawg-uc/
 
+For an explanation of what "competency question" means, see http://marinemetadata.org/references/competencyquestionsoverview .
+
 Terms in *_bold italic_* represent the GUID that would appear in a query.
 
 === Darwin Core (including proposed new classes) ===
