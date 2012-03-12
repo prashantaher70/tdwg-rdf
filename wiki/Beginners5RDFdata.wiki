@@ -165,7 +165,7 @@ Within the individual {{{rss:channel}}} and {{{rss:item}}} descriptions, the {{{
 Although an RSS document reduces the number of documents which a crawler would need to dereference to update its store of information about a database, a single RSS document would be too large to index more than a few thousand resources.  One option would be to have several RSS documents, but even this would be problematic for an RDF database that contained millions of triples.  
 
 ===5.3.2. Serving data from large databases===
-If a database is large, it is not practical to convert those data to static documents, nor is it practical for a consuming application to receive those data in the form of XML documents which must be parsed.  
+If a database is large, it is not practical to convert those data to static documents, nor is it practical for a consuming application to receive those data in the form of XML documents which must be parsed.  The [http://www.w3.org/2001/sw/rdb2rdf/ W3C RDB2RDF Working Group] has produced a [http://www.w3.org/TR/r2rml/ Candidate Recommendation] Relational Database to RDF mapping language called R2RML.  This language is for "expressing customized mappings from relational databases to RDF datasets. Such mappings provide the ability to view existing relational data in the RDF data model, expressed in a structure and target vocabulary of the mapping author's choice."  The working group provides [http://www.w3.org/TR/2010/WD-rdb2rdf-ucr-20100608/#uc use cases and examples]. 
 
 ====5.3.2.1. Serving data from an existing relational database as RDF====
 It is possible to implement an interface which allows a traditional relational database to serve RDF metadata.  
