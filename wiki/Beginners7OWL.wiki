@@ -71,6 +71,9 @@ Meanings can be assigned to ontologies through OWL in two ways: OWL DL and OWL F
 
 There is an additional version of OWL known as OWL Lite.  [#9_OWL_Lite_Feature_Synopsis (9)]  It consists of a subset of the terms available in OWL DL and OWL Full.  It is less expressive but easier to implement and does provide useful terms for describing relationships that are not available in RDFS.
 
+=== 7.4.2. OWL language profiles===
+There are three profiles which restrict the expressiveness of OWL in order to achieve efficiency under different circumstances.  For example, OWL EL is intended to be useful in circumstances where there are many properties or classes,  OWL QL is intended to be useful in applications with large amounts of instance data where query answering is the primary reasoning task.  For more on these profiles, see http://www.w3.org/TR/owl-profiles/
+
 ==7.5. How does one create an OWL ontology?==
 
 Because of the complexity of OWL, OWL-based ontologies are nearly always constructed using a software tool called an ontology editor.  The most widespread is Protégé [#10_Prot%C3%A9g%C3%A9_ontology_editor (10)] which is free and open source, although other editors are available.  [#11_OWL_tools (11)]  The _Protégé OWL Tutorial_ [#12_A_Practical_Guide_To_Building_OWL_Ontologies_Using_Prot%C3%A9g%C3%A9 (12)] is a straightforward guide for using Protégé, with examples.  
