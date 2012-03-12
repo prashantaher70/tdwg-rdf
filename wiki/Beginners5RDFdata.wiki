@@ -180,6 +180,8 @@ Triplifier [#17_Triplifier (17)] is being developed by the !BiSciCol project (ht
 
 ezDBDB [#18_ezDBDB (18)] converts metadata from simple data sources like spreadsheets into RDF and provides an opportunity to cache the resulting data in a triplestore and make it available to the LOD cloud. 
 
+Bio2RDF Description at http://dx.doi.org/10.1016/j.jbi.2008.03.004 "documents from public bioinformatics databases such as Kegg, PDB, MGI, HGNC and several of NCBI’s databases can now be made available in RDF format through a unique URL in the form of {{{http://bio2rdf.org/namespace:id}}}"
+
 ====5.3.2.2. Loading RDF data into a triple store====
 There are a number of applications [#19_Wikipedia_article_on_triplestore (19)] which permit the storage of RDF as raw triples.  Triple stores are relatively efficient at storing large amounts of data [#20_Large_triplestores (20)] to the range of hundreds of billions to trillions of triples.  They are also efficiently queried using the SPARQL query language.  The total number triples available can be increased if the store also infers triples based on properties such as {{{owl:sameAs}}}, {{{rdfs:subClassOf}}}, {{{owl:TransitiveProperty}}} which relate explicitly declared triples. See [#7.6.4._Statements_of_equivalence_in_OWL section 7.6.4.] and [#7.6.5._OWL_property_characteristics section 7.6.5.] for more on these OWL properties.
 
@@ -329,6 +331,11 @@ http://sig.ma/search
 
 Can't be accessed through a web browser, but see http://pingthesemanticweb.com/api.php for setting up an interface. 
 
+*The Data Hub*
+
+Operated by the Open Knowledge Foundation, the Data Hub is an index of useful sets of data on the Internet.  They do not all provide RDF, but publishing the URI of a site index file there makes it possible for your RDF to be "discovered".
+
+http://thedatahub.org/
 
 
 =References=
