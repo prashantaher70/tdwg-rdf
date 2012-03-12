@@ -144,6 +144,8 @@ Thanks to Rod Page and Chris Freeland for this information.
 
 [http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools]
 
+[http://www.amazon.com/Semantic-Web-Working-Ontologist-Second/dp/0123859654/ Allemang and Hendler Semantic Web for the Working Ontologist, Second Edition: Effective Modeling in RDFS and OWL (not available online)]
+
 ===0.3.5. Software tools===
 [http://www.dotnetrdf.org/content.asp?pageID=rdfEditor rdfEditor (syntax highlighting, validates and converts)]
 
