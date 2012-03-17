@@ -4,7 +4,7 @@ http://bioimages.vanderbilt.edu/pages/tdwg-logo.png  [http://www.tdwg.org/ http:
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 11 March 2012
+*Date:* (Created) 17 February 2012; (Last modified) 17 March 2012
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -205,13 +205,15 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 [http://dublincore.org/documents/dcmi-terms/ Dublin Core (DC) terms] ([http://dublincore.org/2010/10/11/dcterms.rdf in RDF]) ([http://dublincore.org/documents/dcmi-type-vocabulary/ type vocabulary])  ([http://dublincore.org/2010/10/11/dctype.rdf in RDF])
 
-[http://www.w3.org/2003/01/geo/ Basic Geo WGS84 lat/long (GEO) Vocabulary] ([http://www.w3.org/2003/01/geo/wgs84_pos in RDF])
-
 [http://xmlns.com/foaf/spec/ FOAF Vocabulary Specification 0.98] ([http://xmlns.com/foaf/spec/index.rdf in RDF])
+
+[http://www.w3.org/2003/01/geo/ Basic Geo WGS84 lat/long (GEO) Vocabulary] ([http://www.w3.org/2003/01/geo/wgs84_pos in RDF])
 
 [http://id.loc.gov/ Library of Congress Authorities and Vocabularies: ISO639 languages, MARC countries and geographic areas] (Use view page source: [http://id.loc.gov/vocabulary/iso639-1.rdf ISO639], [http://id.loc.gov/vocabulary/geographicAreas.rdf MARC geographic areas], etc. in RDF)
 
 [http://ecowlim.tfri.gov.tw/lode/resource/eco/ Linked Open Data of Ecology (LODE) vocabulary] ([http://ecoinformatics.tfri.gov.tw/ternwork/member Ecoinformatics Working Group of the TFRI])
+
+[http://id.loc.gov/vocabulary/relators.html MARC (Library of Congress) Relators list (terms are subPropertyOf dc:contributor and possibly other dc:terms)]  see also [http://dublincore.org/usage/documents/relators/ MARC Relator terms and Dublin Core]
 
 [http://www.tdwg.org/standards/312/ Natural Collections Descriptions (NCD) draft TDWG Standard] ([http://bioimages.vanderbilt.edu/pages/NCD-v090_TDWG-NonNormative.pdf PDF non-normative document viewable in browser]) ([http://bioimages.vanderbilt.edu/pages/NCD-v090_TDWG-Normative.pdf PDF normative document viewable in browser]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Collection.rdf Collection in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Institution.rdf Institution in RDF]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/InstitutionType.rdf InstitutionType in RDF]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/ContactDetails.rdf ContactDetails in RDF])
 
