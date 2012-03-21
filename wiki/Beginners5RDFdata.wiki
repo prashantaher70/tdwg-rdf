@@ -63,7 +63,7 @@ in N3:
 }}}
 In graphical form:
 
-http://bioimages.vanderbilt.edu/pages/rdf-related-resource-links.jpg
+http://tdwg-rdf.googlecode.com/svn/trunk/file/rdf-related-resource-links.jpg
 
 From this information, we know that the resource has two types: {{{owl:Class}}}[#6_owl:Class (6)] and {{{txn:SpeciesConcept}}} (where {{{owl:}}} is an abbreviation for {{{ http://www.w3.org/2002/07/owl# }}} and {{{txn:}}} is an abbreviation for {{{http://lod.taxonconcept.org/ontology/txn.owl#}}}).  
 
@@ -89,7 +89,7 @@ The description of the species concept contains a triple which says that the res
 
 In graphical form this can be represented as:
 
-http://bioimages.vanderbilt.edu/pages/rdf-terms-related-to-vocabulary.jpg
+http://tdwg-rdf.googlecode.com/svn/trunk/file/rdf-terms-related-to-vocabulary.jpg
 
 Resources which are part of a dataset and described in separate documents can be backlinked to a file which describes the dataset using the {{{void:inDataset}}} property.  This method is described in [#5.3.3._Providing_information_about_what_data_are_available_using section 5.3.3.]
 
