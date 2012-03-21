@@ -105,11 +105,11 @@ The table below contains the same six triples, but using the namespace abbreviat
 ===3.3.2. Graphical representation===
 The following diagram shows the triples represented in graphical form using the unabbreviated URIs.
 
-http://bioimages.vanderbilt.edu/pages/rdf-graph-example.jpg
+http://tdwg-rdf.googlecode.com/svn/trunk/file/rdf-graph-example.jpg
  
 The diagram is more compact if namespaces are abbreviated:
 
-http://bioimages.vanderbilt.edu/pages/simplified-rdf-graph-example.jpg
+http://tdwg-rdf.googlecode.com/svn/trunk/file/simplified-rdf-graph-example.jpg
 
 The convention for graphical representations of RDF are:
   * URIs are represented as ovals
