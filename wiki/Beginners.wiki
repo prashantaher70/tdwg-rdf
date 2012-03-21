@@ -1,6 +1,6 @@
 #summary Beginner's guide to RDF: Introduction
 
-http://bioimages.vanderbilt.edu/pages/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
+http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
 =Beginner's Guide to RDF=
 
@@ -75,11 +75,11 @@ See also a list of [http://www.w3.org/DesignIssues/ design issues] intended to a
 
 [http://httpd.apache.org/docs/current/rewrite/ Apache mod_rewrite (URL rewriting)]
 
-[http://www.tdwg.org/standards/150/ GUID Applicability Statement - Current TDWG Standard]  ([http://bioimages.vanderbilt.edu/pages/guid-applicability-final-2011-01.pdf click here for PDF viewable via browser])
+[http://www.tdwg.org/standards/150/ GUID Applicability Statement - Current TDWG Standard]  ([http://tdwg-rdf.googlecode.com/svn/trunk/file/guid-applicability-final-2011-01.pdf click here for PDF viewable via browser])
 
 [http://www.gbif.org/orc/?doc_id=2428 A Beginner's Guide to Persistent Identifiers] published by the [http://www.gbif.org/ Global Biodiversity Information Facility(GBIF)]
 
-[http://www.tdwg.org/standards/150/ Life Sciences Identifiers Applicability Statement - Current TDWG Standard]   ([http://bioimages.vanderbilt.edu/pages/LSID%20AS_2011_01_final.pdf click here for PDF viewable via browser])
+[http://www.tdwg.org/standards/150/ Life Sciences Identifiers Applicability Statement - Current TDWG Standard]   ([http://tdwg-rdf.googlecode.com/svn/trunk/file/LSID%20AS_2011_01_final.pdf click here for PDF viewable via browser])
 
 [http://www.ibm.com/developerworks/opensource/library/os-lsidbp/ LSID Best Practices]
 
