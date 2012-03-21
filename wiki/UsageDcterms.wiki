@@ -25,6 +25,8 @@ dcterms:identifier
 Note: these examples refer to "real" subject resources and the statements made by the triples are generally true.  However, the RDF associated with the example subject resources may not actually contain the triples given in the examples.  
 
 ==Example of plain literals with language tags==
+http://tdwg-rdf.googlecode.com/svn/trunk/file/dcterms-title.png
+
 ===RDF/XML===
 {{{
 <?xml version="1.0" encoding="utf-8"?>
@@ -49,6 +51,8 @@ xmlns:dcterms="http://purl.org/dc/terms/"
 }}}
 
 ==Example using a typed literal==
+http://tdwg-rdf.googlecode.com/svn/trunk/file/dcterms-modified.png
+
 ===RDF/XML===
 {{{
 <?xml version="1.0" encoding="utf-8"?>
@@ -88,7 +92,9 @@ This list also includes terms that do not have declared ranges, but which are in
 ||dcterms:description||(none)||
 
 ==Example with URI reference only==
-Notes: 
+http://tdwg-rdf.googlecode.com/svn/trunk/file/dcterms-type.png
+
+*Notes:*
 
 In this example, the object resource identified by the URI is described by RDF which is external to the RDF that describes the subject resource.
 
@@ -120,7 +126,9 @@ xmlns:dcterms="http://purl.org/dc/terms/"
 
 
 ==Example with URI reference and optional value string==
-Notes: 
+http://tdwg-rdf.googlecode.com/svn/trunk/file/dcterms-language.png
+
+*Notes:*
 
 The DCAM value string is specified using the predicate {{{rdf:value}}} which does not have a specified meaning in RDF, but which has been given a meaning in the context of the DCAM, i.e. the object of {{{rdf:value}}} is a string which can represent the subject resource. (11)
 
@@ -156,7 +164,9 @@ xmlns:dcam="http://purl.org/dc/dcam/"
 }}}
 
 ==Example with a blank node==
-Note: {{{dcterms:IMT}}} is the vocabulary encoding scheme URI for Internet Media Types
+http://tdwg-rdf.googlecode.com/svn/trunk/file/dcterms-format.png
+
+*Note:* {{{dcterms:IMT}}} is the vocabulary encoding scheme URI for Internet Media Types
 
 ===RDF/XML===
 {{{
@@ -187,7 +197,9 @@ xmlns:dcam="http://purl.org/dc/dcam/"
 }}}
 
 ==Alternative which uses {{{dc:format}}} rather than {{{dcterms:format}}}==
-Note: although this RDF is simpler than the previous example, the value of {{{dc:format}}} is an untyped string with no indication of the vocabulary encoding scheme.  So it provides less information to clients about how to interpret the value.
+http://tdwg-rdf.googlecode.com/svn/trunk/file/dc-format.png
+
+*Note:* although this RDF is simpler than the previous example, the value of {{{dc:format}}} is an untyped string with no indication of the vocabulary encoding scheme.  So it provides less information to clients about how to interpret the value.
 
 ===RDF/XML===
 {{{
@@ -211,7 +223,9 @@ xmlns:dc="http://purl.org/dc/elements/1.1/"
 }}}
 
 ==Example where a Dublin Core property describes a resource which is also described by other well-known terms==
-Notes:
+http://tdwg-rdf.googlecode.com/svn/trunk/file/dcterms-creator.png
+
+*Notes:*
 The value of {{{dcterms:creator}}} has both a value URI and a value string in accordance with the DCAM.  However, the object resource is also described using a term from the FOAF vocabulary ({{{foaf:name}}}) and typed as a {{{foaf:Person}}}.  The object is also typed as a {{{dcterms:Agent}}}.  This could be inferred from the range of {{{dcterms:creator}}}, but the {{{rdf:type}}} is given explicitly for the benefit of clients which might have limited capabilities for reasoning.  
 Stating that the {{{dcterms:creator}}} is also the {{{foaf:maker}}} of the document is unnecessary for clients which can perform more complex reasoning since the definition of {{{dcterms:creator}}} states that it is an equivalent property to {{{foaf:maker}}}.(12)  However, there may be a benefit in doing so anyway for the benefit of clients that cannot infer triples based on equivalent properties. 
 
