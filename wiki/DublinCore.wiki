@@ -1,8 +1,10 @@
 #summary Dublin Core in RDF
 
+For a brief summary of this document see [UsageDcterms usage notes on dcterms: terms]
+
 <h1>Dublin Core in RDF</h1>
 
-Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Created: 2012-02-24; Modified: 2012-03-06
+Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Created: 2012-02-24; Modified: 2012-03-22
 
 *Table of Contents:*
 
