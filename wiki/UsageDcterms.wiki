@@ -1,8 +1,12 @@
 #summary Usage Note - dcterms: terms
 
-<h1>Use of terms in the {{{dcterms:}}} namespace</h1>
+[UsageNotes return to list of usage notes]
 
-This page is still under construction.  Please don't cite or link yet.
+<h1>Usage Note: Terms in the {{{dcterms:}}} namespace</h1>
+
+*Date:* (Created) 17 February 2012; (Last modified) 17 March 2012
+
+*Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf] (TDWG RDF/OWL Task Group)
 
 *Table of Contents*
 <wiki:toc max_depth="2" />
@@ -18,7 +22,9 @@ Historically, some terms in the legacy ({{{dc:}}}) Dublin Core namespace (1) hav
 The DCMI Abstract Model (DCAM) was developed to formalize components used in Dublin Core metadata and it described how those components are combined to create information structures. (3)  In the DCAM, the object resource of a property is called a "value".  Values are broken down into two categories.  _Literal values_ are encoded by string literals and _non-literal values_ are physical, digital or conceptual entities which may be identified by URIs.  The guidelines for "Expressing Dublin Core metadata using the Resource Description Framework (RDF)" describe how the abstract DCAM should be expressed as RDF. (4)  The notes associated with those guidelines for expressing Dublin Core metadata as RDF clarify that the Dublin Core RDF encoding specification supports RDF triple patterns where the object is a string literal representing the resource and RDF triples where the object is a URI reference (or blank node) which identifies the resource as an entity, but "bases the choice of one form over the other on the range of a property. A property with a 'literal' range will follow the former pattern, while a property with a 'non-literal' range will follow the latter." (5)  Terms in the {{{dcterms:}}} namespace (6) were in some cases assigned ranges that were {{{rdfs:Literal}}} (7) or a non-literal Dublin Core class, and in other cases declared to be intended to be used with non-literal values that were instances of unspecified classes. (8)  Terms in the {{{dc:}}} namespace were left without a specified range, so using any {{{dc:}}} term with a literal object would be appropriate under the DCMI guidelines.  
 
 =3. Notes for metadata consumers=
-Although the human-readable guidelines for expressing terms in the {{{dcterms:}}} namespace in RDF specify that terms with non-literal ranges should have objects that are URI references (or blank nodes), nothing in the formal semantics of RDF requires that the class {{{rdfs:Literal}}} must be disjoint from other classes whose instances are typically represented by URI references.(9)  Thus if a metadata provider specifies a literal object for a term from the {{{dcterms:}}} namespace having a non-literal range, the object will simply be implied to have {{{rdf:type}}} which is the class in the range declaration. (10)  
+Although the human-readable guidelines for expressing terms in the {{{dcterms:}}} namespace in RDF specify that terms with non-literal ranges should have objects that are URI references (or blank nodes), nothing in the formal semantics of RDF requires that the class {{{rdfs:Literal}}} be disjoint from other classes whose instances are typically represented by URI references.(9)  Thus if a metadata provider specifies a literal object for a term from the {{{dcterms:}}} namespace having a non-literal range, the object will simply be implied to have {{{rdf:type}}} which is the class in the range declaration. (10)  
+
+Because there are few (if any) mechanisms to enforce the DCMI guidelines which suggest whether literals should or should not be used with particular terms, application programmers and metadata aggregators should be prepared to deal with RDF which does not follow those guidelines.  
 
 =4. Some terms in the {{{dcterms:}}} namespace which have declared literal ranges and usage examples=
 {{{
@@ -82,7 +88,7 @@ xmlns:dcterms="http://purl.org/dc/terms/"
 <http://bioimages.vanderbilt.edu/baskauf/10849.rdf> dcterms:modified "2011-08-12T06:32:43"^^<http://www.w3.org/2001/XMLSchema#dateTime>.
 }}}
 
-=5. Some terms which have declared non-literal ranges=
+=5. Some terms in the {{{dcterms:}}} namespace which have declared non-literal ranges=
 This list also includes terms that do not have declared ranges, but which are intended to be used with non-literal values.
 
 ||term||range||
