@@ -281,7 +281,13 @@ xmlns:foaf="http://xmlns.com/foaf/0.1/">
                                              foaf:maker <http://lod.taxonconcept.org/ontology/people.owl#Peter_J_DeVries>.
 }}}
 
-=6. References=
+=6. Examples in the wild=
+Biodiversity Collections Index example of [http://www.biodiversitycollectionsindex.org/collection/rdf/id/12599  RDF for http://biocol.org/urn:lsid:biocol.org:col:12599] which uses Dublin Core terms from the {{{dc:}}} namespace exclusively.  
+
+HTTP-proxied DOIs dereferenced as RDF (by !CrossRef). The RDF can't be downloaded directly as a file.  Go to [http://www.w3.org/RDF/Validator/ the W3C RDF validator] and enter {{{http://dx.doi.org/10.1525/auk.2009.09022}}} into the "Check by URI" box.  This example uses {{{dcterms:identifier}}}, {{{dcterms:title}}}, and {{{dcterms:creator}}}.  In the case of {{{dcterms:creator}}}, the agents are typed as {{{foaf:Person}}} and are described using {{{foaf:}}} properties.  {{{rdf:value}}} is not used.
+
+
+=7. References=
 (1) dc: = {{{http://purl.org/dc/elements/1.1/}}}, see http://dublincore.org/documents/dces/
 
 (2) See http://wiki.foaf-project.org/w/UsingDublinCoreCreator for a discussion of the term {{{dc:creator}}} in this context.
