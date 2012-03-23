@@ -69,7 +69,7 @@ The range declarations of the terms in the {{{dcterms:}}} namespace were intende
 
 For example, the term {{{dcterms:bibliographicCitation}}} has the range [http://www.w3.org/2000/01/rdf-schema#Literal rdfs:Literal].  Thus it is expected that the object of a triple using this property as a predicate would be a string literal.   
 
-Likewise DCMI does not intend for a term from {{{dcterms:}}} namespace which has a non-literal range in an RDF triple having a literal object.  For example, it would not be appropriate to make the statement 
+Likewise DCMI does not intend for a term from {{{dcterms:}}} namespace which has a non-literal range in an RDF triple to have a literal object.  For example, it would not be appropriate to make the statement 
 {{{
 http://dbpedia.org/resource/The_Starry_Night  dcterms:creator  "Vincent van Gogh"
 }}} 
@@ -222,7 +222,7 @@ The section "Literal values of properties without Literal ranges" describes the 
      </dcterms:creator>
 </bibo:Webpage>
 }}}
-However, given that {{{rdf:value}}} is considered optional in the DCAM and has no particular meaning other than as a convenience for creating structured values (see the discussion in [#1.1.4.3._The_value_string_of_a_non-literal_value_surrogate section 1.1.4.3.]), it would seem better to express the agent's name using a more meaningful property like {{{foaf:name}}}, e.g. 
+However, given that use of {{{rdf:value}}} seems to be somewhat limited and that the value string is considered optional in the DCAM (see also the discussion in [#1.1.4.3._The_value_string_of_a_non-literal_value_surrogate section 1.1.4.3.]), it may be desirable to express the agent's name using a well-known property like {{{foaf:name}}} instead of or in addition to {{{rdf:value}}}, e.g. 
 {{{
 <bibo:Webpage rdf:about="http://lod.taxonconcept.org/ses/dwAmr.html">
      <dcterms:creator>
