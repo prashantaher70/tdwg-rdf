@@ -1,0 +1,22 @@
+#summary RDF/OWL Usage Notes - index
+
+http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
+
+<h1>RDF/OWL Usage Notes</h1>
+
+*Date:* (Created) 22 March 2012; (Last modified) 22 March 2012
+
+*Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
+
+*Permanent URL:* http://code.google.com/p/tdwg-rdf/wiki/UsageNotes
+
+*TDWG Task Group:* [http://code.google.com/p/tdwg-rdf/ TDWG RDF/OWL Task Group]
+
+*Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=UsageNotes Steve Baskauf] (TDWG RDF/OWL Task Group)
+
+*Abstract:* This is a series of documents which are intended to provide information about the application of RDF in particular circumstances.  They also include examples.  The usage notes are not best-practices documents because they do not necessarily represent a consensus view of the Task Group.  However, over time they may evolve into best practice documents.  
+
+http://i.creativecommons.org/l/by/3.0/88x31.png All documents in this series are licensed under a [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
+
+==List of usage notes==
+[UsageDcterms Terms in the dcterms: namespace]
