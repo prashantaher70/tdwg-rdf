@@ -4,7 +4,7 @@
 
 <h1>Usage Note: Terms in the {{{dcterms:}}} namespace</h1>
 
-*Date:* (Created) 17 February 2012; (Last modified) 17 March 2012
+*Date:* (Created) 2012-02-17; (Last modified) 2012-03-17
 
 *Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf] (TDWG RDF/OWL Task Group)
 
