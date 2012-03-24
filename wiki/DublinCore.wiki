@@ -615,9 +615,15 @@ Under this scenario, people just use {{{dcterm:}}} properties which have non-lit
 
 ==2.4. Possible courses of action where users may be inclined to use terms having literal ranges with non-literal objects==
 
-The problem here is with {{{dcterms:identifier}}} in Audubon Core and the "ID" terms of Darwin Core.  
-
-[http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:identifier Audubon Core] suggests using any kind of globally unique string, including a "GUID-number" (UUID?) which would not necessarily refer to a non-literal value.  The Audubon Core problem could be fixed by changing the namespace to {{{dc:identifier}}}, although it is not clear whether Audubon Core intends for the identifier to simply refer to a string or to effectively serve as an object property.  
+[http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:identifier Audubon Core] suggests using {{{dcterms:identifier}}} with URIs (i.e. "http-URL, and lsid-URI") that are typically used as URI references in RDF.  There isn't necessarily any problem with this as long as metadata providers understand that this requires expressing the identifiers as literals:
+{{{
+<dcterms:identifier>urn:lsid:biocol.org:col:15574</dcterms:identifier>
+}}}
+rather than
+{{{
+<dcterms:identifier rdf:resource="urn:lsid:biocol.org:col:15574"/>
+}}}
+if the intent of the DCMI RDF guidelines are to be followed.
 
 In the RDF definitions of the DwC ID terms, they are declared to be {{{rdfs:subPropertyOf dcterms:identifier}}} which has a range of {{{rdfs:Literal}}}.  See [#1.3.2.4._dcterms:identifier_(AC) section 1.3.2.4.] for more details.
 
