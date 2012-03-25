@@ -71,7 +71,7 @@ The [http://pedantic-web.org/ Pedantic Web] group is concerned with the quality 
 ===0.3.1. Related to Uniform Resource Identifier (URI) and GUID/Persistent Identifier===
 [http://tools.ietf.org/html/rfc3986 RFC 3986. Uniform Resource Identifier (URI): Generic Syntax]  ([http://tools.ietf.org/html/rfc3986#section-1.2.2 section 1.2.2. defining "dereference", "resolution", and "representation"])
 
-[http://tools.ietf.org/html/rfc3987 Internationalized Resource Identifiers (IRIs)]
+[http://tools.ietf.org/html/rfc3987 RFC 3987. Internationalized Resource Identifiers (IRIs)]
 
 [http://www.w3.org/TR/cooluris/ Cool URIs for the Semantic Web]
 
