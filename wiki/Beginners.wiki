@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 17 March 2012
+*Date:* (Created) 17 February 2012; (Last modified) 25 March 2012
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -66,8 +66,12 @@ The document [http://www4.wiwiss.fu-berlin.de/bizer/pub/linkeddatatutorial/ How 
 
 See also a list of [http://www.w3.org/DesignIssues/ design issues] intended to avoid repetition of discussions once resolved.
 
+The [http://pedantic-web.org/ Pedantic Web] group is concerned with the quality of RDF data and has created a list of [http://pedantic-web.org/fops.html Frequently Observed Problems on the Web of Data].
+
 ===0.3.1. Related to Uniform Resource Identifier (URI) and GUID/Persistent Identifier===
 [http://tools.ietf.org/html/rfc3986 RFC 3986. Uniform Resource Identifier (URI): Generic Syntax]  ([http://tools.ietf.org/html/rfc3986#section-1.2.2 section 1.2.2. defining "dereference", "resolution", and "representation"])
+
+[http://tools.ietf.org/html/rfc3987 Internationalized Resource Identifiers (IRIs)]
 
 [http://www.w3.org/TR/cooluris/ Cool URIs for the Semantic Web]
 
@@ -153,10 +157,14 @@ Thanks to Rod Page and Chris Freeland for this information.
 
 [http://protege.stanford.edu/ Protégé ontology editor] ([http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ guide])
 
+[http://clarkparsia.com/pellet Pellet OWL Reasoner]
+
 See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 
 ===0.3.6. Web interfaces===
 [http://validator.linkeddata.org/vapour Vapour Linked Data Validator for examining the dereferencing process for a URI]
+
+[http://linkeddata.informatik.hu-berlin.de/uridbg/ URI Debugger to dereference URIs and visualize the HTTP response of the server]
 
 [http://darwin.zoology.gla.ac.uk/~rpage/lsid/tester/ Rod Page's LSID tester]
 
@@ -175,6 +183,8 @@ See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 [http://owl.cs.manchester.ac.uk/validator/ Manchester OWL Validator]
 
 [http://www.mygrid.org.uk/OWL/Validator WonderWeb OWL Ontology Validator]
+
+[http://www.mindswap.org/2003/pellet/demo.shtml Mindswap OWL Consistency Checker]
 
 [http://bioguid.info/status/ Rod Page's "Status of Biodiversity Services" checker (takes a long time to run so be patient)]
 
