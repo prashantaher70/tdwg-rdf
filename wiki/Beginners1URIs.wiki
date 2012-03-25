@@ -53,6 +53,9 @@ In 2002, a controversy arose whether it was acceptable for an HTTP URI to repres
 
 From this decision, a general consensus arose that in the case of a non-information resource identified by an HTTP URI, it was a best practice to provide information about the resource (a "representation" [#12._Terminology_of_HTTP (12)] ) in the form requested by the user (e.g. in HTML if requested by a Web browser).  This can be done through a process called content negotiation. [#13._Content_Negotiation_in_HTTP (13)]  However, there are still many cases where an HTTP URI does not provide any information about the resource at all, or leads the user to information indirectly.  
 
+=== 1.2.3.  What is an IRI? ===
+An Internationalized Resource Identifier (IRI) is an identifier extends "the syntax of URIs to a much wider repertoire of characters".[#1.2.3.__What_is_an_IRI? (14)]  IRIs may contain unicode characters that are used in alphabets other than the Latin character set (A-Z) Since URIs are a subset of IRIs, in any application which uses IRIs can also use conventional URIs.   
+
 == 1.3  Examples ==
 Here are several examples of different types of resources identified by HTTP URIs which have various responses to an attempt to dereference the URI:
 
@@ -93,7 +96,7 @@ http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/CreditLine
 represents an abstract non-information resource: the credit line for a media item.  Entering this URI into a Web browser doesn't do anything.  In this case, attaching "{{{http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/}}}" to the term "{{{CreditLine}}}" simply makes the identifier globally unique but doesn’t actually make use of the HTTP protocol to do anything.
 
 ===1.4. Testing a URI===
-Vapour is a "Linked Data Validator" [#14._Vapour_Linded_Data_validator_for_checking_URIs (14)] which can be used to test whether a URI is dereferenceable and if it dereferences, to determine based on the server response whether the resource identified by the URI is an information resource or not. 
+Vapour is a "Linked Data Validator" [#15._Vapour_Linded_Data_validator_for_checking_URIs (15)] which can be used to test whether a URI is dereferenceable and if it dereferences, to determine based on the server response whether the resource identified by the URI is an information resource or not. 
 
 http://validator.linkeddata.org/vapour
 
@@ -155,7 +158,10 @@ http://tools.ietf.org/html/rfc2616#section-1.3
 Content negotiation is described at:
 http://tools.ietf.org/html/rfc2616#section-12
 
-===14. Vapour Linded Data validator for checking URIs=== 
+===14. RFC 3987. Internationalized Resource Identifiers (IRIs)===
+http://tools.ietf.org/html/rfc3987
+
+===15. Vapour Linked Data validator for checking URIs=== 
 http://validator.linkeddata.org/vapour
 
 -------------------
