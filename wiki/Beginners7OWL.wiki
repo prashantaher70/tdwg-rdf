@@ -210,6 +210,8 @@ Some reasoners which are available are listed at [#11_OWL_tools (11)].
 
 Another method of reasoning which uses rules to infer triples from an OBO ontology, followed by SPARQL queries is described in [http://bioinformatics.oxfordjournals.org/content/27/11/1562.abstract Blondé et al. 2011] ([http://dx.doi.org/10.1093/bioinformatics/btr164 doi: 10.1093/bioinformatics/btr164]).
 
+Hogan et al. describe a "system for performing rule-based forward-chaining reasoning which we call SAOR: Scalable Authoritative OWL Reasoner" at [http://www.deri.ie/fileadmin/documents/DERI-TR-2009-04-21.pdf].
+
 =References=
 ===1 FOAF Vocabulary Specification===
 http://xmlns.com/foaf/spec/
