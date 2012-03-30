@@ -1,4 +1,4 @@
-#summary Beginner's guide to RDF: Introduction
+b#summary Beginner's guide to RDF: Introduction
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
@@ -82,6 +82,8 @@ The [http://pedantic-web.org/ Pedantic Web] group is concerned with the quality 
 [http://www.tdwg.org/standards/150/ GUID Applicability Statement - Current TDWG Standard]  ([http://bioimages.vanderbilt.edu/pages/guid-applicability-final-2011-01.pdf click here for PDF viewable via browser])
 
 [http://www.gbif.org/orc/?doc_id=2428 A Beginner's Guide to Persistent Identifiers] published by the [http://www.gbif.org/ Global Biodiversity Information Facility(GBIF)]
+
+[https://www.idigbio.org/content/idigbio-guid-statement Integrated Digital Biocollections (iDigBio) GUID Statement]
 
 [http://www.tdwg.org/standards/150/ Life Sciences Identifiers Applicability Statement - Current TDWG Standard]   ([http://bioimages.vanderbilt.edu/pages/LSID%20AS_2011_01_final.pdf click here for PDF viewable via browser])
 
