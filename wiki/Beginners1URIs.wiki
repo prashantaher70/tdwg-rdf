@@ -150,6 +150,8 @@ http://tools.ietf.org/html/rfc2616
 This controversy became known as "httpRange-14" and is described at
 http://www.w3.org/2001/tag/issues.html#httpRange-14
 
+See also http://www.jenitennison.com/blog/node/168 for more discussion on the httpRange-14 issue.
+
 ===12. Terminology of HTTP===
 See definitions of "resource" and "representation" at
 http://tools.ietf.org/html/rfc2616#section-1.3
