@@ -257,6 +257,10 @@ http://protege.stanford.edu/
 
 http://www.w3.org/TR/owl2-primer/#OWL_Tools
 
+A commonly used reasoner is Pellet:
+
+http://clarkparsia.com/pellet ([http://clarkparsia.com/pellet/tutorial Pellet tutorial])
+
 ===12 A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools===
 
 http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/ 
