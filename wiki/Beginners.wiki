@@ -1,4 +1,4 @@
-b#summary Beginner's guide to RDF: Introduction
+#summary Beginner's guide to RDF: Introduction
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
