@@ -4,7 +4,7 @@ For a brief summary of this document see [UsageDcterms usage notes on dcterms: t
 
 <h1>Dublin Core in RDF</h1>
 
-Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Created: 2012-02-24; Modified: 2012-03-24
+Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Created: 2012-02-24; Modified: 2012-05-01
 
 *Table of Contents:*
 
@@ -13,6 +13,8 @@ Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Created: 2012-02-24; Mo
 =1. Use of Dublin Core terms in RDF=
 
 Note: whenever possible, examples use actual URIs or persistent identifiers.  Use of these identifiers does not imply endorsement of any particular organization or style of description.  In addition, although the statements made in the RDF examples are generally true, although they may or may not have actually been made in RDF which is returned when URI is dereferenced.
+
+The [http://wiki.dublincore.org/index.php/User_Guide DCMI User Guide] provides a general introduction to Dublin Core and has several examples of Dublin Core as RDF.
 
 ==1.1. Background==
 
@@ -64,7 +66,11 @@ The use of {{{rdf:value}}} as an integral component of the RDF implementation of
 
 In a manner similar to the value string, the vocabulary encoding scheme designation, which involves use of the {{{dcam:memberOf}}} predicate and which has a special place in the DCAM, may or may not have any special meaning to clients.  DCMI provides URIs for several well-known vocabulary encoding schemes at http://dublincore.org/documents/dcmi-terms/#H4 , however the lack of very many other defined URIs to use with this predicate might render the use of {{{dcam:memberOf}}} somewhat less useful than predicates such as {{{skos:inScheme}}} which may have broader implementation.  Of course, as with {{{rdf:value}}}, there would be no harm in providing a {{{dcam:memberOf}}} triple and having it simply be not understood by clients who do not ascribe to it the special meaning intended by the DCAM (i.e. part of the DCAM value surrogate).  
 
+A list of encoding schemes organized according to the terms whose values they interpret is at http://dublincore.org/documents/usageguide/qualifiers.shtml .  
+
 ==1.2. Implications of the domain, range, and subproperty declarations of terms in the {{{dcterms:}}} namespace==
+
+===1.2.1. Literal and non-literal range declarations===
 The range declarations of the terms in the {{{dcterms:}}} namespace were intended by DCMI to indicate whether particular properties should be associated with literal values or with non-literal values.  The notes associated with the guidelines for expressing Dublin Core metadata as RDF clarify that the Dublin Core RDF encoding specification supports RDF triple patterns where the object is a string literal representing the resource and RDF triples where the object is a URI reference (or blank node) which identifies the resource as an entity, but "bases the choice of one form over the other on the range of a property. A property with a 'literal' range will follow the former pattern, while a property with a 'non-literal' range will follow the latter." (http://dublincore.org/documents/2008/01/14/dc-rdf-notes/#sect-3)
 
 For example, the term {{{dcterms:bibliographicCitation}}} has the range [http://www.w3.org/2000/01/rdf-schema#Literal rdfs:Literal].  Thus it is expected that the object of a triple using this property as a predicate would be a string literal.   
@@ -78,6 +84,11 @@ because {{{dcterms:creator}}} has the range {{{dcterms:Agent}}} not {{{rdfs:Lite
 The intention behind these range declarations is described at http://dublincore.org/usage/decisions/2010/dcterms-changes/ .  The suggestion is made that implementers who wish to use terms with the "wrong" kind of value could use the corresponding term in the {{{dc:}}} namespace (unencumbered by a range declaration) or coin their own term.  
 
 Despite the intentions declared by DCMI, there is nothing in the formal semantics of RDFS to prohibit a term in the {{{dcterms:}}} namespace from being used with the "wrong" type of object.  Since there is no real way to enforce the "correct" type of object, application programmers should be prepared to deal with metadata where the providers have used terms with types of objects that were not intended by DCMI.  
+
+===1.2.2. Refinement and "Dumb-Down"===
+When the {{{dcterms:}}} namespace terms were created, a number of terms were designed to "refine" the original terms in the {{{dc:}}} namespace.  A "refined" term shares the meaning of the {{{dc:}}} term that it refines, but narrows the meaning and restricts the scope of the term.  "Refines" is a generic term for the relationship between a refined term and the term that it refines because the DCAM is a generic model.  When the DCAM is applied to RDF, the "refines" relationship becomes {{{rdfs:subPropertyOf}}} since every triple having the refined term as its predicate also implies a triple having the term it refines as the predicate.  The RDF definitions of {{{dcterms:}}} terms express "refines" relationships explicitly using {{{rdfs:subPropertyOf}}}.  A list of original Dublin Core terms and the terms that refine them are at http://dublincore.org/documents/usageguide/qualifiers.shtml .  
+
+There is an understanding that implementers may define their own terms which refine DCMI terms.  If an application does not "understand" a specialized refined term, it should be able to fall back on the broader meaning of the DCMI term which the specialized term refines.  This principle is known as the "Dumb-Down Principle".  In the context of RDF, the Dumb-Down Principle means that clients should be able to infer triples based on the subproperty relationships that are expressed in the refined term definitions.  The client should then be able to use the information contained in the inferred triples in lieu of "understaning" the specialized refined terms.  (See http://dublincore.org/documents/usageguide/qualifiers.shtml for an explanation of the Dumb-Down principle.)
 
 ==1.3. Specific examples of expressing Dublin Core metadata using RDF==
 DCMI provides some explicit guidelines for how to express Dublin Core metadata in RDF at http://dublincore.org/documents/dc-rdf/#sect-4 .  
@@ -337,7 +348,7 @@ A possible way to represent the language property in RDF which would conform to 
 }}}
 In this RDF example {{{http://id.loc.gov/vocabulary/iso639-1/en}}} is declared explicitly to be an {{{dcterms:LinguisticSystem}}} instance, although that could be inferred implicitly from the range of {{{dcterms:language}}}.  It could be questioned whether {{{http://id.loc.gov/vocabulary/iso639-1/en}}} is actually an instance of a linguistic system or if it represents an instance of a *label* for a linguistic system.  The RDF types {{{http://id.loc.gov/vocabulary/iso639-1/en}}} as "http://www.loc.gov/mads/rdf/v1#Authority" which is "A concept with a controlled label." and also as an {{{skos:Concept}}} so it is clearly a concept of something if not a concept of the language English.  To some extent this question may be moot since the URI gets the job done (i.e. identifies the intended language, provides labels for it, and connects equivalent labels).  
 
-The {{{rdf:datatype}}} attribute of {{{http://purl.org/dc/terms/RFC5646}}} used with the value string is a DCMI-created syntax encoding scheme URI for RFC 5646.
+The {{{rdf:datatype}}} attribute of {{{http://purl.org/dc/terms/RFC5646}}} used with the value string is a DCMI-created syntax encoding scheme URI for RFC 5646. See http://tools.ietf.org/html/rfc5646 which explains the relationship between RFC 5646 and ISO 639-2 / ISO 639-3 (http://www.loc.gov/standards/iso639-2/langhome.html and http://www.sil.org/iso639-3/) which have their own DCMI syntax encoding scheme URIs ({{{http://purl.org/dc/terms/ISO639-2}}} and {{{http://purl.org/dc/terms/ISO639-3}}}).
 
 In the example, the object of the triple containing {{{dcam:memberOf}}} declares {{{http://id.loc.gov/vocabulary/iso639-1}}} to be a {{{dcam:VocabularyEncodingScheme}}} ("An enumerated set of resources.").  One could argue about whether {{{http://id.loc.gov/vocabulary/iso639-1/en}}} is actually a member of any coding scheme, since it seems to represent the language English, not a code for English.  However, this could be said for any resource which is described using the DCAM - it's actually the literal object of {{{rdf:value}}} that is part of the coding scheme, not the actual subject of {{{dcam:memberOf}}}.  That just seems to be the way DCAM works.  Since the RDF describing {{{http://id.loc.gov/vocabulary/iso639-1}}} declares it to be both an instance of {{{skos:ConceptScheme}}} and {{{http://www.loc.gov/mads/rdf/v1#MADSScheme}}}, then it is reasonable to consider {{{http://id.loc.gov/vocabulary/iso639-1}}} to be a {{{dcam:VocabularyEncodingScheme}}} as well.  
 
@@ -395,7 +406,7 @@ Again, as was done in [#1.3.4.3._dcterms:type_(AC,_DwC;_range:_rdfs:Class_) sect
 }}}
 Alternatively, the term {{{dc:format}}} could be used with a literal object.
 
-====1.3.4.8. {{{dcterms:extent}}} (AC; range: {{{dcterms:SizeOrDuration}}}====
+====1.3.4.8. {{{dcterms:extent}}} (AC; range: {{{dcterms:SizeOrDuration}}})====
 
 [http://dublincore.org/documents/dcmi-terms/#terms-extent dcterms:extent] ([http://species-id.net/wiki/Audubon_Core_Term_List#dcterms:extent AC]) is defined as "the size or duration of the resource."  Little guidance is given about how to specify the units or encoding scheme.  
 
