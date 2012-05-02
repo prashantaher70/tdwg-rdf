@@ -212,6 +212,8 @@ Another method of reasoning which uses rules to infer triples from an OBO ontolo
 
 Hogan et al. describe a "system for performing rule-based forward-chaining reasoning which we call SAOR: Scalable Authoritative OWL Reasoner" at [http://www.deri.ie/fileadmin/documents/DERI-TR-2009-04-21.pdf].
 
+The principles of Referent Tracking, which can be used to represent and track "particulars" (instances which are based in objective reality), is discussed in [http://ceur-ws.org/Vol-249/submission_105.pdf Cuesters and Smith. 2007].  Referent Tracking is designed to support unique identifiers and reduce ambiguity with the ultimate goal of facilitating reasoning.
+
 =References=
 ===1 FOAF Vocabulary Specification===
 http://xmlns.com/foaf/spec/
@@ -223,6 +225,8 @@ http://www.plantontology.org/
 ===3 The Open Biological and Biomedical Ontologies===
 
 http://www.obofoundry.org/
+
+For unambiguous formal definitions of the primitive relationships used in OBO ontologies, see [http://genomebiology.com/2005/6/5/R46 Smith et al. 2005. Relations in biomedical ontologies. Genome Biology 6:R46]  doi:10.1186/gb-2005-6-5-r46
 
 ===4 OWL 2 Web Ontology Language Primer===
 OWL is a W3C Recommendation with a number of normative documents.  This particular document was designed for novices.
