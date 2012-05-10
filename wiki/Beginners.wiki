@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 2 May 2012
+*Date:* (Created) 17 February 2012; (Last modified) 10 May 2012
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -228,6 +228,8 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 [http://id.loc.gov/vocabulary/relators.html MARC (Library of Congress) Relators list (terms are subPropertyOf dc:contributor and possibly other dc:terms)]  see also [http://dublincore.org/usage/documents/relators/ MARC Relator terms and Dublin Core]
 
 [http://www.tdwg.org/standards/312/ Natural Collections Descriptions (NCD) draft TDWG Standard] ([http://bioimages.vanderbilt.edu/pages/NCD-v090_TDWG-NonNormative.pdf PDF non-normative document viewable in browser]) ([http://bioimages.vanderbilt.edu/pages/NCD-v090_TDWG-Normative.pdf PDF normative document viewable in browser]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Collection.rdf Collection in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Institution.rdf Institution in RDF]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/InstitutionType.rdf InstitutionType in RDF]) ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/ContactDetails.rdf ContactDetails in RDF])
+
+[http://www.openannotation.org/spec/core/ Open Annotation Core Data Model]
 
 [http://www.plantontology.org/ Plant Ontology (PO)] ([http://owlfiles.plantontology.org/ in RDF])
 
