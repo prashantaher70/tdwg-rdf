@@ -57,7 +57,7 @@ From this decision, a general consensus arose that in the case of a non-informat
 An Internationalized Resource Identifier (IRI) is an identifier extends "the syntax of URIs to a much wider repertoire of characters".[#1.2.3.__What_is_an_IRI? (14)]  IRIs may contain unicode characters that are used in alphabets other than the Latin character set (A-Z) Since URIs are a subset of IRIs, in any application which uses IRIs can also use conventional URIs.   
 
 == 1.3  Examples ==
-Here are several examples of different types of resources identified by HTTP URIs which have various responses to an attempt to dereference the URI:
+In this section there are several examples of different types of resources identified by HTTP URIs which have various responses to an attempt to dereference the URI. (For a detailed explanation of how content negotiation can be achieved using various forms of URIs, see the W3C document [http://www.w3.org/TR/swbp-vocab-pub/ Best Practice Recipes for Publishing RDF Vocabularies].) 
 
 === 1.3.1. Mosquito species (content negotiation) ===
 The HTTP URI 
