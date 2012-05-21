@@ -32,6 +32,8 @@ There is no requirement that a URI be dereferenceable and RDF statements can use
 
 ==5.2. Using a document served through URI dereferencing to facilitate discovery of metadata associated with the URI==
 
+Note: details regarding the mechanisms by which content negotiation is used retrieve RDF information by dereferencing a URI is described in detail in the [http://www.w3.org/TR/swbp-vocab-pub/ Best Practice Recipes for Publishing RDF Vocabularies].
+
 ===5.2.1. Getting the descriptive document.===
 The URI {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}} represents an abstract resource which is a species concept for _Apis melifera_, the European honeybee.  Because this identifier is an HTTP URI, a client (computer program) can use the HTTP protocol to dereference the identifier in an attempt to obtain information about the resource through the process described below.  The Vapour Linked Data Validator (http://validator.linkeddata.org/vapour) can be used to examine the details of this process.  
 
