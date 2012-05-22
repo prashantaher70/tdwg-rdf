@@ -132,6 +132,8 @@ Thanks to Rod Page and Chris Freeland for this information.
 
 [http://www.w3.org/egov/wiki/Linked_Environment_Data Early draft of expressing Darwin Core taxonomies in SKOS] (Thomas Bandholtz)
 
+[http://www.openannotation.org/spec/core/ Open Annotation Core Data Model] (for creating associations between distant pieces of information)
+
 ===0.3.3. Related to the Dublin Core Metadata Initiative (DCMI) Abstract Model===
 [http://dublincore.org/documents/abstract-model/ DCMI Abstract Model (DCAM) specification]   ([http://dublincore.org/documents/abstract-model/#sect-5 Relationship between DCAM and RDFS])
 
