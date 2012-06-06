@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 3 June 2012
+*Date:* (Created) 17 February 2012; (Last modified) 6 June 2012
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -92,6 +92,8 @@ The [http://pedantic-web.org/ Pedantic Web] group is concerned with the quality 
 [http://www.ibm.com/developerworks/opensource/library/os-lsidbp/ LSID Best Practices]
 
 [http://www.omg.org/cgi-bin/doc?dtc/04-05-01.pdf LSID Specification]
+
+[http://www.jbiomedsem.com/content/2/1/7 Jones et al. 2011. Identifying and relating biological concepts in the Catalogue of Life.] Journal of Biomedical Semantics 2011,2:7. doi:10.1186/2041-1480-2-7
 
 [http://www.ietf.org/rfc/rfc3987.txt RFC 3987. Internationalized Resource Identifiers (IRIs)]
 
