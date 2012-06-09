@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 6 June 2012
+*Date:* (Created) 17 February 2012; (Last modified) 9 June 2012
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -159,6 +159,8 @@ Thanks to Rod Page and Chris Freeland for this information.
 [http://www.amazon.com/Semantic-Web-Working-Ontologist-Second/dp/0123859654/ Allemang and Hendler Semantic Web for the Working Ontologist, Second Edition: Effective Modeling in RDFS and OWL (not available online)]
 
 [http://sw.deri.org/~aidanh/docs/rw_2011.pdf Hogan et al. 2011 Scalable OWL 2 Reasoning for Linked Data] 
+
+[http://sw.deri.org/~aidanh/ Link to Aidan Hogan's Ph.D. thesis "Exploiting RDFS and OWL for Integrating Heterogeneous, Large-Scale, Linked Data Corpora" and other OWL and RDF related links]
 
 [http://www.ontobee.org/ Ontobee web server for Ontologies]  Can be set up with PURL redirection to dereference ontology terms.  See [http://lists.tdwg.org/pipermail/tdwg-content/2012-May/002889.html this email] for further information.
 
