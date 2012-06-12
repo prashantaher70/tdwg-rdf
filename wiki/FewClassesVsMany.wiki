@@ -1,0 +1,54 @@
+#summary Under what circumstances is it more beneficial to use many classes vs. few in a model?
+
+= Under what circumstances is it more beneficial to use many classes vs. few in a model?=
+
+The eventual purpose of this page is to provide guidance for deciding whether it is more beneficial to create a model with many classes or few classes having many instances.  At this point I'm going to paste in some information from posts to the email list.  Hopefully somebody will take up the task of creating a more useful and user-friendly resource.
+
+== An approach the plays it both ways ==
+From Paul Murray's post of 1012-03-13:
+
+Once again, if you are interested in playing with more-or-less real data:
+
+At biodiversity.org.au, we produce TDWG Taxon Concept objects for our taxa. We *also* generate a class for each accepted taxon. Thus for taxon concept
+	http://biodiversity.org.au/apni.taxon/298605
+
+there also exists a uri
+	http://biodiversity.org.au/apni.taxon/298605#Instance
+
+which can be use to declare that something is-a Dodonaea viscosa. There are no type restrictions, so how you use it is up to you. 
+
+I also declare that something belonging to this class is the same as it having an "ibis:instanceOf" the taxon concept.
+
+Thus:
+ 	:my-specimen ibis:instanceOf <http://biodiversity.org.au/apni.taxon/298605>
+implies 
+ 	:my-specimen a <http://biodiversity.org.au/apni.taxon/298605#Instance>
+
+and the reverse. The use of a predicate external to other vocabularies is deliberate - it bypasses a variety of philosophical arguments over the meaning of basic terms in other vocabularies. When working with your data you can inform your reasoner that ibis:instanceOf is a subproperty of "is-a" in some other vocabulary, or not.
+
+What I *don't* include are subclassing rules that would imply a taxonomic tree - 
+
+	<http://biodiversity.org.au/apni.taxon/298605#Instance> is subclass of <http://biodiversity.org.au/apni.taxon/50016#Instance>
+
+I decided to not do this on the grounds that … well, I was concerned that including it might make things explode even if you are not trying to do things such as "what individuals are of type <Animalia#instance> ?".  However, the absence of these subclassing rules means that these classes don't really "do" anything much apart from being there. Sparql helps here - you can break the data up into silos by putting them in named graphs, and include the information that you want to use, as opposed to linked data which is all or nothing.
+
+As for the choice of "#Instance" for the URI: 
+ * I didn't want to create a whole new namespace for these classes,
+ * I wanted the taxon concept object and the taxon class to be paired, somehow
+ * I needed somewhere where I could put thousands of these things
+ * I did not want to "pun" the taxon URI itself
+
+It might be worthwhile putting the reflexive properties in, too, allowing reasoning over conditional property chains.
+
+Another consideration is distinguishing, somehow, between something being an instance of a taxon becuase it was identified as such, and something being an instance of a taxon because it was identified as being an instance of a  subtaxon. Let's call it "classified-as" rather than "instance-of" - which makes it clear that what is happening is the result of some classification.
+
+Thus:
+
+http://biodiversity.org.au/apni.taxon/298605#Instance is a subclass of http://biodiversity.org.au/apni.taxon/298605#ClassifiedTo
+http://biodiversity.org.au/apni.taxon/298605#ClassifiedTo  is a subclass of http://biodiversity.org.au/apni.taxon/50016#ClassifiedTo
+
+I don't need to explain that the classification in question is APC, because that taxon is an APC taxon.
+
+The separation of "instanceOf" and "classifiedTo" also means that "instanceOf" can be declared to be a functional property. When you need to get the taxon name for a specimen (or whatever), there is a property that will get you just one of them.
+
+Finally, in addition to adding the subclassing rules to the taxonomic tree, another thing that suggests itself is adding "disjoint classes" declarations. This becomes problematic in the case of hybrids, so some care will be needed. The declaration of "equivalent classes" between taxonomies that are in fact incompatible will result in a reasoner declaring that the ontology is inconsistent. Perhaps, ultimately, that's the pay-off: that's the bit that we would want an automated reasoner *for*.
