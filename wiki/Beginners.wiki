@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 11 June 2012
+*Date:* (Created) 17 February 2012; (Last modified) 14 June 2012
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -135,6 +135,8 @@ Thanks to Rod Page and Chris Freeland for this information.
 [http://www.w3.org/egov/wiki/Linked_Environment_Data Early draft of expressing Darwin Core taxonomies in SKOS] (Thomas Bandholtz)
 
 [http://www.openannotation.org/spec/core/ Open Annotation Core Data Model] (for creating associations between distant pieces of information)
+
+[http://www.w3.org/QA/2010/07/new_opportunities_for_linked_d.html Proposal for linking metadata to the web pages they describe]
 
 ===0.3.3. Related to the Dublin Core Metadata Initiative (DCMI) Abstract Model===
 [http://dublincore.org/documents/abstract-model/ DCMI Abstract Model (DCAM) specification]   ([http://dublincore.org/documents/abstract-model/#sect-5 Relationship between DCAM and RDFS])
