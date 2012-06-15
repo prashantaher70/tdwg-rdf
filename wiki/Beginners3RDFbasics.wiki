@@ -242,36 +242,36 @@ http://www.w3schools.com/rdf/default.asp
 ===1 Blank nodes.===
 Technically either the subject or the object can be a blank node which is not identified explicitly by a URI.  See http://www.w3.org/TR/rdf-primer/#structuredproperties for a description of blank nodes and their use.  It is generally considered a less-desirable practice to introduce blank nodes because it is not possible to link to them through external documents.  However, in some cases blank nodes are unavoidable if identifiers don't exist or if the creator of the RDF does not want to be responsible for minting and maintaining an identifier for the described resource.  
 
-===1a Typed literals.===
+===2 Typed literals.===
 An RDF literal object can be typed using an optional attribute within the predicate tag.  These include an optional XML language attribute ([http://www.w3.org/TR/REC-xml/#sec-lang-tag xml:lang], see also [http://www.ietf.org/rfc/rfc4646.txt RFC 4646] ) or RDF datatype ([http://www.w3.org/TR/rdf-concepts/#section-Datatypes rdf:datatype]).  Note: {{{xsd:}}} abbreviates {{{http://www.w3.org/2001/XMLSchema#}}}.  Presumably, any XML Schema defined datatype ( http://www.w3.org/TR/xmlschema-2/ ) such as [http://www.w3.org/TR/xmlschema-2/#dateTime xsd:dateTime] would be widely understood and appropriate for use with the {{{rdf:datatype}}} attribute.  It is also possible for users to define their own {{{rdf:datatype}}}, although it seems likely that only custom-designed consuming applications would know how to make use of this information. The guidelines for Dublin Core as RDF specify that the {{{rdf:datatype}}} can be specified by reference to a "syntax encoding scheme URI".  Dublin Core defines URIs for a number of commonly used schemes at http://dublincore.org/documents/dcmi-terms/#H5 .  
 
-===2 rdf:type===
+===3 rdf:type===
 The predicate {{{rdf:type}}} has special properties that are defined in the RDF schema:
 
 http://www.w3.org/TR/rdf-schema/#ch_type
 
 In particular, use of that predicate implies class membership for the subject resource.  However, there is not (yet) any standard list of types and classes which should be used with particular kinds of resources in our community.  Some of the classes which have been defined by our community are listed in [Beginners4Vocabularies#4.7.2._What_can_we_find_classes_to_use_in_rdf:type_statements? section 4.7.2.] of this guide.  The digital image in the example is typed as {{{dctype:StillImage}}} for illustrative purposes.  
 
-===3 Formal definition of the RDF model===
+===4 Formal definition of the RDF model===
 http://www.w3.org/TR/1999/REC-rdf-syntax-19990222/#model
 
-===4 Design goals of RDF===
+===5 Design goals of RDF===
 http://www.w3.org/TR/rdf-concepts/#section-simple-data-model
 
-===5 Graph data model of RDF===
+===6 Graph data model of RDF===
 http://www.w3.org/TR/rdf-concepts/#section-data-model
 
-===6 XML-based syntax===
+===7 XML-based syntax===
 http://www.w3.org/TR/rdf-concepts/#section-xml-serialization which references
 http://www.w3.org/TR/2004/REC-rdf-syntax-grammar-20040210/
 
-===7 W3C RDF Primer===
+===8 W3C RDF Primer===
 http://www.w3.org/TR/rdf-primer/
 
-===8 RDF Primer Reference section===
+===9 RDF Primer Reference section===
 http://www.w3.org/TR/rdf-primer/#references
 
-===9 w3schools.com RDF tutorial===
+===10 w3schools.com RDF tutorial===
 http://www.w3schools.com/rdf/default.asp
 
 
