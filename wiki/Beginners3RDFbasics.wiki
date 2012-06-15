@@ -58,7 +58,7 @@ The triple
 {{{
 kimage:ac1490  dcterms:created  "2010-09-01T03:41:31"
 }}}
-can be interpreted by a human to say that the image was created on 1 September 2010.  A computer would "know" this if it were programmed to recognize that the URI dcterms:created represented the creation date of a resource and if it were programmed to parse and interpret ISO 8601 formatted date strings.  Literals can also be _typed_ to indicate explicitly their language or datatype. [#1a_Typed_literals. (1a)] 
+can be interpreted by a human to say that the image was created on 1 September 2010.  A computer would "know" this if it were programmed to recognize that the URI dcterms:created represented the creation date of a resource and if it were programmed to parse and interpret ISO 8601 formatted date strings.  Literals can also be _typed_ to indicate explicitly their language or datatype. [#2_Typed_literals. (2)] 
 
 ===3.2.3. Example of a triple having a URI as its object===
 The triple
@@ -75,10 +75,10 @@ kimage:ac1490  dc:rights  "(c) 2011 Bruce K. Kirchoff"
 kimage:ac1490  rdf:type  dctype:StillImage
 }}}
 
-The first describes the copyright statement associated with the image.  The second statement uses a special predicate which is defined in the RDF specification for the specific purpose of indicating the kind of thing (the type) of the subject. [#2_rdf:type (2)]
+The first describes the copyright statement associated with the image.  The second statement uses a special predicate which is defined in the RDF specification for the specific purpose of indicating the kind of thing (the type) of the subject. [#3_rdf:type (3)]
 
 ==3.3. Serializations of RDF==
-RDF is a model for representing statements about properties of resources. [#3_Formal_definition_of_the_RDF_model (3)]  However, the RDF model is independent of any specific serialization syntax. [#4_Design_goals_of_RDF (4)]  What this means is that there are a number of methods of expressing the information that is contained in RDF triples and the information expressed by these methods is equivalent.  
+RDF is a model for representing statements about properties of resources. [#4_Formal_definition_of_the_RDF_model (4)]  However, the RDF model is independent of any specific serialization syntax. [#5_Design_goals_of_RDF (5)]  What this means is that there are a number of methods of expressing the information that is contained in RDF triples and the information expressed by these methods is equivalent.  
 
 The following examples will illustrate how the following information can be expressed in various serializations of RDF: "The still image having the identifier {{{kimage:ac1490}}} was made by {{{agents:kirchoff#coble}}} (a person named Ashley Coble) on 1 September 2010 at 3:41:31 AM.  It is copyright 2011 by Bruce K. Kirchoff."  
 
@@ -116,7 +116,7 @@ The convention for graphical representations of RDF are:
   * literals are represented as rectangles
   * predicates are represented as arrows pointing from the subject to the object.
 
-In the RDF model, a set of triples is referred to as a graph.  This is a general term and does not specifically refer to a graphical representation such as the one shown here.  The subjects and objects are referred to as nodes.  The predicates are referred to as arcs.  A graph represents the network of relationships that are described by all of the triples that are included in the set. [#5_Graph_data_model_of_RDF (5)]  
+In the RDF model, a set of triples is referred to as a graph.  This is a general term and does not specifically refer to a graphical representation such as the one shown here.  The subjects and objects are referred to as nodes.  The predicates are referred to as arcs.  A graph represents the network of relationships that are described by all of the triples that are included in the set. [#6_Graph_data_model_of_RDF (6)]  
 
 ===3.3.3. XML representation===
 
@@ -142,7 +142,7 @@ xmlns:foaf="http://xmlns.com/foaf/0.1/"
 </rdf:RDF>
 }}}
 
-Although RDF can be expressed in any of a number of serializations, XML has a special status.  The W3C specification for RDF specifically recommends XML as the form of serialization used for the exchange of information among applications. [#6_XML-based_syntax (6)]  Exchange of data using other serializations is not prohibited, but making RDF data available in XML is a best practice because it is widely understood.  XML serialization has been criticized as not easily "read" by humans, but since its primary purpose is information exchange among machines and since most RDF/XML will probably be generated automatically, this should not be a major impediment to its implementation.  There are converters (discussed in [#3.3.5._RDF_validation_and_conversion_from_one_serialization_to_a section 3.3.5.]) that can readily convert RDF/XML into other serializations.
+Although RDF can be expressed in any of a number of serializations, XML has a special status.  The W3C specification for RDF specifically recommends XML as the form of serialization used for the exchange of information among applications. [#7_XML-based_syntax (7)]  Exchange of data using other serializations is not prohibited, but making RDF data available in XML is a best practice because it is widely understood.  XML serialization has been criticized as not easily "read" by humans, but since its primary purpose is information exchange among machines and since most RDF/XML will probably be generated automatically, this should not be a major impediment to its implementation.  There are converters (discussed in [#3.3.5._RDF_validation_and_conversion_from_one_serialization_to_a section 3.3.5.]) that can readily convert RDF/XML into other serializations.
 
 In [#3.2.3._Additional_triple_examples section 3.2.3.] it was noted that the predicate {{{rdf:type}}} has the special role in RDF of indicating class membership.  As a shortcut method in RDF/XML, the XML container element for the object being described can be named as the class of which the described resource is an instance rather than using the generic {{{rdf:Description}}} container name.  When this is done, there is an implied {{{rdf:type}}} statement that is not shown in the actual XML but which exists and will be listed in any set of triples or shown in any graphical representation.  So the two XML snippets:
 
@@ -228,13 +228,13 @@ http://www.rdfabout.com/demo/validator/
 Links to this kind of tool are found in [Beginners#0.3.5._Software_tools section 0.3.5.] of this guide.
 
 ==3.4. Learn more about RDF==
-The W3C has a Recommendation known as the RDF Primer [#7_W3C_RDF_Primer (7)]
+The W3C has a Recommendation known as the RDF Primer [#8_W3C_RDF_Primer (8)]
 
 http://www.w3.org/TR/rdf-primer/
 
-which elaborates on the information provided here as well as covering a number of topics beyond the scope of this guide.  The References section [#8_RDF_Primer_Reference_section (8)] provides a comprehensive list of other informational resources related to RDF.  
+which elaborates on the information provided here as well as covering a number of topics beyond the scope of this guide.  The References section [#9_RDF_Primer_Reference_section (9)] provides a comprehensive list of other informational resources related to RDF.  
 
-The w3schools  website also provides an RDF tutorial [#9_w3schools.com_RDF_tutorial (9)] at
+The w3schools  website also provides an RDF tutorial [#10_w3schools.com_RDF_tutorial (10)] at
 
 http://www.w3schools.com/rdf/default.asp
 
