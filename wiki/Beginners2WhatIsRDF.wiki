@@ -168,7 +168,7 @@ http://www.tdwg.org/standards/147/
 is an unratified standard which prescribes how TDWG standards should be described.  In that specification, a normative (Type 1) document which forms part of a standard is tightly controlled and defines the standard.  A non-normative (Type 2) document is also tightly controlled but explains and justifies the standard rather than defining it.  Other documents (Type 3) may provide additional information to support the standard without actually forming a part of it.
 
 ===18 Darwin Core expressed in RDF/XML===
-Normative (I think) at http://rs.tdwg.org/dwc/rdf/dwcterms.rdf.  Directly browsable at http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf but not normative.
+Normative at http://rs.tdwg.org/dwc/rdf/dwctermshistory.rdf.  Directly browsable at http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctermshistory.rdf but not normative.
 
 -------------------
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
