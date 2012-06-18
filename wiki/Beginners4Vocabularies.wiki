@@ -264,235 +264,15 @@ not only does it assert that {{{kimage:ac1490}}} is an instance of {{{dctype:Sti
 ===4.7.2. What can we find classes to use in {{{rdf:type}}} statements?===
 The RDFS schema is silent about what constitutes appropriate classes or types in a particular situation.  Users are free to use any pre-existing types/classes or to define their own.  
 
-However, since the purpose of having classes seems to be to allow different users to know that they are both talking about the same kind of resource, it is a best practice to use well-known types rather than making up ad hoc types.[#24_Typing_using_well-known_vocabularies (24)]  The following sections list classes defined in some well-known vocabularies and ontologies.  In these lists, if a class is defined to be a subclass of another, that is noted. 
-====4.7.2.1.  Dublin Core classes [#25_Dublin_Core_classes (25)] ({{{dcterms: = http://purl.org/dc/terms/}}})====
-{{{
-Agent
-AgentClass  (subclass of itself???)
-BibliographicResource
-FileFormat  subclass of dcterms:MediaType
-Frequency
-Jurisdiction subclass of LocationPeriodOrJurisdiction
-LicenseDocument  subclass of RightsStatement
-LinguisticSystem
-Location  subclass of LocationPeriodOrJurisdiction
-LocationPeriodOrJurisdiction
-MediaType  subclass of MediaTypeOrExtent
-MediaTypeOrExtent
-MethodOfAccrual
-MethodOfInstruction
-PeriodOfTime  subclass of LocationPeriodOrJurisdiction
-PhysicalMedium  subclass of MediaType
-PhysicalResource
-Policy
-ProvenanceStatement
-RightsStatement
-SizeOrDuration  subclass of MediaTypeOrExtent
-Standard
-}}}
-====4.7.2.2.  Darwin Core classes [#16_Darwin_Core_Quick_Reference_Guide (16)]  ({{{dwc: = http://rs.tdwg.org/dwc/terms/}}})====
-{{{
-Occurrence
-Event
-dcterms:Location (note: references the Dublin Core class)
-GeologicalContext
-Identification
-Taxon
-ResourceRelationship
-MeasurementOrFact
-}}}
-====4.7.2.3.  FOAF classes [#26_FOAF_vocabulary (26)] ({{{foaf: = http://xmlns.com/foaf/0.1/}}})====
-{{{
-Agent
-Person subclass of Agent
-Project
-Organization subclass of Agent
-Group subclass of Agent
-Document
-Image subclass of Document
-OnlineAccount
-PersonalProfileDocument subclass of Document
-}}}
-====4.7.2.4.  Classes in the TDWG Ontologies [#27_TDWG_Ontology (27)]====
-This ontology defines many classes which to some degree correspond to the Darwin Core classes, although they are not explicitly declared to be the same as those classes.  The ontology consists of a number of classes and terms which are defined under their own namespaces.  Most of the classes are declared to be subclasses of other classes in the Base or Core Ontologies.  Unless otherwise stated, in the list below all are subclass of {{{base:BaseThing}}}.  The overall ontology is in an unfinished state.  Several of the individual ontology documents are apparently unfinished and therefore contain errors.  Those ontologies are noted.
-
-The Taxon Concept and Taxon Name Ontologies differ somewhat from the others in that their classes are not linked to the Base Ontology through subclassing.  So they essentially stand alone.  Although those ontologies are not TDWG standards, they are specifically designed to be an RDF representation of the Taxonomic Concept Transfer Schema standard [#28_Taxonomic_Concept_Transfer_Schema (28)] which itself is not expressed in RDF.
-
-The classes listed in the Collection Ontology represent classes from the Natural Collections Description (NCD) draft standard [#29_Natural_Collections_Descriptions_(NCD)_draft_TDWG_standard (29)].  The base URI of those classes ({{{http://rs.tdwg.org/ontology/voc/Collection#}}}) does not agree with the URIs used in the subproperty declarations for NCD terms in the Darwin Core RDF ({{{http://rs.tdwg.org/ncd/terms/}}}) which do not dereference.
-
-*Base Ontology (base: = {{{http://rs.tdwg.org/ontology/Base#}}}) *
-{{{
-BaseThing (not  subclass)
-Actor
-Space
-Name
-DefinedTerm
-MediaObject
-}}}
-*Core Ontology (core: = {{{http://rs.tdwg.org/ontology/Core#}}}) Note apparent error with Person subclassing*
-{{{
-ContactInformation
-Organisation subclass of base:Actor
-Collection
-Description
-Geolocalisation
-Person subclass of base:BaseActor ( is this an error?)
-Place
-PublicationCitation
-Specimen
-Concept
-Identification
-Team base:subclass of Actor
-Observation
-Gathering
-}}}
-*Collection Ontology (collection: = {{{http://rs.tdwg.org/ontology/voc/Collection#}}}) *
-{{{
-Collection  subclass of core:Collection
-DerivedCollection  subclass of collection:Collection
-DevelopmentStatusTypeTerm  subclass of base:DefinedTerm
-SpecimenPreservationMethodTypeTerm  subclass of base:DefinedTerm
-PrimaryPurposeTypeTerm subclass of base:DefinedTerm
-PrimaryGroupingPrincipleTypeTerm  subclass of base:DefinedTerm
-KingdomTypeTerm  subclass of base:DefinedTerm
-ConservationStatusTypeTerm  subclass of base:DefinedTerm
-}}}
-*Collection Type Ontology (collectiontype: = {{{http://rs.tdwg.org/ontology/voc/CollectionType#}}}) *
-{{{
-CollectionTypeTerm  subclass of base:DefinedTerm
-}}}
-*!ContactDetails Ontology (contact: = {{{http://rs.tdwg.org/ontology/voc/ContactDetails#}}}) *
-{{{
-ContactDetails
-Address
-ContactTypeTerm  subclass of base:DefinedTerm
-}}}
-*Cyclicity Terms Ontology (cycle: = {{{http://rs.tdwg.org/ontology/voc/CyclicityTerm#}}}) *
-{{{
-CyclicityTerm  subclass of base:DefinedTerm
-}}}
-*Digital Image Ontology (not functional: defines the ontology as {{{http://rs.tdwg.org/ontology/voc/ContactDetails}}} and is incomplete) *
-
-*Geographic Region Ontology (geographic: = {{{http://rs.tdwg.org/ontology/voc/GeographicRegion#}}}) *
-{{{
-GeographicRegion  subclass of base:DefinedTerm
-GeographicRegionLevel1Term  subclass of geographic:GeographicRegion
-GeographicRegionLevel2Term  subclass of geographic:GeographicRegion
-GeographicRegionLevel3Term  subclass of geographic:GeographicRegion
-GeographicRegionLevel4Term  subclass of geographic:GeographicRegion
-}}}
-*Institution Ontology (institution: = {{{http://rs.tdwg.org/ontology/voc/Institution#}}}) *
-{{{
-Institution
-}}}
-*Institution Type Ontology (institutiontype: = {{{http://rs.tdwg.org/ontology/voc/InstitutionType#}}}) *
-{{{
-InstitutionTypeTerm  subclass of base:DefinedTerm
-}}}
-*Occurrence Record Ontology (occurrence: = {{{http://rs.tdwg.org/ontology/voc/OccurrenceRecord#}}}) *
-{{{
-OccurrenceRecord
-Identification
-}}}
-*Occurrence Status Type Ontology (occurencestatus: = {{{http://rs.tdwg.org/ontology/voc/OccurrenceStatusTerm#}}}) *
-{{{
-OccurrenceStatusTerm  subclass of base:DefinedTerm
-AbsentOccurrenceStatusTerm  subclass of occurencestatus:OccurrenceStatusTerm
-PresentOccurrenceStatusTerm  subclass of occurencestatus:OccurrenceStatusTerm
-NativeOccurrenceStatusTerm  subclass of occurencestatus:OccurrenceStatusTerm
-IntroducedOccurrenceStatusTerm  subclass of occurencestatus:OccurrenceStatusTerm
-}}}
-*Person Ontology (person: = {{{http://rs.tdwg.org/ontology/voc/Person#}}}) *
-{{{
-Person  subclass of core:Person
-PersonNameAlias  subclass of  core:Name
-}}}
-*Procedure Ontology (not functional: defines the ontology as {{{http://rs.tdwg.org/ontology/voc/ContactDetails}}} and is incomplete) *
-
-*Publication Citation Ontology (pubcitation: = {{{http://rs.tdwg.org/ontology/voc/PublicationCitation#}}}) *
-{{{
-PublicationCitation  subclass of core:PublicationCitation
-PublicationTypeTerm  subclass of base:DefinedTerm
-}}}
-
-*Species Profile Model !InfoItems Ontology (labeled as "experimental"; contains about 38 classes to be used as a controlled vocabulary) *
-
-*Taxon Concept Ontology (taxonconcept: = {{{http://rs.tdwg.org/ontology/voc/TaxonConcept#}}}) *
-{{{
-TaxonConcept (no subclassing, declared equivalent to Taxon)
-Taxon (no subclassing, declared equivalent to TaxonConcept)
-}}}
-*Taxon Name Ontology (taxonname: = {{{http://rs.tdwg.org/ontology/voc/TaxonName#}}}) *
-{{{
-TaxonName (no subclassing)
-NomenclaturalType (no subclassing)
-NomenclaturalTypeTypeTerm (no subclassing)
-NomenclaturalNote (no subclassing)
-NomenclaturalNoteTypeTerm (no subclassing)
-NomenclaturalCodeTerm (no subclassing)
-}}}
-*Taxon Occurrence Ontology (taxonoccurrence: = {{{http://rs.tdwg.org/ontology/voc/TaxonOccurrence#}}}) *
-{{{
-TaxonOccurrence
-Identification
-BasisOfRecordTerm
-}}}
-*Interaction Ontology (interaction: = {{{http://rs.tdwg.org/ontology/voc/TaxonOccurrenceInteraction#}}}) *
-{{{
-TaxonOccurrenceInteraction (no subclassing) 
-InteractionTerm  subclass of base:DefinedTerm
-}}}
-*Taxon Rank Ontology (ontology incorrectly identified as {{{http://rs.tdwg.org/ontology/voc/TaxonName}}}) *
-{{{
-TaxonRankTerm  subclass of base:DefinedTerm
-}}}
-
-*Team Ontology (team: = {{{http://rs.tdwg.org/ontology/voc/Team#}}}) *
-{{{
-Team  subclass of core:Team
-TeamMember 
-}}}
-*Term with Source Ontology (ontology incorrectly identified as {{{http://rs.tdwg.org/ontology/voc/CollectionType}}}) *
-{{{
-TermWithSource
-}}}
-
+However, since the purpose of having classes seems to be to allow different users to know that they are both talking about the same kind of resource, it is a best practice to use well-known types rather than making up ad hoc types.[#24_Typing_using_well-known_vocabularies (24)]  The wiki page [ClassInventory ClassInventory] lists classes defined in some well-known vocabularies and ontologies.   
 
 ===4.7.3. Type vocabularies===
-Both Dublin Core [#30_DCMI_Type_Vocabulary (30)] and Darwin Core [#31_Darwin_Core_Type_Vocabulary (31)] define type vocabularies.  In the RDF which defines both of these vocabularies, each of the listed types is declared to be an {{{rdfs:Class}}}.  So as a practical matter, from the standpoint of RDF these terms are no different than the classes defined within the regular Dublin Core and Darwin Core term vocabularies.  
+Both Dublin Core [#25_DCMI_Type_Vocabulary (25)] and Darwin Core [#26_Darwin_Core_Type_Vocabulary (26)] define type vocabularies.  In the RDF which defines both of these vocabularies, each of the listed types is declared to be an {{{rdfs:Class}}}.  So as a practical matter, from the standpoint of RDF these terms are no different than the classes defined within the regular Dublin Core and Darwin Core term vocabularies.  The classes in the type vocabularies are also listed on the page [ClassInventory#2._Type_vocabularies ClassInventory].
 
-====4.7.3.1. DCMI Type Vocabulary classes ({{{dctype: = http://purl.org/dc/dcmitype/}}})====
-{{{
-Collection
-Dataset
-Event
-Image
-InteractiveResource
-MovingImage  subclass of dctype:Image
-PhysicalObject
-Service
-Software
-Sound
-StillImage  subclass of dctype:Image
-Text
-}}}
-====4.7.3.2. Darwin Core Type Vocabulary classes ({{{dwctype: = http://rs.tdwg.org/dwc/dwctype/}}})====
-{{{
-Occurrence
-dctype:Event (note: references the Dublin Core type)
-Location
-Taxon
-PreservedSpecimen
-FossilSpecimen
-LivingSpecimen
-HumanObservation
-MachineObservation
-NomenclaturalChecklist
-}}}
 
-====4.7.3.3. Why the DCMI and Darwin Core type vocabularies are defined separately from other terms====
+====4.7.3.1. Why the DCMI and Darwin Core type vocabularies are defined separately from other terms====
 
-These type vocabulary terms are defined separately from the classes defined in the general terms vocabularies because these terms are intended to be used as controlled values for other property terms in the respective vocabularies.  The DCMI Type Vocabulary provides a list of approved terms that may be used as controlled values for the {{{dcterms:type}}} property, while the Darwin Core Type Vocabulary "extends the DCMI Type Vocabulary and provides a list of approved values that may be used for the {{{dwc:basisOfRecord}}} term to identify the specific type of a resource." [#31_Darwin_Core_Type_Vocabulary (31)]  In the case of a Simple Darwin Core [#32_Simple_Darwin_Core (32)] serialization, values are expressed as text literals.  {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} can be used as field names in a text file with the literals from the type vocabularies given as values for that field in a record.  In Darwin Core XML [#33_Darwin_Core_XML_Guide (33)], the type values are expressed as string literal content of {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} elements.  
+These type vocabulary terms are defined separately from the classes defined in the general terms vocabularies because these terms are intended to be used as controlled values for other property terms in the respective vocabularies.  The DCMI Type Vocabulary provides a list of approved terms that may be used as controlled values for the {{{dcterms:type}}} property, while the Darwin Core Type Vocabulary "extends the DCMI Type Vocabulary and provides a list of approved values that may be used for the {{{dwc:basisOfRecord}}} term to identify the specific type of a resource." [#26_Darwin_Core_Type_Vocabulary (26)]  In the case of a Simple Darwin Core [#27_Simple_Darwin_Core (27)] serialization, values are expressed as text literals.  {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} can be used as field names in a text file with the literals from the type vocabularies given as values for that field in a record.  In Darwin Core XML [#28_Darwin_Core_XML_Guide (28)], the type values are expressed as string literal content of {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} elements.  
 
 In RDF, a type vocabulary term could be used as an object of {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} properties.  For example:
 {{{
@@ -504,7 +284,7 @@ However, as an {{{rdfs:Class}}} each of these type terms could also be used as t
 http://bioimages.vanderbilt.edu/kirchoff/ac1490  rdf:type  dctype:StillImage
 http://bioimages.vanderbilt.edu/specimen/ncu592805 rdf:type  dwctype:LivingSpecimen
 }}}
-The guidelines for expressing Dublin Core metadata as RDF [#34_Notes_on_semantics_of_Dublin_Core_as_RDF (34)] state that "It is recommended that RDF applications implementing this specification primarily use and understand {{{rdf:type}}} in place of dcterms:type when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of {{{rdf:type}}}."  It also notes that {{{dcterms:type}}} has semantics that are similar to {{{rdf:type}}}, but that the precise relationship between those properties is undecided.  There is no similar guideline for use of {{{dwc:basisOfRecord}}} vs. {{{rdf:type}}}, but using the same rationale, it would seem preferable to use {{{rdf:type}}} when Darwin Core is expressed in RDF.
+The guidelines for expressing Dublin Core metadata as RDF [#29_Notes_on_semantics_of_Dublin_Core_as_RDF (29)] state that "It is recommended that RDF applications implementing this specification primarily use and understand {{{rdf:type}}} in place of dcterms:type when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of {{{rdf:type}}}."  It also notes that {{{dcterms:type}}} has semantics that are similar to {{{rdf:type}}}, but that the precise relationship between those properties is undecided.  There is no similar guideline for use of {{{dwc:basisOfRecord}}} vs. {{{rdf:type}}}, but using the same rationale, it would seem preferable to use {{{rdf:type}}} when Darwin Core is expressed in RDF.
 
 Interestingly, Darwin Core includes two classes borrowed from Dublin Core: {{{dcterms:Location}}} as a class defined in the Darwin Core Terms vocabulary and {{{dctype:Event}}} in the Darwin Core Type vocabulary.  However, Darwin Core also defines classes {{{dwctype:Location}}} and {{{dwc:Event}}}.  Nothing in the RDF ties these similarly-named classes together, so a machine would not consider a resource with {{{rdf:type dctype:Event}}} to be an instance of the same class as another resource with {{{rdf:type dwc:Event}}}; likewise resources typed as {{{dcterms:Location}}} and {{{dwctype:Location}}} would be considered instances of different classes.  In a serialization where the types were expressed as text literals rather than URIs, they would simple be "{{{Event}}}" and "{{{Location}}}" and not differentiable.  
 
@@ -621,58 +401,25 @@ The TDWG GUID Applicability Standard
 http://www.tdwg.org/standards/150/
 states in Recommendation 11 that "Objects in the biodiversity domain that are identified by a GUID should be typed using the TDWG ontology or other well-known vocabularies in accordance with the TDWG common architecture."  Thus in our community, it is considered to be a best practice to use a well-known vocabulary.
 
-===25 Dublin Core classes===
-Human readable at http://dublincore.org/documents/dcmi-terms/#H6
-
-RDF at http://dublincore.org/2010/10/11/dcterms.rdf
-
-===26 FOAF vocabulary===
-Human readable at http://xmlns.com/foaf/spec/
-
-RDF at http://xmlns.com/foaf/spec/index.rdf
-
-===27 TDWG Ontology===
-Human readable at http://wiki.tdwg.org/twiki/bin/view/TAG/TDWGOntology
-
-RDF at: http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/
-
-===28 Taxonomic Concept Transfer Schema===
-http://www.tdwg.org/standards/117/
-
-===29 Natural Collections Descriptions (NCD) draft TDWG standard===
-Human readable http://www.tdwg.org/standards/312/
-
-RDF at 
-
-http://rs.tdwg.org/ontology/voc/Collection
-
-http://rs.tdwg.org/ontology/voc/Institution
-
-http://rs.tdwg.org/ontology/voc/InstitutionType
-
-http://rs.tdwg.org/ontology/voc/ContactDetails
-
-Use view page source to view RDF; however, a note at that page says management of the vocabulary is now at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/
-
-===30 DCMI Type Vocabulary===
+===25 DCMI Type Vocabulary===
 Human readable at http://dublincore.org/documents/dcmi-type-vocabulary/
 
 RDF at http://dublincore.org/2010/10/11/dctype.rdf
 
 See the section "The Vocabulary Encoding Scheme 'DCMI Type Vocabulary' and its member terms" at http://dublincore.org/usage/decisions/2008/dcterms-changes/#sect-2 for a history of the evolution of the DCMI Type vocabulary
 
-===31 Darwin Core Type Vocabulary===
+===26 Darwin Core Type Vocabulary===
 Human readable at http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm
 
 RDF at http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf
 
-===32 Simple Darwin Core===
+===27 Simple Darwin Core===
 http://rs.tdwg.org/dwc/terms/simple/index.htm
 
-===33 Darwin Core XML Guide===
+===28 Darwin Core XML Guide===
 http://rs.tdwg.org/dwc/terms/guides/xml/index.htm
 
-===34 Notes on semantics of Dublin Core as RDF===
+===29 Notes on semantics of Dublin Core as RDF===
 http://dublincore.org/documents/dc-rdf/#sect-5
 
 -------------------
