@@ -2,7 +2,7 @@
 
 = Inventory of Classes Relevant to Biodiversity Informatics =
 
-In [http://code.google.com/p/tdwg-rdf/issues/detail?id=3 Issue 3] it was requested that we create a list of classes and terms relevant to our community. Below is the beginnings of a list of classes organized according to their defining vocabulary.
+In [http://code.google.com/p/tdwg-rdf/issues/detail?id=3 Issue 3] it was requested that we create a list of classes and terms relevant to our community. Below is the beginnings of a list of classes organized according to their defining vocabulary.  In these lists, if a class is defined to be a subclass of another, that is noted.
 
 ==1. General class lists ==
 
@@ -264,4 +264,3 @@ http://rs.tdwg.org/ontology/voc/InstitutionType
 http://rs.tdwg.org/ontology/voc/ContactDetails
 
 Use view page source to view RDF; however, a note at that page says management of the vocabulary is now at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/
-
