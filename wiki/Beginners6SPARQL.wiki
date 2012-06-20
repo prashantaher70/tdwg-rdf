@@ -291,7 +291,7 @@ LIMIT 10
 }}}
 the species concept must represent a plant.  The constructed triples contain the same name string object as the object of the first triple pattern of the constraints.  
 
-There is no requirement that the values have to be in the same position as they were in the patterns used to do the screening and the constructed triples may contain values values that are not even present in the source graph.  For example in this query:
+There is no requirement that the values have to be in the same position as they were in the patterns used to do the screening and the constructed triples may contain values that are not even present in the source graph.  For example in this query:
 {{{
 CONSTRUCT { ?article dwc:articleTaxonName ?name }
 WHERE {
@@ -346,7 +346,7 @@ http://www.w3.org/TR/sparql11-query/
 for an exhaustive description of SPARQL queries.  
 
 ===6.6.2. SPARQL Web tutorials===
-The following is a list of some Web tutorials for learning SPARQL.  They have not been tested and are not endorsed by the TDWG-RDF group.  
+The following is a list of some Web tutorials for learning SPARQL.  They have not been vetted and their listing here does not imply the endorsement of the TDWG-RDF group.  
 
 http://www.cambridgesemantics.com/semantic-university/sparql-by-example
 
