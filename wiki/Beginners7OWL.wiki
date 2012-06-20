@@ -19,7 +19,7 @@ In [Beginners4Vocabularies#4.2._What_is_an_ontology? section 4.2.] it was noted 
 Ontologies can express how one term is related hierarchically to another, e.g. a class is a subclass of another, a class is broader than another, class x is {{{partOf}}} class y, etc.
 
 ===7.2.2. Characteristics of properties===
-Ontologies can define the characteristics of properties using terms that are well known to machines.  For example, a property can be the inverse of another, a property can be transitive, symmetric, or functional, etc.  _Annotation properties_ (e.g. {{{rdfs:label}}} can be applied as properties to describe the characteristics of other properties.  However, they cannot be used as a part of machine reasoning (since the machine would never know when it was finished).  
+Ontologies can define the characteristics of properties using terms that are well known to machines.  For example, a property can be the inverse of another, a property can be transitive, symmetric, or functional, etc.  _Annotation properties_ (e.g. {{{rdfs:label}}}) can be applied as properties to describe the characteristics of other properties.  However, they cannot be used as a part of machine reasoning (since the machine would never know when it was finished).  
 
 ===7.2.3. Properties with assumed types of values ===
 Properties can be defined to have values that are identifiable objects, or defined to have values that are literals.
@@ -57,13 +57,13 @@ Although the PO uses few properties to relate its terms, there are many terms.  
 The PO is an abstract model without a particular serialization, although it does have an OWL representation at http://owlfiles.plantontology.org/ .  
 
 ===7.3.3. !TaxonConcept Ontology (txn) ===
-This is a large and complex ontology that imports terms from other vocabularies and ontologies as well as coining new terms.  It is beyond the scope of this guide to describe the TaxonConcept ontology, but it can be explored at http://lod.taxonconcept.org/ontology/doc/index.html or by examining the raw RDF at http://lod.taxonconcept.org/ontology/txn.owl .
+This is a large and complex ontology that imports terms from other vocabularies and ontologies as well as coining new terms.  It is beyond the scope of this guide to describe the !TaxonConcept ontology, but it can be explored at http://lod.taxonconcept.org/ontology/doc/index.html or by examining the raw RDF at http://lod.taxonconcept.org/ontology/txn.owl .
 
 ==7.4. What is Web Ontology Language (OWL)?==
 
 Web Ontology Language (OWL) is a declarative language for expressing ontologies. [#4_OWL_2_Web_Ontology_Language_Primer (4)]  This means that it is used to describe a state of affairs in a domain of interest in a logical way. [#5_What_is_OWL_2? (5)]  It is a  knowledge representation language - it does not "do" anything in the sense that a computer language does something by providing instructions for the functioning of a computer.  However, applications called "reasoners" can infer information about the state of affairs by assessing statements made using the language of an OWL ontology.  
 
-An OWL ontology can be considered an abstraction and expressed in logical symbolism such as UML [#6_OMG_Unified_Modeling_Language_(UML) (6)].  However, OWL was designed so that ontologies could be expressed as RDF graphs, with a default exchange serialization of RDF/XML. [#7_OWL_2_Overview (7)]  As an RDF serialization, OWL is a more expressive extension of RDF than of its precursor RDFS or generic RDF.  However, this increased expressivity comes at the expense of increased complexity.
+An OWL ontology can be considered an abstraction and expressed in logical symbolism such as UML [#6_OMG_Unified_Modeling_Language_(UML) (6)].  However, OWL was designed so that ontologies could be expressed as RDF graphs, with a default exchange serialization of RDF/XML. [#7_OWL_2_Overview (7)]  As an RDF serialization, OWL is a more expressive extension of RDF than of its precursor RDFS ([Beginners4Vocabularies#4.4._RDF_Schema_and_the_relationship_of_the_DCMI_Abstract_Model section 4.4]) or generic RDF ([Beginners3RDFbasics#Beginner%27s_guide_to_RDF:_3._RDF_basics part 3]).  However, this increased expressivity comes at the expense of increased complexity.
 
 === 7.4.1. Varieties of OWL===
 
@@ -72,11 +72,11 @@ Meanings can be assigned to ontologies through OWL in two ways: OWL DL and OWL F
 There is an additional version of OWL known as OWL Lite.  [#9_OWL_Lite_Feature_Synopsis (9)]  It consists of a subset of the terms available in OWL DL and OWL Full.  It is less expressive but easier to implement and does provide useful terms for describing relationships that are not available in RDFS.
 
 === 7.4.2. OWL language profiles===
-There are three profiles which restrict the expressiveness of OWL in order to achieve efficiency under different circumstances.  For example, OWL EL is intended to be useful in circumstances where there are many properties or classes,  OWL QL is intended to be useful in applications with large amounts of instance data where query answering is the primary reasoning task.  For more on these profiles, see http://www.w3.org/TR/owl-profiles/
+There are three profiles which restrict the expressiveness of OWL in order to achieve efficiency under different circumstances.  For example, OWL EL is intended to be useful in circumstances where there are many properties or classes,  while OWL QL is intended to be useful in applications with large amounts of instance data where query answering is the primary reasoning task.  For more on these profiles, see http://www.w3.org/TR/owl-profiles/
 
 ==7.5. How does one create an OWL ontology?==
 
-Because of the complexity of OWL, OWL-based ontologies are nearly always constructed using a software tool called an ontology editor.  The most widespread is Protégé [#10_Prot%C3%A9g%C3%A9_ontology_editor (10)] which is free and open source, although other editors are available.  [#11_OWL_tools (11)]  The _Protégé OWL Tutorial_ [#12_A_Practical_Guide_To_Building_OWL_Ontologies_Using_Prot%C3%A9g%C3%A9 (12)] is a straightforward guide for using Protégé, with examples.  
+Because of the complexity of OWL, OWL-based ontologies are nearly always constructed using a software tool called an ontology editor.  The most widespread is Protégé [#10_Prot%C3%A9g%C3%A9_ontology_editor (10)] which is free and open source, although other editors are available.  [#11_OWL_tools (11)]  The _Protégé OWL Tutorial_ [#12_A_Practical_Guide_To_Building_OWL_Ontologies_Using_Prot%C3%A9g%C3%A9 (12)] is a straightforward guide (with examples) for using Protégé.  
 
 ==7.6. OWL basics==
 The namespace abbreviation for OWL terms is {{{owl: = http://www.w3.org/2002/07/owl#}}}
@@ -92,7 +92,7 @@ owl:Class rdfs:subClassOf rdfs:Class
 [#13_Axiomatic_Triples_for_the_Classes_of_the_OWL_2_RDF-Based_Voca (13)]  In OWL, there is a built-in most general class named {{{owl:Thing}}}.  All other OWL classes are automatically subclasses of {{{owl:Thing}}}.  In OWL, instances of classes are called _individuals_.  
 
 ====7.6.2.1. owl:!DisjointClasses====
-OWL allows any two classes to be declared _disjoint_, i.e. not allowable for an individual to be an instance of both classes.  Unless disjointness is declared explicitly, it is allowable for an individual to be simultaneously a member of two or more classes.  
+OWL allows any two classes to be declared _disjoint_, i.e. not allowable for an individual to be an instance of both classes.  Unless disjointness is declared explicitly, it is allowable for an individual to be simultaneously a member of any two (or more) classes.  
 
 ===7.6.3. Properties in OWL===
 In OWL, properties state relationships involving individuals, just as in RDFS properties state relationships involving instances of classes.  OWL defines two types of properties: {{{owl:ObjectProperty}}} which relates individuals to other individuals and {{{owl:DatatypeProperty}}} which relates individuals to data values (strings, numbers, etc.).  Both of these kinds of properties are {{{rdfs:subClassOf rdf:Property}}}.  
@@ -194,7 +194,19 @@ po:0020045 (pinnate leaf) is_a po:0009025 (vascular leaf)
 }}}
 
 ====7.6.5.3. owl:!FunctionalProperty====
-A property that is declared to be an {{{owl:FunctionalProperty}}} can have only one unique value as an object.  An example is {{{foaf:primaryTopic}}} which relates a document to the thing which its main topic.  A document is allowed to have only one {{{foaf:primaryTopic}}}.  Having more than one {{{foaf:primaryTopic}}} would cause a reasoner to detect an inconsistency.  
+A property that is declared to be an {{{owl:FunctionalProperty}}} can have only one unique value as an object.  An example is {{{foaf:primaryTopic}}} which relates a document to the thing which its main topic.  A document is allowed to have only one {{{foaf:primaryTopic}}}.  In a manner similar the OWL terms of equivalence, using owl:!FunctionalProperty can cause a reasoner to infer that individuals identified by different URIs are the same.  For example, if two triples using {{{foaf:primaryTopic}}} to describe the same subject resource have different objects, a reasoner would conclude that the resources identified by the object URIs are the same.  For example, if I state 
+{{{
+http://bioimages.vanderbilt.edu/baskauf/10998.rdf foaf:primaryTopic http://bioimages.vanderbilt.edu/baskauf/10998
+}}}
+(a true statement relating an RDF-formatted document to the image it describes), and if the following statement were also made (perhaps by mistake):
+{{{
+http://bioimages.vanderbilt.edu/baskauf/10998.rdf foaf:primaryTopic http://bioimages.vanderbilt.edu/ind-baskauf/10997
+}}}
+(that the primary topic of the document is the trees which are depicted in the image), then a reasoner would conclude
+{{{
+http://bioimages.vanderbilt.edu/baskauf/10998 owl:sameAs http://bioimages.vanderbilt.edu/ind-baskauf/10997
+}}}
+(i.e. the image is the same thing as the tree) and subsequently could conclude that all properties of the image also apply to the tree, e.g. the tree was a StillImage created by Steven J. Baskauf and that the image was a natualized IndividualOrganism.  For this reason functional properties (and inverse functional properties) should be used with caution.
 
 ====7.6.5.4. Other property characteristics====
 {{{owl:InverseFunctionalProperty}}} and {{{owl:SymmetricProperty}}} are two additional properties which can be used to describe the characteristics of properties more fully. [#9_OWL_Lite_Feature_Synopsis (9)] [#12_A_Practical_Guide_To_Building_OWL_Ontologies_Using_Prot%C3%A9g%C3%A9 (12)] 
