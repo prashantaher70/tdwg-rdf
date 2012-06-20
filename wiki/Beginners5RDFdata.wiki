@@ -37,7 +37,7 @@ Note: details regarding the mechanisms by which content negotiation is used retr
 ===5.2.1. Getting the descriptive document.===
 The URI {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}} represents an abstract resource which is a species concept for _Apis melifera_, the European honeybee.  Because this identifier is an HTTP URI, a client (computer program) can use the HTTP protocol to dereference the identifier in an attempt to obtain information about the resource through the process described below.  The Vapour Linked Data Validator (http://validator.linkeddata.org/vapour) can be used to examine the details of this process.  
 
-1. The client contacts the server {{{http://lod.taxonconcept.org}}} and requests the resource identified by {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}}.  In the request, the client will indicate its preference of form of response.  If the client is a web browser, it will request {{{content-type: text/html}}} [#5_Internet_media_types (5)].  If it is a semantic client it will request {{{content-type: application/rdf+xml}}}.
+1. The client contacts the server {{{http://lod.taxonconcept.org}}} and requests the resource identified by {{{http://lod.taxonconcept.org/ses/z9oqP#Species}}}.  In the request, the client may indicate its preference of form of response.  If the client is a web browser, it will request {{{content-type: text/html}}} [#5_Internet_media_types (5)].  If it is a semantic client it will request {{{content-type: application/rdf+xml}}}.
 
 2. The server ignores the "#" character and everything after it in the URI.  A URI which ends in a "hash tag" like this is called a hash URI.  (Another name for the part of the URI after the # character is "fragment".) Hash URIs are commonly used to identify non-information resources.  In this case, the server determines that the base URI {{{http://lod.taxonconcept.org/ses/z9oqP}}} is not an information resource that can be returned to the client, so based on some kind of information or rule that it knows, it determines an appropriate representation of the resource based on the content-type requested by the client.  In the case where {{{content-type: application/rdf+xml}}} is requested, the server responds to the client that it should "See Also" the representation provided by the URI {{{http://lod.taxonconcept.org/ses/z9oqP.rdf}}}.  This process is called content negotiation.
 
@@ -106,7 +106,7 @@ http://lod.taxonconcept.org/ses/z9oqP#Identification
 }}}
 The document (an information resource) is delivered by the server based on some rule which tells it how to process the base URI {{{ http://lod.taxonconcept.org/ses/z9oqP}}}.  Differentiating non-information resources by hash tags is a commonly used convention, but not a requirement.  
 
-A non-information resource can be linked by triples that relate it to other resources which are documents that describe it (such as RDF/XML documents and web pages) or which are collective entities that group the non-information resource with other similar resources.  The descriptions of these other resources may be included in the same document that describes the non-information resource, or the descriptions may be retrieved by the client if it wants to try to dereference the URIs of the related resources.  
+A non-information resource can be linked by triples that relate it to other resources which are documents that describe it (such as RDF/XML documents and web pages) or which are collective entities that group the non-information resource with other similar resources.  The descriptions of these other similar resources may be included in the same document that describes the non-information resource, or the descriptions may be retrieved by the client if it wants to try to dereference the URIs of the related resources.  
 
 In this manner, a semantic client can "crawl" the web of links to discover other resources and to catalog the relationships among the resources by storing the triples that record those links.
 
@@ -161,7 +161,7 @@ xmlns:dcterms="http://purl.org/dc/terms/"
 ====5.3.1.2. Explanation of the example====
 An instance of the class {{{rss:channel}}} is a descriptive document that contains the list of resources being described in the "feed".  The instances of the class {{{rss:item}}} are the individual resources that are being described.  In this case the {{{rss:item}}} instances are the described resources whose URIs will be dereferenced to acquire the metadata which describes them.  The {{{rss:items}}} property of the channel points to an instance of the {{{rdf:Seq}}} class, a container class used to group related resources.  The {{{rdf:li}}} properties of the {{{rdf:Seq}}} instance point to the items that are being described on the site.  Note: the RDF container classes are not widely used outside of RSS because they make it more difficult to query the data using SPARQL (see [Beginners6SPARQL section 6.] of this guide).
 
-Within the individual {{{rss:channel}}} and {{{rss:item}}} descriptions, the {{{rss:title}}} property is a human readable description of the resource; {{{rss:title}}} is a subproperty of {{{dcterms:title}}}.  The {{{rss:link}}} property is a URL which points to an html rendering of the resource.  The {{{dc:date}}} is understood to be the date on which the resource was updated and effectively serves as the modification date which a semantic client would use to determine whether the resource needed to be crawled again.  It is the {{{<rss:item rdf:about="…">}}} tag which provides the actual link to the resource which is to be crawled.  {{{rss:title}}} and {{{rss:link}}} do not really provide any useful information for a semantic client, although they make the RSS page readable in an RSS reader.  
+Within the individual {{{rss:channel}}} and {{{rss:item}}} descriptions, the {{{rss:title}}} property is a human readable description of the resource; {{{rss:title}}} is a subproperty of {{{dcterms:title}}}.  The {{{rss:link}}} property is a URL which points to an html rendering of the resource.  The {{{dc:date}}} is understood to be the date on which the resource was updated and effectively serves as the modification date which a semantic client would use to determine whether the resource needed to be crawled again.  It is the {{{<rss:item rdf:about="…">}}} tag which provides the actual RDF-containing link to the resource which is to be crawled.  {{{rss:title}}} and {{{rss:link}}} do not really provide any useful information for a semantic client, although they make the RSS page readable in an RSS reader.  In this example, both the HTML and RDF/XML resources are accessed through the same URI because content-negotiation will redirect the client to the document containing the requested type of information.  
 
 ====5.3.1.3. Limitations of using RSS to index a site====
 Although an RSS document reduces the number of documents which a crawler would need to dereference to update its store of information about a database, a single RSS document would be too large to index more than a few thousand resources.  One option would be to have several RSS documents, but even this would be problematic for an RDF database that contained millions of triples.  
@@ -172,13 +172,13 @@ If a database is large, it is not practical to convert those data to static docu
 ====5.3.2.1. Serving data from an existing relational database as RDF====
 It is possible to implement an interface which allows a traditional relational database to serve RDF metadata.  
 
-The D2QR Platform [#13_The_D2RQ_Platform_v0.7_user_manual_and_language_specification (13)] provides a mapping language that facilitates mapping and translation.  With this interface, the database can served the data as Linked Data and can also respond to SPARQL queries (see [Beginners6SPARQL section 6.]).  D2QR also permits dumping the entire database into a file as RDF in various forms. [#14_D2RQ_RDF_data_dumps (14)]  
+The D2QR Platform [#13_The_D2RQ_Platform_v0.7_user_manual_and_language_specification (13)] provides a mapping language that facilitates mapping and translation.  With this interface, the database can serve the data as Linked Data and can also respond to SPARQL queries (see [Beginners6SPARQL section 6.]).  D2QR also permits dumping the entire database into a file as RDF in various forms. [#14_D2RQ_RDF_data_dumps (14)]  
 
 Virtuoso [#15_Virtuoso (15)] can transparently access native relational data as well as RDF data stored in its database.  It allows SPARQL queries.
 
 Triplify [#16_Triplify (16)] is an application that can make content of small (less than 100MB database content) web-accessible databases also available as RDF.  It converts the results of SQL queries into RDF. 
 
-Triplifier [#17_Triplifier (17)] is being developed by the !BiSciCol project (http://biscicol.blogspot.com/) to input data from flat data formats (spreadsheets, Darwin Core Archives) and relational databases and output RDF triples.  
+Triplifier [#17_Triplifier (17)] is being developed by the !BiSciCol project (http://biscicol.blogspot.com/) to input data from flat data formats (spreadsheets, Darwin Core Archives) and relational databases, and output RDF triples.  
 
 ezDBDB [#18_ezDBDB (18)] converts metadata from simple data sources like spreadsheets into RDF and provides an opportunity to cache the resulting data in a triplestore and make it available to the LOD cloud. 
 
@@ -197,12 +197,12 @@ VoID is a vocabulary for expressing metadata about RDF datasets [#26_Describing_
 
 Within the dataset description, the term {{{void:rootResource}}} can be used to describe one or a few central entry points for a dataset which could provide starting points for crawling the dataset.  
 
-Discovery of the dataset description can be supported by using the property {{{void:inDataset}}} in the description of an RDF document.  For example, if the document document.rdf is provided upon dereferencing of a URI, the description of document.rdf could include the triple
+Discovery of the dataset description can be supported by using the property {{{void:inDataset}}} in the description of an RDF document which is part of the dataset.  For example, if the document document.rdf is provided upon the dereferencing of a URI identifying an entity described by the dataset, the description of document.rdf could include the triple
 {{{
 http://example.org/document.rdf   void:inDataset   http://example.org/void.rdf#dataset
 }}}
 
-where {{{ http://example.org/void.rdf#dataset}}} represents the URI of the dataset and {{{http://example.org/void.rdf}}} is a retrievable document which contains the VoID descriptive document.
+where {{{ http://example.org/void.rdf#dataset}}} represents the URI of the dataset and {{{http://example.org/void.rdf}}} is a retrievable document which contains the VoID description.
 
 ====5.3.3.1. Example====
 The following is a fragment from the file http://bioimages.vanderbilt.edu/index.rdf which illustrates how VoID terms can describe a dataset and link to an RSS summary of documents which can be crawled to obtain the data contained in the dataset.
@@ -290,7 +290,7 @@ Note the following features of this description:
  * {{{void:rootResource}}} is used to point to the RSS document which links to individual image records in the dataset
  * {{{void:exampleResource}}} is used to point to an example document which describes one of the image records in the dataset
 
-If content negation were set up to redirect dereferencing requests for {{{http://bioimages.vanderbilt.edu/}}} preferring {{{content-type: application/rdf+xml}}} to the document {{{http://bioimages.vanderbilt.edu/index.rdf}}} (unfortunately it is not at the present), the property {{{<void:inDataset rdf:resource="http://bioimages.vanderbilt.edu/"/>}}} could be assigned to individual RDF image records as a backlink to the VoID file.  
+If content negation were set up to redirect dereferencing requests for {{{http://bioimages.vanderbilt.edu/}}} preferring {{{content-type: application/rdf+xml}}} to the document {{{http://bioimages.vanderbilt.edu/index.rdf}}} (unfortunately it is not at the present), the property {{{<void:inDataset rdf:resource="http://bioimages.vanderbilt.edu/"/>}}} could be assigned to individual RDF image records as a backlink to the VoID database description file.  
 
 ==5.4. The Linked Open Data (LOD) Cloud==
 
@@ -458,7 +458,7 @@ http://tdwg-rdf.net/
 http://dbpedia.org/About
 
 ===24 !OpenLink Search===
-{{{http://lod.openlinksw.com/}}}  Bad link - investigate!
+http://lod.openlinksw.com/
 
 ===25 Sindice Semantic Web Index===
 http://sindice.com/
