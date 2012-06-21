@@ -209,7 +209,7 @@ http://bioimages.vanderbilt.edu/baskauf/10998 owl:sameAs http://bioimages.vander
 (i.e. the image is the same thing as the tree) and subsequently could conclude that all properties of the image also apply to the tree, e.g. the tree was a !StillImage created by Steven J. Baskauf and that the image was a natualized !IndividualOrganism.  For this reason functional properties (and inverse functional properties) should be used with caution.
 
 ====7.6.5.4. Other property characteristics====
-{{{owl:InverseFunctionalProperty}}} and {{{owl:SymmetricProperty}}} are two additional properties which can be used to describe the characteristics of properties more fully. [#9_OWL_Lite_Feature_Synopsis (9)] [#12_A_Practical_Guide_To_Building_OWL_Ontologies_Using_Prot%C3%A9g%C3%A9 (12)] 
+{{{owl:InverseFunctionalProperty}}} and {{{owl:SymmetricProperty}}} are two additional properties which can be used to describe the characteristics of properties more fully. [#10_OWL_Lite_Feature_Synopsis (10)] [#14_A_Practical_Guide_To_Building_OWL_Ontologies_Using_Prot%C3%A9g%C3%A9 (14)] 
 
 ==7.7. What is reasoning?==
 Software applications which are designed to examine sets of OWL statements and draw inferences from them are called _reasoners_.  The function of reasoners can be described as follows:
