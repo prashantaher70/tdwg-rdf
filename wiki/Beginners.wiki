@@ -145,7 +145,7 @@ Thanks to Rod Page and Chris Freeland for this information.
 
 [http://dublincore.org/documents/domain-range/ Domains and Ranges for DCMI Properties]
 
-[http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm Darwin Core abstract model (vs. DCAM)]
+[http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#abstractmodel Darwin Core abstract model (vs. DCAM)]
 
 ===0.3.4. Related to Web Ontology Language (OWL)===
 [http://www.w3.org/TR/owl-primer/ OWL 2 Web Ontology Language Primer (for beginners)]
@@ -229,7 +229,7 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 [http://code.google.com/p/darwin-sw/ darwin-sw (DSW) ontology] ([http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl in RDF])
 
-[http://dublincore.org/documents/dcmi-terms/ Dublin Core (DC) terms] ([http://dublincore.org/2010/10/11/dcterms.rdf in RDF]) ([http://dublincore.org/documents/dcmi-type-vocabulary/ type vocabulary])  ([http://dublincore.org/2010/10/11/dctype.rdf in RDF])
+[http://dublincore.org/documents/dcmi-terms/ Dublin Core (DC) terms] ([http://dublincore.org/2010/10/11/dcterms.rdf in RDF]) ([http://dublincore.org/documents/dcmi-type-vocabulary/#H7 type vocabulary])  ([http://dublincore.org/2010/10/11/dctype.rdf in RDF])
 
 [http://xmlns.com/foaf/spec/ FOAF Vocabulary Specification 0.98] ([http://xmlns.com/foaf/spec/index.rdf in RDF])
 
@@ -237,7 +237,7 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 [http://id.loc.gov/ Library of Congress Authorities and Vocabularies: ISO639 languages, MARC countries and geographic areas] (Use view page source: [http://id.loc.gov/vocabulary/iso639-1.rdf ISO639], [http://id.loc.gov/vocabulary/geographicAreas.rdf MARC geographic areas], etc. in RDF)
 
-[http://ecowlim.tfri.gov.tw/lode/resource/eco/ Linked Open Data of Ecology (LODE) vocabulary] ([http://ecoinformatics.tfri.gov.tw/ternwork/member Ecoinformatics Working Group of the TFRI])
+[http://test.ckan.org/lv/dataset/linked-open-data-of-ecology Linked Open Data of Ecology (LODE) vocabulary] ([http://ecoinformatics.tfri.gov.tw/ternwork/member Ecoinformatics Working Group of the TFRI])
 
 [http://id.loc.gov/vocabulary/relators.html MARC (Library of Congress) Relators list (terms are subPropertyOf dc:contributor and possibly other dc:terms)]  see also [http://dublincore.org/usage/documents/relators/ MARC Relator terms and Dublin Core]
 
