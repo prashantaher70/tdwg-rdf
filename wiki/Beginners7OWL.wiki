@@ -119,7 +119,7 @@ because {{{tc:accordingToString}}} is defined as an {{{owl:DatatypeProperty}}}, 
 OWL provides a means of indicating that resources are equivalent.  
 
 ====7.6.4.1. owl:equivalentClass====
-Making the statement {{{X owl:equivalentClass Y}}} essentially means that two named classes are synonymous, i.e. that all instances of class X are instances of class Y and vice versa.  For example, in the TDWG Taxon Concept Ontology [#16_TDWG_Taxon_Concept_Ontology (16)], the {{{tc:Taxon}}} class and the {{{tc:TaxonConcept}}} class are declared to be equivalent.  
+Making the statement {{{X owl:equivalentClass Y}}} essentially means that two named classes are synonymous, i.e. that all instances of class X are instances of class Y and vice versa.  For example, in the TDWG Taxon Concept Ontology [#18_TDWG_Taxon_Concept_Ontology (18)], the {{{tc:Taxon}}} class and the {{{tc:TaxonConcept}}} class are declared to be equivalent.  
 
 ====7.6.4.2. owl:equivalentProperty====
 In OWL, if two properties are declared to be equivalent, they relate an individual to the same set of other individuals.  [#19_Equivalent_properties_in_RDFS (19)]  For example, Dublin Core has declared that 
