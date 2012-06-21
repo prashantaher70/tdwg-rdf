@@ -194,11 +194,11 @@ po:0020045 (pinnate leaf) is_a po:0009025 (vascular leaf)
 }}}
 
 ====7.6.5.3. owl:!FunctionalProperty====
-A property that is declared to be an {{{owl:FunctionalProperty}}} can have only one unique value as an object.  An example is {{{foaf:primaryTopic}}} which relates a document to the thing which its main topic.  A document is allowed to have only one {{{foaf:primaryTopic}}}.  In a manner similar the OWL terms of equivalence, using owl:!FunctionalProperty can cause a reasoner to infer that individuals identified by different URIs are the same.  For example, if two triples using {{{foaf:primaryTopic}}} to describe the same subject resource have different objects, a reasoner would conclude that the resources identified by the object URIs are the same.  For example, if I state 
+A property that is declared to be an {{{owl:FunctionalProperty}}} can have only one unique value as an object.  An example is {{{foaf:primaryTopic}}} which relates a document to the thing which its main topic.  Because of the {{{owl:FunctionalProperty}}} declaration, a document can have only one {{{foaf:primaryTopic}}}.  In a manner similar the OWL terms of equivalence, using {{{owl:FunctionalProperty}}} can cause a reasoner to infer that individuals identified by different URIs are the same.  For example, if two triples using {{{foaf:primaryTopic}}} to describe the same subject resource have different object URIs, a reasoner would infer that the resources identified by those object URIs are the same.  For example, if I state 
 {{{
 http://bioimages.vanderbilt.edu/baskauf/10998.rdf foaf:primaryTopic http://bioimages.vanderbilt.edu/baskauf/10998
 }}}
-(a true statement relating an RDF-formatted document to the image it describes), and if the following statement were also made (perhaps by mistake):
+(a true statement declaring an RDF-formatted document to have an image as its {{{foaf:primaryTopic}}}), and if the following statement were also made (perhaps by mistake):
 {{{
 http://bioimages.vanderbilt.edu/baskauf/10998.rdf foaf:primaryTopic http://bioimages.vanderbilt.edu/ind-baskauf/10997
 }}}
@@ -214,13 +214,14 @@ http://bioimages.vanderbilt.edu/baskauf/10998 owl:sameAs http://bioimages.vander
 ==7.7. What is reasoning?==
 Software applications which are designed to examine sets of OWL statements and draw inferences from them are called _reasoners_.  The function of reasoners can be described as follows:
 
-"When humans think, they draw consequences from their knowledge. An important feature of OWL is that it captures this aspect of human intelligence for the forms of knowledge that it can represent. But what does it mean, generally speaking, that a statement is a consequence of other statements? Essentially it means that this statement is true whenever the other statements are. In OWL terms: we say, a set of statements A entails a statement a if in any state of affairs wherein all statements from A are true, also a is true. Moreover, a set of statements may be consistent (that is, there is a possible state of affairs in which all the statements in the set are jointly true) or inconsistent (there is no such state of affairs). The formal semantics of OWL specifies, in essence, for which possible “states of affairs” a particular set of OWL statements is true.  There are OWL tools – reasoners – that can automatically compute consequences." [#21_Description_of_reasoning_in_basic_notions_on_modeling_knowled (21)] 
+"When humans think, they draw consequences from their knowledge. An important feature of OWL is that it captures this aspect of human intelligence for the forms of knowledge that it can represent. But what does it mean, generally speaking, that a statement is a consequence of other statements? Essentially it means that this statement is true whenever the other statements are. In OWL terms: we say, a set of statements {{{A}}} entails a statement {{{a}}} if in any state of affairs wherein all statements from {{{A}}} are true, also {{{a}}} is true. Moreover, a set of statements may be consistent (that is, there is a possible state of affairs in which all the statements in the set are jointly true) or inconsistent (there is no such state of affairs). The formal semantics of OWL specifies, in essence, for which possible “states of affairs” a particular set of OWL statements is true.  There are OWL tools – reasoners – that can automatically compute consequences." [#21_Description_of_reasoning_in_basic_notions_on_modeling_knowled (21)] 
 
 One basic function that a reasoner can perform is to check an OWL ontology for _consistency_, i.e. whether it is possible for a class to have any instances.  It can also infer an ontology class hierarchy which may go beyond the hierarchy asserted explicitly by OWL statements. [#22_Inconsistent_Classes (22)]  
 
 Some reasoners which are available are listed at [#11_OWL_tools (11)].
 
-Another method of reasoning which uses rules to infer triples from an OBO ontology, followed by SPARQL queries is described in [http://bioinformatics.oxfordjournals.org/content/27/11/1562.abstract Blondé et al. 2011] ([http://dx.doi.org/10.1093/bioinformatics/btr164 doi: 10.1093/bioinformatics/btr164]).
+===7.7.1. References related to reasoning===
+A method of reasoning, which uses rules to infer triples from an OBO ontology followed by SPARQL queries, is described in [http://bioinformatics.oxfordjournals.org/content/27/11/1562.abstract Blondé et al. 2011] ([http://dx.doi.org/10.1093/bioinformatics/btr164 doi: 10.1093/bioinformatics/btr164]).
 
 Hogan et al. describe a "system for performing rule-based forward-chaining reasoning which we call SAOR: Scalable Authoritative OWL Reasoner" at [http://www.deri.ie/fileadmin/documents/DERI-TR-2009-04-21.pdf].
 
@@ -238,7 +239,7 @@ http://www.plantontology.org/
 
 http://www.obofoundry.org/
 
-For unambiguous formal definitions of the primitive relationships used in OBO ontologies, see [http://genomebiology.com/2005/6/5/R46 Smith et al. 2005. Relations in biomedical ontologies. Genome Biology 6:R46]  doi:10.1186/gb-2005-6-5-r46
+For unambiguous formal definitions of the primitive relationships used in OBO ontologies, see [http://genomebiology.com/2005/6/5/R46 Smith et al. 2005. Relations in biomedical ontologies. Genome Biology 6:R46]  doi:10.1186/gb-2005-6-5-!r46
 
 ===4 OWL 2 Web Ontology Language Primer===
 OWL is a W3C Recommendation with a number of normative documents.  This particular document was designed for novices.
