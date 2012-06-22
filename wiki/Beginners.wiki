@@ -271,7 +271,7 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 [http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF; uses DC, BIBO, PRISM] ([http://www5.wiwiss.fu-berlin.de/marbles?uri=http%3A%2F%2Fdx.doi.org%2F10.1525%2Fauk.2009.09022 example resource] URI is {{{http://dx.doi.org/10.1525/auk.2009.09022}}} but RDF can't be viewed in a browser directly)
 
-[http://ecowlim.tfri.gov.tw/lode/ Linked Open Data of Ecology; uses DwC, FOAF, GEO, LODE] ([http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023 example resource]) 
+[http://ecowlim.tfri.gov.tw/lode/ Linked Open Data of Ecology; uses DwC, FOAF, GEO, LODE] ([http://test.ckan.org/lv/dataset/linked-open-data-of-ecology/resource/b27bdda0-5f10-4419-9da2-69e513152582 example resource]) 
 
 [http://www.taxonconcept.org/ TaxonConcept; uses DC, FOAF, BIBO, TaxonConcept, SKOS, and others] ([http://lod.taxonconcept.org/ses/dwAmr.rdf example resource])
 
