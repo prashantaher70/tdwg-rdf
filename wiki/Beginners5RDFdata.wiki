@@ -93,7 +93,7 @@ In graphical form this can be represented as:
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/rdf-terms-related-to-vocabulary.jpg
 
-Resources which are part of a dataset and described in separate documents can be backlinked to a file which describes the dataset using the {{{void:inDataset}}} property.  This method is described in [#5.3.3._Providing_information_about_what_data_are_available_using section 5.3.3.]
+Resources which are part of a dataset and described in separate documents can be backlinked to a file which describes the dataset using the {{{void:inDataset}}} property.  This method is described in [#5.3.3._Providing_information_about_the_data_which_are_available section 5.3.3.]
 
 ===5.2.3. Summary of this strategy===
 
