@@ -231,7 +231,7 @@ DESCRIBE ?Location WHERE {
 If you are not patient, you can use LIMIT 50.  The results include triples for all of the location URIs which can substitute for {{{?Location}}} in the triple pattern used in the query.  The Grid View shows the triples that were returned.  The Raw Triples view groups predicate/object (i.e. property/value) pairs under the subject resource.  Google Maps v3 uses the {{{geo:lat}}} and {{{geo:long}}} values present in the resulting set of triples to map the locations of the described resources.  
 
 ====6.4.4.3. Describing a set of resources that match a variable in several triple patterns====
-Go to the http://uriburner.com/isparql/ endpoint and paste in the list of prefixes from [#6.4.2._SELECT_query_form section 6.4.2.].  Replace the existing query with the query similar to that given in [#6.2.2.2._Querying_the_URIBurner_triplestore section 6.2.2.2.]:
+Go to the http://uriburner.com/isparql/ endpoint and paste in the list of prefixes from [#6.4.3._SELECT_query_form 6.4.3.].  Replace the existing query with the query similar to that given in [#6.2.2.2._Querying_the_URIBurner_triplestore section 6.2.2.2.]:
 {{{ 
 DESCRIBE ?x WHERE {
  ?x a txn:Occurrence.
