@@ -228,11 +228,7 @@ http://www.rdfabout.com/demo/validator/
 Links to this kind of tool are found in [Beginners#0.3.5._Software_tools section 0.3.5.] of this guide.
 
 ==3.4. Learn more about RDF==
-The W3C has a Recommendation known as the RDF Primer [#8_W3C_RDF_Primer (8)]
-
-http://www.w3.org/TR/rdf-primer/
-
-which elaborates on the information provided here as well as covering a number of topics beyond the scope of this guide.  The References section [#9_RDF_Primer_Reference_section (9)] provides a comprehensive list of other informational resources related to RDF.  
+The W3C has a Recommendation known as the RDF Primer [#8_W3C_RDF_Primer (8)] which elaborates on the information provided here as well as covering a number of topics beyond the scope of this guide.  The References section [#9_RDF_Primer_Reference_section (9)] provides a comprehensive list of other informational resources related to RDF.  
 
 The w3schools  website also provides an RDF tutorial [#10_w3schools.com_RDF_tutorial (10)] at
 
@@ -243,7 +239,7 @@ http://www.w3schools.com/rdf/default.asp
 Technically either the subject or the object can be a blank node which is not identified explicitly by a URI.  See http://www.w3.org/TR/rdf-primer/#structuredproperties for a description of blank nodes and their use.  It is generally considered a less-desirable practice to introduce blank nodes because it is not possible to link to them through external documents.  However, in some cases blank nodes are unavoidable if identifiers don't exist or if the creator of the RDF does not want to be responsible for minting and maintaining an identifier for the described resource.  
 
 ===2 Typed literals.===
-An RDF literal object can be typed using an optional attribute within the predicate tag.  These include an optional XML language attribute ([http://www.w3.org/TR/REC-xml/#sec-lang-tag xml:lang], see also [http://www.ietf.org/rfc/rfc4646.txt RFC 4646] ) or RDF datatype ([http://www.w3.org/TR/rdf-concepts/#section-Datatypes rdf:datatype]).  Note: {{{xsd:}}} abbreviates {{{http://www.w3.org/2001/XMLSchema#}}}.  Presumably, any XML Schema defined datatype ( http://www.w3.org/TR/xmlschema-2/ ) such as [http://www.w3.org/TR/xmlschema-2/#dateTime xsd:dateTime] would be widely understood and appropriate for use with the {{{rdf:datatype}}} attribute.  It is also possible for users to define their own {{{rdf:datatype}}}, although it seems likely that only custom-designed consuming applications would know how to make use of this information. The guidelines for Dublin Core as RDF specify that the {{{rdf:datatype}}} can be specified by reference to a "syntax encoding scheme URI".  Dublin Core defines URIs for a number of commonly used schemes at http://dublincore.org/documents/dcmi-terms/#H5 .  
+An RDF literal object can be typed using an optional attribute within the predicate tag.  These include an optional XML language attribute ([http://www.w3.org/TR/REC-xml/#sec-lang-tag xml:lang], see also [http://tools.ietf.org/html/rfc4646 RFC 4646] ) or RDF datatype ([http://www.w3.org/TR/rdf-concepts/#section-Datatypes rdf:datatype]).  Note: {{{xsd:}}} abbreviates {{{http://www.w3.org/2001/XMLSchema#}}}.  Presumably, any XML Schema defined datatype ( http://www.w3.org/TR/xmlschema-2/ ) such as [http://www.w3.org/TR/xmlschema-2/#dateTime xsd:dateTime] would be widely understood and appropriate for use with the {{{rdf:datatype}}} attribute.  It is also possible for users to define their own {{{rdf:datatype}}}, although it seems likely that only custom-designed consuming applications would know how to make use of this information. The guidelines for Dublin Core as RDF specify that the {{{rdf:datatype}}} can be specified by reference to a "syntax encoding scheme URI".  Dublin Core defines URIs for a number of commonly used schemes at http://dublincore.org/documents/dcmi-terms/#H5 .  
 
 ===3 rdf:type===
 The predicate {{{rdf:type}}} has special properties that are defined in the RDF schema:
