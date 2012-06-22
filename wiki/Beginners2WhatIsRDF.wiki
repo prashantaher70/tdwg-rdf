@@ -109,7 +109,7 @@ The [http://code.google.com/p/tdwg-rdf/ RDF/OWL Task Group (TG)] is attempting t
 http://www.w3.org/TR/rdf-concepts/#section-Overview
 
 ===2 Tim Berners-Lee on the Semantic Web===
-Berners-Lee, Tim and Mark Fischetti. 1999. Weaving the Web: the original design and ultimate destiny of the World Wide Web by its inventor.  San Francisco, Harper.  isbn:9780062515872
+Berners-Lee, Tim and Mark Fischetti. 1999. Weaving the Web: the original design and ultimate destiny of the World Wide Web by its inventor.  San Francisco, Harper.  {{{isbn:9780062515872}}}
 
 ===3 Resource Description Framework (RDF) Model and Syntax Specification===
 http://www.w3.org/TR/1999/REC-rdf-syntax-19990222/
