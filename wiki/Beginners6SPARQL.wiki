@@ -218,7 +218,7 @@ Using the same prefixes as before, enter the following query:
 {{{
 DESCRIBE <http://bioimages.vanderbilt.edu/baskauf/04005#loc>
 }}}
-which contains a URI solution for the variable {{{?Location}}} in the query of [#6.4.2._SELECT_query_form section 6.4.2].  Try changing the View from Navigator to Raw Triples as described in [#6.2.2.2._Querying_the_URIBurner_triplestore section 6.2.2.2.] .  The description of the resource identified by the URI contains triples in which the URI is the subject (grouped together) and a triple where the URI was the object.  Change the View to Google Maps v3.  Zoom out and change the view to Satellite if desired. 
+which contains a URI solution for the variable {{{?Location}}} in the query of [#6.4.3._SELECT_query_form 6.4.3].  Try changing the View from Navigator to Raw Triples as described in [#6.2.2.2._Querying_the_URIBurner_triplestore section 6.2.2.2.] .  The description of the resource identified by the URI contains triples in which the URI is the subject (grouped together) and a triple where the URI was the object.  Change the View to Google Maps v3.  Zoom out and change the view to Satellite if desired. 
 
 ====6.4.4.2. Describing a set of resources that match a variable in a triple pattern====
 
