@@ -309,7 +309,7 @@ http://code.google.com/p/darwin-sw/wiki/ClassToken
 ===4 Dublin Core Metadata Initiative===
 http://dublincore.org/
 
-There are important distinctions between the legacy terms in the dc: = http://purl.org/dc/elements/1.1/ namespace and the terms in the dcterms: = http://purl.org/dc/terms/ namespace.  See the sections "Addition of domains and ranges for existing properties and creation of new properties" and "Subproperty relations between terms in 'the Dublin Core' " at http://dublincore.org/usage/decisions/2008/dcterms-changes/#sect-2 as well as http://dublincore.org/documents/2008/01/14/domain-range/ for details. 
+There are important distinctions between the legacy terms in the {{{dc: = http://purl.org/dc/elements/1.1/}}} namespace and the terms in the {{{dcterms: = http://purl.org/dc/terms/}}} namespace.  See the sections "Addition of domains and ranges for existing properties and creation of new properties" and "Subproperty relations between terms in 'the Dublin Core' " at http://dublincore.org/usage/decisions/2008/dcterms-changes/#sect-2 as well as http://dublincore.org/documents/2008/01/14/domain-range/ for details. 
 
 ===5 DCMI Abstract Model===
 http://dublincore.org/documents/abstract-model/
@@ -419,7 +419,7 @@ http://www.tdwg.org/standards/150/
 states in Recommendation 11 that "Objects in the biodiversity domain that are identified by a GUID should be typed using the TDWG ontology or other well-known vocabularies in accordance with the TDWG common architecture."  Thus in our community, it is considered to be a best practice to use a well-known vocabulary.
 
 ===26 DCMI Type Vocabulary===
-Human readable at http://dublincore.org/documents/dcmi-type-vocabulary/
+Human readable at http://dublincore.org/documents/dcmi-type-vocabulary/#H7
 
 RDF at http://dublincore.org/2010/10/11/dctype.rdf
 
