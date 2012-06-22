@@ -233,7 +233,7 @@ Note: the URIs having namespace {{{http://rs.tdwg.org/ncd/terms/Institution#}}} 
 ===4.6.3. Darwin Core terms not defined by Darwin Core===
 There are a number of terms included in the Darwin Core standard which are not defined by Darwin Core itself.   Most of these terms are record-level property terms that are defined by Dublin Core [#22_DCMI_Metadata_Terms (22)], e.g. {{{dcterms:type}}}, {{{dcterms:modified}}}, etc.  The exception is {{{dcterms:Location}}} which serves as one of the classes under which Darwin Core terms are organized.
 
-A significant aspect of these terms is that unlike the terms defined in the Darwin Core namespace, the Dublin core terms may have domains and ranges specified in their definitions.  This is significant in the case of {{{dcterms:type}}} which will be discussed in section [#4.7.3.3._Why_the_DCMI_and_Darwin_Core_type_vocabularies_are_defi 4.7.3.3.]  See also [DublinCore#2._Implications_of_Dublin_Core_RDF_Guidelines_for_the_TDWG_vocab a discussion of problems involving Darwin Core guidelines for using Dublin Core terms].
+A significant aspect of these terms is that unlike the terms defined in the Darwin Core namespace, the Dublin core terms may have domains and ranges specified in their definitions.  This is significant in the case of {{{dcterms:type}}} which will be discussed in section [#4.7.3.1._Why_the_DCMI_and_Darwin_Core_type_vocabularies_are_defi 4.7.3.1.]  See also [DublinCore#2._Implications_of_Dublin_Core_RDF_Guidelines_for_the_TDWG_vocab a discussion of problems involving Darwin Core guidelines for using Dublin Core terms].
 
 ==4.7. _Hic sunt dracones_: Using classes and types==
 
