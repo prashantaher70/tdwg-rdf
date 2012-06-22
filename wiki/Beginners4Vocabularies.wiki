@@ -228,10 +228,10 @@ Of the possible DCAM/RDFS relationships which allow a machine to infer additiona
   * {{{dwc:ownerInstitutionCode}}} which is declared an {{{rdfs:subProperty}}} of {{{http://rs.tdwg.org/ncd/terms/Institution#Code}}}
   * {{{dwc:ResourceRelationship}}} (a Darwin Core class) which is declared an {{{rdfs:subProperty}}} of {{{dcterms:relation}}} [#20__dwc:_ResourceRelationship_is_both_a_class_and_a_property (20)]
 
-Note: the URIs having namespace {{{http://rs.tdwg.org/ncd/terms/Institution#}}} seem to be incorrect as the namespace for the Natural Collection Description vocabulary is defined as {{{http://rs.tdwg.org/ontology/voc/Collection#}}} in the draft standard. [#29_Natural_Collections_Descriptions_(NCD)_draft_TDWG_standard (29)]
+Note: the URIs having namespace {{{http://rs.tdwg.org/ncd/terms/Institution#}}} seem to be incorrect as the namespace for the Natural Collection Description vocabulary is defined as {{{http://rs.tdwg.org/ontology/voc/Collection#}}} in the draft standard. [#21_Natural_Collections_Descriptions_(NCD)_draft_TDWG_standard (21)]
 
 ===4.6.3. Darwin Core terms not defined by Darwin Core===
-There are a number of terms included in the Darwin Core standard which are not defined by Darwin Core itself.   Most of these terms are record-level property terms that are defined by Dublin Core [#21_DCMI_Metadata_Terms (21)], e.g. {{{dcterms:type}}}, {{{dcterms:modified}}}, etc.  The exception is {{{dcterms:Location}}} which serves as one of the classes under which Darwin Core terms are organized.
+There are a number of terms included in the Darwin Core standard which are not defined by Darwin Core itself.   Most of these terms are record-level property terms that are defined by Dublin Core [#22_DCMI_Metadata_Terms (22)], e.g. {{{dcterms:type}}}, {{{dcterms:modified}}}, etc.  The exception is {{{dcterms:Location}}} which serves as one of the classes under which Darwin Core terms are organized.
 
 A significant aspect of these terms is that unlike the terms defined in the Darwin Core namespace, the Dublin core terms may have domains and ranges specified in their definitions.  This is significant in the case of {{{dcterms:type}}} which will be discussed in section [#4.7.3.3._Why_the_DCMI_and_Darwin_Core_type_vocabularies_are_defi 4.7.3.3.]  See also [DublinCore#2._Implications_of_Dublin_Core_RDF_Guidelines_for_the_TDWG_vocab a discussion of problems involving Darwin Core guidelines for using Dublin Core terms].
 
@@ -249,7 +249,7 @@ http://purl.org/dc/terms/Agent   rdf:type   http://www.w3.org/2000/01/rdf-schema
 If a term is declared to be an {{{owl:Class}}}, then it is also implicitly declared to be an {{{rdfs:Class}}} because {{{owl:Class  rdfs:subClassOf  rdfs:Class}}}.  See [Beginners7OWL#7.6.2._owl:Class_and_individuals section 7.6.2.] of this guide for more on {{{owl:Class}}}.
 
 ====4.7.1.2. Assert that a term is a class by using it as the object of an {{{rdf:type}}} triple====
-The RDFS schema defines the relationship between {{{rdf:type}}} and {{{rdfs:Class}}}.[#22_Definition_of_rdfs:type (22)]  The schema says that {{{rdf:type}}} is used to state that a resource is an instance of an {{{rdfs:Class}}}.  Significantly, the range of {{{rdf:type}}} is defined to be {{{rdfs:Class}}}.  Therefore, when one uses {{{rdf:type}}} to declare that a resource is an instance of a particular class, one is also asserting that the object of the triple IS an {{{rdfs:Class}}} even if the term which is the object isn't already explicitly defined to be one.  (So the in the previous example, the triple not only asserts that {{{dcterms:Agent}}} is an instance of {{{rdfs:Class}}}, it is also asserting indirectly that {{{rdfs:Class}}} is an instance of {{{rdfs:Class}}} !)
+The RDFS schema defines the relationship between {{{rdf:type}}} and {{{rdfs:Class}}}.[#23_Definition_of_rdfs:type (23)]  The schema says that {{{rdf:type}}} is used to state that a resource is an instance of an {{{rdfs:Class}}}.  Significantly, the range of {{{rdf:type}}} is defined to be {{{rdfs:Class}}}.  Therefore, when one uses {{{rdf:type}}} to declare that a resource is an instance of a particular class, one is also asserting that the object of the triple IS an {{{rdfs:Class}}} even if the term which is the object isn't already explicitly defined to be one.  (So the in the previous example, the triple not only asserts that {{{dcterms:Agent}}} is an instance of {{{rdfs:Class}}}, it is also asserting indirectly that {{{rdfs:Class}}} is an instance of {{{rdfs:Class}}} !)
 
 For example, if one asserts that 
 {{{
@@ -259,20 +259,20 @@ or in abbreviated form
 {{{
 kimage:ac1490  rdf:type  dctype:StillImage
 }}}
-not only does it assert that {{{kimage:ac1490}}} is an instance of {{{dctype:StillImage}}}, but it also declares {{{dctype:StillImage}}} to be an {{{rdfs:Class}}}.  As it turns out, {{{dctype:StillImage}}} is already declared to be an {{{rdfs:Class}}} in its term definition [#23_Definition_of_dcterms:_StillImage (23)], but if it hadn't already been a class, one would be asserting that it was one by using it as the object of the type declaration.  
+not only does it assert that {{{kimage:ac1490}}} is an instance of {{{dctype:StillImage}}}, but it also declares {{{dctype:StillImage}}} to be an {{{rdfs:Class}}}.  As it turns out, {{{dctype:StillImage}}} is already declared to be an {{{rdfs:Class}}} in its term definition [#24_Definition_of_dcterms:_StillImage (24)], but if it hadn't already been a class, one would be asserting that it was one by using it as the object of the type declaration.  
 
 ===4.7.2. What can we find classes to use in {{{rdf:type}}} statements?===
 The RDFS schema is silent about what constitutes appropriate classes or types in a particular situation.  Users are free to use any pre-existing types/classes or to define their own.  
 
-However, since the purpose of having classes seems to be to allow different users to know that they are both talking about the same kind of resource, it is a best practice to use well-known types rather than making up ad hoc types.[#24_Typing_using_well-known_vocabularies (24)]  The wiki page [ClassInventory ClassInventory] lists classes defined in some well-known vocabularies and ontologies.   
+However, since the purpose of having classes seems to be to allow different users to know that they are both talking about the same kind of resource, it is a best practice to use well-known types rather than making up ad hoc types.[#25_Typing_using_well-known_vocabularies (25)]  The wiki page [ClassInventory ClassInventory] lists classes defined in some well-known vocabularies and ontologies.   
 
 ===4.7.3. Type vocabularies===
-Both Dublin Core [#25_DCMI_Type_Vocabulary (25)] and Darwin Core [#26_Darwin_Core_Type_Vocabulary (26)] define type vocabularies.  In the RDF which defines both of these vocabularies, each of the listed types is declared to be an {{{rdfs:Class}}}.  So as a practical matter, from the standpoint of RDF these terms are no different than the classes defined within the regular Dublin Core and Darwin Core term vocabularies.  The classes in the type vocabularies are also listed on the page [ClassInventory#2._Type_vocabularies ClassInventory].
+Both Dublin Core [#26_DCMI_Type_Vocabulary (26)] and Darwin Core [#26_Darwin_Core_Type_Vocabulary (26)] define type vocabularies.  In the RDF which defines both of these vocabularies, each of the listed types is declared to be an {{{rdfs:Class}}}.  So as a practical matter, from the standpoint of RDF these terms are no different than the classes defined within the regular Dublin Core and Darwin Core term vocabularies.  The classes in the type vocabularies are also listed on the page [ClassInventory#2._Type_vocabularies ClassInventory].
 
 
 ====4.7.3.1. Why the DCMI and Darwin Core type vocabularies are defined separately from other terms====
 
-These type vocabulary terms are defined separately from the classes defined in the general terms vocabularies because these terms are intended to be used as controlled values for other property terms in the respective vocabularies.  The DCMI Type Vocabulary provides a list of approved terms that may be used as controlled values for the {{{dcterms:type}}} property, while the Darwin Core Type Vocabulary "extends the DCMI Type Vocabulary and provides a list of approved values that may be used for the {{{dwc:basisOfRecord}}} term to identify the specific type of a resource." [#26_Darwin_Core_Type_Vocabulary (26)]  In the case of a Simple Darwin Core [#27_Simple_Darwin_Core (27)] serialization, values are expressed as text literals.  {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} can be used as field names in a text file with the literals from the type vocabularies given as values for that field in a record.  In Darwin Core XML [#28_Darwin_Core_XML_Guide (28)], the type values are expressed as string literal content of {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} elements.  
+These type vocabulary terms are defined separately from the classes defined in the general terms vocabularies because these terms are intended to be used as controlled values for other property terms in the respective vocabularies.  The DCMI Type Vocabulary provides a list of approved terms that may be used as controlled values for the {{{dcterms:type}}} property, while the Darwin Core Type Vocabulary "extends the DCMI Type Vocabulary and provides a list of approved values that may be used for the {{{dwc:basisOfRecord}}} term to identify the specific type of a resource." [#27_Darwin_Core_Type_Vocabulary (27)]  In the case of a Simple Darwin Core [#28_Simple_Darwin_Core (28)] serialization, values are expressed as text literals.  {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} can be used as field names in a text file with the literals from the type vocabularies given as values for that field in a record.  In Darwin Core XML [#29_Darwin_Core_XML_Guide (29)], the type values are expressed as string literal content of {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} elements.  
 
 In RDF, a type vocabulary term could be used as an object of {{{dcterms:type}}} and {{{dwc:basisOfRecord}}} properties.  For example:
 {{{
@@ -284,7 +284,7 @@ However, as an {{{rdfs:Class}}} each of these type terms could also be used as t
 http://bioimages.vanderbilt.edu/kirchoff/ac1490  rdf:type  dctype:StillImage
 http://bioimages.vanderbilt.edu/specimen/ncu592805 rdf:type  dwctype:LivingSpecimen
 }}}
-The guidelines for expressing Dublin Core metadata as RDF [#29_Notes_on_semantics_of_Dublin_Core_as_RDF (29)] state that "It is recommended that RDF applications implementing this specification primarily use and understand {{{rdf:type}}} in place of {{{dcterms:type}}} when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of {{{rdf:type}}}."  It also notes that {{{dcterms:type}}} has semantics that are similar to {{{rdf:type}}}, but that the precise relationship between those properties is undecided.  There is no similar guideline for use of {{{dwc:basisOfRecord}}} vs. {{{rdf:type}}}, but using the same rationale, it would seem preferable to use {{{rdf:type}}} when Darwin Core is expressed in RDF.
+The guidelines for expressing Dublin Core metadata as RDF [#30_Notes_on_semantics_of_Dublin_Core_as_RDF (30)] state that "It is recommended that RDF applications implementing this specification primarily use and understand {{{rdf:type}}} in place of {{{dcterms:type}}} when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of {{{rdf:type}}}."  It also notes that {{{dcterms:type}}} has semantics that are similar to {{{rdf:type}}}, but that the precise relationship between those properties is undecided.  There is no similar guideline for use of {{{dwc:basisOfRecord}}} vs. {{{rdf:type}}}, but using the same rationale, it would seem preferable to use {{{rdf:type}}} when Darwin Core is expressed in RDF.
 
 Interestingly, Darwin Core includes two classes borrowed from Dublin Core: {{{dcterms:Location}}} as a class defined in the Darwin Core Terms vocabulary and {{{dctype:Event}}} in the Darwin Core Type vocabulary.  However, Darwin Core also defines classes {{{dwctype:Location}}} and {{{dwc:Event}}}.  Nothing in the RDF ties these similarly-named classes together, so a machine would not consider a resource with {{{rdf:type dctype:Event}}} to be an instance of the same class as another resource with {{{rdf:type dwc:Event}}}; likewise resources typed as {{{dcterms:Location}}} and {{{dwctype:Location}}} would be considered instances of different classes.  In a serialization where the types were expressed as text literals rather than URIs, they would simple be "{{{Event}}}" and "{{{Location}}}" and not differentiable.  
 
@@ -402,41 +402,41 @@ http://rs.tdwg.org/ontology/voc/ContactDetails
 
 Use view page source to view RDF; however, a note at that page says management of the vocabulary is now at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/
 
-===21 DCMI Metadata Terms===
+===22 DCMI Metadata Terms===
 http://dublincore.org/documents/dcmi-terms/
 
-===22 Definition of rdfs:type===
+===23 Definition of rdfs:type===
 http://www.w3.org/TR/rdf-schema/#ch_type
 
-===23 Definition of dcterms:!StillImage===
+===24 Definition of dcterms:!StillImage===
 http://dublincore.org/2010/10/11/dctype.rdf  in RDF
 
 http://dublincore.org/documents/dcmi-type-vocabulary/ in human-readable form
 
-===24 Typing using well-known vocabularies===
+===25 Typing using well-known vocabularies===
 The TDWG GUID Applicability Standard
 http://www.tdwg.org/standards/150/
 states in Recommendation 11 that "Objects in the biodiversity domain that are identified by a GUID should be typed using the TDWG ontology or other well-known vocabularies in accordance with the TDWG common architecture."  Thus in our community, it is considered to be a best practice to use a well-known vocabulary.
 
-===25 DCMI Type Vocabulary===
+===26 DCMI Type Vocabulary===
 Human readable at http://dublincore.org/documents/dcmi-type-vocabulary/
 
 RDF at http://dublincore.org/2010/10/11/dctype.rdf
 
 See the section "The Vocabulary Encoding Scheme 'DCMI Type Vocabulary' and its member terms" at http://dublincore.org/usage/decisions/2008/dcterms-changes/#sect-2 for a history of the evolution of the DCMI Type vocabulary
 
-===26 Darwin Core Type Vocabulary===
+===27 Darwin Core Type Vocabulary===
 Human readable at http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm
 
 RDF at http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf
 
-===27 Simple Darwin Core===
+===28 Simple Darwin Core===
 http://rs.tdwg.org/dwc/terms/simple/index.htm
 
-===28 Darwin Core XML Guide===
+===29 Darwin Core XML Guide===
 http://rs.tdwg.org/dwc/terms/guides/xml/index.htm
 
-===29 Notes on semantics of Dublin Core as RDF===
+===30 Notes on semantics of Dublin Core as RDF===
 http://dublincore.org/documents/dc-rdf/#sect-5
 
 -------------------
