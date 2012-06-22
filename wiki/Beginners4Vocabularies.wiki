@@ -267,7 +267,7 @@ The RDFS schema is silent about what constitutes appropriate classes or types in
 However, since the purpose of having classes seems to be to allow different users to know that they are both talking about the same kind of resource, it is a best practice to use well-known types rather than making up ad hoc types.[#25_Typing_using_well-known_vocabularies (25)]  The wiki page [ClassInventory ClassInventory] lists classes defined in some well-known vocabularies and ontologies.   
 
 ===4.7.3. Type vocabularies===
-Both Dublin Core [#26_DCMI_Type_Vocabulary (26)] and Darwin Core [#26_Darwin_Core_Type_Vocabulary (26)] define type vocabularies.  In the RDF which defines both of these vocabularies, each of the listed types is declared to be an {{{rdfs:Class}}}.  So as a practical matter, from the standpoint of RDF these terms are no different than the classes defined within the regular Dublin Core and Darwin Core term vocabularies.  The classes in the type vocabularies are also listed on the page [ClassInventory#2._Type_vocabularies ClassInventory].
+Both Dublin Core [#26_DCMI_Type_Vocabulary (26)] and Darwin Core [#27_Darwin_Core_Type_Vocabulary (27)] define type vocabularies.  In the RDF which defines both of these vocabularies, each of the listed types is declared to be an {{{rdfs:Class}}}.  So as a practical matter, from the standpoint of RDF these terms are no different than the classes defined within the regular Dublin Core and Darwin Core term vocabularies.  The classes in the type vocabularies are also listed on the page [ClassInventory#2._Type_vocabularies ClassInventory].
 
 
 ====4.7.3.1. Why the DCMI and Darwin Core type vocabularies are defined separately from other terms====
