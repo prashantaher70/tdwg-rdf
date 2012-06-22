@@ -387,6 +387,21 @@ The ABCD schema is a TDWG Standard (http://www.tdwg.org/standards/115/) which ca
 ===20  dwc:!ResourceRelationship is both a class and a property===
 see http://code.google.com/p/darwincore/issues/detail?id=135
 
+===21 Natural Collections Descriptions (NCD) draft TDWG standard===
+Human readable http://www.tdwg.org/standards/312/
+
+RDF at 
+
+http://rs.tdwg.org/ontology/voc/Collection
+
+http://rs.tdwg.org/ontology/voc/Institution
+
+http://rs.tdwg.org/ontology/voc/InstitutionType
+
+http://rs.tdwg.org/ontology/voc/ContactDetails
+
+Use view page source to view RDF; however, a note at that page says management of the vocabulary is now at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/
+
 ===21 DCMI Metadata Terms===
 http://dublincore.org/documents/dcmi-terms/
 
