@@ -245,7 +245,7 @@ http://www.plantontology.org/
 
 http://www.obofoundry.org/
 
-For unambiguous formal definitions of the primitive relationships used in OBO ontologies, see Smith et al. 2005. Relations in biomedical ontologies. Genome Biology 6:R46 [http://dx.doi.org/10.1186/gb-2005-6-5-r46 doi:10.1186/gb-2005-6-5-r46]
+For unambiguous formal definitions of the primitive relationships used in OBO ontologies, see Smith et al. 2005. Relations in biomedical ontologies. {{{Genome Biology 6:R46}}} [http://dx.doi.org/10.1186/gb-2005-6-5-r46 doi:10.1186/gb-2005-6-5-r46]
 
 ===5 OWL 2 Web Ontology Language Primer===
 OWL is a W3C Recommendation with a number of normative documents.  This particular document was designed for novices.
