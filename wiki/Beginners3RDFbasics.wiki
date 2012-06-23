@@ -67,7 +67,7 @@ kimage:ac1490  foaf:maker  agents:kirchoff#coblea
 }}}
 can be interpreted by a human to say that the image was made the person or organization {{{kirchoff#coblea}}}.  If a computer were programmed to recognize the foaf vocabulary, it could interpret this triple to mean that the image was made by some person or organization, but would have no further information about the nature of that agent without additional triples describing {{{agents:kirchoff#coblea}}} .
 
-===3.2.3. Additional triple examples===
+===3.2.4. Additional triple examples===
 Here are two more statements in RDF about the image:
 
 {{{
