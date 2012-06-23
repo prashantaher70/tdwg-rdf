@@ -16,7 +16,7 @@ In [Beginners4Vocabularies#4.2._What_is_an_ontology? section 4.2.] it was noted 
 ==7.2. Some features that may apply to ontologies==
 
 ===7.2.1.  Hierarchical relationships===
-Ontologies can express how one term is related hierarchically to another, e.g. a class is a subclass of another, a class is broader than another, class x is {{{partOf}}} class y, etc.
+Ontologies can express how one term is related hierarchically to another, e.g. a class is a subclass of another, a class is broader than another, object A is {{{partOf}}} object B, etc.
 
 ===7.2.2. Characteristics of properties===
 Ontologies can define the characteristics of properties using terms that are well known to machines.  For example, a property can be the inverse of another, a property can be transitive, symmetric, or functional, etc.  _Annotation properties_ (e.g. {{{rdfs:label}}}) can be applied as properties to describe the characteristics of other properties.  [#1_Annotations_in_Web_Ontology_Language (1)]
@@ -24,8 +24,8 @@ Ontologies can define the characteristics of properties using terms that are wel
 ===7.2.3. Properties with assumed types of values ===
 Properties can be defined to have values that are identifiable objects, or defined to have values that are literals.
 
-===7.3.4. Ontologies can facilitate inferences===
-The relationships and restrictions expressed in an ontology can allow facts to be inferred that are not stated explicitly.  Those relationships and restrictions can also allow it to be determined that there are illogical inconsistencies in data described using terms from the ontology.
+===7.2.4. Ontologies can facilitate inferences===
+The relationships and restrictions expressed in an ontology can allow facts to be inferred that are not stated explicitly.  Those relationships and restrictions can also allow it to be determined that there are logical inconsistencies in data described using terms from the ontology.
 
 ==7.3. Examples of ontologies==
 ===7.3.1. Friend of a Friend (FOAF) vocabulary===
@@ -52,7 +52,7 @@ po:0020049 (leaflet) part_of po:0020043
 po:0020046 (palmate leaf) is_a po:0020043
 po:0020045 (pinnate leaf) is_a po:0020043
 }}}
-Although the PO uses few properties to relate its terms, it has many terms.  So its complexity is due to size rather that complexity of relationships.  
+Although the PO uses few properties to relate its terms, it has many terms.  So its complexity is due to size rather than complexity of relationships.  
 
 The PO is an abstract model without a particular serialization ([Beginners3RDFbasics#3.3._Serializations_of_RDF section 3.3]), although it does have an OWL representation at http://owlfiles.plantontology.org/ .  
 
@@ -63,7 +63,7 @@ This is a large and complex ontology that imports terms from other vocabularies 
 
 Web Ontology Language (OWL) is a declarative language for expressing ontologies. [#5_OWL_2_Web_Ontology_Language_Primer (5)]  This means that it is used to describe a state of affairs in a domain of interest in a logical way. [#6_What_is_OWL_2? (6)]  It is a  knowledge representation language - it does not "do" anything in contrast to a computer language which can cause actions by providing instructions for the functioning of a computer.  However, applications called "reasoners" can infer information about the state of affairs by assessing statements made using the language of an OWL ontology.  
 
-An OWL ontology can be considered an abstraction and expressed in logical symbolism such as UML [#7_OMG_Unified_Modeling_Language_(UML) (7)].  However, OWL was designed so that ontologies could be expressed as RDF graphs, with a default exchange serialization of RDF/XML. [#8_OWL_2_Overview (8)]  As an RDF serialization, OWL is a more expressive extension of RDF than of its precursor RDFS ([Beginners4Vocabularies#4.4._RDF_Schema_and_the_relationship_of_the_DCMI_Abstract_Model section 4.4]) or generic RDF ([Beginners3RDFbasics#Beginner%27s_guide_to_RDF:_3._RDF_basics part 3]).  However, this increased expressivity comes at the expense of increased complexity.
+An OWL ontology can be considered an abstract model about knowledge in some domain, and is sometimes expressed in other modeling languages such as UML [#7_OMG_Unified_Modeling_Language_(UML) (7)], a modeling language familiar to many programmers, and which shares with OWL notions of classes and relations between them.  However, OWL was designed so that ontologies could be expressed as RDF graphs, with a default exchange serialization of RDF/XML. [#8_OWL_2_Overview (8)]  As an RDF serialization, OWL is a more expressive extension of RDF than of its precursor RDFS ([Beginners4Vocabularies#4.4._RDF_Schema_and_the_relationship_of_the_DCMI_Abstract_Model section 4.4]) or generic RDF ([Beginners3RDFbasics#Beginner%27s_guide_to_RDF:_3._RDF_basics part 3]).  However, this increased expressivity comes at the expense of increased complexity.
 
 === 7.4.1. Varieties of OWL===
 
@@ -137,7 +137,7 @@ implies
 The definition of {{{foaf:maker}}}  [#20_Definition_of_the_FOAF_vocabulary_in_RDF (20)], which is written in OWL, declares that {{{foaf:maker}}} is an {{{owl:ObjectProperty}}} which means that the object of a triple using that property should be a URI.  The [http://purl.org/dc/terms/creator definition] of {{{dcterms:creator}}}, which primarily uses RDFS, specifies a non-literal range ({{{dcterms:Agent}}}), so there is no inconsistency.  However, there has historically been confusion over whether {{{creator}}} in Dublin Core should refer to a person or a person's name.  The FOAF guidelines suggest that {{{dc:creator}}} (as opposed to {{{dcterms:creator}}}) should be used for textual names and {{{foaf:maker}}} should be used to refer to the creators as identified by URIs.  [#21_Definition_of_foaf:maker (21)]
 
 ====7.6.4.3. owl:sameAs====
-The property owl:sameAs is used to state that two individuals (i.e. class instances) are the same.  The practical effect of this is to say that if we declare {{{uri1 owl:sameAs uri2}}}, and a statement is made in the form of a triple containing {{{uri1}}}, one can infer that the triple formed by substituting {{{uri1}}} for {{{uri2}}} exists.    For example, if 
+The property owl:sameAs is used to state that two individuals (i.e. class instances) are the same.  The practical effect of this is to say that if we declare {{{uri1 owl:sameAs uri2}}}, and a statement is made in the form of a triple containing {{{uri1}}}, one can infer that the triple formed by substituting {{{uri1}}} for {{{uri2}}} represents a logically correct assertion (assuming that the original assertion is itself correct).  Informally, this means that {{{uri1}}} and {{{uri2}}} identify the same resource.  For example, if 
 {{{
 http://biocol.org/urn:lsid:biocol.org:col:35115  owl:sameAs  urn:lsid:biocol.org:col:35115
 }}}
@@ -349,7 +349,7 @@ Refer to section 4.9.2. of _A Practical Guide To Building OWL Ontologies Using P
 http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/
 
 -------------------
-Thanks to Paul Murray for helpful suggestions on this page.
+Thanks to Paul Murray and Bob Morris for helpful suggestions on this page.
 
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
 
