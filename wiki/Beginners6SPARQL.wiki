@@ -14,7 +14,7 @@
 
 ==6.1. What is SPARQL?==
 
-SPARQL is a query language designed specifically to query RDF databases. [#1_SPARQL_1.1_Query_Language (1)]  SPARQL queries are sent from a client to a service known as a SPARQL end point [#2__Definition_of_SPARQL_endpoint (2)] using the HTTP protocol.  The interaction between the client and the endpoint is defined in a machine-friendly protocol [#3_Communication_protocol_for_SPARQL (3)] that is not intended to be interpreted by humans, so use of SPARQL requires an interface that allows the user to enter the queries and to display the results in a meaningful way.
+SPARQL is a query language designed specifically to query RDF databases. [#1_SPARQL_1.1_Query_Language (1)]  SPARQL queries are sent from a client to a service known as a SPARQL end point [#2__Definition_of_SPARQL_endpoint (2)] using the HTTP protocol.  The interaction between the client and the endpoint is defined in a machine-friendly protocol [#3_Communication_protocol_for_SPARQL (3)] that is not intended to be interpreted by humans, so use of SPARQL requires an interface that allows the user to enter the queries and to display the results in a meaningful way.  As with traditional database languages such as SQL, those interfaces are commonly constructed so that the queries are constructed and launched  through forms that do not require the human user to have any knowledge of RDF and SPARQL.  Programming such interfaces is beyond the scope of this guide.
 
 In this guide, some examples will be provided to show you some of the capabilities of SPARQL.  Then a few basic search terms will be described and illustrated.  SPARQL is capable of doing queries that are far more sophisticated than those shown here.  However, such queries are beyond the scope of a guide for beginners so the reader is referred to additional resources in [#6.6._For_further_information section 6.6].
 
@@ -405,9 +405,11 @@ http://tools.ietf.org/html/rfc3987
 However, as a matter of convenience, IRIs will be referred to as URIs in this guide.
 
 ===9 RDF graph===
-"Graph" is the term for a set of RDF triples which are interconnected by having nodes (URIs or literals) in common.  Graphically, this is shown as nodes connected by arrows which represent predicates.  However, the term "graph" represents the set of triples regardless of serialization and not specifically a graphical representation.  For more information, see
+"Graph" is the term for a set of RDF triples which may be interconnected by having nodes (URIs or literals) in common.  Graphically, this is shown as nodes connected by arrows which represent predicates.  However, the term "graph" represents the set of triples regardless of serialization and not specifically a graphical representation.  For more information, see
 
 http://www.w3.org/TR/rdf-primer/#intro 
+
+A _named graph_ provides a means for identifying a subgraph of triples within a triple store.  
 
 ===10 !TaxonConcept ontology===
 The TDWG !BioBlitz used some terms from the !TaxonConcept ontology which defines "light-weight tags" (many classes) that can be used to create very flat database records.  For more details, see
@@ -425,6 +427,8 @@ http://code.google.com/p/darwin-sw/wiki/DesignPrinciples
 
 for a description of the design principles on which it is based.  
 -------------------
+Thanks to Bob Morris for helpful comments and suggestions on this page.
+
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
 
 .
