@@ -214,17 +214,17 @@ In N3, the subject is listed, followed by an indented list predicate/object pair
 
 There are several tools that can be used to validate the syntax of RDF and to convert from one kind of serialization to another. 
 
-===3.3.5.1. XML validation and graphical visualization===
+====3.3.5.1. XML validation and graphical visualization====
 
 The W3C provides a validation service at 
 http://www.w3.org/RDF/Validator/
 which can be used to generate raw triples, a graphical visualization, or both from RDF/XML.  
 
-===3.3.5.2. Conversion from XML to N3 or N3 to XML===
+====3.3.5.2. Conversion from XML to N3 or N3 to XML====
 A converter is available at
 http://www.rdfabout.com/demo/validator/
 
-===3.3.5.3. Stand-alone RDF editor===
+====3.3.5.3. Stand-alone RDF editor====
 Links to this kind of tool are found in [Beginners#0.3.5._Software_tools section 0.3.5.] of this guide.
 
 ==3.4. Learn more about RDF==
