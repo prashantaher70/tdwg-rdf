@@ -95,7 +95,7 @@ http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/CreditLine
 }}}
 represents an abstract non-information resource: the credit line for a media item.  Entering this URI into a Web browser doesn't do anything.  In this case, attaching "{{{http://iptc.org/std/Iptc4xmpExt/1.0/xmlns/}}}" to the term "{{{CreditLine}}}" simply makes the identifier globally unique but doesn’t actually make use of the HTTP protocol to do anything.
 
-===1.4. Testing a URI===
+==1.4. Testing a URI==
 Vapour is a "Linked Data Validator" [#15._Vapour_Linked_Data_validator_for_checking_URIs (15)] which can be used to test whether a URI is dereferenceable and if it dereferences, to determine based on the server response whether the resource identified by the URI is an information resource or not. 
 
 http://validator.linkeddata.org/vapour
