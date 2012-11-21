@@ -17,7 +17,7 @@ Steve Baskauf notes that although the TDWG Ontology has an "unfinished" feel, th
 
 Rich Pyle asks for feedback from users of TCS, the TDWG Taxon Concept Ontology, and the Darwin Core dwc:Taxon class terms.  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002517.html
 
-Kevin Richards reports use of the Taxon Concept Ontology in LSID resolvers that resolve names.  (Actually some of these use the Taxon Name Ontology part of the TDWG ontology, which is actually a separate component at http://rs.tdwg.org/ontology/voc/TaxonName viewable in a browser at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonName.owl
+Kevin Richards reports use of the Taxon Concept Ontology in LSID resolvers that resolve names.  (Actually some of these use the Taxon Name Ontology part of the TDWG ontology, which is actually a separate component at http://rs.tdwg.org/ontology/voc/TaxonName viewable in a browser at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonName.owl )
 
 Nico Franz reports on current NSF projects dealing explicitly with taxon concept representation and integration.  He points out the weakness of TCS in defining relationships between concepts.  (actually a posting to a cross-post on the TDWG RDF email list) https://groups.google.com/d/msg/tdwg-rdf/ILZ4R07mfhw/XT7fy15kQ4wJ
 
