@@ -1,10 +1,10 @@
-#summary Summary and links to a thread related to TCS
+#summary Summary and links to a thread related to TCS and Taxon Concepts
 
 = Background =
 
 On 2012-11-01 a thread began on the TDWG TAG email list regarding the Taxon Concept Transfer Schema (TCS).  The TCS is a TDWG Current (2005) Standard (http://www.tdwg.org/standards/117/ viewable as a pdf at http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf ).  The TCS specifies the structure for XML documents to be used for the transfer of defined concepts.  It does not provide any guidance about how to represent taxon concepts in RDF.  However, the Taxon Concept Ontology component of the TDWG Ontology (http://rs.tdwg.org/ontology/voc/TaxonConcept viewable in a browser at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.owl ) is based on TCS and provides a means to express TCS as RDF.
 
-= TDWG TAG mailing list thread =
+= TDWG TAG mailing list thread posts relevant to RDF =
 
 Question posed by Tony Rees asking whether any users have real-world experience using TCS 
 http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002513.html
@@ -15,4 +15,22 @@ Greg Whitbread notes that the Atlas of Living Australia, National Species List (
 
 Steve Baskauf notes that although the TDWG Ontology has an "unfinished" feel, the Taxon Concept part of it appears to be complete and usable.  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002516.html
 
+Rich Pyle asks for feedback from users of TCS, the TDWG Taxon Concept Ontology, and the Darwin Core dwc:Taxon class terms.  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002517.html
 
+Kevin Richards reports use of the Taxon Concept Ontology in LSID resolvers that resolve names.  (Actually some of these use the Taxon Name Ontology part of the TDWG ontology, which is actually a separate component at http://rs.tdwg.org/ontology/voc/TaxonName viewable in a browser at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonName.owl
+
+Nico Franz reports on current NSF projects dealing explicitly with taxon concept representation and integration.  He points out the weakness of TCS in defining relationships between concepts.  (actually a posting to a cross-post on the TDWG RDF email list) https://groups.google.com/d/msg/tdwg-rdf/ILZ4R07mfhw/XT7fy15kQ4wJ
+
+Jessie Kennedy (author of TCS) provides a short history of TCS at http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002524.html
+
+Rich Pyle enumerates things that he things TCS "got right" and describes the approach involving "atomized" taxon name usage (TNU) instances.  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002526.html
+
+Tony Rees discusses the advantages associated with the ability to query multiple taxonomic databases.  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002528.html
+
+Rod Page discusses the pros and cons of depending on the GBIF classification  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002529.html
+
+= For further (painful) reading =
+
+A long summary of a variety of posts from the tdwg-content email list between 2009-10 and 2011-02 which include some on the topic of Taxon Concepts and RDF representations.  A text search on the page for "Taxon Concept" will jump you to some entry points. http://code.google.com/p/darwin-sw/wiki/TdwgContentEmailSummary
+
+An attempt to summarize Taxon Concept issues in the context of the development of Darwin-SW is at http://code.google.com/p/darwin-sw/wiki/ClassTaxon .  You are on your own to separate the objective background material from the material shamelessly promoting the Darwin-SW Ontology.  
