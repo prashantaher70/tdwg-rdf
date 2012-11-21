@@ -1,0 +1,18 @@
+#summary Summary and links to a thread related to TCS
+
+= Background =
+
+On 2012-11-01 a thread began on the TDWG TAG email list regarding the Taxon Concept Transfer Schema (TCS).  The TCS is a TDWG Current (2005) Standard (http://www.tdwg.org/standards/117/ viewable as a pdf at http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf ).  The TCS specifies the structure for XML documents to be used for the transfer of defined concepts.  It does not provide any guidance about how to represent taxon concepts in RDF.  However, the Taxon Concept Ontology component of the TDWG Ontology (http://rs.tdwg.org/ontology/voc/TaxonConcept viewable in a browser at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.owl ) is based on TCS and provides a means to express TCS as RDF.
+
+= TDWG TAG mailing list thread =
+
+Question posed by Tony Rees asking whether any users have real-world experience using TCS 
+http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002513.html
+
+Rod Page notes that some providers use vocabularies for taxonomic names, others use vocabularies for taxonomic concepts, and others such as Darwin Core blur the distinction.  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002514.html
+
+Greg Whitbread notes that the Atlas of Living Australia, National Species List (ANA-NSL) uses the TDWG Ontology (specifically the Taxon Concept part) as a basis for LSID, RDF, and JSON services. http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002515.html
+
+Steve Baskauf notes that although the TDWG Ontology has an "unfinished" feel, the Taxon Concept part of it appears to be complete and usable.  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002516.html
+
+
