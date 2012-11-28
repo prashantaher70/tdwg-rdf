@@ -37,7 +37,7 @@ Nico responds (quoting the above email) describing how he thinks his description
 
 Rod Page created a graphical representation of the model that underlies Zoobank. https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/kBsh0oRIF9YJ blog post at http://iphylo.blogspot.co.uk/2012/11/zoobank-data-model.html
 
-
+Nico Franz states that he believes that the set-theory relationships can be worked out through an SQL database and do not require an ontology-like environment.  He notes the desirability of a taxonomy submission tool with a pleasant front-end.  https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/I1ldlSOqjDYJ
 
 = For further (painful) reading =
 
