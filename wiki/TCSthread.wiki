@@ -4,7 +4,7 @@
 
 On 2012-11-01 a thread began on the TDWG TAG email list regarding the Taxon Concept Transfer Schema (TCS).  The TCS is a TDWG Current (2005) Standard (http://www.tdwg.org/standards/117/ viewable as a pdf at http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf ).  The TCS specifies the structure for XML documents to be used for the transfer of defined concepts.  It does not provide any guidance about how to represent taxon concepts in RDF.  However, the Taxon Concept Ontology component of the TDWG Ontology (http://rs.tdwg.org/ontology/voc/TaxonConcept viewable in a browser at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.owl ) is based on TCS and provides a means to express TCS as RDF.
 
-= TDWG TAG mailing list thread posts relevant to RDF =
+= TDWG TAG mailing list thread posts relevant to RDF and broad issues that would impact RDF=
 
 Question posed by Tony Rees asking whether any users have real-world experience using TCS 
 http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002513.html
@@ -28,6 +28,14 @@ Rich Pyle enumerates things that he things TCS "got right" and describes the app
 Tony Rees discusses the advantages associated with the ability to query multiple taxonomic databases.  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002528.html
 
 Rod Page discusses the pros and cons of depending on the GBIF classification  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002529.html
+
+Nico Franz describes three expected actions of concepts.  He says tools are needed to import existing concept hierarchies. https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/iJgh5zI-bCIJ
+
+Rich Pyle responds to Nico's post (but I don't think it went out on the list - it's included in Nico's subsequent response) by describing a Taxon Name Usage Instance (TNU).  A TNU is a snapshot in time and can include Code-governed Nomenclatural Acts (small subset) as well as things as vague as a newspaper reference or label annotation.  He says it would be nice to have a registry of TNUs that represent Taxon Concepts (TNUs that are defined in referenceable literature?) as well a mechanism for asserting how concepts map to each other.  
+
+Nico responds (quoting the above email) describing how he thinks his description of taxon concepts maps to Rich's.  He says describes a situation where a TNU can "rise" to become a taxon concept via a mapping.  Thus it may be premature to define things to soon or too narrowly.  https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/OV7TB8ctTs8J
+
+
 
 = For further (painful) reading =
 
