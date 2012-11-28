@@ -35,6 +35,8 @@ Rich Pyle responds to Nico's post (but I don't think it went out on the list - i
 
 Nico responds (quoting the above email) describing how he thinks his description of taxon concepts maps to Rich's.  He says describes a situation where a TNU can "rise" to become a taxon concept via a mapping.  Thus it may be premature to define things to soon or too narrowly.  https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/OV7TB8ctTs8J
 
+Rod Page created a graphical representation of the model that underlies Zoobank. https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/kBsh0oRIF9YJ blog post at http://iphylo.blogspot.co.uk/2012/11/zoobank-data-model.html
+
 
 
 = For further (painful) reading =
