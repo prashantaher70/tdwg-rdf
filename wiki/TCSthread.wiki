@@ -41,6 +41,8 @@ Nico Franz states that he believes that the set-theory relationships can be work
 
 Steve Baskauf expresses the opinion that what Rich wants to do with TNUs could and probably should be done using the TDWG Taxon Concept ontology.  https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/41J-e0lRJIQJ and followup https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/4KBXOW1NzwwJ
 
+Rich Pyle responds to Rod's blog post and discusses features of the GNUB data model.  http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002541.html
+
 = For further (painful) reading =
 
 A long summary of a variety of posts from the tdwg-content email list between 2009-10 and 2011-02 which include some on the topic of Taxon Concepts and RDF representations.  A text search on the page for "Taxon Concept" will jump you to some entry points. http://code.google.com/p/darwin-sw/wiki/TdwgContentEmailSummary
