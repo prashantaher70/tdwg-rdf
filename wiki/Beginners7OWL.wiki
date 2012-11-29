@@ -152,7 +152,7 @@ http://bioimages.vanderbilt.edu/ind-baskauf/11657.rdf  foaf:maker  urn:lsid:bioc
 
 The property {{{owl:sameAs}}} is a very powerful and a very dangerous thing.  If Institution A describes item {{{url1}}} using many triples stored in a dataset and Institution B describes item {{{url2}}} using many other triples stored in the same dataset, then an assertion by Person C that
 {{{uri1 owl:sameAs uri2}}}
-effectively merges all parts of the graph which relate to both {{{uri1}}} and {{{uri2}}}.  This may be a good thing, but if {{{uri1}}} and {{{uri2}}} aren't actually precisely the same thing, the result might be silly or possibly logically inconsistent statements.
+effectively merges all parts of the graph which relate to both {{{uri1}}} and {{{uri2}}}.  This may be a good thing, but if {{{uri1}}} and {{{uri2}}} aren't actually precisely the same thing, the result might be silly or possibly logically inconsistent statements.[#25_Reference_on_owl:sameAs (25)]
 
 ===7.6.5. OWL property characteristics===
 OWL allows the creator of an ontology to specify special characteristics of properties that can be used by machines (reasoners) to infer triples that are not explicitly stated.  Several of these characteristics are described below.
@@ -347,6 +347,12 @@ http://www.w3.org/TR/owl2-primer/#Modeling_Knowledge:_Basic_Notions
 Refer to section 4.9.2. of _A Practical Guide To Building OWL Ontologies Using Protégé 4 and CO-ODE Tools_ at
 
 http://owl.cs.manchester.ac.uk/tutorials/protegeowltutorial/
+
+===25 Reference on owl:sameAs===
+Harry Halpin, Patrick J. Hayes, James P. McCusker, Deborah L. McGuinness,
+and Henry S. Thompson. 2010. When owl:sameAs isn’t the Same: An Analysis of Identity in Linked Data. International Semantic Web Conference (ISWC).
+
+http://iswc2010.semanticweb.org/pdf/261.pdf
 
 -------------------
 Thanks to Paul Murray and Bob Morris for helpful suggestions on this page.
