@@ -1,0 +1,93 @@
+#summary RDF representation of tc:Taxon instance and related metadata
+
+= RDF representation of a tc:Taxon instance= 
+This example uses terms from the TDWG TaxonConcept and TaxonName ontologies as well as other well-known vocabularies.  There are many literal properties included in the TaxonConcept ontology that could be used but are not shown here in order to focus on the predicates used to relate the major non-literal omponents of the taxon graph. 
+
+==Graphical representation==
+
+<img src="http://tdwg-rdf.googlecode.com/svn/trunk/file/taxon.jpg"  align="center"/>
+
+Notes:
+
+1. Standard conventions are followed: oval nodes are URI references, rectangular nodes are literals, arrows represent predicates with the subject at the tail and object at the head.  Predicate URIs are listed in red.  
+
+2. Namespace abbreviations are defined in the XML example (below); {{{tc:, tn:, rdf:, dcterms:, and dcmitype:}}} are real namespaces and {{{gnub:}}} is made up.
+
+3. All of the URIs beginning with {{{http://globalnames.org/}}} are fake but could be similar to what GNUB might use if UUIDs were assigned and HTTP proxied.  The {{{gnub:Reference}}} class is made-up because I couldn't think of a pre-existing class to use.
+
+4. The ISBN URI for Gleason and Cronquist 1991 is a real and valid URI, but is not dereferenceable.
+
+==RDF/XML serialization==
+
+{{{
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:gnub="http://globalnames.org/vocabulary/"
+xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:dcmitype="http://purl.org/dc/dcmitype/"
+xmlns:tc="http://rs.tdwg.org/ontology/voc/TaxonConcept#"
+xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
+>
+<tc:Taxon rdf:about="http://globalnames.org/gnub/12345678-90AB-CDEF-1234-567890ABCDEF">
+<dcterms:description>Taxon concept of Juncus diffusissimus Buckl. sec. Gleason Cronquist 1991</dcterms:description>
+
+<tc:hasName>
+     <tn:TaxonName rdf:about="http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:464602"/>
+</tc:hasName>
+
+<tc:accordingTo>
+     <gnub:Reference rdf:about="http://globalnames.org/reference/12345678-90AB-CDEF-1234-567890ABCDEE">
+          <dcterms:created>1991</dcterms:created>
+          <dcterms:creator rdf:resource="http://globalnames.org/agent/12345678-90AB-CDEF-1234-567890ABCDED"/>
+          <dcterms:references>
+               <dcmitype:Text rdf:about="urn:isbn:0893273651">
+                    <dcterms:date>1991</dcterms:date>
+                    <dcterms:publisher>The New York Botanical Garden, Bronx, NY, US</dcterms:publisher>
+                    <dcterms:title>Manual of Vascular Plants of Northeastern United States and Adjacent Canada</dcterms:title>
+                    <dcterms:creator>Gleason, Henry A. and Arthur Cronquist</dcterms:creator>
+               </dcmitype:Text>
+          </dcterms:references>
+     </gnub:Reference>
+</tc:accordingTo>
+
+</tc:Taxon>
+</rdf:RDF>
+}}}
+Notes:
+
+1. A {{{dcterms:description}}} property has been added for clarity.
+
+2. An rdf:type assertion of {{{tn:TaxonName}}} was made for the object of the {{{tc:hasName}}} triple since uBio doesn't type its names.  You can use http://linkeddata.informatik.hu-berlin.de/uridbg/ to dereference the uBio URI to see what properties are provided (it's a real URI).  
+
+3. The {{{rdf:type}}} of the {{{dcterms:creator}}} object (presumably {{{dcterms:Agent}}}) is not declared here.  One would expect it to be included in the metadata retrieved when the agent URI is dereferenced.
+
+4. Since the ISBN URI is not dereferenceable, its properties are defined here.  In the real world, the metadata for the published reference would probably not be included in the record for the {{{tc:Taxon}}}.
+
+5. There are many additional properties that could be assigned to the tc:Taxon resource, including many from the TDWG TaxonConcept ontology which would relate it to parent taxa.  Likewise, the other linked resources could be described using other well-known terms for describing agents and text documents.  
+
+== RDF/Turtle serialization ==
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix gnub: <http://globalnames.org/vocabulary/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dcmitype: <http://purl.org/dc/dcmitype/>.
+@prefix tc: <http://rs.tdwg.org/ontology/voc/TaxonConcept#>.
+@prefix tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>.
+
+<http://globalnames.org/gnub/12345678-90AB-CDEF-1234-567890ABCDEF> dcterms:description "Taxon concept of Juncus diffusissimus Buckl. sec. Gleason Cronquist 1991";
+                                                                   tc:accordingTo <http://globalnames.org/reference/12345678-90AB-CDEF-1234-567890ABCDEE>;
+                                                                   tc:hasName <http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:464602>;
+                                                                   a tc:Taxon.
+<http://globalnames.org/reference/12345678-90AB-CDEF-1234-567890ABCDEE> dcterms:created "1991";
+                                                                        dcterms:creator <http://globalnames.org/agent/12345678-90AB-CDEF-1234-567890ABCDED>;
+                                                                        dcterms:references <urn:isbn:0893273651>;
+                                                                        a gnub:Reference.
+<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:464602> a tn:TaxonName.
+<urn:isbn:0893273651> dcterms:creator "Gleason, Henry A. and Arthur Cronquist";
+                      dcterms:date "1991";
+                      dcterms:publisher "The New York Botanical Garden, Bronx, NY, US";
+                      dcterms:title "Manual of Vascular Plants of Northeastern United States and Adjacent Canada";
+                      a dcmitype:Text.
+}}}
