@@ -1,7 +1,7 @@
 #summary RDF representation of tc:Taxon instance and related metadata
 
 = RDF representation of a tc:Taxon instance and its associated reference= 
-This example uses terms from the TDWG TaxonConcept and TaxonName ontologies as well as other well-known vocabularies.  There are many literal properties included in the TaxonConcept ontology that could be used but are not shown here in order to focus on the predicates used to relate the major non-literal omponents of the taxon graph. 
+This example uses terms from the TDWG TaxonConcept and TaxonName ontologies as well as other well-known vocabularies.  There are other properties included in the TaxonConcept ontology that could be used but are not shown here in order to focus on the predicates used to relate the major defining components of the taxon graph. 
 
 ==Graphical representation==
 
