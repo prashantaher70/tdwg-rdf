@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 22 Nov 2012
+*Date:* (Created) 17 February 2012; (Last modified) 1 Dec 2012
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -253,7 +253,7 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 [http://www.w3.org/2009/08/skos-reference/skos.html SKOS Simple Knowledge Organization System Namespace Document] ([http://www.w3.org/2009/08/skos-reference/skos.rdf in RDF])
 
-[http://www.tdwg.org/standards/117/ Taxonomic Concept Transfer Schema (TCS) (TDWG Standard)] [http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf (Users Guide PDF viewable in browser)] [http://bioimages.vanderbilt.edu/pages/xmlspy_documentation_01.pdf (XML schema details PDF viewable in browser)] ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.owl TaxonConcept in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonName.owl TaxonName in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Common.rdf Common in RDF])  [http://www.jbiomedsem.com/content/2/1/7 Journal of Biomedical Semantics 2:7 article on application of LSIDs and TCS at Catalogue of Life]
+[http://www.tdwg.org/standards/117/ Taxonomic Concept Transfer Schema (TCS) (TDWG Standard)] [http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf (Users Guide PDF viewable in browser)] [http://bioimages.vanderbilt.edu/pages/xmlspy_documentation_01.pdf (XML schema details PDF viewable in browser)] ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.rdf TaxonConcept in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonName.rdf TaxonName in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Common.rdf Common in RDF])  [http://www.jbiomedsem.com/content/2/1/7 Journal of Biomedical Semantics 2:7 article on application of LSIDs and TCS at Catalogue of Life]
 
 [http://www.taxonconcept.org/ontologies/ TaxonConcept Ontologies] ([http://lod.taxonconcept.org/ontology/txn.owl in RDF])
 
