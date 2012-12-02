@@ -57,7 +57,7 @@ Notes:
 
 3. The form of the {{{tc:accordingToString}}} string follows the TCS guidelines.  The {{{tc:nameString}}} string is the string provided by uBio for the name.
 
-4. It is likely that there will be many more properties provided for the {{{tc:Taxon}}} instance.  In particular, properties relating it to parent and child taxa would be likely.  TCS describes a property called "MicroReference" which is an additional qualification for the reference which could provide more specific page or table information within the publication.  However, the TDWG TaxonConcept ontology does not appear to define this term. 
+4. It is likely that there will be many more properties provided for the {{{tc:Taxon}}} instance.  In particular, properties relating it to parent and child taxa would be likely.  TCS describes a property called "MicroReference" which is an additional qualification for the reference which could provide more specific page or table information within the publication.  The TDWG Common ontology defines the term {{{tcom:microReference}}} (http://rs.tdwg.org/ontology/voc/Common#microReference) which serves this purpose. 
 
 == tc:Taxon instance RDF/Turtle serialization ==
 {{{
