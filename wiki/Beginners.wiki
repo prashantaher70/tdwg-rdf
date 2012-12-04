@@ -219,7 +219,7 @@ See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 [http://uriburner.com/isparql URIBurner enhanced SPARQL endpoint]
 
 ===0.3.7. Biodiversity-related and General vocabularies and ontologies===
-[http://species-id.net/wiki/Audubon_Core Audubon Core (AC) draft TDWG standard] ([http://species-id.net/wiki/Audubon_Core_Term_List term list])
+[http://terms.gbif.org/wiki/Audubon_Core Audubon Core (AC) draft TDWG standard] ([http://terms.gbif.org/wiki/Audubon_Core_Term_List_%281.0_normative%29 draft term list])
 
 Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/voc/apni/APNI.rdf in RDF])
 
