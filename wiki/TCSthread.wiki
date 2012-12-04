@@ -49,6 +49,8 @@ Rich Pyle responds to Steve's email.  He notes that a TNU must have documentatio
 
 Steve Baskauf comments about the documentation of the TDWG Taxon Concept ontology and TCS.  He proposes using tc:hasName and tc:accordingTo as properties which define tc:Taxon (or tc:TaxonConcept) instances.  He provides a concrete example using a real name URI from uBio and a real reference URI which is an HTTP-proxied DOI.  He shows how the RDF graph would be represented graphically and marked up in RDF/XML and RDF/turtle.  He discusses how differing views on taxon concepts and TNUs would be handled under this model. He asserts that Darwin Core is not up to handling complex non-"flat" situations like this.  He proposes that the TDWG Taxon Concept and Taxon Name ontology terms be used instead of Darwin Core when represented as RDF.  He requests feedback on this proposal.  https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/OA8OalRFAHkJ
 
+Nico Franz replies that he thinks this is a good path to take and ... "To the extent that communication succeeds relevantly (like for instance we can identify and protect a "natural cluster" of things out there to a satisfactory degree), we can call it "real" or "construct".. - the success remains and our model needs to be able to accommodate successes that inherently involve semantic vagueness. ..."  https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/D53JBKtxQGUJ
+
 
 = For further (painful) reading =
 
