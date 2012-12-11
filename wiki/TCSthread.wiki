@@ -1,10 +1,12 @@
 #summary Summary and links to a thread related to TCS and Taxon Concepts
 
+=Summary and links to a thread related to TCS and Taxon Concepts=
+
 = Background =
 
 On 2012-11-01 a thread began on the TDWG TAG email list regarding the Taxon Concept Transfer Schema (TCS).  The TCS is a TDWG Current (2005) Standard (http://www.tdwg.org/standards/117/ viewable as a pdf at http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf ).  The TCS specifies the structure for XML documents to be used for the transfer of defined concepts.  It does not provide any guidance about how to represent taxon concepts in RDF.  However, the Taxon Concept Ontology component of the TDWG Ontology (http://rs.tdwg.org/ontology/voc/TaxonConcept viewable in a browser at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.owl ) is based on TCS and provides a means to express TCS as RDF.
 
-= TDWG TAG mailing list thread posts relevant to RDF and broad issues that would impact RDF=
+= TDWG TAG mailing list and TDWG RDF Task Group mailing list thread posts relevant to RDF and broad issues that would impact RDF=
 
 Question posed by Tony Rees asking whether any users have real-world experience using TCS 
 http://lists.tdwg.org/pipermail/tdwg-tag/2012-November/002513.html
@@ -62,8 +64,14 @@ Rich replies that ICZN (sponsor of ZooBank) cannot rely on DOIs to be around 100
 Steve responds more.  Possibly the only compelling reason to represent a name string with a URI is that literals can't be the subject of RDF triples.  The importance of this would depend on whether there is anything else to "say" about the name string.  He gives an example where their is no physical documentation of a name use.  He notes that there are problems with using the ResourceRelationship terms in RDF but defers on discussing them in this thread.  He notes that there are technical problems with using the DwC "ID" properties. 
 https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/QCCYI1icYCkJ
 
-Rich replies ...
+Rich replies that he thinks we are in full or near-full agreement.  He thinks that perhaps GNUB references to name strings should point to a GNI (Global Names Index) instance URI.  He thinks that creating some kind of sub- or superclass relationships between tn:TaxonName and tc:TaxonConcept might be productive.  Both of these classes could be framed as flavors of TNUs.  He notes that GNUB has a "Personal Communication" reference which can be used to create a reference anchor for TNUs that don't have more concrete representations.  
 https://groups.google.com/d/msg/tdwg-rdf/CMfwf10Ozpo/GW2GaWW8C78J (fourth forwarded email)
+
+Steve attempts to summarize the status of the discussion.  He concludes that it may not be necessary to come to a community consensus on a model for taxon concepts, taxon names, name strings, etc. IF there is consensus that a centralized organization (e.g. GNUB) will handle all of the metadata.  In that case, the organization can simply create an RDF model that fits with their database model and inform users what that model is so that they can understand RDF dumps or run SPARQL queries on the metadata held by the organization.  A community-sanctioned model is really only important if many separate organizations are going to create their own taxon concept/taxon name metadata sets which must be reconciled and aggregated (similar to the situation of occurrences documented by many separate museums).  If there is a centralized system, then Darwin Core dwc:Taxon class terms may become more important as a means to mark up metadata that would be transmitted to the centralized organization.
+https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/mQrl1zV8I48J
+
+Steve records his thoughts on the relationships among protonyms, tn:TaxonName instances and tc:TaxonConcept instances as described by Rich.  He also discusses the availability of a property term for name strings and what the appropriate object is for tc:hasName.
+https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/AUk0YvbYp1oJ
 
 = For further (painful) reading =
 
