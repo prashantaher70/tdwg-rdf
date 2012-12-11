@@ -59,6 +59,12 @@ Steve responds to Rich's emails.  He questions whether Zoobank actually avoids c
 
 Rich replies that ICZN (sponsor of ZooBank) cannot rely on DOIs to be around 100+ years from now and therefore mints a UUID which he believes has greater longevity.  He explains details of how ZooBank cross-references and avoids redundancy.  He explains how a complex TNU implies many other TNUs that would be cross-referenced to it.  He says that a tn:TaxonName is a "name object".  He says that a tn:TaxonName (equivalent to his "name object" which has the technical name: Protonym) is a subclass of TNUs. He says that the timing is good to work out a model since they are in the process of building related services that would greatly benefit from a more robust taxonomic ontology. https://groups.google.com/d/msg/tdwg-rdf/CMfwf10Ozpo/GW2GaWW8C78J (third forwarded email)
 
+Steve responds more.  Possibly the only compelling reason to represent a name string with a URI is that literals can't be the subject of RDF triples.  The importance of this would depend on whether there is anything else to "say" about the name string.  He gives an example where their is no physical documentation of a name use.  He notes that there are problems with using the ResourceRelationship terms in RDF but defers on discussing them in this thread.  He notes that there are technical problems with using the DwC "ID" properties. 
+https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/QCCYI1icYCkJ
+
+Rich replies ...
+https://groups.google.com/d/msg/tdwg-rdf/CMfwf10Ozpo/GW2GaWW8C78J (fourth forwarded email)
+
 = For further (painful) reading =
 
 A long summary of a variety of posts from the tdwg-content email list between 2009-10 and 2011-02 which include some on the topic of Taxon Concepts and RDF representations.  A text search on the page for "Taxon Concept" will jump you to some entry points. http://code.google.com/p/darwin-sw/wiki/TdwgContentEmailSummary
