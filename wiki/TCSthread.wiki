@@ -76,6 +76,16 @@ https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/mQrl1zV8I48J
 Steve records his thoughts on the relationships among protonyms, tn:TaxonName instances and tc:TaxonConcept instances as described by Rich.  He also discusses the availability of a property term for name strings and what the appropriate object is for tc:hasName.
 https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/AUk0YvbYp1oJ
 
+Rich Pyle made a couple of clarifications.  In addition to protonyms, "New Combination" instances qualify as name objects.  He considers tc:hasName a "dangerous property" because Taxon Name is so poorly defined.  
+https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/dU6HYjxw1UAJ
+
+Steve replies that tc:hasName will probably have to remain poorly defined for the moment, but it or some other property is needed to collect general Taxon Concepts to more basic forms of Taxon Concepts such as protonyms.
+https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/PmW5_7YqoaQJ
+
+Rich says that the use Steve described for tc:hasName is effectively "hasProtonym".  He wonders in what other way one would use tc:hasName.  Steve replies that although he doesn't know what else could be the object of tc:hasName other than a protonym instance, one could get examine properties in the TDWG Taxon Name ontology which have tn:TaxonName as their domain and see which ones don't apply to protonyms.  The non-applicable ones could inform us on possible other uses of tc:hasName.
+https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/4LHvDqND9C0J
+
+
 = For further (painful) reading =
 
 A long summary of a variety of posts from the tdwg-content email list between 2009-10 and 2011-02 which include some on the topic of Taxon Concepts and RDF representations.  A text search on the page for "Taxon Concept" will jump you to some entry points. http://code.google.com/p/darwin-sw/wiki/TdwgContentEmailSummary
