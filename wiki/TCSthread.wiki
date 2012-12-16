@@ -88,6 +88,8 @@ https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/PmW5_7YqoaQJ
 Rich says that the use Steve described for tc:hasName is effectively "hasProtonym".  He wonders in what other way one would use tc:hasName.  Steve replies that although he doesn't know what else could be the object of tc:hasName other than a protonym instance, one could get examine properties in the TDWG Taxon Name ontology which have tn:TaxonName as their domain and see which ones don't apply to protonyms.  The non-applicable ones could inform us on possible other uses of tc:hasName.
 https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/4LHvDqND9C0J
 
+Éamonn Ó Tuama comments that RDF can also be used simply as a format to define and encode vocabularies themselves.
+https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/uoLE8jW7V4EJ
 
 = For further (painful) reading =
 
