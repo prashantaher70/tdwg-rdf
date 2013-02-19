@@ -1,0 +1,12 @@
+#summary Comparison of the W3C Open Annotation Core data model to existing TDWG terms
+
+= Open Annotation Core data model =
+The 
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
