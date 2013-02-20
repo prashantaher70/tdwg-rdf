@@ -1,12 +1,17 @@
 #summary Comparison of the W3C Open Annotation Core data model to existing TDWG terms
 
-= Open Annotation Core data model =
-The 
+= Open Annotation (OA) Core data model =
+The following diagram illustrates the core model of OA:
+http://www.openannotation.org/spec/core/images/motivations.png
+(image from {{{http://www.openannotation.org/spec/core/images/motivations.png}}}) as described at http://www.openannotation.org/spec/core/core.html#SimpleAnnotations .  
 
+The body is a comment or descriptive resource and the target is a resource that the body is somewhat "about".  
 
-= Details =
+The body and target resources "may be of any media type, and contain any type of content" and are recommended to have {{{rdf:type}}} which is a class described by the Dublin Core type vocabulary ({{{dcmitype:Image}}}, {{{dcmitype:Text}}}, etc.).  Thus the OA core model implies that the body and target resources are information resources which are retrievable via the Internet.  
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+= Darwin Core ResourceRelationship model =
+The Darwin Core TDWG Standard (http://www.tdwg.org/standards/450/ ) includes auxiliary terms which can be used to describe the relationship between two identified resources.  Because Darwin Core in its present form is designed to facilitate metadata transfer in text or XML format and not in RDF, the terms listed under the ResourceRelationship class cannot be directly "translated" into RDF, particularly because of the problem associated with the use of the "ID" terms in RDF (described [http://code.google.com/p/tdwg-rdf/wiki/DublinCore#2.4._Possible_courses_of_action_where_users_may_be_inclined_to_u elsewhere]).  However, the the model underlying the use of ResourceRelationship terms can be illustrated using an RDF graph-like diagram:
+
+http://tdwg-rdf.googlecode.com/svn/trunk/file/resource-relationship.png
+
+where the angle brackets indicate identifiers identifying resource instances.
