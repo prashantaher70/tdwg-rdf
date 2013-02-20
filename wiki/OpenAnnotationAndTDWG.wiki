@@ -29,6 +29,8 @@ The TaxonConcept ontology of the TDWG ontology (viewable at http://code.google.c
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/taxonconcept-relationship.png
 
+Unlike the previous two models, the TaxonConcept Ontology has a term ({{{tc:hasRelationship}}}) which can be used to link the related resources to the instance of the relationship.
+
 = Comparison of the three models =
 
 From these three diagrams, we can see that there is a common strategy that is employed by the three ontologies/vocabularies as summarized in the following table: 
@@ -36,7 +38,7 @@ From these three diagrams, we can see that there is a common strategy that is em
 ||ontology/vocabulary||rdf:type||subject resource||object resource||relationship described by||
 ||Darwin Core||dwc:ResourceRelationship||identified by dwc:resourceID||identified by dwc:relatedResourceID||literal value of dwc:relationshipOfResource||
 ||Annotation Ontology||oa:Annotation||value of oa:hasBody||value of oa:hasTarget||URI reference controlled value of oa:motivatedBy (an oa:Motivation instance)||
-||TaxonConcept ontology||tc:Relationship||value of tc:fromTaxon||value of tc:toTaxon||URI reference controlled value of tc:relationshipCategory (a tc: TaxonRelationshipTerm instance)||
+||TaxonConcept ontology||tc:Relationship||value of tc:fromTaxon||value of tc:toTaxon||URI reference controlled value of tc:relationshipCategory (a tc:TaxonRelationshipTerm instance)||
 
 In each case, the purpose of the terms are to describe how two resources are related to each other by describing a relationship instance.  Thus the relationship is a separately described resource from the two related resources.  This is in contrast to an RDF predicate which describes a relationship between two resources by its incorporation in a single triple.  Unlike a relationship described simply by a triple, this kind of model allows for tracking the provenance of the asserted relationship since the relationship instance can have provenance-tracking properties (e.g. {{{oa:annotatedBy}}}, {{{dwc:relationshipAccordingTo}}}, etc.).
 
@@ -83,7 +85,9 @@ and
 {{{
 tc:Relationship rdfs:subClassOf dwc:ResourceRelationship
 }}}
-The object properties oa:hasBody and tc:fromTaxon could be considered subproperties of an undefined object property which relates dwc:ResourceRelationship instances to instances identified by dwc:resourceID.  Similar subproperty relationships could be defined for the other properties listed in the table above.  It is questionable whether there would be value in this other than as an academic exercise, although one could use subproperty declarations in an Informed Dumb-Down" operation (http://wiki.dublincore.org/index.php/Glossary/Dumb-Down_Principle).  Does it matter?  Could the dwc:ResourceRelationship class be declared rdfs:subClassOf oa:Annotation or would that be bad since OA assumes information resources?  (See example of {{{oa:linking}}} at http://www.openannotation.org/spec/core/core.html#Motivations)
+The object properties oa:hasBody and tc:fromTaxon could be considered subproperties of an undefined object property which relates dwc:ResourceRelationship instances to instances identified by dwc:resourceID.  Similar subproperty relationships could be defined for the other properties listed in the table above.  It is questionable whether there would be value in this other than as an academic exercise, although one could use subproperty declarations in an Informed Dumb-Down" operation (http://wiki.dublincore.org/index.php/Glossary/Dumb-Down_Principle).  
+
+Does this question actually matter?  Could the dwc:ResourceRelationship class be declared rdfs:subClassOf oa:Annotation or would that be bad since OA assumes information resources?  (See example of {{{oa:linking}}} at http://www.openannotation.org/spec/core/core.html#Motivations)
 
 ==2. Is there a need for this level of complexity in describing relationships?==
 What are the advantages and disadvantages of creating relationship instances?  Do they facilitate reasoning better than simple predicates?  Are there non-RDF precedents for modeling relationships this way?  In modeling relationships between {{{tc:TaxonConcept}}} instances, is this approach better than simply defining predicates such as {{{tc:hasParentTaxon}}}.  In other words, do we recommend use of the TDWG TaxonConcept ontology as it is or create something simpler?
