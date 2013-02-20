@@ -37,7 +37,7 @@ From these three diagrams, we can see that there is a common strategy that is em
 
 ||ontology/vocabulary||rdf:type||subject resource||object resource||relationship described by||
 ||Darwin Core||dwc:ResourceRelationship||identified by dwc:resourceID||identified by dwc:relatedResourceID||literal value of dwc:relationshipOfResource||
-||Annotation Ontology||oa:Annotation||value of oa:hasBody||value of oa:hasTarget||URI reference controlled value of oa:motivatedBy (an oa:Motivation instance)||
+||Open Annotation Ontology||oa:Annotation||value of oa:hasBody||value of oa:hasTarget||URI reference controlled value of oa:motivatedBy (an oa:Motivation instance)||
 ||TaxonConcept ontology||tc:Relationship||value of tc:fromTaxon||value of tc:toTaxon||URI reference controlled value of tc:relationshipCategory (a tc:TaxonRelationshipTerm instance)||
 
 In each case, the purpose of the terms are to describe how two resources are related to each other by describing a relationship instance.  Thus the relationship is a separately described resource from the two related resources.  This is in contrast to an RDF predicate which describes a relationship between two resources by its incorporation in a single triple.  Unlike a relationship described simply by a triple, this kind of model allows for tracking the provenance of the asserted relationship since the relationship instance can have provenance-tracking properties (e.g. {{{oa:annotatedBy}}}, {{{dwc:relationshipAccordingTo}}}, etc.).
