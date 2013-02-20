@@ -12,6 +12,8 @@ The body and target resources "may be of any media type, and contain any type of
 = Darwin Core ResourceRelationship model =
 The Darwin Core TDWG Standard (http://www.tdwg.org/standards/450/ ) includes auxiliary terms which can be used to describe the relationship between two identified resources.  Because Darwin Core in its present form is designed to facilitate metadata transfer in text or XML format and not in RDF, the terms listed under the ResourceRelationship class cannot be directly "translated" into RDF, particularly because of the problem associated with the use of the "ID" terms in RDF (described [http://code.google.com/p/tdwg-rdf/wiki/DublinCore#2.4._Possible_courses_of_action_where_users_may_be_inclined_to_u elsewhere]).  However, the the model underlying the use of ResourceRelationship terms can be illustrated using an RDF graph-like diagram:
 
-http://tdwg-rdf.googlecode.com/svn/trunk/file/resource-relationship.png
+http://tdwg-rdf.googlecode.com/svn/trunk/file/resource-relationship1.png
 
 where the angle brackets indicate identifiers identifying resource instances.
+
+http://tdwg-rdf.googlecode.com/svn/trunk/file/taxonconcept-relationship.png
