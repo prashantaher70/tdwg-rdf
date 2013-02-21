@@ -72,7 +72,22 @@ _:bnode tc:fromTaxon <http://biodiversity.org.au/apni.taxon/118883>;
 
 OA examples at http://www.openannotation.org/spec/core/examples.html
 
-Don't have any examples of use of Darwin Core ResourceRelationship terms.
+Non-RDF example of use of Darwin Core ResourceRelationship terms as XML (from Darwin Core XML Guide http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#classes ):
+{{{
+<dwc:ResourceRelationship>
+    <dwc:resourceRelationshipID>http://guid.mvz.org/relations/23423</dwc:resourceRelationshipID>
+    <dwc:resourceID>urn:catalog:MVZ:Mammals:14523</dwc:resourceID>
+    <dwc:relatedResourceID>urn:catalog:MVZ:Mammals:14524</dwc:relatedResourceID>
+    <dwc:relationshipOfResource>offspring of</dwc:relationshipOfResource>
+</dwc:ResourceRelationship>
+<dwc:ResourceRelationship>
+ <dwc:resourceRelationshipID>http://guid.mvz.org/relations/23424</dwc:resourceRelationshipID>
+    <dwc:resourceID>urn:catalog:MVZ:Mammals:14524</dwc:resourceID>
+    <dwc:relatedResourceID>urn:catalog:MVZ:Mammals:14523</dwc:relatedResourceID>
+    <dwc:relationshipOfResource>mother of</dwc:relationshipOfResource>
+</dwc:ResourceRelationship>
+}}}
+Note: HTTP URIs are made up.
 
 =Questions= 
 ==1. How are these terms related to each other?==
