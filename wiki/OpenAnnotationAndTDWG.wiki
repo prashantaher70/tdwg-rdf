@@ -119,7 +119,7 @@ Refer to http://lists.w3.org/Archives/Public/public-openannotation/2013Feb/0174.
 
 <http://arctos.database.museum/guid/MVZ:Mamm:14524> a dcmitype:PhysicalObject, dwctype:PreservedSpecimen. 
 }}}
-Apparently this example (the non-RDF ResourceRelationship example above, expressed using the OA model) is a valid use of OA.  The OA model description uses words like "typically" and "generally" to allow for broader uses of OA than those that are described in the specification.  
+Apparently this example (containing the metadata from the non-RDF ResourceRelationship example in the Example section above, but expressed using the OA model) is a valid use of OA.  The OA model description uses words like "typically" and "generally" to allow for broader uses of OA than those that are described in the specification.  
 
 
 ==2. Is there a need for this level of complexity in describing relationships?==
