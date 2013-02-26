@@ -1,6 +1,6 @@
-#summary RDF representation of tc:Taxon instance and related metadata
+#summary RDF representation of tc:TaxonConcept instance and related metadata
 
-= RDF representation of a tc:Taxon instance and its associated reference= 
+= RDF representation of a tc:TaxonConcept instance and its associated reference= 
 This example uses terms from the TDWG TaxonConcept and TaxonName ontologies as well as other well-known vocabularies.  There are other properties included in the TaxonConcept ontology that could be used but are not shown here in order to focus on the predicates used to relate the major defining components of the taxon graph. 
 
 ==Graphical representation==
@@ -13,7 +13,7 @@ Notes:
 
 2. Namespace abbreviations are defined in the XML example (below); {{{tc:, tn:, rdf:, dcterms:, and foaf:}}} are real namespaces and {{{gnub:}}} is made up.
 
-3. The URIs are real and mostly dereferenceable except for the {{{tn:Taxon}}} instance URI which is fake.
+3. The URIs are real and mostly dereferenceable except for the {{{tn:TaxonConcept}}} instance URI which is fake.
 
 4. The triples in the upper portion of this graph are contained in the taxon RDF serializations below.  The triples in the lower portion of the graph are mostly contained in the DOI RDF serializations at the bottom of the page.  
 
@@ -23,9 +23,11 @@ Notes:
 
 7. The term used to connect the identification instance to the taxon is not specified and is out of scope of the current discussion.  That question should be addressed in the future.  
 
-8. The taxon instance is explicitly typed as {{{tc:Taxon}}} in the RDF.  However, even if this were not done, a reasoner could infer this since the four other predicates having the taxon as their subject are declared to have {{{tc:TaxonConcept}}} as their domain in the ontology and {{{tc:TaxonConcept}}} is declared to be a class equivalent to {{{tc:Taxon}}} in the ontology. 
+8. The taxon instance is explicitly typed as {{{tc:TaxonConcept}}} in the RDF.  However, even if this were not done, a reasoner could infer this since the four other predicates having the taxon as their subject are declared to have {{{tc:TaxonConcept}}} as their domain in the ontology.
 
-==tc:Taxon instance RDF/XML serialization==
+In an older version of the ontology {{{tc:TaxonConcept}}} is declared to be a class equivalent to {{{tc:Taxon}}}. 
+
+==tc:TaxonConcept instance RDF/XML serialization==
 
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
@@ -34,7 +36,7 @@ xmlns:gnub="http://globalnames.org/vocabulary/"
 xmlns:tc="http://rs.tdwg.org/ontology/voc/TaxonConcept#"
 xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
 >
-<tc:Taxon rdf:about="http://globalnames.org/gnub/12345678-90AB-CDEF-1234-567890ABCDEF">
+<tc:TaxonConcept rdf:about="http://globalnames.org/gnub/12345678-90AB-CDEF-1234-567890ABCDEF">
 
 <tc:nameString>Campylorhamphus Bertoni, W 1901</tc:nameString>
 <tc:hasName>
@@ -46,7 +48,7 @@ xmlns:tn="http://rs.tdwg.org/ontology/voc/TaxonName#"
      <gnub:Reference rdf:about="http://dx.doi.org/10.1525/auk.2009.09022"/>
 </tc:accordingTo>
 
-</tc:Taxon>
+</tc:TaxonConcept>
 </rdf:RDF>
 }}}
 Notes:
@@ -57,9 +59,9 @@ Notes:
 
 3. The form of the {{{tc:accordingToString}}} string follows the TCS guidelines.  The {{{tc:nameString}}} string is the string provided by uBio for the name.
 
-4. It is likely that there will be many more properties provided for the {{{tc:Taxon}}} instance.  In particular, properties relating it to parent and child taxa would be likely.  TCS describes a property called "MicroReference" which is an additional qualification for the reference which could provide more specific page or table information within the publication.  The TDWG Common ontology defines the term {{{tcom:microReference}}} (http://rs.tdwg.org/ontology/voc/Common#microReference) which serves this purpose. 
+4. It is likely that there will be many more properties provided for the {{{tc:TaxonConcept}}} instance.  In particular, properties relating it to parent and child taxa would be likely.  TCS describes a property called "MicroReference" which is an additional qualification for the reference which could provide more specific page or table information within the publication.  The TDWG Common ontology defines the term {{{tcom:microReference}}} (http://rs.tdwg.org/ontology/voc/Common#microReference) which serves this purpose. 
 
-== tc:Taxon instance RDF/Turtle serialization ==
+== tc:TaxonConcept instance RDF/Turtle serialization ==
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -72,7 +74,7 @@ Notes:
                                                                    tc:accordingToString "Claramunt Derryberry et al. 2010";
                                                                    tc:hasName <http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:281>;
                                                                    tc:nameString "Campylorhamphus Bertoni, W 1901";
-                                                                   a tc:Taxon.
+                                                                   a tc:TaxonConcept.
 <http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:281> a tn:TaxonName.
 <http://dx.doi.org/10.1525/auk.2009.09022> a gnub:Reference.
 }}}
