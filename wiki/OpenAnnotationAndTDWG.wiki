@@ -125,6 +125,9 @@ Apparently this example (containing the metadata from the non-RDF ResourceRelati
 ==2. Is there a need for this level of complexity in describing relationships?==
 What are the advantages and disadvantages of creating relationship instances?  Do they facilitate reasoning better than simple predicates?  Are there non-RDF precedents for modeling relationships this way?  In modeling relationships between {{{tc:TaxonConcept}}} instances, is this approach better than simply defining predicates such as {{{tc:hasParentTaxon}}}.  In other words, do we recommend use of the TDWG TaxonConcept ontology as it is or create something simpler?
 
+==Answer==
+Based on discussion in the thread https://groups.google.com/d/topic/tdwg-rdf/Z6p1Q02v-cQ/discussion it appears that the primary benefit of creating relationship instances using this model is to allow the tracking of provenance and to provide a URI for the relationship so that it can be linked to other resources (documentation, etc.).  Given the historical importance of documenting the details of assertions of taxonomic relationships, it may be important to facilitate recording of such details.  It was also noted that in the absence of a need for those kind of details there is no need to "reinvent RDF within RDF" (i.e. using a complex relationship model to say what could be said well directly with a single triple).  So there could be a place for a simpler model as well.
+
 ==3. Given the lack of available object predicates in Darwin Core, how should the use of ResourceRelationship terms be described in a Darwin Core RDF Guide?==
 Do we create new terms?  Would it be appropriate to use existing (narrower) terms from OA ({{{oa:hasBody}}} and {{{oa:hasTarget}}}) to describe the subject and object resources?  
 
