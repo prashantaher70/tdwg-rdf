@@ -119,7 +119,7 @@ Refer to http://lists.w3.org/Archives/Public/public-openannotation/2013Feb/0174.
 
 <http://arctos.database.museum/guid/MVZ:Mamm:14524> a dcmitype:PhysicalObject, dwctype:PreservedSpecimen. 
 }}}
-(the non-RDF ResourceRelationship example above, expressed using the OA model) is a valid use of OA.  The OA model description uses words like "typically" and "generally" to allow for broader uses of OA than those that are described in the specification.  
+Apparently this example (the non-RDF ResourceRelationship example above, expressed using the OA model) is a valid use of OA.  The OA model description uses words like "typically" and "generally" to allow for broader uses of OA than those that are described in the specification.  
 
 
 ==2. Is there a need for this level of complexity in describing relationships?==
@@ -127,3 +127,6 @@ What are the advantages and disadvantages of creating relationship instances?  D
 
 ==3. Given the lack of available object predicates in Darwin Core, how should the use of ResourceRelationship terms be described in a Darwin Core RDF Guide?==
 Do we create new terms?  Would it be appropriate to use existing (narrower) terms from OA ({{{oa:hasBody}}} and {{{oa:hasTarget}}}) to describe the subject and object resources?  
+
+==Answer==
+Apparently it is OK to use {{{oa:hasBody}}} and {{{oa:hasTarget}}} to link ResourceRelationship instances to subject and object resources (again, see http://lists.w3.org/Archives/Public/public-openannotation/2013Feb/0174.html )
