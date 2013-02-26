@@ -104,6 +104,24 @@ The object properties oa:hasBody and tc:fromTaxon could be considered subpropert
 
 Does this question actually matter?  Could the dwc:ResourceRelationship class be declared rdfs:subClassOf oa:Annotation or would that be bad since OA assumes information resources?  (See example of {{{oa:linking}}} at http://www.openannotation.org/spec/core/core.html#Motivations)
 
+== Answer ==
+Refer to http://lists.w3.org/Archives/Public/public-openannotation/2013Feb/0174.html
+
+{{{
+<http://guid.mvz.org/relations/23423> a dwc:ResourceRelationship, oa:Annotation;
+                                     oa:hasBody <http://arctos.database.museum/guid/MVZ:Mamm:14523>;
+                                     oa:hasTarget <http://arctos.database.museum/guid/MVZ:Mamm:14524>;
+                                     oa:motivatedBy <http://rs.tdwg.org/relations/offpringOf>;
+                                     oa:annotatedAt "2001-09-14";
+                                     oa:annotatedBy <http://guid.mvz.org/agents/James_L_Patton>.
+
+<http://arctos.database.museum/guid/MVZ:Mamm:14523> a dcmitype:PhysicalObject, dwctype:PreservedSpecimen.
+
+<http://arctos.database.museum/guid/MVZ:Mamm:14524> a dcmitype:PhysicalObject, dwctype:PreservedSpecimen. 
+}}}
+(the non-RDF ResourceRelationship example above, expressed using the OA model) is a valid use of OA.  The OA model description uses words like "typically" and "generally" to allow for broader uses of OA than those that are described in the specification.  
+
+
 ==2. Is there a need for this level of complexity in describing relationships?==
 What are the advantages and disadvantages of creating relationship instances?  Do they facilitate reasoning better than simple predicates?  Are there non-RDF precedents for modeling relationships this way?  In modeling relationships between {{{tc:TaxonConcept}}} instances, is this approach better than simply defining predicates such as {{{tc:hasParentTaxon}}}.  In other words, do we recommend use of the TDWG TaxonConcept ontology as it is or create something simpler?
 
