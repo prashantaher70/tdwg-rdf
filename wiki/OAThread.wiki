@@ -11,3 +11,5 @@ On 2013-02-25 a thread began on the TDWG RDF Task group email list regarding the
 Steve Baskauf's initial post noting the similarities among the three vocabularies https://groups.google.com/d/msg/tdwg-rdf/eTATmyyE8a0/Jta39nkXyYgJ
 
 Specific example laying out the difference between expressing a relationship between two taxa using a single triple vs. an expressing a relationship by creating a tc:hasRelationship instance linked to the two taxa.  https://groups.google.com/d/msg/tdwg-rdf/eTATmyyE8a0/NtT8vp27M6IJ
+
+test text
