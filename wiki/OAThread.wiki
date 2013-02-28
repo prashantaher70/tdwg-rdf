@@ -31,3 +31,11 @@ Steve Baskauf notes that the TDWG TaxonConcept ontology uses an annotation-like 
 Nico Franz comments that the TaxonConcept ontology needed to document person-specific assessments of relationships between concepts.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/-r-HMLMudMAJ
 
 Bob Morris notes that OA provides a mechanism for documenting provenance. https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/I6hPLPtn1qkJ
+
+Steve Baskauf comments that the extent to which people are going to care about the provenance is going to depend somewhat on how taxon concepts are going to be managed (centralized vs. aggregation from many smaller sources).  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/cOdstpLHoYUJ
+
+Rod Page thinks that documenting provenance is probably the reason for structuring the taxon relationships the way they are modeled in the TDWG TaxonConcept ontology.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/wPjVnNyxGiMJ
+
+Éamonn Ó Tuama asks why reification is not adopted over special schemes for annotation/provenance.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/cWr7InFkzOEJ
+
+Jessie Kennedy confirms that documenting provenance was a central reason for the structure of TCS and its RDF successor (the TDWG TaxonConcept ontology).  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/CTOhXDt3yRkJ
