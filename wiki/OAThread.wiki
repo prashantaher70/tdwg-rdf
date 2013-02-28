@@ -12,4 +12,22 @@ Steve Baskauf's initial post noting the similarities among the three vocabularie
 
 Specific example laying out the difference between expressing a relationship between two taxa using a single triple vs. an expressing a relationship by creating a tc:hasRelationship instance linked to the two taxa.  https://groups.google.com/d/msg/tdwg-rdf/eTATmyyE8a0/NtT8vp27M6IJ
 
-test text
+John Deck notes that BiSciCol is interested in expressing relationships using the OA core.  https://groups.google.com/d/msg/tdwg-rdf/eTATmyyE8a0/HTvfBlGSYuoJ
+
+Steve Baskauf provides an example of how the OA terms could be used to represent a dwc:ResourcRelationship instance and asks whether it would be a valid use of the OA model. https://groups.google.com/d/msg/tdwg-rdf/eTATmyyE8a0/4yZwR6UGlngJ
+
+Bob Morris says he thinks it is not an abuse of OA and suggests a possible way to use SKOS terms to describe that the relationship is narrower than the oa:Motivation oa:linking .  https://groups.google.com/d/msg/tdwg-rdf/eTATmyyE8a0/Et0SSxEc6NYJ
+
+Éamonn Ó Tuama notes that the VoMaG (http://community.gbif.org/pg/groups/21382/vocabulary-management/) term wiki is set up for handling SKOS schemes. https://groups.google.com/d/msg/tdwg-rdf/eTATmyyE8a0/ubWXVqgr59UJ
+
+Steve Baskauf forwards a reply from Rob Sanderson, one of the OA editors, who says that although the OA is framed in terms of annotations of information resources, it is broad enough to include the sorts of non-information resources (specimens, taxa) that would be related by the dwc:ResourceRelationship class terms.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/sfOu-v_Y4GkJ
+
+Paul Morris provides an alternative way to annotate a simple triple. https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/ewJG0pu9V-UJ
+
+Hilmar Lapp says that common sense says not to use oa:Annotation to say something that could just as well be said in a triple directly. https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/sazAKg8t8JQJ
+
+Steve Baskauf notes that the TDWG TaxonConcept ontology uses an annotation-like structure to document the relationship between tc:TaxonConcept instances and asks why. https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/g_h7R4GrynoJ
+
+Nico Franz comments that the TaxonConcept ontology needed to document person-specific assessments of relationships between concepts.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/-r-HMLMudMAJ
+
+Bob Morris notes that OA provides a mechanism for documenting provenance. https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/I6hPLPtn1qkJ
