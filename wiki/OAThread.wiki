@@ -1,0 +1,13 @@
+#summary Summary and links to a thread about the Open Annotation data model
+
+= Summary and links to a thread about the Open Annotation data model, the Darwin Core ResourceRelationship terms, and the TDWG TaxonConcept ontology =
+
+
+= Background =
+On 2013-02-25 a thread began on the TDWG RDF Task group email list regarding the Open Annotation data model (http://www.openannotation.org/spec/core/) and the similarities between it and parts of TDWG vocabularies.  In particular, the text-based dwc:ResourceRelationship terms (http://rs.tdwg.org/dwc/terms/#relindex) and tc:hasRelationship term and its possible values from the TDWG TaxonConcept ontology (http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.rdf) use a similar approach to modeling the relationships between resources.  The diagrams and table at http://code.google.com/p/tdwg-rdf/wiki/OpenAnnotationAndTDWG compare the three sets of terms.  
+
+= Some posts from the TDWG RDF email list related to this issue=
+
+Steve Baskauf's initial post noting the similarities among the three vocabularies https://groups.google.com/d/msg/tdwg-rdf/eTATmyyE8a0/Jta39nkXyYgJ
+
+Specific example laying out the difference between expressing a relationship between two taxa using a single triple vs. an expressing a relationship by creating a tc:hasRelationship instance linked to the two taxa.  https://groups.google.com/d/msg/tdwg-rdf/eTATmyyE8a0/NtT8vp27M6IJ
