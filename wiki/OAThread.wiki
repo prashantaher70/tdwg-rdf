@@ -34,8 +34,12 @@ Bob Morris notes that OA provides a mechanism for documenting provenance. https:
 
 Steve Baskauf comments that the extent to which people are going to care about the provenance is going to depend somewhat on how taxon concepts are going to be managed (centralized vs. aggregation from many smaller sources).  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/cOdstpLHoYUJ
 
-Rod Page thinks that documenting provenance is probably the reason for structuring the taxon relationships the way they are modeled in the TDWG TaxonConcept ontology.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/wPjVnNyxGiMJ
-
 Éamonn Ó Tuama asks why reification is not adopted over special schemes for annotation/provenance.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/cWr7InFkzOEJ
 
+Rod Page thinks that documenting provenance is probably the reason for structuring the taxon relationships the way they are modeled in the TDWG TaxonConcept ontology.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/wPjVnNyxGiMJ
+
 Jessie Kennedy confirms that documenting provenance was a central reason for the structure of TCS and its RDF successor (the TDWG TaxonConcept ontology).  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/CTOhXDt3yRkJ
+
+Jessie Kennedy notes that simply using subclassing or assuming that genus placement is correct is an oversimplification and does not adequately record provenance https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/6MPuLSGd_kYJ
+
+Rod Page feels that the TaxonConcept vocabularies are over-engineered.  He 
