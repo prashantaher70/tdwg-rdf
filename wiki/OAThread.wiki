@@ -1,5 +1,7 @@
 #summary Summary and links to a thread about the Open Annotation data model
 
+#sidebar SideBar
+
 = Summary and links to a thread about the Open Annotation data model, the Darwin Core ResourceRelationship terms, and the TDWG TaxonConcept ontology =
 
 
