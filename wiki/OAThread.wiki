@@ -36,10 +36,24 @@ Steve Baskauf comments that the extent to which people are going to care about t
 
 Éamonn Ó Tuama asks why reification is not adopted over special schemes for annotation/provenance.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/cWr7InFkzOEJ
 
+Hilmar Lapp agrees that reification has fallen out of favour due to problems it causes with SPARQL queries.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/6HiBBv--ObwJ
+
 Rod Page thinks that documenting provenance is probably the reason for structuring the taxon relationships the way they are modeled in the TDWG TaxonConcept ontology.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/wPjVnNyxGiMJ
 
 Jessie Kennedy confirms that documenting provenance was a central reason for the structure of TCS and its RDF successor (the TDWG TaxonConcept ontology).  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/CTOhXDt3yRkJ
 
 Jessie Kennedy notes that simply using subclassing or assuming that genus placement is correct is an oversimplification and does not adequately record provenance https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/6MPuLSGd_kYJ
 
-Rod Page feels that the TaxonConcept vocabularies are over-engineered.  He 
+Rod Page feels that the TaxonConcept vocabularies are over-engineered.  He feels that useful TaxonConcepts are connected to other resources that "we can compute over" e.g. GBIF and NCBI. https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/6Lo0pSlkyVUJ
+
+Greg Whitbread disagrees. He says that GBIF and NCBI provide an ephemeral guess.Science requires vocabularies which can support research and links to original work.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/yH-O-cWuQZ8J
+
+Rod Page replies that he sees classifications simply as tools for navigation and organising data. https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/dvmXZV-iC-IJ
+
+Steve Baskauf summarizes: 1. the structure of the TDWG TaxonConcept ontology allows for the tracking of provenance and linking of the assertion to other resources.  2. The TaxonConcept ontology needs to be kept because it provides a means for documenting relationships between taxa and because it's being used.  The "market" will decide if it or some other system is the best way to document the relationships.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/I6_HOxaSzI8J
+
+Hilmar Lapp posits that a taxon concept is anything that a person or group asserts to represent a taxon compliant with a code.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/-abF_Poo9Q0J
+
+Hilmar Lapp says VoMaG must care about provenance and suggests the PROV model.  He also notes that it would be counterproductive to turn every triple into an object.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/jWsJ6CKn0zcJ
+
+Steve Baskauf refers to a previous thread and says that without a careful definition there will be a lot of disagreement about what the nature of a "taxon concept" or "taxon".  The TaxonConcept ontology provides a well-defined tc:TaxonConcept class.  https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/iJg169xY8j0J
