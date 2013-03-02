@@ -1,6 +1,6 @@
-===Contents===
+==Contents==
 
-== Threads ==
+=== Threads ===
 [TCSthread TCS/taxon concepts]
-[OAThread Open Annotation model]
 
+[OAThread Open Annotation model]
