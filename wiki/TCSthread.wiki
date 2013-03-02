@@ -1,4 +1,5 @@
 #summary Summary and links to a thread related to TCS and Taxon Concepts
+#sidebar SideBar
 
 =Summary and links to a thread related to TCS and Taxon Concepts=
 
