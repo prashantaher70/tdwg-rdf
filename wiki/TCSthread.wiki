@@ -92,6 +92,12 @@ https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/4LHvDqND9C0J
 Éamonn Ó Tuama comments that RDF can also be used simply as a format to define and encode vocabularies themselves.
 https://groups.google.com/d/msg/tdwg-rdf/E77vdpH4tj0/uoLE8jW7V4EJ
 
+Bob Morris notes that there are actually two similar files (TaxonConcept.rdf and TaxonConcept.owl) in the Google Code repository which describe the TaxonConcept ontology and comments that it is probably a dangerous situation.
+https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/B4NJBvxoMkAJ
+
+Steve Baskauf notes several differences between the two files and says that after investigation he believes that TaxonConcept.rdf is the "real" file (at least the one served when terms are dereferenced for rdf+xml).
+https://groups.google.com/d/msg/tdwg-rdf/Z6p1Q02v-cQ/-muFUxB7tBQJ
+
 = For further (painful) reading =
 
 A long summary of a variety of posts from the tdwg-content email list between 2009-10 and 2011-02 which include some on the topic of Taxon Concepts and RDF representations.  A text search on the page for "Taxon Concept" will jump you to some entry points. http://code.google.com/p/darwin-sw/wiki/TdwgContentEmailSummary
