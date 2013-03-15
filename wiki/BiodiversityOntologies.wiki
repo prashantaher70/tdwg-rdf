@@ -43,6 +43,8 @@ When TDWG made the deployment of Life Science Identifiers (LSIDs) a priority, th
 
 The "TDWG Ontology" actually consists of a number of individual ontology documents written in OWL/RDF.  They were written primarily by Roger Hyam in 2006 and 2007.  The individual ontologies have base URIs in the form "http://rs.tdwg.org/ontology/[something]#" where [something] is descriptive of the particular ontology.  The ontology documents can be viewed at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/ and lower levels of the document tree. Semantic clients requesting content-type: application/rdf+xml are redirected to the OWL/RDF versions of the ontology, probably the ones at http://rs.tdwg.org/ontology2/, but maybe http://rs.tdwg.org/ontology/ (I'm not sure which).  The list of ontologies at the Google Code site includes two versions of some of the ontologies, a .owl version and a .rdf version.  It appears that the .rdf versions are the most current version and are the ones which are returned to semantic clients.  
 
+The TDWG ontology is not currently under development (see http://www.hyam.net/blog/archives/643#more-643 ) and as of 2013-03-15 its future is under discussion by the TDWG Vocabulary Management (VoMaG) Task Group (see http://community.gbif.org/pg/pages/view/29079/ ).
+
 (Note: much of this information was taken from http://community.gbif.org/pg/pages/view/29079/ and additional details can be found there.)
   
 == 2.2 Class structure ==
@@ -90,6 +92,8 @@ The goals of the !TaxonConcept project (http://www.taxonconcept.org/) are:
 
 The TaxonConcept OWL Ontology ([http://lod.taxonconcept.org/ontology/txn.owl txn]), written by Peter J. DeVries from 200x through 2012, defines many classes and terms which can be used to describe biodiversity resources.  The diagram here includes only a subset of the classes which correspond approximately to those described in the other two ontologies.  The TaxonConcept ontology also includes classes defined in other vocabularies, such as foaf, bibo, and wgs84.  
 
+The rdfs:comment associated with the current version of the ontology (v 0.2 on 2013-03-15) indicates that the ontology is still under development.
+
 == 3.2 Class structure ==
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/taxonconcept-class-structure.png
@@ -129,6 +133,9 @@ As shown in the diagram, the network of TaxonConcept object properties allows a 
 ||txn:occurrenceHasSpeciesConcept||txn:Occurrence||yes||txn:SpeciesConcept||yes||
 ||txn:speciesConceptHasObservedArea||txn:SpeciesConcept||yes||dwc_area:Area||yes||
 ||txn:areaHasObservedSpeciesConcept||dwc_area:Area||no|||txn:SpeciesConcept||no||
+||txn:hasCollector||txn:Occurrence||yes||foaf:Person||yes||
+
+Note: the subject class for txn:hasCollector indicates that txn:Occurrence is viewed as equivalent to or including specimens.
 
 =4 The Darwin-SW Ontology=
 
