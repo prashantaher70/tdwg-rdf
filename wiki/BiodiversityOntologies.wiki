@@ -151,7 +151,7 @@ The design principles that underlie DSW are elaborated at http://code.google.com
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/darwin-sw-class-structure.png
 
-Notes: Each of the core classes in DSW are connected by a pair of DSW-defined object properties which are declared to be inverse properties.  Many of the classes are declared to be disjoint, although dsw:Token is not disjoint with any other class.
+Notes: Each of the core classes in DSW are connected by a pair of DSW-defined object properties which are declared to be inverse properties.  Many of the classes are declared to be disjoint.
 
 Any type of evidence can be an instance of the dsw:Token property.  
 
