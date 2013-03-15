@@ -151,8 +151,16 @@ The design principles that underlie DSW are elaborated at http://code.google.com
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/darwin-sw-class-structure.png
 
-Each of the core classes in DSW are connected by a pair of DSW-defined object properties which are declared to be inverse properties.   
+Notes: Each of the core classes in DSW are connected by a pair of DSW-defined object properties which are declared to be inverse properties.  Many of the classes are declared to be disjoint, although dsw:Token is not disjoint with any other class.
+
+Any type of evidence can be an instance of the dsw:Token property.  
+
+DSW assumes that Darwin Core property terms will be used as datatype properties of instances of the class under which the terms are listed in the standard.  
 
 == 4.3 Subclass relationships ==
 
+None of the classes shown on the diagram have subclass relationships.  The ontology also defines several specimen-related classes which have subclass relationships, but they are not diagrammed here.
+
 == 4.4 Some object properties ==
+
+||Property||Subject class||Domain declared?||Object class||Range declared?||
