@@ -98,6 +98,8 @@ Notes:
 
 txn:SpeciesConcept instances (e.g. http://lod.taxonconcept.org/ses/mCcSp.rdf ) can be described using many terms in the TaxonConcept ontology as well as skos:closeMatch.  The ontology does not include a property to relate instances to a secundum/sensu component as described in the TDWG TCS standard.  
 
+The class dwc_area:Area is a subclass of wgs84:SpatialThing which is defined by the WGS84 Geo Positioning RDF Vocabulary (http://www.w3.org/2003/01/geo/wgs84_pos see also [http://tools.ietf.org/html/rfc5870 RFC 5870]) which represents locations using the WGS84 geodetic reference datum.  Thus it would be reasonable to expect that dwc_area:Area instances would be described by WGS84 Vocabulary terms although the semantics of the TaxonConcept ontology does not require this.  For more information, refer to http://lists.tdwg.org/pipermail/tdwg-content/2010-November/001982.html and subsequent posts in that thread.
+
 As shown in the diagram, the network of TaxonConcept object properties allows a user to relate instances of one class to another by multiple paths.  
 
 == 3.3 Subclass relationships ==
