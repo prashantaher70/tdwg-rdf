@@ -2,7 +2,7 @@
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
-=Summary of Some Biodiversity Ontologies=
+=Summary of some biodiversity ontologies=
 
 *Date:* (Created) 15 March 2013; (Last modified) 15 March 2013
 
@@ -142,6 +142,10 @@ Note: the subject class for txn:hasCollector indicates that txn:Occurrence is vi
 =4 The Darwin-SW Ontology=
 
 == 4.1 Description ==
+
+The Darwin-SW Ontology (DSW) is a vocabulary which describes relationships among classes defined by the Darwin Core standard by defining object properties which relate those classes and several classes outside of Darwin Core.  The ontology is described at http://code.google.com/p/darwin-sw/ with the defining OWL ontology file viewable at http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl .  Version 0.2 (the most recent version as of 2013-03-15) was written in 2011 by Steve Baskauf and Campbell Webb.  
+
+The design principles that underlie DSW are elaborated at http://code.google.com/p/darwin-sw/wiki/DesignPrinciples .  DSW co-opts many of the Darwin Core classes and for the most part maintains the meaning of the class as described in the term definition.  It takes the position that a dwc:Occurrence instance documents an organism at a place and time, but that the physical or electronic evidence is a separate entity which is considered to be an instance of the class dsw:Token, which the ontology defines.  In an attempt to add clarity to the meaning of the class dwc:Taxon, DSW declares that class to be equivalent to the tc:TaxonConcept class of the TDWG Ontology, since the meaning of tc:TaxonConcept is underpinned by the TDWG Taxon Concept Transfer Schema (TCS) standard.  
 
 == 4.2 Class structure ==
 
