@@ -119,7 +119,16 @@ As shown in the diagram, the network of TaxonConcept object properties allows a 
 ||txn:individualHasOccurrence||txn:SpeciesIndividual||yes||txn:Occurrence||no||
 ||txn:individualHasObservedArea||txn:SpeciesIndividual||yes||dwc_area:Area||yes||
 ||txn:areaHasIndividual||dwc_area:Area||no||txn:SpeciesIndividual||no||
-
+||txn:individualHasCurrentIdentificationAssertion||txn:SpeciesIndividual||yes||txn:Identification||no||
+||txn:individualHasPreviousIdentificationAssertion||txn:SpeciesIndividual||yes||txn:Identification||no||
+||txn:identificationOfIndividual||txn:Identification||yes||txn:SpeciesIndividual||no||
+||txn:identificationHasSpeciesConcept||txn:Identification||yes||txn:SpeciesConcept||no||
+||txn:individualHasSpeciesConcept||txn:SpeciesIndividual||no||txn:SpeciesConcept||no||
+||txn:identifiedBy||txn:Identification||yes||foaf:Person||yes||
+||txn:speciesConceptHasOccurrence||txn:SpeciesConcept||yes||txn:Occurrence||no||
+||txn:occurrenceHasSpeciesConcept||txn:Occurrence||yes||txn:SpeciesConcept||yes||
+||txn:speciesConceptHasObservedArea||txn:SpeciesConcept||yes||dwc_area:Area||yes||
+||txn:areaHasObservedSpeciesConcept||dwc_area:Area||no|||txn:SpeciesConcept||no||
 
 =4 The Darwin-SW Ontology=
 
