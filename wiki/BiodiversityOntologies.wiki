@@ -25,21 +25,55 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 
 =1.0 Introduction=
 
-Biodiversity Information Standards (TDWG) is a standards organization which adopts standards for the exchange of biodiversity exchange.  The Darwin Core standard ([http://www.tdwg.org/standards/450/]) is a technical specification that defines terms that can serve as properties to describe biodiversity-related resources.  When Darwin Core is used in text- and XML-based exchange schemes, the terms which end in "ID" can be used to specify identifiers of resources which are related to the subject resource.  However, these terms cannot be used as object properties in RDF.  For that reason, object properties which relate instances of biodiversity-related classes must come from vocabularies outside of Darwin Core.  This document describes three ontologies that define biodiversity-related classes and object properties which relate them.  None of these ontologies are TDWG standards, although the first was commissioned by the Technical Architecture Group (TAG) of TDWG.
+Biodiversity Information Standards (TDWG) is a standards organization which adopts standards for the exchange of biodiversity exchange.  The Darwin Core standard (http://www.tdwg.org/standards/450/) is a technical specification that defines terms that can serve as properties to describe biodiversity-related resources.  When Darwin Core is used in text- and XML-based exchange schemes, the terms which end in "ID" can be used to specify identifiers of resources which are related to the subject resource.  However, these terms cannot be used as object properties in RDF.  For that reason, object properties which relate instances of biodiversity-related classes must come from vocabularies outside of Darwin Core.  This document describes three ontologies that define biodiversity-related classes and object properties which relate them.  None of these ontologies are TDWG standards, although the first was commissioned by the Technical Architecture Group (TAG) of TDWG.
+
+== 1.1 Similarities among the three ontologies ==
+
+Each of the three vocabularies described in this document calls itself an "ontology" (see [http://code.google.com/p/tdwg-rdf/wiki/Beginners4Vocabularies#4.2._What_is_an_ontology? The Beginners Guide to RDF] for a discussion of the definition of "ontology").  Each of the ontologies uses Web Ontology Language (OWL) to describe the properties of the terms.  Some term descriptions include domain, range, and subproperty declarations and properties are declared to be object or datatype properties.  However, there are few formal constraints to class membership - the ontologies do not make use of OWL restrictions.
+
+== 1.2 Conventions used in the diagrams ==
+
+In the diagrams, ovals are used to indicate instances of the classes whose URIs are listed on the ovals.  Rectangles represent literals with an example string shown in the rectangle.  If the line connecting two shapes has a single arrowhead, there is a single property that relates the subject resource at the tail end to the object resource at the head end.  If the line connecting two shapes has arrowheads at both ends, there is a pair of properties which can relate the resources with either one serving as the subject.  Classes in the three ontologies which are similar (or possibly identical) are filled with the same color in each diagram.
 
 =2.0 The TDWG Ontology=
 
 == 2.1 Description ==
 
+When TDWG made the deployment of Life Science Identifiers (LSIDs) a priority, the development of vocabularies described by RDF (Resource Description Framework; see http://code.google.com/p/tdwg-rdf/wiki/Beginners) was intended to progress in tandem with LSID adoption (see http://wiki.tdwg.org/twiki/bin/view/TAG/LsidVocs ).  These RDF vocabularies (written using a form of RDF called Web Ontology Language or OWL) were in aggregate known as "The TDWG Ontology" and were intended to be either based on an existing standard or to eventually be incorporated as part of an evolving standard.  Thus the TaxonName and TaconConcept ontologies were based on (but not actually part of) the Taxon Concept Transfer Schema (TCS), a Current (2005) Standard, and the Institution and Collection Ontologies were created as part of the development of the NCD Draft Standard. 
+
+The "TDWG Ontology" actually consists of a number of individual ontology documents written in OWL/RDF.  They were written primarily by Roger Hyam in 2006 and 2007.  The individual ontologies have base URIs in the form "http://rs.tdwg.org/ontology/[something]#" where [something] is descriptive of the particular ontology.  The ontology documents can be viewed at http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/ and lower levels of the document tree. Semantic clients requesting content-type: application/rdf+xml are redirected to the OWL/RDF versions of the ontology, probably the ones at http://rs.tdwg.org/ontology2/, but maybe http://rs.tdwg.org/ontology/ (I'm not sure which).  The list of ontologies at the Google Code site includes two versions of some of the ontologies, a .owl version and a .rdf version.  It appears that the .rdf versions are the most current version and are the ones which are returned to semantic clients.  
+
+(Note: much of this information was taken from http://community.gbif.org/pg/pages/view/29079/ and additional details can be found there.)
+  
 == 2.2 Class structure ==
 
+All of the classes used in the TDWG Ontology are defined within the parts of the ontology.  The tc:TaxonConcept and tn:TaxonName classes are based on the the ideas expressed in the TCS Standard. A complete list of classes defined in the ontology can be found [http://code.google.com/p/tdwg-rdf/wiki/ClassInventory#1.4.__Classes_in_the_TDWG_Ontologies here].
+
+http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-ontology-class-structure.png
+
 == 2.3 Object properties ==
+
+||Property||Subject class||Domain declared?||Object class||Range declared?||
+||to:derivedFrom||to:TaxonOccurrence||yes||to:TaxonOccurrence||yes||
+||to:hostCollection||to:TaxonOccurrence||yes||col:Collection||yes||
+||to:identifiedTo||to:TaxonOccurrence||yes||to:Identification||yes||
+||to:occurrence||to:Identification||yes||to:TaxonOccurrence||yes||
+||to:taxon||to:Identification||yes||tc:TaxonConcept||yes||
+||to:higherTaxon||to:Identification||yes||tc:TaxonConcept||yes||
+||to:expert||to:Identification||yes||per:person||yes||
+||tc:hasName||tc:TaxonConcept||yes||tn:TaxonName||no||
+||tc:accordingTo||tc:TaxonConcept||yes||(any reference type)||no||
+||to:typeForName||to:TaxonOccurrence||yes||tn:TaxonName||yes||
+
+Note: the subject and object classes for the terms to:hostCollection and to:typeForName indicate that to:TaxonOccurrence instances are considered to be equivalent to, or to include specimens.
 
 =3.0 The TaxonConcept Ontology=
 
 == 3.1 Description ==
 
 == 3.2 Class structure ==
+
+http://tdwg-rdf.googlecode.com/svn/trunk/file/taxonconcept-class-structure.png
 
 == 3.3 Object properties ==
 
@@ -49,5 +83,6 @@ Biodiversity Information Standards (TDWG) is a standards organization which adop
 
 == 4.2 Class structure ==
 
-== 4.3 Object properties ==
+http://tdwg-rdf.googlecode.com/svn/trunk/file/darwin-sw-class-structure.png
 
+== 4.3 Object properties ==
