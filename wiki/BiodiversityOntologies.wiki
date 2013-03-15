@@ -112,6 +112,13 @@ As shown in the diagram, the network of TaxonConcept object properties allows a 
 == 3.4 Some object properties ==
 
 ||Property||Subject class||Domain declared?||Object class||Range declared?||
+||txn:identificationHasOccurrence||txn:Identification||yes||txn:Occurrence||no||
+||txn:occurrenceHasArea||txn:Occurrence||yes||dwc_area:Area||yes||
+||txn:areaHasOccurrence||dwc_area:Area||no||txn:Occurrence||no||
+||txn:occurrenceHasIndividual||txn:Occurrence||yes||txn:SpeciesIndividual||no||
+||txn:individualHasOccurrence||txn:SpeciesIndividual||yes||txn:Occurrence||no||
+||txn:individualHasObservedArea||txn:SpeciesIndividual||yes||dwc_area:Area||yes||
+||txn:areaHasIndividual||dwc_area:Area||no||txn:SpeciesIndividual||no||
 
 
 =4 The Darwin-SW Ontology=
