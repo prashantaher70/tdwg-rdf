@@ -1,0 +1,53 @@
+#summary Summary of class structure and object properties of some biodiversity ontologies
+
+http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
+
+=Summary of Some Biodiversity Ontologies=
+
+*Date:* (Created) 14 March 2013; (Last modified) 14 March 2013
+
+*Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
+
+*Permanent URL:* http://code.google.com/p/tdwg-rdf/wiki/BiodiversityOntologies
+
+*TDWG Task Group:* [http://code.google.com/p/tdwg-rdf/ TDWG RDF/OWL Task Group]
+
+*Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=BiodiversityOntologies Steve Baskauf] (TDWG RDF/OWL Task Group)
+
+*Abstract:* This document diagrams the class structure of several ontologies that provide terms which can be used as object properties in RDF. It summarizes those object properties and their characteristics.
+
+http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
+
+
+*Contents*
+
+<wiki:toc max_depth="4" />
+
+=1.0 Introduction=
+
+Biodiversity Information Standards (TDWG) is a standards organization which adopts standards for the exchange of biodiversity exchange.  The Darwin Core standard ([http://www.tdwg.org/standards/450/]) is a technical specification that defines terms that can serve as properties to describe biodiversity-related resources.  When Darwin Core is used in text- and XML-based exchange schemes, the terms which end in "ID" can be used to specify identifiers of resources which are related to the subject resource.  However, these terms cannot be used as object properties in RDF.  For that reason, object properties which relate instances of biodiversity-related classes must come from vocabularies outside of Darwin Core.  This document describes three ontologies that define biodiversity-related classes and object properties which relate them.  None of these ontologies are TDWG standards, although the first was commissioned by the Technical Architecture Group (TAG) of TDWG.
+
+=2.0 The TDWG Ontology=
+
+== 2.1 Description ==
+
+== 2.2 Class structure ==
+
+== 2.3 Object properties ==
+
+=3.0 The TaxonConcept Ontology=
+
+== 3.1 Description ==
+
+== 3.2 Class structure ==
+
+== 3.3 Object properties ==
+
+=4.0 The Darwin-SW Ontology=
+
+== 4.1 Description ==
+
+== 4.2 Class structure ==
+
+== 4.3 Object properties ==
+
