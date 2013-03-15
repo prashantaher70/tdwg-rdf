@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Summary of Some Biodiversity Ontologies=
 
-*Date:* (Created) 14 March 2013; (Last modified) 14 March 2013
+*Date:* (Created) 15 March 2013; (Last modified) 15 March 2013
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -103,6 +103,8 @@ Notes:
 txn:SpeciesConcept instances (e.g. http://lod.taxonconcept.org/ses/mCcSp.rdf ) can be described using many terms in the TaxonConcept ontology as well as skos:closeMatch.  The ontology does not include a property to relate instances to a secundum/sensu component as described in the TDWG TCS standard.  
 
 The class dwc_area:Area is a subclass of wgs84:SpatialThing which is defined by the WGS84 Geo Positioning RDF Vocabulary (http://www.w3.org/2003/01/geo/wgs84_pos see also [http://tools.ietf.org/html/rfc5870 RFC 5870]) which represents locations using the WGS84 geodetic reference datum.  Thus it would be reasonable to expect that dwc_area:Area instances would be described by WGS84 Vocabulary terms although the semantics of the TaxonConcept ontology does not require this.  For more information, refer to http://lists.tdwg.org/pipermail/tdwg-content/2010-November/001982.html and subsequent posts in that thread.
+
+The ontology provides two datatype properties (txn:startDate and txn:endDate) which might be used to indicate the date range over which the occurrence was documented.  The diagram shows them used thus.  The ontology also defines the class txn:Year which is a subclass of http://www.w3.org/2006/time#DateTimeDescription .  Thus time is modeled as a non-literal object in the ontology, although txn:Year is the range for properties related to publication rather than recording occurrences.
 
 As shown in the diagram, the network of TaxonConcept object properties allows a user to relate instances of one class to another by multiple paths.  
 
