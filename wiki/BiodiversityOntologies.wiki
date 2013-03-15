@@ -23,9 +23,9 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 
 <wiki:toc max_depth="4" />
 
-=1.0 Introduction=
+=1 Introduction=
 
-Biodiversity Information Standards (TDWG) is a standards organization which adopts standards for the exchange of biodiversity exchange.  The Darwin Core standard (http://www.tdwg.org/standards/450/) is a technical specification that defines terms that can serve as properties to describe biodiversity-related resources.  When Darwin Core is used in text- and XML-based exchange schemes, the terms which end in "ID" can be used to specify identifiers of resources which are related to the subject resource.  However, these terms cannot be used as object properties in RDF.  For that reason, object properties which relate instances of biodiversity-related classes must come from vocabularies outside of Darwin Core.  This document describes three ontologies that define biodiversity-related classes and object properties which relate them.  None of these ontologies are TDWG standards, although the first was commissioned by the Technical Architecture Group (TAG) of TDWG.
+Biodiversity Information Standards (TDWG) is a standards organization which adopts standards for the exchange of biodiversity exchange.  The Darwin Core standard (http://www.tdwg.org/standards/450/) is a technical specification that defines terms that can serve as properties to describe biodiversity-related resources.  When Darwin Core is used in text- and XML-based exchange schemes, the terms which end in "ID" can be used to specify identifiers of resources which are related to the subject resource.  However, these terms cannot be used as object properties in RDF.  For that reason, object properties which relate instances of biodiversity-related classes must come from vocabularies outside of Darwin Core.  This document describes three ontologies that define biodiversity-related classes and object properties which relate them.  None of these ontologies are TDWG standards, although the first was commissioned by the Technical Architecture Group (TAG) of TDWG.  The information in this document is provided for informational purposes only - the RDF Task Group has not recommended any of these ontologies for use.
 
 == 1.1 Similarities among the three ontologies ==
 
@@ -35,7 +35,7 @@ Each of the three vocabularies described in this document calls itself an "ontol
 
 In the diagrams, ovals are used to indicate instances of the classes whose URIs are listed on the ovals.  Rectangles represent literals with an example string shown in the rectangle.  If the line connecting two shapes has a single arrowhead, there is a single property that relates the subject resource at the tail end to the object resource at the head end.  If the line connecting two shapes has arrowheads at both ends, there is a pair of properties which can relate the resources with either one serving as the subject.  Classes in the three ontologies which are similar (or possibly identical) are filled with the same color in each diagram.
 
-=2.0 The TDWG Ontology=
+=2 The TDWG Ontology=
 
 == 2.1 Description ==
 
@@ -51,7 +51,18 @@ All of the classes used in the TDWG Ontology are defined within the parts of the
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-ontology-class-structure.png
 
-== 2.3 Object properties ==
+== 2.3 Subclass relationships ==
+base: = http://rs.tdwg.org/ontology/Base#
+
+core: = http://rs.tdwg.org/ontology/Core#
+
+||Class||subClassOf||
+||to:TaxonOccurrence||base:BaseThing||
+||to:Identification||base:BaseThing||
+||tc:TaxonConcept||core:Concept||
+||tn:TaxonName||base:Name||
+
+== 2.4 Some object properties ==
 
 ||Property||Subject class||Domain declared?||Object class||Range declared?||
 ||to:derivedFrom||to:TaxonOccurrence||yes||to:TaxonOccurrence||yes||
@@ -67,17 +78,41 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-ontology-class-structure.png
 
 Note: the subject and object classes for the terms to:hostCollection and to:typeForName indicate that to:TaxonOccurrence instances are considered to be equivalent to, or to include specimens.
 
-=3.0 The TaxonConcept Ontology=
+=3 The !TaxonConcept Ontology=
 
 == 3.1 Description ==
+
+The goals of the !TaxonConcept project (http://www.taxonconcept.org/) are:
+
+ * Create Linked Open Data (LOD) Identifiers for Species Concepts
+ * Link Species Concepts to Names in the Global Names Initiative Database
+ * Investigate using LOD Methods to match Specimens and related Data to Species Concepts
+
+The TaxonConcept OWL Ontology ([http://lod.taxonconcept.org/ontology/txn.owl txn]), written by Peter J. DeVries from 200x through 2012, defines many classes and terms which can be used to describe biodiversity resources.  The diagram here includes only a subset of the classes which correspond approximately to those described in the other two ontologies.  The TaxonConcept ontology also includes classes defined in other vocabularies, such as foaf, bibo, and wgs84.  
 
 == 3.2 Class structure ==
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/taxonconcept-class-structure.png
 
-== 3.3 Object properties ==
+Notes: 
 
-=4.0 The Darwin-SW Ontology=
+txn:SpeciesConcept instances (e.g. http://lod.taxonconcept.org/ses/mCcSp.rdf ) can be described using many terms in the TaxonConcept ontology as well as skos:closeMatch.  The ontology does not include a property to relate instances to a secundum/sensu component as described in the TDWG TCS standard.  
+
+As shown in the diagram, the network of TaxonConcept object properties allows a user to relate instances of one class to another by multiple paths.  
+
+== 3.3 Subclass relationships ==
+||Class||subClassOf||
+||txn:Occurrence||http://purl.org/NET/c4dm/event.owl#Event||
+||txn:Identification||http://purl.org/NET/c4dm/event.owl#Event||
+||txn:Area||http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing||
+||txn:SpeciesConcept||txn:TaxonConcept||
+
+== 3.4 Some object properties ==
+
+||Property||Subject class||Domain declared?||Object class||Range declared?||
+
+
+=4 The Darwin-SW Ontology=
 
 == 4.1 Description ==
 
@@ -85,4 +120,6 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/taxonconcept-class-structure.png
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/darwin-sw-class-structure.png
 
-== 4.3 Object properties ==
+== 4.3 Subclass relationships ==
+
+== 4.4 Some object properties ==
