@@ -173,4 +173,11 @@ None of the classes shown on the diagram have subclass relationships.  The ontol
 ||dsw:hasIdentification||dsw:IndividualOrganism||yes||dwc:Identification||yes||
 ||dsw:identifies||dwc:Identification||yes||dsw:IndividualOrganism||yes||
 ||dsw:toTaxon||dwc:Identification||yes||dwc:Taxon||yes||
-
+||dsw:taxonOfId||dwc:Taxon||yes||dwc:Identification||yes||
+||dsw:hasEvidence||dwc:Occurrence||yes||dsw:Token||yes||
+||dsw:evidenceFor||dsw:Token||yes||dwc:Occurrence||yes||
+||dsw:idBasedOn||dwc:Identification||yes||dsw:Token||yes||
+||dsw:isBasisForId||dsw:Token||yes||dwc:Identification||yes||
+||dsw:georefBy||dcterms:Location||yes||foaf:Agent||yes||
+||dsw:recBy||dwc:Occurrence||yes||foaf:Agent||yes||
+||dsw:idBy||dwc:Identification||yes||foaf:Agent||yes||
