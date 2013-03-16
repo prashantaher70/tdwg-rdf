@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Summary of some biodiversity ontologies=
 
-*Date:* (Created) 15 March 2013; (Last modified) 15 March 2013
+*Date:* (Created) 16 March 2013; (Last modified) 16 March 2013
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -90,7 +90,7 @@ The goals of the !TaxonConcept project (http://www.taxonconcept.org/) are:
  * Link Species Concepts to Names in the Global Names Initiative Database
  * Investigate using LOD Methods to match Specimens and related Data to Species Concepts
 
-The TaxonConcept OWL Ontology ([http://lod.taxonconcept.org/ontology/txn.owl txn]), written by Peter J. DeVries from 200x through 2012, defines many classes and terms which can be used to describe biodiversity resources.  The diagram here includes only a subset of the classes which correspond approximately to those described in the other two ontologies.  The TaxonConcept ontology also includes classes defined in other vocabularies, such as foaf, bibo, and wgs84.  
+The TaxonConcept OWL Ontology ([http://lod.taxonconcept.org/ontology/txn.owl txn]), written by Peter J. DeVries from at least 2010 through 2012, defines many classes and terms which can be used to describe biodiversity resources.  The diagram here includes only a subset of the classes which correspond approximately to those described in the other two ontologies.  The TaxonConcept ontology also includes classes defined in other vocabularies, such as foaf, bibo, and wgs84.  
 
 The rdfs:comment associated with the current version of the ontology (v 0.2 on 2013-03-15) indicates that the ontology is still under development.
 
