@@ -35,7 +35,7 @@ Each of the three vocabularies described in this document calls itself an "ontol
 
 In the diagrams, ovals are used to represent instances of the classes whose URIs are listed on the ovals.  Rectangles represent literals with an example string shown in the rectangle.  If the line connecting two shapes has a single arrowhead, there is a single property that relates the subject resource at the tail end to the object resource at the head end.  If the line connecting two shapes has arrowheads at both ends, there is a pair of properties which can relate the resources with either one serving as the subject.  Classes in the three ontologies which are similar (possibly identical) are filled with the same color in each diagram.  Note: the diagrams are not graphical representations of RDF graphs.
 
-== 1.3 Subclass relationships and object properties
+== 1.3 Subclass relationships and object properties==
 
 The tables which list subclass relationships and object properties were created manually by examining the ontologies using [http://code.google.com/p/swoop/ SWOOP] and example resources which use the ontologies (notably http://ocs.taxonconcept.org/ocs/f522444a-2dd9-400e-be59-47213ef38cb9.rdf for the TaxonConcept ontology).
 
