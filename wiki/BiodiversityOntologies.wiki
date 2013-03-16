@@ -132,8 +132,8 @@ As shown in the diagram, the network of TaxonConcept object properties allows a 
 ||txn:individualHasCurrentIdentificationAssertion||txn:SpeciesIndividual||yes||txn:Identification||no||
 ||txn:individualHasPreviousIdentificationAssertion||txn:SpeciesIndividual||yes||txn:Identification||no||
 ||txn:identificationOfIndividual||txn:Identification||yes||txn:SpeciesIndividual||no||
-||txn:identificationHasSpeciesConcept||txn:Identification||yes||txn:SpeciesConcept||no||
-||txn:individualHasSpeciesConcept||txn:SpeciesIndividual||no||txn:SpeciesConcept||no||
+||txn:identificationHasSpeciesConcept||txn:Identification||no||txn:SpeciesConcept||no||
+||txn:individualHasSpeciesConcept||txn:SpeciesIndividual||yes||txn:SpeciesConcept||no||
 ||txn:identifiedBy||txn:Identification||yes||foaf:Person||yes||
 ||txn:speciesConceptHasOccurrence||txn:SpeciesConcept||yes||txn:Occurrence||no||
 ||txn:occurrenceHasSpeciesConcept||txn:Occurrence||yes||txn:SpeciesConcept||yes||
