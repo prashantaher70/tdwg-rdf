@@ -164,3 +164,13 @@ None of the classes shown on the diagram have subclass relationships.  The ontol
 == 4.4 Some object properties ==
 
 ||Property||Subject class||Domain declared?||Object class||Range declared?||
+||dsw:locates||dcterms:Location||yes||dwc:Event||yes||
+||dsw:locatedAt||dwc:Event||yes||dcterms:Location||yes||
+||dsw:eventOf||dwc:Event||yes||dwc:Occurrence||yes||
+||dsw:atEvent||dwc:Occurrence||yes||dwc:Event||yes||
+||dsw:occurrenceOf||dwc:Occurrence||yes||dsw:IndividualOrganism||yes||
+||dsw:hasOccurrence||dsw:IndividualOrganism||yes||dwc:Occurrence||yes||
+||dsw:hasIdentification||dsw:IndividualOrganism||yes||dwc:Identification||yes||
+||dsw:identifies||dwc:Identification||yes||dsw:IndividualOrganism||yes||
+||dsw:toTaxon||dwc:Identification||yes||dwc:Taxon||yes||
+
