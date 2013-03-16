@@ -1,0 +1,5 @@
+#summary Additional diagrams describing the TaxonConcept ontology model
+
+= Overall model = 
+
+= Original description component =
