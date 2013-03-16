@@ -106,7 +106,7 @@ Notes:
 
 txn:SpeciesConcept instances (e.g. http://lod.taxonconcept.org/ses/mCcSp.rdf ) can be described using many terms in the TaxonConcept ontology as well as skos:closeMatch.  The ontology does not include a property to relate instances to a secundum/sensu component as described in the TDWG TCS standard.  
 
-The class dwc_area:Area is a subclass of wgs84:SpatialThing which is defined by the WGS84 Geo Positioning RDF Vocabulary (http://www.w3.org/2003/01/geo/wgs84_pos see also [http://tools.ietf.org/html/rfc5870 RFC 5870]) which represents locations using the WGS84 geodetic reference datum.  Thus it would be reasonable to expect that dwc_area:Area instances would be described by WGS84 Vocabulary terms although the semantics of the TaxonConcept ontology does not require this.  For more information, refer to http://lists.tdwg.org/pipermail/tdwg-content/2010-November/001982.html and subsequent posts in that thread.
+The class tnx:Area is a subclass of wgs84:SpatialThing which is defined by the WGS84 Geo Positioning RDF Vocabulary (http://www.w3.org/2003/01/geo/wgs84_pos see also [http://tools.ietf.org/html/rfc5870 RFC 5870]) which represents locations using the WGS84 geodetic reference datum.  Thus it would be reasonable to expect that txn:Area instances would be described by WGS84 Vocabulary terms although the semantics of the TaxonConcept ontology does not require this.  For more information, refer to http://lists.tdwg.org/pipermail/tdwg-content/2010-November/001982.html and subsequent posts in that thread.
 
 The ontology provides two datatype properties (txn:startDate and txn:endDate) which might be used to indicate the date range over which the occurrence was documented.  The diagram shows them used thus.  The ontology also defines the class txn:Year which is a subclass of http://www.w3.org/2006/time#DateTimeDescription .  Thus time is modeled as a non-literal object in the ontology, although txn:Year is the range for properties related to publication rather than recording occurrences.
 
@@ -123,12 +123,12 @@ As shown in the diagram, the network of TaxonConcept object properties allows a 
 
 ||Property||Subject class||Domain declared?||Object class||Range declared?||
 ||txn:identificationHasOccurrence||txn:Identification||yes||txn:Occurrence||no||
-||txn:occurrenceHasArea||txn:Occurrence||yes||dwc_area:Area||yes||
-||txn:areaHasOccurrence||dwc_area:Area||no||txn:Occurrence||no||
+||txn:occurrenceHasArea||txn:Occurrence||yes||txn:Area||yes||
+||txn:areaHasOccurrence||txn:Area||no||txn:Occurrence||no||
 ||txn:occurrenceHasIndividual||txn:Occurrence||yes||txn:SpeciesIndividual||no||
 ||txn:individualHasOccurrence||txn:SpeciesIndividual||yes||txn:Occurrence||no||
-||txn:individualHasObservedArea||txn:SpeciesIndividual||yes||dwc_area:Area||yes||
-||txn:areaHasIndividual||dwc_area:Area||no||txn:SpeciesIndividual||no||
+||txn:individualHasObservedArea||txn:SpeciesIndividual||yes||txn:Area||yes||
+||txn:areaHasIndividual||txn:Area||no||txn:SpeciesIndividual||no||
 ||txn:individualHasCurrentIdentificationAssertion||txn:SpeciesIndividual||yes||txn:Identification||no||
 ||txn:individualHasPreviousIdentificationAssertion||txn:SpeciesIndividual||yes||txn:Identification||no||
 ||txn:identificationOfIndividual||txn:Identification||yes||txn:SpeciesIndividual||no||
@@ -137,8 +137,8 @@ As shown in the diagram, the network of TaxonConcept object properties allows a 
 ||txn:identifiedBy||txn:Identification||yes||foaf:Person||yes||
 ||txn:speciesConceptHasOccurrence||txn:SpeciesConcept||yes||txn:Occurrence||no||
 ||txn:occurrenceHasSpeciesConcept||txn:Occurrence||yes||txn:SpeciesConcept||yes||
-||txn:speciesConceptHasObservedArea||txn:SpeciesConcept||yes||dwc_area:Area||yes||
-||txn:areaHasObservedSpeciesConcept||dwc_area:Area||no|||txn:SpeciesConcept||no||
+||txn:speciesConceptHasObservedArea||txn:SpeciesConcept||yes||txn:Area||yes||
+||txn:areaHasObservedSpeciesConcept||txn:Area||no|||txn:SpeciesConcept||no||
 ||txn:hasCollector||txn:Occurrence||yes||foaf:Person||yes||
 
 Note: the subject class for txn:hasCollector indicates that txn:Occurrence is viewed as equivalent to or including specimens.
