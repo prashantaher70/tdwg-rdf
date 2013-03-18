@@ -82,7 +82,9 @@ core: = http://rs.tdwg.org/ontology/Core#
 ||tc:accordingTo||tc:TaxonConcept||yes||(any reference type)||no||
 ||to:typeForName||to:TaxonOccurrence||yes||tn:TaxonName||yes||
 
-Note: the subject and object classes for the terms to:hostCollection and to:typeForName indicate that to:TaxonOccurrence instances are considered to be equivalent to, or to include specimens.
+Note: the subject and object classes for the terms to:hostCollection and to:typeForName indicate that to:TaxonOccurrence instances are considered to be equivalent to, or to include specimens.  
+
+The term to:value to some extent conflates the species presence/absence aspect of "occurrence" with the aspect of "occurrence" as the documentation of a particular organism at a place and time.  
 
 =3 The !TaxonConcept Ontology=
 
