@@ -251,21 +251,23 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 OBO foundry (http://www.obofoundry.org/ ) ontologies:
 
-  * Basic Formal Ontology (BFO)
+  * Basic Formal Ontology (BFO).  Includes definition of "process" and "material entity".
 
-  * Biological Collections Ontology (BCO) ([http://bioportal.bioontology.org/ontologies/49826?p=terms browse draft here]) ([http://biocode-commons.googlecode.com/svn/trunk/ontologies/biocollections/biocode.owl view draft OWL as RDF])
+  * Biological Collections Ontology (BCO) ([http://bioportal.bioontology.org/ontologies/49826?p=terms browse draft here]) ([http://biocode-commons.googlecode.com/svn/trunk/ontologies/biocollections/biocode.owl view draft OWL as RDF]).  Includes definition of "material sample", "sampling process", and "observing process".  
 
-  * Common Anatomy Reference Ontology (CARO) ([http://bioportal.bioontology.org/ontologies/46615?p=terms browse here] or [http://www.ontobee.org/browser/rdf.php?o=CARO&iri=http://purl.obolibrary.org/obo/CARO_0000012 here])  ([http://www.berkeleybop.org/ontologies/owl/CARO OWL as RDF]).  Includes definition of "multicellular organism".  
+  * Common Anatomy Reference Ontology (CARO) ([http://bioportal.bioontology.org/ontologies/46615?p=terms browse here] or [http://www.ontobee.org/browser/rdf.php?o=CARO&iri=http://purl.obolibrary.org/obo/CARO_0000012 here])  ([http://www.berkeleybop.org/ontologies/owl/CARO OWL as RDF]).  Includes definition of "multicellular organism" and "organism".  
 
-  * Environment Ontology (EnvO) http://www.environmentontology.org/ 
+  * Environment Ontology (EnvO) http://www.environmentontology.org/ .  Includes definition of "biome" and "environmental feature".
 
-  * Information Artifact Ontology (IAO) http://code.google.com/p/information-artifact-ontology/
+  * Gene Ontology (GO) http://www.geneontology.org/ . ([http://amigo.geneontology.org/cgi-bin/amigo/browse.cgi browse]).  Includes definition of "biological process".
+
+  * Information Artifact Ontology (IAO) http://code.google.com/p/information-artifact-ontology/ . Includes definition of "information content entity" and "data item".
 
   * Ontology for Biomedical Investigations (OBI) http://obi-ontology.org/ ([http://obi.svn.sourceforge.net/svnroot/obi/releases/2012-07-01/merged/merged-obi-comments.owl OWL as RDF]).  Includes definition of "planned process".
 
   * Plant Ontology (PO) http://www.plantontology.org/  ([http://owlfiles.plantontology.org/ OWL as RDF])
 
-  * Population and Community Ontology (PCO) http://code.google.com/p/popcomm-ontology/ (http://code.google.com/p/popcomm-ontology/source/browse/trunk/pco.owl view OWL as RDF])
+  * Population and Community Ontology (PCO) http://code.google.com/p/popcomm-ontology/ (http://code.google.com/p/popcomm-ontology/source/browse/trunk/pco.owl view OWL as RDF]).  Includes definition of "species", "population", "species", and "community".
 
 [http://www.idealliance.org/specifications/prism/ Publishing Requirements for Industry Standard Metadata (PRISM)] (RDF???)
 
