@@ -251,7 +251,7 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 OBO foundry (http://www.obofoundry.org/ ) ontologies:
 
-  * Basic Formal Ontology (BFO).  Includes definition of "process" and "material entity".
+  * Basic Formal Ontology (BFO) http://www.ifomis.org/bfo .  Includes definition of "process" and "material entity".
 
   * Biological Collections Ontology (BCO) ([http://bioportal.bioontology.org/ontologies/49826?p=terms browse draft here]) ([http://biocode-commons.googlecode.com/svn/trunk/ontologies/biocollections/biocode.owl view draft OWL as RDF]).  Includes definition of "material sample", "sampling process", and "observing process".  
 
