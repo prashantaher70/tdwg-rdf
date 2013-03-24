@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 16 March 2013
+*Date:* (Created) 17 February 2012; (Last modified) 24 March 2013
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -249,7 +249,23 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 [http://www.openannotation.org/spec/core/ Open Annotation Core Data Model]
 
-[http://www.plantontology.org/ Plant Ontology (PO)] ([http://owlfiles.plantontology.org/ in RDF])
+OBO foundry (http://www.obofoundry.org/ ) ontologies:
+
+  * Basic Formal Ontology (BFO)
+
+  * Biological Collections Ontology (BCO) ([http://bioportal.bioontology.org/ontologies/49826?p=terms browse draft here]) ([http://biocode-commons.googlecode.com/svn/trunk/ontologies/biocollections/biocode.owl view draft OWL as RDF])
+
+  * Common Anatomy Reference Ontology (CARO) ([http://bioportal.bioontology.org/ontologies/46615?p=terms browse here] or [http://www.ontobee.org/browser/rdf.php?o=CARO&iri=http://purl.obolibrary.org/obo/CARO_0000012 here])  ([http://www.berkeleybop.org/ontologies/owl/CARO OWL as RDF]).  Includes definition of "multicellular organism".  
+
+  * Environment Ontology (EnvO) http://www.environmentontology.org/ 
+
+  * Information Artifact Ontology (IAO) http://code.google.com/p/information-artifact-ontology/
+
+  * Ontology for Biomedical Investigations (OBI) http://obi-ontology.org/ ([http://obi.svn.sourceforge.net/svnroot/obi/releases/2012-07-01/merged/merged-obi-comments.owl OWL as RDF]).  Includes definition of "planned process".
+
+  * Plant Ontology (PO) http://www.plantontology.org/  ([http://owlfiles.plantontology.org/ OWL as RDF])
+
+  * Population and Community Ontology (PCO) http://code.google.com/p/popcomm-ontology/ (http://code.google.com/p/popcomm-ontology/source/browse/trunk/pco.owl view OWL as RDF])
 
 [http://www.idealliance.org/specifications/prism/ Publishing Requirements for Industry Standard Metadata (PRISM)] (RDF???)
 
