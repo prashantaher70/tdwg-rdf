@@ -229,6 +229,8 @@ The principles of Referent Tracking, which can be used to represent and track "p
 
 Calder et al. [http://dx.doi.org/10.1016/j.ecoinf.2009.08.007 doi:10.1016/j.ecoinf.2009.08.007] describe a validation tool which uses machine reasoning to draw inferences about anomalous sensor data.
 
+Rector et al. OWL Pizzas: Practical Experience of Teaching OWL-DL: Common Errors & Common Patterns http://www.co-ode.org/resources/papers/ekaw2004.pdf
+
 =References=
 ===1 Annotations in Web Ontology Language ===
 In some forms of OWL (e.g. OWL DL) there are restrictions on the use of annotation properties because if they are used incorrectly they would prevent a machine reasoner from completing its task. See  
