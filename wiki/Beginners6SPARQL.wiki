@@ -362,6 +362,10 @@ Here is an example of a complex SPARQL query:
 
 https://groups.google.com/d/msg/tdwg-rdf/GQ9zoMC9RF0/KggrkVPOGgYJ
 
+Here is a paper that assesses the efficiency of querying using SPARQL:
+
+[http://www.academia.edu/2721762/FishMark_A_Linked_Data_Application_Benchmark FishMark: A Linked Data Application Benchmark]
+
 =References=
 ===1 SPARQL 1.1 Query Language===
 http://www.w3.org/TR/sparql11-query/
