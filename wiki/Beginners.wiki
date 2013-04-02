@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 24 March 2013
+*Date:* (Created) 17 February 2012; (Last modified) 2 April 2013
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -268,6 +268,10 @@ OBO foundry (http://www.obofoundry.org/ ) ontologies:
   * Plant Ontology (PO) http://www.plantontology.org/  ([http://owlfiles.plantontology.org/ OWL as RDF])
 
   * Population and Community Ontology (PCO) http://code.google.com/p/popcomm-ontology/ (http://code.google.com/p/popcomm-ontology/source/browse/trunk/pco.owl view OWL as RDF]).  Includes definition of "species", "population", "species", and "community".
+
+[http://www.w3.org/TR/2013/WD-prov-primer-20130312/ PROV (Provenance) Model primer]
+
+[http://pav-ontology.googlecode.com/svn/tags/2.1.1/pav.owl PAV (Provenance, Authoring and Versioning) Ontology (a lightweight ontology that is a refinement of PROV)]
 
 [http://www.idealliance.org/specifications/prism/ Publishing Requirements for Industry Standard Metadata (PRISM)] (RDF???)
 
