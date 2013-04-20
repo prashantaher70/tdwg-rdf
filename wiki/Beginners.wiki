@@ -303,7 +303,7 @@ OBO foundry (http://www.obofoundry.org/ ) ontologies:
 
 [http://www.ubio.org/ uBio; uses DC and locally defined predicates] ([http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:463007 example resource])
 
-[http://viaf.org/ Virtual International Authority File (VIAF)] ([http://viaf.org/viaf/27063124.rdf http://viaf.org/viaf/27063124 example resource])
+[http://viaf.org/ Virtual International Authority File (VIAF); URIs for persons] ([http://viaf.org/viaf/27063124.rdf http://viaf.org/viaf/27063124 example resource])
 
 -------------------
 Questions? Comments? Contact [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf]
