@@ -229,6 +229,8 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 [http://www.w3.org/TR/Content-in-RDF10/ Content-in-RDF10 (Representing Content in RDF 1.0 vocabulary)]
 
+[http://creativecommons.org/ns# Creative Commons Rights Expression Language (CC REL)] ([http://creativecommons.org/schema.rdf in RDF])
+
 [http://www.tdwg.org/standards/450/ Darwin Core (DwC) TDWG Standard] ([http://rs.tdwg.org/dwc/ homepage]) ([http://rs.tdwg.org/dwc/terms/index.htm term quick reference guide]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwcterms.rdf term definitions in RDF]) ([http://rs.tdwg.org/dwc/terms/type-vocabulary/index.htm type vocabulary]) ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctype.rdf type definitions in RDF])
 
 [http://code.google.com/p/darwin-sw/ darwin-sw (DSW) ontology] ([http://code.google.com/p/darwin-sw/source/browse/trunk/dsw.owl in RDF])
