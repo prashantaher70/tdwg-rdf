@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 22 April 2013
+*Date:* (Created) 17 February 2012; (Last modified) 7 May 2013
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -176,6 +176,8 @@ Thanks to Rod Page and Chris Freeland for this information.
 [http://code.google.com/p/swoop/ SWOOP tool for creating, editing, and debugging OWL ontologies]
 
 [http://clarkparsia.com/pellet Pellet OWL Reasoner] ([http://clarkparsia.com/pellet/tutorial Pellet tutorial])
+
+[https://code.google.com/p/elk-reasoner/ ELK reasoner] (supports the  [http://www.w3.org/TR/owl2-profiles/#OWL_2_EL OWL 2 EL] profile)
 
 See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 
