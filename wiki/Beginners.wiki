@@ -166,6 +166,14 @@ Thanks to Rod Page and Chris Freeland for this information.
 
 [http://www.ontobee.org/ Ontobee web server for Ontologies]  Can be set up with PURL redirection to dereference ontology terms.  See [http://lists.tdwg.org/pipermail/tdwg-content/2012-May/002889.html this email] for further information.
 
+* Some rule-based extensions to OWL/SPARQL/RDF *
+
+[http://www.w3.org/Submission/SWRL/ SWRL submission to W3C (stalled?)]
+
+[http://www.w3.org/Submission/spin-overview/ SPIN submission to W3C (SPARQL-based)]
+
+[http://www.w3.org/2005/rules/wiki/RIF_FAQ W3C Rule Interchange Format (RIF) FAQ page]
+
 ===0.3.5. Software tools===
 [http://www.dotnetrdf.org/content.asp?pageID=rdfEditor rdfEditor (syntax highlighting, validates and converts)]
 
