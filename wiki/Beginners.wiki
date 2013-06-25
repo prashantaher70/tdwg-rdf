@@ -4,7 +4,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 7 May 2013
+*Date:* (Created) 17 February 2012; (Last modified) 25 June 2013
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
 
@@ -253,6 +253,8 @@ Australian Plant Name Index (APNI) vocabulary ([http://www.biodiversity.org.au/v
 
 [http://www.w3.org/2003/01/geo/ Basic Geo WGS84 lat/long (GEO) Vocabulary] ([http://www.w3.org/2003/01/geo/wgs84_pos in RDF])
 
+[https://www.seegrid.csiro.au/wiki/CGIModel/GeologicTime GeoSciML Geologic Timescale] ([http://resource.geosciml.org/ontology/timescale/gts-30.rdf in RDF])
+
 [http://id.loc.gov/ Library of Congress Authorities and Vocabularies: ISO639 languages, MARC countries and geographic areas] (Use view page source: [http://id.loc.gov/vocabulary/iso639-1.rdf ISO639], [http://id.loc.gov/vocabulary/geographicAreas.rdf MARC geographic areas], etc. in RDF)
 
 [http://test.ckan.org/lv/dataset/linked-open-data-of-ecology Linked Open Data of Ecology (LODE) vocabulary] ([http://ecoinformatics.tfri.gov.tw/ternwork/member Ecoinformatics Working Group of the TFRI])
@@ -310,6 +312,8 @@ OBO foundry (http://www.obofoundry.org/ ) ontologies:
 [http://bioimages.vanderbilt.edu/ Bioimages; uses DC, DwC, TCS, FOAF, AC, DSW, and others] ([http://bioimages.vanderbilt.edu/baskauf/10531.rdf example resource]) ([http://bioimages.vanderbilt.edu/vanderbilt/7-16.rdf example resource])
 
 [http://www.crossref.org/CrossTech/2011/04/content_negotiation_for_crossr.html DOIs dereferenced as RDF; uses DC, BIBO, PRISM] ([http://www5.wiwiss.fu-berlin.de/marbles?uri=http%3A%2F%2Fdx.doi.org%2F10.1525%2Fauk.2009.09022 example resource] URI is {{{http://dx.doi.org/10.1525/auk.2009.09022}}} but RDF can't be viewed in a browser directly)
+
+[http://def.seegrid.csiro.au/sissvoc/isc2012/resource?uri=http://resource.geosciml.org/classifierscheme/ics/2012/ischart International Chronostratigraphic Chart (2012)] ([http://resource.geosciml.org/ontology/timescale/gts-30.rdf timescale as RDF])
 
 [http://ecowlim.tfri.gov.tw/lode/ Linked Open Data of Ecology; uses DwC, FOAF, GEO, LODE] ([http://test.ckan.org/lv/dataset/linked-open-data-of-ecology/resource/b27bdda0-5f10-4419-9da2-69e513152582 example resource]) 
 
