@@ -2,7 +2,7 @@
 
 These examples follow the draft Darwin Core RDF Guide. They assume the data model of Darwin-SW (version 0.3; http://code.google.com/p/darwin-sw/ ) and use its object properties to link the class instances.  
 
-== A specimen ==
+== A specimen and its associated occurrence ==
 
 As RDF/XML:
 {{{
