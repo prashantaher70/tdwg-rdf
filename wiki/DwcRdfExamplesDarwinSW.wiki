@@ -61,7 +61,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
     <dwc:taxonRank>species</dwc:taxonRank>
     <dwc:nameAccordingTo>Oliver P. Pearson. 1985. Los tuco-tucos (genera Ctenomys) de los Parques Nacionales Lanin y Nahuel Huapi, Argentina. Historia Natural 5(37):337-343.</dwc:nameAccordingTo>
     <dwc:identificationRemarks xml:lang="en">ID from citation in Pearson 1985.</dwc:identificationRemarks>
-    <dwcuri:toTaxonConcept rdf:resource="urn:lsid:zoobank.org:act:306F5618-D154-47D5-81BB-697CB2A83EE7"/>
+    <dwcuri:toTaxonConcept rdf:resource="http://zoobank.org/306F5618-D154-47D5-81BB-697CB2A83EE7"/>
     <dsw:identifies rdf:resource ="http://arctos.database.museum/guid/MVZ:Mamm:165861#ind" />
     <dsw:idBasedOn rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861"/>
 </rdf:Description>
@@ -209,7 +209,7 @@ As RDF/Turtle:
 	dwc:vernacularName "colonial tuco-tuco"@en,
 	                  "tuco-tuco colonial"@es;
 	dwcuri:identifiedBy <http://viaf.org/viaf/263074474>;
-	dwcuri:toTaxonConcept <urn:lsid:zoobank.org:act:306F5618-D154-47D5-81BB-697CB2A83EE7>;
+	dwcuri:toTaxonConcept <http://zoobank.org/306F5618-D154-47D5-81BB-697CB2A83EE7>;
 	a dwctype:Identification.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#eve> 
