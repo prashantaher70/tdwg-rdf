@@ -6,7 +6,7 @@ These examples follow the draft Darwin Core RDF Guide. They assume the data mode
 
 <img src="http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.png" height="200" width="3855"/>
 
-[http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.jpg Click here to load the graphic in your browser window]
+[http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.jpg Click here to view image in your default viewer]
 
 As RDF/XML:
 {{{
