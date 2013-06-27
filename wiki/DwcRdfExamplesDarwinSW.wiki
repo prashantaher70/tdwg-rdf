@@ -4,7 +4,9 @@ These examples follow the draft Darwin Core RDF Guide. They assume the data mode
 
 == A specimen and its associated occurrence ==
 
-<img src="http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.png" height="389" width="3855"/>
+<img src="http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.png" height="200" width="3855"/>
+
+[http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.png Click here to load the graphic in your browser window]
 
 As RDF/XML:
 {{{
