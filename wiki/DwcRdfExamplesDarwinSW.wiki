@@ -4,6 +4,8 @@ These examples follow the draft Darwin Core RDF Guide. They assume the data mode
 
 == A specimen and its associated occurrence ==
 
+This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen
+
 <img src="http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.png" height="200" width="3855"/>
 
 [http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.jpg Click here to view image in your default viewer]
@@ -270,3 +272,14 @@ As RDF/Turtle:
 	                <http://arctos.database.museum/guid/MVZ:Mamm:165861#occ>;
 	a foaf:Document.
 }}}
+
+== Complex example ==
+
+This is a complex example based on a real situation where several images and a specimen were collected to document a seed collection.  In this example, two events are linked to a single location.  There are two occurrences (one associated with each event).  One occurrence is documented by a single image.  A later occurrence is documented by both a specimen and an image.  The IndividualOrganism instance is a small population of plants, documented by the occurrences and from which the images and specimen were derived.  The population has two Identification instances.  One is based on the two images while the other is based on the specimen.  Although there are only several resources involved, it demonstrates how RDF can describe complex situations in a highly normalized way.
+
+<img src="http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.png" height="200" width="3855"/>
+
+[http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.jpg Click here to view image in your default viewer]
+
+As RDF/XML:
+{{{
