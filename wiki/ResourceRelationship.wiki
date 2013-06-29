@@ -27,7 +27,7 @@ Table 1
 ||term||dwc:resourceRelationshipID||dwc:resourceID||dwc:relatedResourceID||dwc:relationshipOfResource||dwc:relationshipEstablishedDate||dwc:relationshipAccordingTo||
 ||value||"http://guid.mvz.org/relations/23423"||"urn:catalog:MVZ:Mammals:14524"||"urn:catalog:MVZ:Mammals:14523"||"mother of"||"2001-09-14"||"James L Patton"||
 
-Because the ID terms cannot be used as object properties, Darwin Core does not provide a means to express this relationship as RDF.  The [www.openannotation.org/spec/core/core.html Open Annotation Data Model] should be used instead as shown in the following example which relates the same resources as in Table 1.
+Because the ID terms cannot be used as object properties, Darwin Core does not provide a means to express this relationship as RDF.  The [http://www.openannotation.org/spec/core/core.html Open Annotation Data Model] should be used instead as shown in the following example which relates the same resources as in Table 1.
 
 Example 1:
 {{{
@@ -57,9 +57,9 @@ Example 1:
 
 The following points should be noted about Example 1:
 
-- the oa:hasBody property has as its object the resource whose identifier is the value of dwc:resourceID in Table 1.
+- the {{{oa:hasBody}}} property has as its object the resource whose identifier is the value of {{{dwc:resourceID}}} in Table 1.
 
-- the oa:hasTarget property has as its object the resource whose identifier is the value of dwc:relatedResourceID in Table 1.
+- the {{{oa:hasTarget}}} property has as its object the resource whose identifier is the value of {{{dwc:relatedResourceID}}} in Table 1.
 
 - In accordance with Recommendation 7 of the TDWG GUID Applicability Statement, the identifiers for the two related specimens have been provided in their HTTP-proxied form.
 
