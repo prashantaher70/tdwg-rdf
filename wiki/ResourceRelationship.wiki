@@ -41,7 +41,7 @@ Example 1:
    <oa:hasTarget rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:14523"/>
    <oa:motivatedBy rdf:resource="http://guid.mvz.org/relationshipType/motherOf"/>
    <oa:annotatedAt>2001-09-14</oa:annotatedAt>
-   <oa:annotatedBy rdf:resource="http://guid.mvz.org/agents/James_L_Patton”"/>
+   <oa:annotatedBy rdf:resource="http://guid.mvz.org/agents/James_L_Patton"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://guid.mvz.org/relations/23423">
