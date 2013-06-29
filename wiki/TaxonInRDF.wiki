@@ -22,7 +22,7 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 *Table of Contents:*
 <wiki:toc max_depth="4" />
 
-== 1  ==
+== 1 Introduction ==
 
 The class dwc:Taxon is defined to be a category that includes information about both names and taxon concepts.  The ambiguity in this definition reflects a general lack of clarity in the TDWG community about the exact definition of a taxon.  This degree of ambiguity is not suitable for descriptions in RDF.  The TDWG Taxon Concept Transfer Schema (TCS) Standard describes a more well-defined entity, the Taxon Concept, which contains both a name and a reference component.   These name and reference components correspond to two parts of concept names under the convention of “name sec. reference” (or “name sensu reference”).  
 
@@ -36,7 +36,7 @@ The general model can be represented by this graph:
 
 The three resources (<concept1>, <reference1>, and <name1>) are non-information resources which may be identified by URIs.  They may each be related to other resources by object properties.  Ideally, a provider of RDF occurrence metadata could use the property dwcuri:toTaxonConcept to link a dwc:Identification instance to the URI of a tc:TaxonConcept instance found in a community repository.  However, in the absence of such a repository, providers could use terms from the TaxonConcept and TaxonName ontologies to translate text-based Darwin Core records described by dwc:Taxon class convenience properties into RDF that is structured in such a way that would allow their metadata to be consumed in a manner which would facilitate matching the tc:TaxonConcept that they describe with others in a community repository.  It is also possible that metadata described in this more structured way could be machine-translated into a future standard model for taxon concepts.
 
-3.2.1 Name entities
+==1 Name entities==
 
 A tn:TaxonName instance should not be considered to represent a name string, but rather be considered to represent a “name entity” which is a non-information (i.e. non-literal) resource. Although neither the TCS Standard nor the TDWG TaxonName Ontology define the tn:TaxonName class in the following way, a tn:TaxonName corresponds approximately to a protonym as defined in [http://systbio.org/files/phyloinformatics/1.pdf Pyle 2004].   By modeling the taxon name as a non-literal, the tn:TaxonName instance may be the object of additional triples that describe its properties.  
 
@@ -50,7 +50,7 @@ A metadata provider has three options for describing name entities when translat
 
 Each of these approaches will be described in the sections that follow.
 
-3.2.1.1 Non-literal value string representing the name entity
+===1.1 Non-literal value string representing the name entity===
 
 As discussed in section 2.4.3, strings have traditionally been used as a proxy for non-literal resources.  The TDWG TaxonConcept ontology defines a term, tc:nameString, which can be used as a tc:TaxonConcept instance property of whose value is a value string literal that represents the name entity associated with the concept.  It should be understood that the value of tc:nameString is intended to provide a means for the consumer to attempt to identify the name entity in lieu of a GUID for the entity.  Therefore, it should be understood that the value of tc:nameString is NOT itself the name in string form.  For this reason, a consumer may be able to conclude that various values for tc:nameString, such as “Hypomachilodes forthaysi Packauskas & Shofner, 2010”, “Hypomachilodes forthaysi Packauskas & Shofner”, and “ Hypomachilodes forthaysi” represent the same name entity even though they are not identical strings.  The following example illustrates the approach of referring to a name entity by a value string:
 
@@ -102,7 +102,7 @@ Notes:
 
 - Because dwc:nameAccordingTo cannot be used in RDF, the corresponding Taxon Concept ontology term, tc:accordingTo is used instead, along with the HTTP proxied version of the DOI.
 
-3.2.1.2 Representing the name entity using a blank node
+==1.2 Representing the name entity using a blank node==
 
 If the metadata provider is able to provide more detailed information about the name entity but is unable or unwilling to mint and maintain a URI to identify the name entity, a tn:TaxonName instance can be represented by a blank node whose properties describe the name entity.  For example:
 
@@ -194,7 +194,7 @@ Notes:
 
 - When an ampersand (“&”) is used in XML it must be escaped as “&amp;”.
 
-3.2.1.3 Referring to the name entity through a URI reference
+===1.3 Referring to the name entity through a URI reference===
 
 If tn:TaxonName instances which are identified by URIs are available, the tc:TaxonConcept instance can be linked to the URI without the necessity to provide additional information about the name, as in this example:
 
@@ -212,11 +212,11 @@ Example 33:
 
 In this circumstance, the consuming application would need to dereference any previously unknown name entity URIs in order to discover the properties of the name.  
 
-3.2.2 Secundum (sec.) references
+==2 Secundum (sec.) references==
 
 If the reference which circumscribes the taxon concept is known, it should be associated with the taxon concept using one of the methods listed in the following sections.  If no information about the reference is available (i.e. in the case of a nominal taxon concept), this information may be omitted.  
 
-3.2.2.1 Non-literal value string representing the reference
+===2.1 Non-literal value string representing the reference===
 
 A tc:TaxonConcept instance can have the property tc:accordingToString whose value is a value string that represents the secundum reference. The following example illustrates the use of tc:accordingToString :
 
@@ -234,7 +234,7 @@ Example 34:
 
 Because of the wide variety of formats for citing references, it is difficult to ensure that a client will be able to unambiguously match strings which refer to the same reference.  For this reason, it is recommended that providers not rely exclusively on tc:accordingToString as a means of identifying  the secundum reference but that they also use one of the following two methods to reduce the ambiguity of the reference and to reduce the burden on the consumer of parsing and interpreting the value string which represents the reference.  
 
-3.2.2.2 Representing the reference using a blank node
+==2.2 Representing the reference using a blank node==
 
 If the metadata provider is able to provide discrete metadata properties of the reference in addition to a free-text value string, the likelihood that the reference may be matched with other instances of the same reference is increased.  The property tc:accordingTo should be used as a predicate whose object is the reference instance.  If the provider is unable or unwilling to maintain an identifier for the reference, the reference can be represented by a blank node.  The reference documenting the use of the name may provide only minimal (or no) information regarding the circumscription of the tc:TaxonConcept instance (i.e. the tc:TaxonConcept is a taxon name use that does not provide a circumscription).  Nevertheless, it is better to provide the information that is known rather than no information at all.  
 
@@ -276,7 +276,7 @@ Notes:
 
 - Standard Dublin Core and Bibliographic Ontology terms are recommended for use as properties of the reference
 
-3.2.2.3 Referring to the reference through a URI reference
+===2.3 Referring to the reference through a URI reference===
 
 If a URI has been assigned to the reference, the tc:TaxonConcept instance can be linked to the URI without the necessity to provide additional information about the reference, as shown in Example 31.  If the URI is an HTTP URI, a consumer may be able to discover additional information about the resource by dereferencing the URI.  If the URI is not an HTTP URI, the consumer would be able to unambiguously match the reference to other instances of the same reference, but would not necessarily be able to infer additional information about the reference unless it were included in the same document as the description of the concept, or if the consumer had pre-existing information about the reference from another source.  
 
