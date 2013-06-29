@@ -1,9 +1,9 @@
-#summary Darwin Core Taxon terms as RDF
+#summary Describing Taxon Concepts as RDF
 #sidebar DwcRdfSidebar
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
-=Darwin Core Taxon terms as RDF=
+=Describing Taxon Concepts as RDF=
 
 *Date:* (Created) 27 April 2013; (Last modified) 29 June 2013
 
