@@ -1,7 +1,26 @@
-#summary DwC RDF examples (Darwin-SW)
+#summary Examples of Darwin Core as RDF using Darwin-SW object properties
 #sidebar DwcRdfSidebar
 
-These examples follow the draft Darwin Core RDF Guide. They assume the data model of Darwin-SW (version 0.3; http://code.google.com/p/darwin-sw/ ) and use its object properties to link the class instances.  
+http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
+
+=Examples of Darwin Core as RDF using Darwin-SW object properties=
+
+*Date:* (Created) 27 June 2013; (Last modified) 29 June 2013
+
+*Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
+
+*Permanent URL:* http://
+
+*TDWG Task Group:* [http://code.google.com/p/tdwg-rdf/ TDWG RDF/OWL Task Group]
+
+*Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf] (TDWG RDF/OWL Task Group)
+
+*Abstract:* These examples follow the Darwin Core RDF Guide. They assume the data model of Darwin-SW (version 0.3; http://code.google.com/p/darwin-sw/ ) and use its object properties to link the class instances.  
+
+http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
+
+*Table of Contents:*
+<wiki:toc max_depth="4" />
 
 == 1 A specimen and its associated occurrence ==
 
