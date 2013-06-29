@@ -19,9 +19,6 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
 
-*Table of Contents:*
-<wiki:toc max_depth="4" />
-
 ==1 Introduction==
 The terms in the {{{dwc:ResourceRelationship}}} class are designed to allow for the creation of {{{dwc:ResourceRelationship}}} instances having assigned identifiers.  The following example based on an example in the [http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#classes XML Guide] shows how the terms may be used to describe that the specimen with catalog number 14524 is the mother of a specimen with catalog number 14523:
 
