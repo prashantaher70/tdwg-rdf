@@ -1,6 +1,6 @@
-#summary navigation sidebar for DwC RDF Guide documents
+#summary navigation sidebar for DwC RDF Guide ancillary documents
 
-==Darwin Core RDF Guide==
+==Darwin Core RDF Guide Ancillary Documents==
 
 Informative ancillary documents not part of the standard
 
