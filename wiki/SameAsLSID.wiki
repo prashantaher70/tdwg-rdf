@@ -1,77 +1,55 @@
 #summary LSIDs and identifier proliferation from owl:sameAs
 #sidebar DwcRdfSidebar
 
-=1 LSIDs and other HTTP-proxied identifiers in RDF=
+=LSIDs and other HTTP-proxied identifiers in RDF=
 
 This section is not specifically related to the implementation of Darwin Core terms, but since TDWG has previously stated that deployment of LSIDs is a priority, and since the resources of some LSID-using providers in the TDWG community will be linked using Darwin Core properties, the means by which LSIDs are referenced in RDF will affect the implementation of Darwin Core as RDF.  The implications described below are not unique to LSIDs, but would also apply to other non-resolvable URIs such as UUIDs that are proxied using HTTP, e.g. declaring that
 
+{{{
 <urn:uuid:6e8bc430-9c3a-11d9-9669-0800200c9a66> owl:sameAs <http://res.org/6e8bc430-9c3a-11d9-9669-0800200c9a66>
+}}}
 
 When a resource is identified by an LSID, it is a best practice to associate the LSID with an http-proxied version of the LSID using owl:sameAs, owl:equivalentProperty, or owl:equivalentClass (section 2.2.3).  However, the frequency of use of these terms of equivalence, and way in which the declarations of equivalence are made have important implications which will be discussed below.  Although the examples below use owl:sameAs, the implications are the same for the other terms of equivalence.  
 
-==1.1 What does owl:sameAs mean?==
+==1 What does owl:sameAs mean?==
 
 In order to understand the significance of this section, one must first understand the significance of owl:sameAs.  owl:sameAs is a built-in property of the Web Ontology Language ([http://www.w3.org/TR/owl-ref/#sameAs-def OWL]) which is used to indicate that two instances (“individuals” in the terminology of OWL) are identical.  Thus owl:sameAs is often used to state that two URI references refer to “the same thing”.  Persons who use owl:sameAs in this way may simply consider the term a convenient way to make a link to a similar resource in order to allow a client to discover additional metadata through dereferencing the URI of the other resource.  
 
 Although it is possible that client applications might use owl:sameAs simply as a way to traverse the web of data, owl:sameAs has a more powerful use when reasoning is applied to RDF.  As [http://www.w3.org/2009/12/rdf-ws/papers/ws21 Halpin et al.] point out, when owl:sameAs is applied to two URIs, the resources they identify are asserted to be exactly the same and they share all the same properties.  Thus ”any statement that is given to a single URI is true for every other URI that has an owl:sameAs link.”  Whether or not these additional inferred statements (in the form of RDF triples) are actually made depends on whether a reasoner (software capable of drawing conclusions based on RDF statements) is called upon to carry out inferencing based on owl:sameAs triples.  The problem described in section 3.1.2 below occurs if reasoners do infer all possible triples based on owl:sameAs, while the problem described in section 3.1.3 below occurs if reasoners are not called upon to infer triples based on owl:sameAs.  
 
-==1.2 Proliferation of identifiers (a issue when inferencing is done)==
+==2 Proliferation of identifiers (a issue when inferencing is done)==
 
 The metadata for Pternistis leucoscepus in the uBio Namebank includes the following RDF:
 
-Example 27:
+Example 1:
 
+{{{
 <rdf:Description rdf:about="urn:lsid:ubio.org:namebank:11815">
-
     <dc:subject>Pternistis leucoscepus (Gray, GR) 1867</dc:subject>
-
     <ubio:taxonomicGroup>Aves</ubio:taxonomicGroup>
-
 </rdf:Description>
+}}}
 
 which would translate into the following triples:
 
-Table 5
+Table 1
 
-subject
-	
+||subject||predicate||object
 
-predicate
-	
-
-object
-
-<urn:lsid:ubio.org:namebank:11815>
-	
-
-dc:subject
-	
-
-"Pternistis leucoscepus (Gray, GR) 1867"
-
-<urn:lsid:ubio.org:namebank:11815>
-	
-
-ubio:taxonomicGroup
-	
-
-"Aves"
+||<urn:lsid:ubio.org:namebank:11815>||dc:subject||"Pternistis leucoscepus (Gray, GR) 1867"||
+||<urn:lsid:ubio.org:namebank:11815>||ubio:taxonomicGroup||"Aves"||
 
 If the Recommendation 30 of the TDWG LSID Applicability Statement standard [http://www.tdwg.org/standards/150/ LSID-STANDARD] regarding an owl:sameAs declaration were applied, the RDF could be:
 
-Example 25:
-
+Example 2:
+{{{
 <rdf:Description rdf:about="urn:lsid:ubio.org:namebank:11815">
-
     <owl:sameAs rdf:resource="http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815"/>    
-
    <dc:subject>Pternistis leucoscepus (Gray, GR) 1867</dc:subject>
-
    <ubio:taxonomicGroup>Aves</ubio:taxonomicGroup>
-
 </rdf:Description>
 
-where "http://lsid.tdwg.org/" is the prefix which provides actionability to the LSID via the TDWG LSID resolution service.  The added property directly adds a single triple about the subject resource:
+where {{{http://lsid.tdwg.org/}}} is the prefix which provides actionability to the LSID via the TDWG LSID resolution service.  The added property directly adds a single triple about the subject resource:
 
 Table 6
 
@@ -289,7 +267,7 @@ which includes 4 directly asserted and 7 inferred triples.  If all 34 triples as
 
 From this example, it is clear that each additional owl:sameAs statement can cause a dramatic proliferation of triples if a consuming application performs all possible inferencing based on owl:sameAs.  For this reason, it is best for the provider maintaining the LSID to pick a particular proxy URI and use it in RDF exclusively with the base LSID.  The provider should also advertise to consumers the preferred HTTP-proxied LSID to which consumers should refer in their own RDF.
 
-==1.3 Which URI form should be used to identify the subject resource in RDF metadata for an LSID-identified resource? (an issue when inferencing is NOT done)==
+==3 Which URI form should be used to identify the subject resource in RDF metadata for an LSID-identified resource? (an issue when inferencing is NOT done)==
 
 In Example 26, the unproxied version of the LSID is given in the rdf:about attribute of the container element and the non-proxied version is the object of the owl:sameAs predicate.  The example could just have easily been:
 
@@ -491,11 +469,11 @@ the triples in Table 9 replace the last three triples in Table 10.  Now if the q
 
 Recommendation 30 of the TDWG LSID Applicability Statement states that the proxied and unproxied forms of an LSID must be related by a statement of identity, but it does not specify which must be used as the subject in descriptive triples.  What this example shows is that it is best for providers use HTTP proxies as subjects and objects in the RDF that they provide in preference over the non-proxied version of a non-actionable URI identifier such as an LSID.
 
-==1.4 Alternatives to owl:sameAs==
+==4 Alternatives to owl:sameAs==
 
 If the intent of a metadata provider is simply to make a connection between similar or related resources that are not identical, there are other well-known properties that may used instead of owl:sameAs.  The [http://www.w3.org/2004/02/skos/ Simple Knowledge Organization System (SKOS)] vocabulary provides terms such as skos:closeMatch, skos:exactMatch, and skos:related which might be appropriate alternatives to owl:sameAs in some situations.
 
-==1.5 When is owl:sameAs the best alternative?==
+==5 When is owl:sameAs the best alternative?==
 
 In order to prevent the proliferation of identifiers and ensure that resources are found during querying in the absence of inferencing, it is a best practice to reuse well-known identifiers (e.g. [http://viaf.org/ VIAF]) rather than minting new ones.  For example, if one wishes to assert that a specimen was collected by a well-known collector, it is better to use a well-known URI for that collector than to mint a new URI.  That will allow the specimen to be linked directly to other specimens collected by the same collector even if an aggregator does not perform inferencing on the triples which are aggregated.
 
@@ -545,7 +523,7 @@ Contents of extensive record served by organization minting the URI:
 
 Notice that the extensive record contains an owl:sameAs property linking the minted URI to the well-known URI.  So clients that dereference the minted URI can also discover that the resource it identifies is identical to the resource identified by the well-known URI.
 
-==1.6 Summary Recommendations==
+==6 Summary Recommendations==
 
 In light of the issues raised in this section, the following are recommended:
 
