@@ -1,9 +1,8 @@
 #summary navigation sidebar for DwC RDF Guide documents
 
-==Contents==
+==Darwin Core RDF Guide==
+
+Informative ancillary documents not part of the standard
+
+===Contents===
   * [DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
-    *[http://code.google.com/p/tdwg-rdf/wiki/DwcRdfExamplesDarwinSW#1.1_As_RDF/XML: Specimen as RDF/XML]
-    *[http://code.google.com/p/tdwg-rdf/wiki/DwcRdfExamplesDarwinSW#1.2_As_RDF/Turtle: Specimen as RDF/Turtle]
-    *[http://code.google.com/p/tdwg-rdf/wiki/DwcRdfExamplesDarwinSW#1.2_As_RDF/Turtle: Specimen as RDF/Turtle]
-    *[http://code.google.com/p/tdwg-rdf/wiki/DwcRdfExamplesDarwinSW#2.1_As_RDF/XML: Complex example as RDF/XML]
-    *[http://code.google.com/p/tdwg-rdf/wiki/DwcRdfExamplesDarwinSW#2.2_As_RDF/Turtle: Complex example as RDF/Turtle]
