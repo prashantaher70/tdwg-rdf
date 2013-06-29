@@ -125,135 +125,44 @@ However, a client that does not perform reasoning would generate only the triple
 
 Table 5
 
-subject
-	
-
-predicate
-	
-
-object
-
-<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>
-	
-
-dc:subject
-	
-
-"Pternistis leucoscepus (Gray, GR) 1867"
-
-<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>
-	
-
-ubio:taxonomicGroup
-	
-
-"Aves"
-
-<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>
-	
-
-owl:sameAs
-	
-
-<urn:lsid:ubio.org:namebank:11815>
+||subject||predicate||object||
+||<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>||dc:subject||"Pternistis leucoscepus (Gray, GR) 1867"||
+||<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>||ubio:taxonomicGroup||"Aves"||
+||<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>||owl:sameAs||<urn:lsid:ubio.org:namebank:11815>||
 
 Consider what would happen if the following RDF would were provided to link an identification to a taxon:
 
-Example 28:
-
+Example 5:
+{{{
 <rdf:Description rdf:about="http://museum.org/identifications/12345">
-
    <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
-
    <dwc:identifiedBy>Juan Taxonomist</dwc:identifiedBy>
-
    <dwc:dateIdentified>2006</dwc:dateIdentified>
-
-    <dwcuri:toTaxonConcept rdf:resource="http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815"/>
-
+   <dwcuri:toTaxonConcept rdf:resource="http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815"/>
 </rdf:Description>
-
 <rdf:Description rdf:about="urn:lsid:ubio.org:namebank:11815">
-
    <owl:sameAs rdf:resource="http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815"/>    
-
    <dc:subject>Pternistis leucoscepus (Gray, GR) 1867</dc:subject>
-
    <ubio:taxonomicGroup>Aves</ubio:taxonomicGroup>
-
 </rdf:Description>
+}}}
 
-Note that the description of the identification follows the recommendation discussed in section 2.4.2.1.1 (that the proxied form of an LSID be used as the object of triples) and that the description of the taxon follows the recommendation discussed in section 2.2.3 (that for resources identified by LSIDs an owl:sameAs statement must be used to express equivalence to its http proxy).  Also note that this example is for illustration purposes only and is not intended to express an opinion about whether or not uBio namebank instances are actually taxon concepts (and should therefore serve as the object of a dwcuri:toTaxonConcept object property).   The following triples would be derived directly from the XML:
+Note that the description of the identification follows the recommendation discussed in Section 2.4.2.1.1 of the Darwin Core RDF Guide (that the proxied form of an LSID be used as the object of triples) and that the description of the taxon follows the recommendation discussed in section 2.2.3 (that for resources identified by LSIDs an {{{owl:sameAs}}} statement must be used to express equivalence to its http proxy).  Also note that this example is for illustration purposes only and is not intended to express an opinion about whether or not uBio namebank instances are actually taxon concepts (and should therefore serve as the object of a {{{dwcuri:toTaxonConcept}}} object property).   The following triples would be derived directly from the XML:
 
-Table 10
+Table 6
 
-subject
-	
+||subject||predicate||object||
+||<http://museum.org/identifications/12345>||dwc:identifiedBy||"Juan Taxonomist"||
+||<http://museum.org/identifications/12345>||dwc:dateIdentified||"2006"||
+||<http://museum.org/identifications/12345>||dwcuri:toTaxonConcept||<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>||
+||<http://museum.org/identifications/12345>||rdf:type||dwctype:Identification||
+||<urn:lsid:ubio.org:namebank:11815>||owl:sameAs||<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>||
+||<urn:lsid:ubio.org:namebank:11815>||dc:subject||"Pternistis leucoscepus (Gray, GR) 1867"||
+||<urn:lsid:ubio.org:namebank:11815>||ubio:taxonomicGroup||"Aves"||
 
-predicate
-	
+The first four triples are derived from the description of the Identification and the last three triples describing the taxon are the same as in Table 2.
 
-object
-
-<http://museum.org/identifications/12345>
-	
-
-dwc:identifiedBy
-	
-
-"Juan Taxonomist"
-
-<http://museum.org/identifications/12345>
-	
-
-dwc:dateIdentified
-	
-
-"2006"
-
-<http://museum.org/identifications/12345>
-	
-
-dwcuri:toTaxonConcept
-	
-
->http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>
-
-<http://museum.org/identifications/12345>
-	
-
-rdf:type
-	
-
-dwc:Identification
-
-<urn:lsid:ubio.org:namebank:11815>
-	
-
-owl:sameAs
-	
-
->http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>
-
-<urn:lsid:ubio.org:namebank:11815>
-	
-
-dc:subject
-	
-
-"Pternistis leucoscepus (Gray, GR) 1867"
-
-<urn:lsid:ubio.org:namebank:11815>
-	
-
-ubio:taxonomicGroup
-	
-
-"Aves"
-
-The first four triples are derived from the description of the Identification and the last three triples describing the taxon are the same as in Table 6.
-
-Imagine a simple client which collected triples in a store and then allowed a user to perform simple queries in the form of SPARQL [http://code.google.com/p/tdwg-rdf/wiki/Beginners6SPARQL BEGINNERS-SPARQL], but which did not infer any triples based on owl:sameAs statements.  If a user wanted to query the triple store to find out what taxonomic groups which Juan Taxonomist had used in identifications, the following query could be used:
+Imagine a simple client which collected triples in a store and then allowed a user to perform simple queries in the form of SPARQL [http://code.google.com/p/tdwg-rdf/wiki/Beginners6SPARQL BEGINNERS-SPARQL], but which did not infer any triples based on {{{owl:sameAs}}} statements.  If a user wanted to query the triple store to find out what taxonomic groups which Juan Taxonomist had used in identifications, the following query could be used:
 
 Example 29:
 
