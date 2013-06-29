@@ -86,131 +86,44 @@ Example 3:
 
 In a triple store without inferencing, the number of triples in the example would increase from 3 to 4.  However, in a triple store with inferencing, the following triples would be present:
 
-Table 8
+Table 4
 
-subject
-	
-
-predicate
-	
-
-object
-
-<urn:lsid:ubio.org:namebank:11815>
-	
-
-dc:subject
-	
-
-"Pternistis leucoscepus (Gray, GR) 1867"
-
-<urn:lsid:ubio.org:namebank:11815>
-	
-
-ubio:taxonomicGroup
-	
-
-"Aves"
-
-<urn:lsid:ubio.org:namebank:11815>
-	
-
-owl:sameAs
-	
-
-<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>
-
-<urn:lsid:ubio.org:namebank:11815>
-	
-
-owl:sameAs
-	
-
-<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>
-
-<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>
-	
-
-dc:subject
-	
-
-"Pternistis leucoscepus (Gray, GR) 1867"
-
-<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>
-	
-
-ubio:taxonomicGroup
-	
-
-"Aves"
-
-<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>
-	
-
-owl:sameAs
-	
-
-<urn:lsid:ubio.org:namebank:11815>
-
-<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>
-	
-
-dc:subject
-	
-
-"Pternistis leucoscepus (Gray, GR) 1867"
-
-<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>
-	
-
-ubio:taxonomicGroup
-	
-
-"Aves"
-
-<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>
-	
-
-owl:sameAs
-	
-
-<urn:lsid:ubio.org:namebank:11815>
-
-<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>
-	
-
-owl:sameAs
-	
-
-<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>
+||subject||predicate||object||
+||<urn:lsid:ubio.org:namebank:11815>||dc:subject||"Pternistis leucoscepus (Gray, GR) 1867"||
+||<urn:lsid:ubio.org:namebank:11815>||ubio:taxonomicGroup||"Aves"||
+||<urn:lsid:ubio.org:namebank:11815>||owl:sameAs||<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>||
+||<urn:lsid:ubio.org:namebank:11815>||owl:sameAs||<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>||
+||<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>||dc:subject||"Pternistis leucoscepus (Gray, GR) 1867"||
+||<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>||ubio:taxonomicGroup||"Aves"||
+||<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>||owl:sameAs||<urn:lsid:ubio.org:namebank:11815>||
+||<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>||dc:subject||"Pternistis leucoscepus (Gray, GR) 1867"||
+||<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>||ubio:taxonomicGroup||"Aves"||
+||<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>||owl:sameAs||<urn:lsid:ubio.org:namebank:11815>||
+||<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>||owl:sameAs||<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>||
 
 which includes 4 directly asserted and 7 inferred triples.  If all 34 triples asserted by uBio were included, there would be 107 triples (36 directly asserted triples and 71 inferred triples) about the name in the triple store.
 
-From this example, it is clear that each additional owl:sameAs statement can cause a dramatic proliferation of triples if a consuming application performs all possible inferencing based on owl:sameAs.  For this reason, it is best for the provider maintaining the LSID to pick a particular proxy URI and use it in RDF exclusively with the base LSID.  The provider should also advertise to consumers the preferred HTTP-proxied LSID to which consumers should refer in their own RDF.
+From this example, it is clear that each additional {{{owl:sameAs}}} statement can cause a dramatic proliferation of triples if a consuming application performs all possible inferencing based on {{{owl:sameAs}}}.  For this reason, it is best for the provider maintaining the LSID to pick a particular proxy URI and use it in RDF exclusively with the base LSID.  The provider should also advertise to consumers the preferred HTTP-proxied LSID to which consumers should refer in their own RDF.
 
 ==3 Which URI form should be used to identify the subject resource in RDF metadata for an LSID-identified resource? (an issue when inferencing is NOT done)==
 
-In Example 26, the unproxied version of the LSID is given in the rdf:about attribute of the container element and the non-proxied version is the object of the owl:sameAs predicate.  The example could just have easily been:
+In Example 3, the unproxied version of the LSID is given in the {{{rdf:about}}} attribute of the container element and the non-proxied version is the object of the {{{owl:sameAs}}} predicate.  The example could just have easily been:
 
-Example 27:
-
+Example 4:
+{{{
 <rdf:Description rdf:about="http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815">
-
    <owl:sameAs rdf:resource="urn:lsid:ubio.org:namebank:11815"/>    
-
    <dc:subject>Pternistis leucoscepus (Gray, GR) 1867</dc:subject>
-
    <ubio:taxonomicGroup>Aves</ubio:taxonomicGroup>
-
 </rdf:Description>
+}}}
+where the form of URI used in the {{{rdf:about}}} attribute and the form used as the object of the {{{owl:sameAs}}} statement are reversed.
 
-where the form of URI used in the rdf:about attribute and the form used as the object of the owl:sameAs statement are reversed.
+If a semantic client used reasoning to generate inferred triples, it would make no difference which form were used in the rdf:about attribute.  Both forms would generate the same triples, i.e. those shown in Table 3.
 
-If a semantic client used reasoning to generate inferred triples, it would make no difference which form were used in the rdf:about attribute.  Both forms would generate the same triples, i.e. those shown in Table 7.
+However, a client that does not perform reasoning would generate only the triples which were explicitly stated in the XML.  The triples generated directly from Example 3 (shown in Table 2) are not the same as the triples generated directly from Example 4 (shown in Table 5):
 
-However, a client that does not perform reasoning would generate only the triples which were explicitly stated in the XML.  The triples generated directly from Example 26 (shown in Table 6) are not the same as the triples generated directly from Example 27 (shown in Table 9):
-
-Table 9
+Table 5
 
 subject
 	
