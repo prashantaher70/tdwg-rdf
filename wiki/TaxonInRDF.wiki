@@ -1,6 +1,28 @@
 #summary Darwin Core Taxon terms as RDF
+#sidebar DwcRdfSidebar
 
-= Darwin Core Taxon terms as RDF =
+http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
+
+=Darwin Core Taxon terms as RDF=
+
+*Date:* (Created) 27 April 2013; (Last modified) 29 June 2013
+
+*Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
+
+*Permanent URL:* http://
+
+*TDWG Task Group:* [http://code.google.com/p/tdwg-rdf/ TDWG RDF/OWL Task Group]
+
+*Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf] (TDWG RDF/OWL Task Group)
+
+*Abstract:* These  
+
+http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
+
+*Table of Contents:*
+<wiki:toc max_depth="4" />
+
+== 1  ==
 
 The class dwc:Taxon is defined to be a category that includes information about both names and taxon concepts.  The ambiguity in this definition reflects a general lack of clarity in the TDWG community about the exact definition of a taxon.  This degree of ambiguity is not suitable for descriptions in RDF.  The TDWG Taxon Concept Transfer Schema (TCS) Standard describes a more well-defined entity, the Taxon Concept, which contains both a name and a reference component.   These name and reference components correspond to two parts of concept names under the convention of “name sec. reference” (or “name sensu reference”).  
 
