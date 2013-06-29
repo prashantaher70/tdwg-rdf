@@ -1,9 +1,9 @@
-#summary Resource Relationship terms as RDF
+#summary Darwin Core Resource Relationship terms as RDF
 #sidebar DwcRdfSidebar
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
-=Resource Relationship terms as RDF=
+=Darwin Core Resource Relationship terms as RDF=
 
 *Date:* (Created) 27 April 2013; (Last modified) 29 June 2013
 
@@ -23,51 +23,14 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 <wiki:toc max_depth="4" />
 
 ==1 Introduction==
-The terms in the dwc:ResourceRelationship class are designed to allow for the creation of dwc:ResourceRelationship instances having assigned identifiers.  The following example based on an example in the [http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#classes XML Guide] shows how the terms may be used to describe that the specimen with catalog number 14524 is the mother of a specimen with catalog number 14523:
+The terms in the {{{dwc:ResourceRelationship}}} class are designed to allow for the creation of {{{dwc:ResourceRelationship}}} instances having assigned identifiers.  The following example based on an example in the [http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#classes XML Guide] shows how the terms may be used to describe that the specimen with catalog number 14524 is the mother of a specimen with catalog number 14523:
 
 Table 1
 
-term
-	
+term||dwc:resourceRelationshipID||dwc:resourceID||dwc:relatedResourceID||dwc:relationshipOfResource||dwc:relationshipEstablishedDate||dwc:relationshipAccordingTo||
+||value||"http://guid.mvz.org/relations/23423"||"urn:catalog:MVZ:Mammals:14524"||"urn:catalog:MVZ:Mammals:14523"||"mother of"||"2001-09-14"||"James L Patton"||
 
-dwc:resourceRelationshipID
-	
-
-dwc:resourceID
-	
-
-dwc:relatedResourceID
-	
-
-dwc:relationshipOfResource
-	
-
-dwc:relationshipEstablishedDate
-	
-
-dwc:relationshipAccordingTo
-
-value
-	
-
-"http://guid.mvz.org/relations/23423"
-	
-
-"urn:catalog:MVZ:Mammals:14524"
-	
-
-"urn:catalog:MVZ:Mammals:14523"
-	
-
-"mother of"
-	
-
-"2001-09-14"
-	
-
-"James L Patton"
-
-Because the ID terms cannot be used as object properties, Darwin Core does not provide a means to express this relationship as RDF.  The [www.openannotation.org/spec/core/core.html Open Annotation Data Model] should be used instead as shown in the following example which relates the same resources as in table 11.
+Because the ID terms cannot be used as object properties, Darwin Core does not provide a means to express this relationship as RDF.  The [www.openannotation.org/spec/core/core.html Open Annotation Data Model] should be used instead as shown in the following example which relates the same resources as in Table 1.
 
 Example 1:
 {{{
@@ -103,6 +66,6 @@ The following points should be noted about Example 1:
 
 - In accordance with Recommendation 7 of the TDWG GUID Applicability Statement, the identifiers for the two related specimens have been provided in their HTTP-proxied form.
 
-- It might have been possible for a consuming application to determine the rdf:type of the specimen instances by dereferencing their HTTP URIs.  However, in accordance with the [http://www.openannotation.org/spec/core/core.html#BodyTargetType Open Annotation recommendations], the RDF provides information about the nature of the related resources which can allow the application to determine that they are non-information resources (i.e. dcmitype:PhysicalObject) which cannot be rendered in a browser.
+- It might have been possible for a consuming application to determine the {{{rdf:type}}} of the specimen instances by dereferencing their HTTP URIs.  However, in accordance with the [http://www.openannotation.org/spec/core/core.html#BodyTargetType Open Annotation recommendations], the RDF provides information about the nature of the related resources which can allow the application to determine that they are non-information resources (i.e. {{{dcmitype:PhysicalObject}}}) which cannot be rendered in a browser.
 
-- Because there is a well-known object property for linking the relationship to the URI-referenced agent that noted it, oa:annotatedBy is used rather than dwcuri:relationshipAccordingTo .  Similarly, oa:motivatedBy is used rather than dwcuri:relationshipOfResource .  The value given for oa:motivatedBy should be from a controlled vocabulary which uses SKOS to relate the motivation of the annotation (i.e. the nature of the relationship) to one of the standard [http://www.openannotation.org/spec/core/core.html#Motivations high level Motivation] instances such as oa:linking.
+- Because there is a well-known object property for linking the relationship to the URI-referenced agent that noted it, {{{oa:annotatedBy}}} is used rather than {{{dwcuri:relationshipAccordingTo}}}.  Similarly, {{{oa:motivatedBy}}} is used rather than {{{dwcuri:relationshipOfResource}}}.  The value given for {{{oa:motivatedBy}}} should be from a controlled vocabulary which uses SKOS to relate the motivation of the annotation (i.e. the nature of the relationship) to one of the standard [http://www.openannotation.org/spec/core/core.html#Motivations high level Motivation] instances such as {{{oa:linking}}}.
