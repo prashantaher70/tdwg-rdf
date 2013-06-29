@@ -1,0 +1,24 @@
+#summary Landing page for ancillary documents related to the DwC RDF Guide
+#sidebar DwcRdfSidebar
+
+http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
+
+= Ancillary documents related to the Darwin Core RDF Guide =
+
+*Date:* (Created) 29 June 2013; (Last modified) 29 June 2013
+
+*Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
+
+*Permanent URL:* http://
+
+*TDWG Task Group:* [http://code.google.com/p/tdwg-rdf/ TDWG RDF/OWL Task Group]
+
+*Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf] (TDWG RDF/OWL Task Group)
+
+*Abstract:* This document explains the relationship between the Darwin Core RDF Guide and a number of ancillary documents which provide suggestions for strategies for exposing biodiversity data as RDF using vocabularies outside of Darwin Core.
+
+http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
+
+==1 Introduction==
+
+
