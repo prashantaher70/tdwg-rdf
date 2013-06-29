@@ -2,13 +2,8 @@
 
 ==Contents==
   * [DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
-
     *[DwcRdfExamplesDarwinSW#1.1_As_RDF/XML: Specimen as RDF/XML]
-
     *[DwcRdfExamplesDarwinSW#1.2_As_RDF/Turtle: Specimen as RDF/Turtle]
-
     *[DwcRdfExamplesDarwinSW#1.2_As_RDF/Turtle: Specimen as RDF/Turtle]
-
     *[DwcRdfExamplesDarwinSW#2.1_As_RDF/XML: Complex example as RDF/XML]
-
     *[DwcRdfExamplesDarwinSW#2.2_As_RDF/Turtle: Complex example as RDF/Turtle]
