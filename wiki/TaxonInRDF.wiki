@@ -15,7 +15,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 *Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf] (TDWG RDF/OWL Task Group)
 
-*Abstract:* These  
+*Abstract:* There is currently no TDWG standard which contains terms that are suitable for expressing taxon concepts as RDF.  The Darwin Core RDF Guide discusses how dwc:Taxon terms can be used as convenience terms to provide metadata about taxa, but it does not specify how the taxa themselves should be described as RDF.  Although not ratified standards, the TaxonConcept and TaxonName parts of the TDWG Ontology (based on the TCS Standard [http://www.tdwg.org/standards/117/]) can be used to express taxon concepts as RDF. This document discusses how some basic aspects of taxon concepts (sensu TCS) can be expressed as RDF using terms from the TDWG Ontology.  
 
 http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
 
