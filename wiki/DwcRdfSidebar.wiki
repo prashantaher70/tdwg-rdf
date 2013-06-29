@@ -5,4 +5,5 @@
 Informative ancillary documents not part of the standard
 
 ===Contents===
+  * [SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
   * [DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
