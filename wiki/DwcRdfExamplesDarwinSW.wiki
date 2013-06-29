@@ -2,7 +2,7 @@
 
 These examples follow the draft Darwin Core RDF Guide. They assume the data model of Darwin-SW (version 0.3; http://code.google.com/p/darwin-sw/ ) and use its object properties to link the class instances.  
 
-== A specimen and its associated occurrence ==
+== 1 A specimen and its associated occurrence ==
 
 This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen
 
@@ -10,7 +10,7 @@ This is a relatively simple example where an Occurrence is documented by a singl
 
 [http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.jpg Click here to view image in your default viewer]
 
-As RDF/XML:
+===1.1 As RDF/XML:===
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
@@ -149,7 +149,7 @@ Information about the metadata document itself
 </rdf:RDF>
 }}}
 
-As RDF/Turtle:
+===1.2 As RDF/Turtle:===
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -273,7 +273,7 @@ As RDF/Turtle:
 	a foaf:Document.
 }}}
 
-== Complex example ==
+== 2 Complex example ==
 
 This is a complex example based on a real situation where several images and a specimen were collected to document a seed collection.  It uses terms from Darwin Core and the draft Audubon Core for multimedia metadata.  The resource URIs are real except for the specimen and the identification associated with it (a specimen was collected, but it's metadata are not yet available.)
 
@@ -285,7 +285,7 @@ In this example, two events are linked to a single location.  There are two occu
 
 For the sake of simplicity, the diagram does not show the details of the ServiceAccessPoints.  
 
-As RDF/XML:
+===2.1 As RDF/XML:===
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -629,7 +629,7 @@ Information about the metadata document itself
 </rdf:RDF>
 }}}
 
-As RDF/Turtle:
+===2.2 As RDF/Turtle:===
 
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
