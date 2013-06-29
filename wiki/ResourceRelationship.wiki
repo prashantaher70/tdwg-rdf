@@ -15,7 +15,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 *Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf] (TDWG RDF/OWL Task Group)
 
-*Abstract:* This   
+*Abstract:* This document shows how to express Darwin Core ResourceRelationship properties as RDF using the Open Annotation Data Model  
 
 http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
 
