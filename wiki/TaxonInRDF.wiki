@@ -102,7 +102,7 @@ Notes:
 
 - Because dwc:nameAccordingTo cannot be used in RDF, the corresponding Taxon Concept ontology term, tc:accordingTo is used instead, along with the HTTP proxied version of the DOI.
 
-==1.2 Representing the name entity using a blank node==
+===1.2 Representing the name entity using a blank node===
 
 If the metadata provider is able to provide more detailed information about the name entity but is unable or unwilling to mint and maintain a URI to identify the name entity, a tn:TaxonName instance can be represented by a blank node whose properties describe the name entity.  For example:
 
@@ -234,7 +234,7 @@ Example 34:
 
 Because of the wide variety of formats for citing references, it is difficult to ensure that a client will be able to unambiguously match strings which refer to the same reference.  For this reason, it is recommended that providers not rely exclusively on tc:accordingToString as a means of identifying  the secundum reference but that they also use one of the following two methods to reduce the ambiguity of the reference and to reduce the burden on the consumer of parsing and interpreting the value string which represents the reference.  
 
-==2.2 Representing the reference using a blank node==
+===2.2 Representing the reference using a blank node===
 
 If the metadata provider is able to provide discrete metadata properties of the reference in addition to a free-text value string, the likelihood that the reference may be matched with other instances of the same reference is increased.  The property tc:accordingTo should be used as a predicate whose object is the reference instance.  If the provider is unable or unwilling to maintain an identifier for the reference, the reference can be represented by a blank node.  The reference documenting the use of the name may provide only minimal (or no) information regarding the circumscription of the tc:TaxonConcept instance (i.e. the tc:TaxonConcept is a taxon name use that does not provide a circumscription).  Nevertheless, it is better to provide the information that is known rather than no information at all.  
 
