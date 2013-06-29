@@ -30,7 +30,7 @@ This is a relatively simple example where an Occurrence is documented by a singl
 
 [http://tdwg-rdf.googlecode.com/svn/trunk/file/specimen-obj-pro-only.jpg Click here to view image in your default viewer]
 
-===1.1 As RDF/XML:===
+===1.1 As RDF/XML===
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
@@ -169,7 +169,7 @@ Information about the metadata document itself
 </rdf:RDF>
 }}}
 
-===1.2 As RDF/Turtle:===
+===1.2 As RDF/Turtle===
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
@@ -305,7 +305,7 @@ In this example, two events are linked to a single location.  There are two occu
 
 For the sake of simplicity, the diagram does not show the details of the ServiceAccessPoints.  
 
-===2.1 As RDF/XML:===
+===2.1 As RDF/XML===
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -649,7 +649,7 @@ Information about the metadata document itself
 </rdf:RDF>
 }}}
 
-===2.2 As RDF/Turtle:===
+===2.2 As RDF/Turtle===
 
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
