@@ -34,7 +34,7 @@ Example 1:
 <rdf:Description rdf:about="http://guid.mvz.org/relations/23423">
    <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/ResourceRelationship"/>
    <dwc:relationshipOfResource>mother of</dwc:relationshipOfResource>
-  <dwc:relationshipEstablishedDate>2001-09-14</dwc:relationshipEstablishedDate>
+   <dwc:relationshipEstablishedDate>2001-09-14</dwc:relationshipEstablishedDate>
    <dwc:relationshipAccordingTo>James L Patton</dwc:relationshipAccordingTo>
    <rdf:type rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
    <oa:hasBody rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:14524"/>
