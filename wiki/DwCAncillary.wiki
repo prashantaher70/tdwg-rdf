@@ -21,4 +21,4 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 
 ==1 Introduction==
 
-
+The draft Darwin Core RDF Guide describes how to use Darwin Core terms as predicates in RDF triples.  However, there are some aspects of text-based Darwin Core data into RDF that may be too complex to express using only terms found in the Darwin Core standard.  Since the scope of the Darwin Core RDF Guide is part of the Darwin Core standard itself and is restricted primarily to describing the use of Darwin Core terms, the additional documents are provided here to assist RDF data providers and consumers
