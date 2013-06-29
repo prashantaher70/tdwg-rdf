@@ -5,6 +5,6 @@
 Informative ancillary documents not part of the standard
 
 ===Contents===
-  *[ResourceRelationship Expressing Darwin Core !ResourceRelationship Terms as RDF]
-  *[SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
-  *[DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
+  * [ResourceRelationship Expressing Darwin Core !ResourceRelationship Terms as RDF]
+  * [SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
+  * [DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
