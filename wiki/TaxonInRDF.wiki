@@ -223,15 +223,15 @@ Andrea</cnt:chars>
 
 Note: The method of generating a reference URI shown in this example allows the reference URI to be distinguished from the taxon concept URI without requiring the provider to manage a separate identifier record.  By identifying the reference using a fragment identifier whose base URI is that of the taxon concept, the RDF describing the reference will be included when the URI for the taxon concept is dereferenced.  
 
-The following table describes how some Darwin Core convenience terms might be represented using the TDWG TaxonConcept and TaxonName ontologies:
+The following table suggests how some Darwin Core convenience terms might be represented using the TDWG TaxonConcept and TaxonName ontologies.  It is possible that as best practices evolve, there may be better alternatives for expressing Darwin Core {{{dwc:Taxon}}} terms than using the TDWG ontology terms.  
 
 ||Darwin Core term||Notes on expressing using TDWG Ontology||
-||dwc:nameAccordingTo||Use the object property tc:accordingTo to link from the taxon concept to a non-literal literature reference instance.  ||
-||dwc:scientificName||Use the object property tc:hasName to link to a non-literal name entity instance for the name. Use the datatype property tc:nameString to link to a literal value string which represents the name entity.||
-||dwc:taxonRank||Use tn:rank to indicate the rank of the object of a tn:TaxonName instance. See the comments in the ontology about the deprecated term tc:rank.||
-||dwc:scientificNameAuthorship||Use tn:authorship as the property of a tn:TaxonName instance. Used with a string literal object.||
-||dwc:nomenclaturalStatus||The tn:TaxonName instance should have the property tn:hasAnnotation with an object which is an instance of tn:NomenclaturalNote.  This note should have the property tn:type with value tn:PublicationStatus and the property tn:note with the text describing the status.  Consider using the Content-in-RDF vocabulary?||
-||dwc:namePublishedIn||Use tcom:publishedInCitation as the property of a tn:TaxonName instance.||
-||dwc:namePublishedInYear||Use tn:year as the property of a tn:TaxonName instance.||
-||dwc:nomenclaturalCode||Use tn:nomenclaturalCode as the property of a tn:TaxonName instance with an appropriate controlled value URI-reference object from the tn:NomenclaturalTerm class, e.g. tn:ICZN||
-||dwc:originalNameUsage||Perhaps use the term tn:hasBasionym to relate a tn:TaxonName instance to another tn:TaxonName instance.  This may only be appropriate for plants. ||
+||dwc:nameAccordingTo||Use the object property {{{tc:accordingTo}}} to link from the taxon concept to a non-literal literature reference instance.  ||
+||dwc:scientificName||Use the object property {{{tc:hasName}}} to link to a non-literal name entity instance for the name. Use the datatype property {{{tc:nameString}}} to link to a literal value string which represents the name entity.||
+||dwc:taxonRank||Use {{{tn:rank}}} to indicate the rank of the object of a {{{tn:TaxonName}}} instance. See the comments in the ontology about the deprecated term {{{tc:rank}}}.||
+||dwc:scientificNameAuthorship||Use {{{tn:authorship}}} as the property of a {{{tn:TaxonName}}} instance. Used with a string literal object.||
+||dwc:nomenclaturalStatus||The {{{tn:TaxonName}}} instance should have the property {{{tn:hasAnnotation}}} with an object which is an instance of {{{tn:NomenclaturalNote}}}.  This note should have the property {{{tn:type}}} with value {{{tn:PublicationStatus}}} and the property {{{tn:note}}} with the text describing the status.  Consider using the Content-in-RDF vocabulary?||
+||dwc:namePublishedIn||Use {{{tcom:publishedInCitation}}} as the property of a {{{tn:TaxonName}}} instance.||
+||dwc:namePublishedInYear||Use {{{tn:year}}} as the property of a {{{tn:TaxonName}}} instance.||
+||dwc:nomenclaturalCode||Use {{{tn:nomenclaturalCode}}} as the property of a {{{tn:TaxonName}}} instance with an appropriate controlled value URI-reference object from the {{{tn:NomenclaturalTerm}}} class, e.g. {{{tn:ICZN}}}||
+||dwc:originalNameUsage||Perhaps use the term {{{tn:hasBasionym}}} to relate a {{{tn:TaxonName}}} instance to another {{{tn:TaxonName instance}}}.  This may only be appropriate for plants. ||
