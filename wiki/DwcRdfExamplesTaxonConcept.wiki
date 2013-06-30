@@ -24,6 +24,8 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 
 This example describes the specimen which is referenced in the Darwin Core RDF Guide, http://arctos.database.museum/guid/MVZ:Mamm:165861 .  Since this is an example of an application of the use of Darwin Core terms according to the Guide, it does not make use of many of the properties that are available in the TaxonConcept Ontology.  For instance, it does not make use of the lightweight tags defined for various kinds of resources which type those resources as instances of that kind of resource class for the particular species (e.g. an occurrence of _Ctenomys sociabilis_).  
 
+In some cases, the TaxonConcept object properties have range and domain properties which assert types present in the TaxonConcept Ontology.  In recognition of that, the resources have been typed as instances of TaxonConcept Ontology classes as well as of the Darwin Core type vocabulary classes recommended in the Darwin Core RDF Guide.
+
 For an example of an occurrence record marked up using the TaxonConcept Ontology exclusively, see http://ocs.taxonconcept.org/ocs/f522444a-2dd9-400e-be59-47213ef38cb9.rdf .  That file was used as a reference for the creation of this example.
 
 Also note that the taxon concept to which the dwcuri:toTaxonConcept property links is not specifically based on the TDWG TCS Model, but on the somewhat broader view of a taxon concept that is embodied in the TaxonConcept Ontology.  
