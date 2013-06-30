@@ -221,7 +221,28 @@ Andrea</cnt:chars>
 </rdf:Description>
 }}}
 
-Note: The method of generating a reference URI shown in this example allows the reference URI to be distinguished from the taxon concept URI without requiring the provider to manage a separate identifier record.  By identifying the reference using a fragment identifier whose base URI is that of the taxon concept, the RDF describing the reference will be included when the URI for the taxon concept is dereferenced.  
+Note: The method of generating a reference URI shown in this example allows the reference URI to be distinguished from the taxon concept URI without requiring the provider to manage a separate identifier record.  By identifying the reference using a fragment identifier whose base URI is that of the taxon concept, the RDF describing the reference will be included when the URI for the taxon concept is dereferenced. 
+
+==4 Taxon Concepts which are represented by blank nodes==
+
+It is possible to define a taxon concept without assigning it a URI (i.e. to represent it by a blank node):
+
+Example 6:
+{{{
+<rdf:Description rdf:about="rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-baskauf/50747#2006-03-28baskauf"">
+   <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/Identification"/>
+   <dwcuri:toTaxonConcept>
+        <tc:TaxonConcept>
+             <tc:nameString>Acer nigrum</tc:nameString>
+             <tc:accordingToString>Gleason, Henry A. and Arthur Cronquist, 1991. Manual of Vascular Plants of Northeastern United States and Adjacent Canada. The New York Botanical Garden, Bronx, NY, US, p. 352.</tc:accordingToString>
+        </tc:TaxonConcept>
+   </dwcuri:toTaxonConcept>
+</rdf:Description>
+}}}
+
+However, it is questionable whether there is a significant advantage over simply using Darwin Core {{{dwc:Taxon}}} class convenience terms since in this example clients would have to perform the same kind of string matching in order to link related taxon concept instances as they would if the convenience terms were provided.  
+
+==5 Reference== 
 
 The following table suggests how some Darwin Core convenience terms might be represented using the TDWG TaxonConcept and TaxonName ontologies.  It is possible that as best practices evolve, there may be better alternatives for expressing Darwin Core {{{dwc:Taxon}}} terms than using the TDWG ontology terms.  
 
