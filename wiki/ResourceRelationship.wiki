@@ -46,12 +46,12 @@ RDF/XML:
    <oa:annotatedBy rdf:resource="http://guid.mvz.org/agents/James_L_Patton"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://guid.mvz.org/relations/23423">
+<rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:14523">
    <rdf:type rdf:resource="http://purl.org/dc/dcmitype/PhysicalObject"/>
    <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://guid.mvz.org/relations/23424">
+<rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:14524">
    <rdf:type rdf:resource="http://purl.org/dc/dcmitype/PhysicalObject"/>
    <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen"/>
 </rdf:Description>
@@ -59,22 +59,23 @@ RDF/XML:
 
 RDF/Turtle:
 {{{
+<http://arctos.database.museum/guid/MVZ:Mamm:14523> 
+	a 	dcmitype:PhysicalObject,
+		dwctype:PreservedSpecimen.
+<http://arctos.database.museum/guid/MVZ:Mamm:14524> 
+	a 	dcmitype:PhysicalObject,
+		dwctype:PreservedSpecimen.
 <http://guid.mvz.org/relations/23423> 
 	dwc:relationshipAccordingTo "James L Patton";
 	dwc:relationshipEstablishedDate "2001-09-14";
 	dwc:relationshipOfResource "mother of";
-	a 	dcmitype:PhysicalObject,
-		dwctype:PreservedSpecimen,
-		dwc:ResourceRelationship,
+	a 	dwc:ResourceRelationship,
 		oa:Annotation;
 	oa:annotatedAt "2001-09-14";
 	oa:annotatedBy <http://guid.mvz.org/agents/James_L_Patton>;
 	oa:hasBody <http://arctos.database.museum/guid/MVZ:Mamm:14524>;
 	oa:hasTarget <http://arctos.database.museum/guid/MVZ:Mamm:14523>;
 	oa:motivatedBy <http://guid.mvz.org/relationshipType/motherOf>.
-<http://guid.mvz.org/relations/23424> 
-	a 	dcmitype:PhysicalObject,
-		dwctype:PreservedSpecimen.
 }}}
 
 The following points should be noted about Example 1:
