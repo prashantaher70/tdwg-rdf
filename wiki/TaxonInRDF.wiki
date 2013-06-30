@@ -133,7 +133,7 @@ If the reference which circumscribes the taxon concept is known, it should be as
 
 ===3.1 Non-literal value string representing the reference===
 
-A tc:TaxonConcept instance can have the property tc:accordingToString whose value is a value string that represents the secundum reference. The following example illustrates the use of tc:accordingToString :
+A {{{tc:TaxonConcept}}} instance can have the property {{{tc:accordingToString}}} whose value is a value string that represents the secundum reference. The following example illustrates the use of {{{tc:accordingToString}}}:
 
 Example 4:
 {{{
@@ -144,11 +144,11 @@ Example 4:
 </rdf:Description>
 }}}
 
-Because of the wide variety of formats for citing references, it is difficult to ensure that a client will be able to unambiguously match strings which refer to the same reference.  For this reason, it is recommended that providers not rely exclusively on tc:accordingToString as a means of identifying  the secundum reference but that they also use one of the following two methods to reduce the ambiguity of the reference and to reduce the burden on the consumer of parsing and interpreting the value string which represents the reference.  
+Because of the wide variety of formats for citing references, it is difficult to ensure that a client will be able to unambiguously match strings which refer to the same reference.  For this reason, it is recommended that providers not rely exclusively on {{{tc:accordingToString}}} as a means of identifying  the secundum reference but that they also use one of the following two methods to reduce the ambiguity of the reference and to reduce the burden on the consumer of parsing and interpreting the value string which represents the reference.  
 
 ===3.2 Representing the reference using a blank node===
 
-If the metadata provider is able to provide discrete metadata properties of the reference in addition to a free-text value string, the likelihood that the reference may be matched with other instances of the same reference is increased.  The property tc:accordingTo should be used as a predicate whose object is the reference instance.  If the provider is unable or unwilling to maintain an identifier for the reference, the reference can be represented by a blank node.  The reference documenting the use of the name may provide only minimal (or no) information regarding the circumscription of the tc:TaxonConcept instance (i.e. the tc:TaxonConcept is a taxon name use that does not provide a circumscription).  Nevertheless, it is better to provide the information that is known rather than no information at all.  
+If the metadata provider is able to provide discrete metadata properties of the reference in addition to a free-text value string, the likelihood that the reference may be matched with other instances of the same reference is increased.  The property {{{tc:accordingTo}}} should be used as a predicate whose object is the reference instance.  If the provider is unable or unwilling to maintain an identifier for the reference, the reference can be represented by a blank node.  The reference documenting the use of the name may provide only minimal (or no) information regarding the circumscription of the {{{tc:TaxonConcept}}} instance (i.e. the {{{tc:TaxonConcept}}} is a taxon name use that does not provide a circumscription).  Nevertheless, it is better to provide the information that is known rather than no information at all.  
 
 In the following example there is no known assigned identifier that is globally unique for the reference, so the reference is not identified by a URI:
 
@@ -172,12 +172,12 @@ Example 5:
 
 Notes:
 
-  * There is no one particular class for a reference.  Any well-known type may be asserted (in this example, bibo:DocumentPart).
+  * There is no one particular class for a reference.  Any well-known type may be asserted (in this example, {{{bibo:DocumentPart}}}).
   * Standard Dublin Core and Bibliographic Ontology terms are recommended for use as properties of the reference
 
 ===3.3 Referring to the reference through a URI reference===
 
-If a URI has been assigned to the reference, the tc:TaxonConcept instance can be linked to the URI without the necessity to provide additional information about the reference, as shown in Example 31.  If the URI is an HTTP URI, a consumer may be able to discover additional information about the resource by dereferencing the URI.  If the URI is not an HTTP URI, the consumer would be able to unambiguously match the reference to other instances of the same reference, but would not necessarily be able to infer additional information about the reference unless it were included in the same document as the description of the concept, or if the consumer had pre-existing information about the reference from another source.  
+If a URI has been assigned to the reference, the {{{tc:TaxonConcept}}} instance can be linked to the URI without the necessity to provide additional information about the reference, as shown in Example 1.  If the URI is an HTTP URI, a consumer may be able to discover additional information about the resource by dereferencing the URI.  If the URI is not an HTTP URI, the consumer would be able to unambiguously match the reference to other instances of the same reference, but would not necessarily be able to infer additional information about the reference unless it were included in the same document as the description of the concept, or if the consumer had pre-existing information about the reference from another source.  
 
 Example 6:
 {{{
@@ -196,9 +196,9 @@ Example 6:
 </rdf:Description>
 }}}
 
-In Example 6, a valid URI has been constructed from the ISBN of the book.  Since it is a URN, it is not dereferenceable, although it serves as an identifier for the book which is globally unique.  If a DOI is available for the reference, it should be used in its HTTP-proxied form (i.e. beginning with http://dx.doi.org/ ).  
+In Example 6, a valid URI has been constructed from the ISBN of the book.  Since it is a URN, it is not dereferenceable via HTTP, although it serves as an identifier for the book which is globally unique.  If a DOI is available for the reference, it should be used in its HTTP-proxied form (i.e. beginning with http://dx.doi.org/ ).  
 
-If the reference information is unpublished, it is unlikely that a separate URI will have been assigned to the reference.  In this case, a blank node may be appropriate. However, a blank node cannot be the object of a triple external to the document which defines it.  The following example shows how the [http://www.w3.org/TR/Content-in-RDF10/ Content-in-RDF vocabulary] may be used to link an unpublished reference to a tc:TaxonConcept instance:
+If the reference information is unpublished, it is unlikely that a separate URI will have been assigned to the reference.  In this case, a blank node may be appropriate. However, a blank node cannot be the object of a triple external to the document which defines it.  The following example shows how the [http://www.w3.org/TR/Content-in-RDF10/ Content-in-RDF vocabulary] may be used to link an unpublished reference to a {{{tc:TaxonConcept}}} instance:
 
 Example 7:
 {{{
