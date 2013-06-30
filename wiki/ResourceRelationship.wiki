@@ -80,12 +80,8 @@ RDF/Turtle:
 
 The following points should be noted about Example 1:
 
-- the {{{oa:hasBody}}} property has as its object the resource whose identifier is the value of {{{dwc:resourceID}}} in Table 1.
-
-- the {{{oa:hasTarget}}} property has as its object the resource whose identifier is the value of {{{dwc:relatedResourceID}}} in Table 1.
-
-- In accordance with Recommendation 7 of the TDWG GUID Applicability Statement, the identifiers for the two related specimens have been provided in their HTTP-proxied form.
-
-- It might have been possible for a consuming application to determine the {{{rdf:type}}} of the specimen instances by dereferencing their HTTP URIs.  However, in accordance with the [http://www.openannotation.org/spec/core/core.html#BodyTargetType Open Annotation recommendations], the RDF provides information about the nature of the related resources which can allow the application to determine that they are non-information resources (i.e. {{{dcmitype:PhysicalObject}}}) which cannot be rendered in a browser.
-
-- Because there is a well-known object property for linking the relationship to the URI-referenced agent that noted it, {{{oa:annotatedBy}}} is used rather than {{{dwcuri:relationshipAccordingTo}}}.  Similarly, {{{oa:motivatedBy}}} is used rather than {{{dwcuri:relationshipOfResource}}}.  The value given for {{{oa:motivatedBy}}} should be from a controlled vocabulary which uses SKOS to relate the motivation of the annotation (i.e. the nature of the relationship) to one of the standard [http://www.openannotation.org/spec/core/core.html#Motivations high level Motivation] instances such as {{{oa:linking}}}.
+  * the {{{oa:hasBody}}} property has as its object the resource whose identifier is the value of {{{dwc:resourceID}}} in Table 1.
+  * the {{{oa:hasTarget}}} property has as its object the resource whose identifier is the value of {{{dwc:relatedResourceID}}} in Table 1.
+  * In accordance with Recommendation 7 of the TDWG GUID Applicability Statement, the identifiers for the two related specimens have been provided in their HTTP-proxied form.
+  * It might have been possible for a consuming application to determine the {{{rdf:type}}} of the specimen instances by dereferencing their HTTP URIs.  However, in accordance with the [http://www.openannotation.org/spec/core/core.html#BodyTargetType Open Annotation recommendations], the RDF provides information about the nature of the related resources which can allow the application to determine that they are non-information resources (i.e. {{{dcmitype:PhysicalObject}}}) which cannot be rendered in a browser.
+  * Because there is a well-known object property for linking the relationship to the URI-referenced agent that noted it, {{{oa:annotatedBy}}} is used rather than {{{dwcuri:relationshipAccordingTo}}}.  Similarly, {{{oa:motivatedBy}}} is used rather than {{{dwcuri:relationshipOfResource}}}.  The value given for {{{oa:motivatedBy}}} should be from a controlled vocabulary which uses SKOS to relate the motivation of the annotation (i.e. the nature of the relationship) to one of the standard [http://www.openannotation.org/spec/core/core.html#Motivations high level Motivation] instances such as {{{oa:linking}}}.
