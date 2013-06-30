@@ -55,11 +55,19 @@ The metadata for _Pternistis leucoscepus_ in the uBio Namebank [http://www.ubio.
 
 Example 1:
 
+In RDF/XML:
 {{{
 <rdf:Description rdf:about="urn:lsid:ubio.org:namebank:11815">
     <dc:subject>Pternistis leucoscepus (Gray, GR) 1867</dc:subject>
     <ubio:taxonomicGroup>Aves</ubio:taxonomicGroup>
 </rdf:Description>
+}}}
+
+In RDF/Turtle:
+{{{
+<urn:lsid:ubio.org:namebank:11815> 
+	dc:subject "Pternistis leucoscepus (Gray, GR) 1867";
+	ubio:taxonomicGroup "Aves".
 }}}
 
 which would translate into the following triples:
@@ -73,12 +81,22 @@ Table 1
 If the Recommendation 30 of the TDWG LSID Applicability Statement standard [http://www.tdwg.org/standards/150/ LSID-STANDARD] regarding an {{{owl:sameAs}}} declaration were applied, the RDF could be:
 
 Example 2:
+
+In RDF/XML:
 {{{
 <rdf:Description rdf:about="urn:lsid:ubio.org:namebank:11815">
     <owl:sameAs rdf:resource="http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815"/>    
    <dc:subject>Pternistis leucoscepus (Gray, GR) 1867</dc:subject>
    <ubio:taxonomicGroup>Aves</ubio:taxonomicGroup>
 </rdf:Description>
+}}}
+
+In RDF/Turtle:
+{{{
+<urn:lsid:ubio.org:namebank:11815> 
+	dc:subject "Pternistis leucoscepus (Gray, GR) 1867";
+	owl:sameAs <http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>;
+	ubio:taxonomicGroup "Aves".
 }}}
 
 where {{{http://lsid.tdwg.org/}}} is the prefix which provides actionability to the LSID via the TDWG LSID resolution service.  The added property directly adds a single triple about the subject resource:
@@ -107,6 +125,8 @@ Including the {{{owl:sameAs}}} statement doubles the number of triples about the
 It turns out that uBio itself provides an HTTP-based LSID resolution service through by prefixing the LSID with {{{http://www.ubio.org/authority/metadata.php?lsid=}}}.  So an additional {{{owl:sameAs}}} statement could be added:
 
 Example 3:
+
+In RDF/XML:
 {{{
 <rdf:Description rdf:about="urn:lsid:ubio.org:namebank:11815">
    <owl:sameAs rdf:resource="http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815"/>    
@@ -114,6 +134,16 @@ Example 3:
    <dc:subject>Pternistis leucoscepus (Gray, GR) 1867</dc:subject>
    <ubio:taxonomicGroup>Aves</ubio:taxonomicGroup>
 </rdf:Description>
+}}}
+
+In RDF/Turtle:
+{{{
+<urn:lsid:ubio.org:namebank:11815> 
+	dc:subject "Pternistis leucoscepus (Gray, GR) 1867";
+	owl:sameAs 
+		<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>,
+		<http://www.ubio.org/authority/metadata.php?lsid=urn:lsid:ubio.org:namebank:11815>;
+	ubio:taxonomicGroup "Aves".
 }}}
 
 In a triple store without inferencing, the number of triples in the example would increase from 3 to 4.  However, in a triple store with inferencing, the following triples would be present:
@@ -142,6 +172,8 @@ From this example, it is clear that each additional {{{owl:sameAs}}} statement c
 In Example 3, the unproxied version of the LSID is given in the {{{rdf:about}}} attribute of the container element and the non-proxied version is the object of the {{{owl:sameAs}}} predicate.  The example could just have easily been:
 
 Example 4:
+
+In RDF/XML:
 {{{
 <rdf:Description rdf:about="http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815">
    <owl:sameAs rdf:resource="urn:lsid:ubio.org:namebank:11815"/>    
@@ -149,7 +181,16 @@ Example 4:
    <ubio:taxonomicGroup>Aves</ubio:taxonomicGroup>
 </rdf:Description>
 }}}
-where the form of URI used in the {{{rdf:about}}} attribute and the form used as the object of the {{{owl:sameAs}}} statement are reversed.
+
+In RDF/Turtle:
+{{{
+<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815> 
+	dc:subject "Pternistis leucoscepus (Gray, GR) 1867";
+	owl:sameAs <urn:lsid:ubio.org:namebank:11815>;
+	ubio:taxonomicGroup "Aves".
+}}}
+
+where the form of URI used in the {{{rdf:about}}} attribute (the subject resource) and the form used as the object of the {{{owl:sameAs}}} statement are reversed.
 
 If a semantic client used reasoning to generate inferred triples, it would make no difference which form were used in the rdf:about attribute.  Both forms would generate the same triples, i.e. those shown in Table 3.
 
@@ -165,6 +206,8 @@ Table 5
 Consider what would happen if the following RDF would were provided to link an identification to a taxon:
 
 Example 5:
+
+In RDF/XML:
 {{{
 <rdf:Description rdf:about="http://museum.org/identifications/12345">
    <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
@@ -177,6 +220,19 @@ Example 5:
    <dc:subject>Pternistis leucoscepus (Gray, GR) 1867</dc:subject>
    <ubio:taxonomicGroup>Aves</ubio:taxonomicGroup>
 </rdf:Description>
+}}}
+
+In RDF/Turtle:
+{{{
+http://museum.org/identifications/12345> 
+	dwc:dateIdentified "2006";
+	dwc:identifiedBy "Juan Taxonomist";
+	dwcuri:toTaxonConcept <http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>;
+	a dwc:Identification.
+<urn:lsid:ubio.org:namebank:11815> 
+	dc:subject "Pternistis leucoscepus (Gray, GR) 1867";
+	owl:sameAs <http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>;
+	ubio:taxonomicGroup "Aves".
 }}}
 
 Note that the description of the identification follows the recommendation discussed in Section 2.4.2.1.1 of the Darwin Core RDF Guide (that the proxied form of an LSID be used as the object of triples) and that the description of the taxon follows the recommendation discussed in section 2.2.3 (that for resources identified by LSIDs an {{{owl:sameAs}}} statement must be used to express equivalence to its http proxy).  Also note that this example is for illustration purposes only and is not intended to express an opinion about whether or not uBio namebank instances are actually taxon concepts (and should therefore serve as the object of a {{{dwcuri:toTaxonConcept}}} object property).   The following triples would be derived directly from the XML:
@@ -213,6 +269,8 @@ SELECT DISTINCT ?group WHERE {
 The query would not locate the "Aves" identification because the URI of the object of the triple having the {{{dwcuri:toTaxonConcept}}} predicate does not match the URI of the subject of the triple having the {{{ubio:taxonomicGroup}}} predicate.  However, if we substitute the taxon description given in Example 27 (having the proxied version of the URI as the {{{rdf:about}}} attribute) for the taxon description in Example 28,
 
 Example 7:
+
+In RDF/XML:
 {{{
 <rdf:Description rdf:about="http://museum.org/identifications/12345">
    <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
@@ -225,6 +283,19 @@ Example 7:
    <dc:subject>Pternistis leucoscepus (Gray, GR) 1867</dc:subject>
    <ubio:taxonomicGroup>Aves</ubio:taxonomicGroup>
 </rdf:Description>
+}}}
+
+In RDF/Turtle:
+{{{
+<http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815> 
+	dc:subject "Pternistis leucoscepus (Gray, GR) 1867";
+	owl:sameAs <urn:lsid:ubio.org:namebank:11815>;
+	ubio:taxonomicGroup "Aves".
+<http://museum.org/identifications/12345> 
+	dwc:dateIdentified "2006";
+	dwc:identifiedBy "Juan Taxonomist";
+	dwcuri:toTaxonConcept <http://lsid.tdwg.org/urn:lsid:ubio.org:namebank:11815>;
+	a dwc:Identification.
 }}}
 
 the triples in Table 5 replace the last three triples in Table 6.  Now if the query in Example 6 were made, the taxonomic group {{{"Aves"}}} would be returned because there would be a URI-reference value of {{{?tax}}} that was both the object of a triple containing {{{dwcuri:toTaxonConcept}}} and the subject of a triple containing {{{ubio:taxonomicGroup}}}.
@@ -243,6 +314,7 @@ However, in some circumstances it is desirable to mint a URI, then use owl:sameA
 
 Collection record referring only to well-known URI:
 
+In RDF/XML:
 {{{
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/11722#occ">
     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
@@ -252,7 +324,18 @@ Collection record referring only to well-known URI:
 
 </rdf:Description>  
 }}}
+
+In RDF/Turtle:
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/11722#occ> 
+	dwcuri:recordedBy <http://viaf.org/viaf/63557389>;
+...
+	a dwctype:Occurrence.
+}}}
+
 Entire contents of record served by VIAF:
+
+In RDF/XML:
 {{{
 <rdf:Description rdf:about="http://viaf.org/viaf/63557389">
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
@@ -261,9 +344,19 @@ Entire contents of record served by VIAF:
 </rdf:Description>
 }}}
 
+In RDF/Turtle:
+{{{
+<http://viaf.org/viaf/63557389> 
+	a 	<http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person>,
+		foaf:Person;
+	foaf:name "Baskauf, Steven J.".
+}}}
+
 However, if the collection records referred to a URI minted by the organization that managed the collection, dereferencing that URI would serve the RDF file containing the extensive information.  
 
 Collection record referring to minted URI:
+
+In RDF/XML:
 {{{
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/11722#occ">
     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
@@ -271,8 +364,16 @@ Collection record referring to minted URI:
 </rdf:Description>  
 }}}
 
+In RDF/Turtle:
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/11722#occ> 
+	dwcuri:recordedBy <http://bioimages.vanderbilt.edu/contact/baskauf>;
+	a dwctype:Occurrence.
+}}}
+
 Contents of extensive record served by organization minting the URI:
 
+In RDF/XML:
 {{{
 <foaf:Person rdf:about="http://bioimages.vanderbilt.edu/contact/baskauf">
     <owl:sameAs rdf:resource="http://viaf.org/viaf/63557389"/>
@@ -283,6 +384,19 @@ Contents of extensive record served by organization minting the URI:
     <foaf:homepage rdf:resource="http://bioimages.vanderbilt.edu/"/>
     . . .
 </foaf:Person>
+}}}
+
+In RDF/Turtle:
+{{{
+http://bioimages.vanderbilt.edu/contact/baskauf> 
+	owl:sameAs <http://viaf.org/viaf/63557389>;
+	foaf:family_name "Baskauf";
+	foaf:homepage <http://bioimages.vanderbilt.edu/>;
+	foaf:mbox <mailto:steve.baskauf@vanderbilt.edu>;
+	foaf:name "Steven J. Baskauf, Ph.D.";
+	foaf:nick "Steve";
+...
+	a foaf:Person.
 }}}
 
 Notice that the extensive record contains an {{{owl:sameAs}}} property linking the minted URI to the well-known URI.  So clients that dereference the minted URI can also discover that the resource it identifies is identical to the resource identified by the well-known URI.
