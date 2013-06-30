@@ -22,6 +22,10 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 *Table of Contents:*
 <wiki:toc max_depth="4" />
 
+This example describes the specimen which is referenced in the Darwin Core RDF Guide, http://arctos.database.museum/guid/MVZ:Mamm:165861 .  Since this is an example of an application of the use of Darwin Core terms according to the Guide, it does not make use of many of the properties that are available in the TaxonConcept Ontology.  For an example of an occurrence record marked up using the TaxonConcept Ontology exclusively, see http://ocs.taxonconcept.org/ocs/f522444a-2dd9-400e-be59-47213ef38cb9.rdf .  That file was used as a reference for the creation of this example.
+
+Also note that the taxon concept to which the dwcuri:toTaxonConcept property links is not specifically based on the TDWG TCS Model, but on the somewhat broader view of a taxon concept that is embodied in the TaxonConcept Ontology.  
+
 == 1 A specimen and its associated occurrence ==
 
 This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen
