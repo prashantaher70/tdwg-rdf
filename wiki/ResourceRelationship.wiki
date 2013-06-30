@@ -3,7 +3,7 @@
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
-=Darwin Core Resource Relationship terms as RDF=
+=Darwin Core Resource Relationship terms as RDF (draft)=
 
 *Date:* (Created) 27 April 2013; (Last modified) 29 June 2013
 
@@ -30,6 +30,8 @@ Table 1
 Because the ID terms cannot be used as object properties, Darwin Core does not provide a means to express this relationship as RDF.  The [http://www.openannotation.org/spec/core/core.html Open Annotation Data Model] should be used instead as shown in the following example which relates the same resources as in Table 1.
 
 Example 1:
+
+RDF/XML:
 {{{
 <rdf:Description rdf:about="http://guid.mvz.org/relations/23423">
    <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/ResourceRelationship"/>
@@ -45,14 +47,34 @@ Example 1:
 </rdf:Description>
 
 <rdf:Description rdf:about="http://guid.mvz.org/relations/23423">
-   <rdf:type rdf:resource=http://purl.org/dc/dcmitype/PhysicalObject"/>
-   <rdf:type rdf:resource=http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen"/>
+   <rdf:type rdf:resource="http://purl.org/dc/dcmitype/PhysicalObject"/>
+   <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://guid.mvz.org/relations/23424">
-   <rdf:type rdf:resource=http://purl.org/dc/dcmitype/PhysicalObject"/>
-   <rdf:type rdf:resource=http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen"/>
+   <rdf:type rdf:resource="http://purl.org/dc/dcmitype/PhysicalObject"/>
+   <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen"/>
 </rdf:Description>
+}}}
+
+RDF/Turtle:
+{{{
+<http://guid.mvz.org/relations/23423> 
+	dwc:relationshipAccordingTo "James L Patton";
+	dwc:relationshipEstablishedDate "2001-09-14";
+	dwc:relationshipOfResource "mother of";
+	a 	dcmitype:PhysicalObject,
+		dwctype:PreservedSpecimen,
+		dwc:ResourceRelationship,
+    oa:Annotation;
+	oa:annotatedAt "2001-09-14";
+	oa:annotatedBy <http://guid.mvz.org/agents/James_L_Patton>;
+	oa:hasBody <http://arctos.database.museum/guid/MVZ:Mamm:14524>;
+	oa:hasTarget <http://arctos.database.museum/guid/MVZ:Mamm:14523>;
+	oa:motivatedBy <http://guid.mvz.org/relationshipType/motherOf>.
+<http://guid.mvz.org/relations/23424> 
+	a 	dcmitype:PhysicalObject,
+		dwctype:PreservedSpecimen.
 }}}
 
 The following points should be noted about Example 1:
