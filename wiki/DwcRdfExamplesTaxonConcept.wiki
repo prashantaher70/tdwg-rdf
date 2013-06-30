@@ -1,9 +1,9 @@
-#summary Examples of Darwin Core as RDF using TaxonConcept.org object properties
+#summary Examples of Darwin Core as RDF using TaxonConcept Ontology object properties
 #sidebar DwcRdfSidebar
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
-=Examples of Darwin Core as RDF using Darwin-SW object properties=
+=Examples of Darwin Core as RDF using TaxonConcept Ontology object properties=
 
 *Date:* (Created) 27 June 2013; (Last modified) 30 June 2013
 
