@@ -3,7 +3,7 @@
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
-=Darwin Core !MeasurementOrFact terms as RDF (draft)=
+=Darwin Core !MeasurementOrFact terms as RDF (draft vaporware)=
 
 *Date:* (Created) x; (Last modified) x
 
@@ -26,4 +26,4 @@ The following namespace abbreviations are used in this document:
 
 ==1 Introduction==
 
-The TDWG RDF Task Group is considering the best practices for expressing terms in the dwc:MeasurementOrFact class as RDF.  
+The TDWG RDF Task Group is considering the best practices for expressing terms in the dwc:!MeasurementOrFact class as RDF.  
