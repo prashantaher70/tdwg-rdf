@@ -80,95 +80,37 @@ Notes:
 
 ===1.2 Representing the name entity using a blank node===
 
-If the metadata provider is able to provide more detailed information about the name entity but is unable or unwilling to mint and maintain a URI to identify the name entity, a tn:TaxonName instance can be represented by a blank node whose properties describe the name entity.  For example:
+If the metadata provider is able to provide more detailed information about the name entity but is unable or unwilling to mint and maintain a URI to identify the name entity, a {{{tn:TaxonName}}} instance can be represented by a blank node whose properties describe the name entity.  
 
 Example 2:
 
-In this example the database record contains more information about the taxon parsed into additional fields identified by dwc:Taxon class convenience terms:
+In this example the database record contains more information about the taxon parsed into additional fields identified by {{{dwc:Taxon}}} class convenience terms:
 
-dwc:basisOfRecord
-	
-
-dwc:taxonID
-	
-
-dwc:scientificName
-	
-
-dwc:genus
-	
-
-dwc:specificEpithet
-	
-
-dwc:scientificNameAuthorship
-	
-
-dwc:namePublishedInYear
-	
-
-dwc:nameAccordingToID
-
-Taxon
-	
-
-87694
-	
-
-Hypomachilodes forthaysi Packauskas & Shofner, 2010
-	
-
-Hypomachilodes
-	
-
-forthaysi
-	
-
-Packauskas & Shofner
-	
-
-2010
-	
-
-doi:10.2317/JKES1003.02.1
+||dwc:basisOfRecord||dwc:taxonID||dwc:scientificName||dwc:genus||dwc:specificEpithet||dwc:scientificNameAuthorship||dwc:namePublishedInYear||dwc:nameAccordingToID||
+||Taxon||87694||Hypomachilodes forthaysi Packauskas & Shofner, 2010||Hypomachilodes||forthaysi||Packauskas & Shofner||2010||doi:10.2317/JKES1003.02.1||
 
 This RDF serialization expresses the same metadata using Taxon Concept ontology terms:
-
+{{{
 <rdf:Description rdf:about="http://museum.org/taxonconcepts/87694">
-
    <rdf:type rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
-
    <tc:hasName>
-
         <tn:TaxonName>
-
              <dcterms:title>Hypomachilodes forthaysi Packauskas &amp; Shofner, 2010</dcterms:title>
-
              <tn:genusPart>Hypomachilodes</tn:genusPart>
-
              <tn:specificEpithet>forthaysi</tn:specificEpithet>
-
              <tn:authorship>Packauskas &amp; Shofner</tn:authorship>
-
              <tn:year>2010</tn:year>
-
              <tn:rank rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonRank#Species"/>
-
         </tn:TaxonName>
-
    </tc:hasName>
-
    <tc:accordingTo rdf:resource="http://dx.doi.org/10.2317/JKES1003.02.1"/>
-
 </rdf:Description>
+}}}
 
 Notes:
-
-- This example follows the recommendation from the Taxon Name ontology that a string for the complete name be provided as a dcterms:title value.  That string is taken from the Darwin Core convenience term dwc:scientificName.  
-
-- The values of the convenience terms dwc:genus, dwc:specificEpithet, dwc:scientificNameAuthorship, and dwc:namePublishedInYear are provided as values of corresponding properties that describe the tc:TaxonName instance.  
-
-- When an ampersand (“&”) is used in XML it must be escaped as “&amp;”.
+  * This example follows the recommendation from the Taxon Name ontology that a string for the complete name be provided as a {{{dcterms:title}}} value.  That string is taken from the Darwin Core convenience term {{{dwc:scientificName}}}.  
+  * The values of the convenience terms {{{dwc:genus}}}, {{{dwc:specificEpithet}}}, {{{dwc:scientificNameAuthorship}}}, and {{{dwc:namePublishedInYear}}} are provided as values of corresponding properties that describe the {{{tc:TaxonName}}} instance.  
+  * When an ampersand (“&”) is used in XML it must be escaped as “&amp;”.
 
 ===1.3 Referring to the name entity through a URI reference===
 
