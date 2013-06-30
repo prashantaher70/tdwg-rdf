@@ -26,7 +26,7 @@ This example describes the specimen which is referenced in the Darwin Core RDF G
 
 In some cases, the TaxonConcept object properties have range and domain properties which assert types present in the TaxonConcept Ontology.  In recognition of that, the resources have been typed as instances of TaxonConcept Ontology classes as well as of the Darwin Core type vocabulary classes recommended in the Darwin Core RDF Guide.
 
-For an example of an occurrence record marked up using the TaxonConcept Ontology exclusively, see http://ocs.taxonconcept.org/ocs/f522444a-2dd9-400e-be59-47213ef38cb9.rdf .  That file was used as a reference for the creation of this example.
+For an example of an occurrence record marked up using the TaxonConcept Ontology exclusively, see http://ocs.taxonconcept.org/ocs/f522444a-2dd9-400e-be59-47213ef38cb9.rdf .  That file was used as a reference for the creation of this example.  In that example, the occurrence was documented by an image and the basisOfRecord was given as the image.  It is not clear whether the example is correct in including the specimen information as part of the metadata for the occurrence instance.  There is no known property for relating occurrences to specimens in the ontology.  
 
 Also note that the taxon concept to which the dwcuri:toTaxonConcept property links is not specifically based on the TDWG TCS Model, but on the somewhat broader view of a taxon concept that is embodied in the TaxonConcept Ontology.  
 
