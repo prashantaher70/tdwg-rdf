@@ -404,11 +404,7 @@ Notice that the extensive record contains an {{{owl:sameAs}}} property linking t
 ==7 Summary Recommendations==
 
 In light of the issues raised in this section, the following are recommended:
-
-- When providers mint non-resolvable URIs, they should select a single HTTP proxy service to reference in the RDF which they create.
-
-- Providers minting non-resolvable URIs should advertise their choice of preferred proxy form to potential Linked Data users.  
-
-- Providers who simply want to provide links to related resources rather than asserting identity should use terms appropriate terms from a vocabulary such as SKOS rather than {{{owl:sameAs}}} or other terms of identity that may be used to create inferred triples.  
-
-- Providers should generally reuse well-known URIs.
+  * When providers mint non-resolvable URIs, they should select a single HTTP proxy service to reference in the RDF which they create.
+  * Providers minting non-resolvable URIs should advertise their choice of preferred proxy form to potential Linked Data users.  
+  * Providers who simply want to provide links to related resources rather than asserting identity should use terms appropriate terms from a vocabulary such as SKOS rather than {{{owl:sameAs}}} or other terms of identity that may be used to create inferred triples.  
+  * Providers should generally reuse well-known URIs.
