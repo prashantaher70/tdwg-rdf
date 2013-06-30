@@ -66,7 +66,7 @@ RDF/Turtle:
 	a 	dcmitype:PhysicalObject,
 		dwctype:PreservedSpecimen,
 		dwc:ResourceRelationship,
-    oa:Annotation;
+		oa:Annotation;
 	oa:annotatedAt "2001-09-14";
 	oa:annotatedBy <http://guid.mvz.org/agents/James_L_Patton>;
 	oa:hasBody <http://arctos.database.museum/guid/MVZ:Mamm:14524>;
