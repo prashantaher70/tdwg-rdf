@@ -119,7 +119,8 @@ As RDF/XML:
 }}}
 
 As RDF/Turtle:
-{{{<http://museum.org/taxonconcepts/87694> 
+{{{
+<http://museum.org/taxonconcepts/87694> 
 	tc:accordingTo <http://dx.doi.org/10.2317/JKES1003.02.1>;
     tc:hasName [a tn:TaxonName ; 
                 dcterms:title "Hypomachilodes forthaysi Packauskas & Shofner, 2010" ; 
