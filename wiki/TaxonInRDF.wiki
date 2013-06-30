@@ -24,9 +24,9 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 
 == 1 Introduction ==
 
-The class dwc:Taxon is defined to be a category that includes information about both names and taxon concepts.  The ambiguity in this definition reflects a general lack of clarity in the TDWG community about the exact definition of a taxon.  This degree of ambiguity is not suitable for descriptions in RDF.  The TDWG Taxon Concept Transfer Schema (TCS) Standard describes a more well-defined entity, the Taxon Concept, which contains both a name and a reference component.   These name and reference components correspond to two parts of concept names under the convention of “name sec. reference” (or “name sensu reference”).  
+The class {{{dwc:Taxon}}} is defined to be a category that includes information about both names and taxon concepts.  The ambiguity in this definition reflects a general lack of clarity in the TDWG community about the exact definition of a taxon.  This degree of ambiguity is not suitable for descriptions in RDF.  The TDWG Taxon Concept Transfer Schema (TCS) Standard describes a more well-defined entity, the Taxon Concept, which contains both a name and a reference component.   These name and reference components correspond to two parts of concept names under the convention of “name sec. reference” (or “name sensu reference”).  
 
-At the time of the adoption of this Darwin Core RDF Guide, there is no existing standard for expressing the TCS Standard as RDF (TCS itself is a non-RDF XML schema).  Two parts of the TDWG Ontology, the TaxonConcept ontology and the TaxonName ontology, are based on the TCS standard.  However, given that no part of the TDWG Ontology has yet become a ratified TDWG Standard, this guide cannot recommend the use of TDWG Ontology terms as a part of Darwin Core itself.  Nevertheless, because the TDWG Ontologies are described using RDF, they provide a means to illustrate how the metadata provided through dwc:Taxon class convenience terms (Section 2.7) could be rendered in a structured manner consistent with the TCS Standard.  
+At the time of the adoption of the Darwin Core RDF Guide, there was no existing standard for expressing the TCS Standard as RDF (TCS itself is a non-RDF XML schema).  Two parts of the TDWG Ontology, the TaxonConcept ontology and the TaxonName ontology, are based on the TCS standard.  However, given that no part of the TDWG Ontology has yet become a ratified TDWG Standard, the TDWG Ontology terms have not been recommended for use as part of the Darwin Core RDF Guide.  Nevertheless, because the TDWG Ontologies are described using RDF, they provide a means to illustrate how the metadata provided through dwc:Taxon class convenience terms (Section 2.7 of the Guide) could be rendered in a structured manner consistent with the TCS Standard.  
 
 Other models similar to TCS define taxon name usages (TNUs) or assertions [http://systbio.org/files/phyloinformatics/1.pdf (Pyle 2004)] which allow for a broader class of references which include those that don’t explicitly define the concept.  TCS itself allows for taxon concepts to be circumscribed by specimens or sets of characters in addition to references.  The TaxonConcept OWL Ontology [http://www.taxonconcept.org/ (DeVries 2009)] describes taxon concepts even more broadly by linking them to a variety of tagged resources rather than specifying a particular secundum reference.  There are also models for mapping relationships among taxon concepts [http://dx.doi.org/10.1017/S147720000800282X (Franz and Peet 2008)].  The exact nature of a future standard model for taxon concepts is yet to be determined and is likely to contain some or all of the complexities described above.  However, the model is likely to contain some variation on the basic structure described in this section.
 
@@ -34,79 +34,55 @@ The TaxonConcept ontology and the TaxonName ontology provide two defined classes
 
 The general model can be represented by this graph:
 
-The three resources (<concept1>, <reference1>, and <name1>) are non-information resources which may be identified by URIs.  They may each be related to other resources by object properties.  Ideally, a provider of RDF occurrence metadata could use the property dwcuri:toTaxonConcept to link a dwc:Identification instance to the URI of a tc:TaxonConcept instance found in a community repository.  However, in the absence of such a repository, providers could use terms from the TaxonConcept and TaxonName ontologies to translate text-based Darwin Core records described by dwc:Taxon class convenience properties into RDF that is structured in such a way that would allow their metadata to be consumed in a manner which would facilitate matching the tc:TaxonConcept that they describe with others in a community repository.  It is also possible that metadata described in this more structured way could be machine-translated into a future standard model for taxon concepts.
+<img src="http://tdwg-rdf.googlecode.com/svn/trunk/file/taxon-concept-graph.png"  align="center"/>
 
-==1 Name entities==
+The three resources ({{{<concept1>}}}, {{{<reference1>}}}, and {{{<name1>}}}) are non-information resources which may be identified by URIs.  They may each be related to other resources by object properties.  Ideally, a provider of RDF occurrence metadata could use the property {{{dwcuri:toTaxonConcept}}} to link a {{{dwctype:Identification}}} instance to the URI of a {{{tc:TaxonConcept}}} instance found in a community repository.  However, in the absence of such a repository, providers could use terms from the TaxonConcept and TaxonName ontologies to translate text-based Darwin Core records described by {{{dwc:Taxon}}} class convenience properties into RDF that is structured in such a way that would allow their metadata to be consumed in a manner which would facilitate matching the {{{tc:TaxonConcept}}} that they describe with others in a community repository.  It is also possible that metadata described in this more structured way could be machine-translated into a future standard model for taxon concepts.
 
-A tn:TaxonName instance should not be considered to represent a name string, but rather be considered to represent a “name entity” which is a non-information (i.e. non-literal) resource. Although neither the TCS Standard nor the TDWG TaxonName Ontology define the tn:TaxonName class in the following way, a tn:TaxonName corresponds approximately to a protonym as defined in [http://systbio.org/files/phyloinformatics/1.pdf Pyle 2004].   By modeling the taxon name as a non-literal, the tn:TaxonName instance may be the object of additional triples that describe its properties.  
+==2 Name entities==
+
+A {{{tn:TaxonName}}} instance should not be considered to represent a name string, but rather be considered to represent a “name entity” which is a non-information (i.e. non-literal) resource. Although neither the TCS Standard nor the TDWG TaxonName Ontology define the {{{tn:TaxonName}}} class in the following way, a {{{tn:TaxonName}}} corresponds approximately to a protonym as defined in [http://systbio.org/files/phyloinformatics/1.pdf Pyle 2004].   By modeling the taxon name as a non-literal, the {{{tn:TaxonName}}} instance may be the object of additional triples that describe its properties.  
 
 A metadata provider has three options for describing name entities when translating text-based Darwin Core records to RDF:
 
-- use a value string to represent the name entity
-
-- use a blank node to represent the entity
-
-- create a URI-referenced instance to represent the entity
+  * use a value string to represent the name entity
+  * use a blank node to represent the entity
+  * create a URI-referenced instance to represent the entity
 
 Each of these approaches will be described in the sections that follow.
 
-===1.1 Non-literal value string representing the name entity===
+===2.1 Non-literal value string representing the name entity===
 
-As discussed in section 2.4.3, strings have traditionally been used as a proxy for non-literal resources.  The TDWG TaxonConcept ontology defines a term, tc:nameString, which can be used as a tc:TaxonConcept instance property of whose value is a value string literal that represents the name entity associated with the concept.  It should be understood that the value of tc:nameString is intended to provide a means for the consumer to attempt to identify the name entity in lieu of a GUID for the entity.  Therefore, it should be understood that the value of tc:nameString is NOT itself the name in string form.  For this reason, a consumer may be able to conclude that various values for tc:nameString, such as “Hypomachilodes forthaysi Packauskas & Shofner, 2010”, “Hypomachilodes forthaysi Packauskas & Shofner”, and “ Hypomachilodes forthaysi” represent the same name entity even though they are not identical strings.  The following example illustrates the approach of referring to a name entity by a value string:
+As discussed in Section 2.4.3 of the Darwin Core RDF Guide, strings have traditionally been used as a proxy for non-literal resources.  The TDWG TaxonConcept ontology defines a term, {{{tc:nameString}}}, which can be used as a {{{tc:TaxonConcept}}} instance property of whose value is a value string literal that represents the name entity associated with the concept.  It should be understood that the value of {{{tc:nameString}}} is intended to provide a means for the consumer to attempt to identify the name entity in lieu of a GUID for the entity.  Therefore, it should be understood that the value of {{{tc:nameString}}} is NOT itself the name in string form.  For this reason, a consumer may be able to conclude that various values for {{{tc:nameString}}}, such as “Hypomachilodes forthaysi Packauskas & Shofner, 2010”, “Hypomachilodes forthaysi Packauskas & Shofner”, and “ Hypomachilodes forthaysi” represent the same name entity even though they are not identical strings.  The following example illustrates the approach of referring to a name entity by a value string:
 
-Example 31:
+Example 1:
 
 The following database record identifies fields using Darwin Core Taxon class terms:
 
-dwc:basisOfRecord
-	
-
-dwc:taxonID
-	
-
-dwc:scientificName
-	
-
-dwc:nameAccordingToID
-
-Taxon
-	
-
-87694
-	
-
-Hypomachilodes forthaysi
-	
-
-doi:10.2317/JKES1003.02.1
+||dwc:basisOfRecord||dwc:taxonID||dwc:scientificName||dwc:nameAccordingToID||
+||Taxon||87694||Hypomachilodes forthaysi||doi:10.2317/JKES1003.02.1||
 
 This RDF serialization expresses the same metadata using Taxon Concept ontology terms:
 
+{{{
 <rdf:Description rdf:about="http://museum.org/taxonconcepts/87694">
-
    <rdf:type rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
-
    <tc:nameString>Hypomachilodes forthaysi</tc:nameString>
-
    <tc:accordingTo rdf:resource="http://dx.doi.org/10.2317/JKES1003.02.1"/>
-
 </rdf:Description>
+}}}
 
 Notes:
 
-- Although the dwc:basisOfRecord value is reported as Taxon, for clarity the rdf:type value is given as tc:TaxonConcept.
-
-- The local identifier has been transformed into an HTTP URI.  This presupposes that the local identifier was intended to actually identify a taxon concept and not a name.
-
-- The value of the Darwin Core convenience term dwc:scientificName has been used as the value string that refers to the name entity through the property tc:nameString.
-
-- Because dwc:nameAccordingTo cannot be used in RDF, the corresponding Taxon Concept ontology term, tc:accordingTo is used instead, along with the HTTP proxied version of the DOI.
+  * Although the {{{dwc:basisOfRecord}}} value is reported as Taxon, for clarity the {{{rdf:type}}} value is given as tc:TaxonConcept.
+  * The local identifier has been transformed into an HTTP URI.  This presupposes that the local identifier was intended to actually identify a taxon concept and not a name.
+  * The value of the Darwin Core convenience term {{{dwc:scientificName}}} has been used as the value string that refers to the name entity through the property {{{tc:nameString}}}.
+  * Because {{{dwc:nameAccordingToID}}} cannot be used in RDF, the corresponding Taxon Concept ontology term, {{{tc:accordingTo}}} is used instead, along with the HTTP-proxied version of the DOI.
 
 ===1.2 Representing the name entity using a blank node===
 
 If the metadata provider is able to provide more detailed information about the name entity but is unable or unwilling to mint and maintain a URI to identify the name entity, a tn:TaxonName instance can be represented by a blank node whose properties describe the name entity.  For example:
 
-Example 32:
+Example 2:
 
 In this example the database record contains more information about the taxon parsed into additional fields identified by dwc:Taxon class convenience terms:
 
