@@ -310,9 +310,7 @@ As RDF/XML:
              <dcterms:date>2007-05-10</dcterms:date>
              <cnt:characterEncoding>UTF-8</cnt:characterEncoding>
              <cnt:chars>Steve,
-
 That plant that we saw over in the Big Swan Creek watershed yesterday was Castilleja coccinea.  It’s really common around all of the seeps in Lewis County.
-
 Andrea</cnt:chars>
         </bibo:Email>
    </tc:accordingTo>
