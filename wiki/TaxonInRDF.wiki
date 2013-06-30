@@ -5,7 +5,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Describing Taxon Concepts as RDF=
 
-*Date:* (Created) 27 April 2013; (Last modified) 29 June 2013
+*Date:* (Created) 27 April 2013; (Last modified) 30 June 2013
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
 
@@ -61,14 +61,23 @@ The following database record identifies fields using Darwin Core Taxon class te
 ||dwc:basisOfRecord||dwc:taxonID||dwc:scientificName||dwc:nameAccordingToID||
 ||Taxon||87694||Hypomachilodes forthaysi||doi:10.2317/JKES1003.02.1||
 
-This RDF serialization expresses the same metadata using Taxon Concept ontology terms:
+This serialization expresses the same metadata using Taxon Concept ontology terms:
 
+As RDF/XML:
 {{{
 <rdf:Description rdf:about="http://museum.org/taxonconcepts/87694">
    <rdf:type rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
    <tc:nameString>Hypomachilodes forthaysi</tc:nameString>
    <tc:accordingTo rdf:resource="http://dx.doi.org/10.2317/JKES1003.02.1"/>
 </rdf:Description>
+}}}
+
+As RDF/Turtle:
+{{{
+<http://museum.org/taxonconcepts/87694> 
+	tc:accordingTo <http://dx.doi.org/10.2317/JKES1003.02.1>;
+	tc:nameString "Hypomachilodes forthaysi";
+	a tc:TaxonConcept.
 }}}
 
 Notes:
@@ -89,7 +98,9 @@ In this example the database record contains more information about the taxon pa
 ||dwc:basisOfRecord||dwc:taxonID||dwc:scientificName||dwc:genus||dwc:specificEpithet||dwc:scientificNameAuthorship||dwc:namePublishedInYear||dwc:nameAccordingToID||
 ||Taxon||87694||Hypomachilodes forthaysi Packauskas & Shofner, 2010||Hypomachilodes||forthaysi||Packauskas & Shofner||2010||doi:10.2317/JKES1003.02.1||
 
-This RDF serialization expresses the same metadata using Taxon Concept ontology terms:
+This serialization expresses the same metadata using Taxon Concept ontology terms:
+
+As RDF/XML:
 {{{
 <rdf:Description rdf:about="http://museum.org/taxonconcepts/87694">
    <rdf:type rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
@@ -107,6 +118,19 @@ This RDF serialization expresses the same metadata using Taxon Concept ontology 
 </rdf:Description>
 }}}
 
+As RDF/Turtle:
+{{{<http://museum.org/taxonconcepts/87694> 
+	tc:accordingTo <http://dx.doi.org/10.2317/JKES1003.02.1>;
+    tc:hasName [a tn:TaxonName ; 
+                dcterms:title "Hypomachilodes forthaysi Packauskas & Shofner, 2010" ; 
+                tn:genusPart "Hypomachilodes" ; 
+                tn:specificEpithet "forthaysi" ; 
+                tn:authorship "Packauskas & Shofner" ; 
+                tn:year "2010" ; 
+                tn:rank <http://rs.tdwg.org/ontology/voc/TaxonRank#Species>];
+    a tc:TaxonConcept.
+}}}
+
 Notes:
   * This example follows the recommendation from the Taxon Name ontology that a string for the complete name be provided as a {{{dcterms:title}}} value.  That string is taken from the Darwin Core convenience term {{{dwc:scientificName}}}.  
   * The values of the convenience terms {{{dwc:genus}}}, {{{dwc:specificEpithet}}}, {{{dwc:scientificNameAuthorship}}}, and {{{dwc:namePublishedInYear}}} are provided as values of corresponding properties that describe the {{{tc:TaxonName}}} instance.  
@@ -117,12 +141,22 @@ Notes:
 If {{{tn:TaxonName}}} instances which are identified by URIs are available, the {{{tc:TaxonConcept}}} instance can be linked to the URI without the necessity to provide additional information about the name, as in this example:
 
 Example 3:
+
+As RDF/XML:
 {{{
 <rdf:Description rdf:about="http://biodiversity.org.au/apni.taxon/118883">
    <rdf:type rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
    <tc:hasName rdf:resource="http://biodiversity.org.au/apni.name/36530"/>
    <tc:accordingTo rdf:resource="http://biodiversity.org.au/apni.reference/65103"/>
 </rdf:Description>
+}}}
+
+As RDF/Turtle:
+{{{
+<http://biodiversity.org.au/apni.taxon/118883> 
+	tc:accordingTo <http://biodiversity.org.au/apni.reference/65103>;
+	tc:hasName <http://biodiversity.org.au/apni.name/36530>;
+	a tc:TaxonConcept.
 }}}
 
 In this circumstance, the consuming application would need to dereference any previously unknown name entity URIs in order to discover the properties of the name.  
@@ -136,12 +170,22 @@ If the reference which circumscribes the taxon concept is known, it should be as
 A {{{tc:TaxonConcept}}} instance can have the property {{{tc:accordingToString}}} whose value is a value string that represents the secundum reference. The following example illustrates the use of {{{tc:accordingToString}}}:
 
 Example 4:
+
+As RDF/XML:
 {{{
 <rdf:Description rdf:about="http://museum.org/taxonconcepts/37524">
    <rdf:type rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
    <tc:nameString>Acer nigrum</tc:nameString>
    <tc:accordingToString>Gleason, Henry A. and Arthur Cronquist, 1991. Manual of Vascular Plants of Northeastern United States and Adjacent Canada. The New York Botanical Garden, Bronx, NY, US, p. 352.</tc:accordingToString>
 </rdf:Description>
+}}}
+
+As RDF/Turtle:
+{{{
+<http://museum.org/taxonconcepts/37524> 
+	tc:accordingToString "Gleason, Henry A. and Arthur Cronquist, 1991. Manual of Vascular Plants of Northeastern United States and Adjacent Canada. The New York Botanical Garden, Bronx, NY, US, p. 352.";
+	tc:nameString "Acer nigrum";
+	a tc:TaxonConcept.
 }}}
 
 Because of the wide variety of formats for citing references, it is difficult to ensure that a client will be able to unambiguously match strings which refer to the same reference.  For this reason, it is recommended that providers not rely exclusively on {{{tc:accordingToString}}} as a means of identifying  the secundum reference but that they also use one of the following two methods to reduce the ambiguity of the reference and to reduce the burden on the consumer of parsing and interpreting the value string which represents the reference.  
@@ -153,6 +197,8 @@ If the metadata provider is able to provide discrete metadata properties of the 
 In the following example there is no known assigned identifier that is globally unique for the reference, so the reference is not identified by a URI:
 
 Example 5:
+
+As RDF/XML:
 {{{
 <rdf:Description rdf:about="http://museum.org/taxonconcepts/37524">
    <rdf:type rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
@@ -170,6 +216,21 @@ Example 5:
 </rdf:Description>
 }}}
 
+As RDF/Turtle:
+{{{
+<http://museum.org/taxonconcepts/37524> 
+	tc:accordingTo 
+		[a bibo:DocumentPart ; 
+		dcterms:title "The Trees of Vanderbilt: Seven walks through the Vanderbilt University Arboretum" ; 
+		dc:creator "Vanderbilt University" ; 
+		dc:publisher "Office of Publications and Design, Vanderbilt University, Nashville, TN, USA" ; 
+		dcterms:date "1994" ; 
+		bibo:pageStart "77" ; 
+		bibo:pageEnd "77"];
+	tc:nameString "Tilia heterophylla";
+	a tc:TaxonConcept.
+}}}
+
 Notes:
 
   * There is no one particular class for a reference.  Any well-known type may be asserted (in this example, {{{bibo:DocumentPart}}}).
@@ -180,6 +241,8 @@ Notes:
 If a URI has been assigned to the reference, the {{{tc:TaxonConcept}}} instance can be linked to the URI without the necessity to provide additional information about the reference, as shown in Example 1.  If the URI is an HTTP URI, a consumer may be able to discover additional information about the resource by dereferencing the URI.  If the URI is not an HTTP URI, the consumer would be able to unambiguously match the reference to other instances of the same reference, but would not necessarily be able to infer additional information about the reference unless it were included in the same document as the description of the concept, or if the consumer had pre-existing information about the reference from another source.  
 
 Example 6:
+
+As RDF/XML:
 {{{
 <rdf:Description rdf:about="http://museum.org/taxonconcepts/37525">
    <rdf:type rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
@@ -196,11 +259,29 @@ Example 6:
 </rdf:Description>
 }}}
 
+As RDF/Turtle:
+{{{
+<http://museum.org/taxonconcepts/37525> 
+	tc:accordingTo <urn:isbn:0893273651>;
+	tc:nameString "Acer nigrum";
+	a tc:TaxonConcept.
+<urn:isbn:0893273651> 
+	dc:creator 
+		"Arthur Cronquist",
+		"Henry A Gleason";
+	dc:publisher "The New York Botanical Garden, Bronx, NY, US";
+	dcterms:date "1991";
+	dcterms:title "Manual of Vascular Plants of Northeastern United States and Adjacent Canada";
+	a bibo:Book.
+}}}
+
 In Example 6, a valid URI has been constructed from the ISBN of the book.  Since it is a URN, it is not dereferenceable via HTTP, although it serves as an identifier for the book which is globally unique.  If a DOI is available for the reference, it should be used in its HTTP-proxied form (i.e. beginning with http://dx.doi.org/ ).  
 
 If the reference information is unpublished, it is unlikely that a separate URI will have been assigned to the reference.  In this case, a blank node may be appropriate. However, a blank node cannot be the object of a triple external to the document which defines it.  The following example shows how the [http://www.w3.org/TR/Content-in-RDF10/ Content-in-RDF vocabulary] may be used to link an unpublished reference to a {{{tc:TaxonConcept}}} instance:
 
 Example 7:
+
+As RDF/XML:
 {{{
 <rdf:Description rdf:about="http://museum.org/taxonconcepts/122678">
    <rdf:type rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
@@ -221,15 +302,34 @@ Andrea</cnt:chars>
 </rdf:Description>
 }}}
 
+As RDF/Turtle:
+{{{
+<http://museum.org/taxonconcepts/122678> 
+	tc:accordingTo <http://museum.org/taxonconcepts/122678#reference>;
+	tc:nameString "Castilleja coccinea";
+	a tc:TaxonConcept.
+<http://museum.org/taxonconcepts/122678#reference> 
+	dc:creator "Andrea Cardinal";
+	dcterms:date "2007-05-10";
+	a bibo:Email,
+	 cnt:ContentAsText;
+	cnt:characterEncoding "UTF-8";
+	cnt:chars """Steve,
+That plant that we saw over in the Big Swan Creek watershed yesterday was Castilleja coccinea.  It’s really common around all of the seeps in Lewis County.
+Andrea""".
+}}}
+
 Note: The method of generating a reference URI shown in this example allows the reference URI to be distinguished from the taxon concept URI without requiring the provider to manage a separate identifier record.  By identifying the reference using a fragment identifier whose base URI is that of the taxon concept, the RDF describing the reference will be included when the URI for the taxon concept is dereferenced. 
 
 ==4 Taxon Concepts which are represented by blank nodes==
 
 It is possible to define a taxon concept without assigning it a URI (i.e. to represent it by a blank node):
 
-Example 6:
+Example 8:
+
+As RDF/XML:
 {{{
-<rdf:Description rdf:about="rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-baskauf/50747#2006-03-28baskauf"">
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-baskauf/50747#2006-03-28baskauf">
    <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/Identification"/>
    <dwcuri:toTaxonConcept>
         <tc:TaxonConcept>
@@ -238,6 +338,16 @@ Example 6:
         </tc:TaxonConcept>
    </dwcuri:toTaxonConcept>
 </rdf:Description>
+}}}
+
+As RDF/Turtle:
+{{{
+<http://bioimages.vanderbilt.edu/ind-baskauf/50747#2006-03-28baskauf> 
+	dwcuri:toTaxonConcept 
+		[a tc:TaxonConcept ; 
+		tc:nameString "Acer nigrum" ; 
+		tc:accordingToString "Gleason, Henry A. and Arthur Cronquist, 1991. Manual of Vascular Plants of Northeastern United States and Adjacent Canada. The New York Botanical Garden, Bronx, NY, US, p. 352."];
+	a dwctype:Identification.
 }}}
 
 However, it is questionable whether there is a significant advantage over simply using Darwin Core {{{dwc:Taxon}}} class convenience terms since in this example clients would have to perform the same kind of string matching in order to link related taxon concept instances as they would if the convenience terms were provided.  
