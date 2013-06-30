@@ -22,6 +22,22 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 *Table of Contents:*
 <wiki:toc max_depth="4" />
 
+The following namespace abbreviations are used in this document:
+
+||vocabulary name||namespace abbreviation||full prefix||
+||Resource Description Framework||rdf:||http://www.w3.org/1999/02/22-rdf-syntax-ns#||
+||RDF Schema||rdfs:||http://www.w3.org/2000/01/rdf-schema#||
+||Darwin Core terms (string literal objects)||dwc:||http://rs.tdwg.org/dwc/terms/||
+||Darwin Core terms (URI reference objects)||dwcuri:||http://rs.tdwg.org/dwc/uri/||
+||Darwin Core type vocabulary||dwctype:||http://rs.tdwg.org/dwc/dwctype/||
+||Dublin Core terms||dcterms:||http://purl.org/dc/terms/||
+||Dublin Core legacy terms||dc:||http://purl.org/dc/elements/1.1/||
+||TDWG Taxon Concept ontology||tc:||http://rs.tdwg.org/ontology/voc/TaxonConcept#||
+||TDWG Taxon Name ontology||tn:||http://rs.tdwg.org/ontology/voc/TaxonNamet#||
+||TDWG Common ontology||tcom:||http://rs.tdwg.org/ontology/voc/Common#||
+||Bibliographic Ontology||bibo:||http://purl.org/ontology/bibo/||
+||Representing Content in RDF||cnt:||http://www.w3.org/2011/content#||
+
 == 1 Introduction ==
 
 The class {{{dwc:Taxon}}} is defined to be a category that includes information about both names and taxon concepts.  The ambiguity in this definition reflects a general lack of clarity in the TDWG community about the exact definition of a taxon.  This degree of ambiguity is not suitable for descriptions in RDF.  The TDWG Taxon Concept Transfer Schema (TCS) Standard describes a more well-defined entity, the Taxon Concept, which contains both a name and a reference component.   These name and reference components correspond to two parts of concept names under the convention of “name sec. reference” (or “name sensu reference”).  
@@ -82,7 +98,7 @@ As RDF/Turtle:
 
 Notes:
 
-  * Although the {{{dwc:basisOfRecord}}} value is reported as Taxon, for clarity the {{{rdf:type}}} value is given as tc:TaxonConcept.
+  * Although the {{{dwc:basisOfRecord}}} value is reported as Taxon, for clarity the {{{rdf:type}}} value is given as {{{tc:TaxonConcept}}}.
   * The local identifier has been transformed into an HTTP URI.  This presupposes that the local identifier was intended to actually identify a taxon concept and not a name.
   * The value of the Darwin Core convenience term {{{dwc:scientificName}}} has been used as the value string that refers to the name entity through the property {{{tc:nameString}}}.
   * Because {{{dwc:nameAccordingToID}}} cannot be used in RDF, the corresponding Taxon Concept ontology term, {{{tc:accordingTo}}} is used instead, along with the HTTP-proxied version of the DOI.
@@ -312,8 +328,8 @@ As RDF/Turtle:
 <http://museum.org/taxonconcepts/122678#reference> 
 	dc:creator "Andrea Cardinal";
 	dcterms:date "2007-05-10";
-	a bibo:Email,
-	 cnt:ContentAsText;
+	a    bibo:Email,
+	     cnt:ContentAsText;
 	cnt:characterEncoding "UTF-8";
 	cnt:chars """Steve,
 That plant that we saw over in the Big Swan Creek watershed yesterday was Castilleja coccinea.  It’s really common around all of the seeps in Lewis County.
