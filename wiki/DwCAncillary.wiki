@@ -27,7 +27,7 @@ The draft Darwin Core RDF Guide describes how to use Darwin Core terms as predic
 
 [ResourceRelationship Expressing Darwin Core ResourceRelationship Terms as RDF]  
 
-This document shows how to express Darwin Core ResourceRelationship properties as RDF using the Open Annotation Data Model 
+This document shows how to express Darwin Core !ResourceRelationship properties as RDF using the Open Annotation Data Model 
 
 [SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
 
