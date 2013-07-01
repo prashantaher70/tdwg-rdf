@@ -3,7 +3,7 @@
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
-=Examples of Darwin Core as RDF using !BiSciCol object properties (placeholder)=
+=Examples of Darwin Core as RDF using !BiSciCol object properties=
 
 *Date:* (Created) 2013-07-01; (Last modified) 2013-07-01
 
@@ -24,7 +24,7 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 
 == 1 A specimen and its associated occurrence ==
 
-This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen.  The BiSciCol data model is described at http://biscicol.blogspot.com/2013_03_01_archive.html and the BiSciCol terms are described at biscicol.org/terms/index.html .  
+This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen.  The BiSciCol data model is described at http://biscicol.blogspot.com/2013_03_01_archive.html and the BiSciCol terms are described at http://biscicol.org/terms/index.html .  In this example, the Event and Location instances are identified using the BCID system described at http://biscicol.blogspot.com/2013/05/sneak-peeks-biscicol-style.html .  
 
 ===1.1 As RDF/XML:===
 {{{
