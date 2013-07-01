@@ -15,7 +15,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 *Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf] (TDWG RDF/OWL Task Group)
 
-*Abstract:* These examples follow the Darwin Core RDF Guide. They assume the data model of !BiSciCol (http://biscicol.blogspot.com/ ) and use its object properties to link the class instances.  
+*Abstract:* These examples follow the Darwin Core RDF Guide. They assume the data model of !BiSciCol (http://biscicol.blogspot.com/ ) and use its object properties to link the class instances.  See http://code.google.com/p/tdwg-rdf/wiki/BiodiversityOntologies for a comparison of some data models that provide object terms that can be used with Darwin Core.
 
 http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
 
