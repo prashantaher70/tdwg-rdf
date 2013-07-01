@@ -13,7 +13,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 *TDWG Task Group:* [http://code.google.com/p/tdwg-rdf/ TDWG RDF/OWL Task Group]
 
-*Contributors:* 
+*Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf] (TDWG RDF/OWL Task Group)
 
 *Abstract:* These examples follow the Darwin Core RDF Guide. They assume the data model of !BiSciCol (http://biscicol.blogspot.com/ ) and use its object properties to link the class instances.  
 
@@ -26,7 +26,7 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 
 This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen.  The BiSciCol data model is described at http://biscicol.blogspot.com/2013_03_01_archive.html and the BiSciCol terms are described at biscicol.org/terms/index.html .  
 
-As RDF/XML:
+===1.1 As RDF/XML:===
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
@@ -149,7 +149,7 @@ Information about the metadata document itself
 </rdf:RDF>
 }}}
 
-As RDF/Turtle:
+===1.2 As RDF/Turtle:===
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
