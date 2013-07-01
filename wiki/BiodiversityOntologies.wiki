@@ -200,9 +200,18 @@ Notes: dsw:Token instances may be related to dsw:IndividualOrganism instances in
 
 == 5.1 Description ==
 
-The !BiSciCol data model is described at http://biscicol.blogspot.com/2013_03_01_archive.html .  It includes six Darwin Core classes: Occurrence, Event, dcterms:Location, GeologicalContext, Identification, and Taxon .  The relationships among the classes shown on that page are:
+The !BiSciCol data model is described at http://biscicol.blogspot.com/2013_03_01_archive.html .  It includes six Darwin Core classes: Occurrence, Event, dcterms:Location, GeologicalContext, Identification, and Taxon .  
+
+== 5.2 Class structure ==
+The relationships among the classes shown on that page are:
 
 http://2.bp.blogspot.com/--5-pDb4P5fQ/UT66ZpFJK9I/AAAAAAAAAG0/_-koqKyfzSI/s400/DwC_concept_relations-scaled.png
+
+== 5.3 Subclass relationships ==
+
+None of the classes shown on the diagram have subclass relationships.  
+
+== 5.4 Some object properties ==
 
 There are only two object properties used in this model (the abbreviation bsc: stands for http://biscicol.org/terms/index.html# ):
 
