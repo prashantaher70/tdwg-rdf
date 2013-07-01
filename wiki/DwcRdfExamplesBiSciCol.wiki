@@ -31,6 +31,9 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen.  The BiSciCol data model is described at http://biscicol.blogspot.com/2013_03_01_archive.html and the BiSciCol terms are described at http://biscicol.org/terms/index.html .  In this example, the Event and Location instances are identified using the BCID system described at http://biscicol.blogspot.com/2013/05/sneak-peeks-biscicol-style.html .  
 
 ===1.1 As RDF/XML:===
+
+Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/biscicol-specimen.rdf this file].
+
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 
@@ -154,6 +157,9 @@ Information about the metadata document itself
 }}}
 
 ===1.2 As RDF/Turtle:===
+
+Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/biscicol-specimen.ttl this file].
+
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
