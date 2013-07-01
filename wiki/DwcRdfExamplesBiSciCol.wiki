@@ -24,6 +24,10 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 
 == 1 A specimen and its associated occurrence ==
 
+<img src="http://tdwg-rdf.googlecode.com/svn/trunk/file/biscicol-specimen-obj-prop.png" height="200" width="3855"/>
+
+[http://tdwg-rdf.googlecode.com/svn/trunk/file/biscicol-specimen-obj-prop.jpg Click here to view image in your default viewer]
+
 This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen.  The BiSciCol data model is described at http://biscicol.blogspot.com/2013_03_01_archive.html and the BiSciCol terms are described at http://biscicol.org/terms/index.html .  In this example, the Event and Location instances are identified using the BCID system described at http://biscicol.blogspot.com/2013/05/sneak-peeks-biscicol-style.html .  
 
 ===1.1 As RDF/XML:===
