@@ -39,6 +39,9 @@ This is a relatively simple example where an Occurrence is documented by a singl
 [http://tdwg-rdf.googlecode.com/svn/trunk/file/taxonconcept-specimen-obj-prop.jpg Click here to view image in your default viewer]
 
 ===1.1 As RDF/XML===
+
+Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.rdf this file].
+
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -176,6 +179,9 @@ Information about the metadata document itself
 }}}
 
 ===1.2 As RDF/Turtle===
+
+Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl this file].
+
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
