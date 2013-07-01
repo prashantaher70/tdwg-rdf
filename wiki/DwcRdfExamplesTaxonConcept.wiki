@@ -34,6 +34,10 @@ Also note that the taxon concept to which the {{{dwcuri:toTaxonConcept}}} proper
 
 This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen
 
+<img src="http://tdwg-rdf.googlecode.com/svn/trunk/file/taxonconcept-specimen-obj-prop.png" height="200" width="3855"/>
+
+[http://tdwg-rdf.googlecode.com/svn/trunk/file/taxonconcept-specimen-obj-prop.jpg Click here to view image in your default viewer]
+
 ===1.1 As RDF/XML===
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
