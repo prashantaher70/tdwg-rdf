@@ -68,7 +68,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#Identification_0001">
     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
-	<rdf:type rdf:resource ="http://lod.taxonconcept.org/ontology/txn.owl#Identification" />
+    <rdf:type rdf:resource ="http://lod.taxonconcept.org/ontology/txn.owl#Identification" />
     <dwc:identifiedBy>Oliver P. Pearson</dwc:identifiedBy>
     <dwcuri:identifiedBy rdf:resource ="http://viaf.org/viaf/263074474" />
     <dwc:dateIdentified>1999-01-27</dwc:dateIdentified>
@@ -93,6 +93,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 </rdf:Description>
 
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#Occurrence">
+     <!-- This example combines the metadata for the Occurrence and PreservedSpecimen (i.e. considers the specimen to be an occurrence) -->
      <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen" />
      <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
      <rdf:type rdf:resource ="http://lod.taxonconcept.org/ontology/txn.owl#Occurrence" />
