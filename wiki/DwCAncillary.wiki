@@ -39,8 +39,8 @@ There is currently no TDWG standard which contains terms that are suitable for e
 
 [DwcRdfExamplesTaxonConcept Examples using TaxonConcept Ontology object properties]
 
-These examples follow the Darwin Core RDF Guide. They assume the data model of the TaxonConcept? Ontology (http://www.taxonconcept.org/ ) and use its object properties to link the class instances. 
+These examples follow the Darwin Core RDF Guide. They assume the data model of the TaxonConcept? Ontology ([http://www.taxonconcept.org/]) and use its object properties to link the class instances. 
 
 [DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
 
-These examples follow the Darwin Core RDF Guide. They assume the data model of Darwin-SW (version 0.3; http://code.google.com/p/darwin-sw/ ) and use its object properties to link the class instances. 
+These examples follow the Darwin Core RDF Guide. They assume the data model of Darwin-SW (version 0.3; [http://code.google.com/p/darwin-sw/]) and use its object properties to link the class instances. 
