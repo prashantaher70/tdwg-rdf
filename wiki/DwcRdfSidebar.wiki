@@ -10,4 +10,5 @@ Informative ancillary documents not part of the standard
   * [MeasurementOrFact Expressing Darwin Core MeasurementOrFact Terms as RDF (vaporware)]
   * [SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
   * [TaxonInRDF Describing Taxon Concepts as RDF]
+  * [DwcRdfExamplesTaxonConcept Examples using TaxonConcept Ontology object properties]
   * [DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
