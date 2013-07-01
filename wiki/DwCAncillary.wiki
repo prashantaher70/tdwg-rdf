@@ -37,6 +37,10 @@ This document provides describes the implications of using {{{owl:sameAs}}} to l
 
 There is currently no TDWG standard which contains terms that are suitable for expressing taxon concepts as RDF. The Darwin Core RDF Guide discusses how {{{dwc:Taxon}}} terms can be used as convenience terms to provide metadata about taxa, but it does not specify how the taxa themselves should be described as RDF. Although not ratified standards, the TaxonConcept and TaxonName parts of the TDWG Ontology (based on the TCS Standard [http://www.tdwg.org/standards/117/]) can be used to express taxon concepts as RDF. This document discusses how some basic aspects of taxon concepts (sensu TCS) can be expressed as RDF using terms from the TDWG Ontology. 
 
+[DwcRdfExamplesTaxonConcept Examples using TaxonConcept Ontology object properties]
+
+These examples follow the Darwin Core RDF Guide. They assume the data model of the TaxonConcept? Ontology (http://www.taxonconcept.org/ ) and use its object properties to link the class instances. 
+
 [DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
 
 These examples follow the Darwin Core RDF Guide. They assume the data model of Darwin-SW (version 0.3; http://code.google.com/p/darwin-sw/ ) and use its object properties to link the class instances. 
