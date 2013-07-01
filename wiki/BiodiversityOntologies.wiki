@@ -196,11 +196,11 @@ None of the classes shown on the diagram have subclass relationships.  The ontol
 
 Notes: dsw:Token instances may be related to dsw:IndividualOrganism instances in several ways.  General relatedness can be expressed using the pair of inverse properties dsw:derivedFrom and dsw:hasDerivative.  Both of these terms are transitive.  More specific relationships can be declared using foaf:depicts/foaf:hasDepiction for tokens that are images and dcterms:hasPart/dcterms:isPartOf for physical objects (e.g. specimens).  Neither of these specific relationship terms are transitive.  See http://code.google.com/p/darwin-sw/wiki/TokenIssues for more information.
 
-=5 The BiSciCol data model=
+=5 The !BiSciCol data model=
 
 == 5.1 Description ==
 
-The BiSciCol data model is described at http://biscicol.blogspot.com/2013_03_01_archive.html .  It includes six Darwin Core classes: Occurrence, Event, dcterms:Location, GeologicalContext, Identification, and Taxon .  The relationships among the classes shown on that page are:
+The !BiSciCol data model is described at http://biscicol.blogspot.com/2013_03_01_archive.html .  It includes six Darwin Core classes: Occurrence, Event, dcterms:Location, GeologicalContext, Identification, and Taxon .  The relationships among the classes shown on that page are:
 
 http://2.bp.blogspot.com/--5-pDb4P5fQ/UT66ZpFJK9I/AAAAAAAAAG0/_-koqKyfzSI/s400/DwC_concept_relations-scaled.png
 
@@ -209,3 +209,5 @@ There are only two object properties used in this model (the abbreviation bsc: s
 ||Property||Subject class||Domain declared?||Object class||Range declared?||
 ||bsc:depends_on||various||no||various||no||
 ||bsc:related_to||various||no||various||no||
+
+These properties are defined at http://biscicol.org/terms/index.html .  Neither of these two properties are transitive.
