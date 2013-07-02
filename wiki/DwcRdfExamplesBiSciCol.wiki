@@ -28,7 +28,7 @@ http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativec
 
 [http://tdwg-rdf.googlecode.com/svn/trunk/file/biscicol-specimen-obj-prop.jpg Click here to view image in your default viewer]
 
-This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen.  The BiSciCol data model is described at http://biscicol.blogspot.com/2013_03_01_archive.html and the BiSciCol terms are described at http://biscicol.org/terms/index.html .  In this example, the Event and Location instances are identified using the BCID system described at http://biscicol.blogspot.com/2013/05/sneak-peeks-biscicol-style.html .  
+This is a relatively simple example where an Occurrence is documented by a single PreservedSpecimen.  The BiSciCol model for interpreting Darwin Core archives is described at http://biscicol.blogspot.com/2013_03_01_archive.html and the BiSciCol terms are described at http://biscicol.org/terms/index.html .  In this example, the Event and Location instances are identified using the BCID system described at http://biscicol.blogspot.com/2013/05/sneak-peeks-biscicol-style.html . The {{{http://n2t.net/ark:/}}} URIs do not actually represent the resources with which they are associated in this example - they are simply included to show the form of URI used in the BCID system.
 
 ===1.1 As RDF/XML:===
 
@@ -84,7 +84,7 @@ xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      <dwc:recordedBy>Oliver P. Pearson</dwc:recordedBy>
      <dwcuri:recordedBy rdf:resource ="http://viaf.org/viaf/263074474" />
      <dwc:recordNumber>7101</dwc:recordNumber>
-     <bsc:depends_on rdf:resource="http://nt2.net/ark:/21547/Et2" />
+     <bsc:depends_on rdf:resource="http://n2t.net/ark:/21547/Et2" />
 </rdf:Description>
 
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson">
@@ -111,13 +111,13 @@ xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
     <bsc:depends_on rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861"/>
 </rdf:Description>
 
-<rdf:Description rdf:about="http://nt2.net/ark:/21547/Et2">
+<rdf:Description rdf:about="http://n2t.net/ark:/21547/Et2">
      <dwc:eventDate>1983-11-16</dwc:eventDate>
      <rdf:type rdf:resource ="http://purl.org/dc/dcmitype/Event" />
-     <bsc:related_to rdf:resource="http://nt2.net/ark:/21547/c2" />
+     <bsc:related_to rdf:resource="http://n2t.net/ark:/21547/c2" />
 </rdf:Description>
 
-<rdf:Description rdf:about="http://nt2.net/ark:/21547/c2">
+<rdf:Description rdf:about="http://n2t.net/ark:/21547/c2">
      <rdf:type rdf:resource ="http://purl.org/dc/terms/Location" />
      <dwc:decimalLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-40.9684722</dwc:decimalLatitude>
      <dwc:decimalLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-71.1918056</dwc:decimalLongitude>
@@ -149,8 +149,8 @@ Information about the metadata document itself
      <dcterms:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng" />
      <dcterms:modified rdf:datatype ="http://www.w3.org/2001/XMLSchema#dateTime">2013-06-27T10:26:34</dcterms:modified>
      <dcterms:references rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861"/>
-     <dcterms:references rdf:resource="http://nt2.net/ark:/21547/Et2"/>
-     <dcterms:references rdf:resource="http://nt2.net/ark:/21547/c2"/>
+     <dcterms:references rdf:resource="http://n2t.net/ark:/21547/Et2"/>
+     <dcterms:references rdf:resource="http://n2t.net/ark:/21547/c2"/>
      <dcterms:references rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson"/>
 </rdf:Description>
 </rdf:RDF>
@@ -202,7 +202,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/biscicol-specimen.ttl
 	dwc:sex "female";
 	dwcuri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:34777>;
 	dwcuri:recordedBy <http://viaf.org/viaf/263074474>;
-	bsc:depends_on <http://nt2.net/ark:/21547/Et2>;
+	bsc:depends_on <http://n2t.net/ark:/21547/Et2>;
 	a 	dwctype:Occurrence,
 		dwctype:PreservedSpecimen.
 		
@@ -231,12 +231,12 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/biscicol-specimen.ttl
 		<http://zoobank.org/306F5618-D154-47D5-81BB-697CB2A83EE7>;
 	a dwctype:Identification.
 	
-<http://nt2.net/ark:/21547/Et2> 
+<http://n2t.net/ark:/21547/Et2> 
 	dwc:eventDate "1983-11-16";
-	bsc:related_to <http://nt2.net/ark:/21547/c2>;
+	bsc:related_to <http://n2t.net/ark:/21547/c2>;
 	a dcmitype:Event.
                                 
-<http://nt2.net/ark:/21547/c2> 
+<http://n2t.net/ark:/21547/c2> 
 	dwc:continent "South America";
 	dwc:coordinateUncertaintyInMeters "30"^^xsd:int;
 	dwc:country "Argentina";
@@ -265,7 +265,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/biscicol-specimen.ttl
 	dcterms:references 
 		<http://arctos.database.museum/guid/MVZ:Mamm:165861>,
 		<http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson>,
-		<http://nt2.net/ark:/21547/Et2>,
-		<http://nt2.net/ark:/21547/c2>;
+		<http://n2t.net/ark:/21547/Et2>,
+		<http://n2t.net/ark:/21547/c2>;
 	a foaf:Document.
 }}}
