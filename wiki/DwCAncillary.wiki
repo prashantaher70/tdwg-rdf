@@ -44,3 +44,7 @@ These examples follow the Darwin Core RDF Guide. They assume the data model of t
 [DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
 
 These examples follow the Darwin Core RDF Guide. They assume the data model of Darwin-SW (version 0.3; [http://code.google.com/p/darwin-sw/]) and use its object properties to link the class instances. 
+
+[DwcRdfExamplesBiSciCol Examples using BiSciCol object properties]
+
+These examples assume the data model of BiSciCol (http://biscicol.blogspot.com/ ) and use its object properties to link the class instances. 
