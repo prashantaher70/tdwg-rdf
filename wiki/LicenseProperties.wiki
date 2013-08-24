@@ -35,4 +35,18 @@ The following namespace abbreviations are used in this document:
 
 The Dublin Core Metadata Initiative (DCMI) vocabulary (defined at http://dublincore.org/documents/dcmi-terms/) describes the core relationships among property rights terms.  The property {{{dcterms:rights}}} is defined as "information about rights held in and over the resource". These rights can include rights of access (described using the subproperty {{{dcterms:accessRights}}}) and intellectual property rights such as copyright.  An important subproperty of {{{dcterms:rights}}} is {{{dcterms:license}}}, defined as "a legal document giving official permission to do something with the resource".
 
-The Creative Commons organization (http://creativecommons.org/) has standardized a set of licenses which allow creators of intellectual property to retain copyright of their works while allowing certain types of use without requiring permission from the copyright owner.  These licenses are widely used on the Internet and have become the de-facto standard for specifying how works can be reused by others.  
+The Creative Commons organization (http://creativecommons.org/) has standardized a set of licenses which allow creators of intellectual property to retain copyright of their works while allowing certain types of use without requiring permission from the copyright owner.  These licenses are widely used on the Internet and have become the de-facto standard for specifying how works can be reused by others.  Each license is identified by a URI which can be the object of an RDF triple.
+
+== 2 License properties ==
+
+There are four well-known properties that can be used as predicates in RDF triples describing license properties of a resource.
+
+=== 2.1 xmpRights:UsageTerms ==
+
+=== 2.2 xhtml:license ===
+
+=== 2.3 cc:license ===
+
+=== 2.4 dcterms:license ===
+
+To provide a literal description of the licensing terms for intellectual property, use xmpRights:UsageTerms as recommended by Audubon Core.  To link to the URI for a Creative Commons license (for example:  “http://creativecommons.org/licenses/by-nc/3.0/” ), use the property xhv:license as recommended by the Creative Commons guidelines [http://wiki.creativecommons.org/RDFa CC-RDFA].  This is equivalent to using the rel="license" attribute of an anchor tag in RDFa (see also [http://www.iana.org/assignments/link-relations/link-relations.xml IANA-LINK-RELATIONS]).  
