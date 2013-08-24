@@ -87,7 +87,7 @@ The term {{{xhv:license}}} is itself defined in RDFa at http://www.w3.org/1999/x
 
 === 2.3 cc:license ===
 
-Creative Commons defines a Creative Commons Rights Expression Language (http://creativecommons.org/ns) which can be used to describe licenses in RDF (view the page source to see the underlying RDFa which defines the vocabulary).  This vocabulary includes the term {{{cc:license}}} which is used to link a work to its license.  The definition of {{{cc:license}}} declares it to be {{{rdfs:subPropertyOf dcterms:license}}} and to be {{{owl:sameAs xhv:license}}}.  Thus an application which is aware of the definition of {{{cc:license}}} in RDF can use that definition to infer additional properties that are not necessarily stated explicitly in the RDF describing a work.  For example, if the following RDF is asserted:
+Creative Commons defines a Creative Commons Rights Expression Language (http://creativecommons.org/ns ; view the page source to see the underlying RDFa which defines the vocabulary) which can be used to describe licenses in RDF.  This vocabulary includes the term {{{cc:license}}} which is used to link a work to its license.  The definition of {{{cc:license}}} declares it to be {{{rdfs:subPropertyOf dcterms:license}}} and to be {{{owl:sameAs xhv:license}}}.  Thus an application which is aware of the definition of {{{cc:license}}} in RDF can use that definition to infer additional properties that are not necessarily stated explicitly in the RDF describing a work.  For example, if the following RDF is asserted:
 
 RDF/XML:
 {{{
