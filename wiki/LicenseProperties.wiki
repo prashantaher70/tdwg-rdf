@@ -83,7 +83,7 @@ Turtle:
      xhv:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>.
 }}}
 
-The term {{{xhv:license}}} is itself defined in RDFa at http://www.w3.org/1999/xhtml/vocab/ (view the page source to see the underlying RDFa).  The definition simply states that {{{xhv:license}}} is an {{{rdf:Property}}} with a text comment that the term "refers to a resource that defines the associated license".  There are no formal semantics that relates {{{xhv:license}}} to any other term.
+The term {{{xhv:license}}} is itself defined in RDFa at http://www.w3.org/1999/xhtml/vocab/ (view the page source to see the underlying RDFa).  The definition simply states that {{{xhv:license}}} is an {{{rdf:Property}}} with a text comment that the term "refers to a resource that defines the associated license".  There are no formal semantics that relate {{{xhv:license}}} to any other term.
 
 === 2.3 cc:license ===
 
