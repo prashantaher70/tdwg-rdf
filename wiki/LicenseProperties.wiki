@@ -30,6 +30,7 @@ The following namespace abbreviations are used in this document:
 ||Creative Commons Rights Expression Language||cc:||http://creativecommons.org/ns#||
 ||XHTML Vocabulary||xhtml:||http://www.w3.org/1999/xhtml/vocab#||
 ||Dublin Core Metadata Terms||dcterms:||http://purl.org/dc/terms/||
+||Extensible Metadata Platform Rights Management vocabulary||xmpRights:||http://ns.adobe.com/xap/1.0/rights/||
 
 == 1 Introduction ==
 
@@ -41,7 +42,7 @@ The Creative Commons organization (http://creativecommons.org/) has standardized
 
 There are four well-known properties that can be used as predicates in RDF triples describing license properties of a resource.
 
-=== 2.1 xmpRights:UsageTerms ==
+=== 2.1 !xmpRights:UsageTerms ==
 
 === 2.2 xhtml:license ===
 
