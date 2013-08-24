@@ -28,7 +28,7 @@ The following namespace abbreviations are used in this document:
 ||Resource Description Framework||rdf:||http://www.w3.org/1999/02/22-rdf-syntax-ns#||
 ||RDF Schema||rdfs:||http://www.w3.org/2000/01/rdf-schema#||
 ||Creative Commons Rights Expression Language||cc:||http://creativecommons.org/ns#||
-||XHTML Vocabulary||xhtml:||http://www.w3.org/1999/xhtml/vocab#||
+||XHTML Vocabulary||xhv:||http://www.w3.org/1999/xhtml/vocab#||
 ||Dublin Core Metadata Terms||dcterms:||http://purl.org/dc/terms/||
 ||Extensible Metadata Platform Rights Management vocabulary||xmpRights:||http://ns.adobe.com/xap/1.0/rights/||
 
@@ -40,14 +40,29 @@ The Creative Commons organization (http://creativecommons.org/) has standardized
 
 == 2 License properties ==
 
-There are four well-known properties that can be used as predicates in RDF triples describing license properties of a resource.
+In addition to {{{dcterms:license}}}, there are three well-known properties that can be used as predicates in RDF triples describing license properties of a resource.
 
 === 2.1 xmpRights:!UsageTerms ==
 
+Audubon Core (supply permanent URL here) specifies that {{{xmpRights:UsageTerms}}} should be used to describe "the license statement defining how resources may be used" and provides an example of a string description of a Creative Commons license.  The {{{xmpRights:}}} namespace terms are defined in a PDF document rather than as RDF, so following the example of Audubon Core and expressing the value of {{{xmpRights:UsageTerms}}} as a literal object in an RDF triple would not introduce any inconsistencies.
+
+RDF/XML:
+{{{
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/32965">
+     <xmpRights:UsageTerms xml:lang="en">Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license</xmpRights:UsageTerms>.
+</rdf:Description>
+}}}
+
+Turtle:
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/32965>
+     xmpRights:UsageTerms "Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license"@en.
+}}}
+
 === 2.2 xhtml:license ===
+
+
 
 === 2.3 cc:license ===
 
-=== 2.4 dcterms:license ===
-
-To provide a literal description of the licensing terms for intellectual property, use xmpRights:UsageTerms as recommended by Audubon Core.  To link to the URI for a Creative Commons license (for example:  “http://creativecommons.org/licenses/by-nc/3.0/” ), use the property xhv:license as recommended by the Creative Commons guidelines [http://wiki.creativecommons.org/RDFa CC-RDFA].  This is equivalent to using the rel="license" attribute of an anchor tag in RDFa (see also [http://www.iana.org/assignments/link-relations/link-relations.xml IANA-LINK-RELATIONS]).  
+To link to the URI for a Creative Commons license (for example:  “http://creativecommons.org/licenses/by-nc/3.0/” ), use the property xhv:license as recommended by the Creative Commons guidelines [http://wiki.creativecommons.org/RDFa CC-RDFA].  This is equivalent to using the rel="license" attribute of an anchor tag in RDFa (see also [http://www.iana.org/assignments/link-relations/link-relations.xml IANA-LINK-RELATIONS]).  
