@@ -48,21 +48,43 @@ Audubon Core (supply permanent URL here) specifies that {{{xmpRights:UsageTerms}
 
 RDF/XML:
 {{{
-<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/32965">
-     <xmpRights:UsageTerms xml:lang="en">Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license</xmpRights:UsageTerms>.
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87943">
+     <xmpRights:UsageTerms xml:lang="en">Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license</xmpRights:UsageTerms>
 </rdf:Description>
 }}}
 
 Turtle:
 {{{
-<http://bioimages.vanderbilt.edu/baskauf/32965>
+<http://bioimages.vanderbilt.edu/baskauf/87943>
      xmpRights:UsageTerms "Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license"@en.
 }}}
 
-=== 2.2 xhtml:license ===
+=== 2.2 xhv:license ===
 
+Creative Commons provides guidelines for expressing license information on the Semantic Web in the form of RDFa (http://wiki.creativecommons.org/RDFa).  The following snippet of XHTML contains RDF in the form of RDFa:
+
+{{{
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="fruit of Hedyotis crassifolia" style="border-width:0" src="http://bioimages.vanderbilt.edu/gq/baskauf/g87943.jpg" /></a>
+}}}
+
+Using the rel="license" attribute of an anchor tag in RDFa asserts an {{{xhv:license}}} property (in addition to establishing a generic HTML Link Relation; see http://www.iana.org/assignments/link-relations/link-relations.xml).  A client capable of consuming RDFa would infer the same triple as in these examples:
+
+RDF/XML:
+{{{
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/gq/baskauf/g87943.jpg">
+     <xhv:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+</rdf:Description>
+}}}
+
+Turtle:
+{{{
+<http://bioimages.vanderbilt.edu/gq/baskauf/g87943.jpg>
+     xhv:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>.
+}}}
+
+The term is itself defined in RDFa at 
 
 
 === 2.3 cc:license ===
 
-To link to the URI for a Creative Commons license (for example:  “http://creativecommons.org/licenses/by-nc/3.0/” ), use the property xhv:license as recommended by the Creative Commons guidelines [http://wiki.creativecommons.org/RDFa CC-RDFA].  This is equivalent to using the rel="license" attribute of an anchor tag in RDFa (see also [http://www.iana.org/assignments/link-relations/link-relations.xml IANA-LINK-RELATIONS]).  
+ 
