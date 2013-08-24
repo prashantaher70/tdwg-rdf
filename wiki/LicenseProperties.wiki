@@ -116,8 +116,8 @@ RDF/XML:
 Turtle:
 {{{
 <http://bioimages.vanderbilt.edu/baskauf/87943>
-     cc:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>,
-     xhv:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>,
+     cc:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>;
+     xhv:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>;
      dcterms:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>.
 }}}
 
