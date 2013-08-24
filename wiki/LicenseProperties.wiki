@@ -44,7 +44,7 @@ In addition to {{{dcterms:license}}}, there are three well-known properties that
 
 === 2.1 xmpRights:!UsageTerms ==
 
-Audubon Core (supply permanent URL here) specifies that {{{xmpRights:UsageTerms}}} should be used to describe "the license statement defining how resources may be used" and provides an example of a string description of a Creative Commons license.  The {{{xmpRights:}}} namespace terms are defined in a PDF document rather than as RDF, so following the example of Audubon Core and expressing the value of {{{xmpRights:UsageTerms}}} as a literal object in an RDF triple would not introduce any inconsistencies.
+Audubon Core (supply permanent URL here) specifies that {{{xmpRights:UsageTerms}}} should be used to describe "the license statement defining how resources may be used" and provides an example of a string description of a Creative Commons license.  The {{{xmpRights:}}} namespace terms are defined in a PDF document rather than as RDF, so following the example of Audubon Core and expressing the value of {{{xmpRights:UsageTerms}}} as a literal object in an RDF triple would not introduce any inconsistencies.  The definition of {{{xmpRights:UsageTerms}}} does not specify any formal relationship between it and any other property such as {{{dcterms:license}}}.  The following examples use {{{xmpRights:UsageTerms}}} as an RDF predicate having a literal object:
 
 RDF/XML:
 {{{
@@ -82,9 +82,46 @@ Turtle:
      xhv:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>.
 }}}
 
-The term is itself defined in RDFa at 
-
+The term {{{xhv:license}}} is itself defined in RDFa at http://www.w3.org/1999/xhtml/vocab/ (view the page source to see the underlying RDFa).  The definition simply states that {{{xhv:license}}} is an {{rdf:Property}}} with a text comment that the term "refers to a resource that defines the associated license".  There are no formal semantics that relates {{{xhv:license}}} to any other term.
 
 === 2.3 cc:license ===
 
- 
+Creative Commons defines a Creative Commons Rights Expression Language (http://creativecommons.org/ns) which can be used to describe licenses in RDF (view the page source to see the underlying RDFa which defines the vocabulary).  This vocabulary includes the term {{{cc:license}}} which is used to link a work to its license.  The definition of {{{cc:license}}} declares it to be {{{rdfs:subPropertyOf dcterms:license}}} and to be {{{owl:sameAs xhv:license}}}.  Thus an application which is aware of the definition of {{{cc:license}}} in RDF can use that definition to infer additional properties that are not necessarily stated explicitly in the RDF describing a work.  For example, if the following RDF is asserted:
+
+RDF/XML:
+{{{
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87943">
+     <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+</rdf:Description>
+}}}
+
+Turtle:
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/87943>
+     cc:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>.
+}}}
+
+a client that conducts inferencing based on the definition of {{{cc:license}}} can infer the following triples:
+
+RDF/XML:
+{{{
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87943">
+     <cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+     <xhv:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0/"/>
+</rdf:Description>
+}}}
+
+Turtle:
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/87943>
+     cc:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>,
+     xhv:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>,
+     dcterms:license <http://creativecommons.org/licenses/by-nc-sa/3.0/>.
+}}}
+
+Additionally, a client could infer additional triples based on the definition of {{{dcterms:license}}} which declares it to be {{{rdfs:subPropertyOf dcterms:rights}}}, {{{rdfs:subPropertyOf dc:rights}}}, and have {{{rdfs:range dcterms:LicenseDocument}}}.
+
+A client that is aware of the RDF definition of {{{cc:license}}} can infer all of the same triples in the example above from RDF that only explicitly asserts a single triple containing an {{{xhv:license}}}. property.  However, a client that is unaware of the RDF definition of {{{cc:license}}} cannot make such inferences based solely on the definition of {{{xhv:license}}}.  
+
+== 3. ==
