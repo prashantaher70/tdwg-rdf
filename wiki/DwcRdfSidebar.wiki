@@ -8,6 +8,7 @@ Informative ancillary documents not part of the standard
   * [DwCAncillary Landing page for ancillary documents]
   * [ResourceRelationship Expressing Darwin Core ResourceRelationship Terms as RDF]
   * [MeasurementOrFact Expressing Darwin Core MeasurementOrFact Terms as RDF (vaporware)]
+  * [LicenseProperties Expressing License Properties as RDF]
   * [SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
   * [TaxonInRDF Describing Taxon Concepts as RDF]
   * [DwcRdfExamplesTaxonConcept Examples using TaxonConcept Ontology object properties]
