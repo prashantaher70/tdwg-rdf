@@ -42,7 +42,7 @@ The Creative Commons organization (http://creativecommons.org/) has standardized
 
 There are four well-known properties that can be used as predicates in RDF triples describing license properties of a resource.
 
-=== 2.1 !xmpRights:UsageTerms ==
+=== 2.1 xmpRights:!UsageTerms ==
 
 === 2.2 xhtml:license ===
 
