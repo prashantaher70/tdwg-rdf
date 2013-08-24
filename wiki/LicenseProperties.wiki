@@ -19,4 +19,16 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
 
-The 
+*Table of Contents:*
+<wiki:toc max_depth="4" />
+
+The following namespace abbreviations are used in this document:
+
+||vocabulary name||namespace abbreviation||full prefix||
+||Resource Description Framework||rdf:||http://www.w3.org/1999/02/22-rdf-syntax-ns#||
+||RDF Schema||rdfs:||http://www.w3.org/2000/01/rdf-schema#||
+||Creative Commons Rights Expression Language||cc:||http://creativecommons.org/ns#||
+||XHTML Vocabulary||xhtml:||http://www.w3.org/1999/xhtml/vocab#||
+||Dublin Core Metadata Terms||dcterms:||http://purl.org/dc/terms/||
+
+== 1 Introduction ==
