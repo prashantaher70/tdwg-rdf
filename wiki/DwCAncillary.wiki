@@ -29,6 +29,10 @@ The draft Darwin Core RDF Guide describes how to use Darwin Core terms as predic
 
 This document shows how to express Darwin Core !ResourceRelationship properties as RDF using the Open Annotation Data Model 
 
+[LicenseProperties Expressing License Properties as RDF]
+
+This document discusses terms which can be used to express the license properties of a resource and the circumstances under which the various terms might be used.
+
 [SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
 
 This document provides describes the implications of using {{{owl:sameAs}}} to link several URI identifiers that refer to the same resource. The particular example of LSIDs is considered. 
