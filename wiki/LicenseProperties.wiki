@@ -30,6 +30,7 @@ The following namespace abbreviations are used in this document:
 ||Creative Commons Rights Expression Language||cc:||http://creativecommons.org/ns#||
 ||XHTML Vocabulary||xhv:||http://www.w3.org/1999/xhtml/vocab#||
 ||Dublin Core Metadata Terms||dcterms:||http://purl.org/dc/terms/||
+||Dublin Core legacy terms||dc:||http://purl.org/dc/elements/1.1/||
 ||Extensible Metadata Platform Rights Management vocabulary||xmpRights:||http://ns.adobe.com/xap/1.0/rights/||
 
 == 1 Introduction ==
@@ -124,4 +125,8 @@ Additionally, a client could infer additional triples based on the definition of
 
 A client that is aware of the RDF definition of {{{cc:license}}} can infer all of the same triples in the example above from RDF that only explicitly asserts a single triple containing an {{{xhv:license}}}. property.  However, a client that is unaware of the RDF definition of {{{cc:license}}} cannot make such inferences based solely on the definition of {{{xhv:license}}}.  
 
-== 3. ==
+== 3. Implications==
+
+Providers expressing license information using RDFa should be aware that use of the {{{rel="license"}}} attribute asserts explicitly only an {{{xhv:license}}} property for the work.  Providers using other serializations of RDF (such as XML or Turtle) to express a {{{cc:license}}} for a work should be aware that clients will not necessarily reason all of the possible triples that can be inferred based on the definition of {{{cc:license}}}.  If maximum expressiveness is important to the provider, the provider should assert all of the desired license property triples explicitly.  
+
+Similarly, consumers and application developers should be aware that providers will not necessarily provide license properties using all of the terms listed above.  They should take this into consideration when designing queries to locate resources having particular license properties.
