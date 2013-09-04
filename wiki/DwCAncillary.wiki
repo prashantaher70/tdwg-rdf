@@ -55,4 +55,4 @@ These examples assume the data model of BiSciCol (http://biscicol.blogspot.com/ 
 
 [DwcRdfOccurrences Examples of representing occurrences in RDF using "pure" Darwin Core]
 
-These examples assume no data model other than the one explicitly defined by Darwin Core, and use the rdf properties defined by Darwin Core to link class instances. 
+These examples assume no data model other than the one explicitly defined by Darwin Core, and use the RDF properties defined by Darwin Core to link class instances. 
