@@ -747,7 +747,7 @@ where http://viaf.org/viaf/263074474 is a persistent URI identifier for the pers
  
 A client that encounters a triple having a term from the dwcuri: namespace as its predicate can expect the object of the triple to be a URI reference and subsequently be able to dereference that URI to obtain additional information about the entity that it represents.  A client encountering a triple having a term from the dwc: namespace should be prepared to accept a literal object, although it is possible that some data providers unaware of this guide may have used dwc: terms with URI references as rdf:resource attributes.  Application developers should be flexible in their expectations for the values of properties from the dwc: namespace. 
  
-==2.6 Darwin Core "ID" terms and RDF==
+==2.6 Darwin Core ID terms and RDF==
  
 Darwin Core contains a number of "ID" terms intended to designate identifiers, e.g. dwc:occurrenceID, dwc:identificationID, dwc:locationID, etc.  The "ID" terms provide two functions, specifying the class of the resource and indicating that value of the term is an identifier.  These functions are illustrated by the following non-RDF XML below, which is part of an example provided in the Darwin Core XML Guide [http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#classes DWC-XML]:
  
@@ -1102,7 +1102,7 @@ Used to indicate the class of which the resource is an instance.  It is consider
 dcterms:identifier
 Used to relate string literal identifiers to the subject resource.  This can include string representations of URIs if they are considered the identifier for the resource.
 
-==3.2 Dublin Core terms imported into Darwin Core for which only literal objects are appropriate==
+==3.2 Imported Dublin Core terms for which only literal objects are appropriate==
 
 
 term
@@ -1117,7 +1117,7 @@ rdfs:Literal
 
 1 Recommended format is ISO 8601:2004(E).  See notes on date terms in Section 3.4 for further information.
 
-==3.3 Dublin Core terms imported into Darwin Core having non-literal objects and the corresponding term for use with literal objects==
+==3.3 Imported Dublin Core terms that have non-literal objects and corresponding terms that have literal objects==
 
 Term intended for use in RDF with non-literal objects2
 range
@@ -1216,7 +1216,9 @@ Use only with literal value strings from the Darwin Core Type Vocabulary.  Use r
 
 6 No Darwin Core terms defined in the Darwin Core normative RDF (as opposed to those imported from Dublin Core) have domain or range declarations as a part of their definitions.  However, the three five terms in the dwc: namespace listed in the table above are defined to be rdfs:subPropertyOf of dcterms:date, which has the range rdfs:Literal.  Therefore they have the range rdfs:Literal through inheritance. 
 
-==3.5 Terms defined by Darwin Core that are expected to be used only with literal values because they are “convenience terms” (see section 2.7)==
+==3.5 Darwin Core convenience terms that are expected to be used only with literal values ==
+
+See section 2.7 for more information on "convenience" terms.
 
 Darwin Core term
 Notes
@@ -1285,7 +1287,7 @@ The subject resource should be a dwc:GeologicalContext instance.  As an alternat
 It seems like these should be hierarchical “convenience terms”.  However, there doesn’t seem to be a standardized system for the lithostratigraphic terms as there is for the chronostratigraphic terms.  So I’m not sure where to go on this.  We could allow them to have dwcuri: analogues???
 
 
-==3.6 dwcuri: terms having local names that don’t correspond to existing terms in the general Darwin Core namespace==
+==3.6 dwcuri: terms having local names that don’t correspond to terms in the dwc: Darwin Core namespace==
 
 Darwin Core term
 Notes
@@ -1303,7 +1305,7 @@ Use to link a dwc:GeologicalContext instance to a URI-identified lithostratigrap
 dwcuri:inDataset
 This object property is provided to link a subject dataset record to the dataset which contains it.  A string literal name of the dataset can be provided using the term dwc:datasetName.  
 
-==3.7 Darwin Core terms which have analogues in the dwcuri: namespace==
+==3.7 dwc: namespace terms which have analogues in the dwcuri: namespace==
 
 Darwin Core term having a dwcuri: analogue with the same local name
 Notes on the dwcuri: analogues
