@@ -2,18 +2,29 @@
 
 = Darwin Core RDF Guide =
 
-Title: Darwin Core RDF Guide
-Date issued: x
-Date modified: 
-Abstract: This guide is intended to facilitate the use of Darwin Core terms in the Resource Description Framework (RDF). It explains basic features of RDF and provides details of how to expose data in the form of RDF using Darwin Core terms and terms from other key vocabularies.  It defines terms in the namespace http://rs.tdwg.org/dwc/uri/ which are intended for use excusively with non-literal objects.  
-Contributors: Steve Baskauf (TDWG RDF/OWL Task Group), John Wieczorek (TDWG Darwin Core Task Group), John Deck (Genomic Biodiversity Working Group), Campbell Webb (TDWG RDF/OWL Task Group), Mark Schildhauer (National Center for Ecological Analysis and Synthesis)
-Legal: This document is governed by the standard legal, copyright, licensing provisions and disclaimers issued by the Taxonomic Databases Working Group.   Licensed under Creative Commons Attribution 3.0 License
-Part of TDWG Standard: http://www.tdwg.org/standards/450/
-Creator: Darwin Core and RDF/OWL Task Group
-Identifier: http://rs.tdwg.org/dwc/terms/guides/rdf/
-Document Status: Current Standard (Type 2 non-normative document)
+* This is a draft submission under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy].  To view comments made by the RDF Task Group, view [https://docs.google.com/document/d/1OLyVFuveGX1a0Yt6Niok9FfGxkrghii-xlGYhwO8UqE/edit?usp=sharing this Google document].*  It is still being wikified as of 2013-09-09.
 
-Table of Contents:
+*Title:* Darwin Core RDF Guide
+
+*Date issued:* x
+
+*Date modified:* x
+
+*Abstract:* This guide is intended to facilitate the use of Darwin Core terms in the Resource Description Framework (RDF). It explains basic features of RDF and provides details of how to expose data in the form of RDF using Darwin Core terms and terms from other key vocabularies.  It defines terms in the namespace http://rs.tdwg.org/dwc/uri/ which are intended for use excusively with non-literal objects.  
+
+*Contributors:* Steve Baskauf (TDWG RDF/OWL Task Group), John Wieczorek (TDWG Darwin Core Task Group), John Deck (Genomic Biodiversity Working Group), Campbell Webb (TDWG RDF/OWL Task Group), Mark Schildhauer (National Center for Ecological Analysis and Synthesis)
+
+*Legal:* This document is governed by the standard legal, copyright, licensing provisions and disclaimers issued by the Taxonomic Databases Working Group.   Licensed under a [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License] [http://creativecommons.org/licenses/by/3.0/deed http://i.creativecommons.org/l/by/3.0/88x31.png]
+
+*Part of TDWG Standard:* http://www.tdwg.org/standards/450/
+
+*Creator:* Darwin Core and RDF/OWL Task Groups
+
+*Identifier:* http://rs.tdwg.org/dwc/terms/guides/rdf/ (eventually)
+
+*Document Status:* Current Standard ([http://www.tdwg.org/standards/147/ Type 2] non-normative document)
+
+*Table of Contents:*
 
 1 Introduction
 1.1 Audience
@@ -41,6 +52,7 @@ Table of Contents:
 3.7 Darwin Core dwc: and dwcuri: analogues
 3.8 Darwin Core terms whose function cannot be performed by dwcuri: analogues
 
+<wiki:toc max_depth="2" />
 
 1 Introduction
 
