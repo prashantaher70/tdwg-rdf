@@ -26,32 +26,6 @@
 
 *Table of Contents:*
 
-1 Introduction
-1.1 Audience
-1.2 Rationale
-1.3 Features of RDF
-1.4 Use of terms in RDF
-1.5 Roles of text strings
- 
-2 Implementation Guide.
-2.1 Definitions
-2.2 Subject resources
-2.3 Predicates
-2.4 Object resources
-2.5 Terms in the dwcuri: namespace
-2.6 Darwin Core "ID" terms and RDF
-2.7 Darwin Core “convenience” terms
-
-3 Term reference
-3.1 Fundamental non-Darwin Core terms needed in RDF
-3.2 Dublin Core terms having literal objects
-3.3 Dublin Core terms having non-literal objects
-3.4 Darwin Core terms expected to have only literal values
-3.5 Daron Core convenience terms expected to have only literal values
-3.6 Darwin Core dwcuri: terms having no dwc: analogue
-3.7 Darwin Core dwc: and dwcuri: analogues
-3.8 Darwin Core terms whose function cannot be performed by dwcuri: analogues
-
 <wiki:toc max_depth="2" />
 
 =1 Introduction=
