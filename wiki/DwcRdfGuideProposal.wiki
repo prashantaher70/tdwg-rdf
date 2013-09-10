@@ -752,8 +752,9 @@ This example could also be represented by the following database table in which 
 Table 3
 
 ||dwc:identificationID||dwc:identifiedBy||dwc:dateIdentified||dwc:taxonID||
-||"http://guid.mvz.org/identifications/23459"||"Richard Sage"||"2000"||"urn:lsid:catalogueoflife.org:taxon:"||
- 
+||"http://guid.mvz.org/identifications/23459"||"Richard Sage"||"2000"||"urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"||
+
+
 In Example 21 and Table 3, the "ID" terms are used to specify both the identifier of a resource which is the subject of the record itself (using the term dwc:identificationID) and to specify an object resource related to the subject resource by a foreign key (using the term dwc:taxonID).  Because the ID terms are not designated to be used with subjects or objects specifically, the resource they identify must be made clear by the context in which they are used.  In the case of the database table, a pre-existing understanding between the data provider and consumer would indicate that the rows of the table represent dwc:Identification instances and therefore the dwc:identificationID property would provide the identifier of the subject and any other ID terms would refer to object resources that are related to that particular identification instance.  In the XML example, the type of the subject resource is made clear through the record's container element and hence a consumer would know that the dwc:identificationID property referred to the subject resource.
  
 In RDF, the two functions (specifying type and referencing an identifier) are handled separately using rdf:type declarations (section 2.3.1) and defined mechanisms for expressing the identifier of the subject resource (section 2.2).  Because these mechanisms are well-known best practices outside TDWG, they should be used rather than using the Darwin Core ID terms when data are expressed as RDF. 
