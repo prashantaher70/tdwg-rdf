@@ -2,7 +2,7 @@
 
 = Darwin Core RDF Guide =
 
-* This is a draft submission under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy].  To view comments made by the RDF Task Group, view [https://docs.google.com/document/d/1OLyVFuveGX1a0Yt6Niok9FfGxkrghii-xlGYhwO8UqE/edit?usp=sharing this Google document].*  It is still being wikified as of 2013-09-09.
+* This is a draft submission under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy].  To view comments made by the RDF Task Group, view [https://docs.google.com/document/d/1OLyVFuveGX1a0Yt6Niok9FfGxkrghii-xlGYhwO8UqE/edit?usp=sharing this Google document].*  This document is still being wikified as of 2013-09-09.
 
 *Title:* Darwin Core RDF Guide
 
@@ -1064,28 +1064,9 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 ||dwc:eventDate dwc:georeferencedDate dwc:dateIdentified dwc:measurementDeterminedDate dwc:relationshipEstablishedDate||These date terms have range rdfs:Literal 6. Best practice as specified in the term definition recommends that they should be formatted according to ISO 8601:2004(E).  There is no defined XML Schema datatype that corresponds exactly to ISO 8601:2004(E), therefore the entire set of possible values cannot be specified using an rdf:datatype attribute.  The XML Schema dateTime datatype (xsd:dateTime) which is effectively a subset of ISO 8601:2004(E), may be used as an rdf:datatype attribute.  However, xsd:dateTime requires the complete series of year, month, day, hour, second (e.g. 002-10-10T12:00:00) and does not permit listing only part of this hierarchy (e.g. only the year) as is allowed in ISO 8601:2004(E).||
 ||dwc:eventTime||It is recommended that the format described by ISO 8601:2004(E) be used.  As with the date terms, there is no XML Schema datatype that includes all of the possible values allowed in ISO 8601:2004(E), so there is no generic rdf:datatype attribute that would apply to all possible instances.  The XML Schema time datatype (xsd:time) which is effectively a subset of ISO 8601:2004(E) may be used as an rdf:datatype attribute although it is limited to values that include hours, minutes, and seconds (e.g. 13:07:56-05:00).||
 ||dwc:individualCount dwc:decimalLatitude dwc:decimalLongitude dwc:coordinatePrecision dwc:pointRadiusSpatialFit dwc:coordinateUncertaintyInMeters dwc:minimumElevationInMeters dwc:maximumElevationInMeters dwc:minimumDepthInMeters dwc:maximumDepthInMeters dwc:minimumDistanceAboveSurfaceInMeters dwc:maximumDistanceAboveSurfaceInMeters dwc:startDayOfYear dwc:endDayOfYear dwc:year dwc:month dwc:day dwc:footprintSpatialFit||These terms are expected to have literal values which are numeric.  Therefore, an rdf:datatype attribute describing the form of the number may be appropriate.||
-dwc:occurrenceRemarks
-dwc:eventRemarks
-dwc:locationRemarks
-dwc:georeferenceRemarks
-dwc:identificationRemarks
-dwc:taxonRemarks
-dwc:measurementRemarks
-dwc:relationshipRemarks
-Because these are remarks, they are expected to have literal values.  An xml:lang attribute would be appropriate.
-dwc:catalogNumber
-dwc:samplingEffort
-dwc:verbatimEventDate
-dwc:verbatimLocality
-dwc:verbatimElevation
-dwc:verbatimCoordinates
-dwc:verbatimLatitude
-dwc:verbatimLongitude
-dwc:verbatimDepth
-dwc:verbatumTaxonRank
-Based on their term definitions, these terms are expected to have untyped literal values
-dwc:basisOfRecord
-Use only with literal value strings from the Darwin Core Type Vocabulary.  Use rdf:type to refer to URIs that describe the type of the resource.
+||dwc:occurrenceRemarks dwc:eventRemarks dwc:locationRemarks dwc:georeferenceRemarks dwc:identificationRemarks dwc:taxonRemarks dwc:measurementRemarks dwc:relationshipRemarks||Because these are remarks, they are expected to have literal values.  An xml:lang attribute would be appropriate.||
+||dwc:catalogNumber dwc:samplingEffort dwc:verbatimEventDate dwc:verbatimLocality dwc:verbatimElevation dwc:verbatimCoordinates dwc:verbatimLatitude dwc:verbatimLongitude dwc:verbatimDepth dwc:verbatumTaxonRank||Based on their term definitions, these terms are expected to have untyped literal values||
+||dwc:basisOfRecord||Use only with literal value strings from the Darwin Core Type Vocabulary.  Use rdf:type to refer to URIs that describe the type of the resource.||
 
 6 No Darwin Core terms defined in the Darwin Core normative RDF (as opposed to those imported from Dublin Core) have domain or range declarations as a part of their definitions.  However, the three five terms in the dwc: namespace listed in the table above are defined to be rdfs:subPropertyOf of dcterms:date, which has the range rdfs:Literal.  Therefore they have the range rdfs:Literal through inheritance. 
 
@@ -1093,72 +1074,12 @@ Use only with literal value strings from the Darwin Core Type Vocabulary.  Use r
 
 See section 2.7 for more information on "convenience" terms.
 
-Darwin Core term
-Notes
-dwc:collectionCode
-dwc:institutionCode
-dwc:ownerInstitutionCode
-The subject resource can be any resource that is part of a collection.  As an alternative, use the object property dwcuri:inCollection to link the subject resource to a URI for the collection containing the institution that owns or controls the resource.  
-dwc:kingdom
-dwc:phylum
-dwc:class
-dwc:order
-dwc:family
-dwc:genus
-dwc:subgenus
-dwc:specificEpithet
-dwc:infraspecificEpithet
-dwc:higherClassification
-dwc:vernacularName
-dwc:nameAccordingTo
-dwc:scientificName
-dwc:taxonRank
-dwc:scientificNameAuthorship
-dwc:nomenclaturalStatus
-dwc:namePublishedIn
-dwc:namePublishedInYear
-dwc:nomenclaturalCode
-dwc:originalNameUsage
-dwc:taxonomicStatus
-dwc:parentNameUsage
-dwc:acceptedNameUsage
-The subject resource should be a dwc:Identification instance.  See section 2.7.4 why it not recommended to use these as properties of dwctype:Taxon or dwc:Taxon instances.  As an alternative, use the object property dwcuri:toTaxonConcept to link the subject dwc:Identification instance to a taxonomic entity such as a taxon concept or taxon name use.  It is likely that these taxonomic entities will have a complex structure which differentiates among name entities, name strings, application of a name to a concept, which expresses parent/child and set relationships among entities, and which tracks provenance information about the names, references, and concepts.  The flat nature of text-based Darwin Core cannot represent such a complex structure and it is beyond the scope of this guide to describe them.  
-dwc:higherGeography
-dwc:continent
-dwc:waterBody
-dwc:islandGroup
-dwc:island
-dwc:countryCode
-dwc:country
-dwc:stateProvince  
-dwc:county
-dwc:municipality
-dwc:locality
-The subject resource should be a dcterms:Location instance.  As an alternative, use the object property dwcuri:inDescribedPlace to link the subject resource to a standardized place described as part of a hierarchy. See section 2.7.5 for details.
-
-It is likely that providers will want to provide a text value for dwc:locality even if dwcuri:inDescribedPlace is used to replace the other hierarchical convenience terms in this category.  This is because it is unlikely that a place description at this most specific level (e.g. “15 km N of Essen”) would be represented by a standardized URI-identified place instance.  There is no dwcuri: analogue of dwc:locality because if a URI-identified place were available to represent the locality, the term dwcuri:inDescribedPlace would be used to link to it.
-dwc:earliestEonOrLowestEonothem
-dwc:latestEonOrHighestEonothem
-dwc:earliestEraOrLowestErathem
-dwc:latestEraOrHighestErathem
-dwc:earliestPeriodOrLowestSystem
-dwc:latestPeriodOrHighestSystem
-dwc:earliestEpochOrLowestSeries
-dwc:latestEpochOrHighestSeries
-dwc:earliestAgeOrLowestStage
-dwc:latestAgeOrHighestStage
-The subject resource should be a dwc:GeologicalContext instance.  As an alternative, use the object properties dwcuri:earliestGeochronologicalEra and dwcuri:latestGeochronologicalEra as described in section 3.6.  See section 2.7.6 for details.
-
-
-dwc:lithostratigraphicTerms
-dwc:group
-dwc:formation
-dwc:member
-dwc:bed
-The subject resource should be a dwc:GeologicalContext instance.  As an alternative, use the object property dwcuri:fromLithostratigraphicUnit to link the subject resource to the lowest appropriate unit of a lithostratigraphic hierarchy.
-
-It seems like these should be hierarchical “convenience terms”.  However, there doesn’t seem to be a standardized system for the lithostratigraphic terms as there is for the chronostratigraphic terms.  So I’m not sure where to go on this.  We could allow them to have dwcuri: analogues???
-
+||Darwin Core term||Notes||
+||dwc:collectionCode dwc:institutionCode dwc:ownerInstitutionCode||The subject resource can be any resource that is part of a collection.  As an alternative, use the object property dwcuri:inCollection to link the subject resource to a URI for the collection containing the institution that owns or controls the resource.  ||
+||dwc:kingdom dwc:phylum dwc:class dwc:order dwc:family dwc:genus dwc:subgenus dwc:specificEpithet dwc:infraspecificEpithet dwc:higherClassification dwc:vernacularName dwc:nameAccordingTo dwc:scientificName dwc:taxonRank dwc:scientificNameAuthorship dwc:nomenclaturalStatus dwc:namePublishedIn dwc:namePublishedInYear dwc:nomenclaturalCode dwc:originalNameUsage dwc:taxonomicStatus dwc:parentNameUsage dwc:acceptedNameUsage||The subject resource should be a dwc:Identification instance.  See section 2.7.4 why it not recommended to use these as properties of dwctype:Taxon or dwc:Taxon instances.  As an alternative, use the object property dwcuri:toTaxonConcept to link the subject dwc:Identification instance to a taxonomic entity such as a taxon concept or taxon name use.  It is likely that these taxonomic entities will have a complex structure which differentiates among name entities, name strings, application of a name to a concept, which expresses parent/child and set relationships among entities, and which tracks provenance information about the names, references, and concepts.  The flat nature of text-based Darwin Core cannot represent such a complex structure and it is beyond the scope of this guide to describe them.||
+||dwc:higherGeography dwc:continent dwc:waterBody dwc:islandGroup dwc:island dwc:countryCode dwc:country dwc:stateProvince dwc:county dwc:municipality dwc:locality||The subject resource should be a dcterms:Location instance.  As an alternative, use the object property dwcuri:inDescribedPlace to link the subject resource to a standardized place described as part of a hierarchy. See section 2.7.5 for details.   It is likely that providers will want to provide a text value for dwc:locality even if dwcuri:inDescribedPlace is used to replace the other hierarchical convenience terms in this category.  This is because it is unlikely that a place description at this most specific level (e.g. “15 km N of Essen”) would be represented by a standardized URI-identified place instance.  There is no dwcuri: analogue of dwc:locality because if a URI-identified place were available to represent the locality, the term dwcuri:inDescribedPlace would be used to link to it.||
+||dwc:earliestEonOrLowestEonothem dwc:latestEonOrHighestEonothem dwc:earliestEraOrLowestErathem dwc:latestEraOrHighestErathem dwc:earliestPeriodOrLowestSystem dwc:latestPeriodOrHighestSystem dwc:earliestEpochOrLowestSeries dwc:latestEpochOrHighestSeries dwc:earliestAgeOrLowestStage dwc:latestAgeOrHighestStage||The subject resource should be a dwc:GeologicalContext instance.  As an alternative, use the object properties dwcuri:earliestGeochronologicalEra and dwcuri:latestGeochronologicalEra as described in section 3.6.  See section 2.7.6 for details.||
+||dwc:lithostratigraphicTerms dwc:group dwc:formation dwc:member dwc:bed||The subject resource should be a dwc:GeologicalContext instance.  As an alternative, use the object property dwcuri:fromLithostratigraphicUnit to link the subject resource to the lowest appropriate unit of a lithostratigraphic hierarchy.||
 
 ==3.6 dwcuri: terms having local names that don’t correspond to terms in the dwc: Darwin Core namespace==
 
