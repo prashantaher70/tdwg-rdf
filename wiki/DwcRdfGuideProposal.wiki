@@ -1083,106 +1083,35 @@ See section 2.7 for more information on "convenience" terms.
 
 ==3.6 dwcuri: terms having local names that don’t correspond to terms in the dwc: Darwin Core namespace==
 
-Darwin Core term
-Notes
-dwcuri:inCollection
-Use to link any subject resource that is part of a collection to the collection containing the resource.  institution that owns or controls the resource.  Recommended best practice is to use URIs from Registry of Biological Repositories (http://www.biorepositories.org/). See section 2.7.3 for details.  
-dwcuri:toTaxonConcept
-Use to link a dwc:Identification instance subject to a taxonomic entity such as a taxon concept or taxon name use.   See section 2.7.4 for details.
-dwcuri:inDescribedPlace
-Use to link a dcterms:Location instance subject to the lowest level standardized hierarchically-described resource.  It is expected that such resources will be linked to higher levels in the hierarchy by the organization minting the URI.  Recommended best practice is to use URIs from the GeoNames geographical database (http://www.geonames.org/ ).  See section 2.7.5 for details.
-dwcuri:earliestGeochronologicalEra
-dwcuri:latestGeochronologicalEra
-Use to link a dwc:GeologicalContext instance to chronostratigraphic time periods at the lowest possible level in a standardized hierarchy.  Use dwcuri:earliestGeochronologicalEra to point to the earliest possible geological time period from which the cataloged item was collected and the object property dwcuri:latestGeochronologicalEra to point to the latest possible geological time period from which the cataloged item was collected.  The organization minting the URI should link those time periods to higher levels in the hierarchy.  Recommended best practice is to use URIs defined by the International Commission on Stratigraphy (http://www.stratigraphy.org/ ) in the http://resource.geosciml.org/vocabulary/timescale/isc-2012.rdf ontology.  See section 2.7.6 for details.
-dwcuri:fromLithostratigraphicUnit
-Use to link a dwc:GeologicalContext instance to a URI-identified lithostratigraphic unit at the lowest possible level in a hierarchy.  It is expected that such resources will be linked to higher levels in the hierarchy by the organization minting the URI.
-dwcuri:inDataset
-This object property is provided to link a subject dataset record to the dataset which contains it.  A string literal name of the dataset can be provided using the term dwc:datasetName.  
+||Darwin Core term||Notes||
+||dwcuri:inCollection||Use to link any subject resource that is part of a collection to the collection containing the resource.  institution that owns or controls the resource.  Recommended best practice is to use URIs from Registry of Biological Repositories (http://www.biorepositories.org/). See section 2.7.3 for details.||
+||dwcuri:toTaxonConcept||Use to link a dwc:Identification instance subject to a taxonomic entity such as a taxon concept or taxon name use.   See section 2.7.4 for details.||
+||dwcuri:inDescribedPlace||Use to link a dcterms:Location instance subject to the lowest level standardized hierarchically-described resource.  It is expected that such resources will be linked to higher levels in the hierarchy by the organization minting the URI.  Recommended best practice is to use URIs from the GeoNames geographical database (http://www.geonames.org/ ).  See section 2.7.5 for details.||
+||dwcuri:earliestGeochronologicalEra dwcuri:latestGeochronologicalEra||Use to link a dwc:GeologicalContext instance to chronostratigraphic time periods at the lowest possible level in a standardized hierarchy.  Use dwcuri:earliestGeochronologicalEra to point to the earliest possible geological time period from which the cataloged item was collected and the object property dwcuri:latestGeochronologicalEra to point to the latest possible geological time period from which the cataloged item was collected.  The organization minting the URI should link those time periods to higher levels in the hierarchy.  Recommended best practice is to use URIs defined by the International Commission on Stratigraphy (http://www.stratigraphy.org/ ) in the http://resource.geosciml.org/vocabulary/timescale/isc-2012.rdf ontology.  See section 2.7.6 for details.||
+||dwcuri:fromLithostratigraphicUnit||Use to link a dwc:GeologicalContext instance to a URI-identified lithostratigraphic unit at the lowest possible level in a hierarchy.  It is expected that such resources will be linked to higher levels in the hierarchy by the organization minting the URI.||
+||dwcuri:inDataset||This object property is provided to link a subject dataset record to the dataset which contains it.  A string literal name of the dataset can be provided using the term dwc:datasetName.||
 
 ==3.7 dwc: namespace terms which have analogues in the dwcuri: namespace==
 
-Darwin Core term having a dwcuri: analogue with the same local name
-Notes on the dwcuri: analogues
-dwc:recordedBy
-dwc:identifiedBy
-dwc:georeferencedBy
-The object is an agent; use VIAF, e.g. <http://viaf.org/viaf/27063124>
-or well-known URI
-dwc:locationAccordingTo
-The object is an agent or publication.  Use a well-known URI when possible, such as VIAF or an HTTP-proxied DOI.
-dwc:georeferenceProtocol
-dwc:georeferenceSources
-dwc:samplingProtocol
-
-
-The object is a published or well-known reference; use a URI version (preferably HTTP proxied) of doi, isbn, issn, etc. if available.  
-dwc:sex
-dwc:lifeStage
-dwc:reproductiveCondition
-dwc:establishmentMeans
-dwc:behavior
-dwc:occurrenceStatus
-dwc:disposition
-dwc:verbatimCoordinateSystem
-dwc:verbatimSRS
-dwc:geodeticDatum
-dwc:georeferenceVerificationStatus
-dwc:footprintWKT
-dwc:footprintSRS
-dwc:lowestBiostratigraphicZone
-dwc:highestBiostratigraphicZone
-dwc:identificationVerificationStatus
-dwc:identificationQualifier
-dwc:preparations
-dwc:typeStatus
-
-
-Recommended best practice is to use a controlled vocabulary if one is available.  
-dwc:informationWithheld
-dwc:dataGeneralizations
-dwc:habitat
-
-
-If the object property (dwcuri: analogue) is used rather than the dwc: property, the object property should point to a stable resource which might be a controlled vocabulary or content-as-rdf instance.  
-dwc:fieldNumber
-dwc:fieldNotes
-dwcuri:fieldNumber is an object property whose subject is a (possibly URI-identified) resource that is the field notes and whose object is a dcmitype:Event instance.
-dwcuri:fieldNotes is an object property whose subject is a dcmitype:Event instance and whose object is a (possibly URI-identified) resource that is the field notes.
-dwc:recordNumber
-dwcuri:recordNumber is an object property whose subject is an occurrence and and whose object is a (possibly URI-identified) resource that is the field notes. 
+||Darwin Core term having a dwcuri: analogue with the same local name||Notes on the dwcuri: analogues||
+||dwc:recordedBy dwc:identifiedBy dwc:georeferencedBy||The object is an agent; use VIAF, e.g. <http://viaf.org/viaf/27063124> or well-known URI||
+||dwc:locationAccordingTo||The object is an agent or publication.  Use a well-known URI when possible, such as VIAF or an HTTP-proxied DOI.||
+||dwc:georeferenceProtocol dwc:georeferenceSources dwc:samplingProtocol||The object is a published or well-known reference; use a URI version (preferably HTTP proxied) of doi, isbn, issn, etc. if available.||
+||dwc:sex dwc:lifeStage dwc:reproductiveCondition dwc:establishmentMeans dwc:behavior dwc:occurrenceStatus dwc:disposition dwc:verbatimCoordinateSystem dwc:verbatimSRS dwc:geodeticDatum dwc:georeferenceVerificationStatus dwc:footprintWKT dwc:footprintSRS dwc:lowestBiostratigraphicZone dwc:highestBiostratigraphicZone dwc:identificationVerificationStatus dwc:identificationQualifier dwc:preparations dwc:typeStatus||Recommended best practice is to use a controlled vocabulary if one is available.||
+||dwc:informationWithheld dwc:dataGeneralizations dwc:habitat||If the object property (dwcuri: analogue) is used rather than the dwc: property, the object property should point to a stable resource which might be a controlled vocabulary or content-as-rdf instance.||
+||dwc:fieldNumber dwc:fieldNotes||dwcuri:fieldNumber is an object property whose subject is a (possibly URI-identified) resource that is the field notes and whose object is a dcmitype:Event instance.  dwcuri:fieldNotes is an object property whose subject is a dcmitype:Event instance and whose object is a (possibly URI-identified) resource that is the field notes.||
+||dwc:recordNumber||dwcuri:recordNumber is an object property whose subject is an occurrence and and whose object is a (possibly URI-identified) resource that is the field notes. ||
 
 
 ==3.8 Darwin Core terms whose function cannot be duplicated by a dwcuri: object property==
 
-Darwin Core term
-
-
-Notes
-dwc:relationshipOfResource
-dwc:relationshipAccordingTo
-
-
-Use the well-known terms oa:motivatedBy and oa:annotatedBy See the informative ancillary web pages for examples.
-dwc:measurementType
-dwc:measurementValue
-dwc:measurementAccuracy
-dwc:measurementUnit
-dwc:measurementDeterminedDate
-dwc:measurementDeterminedBy
-dwc:measurementMethod
-dwc:measurementRemarks
-See the informative ancillary web pages for examples.
-dwc:dynamicProperties
-See the informative ancillary web pages for examples.
-dwc:samplingEffort
-See the informative ancillary web pages for examples.
-dwc:otherCatalogNumbers
-There is no simple mapping because of the kinds of identifiers people use and variety of relationships that there may be among identifiers.  
-owl:sameAs may be used to associate other URI identifiers with the subject URI if this is appropriate.  
-For string values, use dwc:otherCatalogNumbers.
-dwc:associatedMedia
-The well-known term foaf:depiction can be used to link to an image. but there is currently no object property that can be used for any kind of media item.
+||Darwin Core term||Notes||
+||dwc:relationshipOfResource dwc:relationshipAccordingTo||Use the well-known terms oa:motivatedBy and oa:annotatedBy See the informative ancillary web pages for examples.||
+||dwc:measurementType dwc:measurementValue dwc:measurementAccuracy dwc:measurementUnit dwc:measurementDeterminedDate dwc:measurementDeterminedBy dwc:measurementMethod dwc:measurementRemarks||See the informative ancillary web pages for examples.||
+||dwc:dynamicProperties||See the informative ancillary web pages for examples.||
+||dwc:samplingEffort||See the informative ancillary web pages for examples.||
+||dwc:otherCatalogNumbers||There is no simple mapping because of the kinds of identifiers people use and variety of relationships that there may be among identifiers. owl:sameAs may be used to associate other URI identifiers with the subject URI if this is appropriate.  For string values, use dwc:otherCatalogNumbers.||
+||dwc:associatedMedia||The well-known term foaf:depiction can be used to link to an image. but there is currently no object property that can be used for any kind of media item.
 dwc:associatedOccurrences, dwc:associatedSequences, dwc:associatedTaxa
-There are no known consensus object properties to replace these terms.  Use object properties from other vocabularies or ontologies or consider if the Open Annotation model can be used in your circumstance (see the informative ancillary web pages for examples)
-dwc:previousIdentifications
-There is no consensus object property for associating identifications with resources of other classes.  From whatever scheme you have chosen to provide object properties, use same object property as used for the most recent identification but provide an earlier dwc:dateIdentified value.
+There are no known consensus object properties to replace these terms.  Use object properties from other vocabularies or ontologies or consider if the Open Annotation model can be used in your circumstance (see the informative ancillary web pages for examples)||
+||dwc:previousIdentifications||There is no consensus object property for associating identifications with resources of other classes.  From whatever scheme you have chosen to provide object properties, use same object property as used for the most recent identification but provide an earlier dwc:dateIdentified value.||
