@@ -1047,7 +1047,8 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 ||dcterms:rights3||dcterms:RightsStatement||A custom RDF rights statement can be created using the Creative Commons Rights Expression Language http://creativecommons.org/ns with a minted URI or blank node representing the object of dcterms:rights .||dc:rights||
 ||dcterms:type||rdfs:Class||DCMI Type Vocabulary http://dublincore.org/documents/dcmi-terms/#H7||dc:type||
 ||dcterms:rightsHolder||dcterms:Agent||URI for the agent owning or managing the rights.||xmpRights:Owner4||
-||dcterms:accessRights||dcterms:RightsStatement||A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  ||No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.5||dcterms:references||---||URI for a publication (preferably an HTTP-proxied DOI) related to the subject resource.||Use dwc:identificationReferences for a reference consulted in making an taxonomic identification and dwc:associatedReferences for references related to occurrences.||
+||dcterms:accessRights||dcterms:RightsStatement||A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  ||No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.5||
+||dcterms:references||---||URI for a publication (preferably an HTTP-proxied DOI) related to the subject resource.||Use dwc:identificationReferences for a reference consulted in making an taxonomic identification and dwc:associatedReferences for references related to occurrences.||
 
 2 None of these dcterms: namespace terms have domain declarations.
 
@@ -1059,35 +1060,10 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 ==3.4 Terms defined by Darwin Core that are expected to be used only with literal values==
 
-Darwin Core term
-Notes on  expressing as RDF
-dwc:eventDate
-dwc:georeferencedDate
-dwc:dateIdentified
-dwc:measurementDeterminedDate
-dwc:relationshipEstablishedDate
-These date terms have range rdfs:Literal 6. Best practice as specified in the term definition recommends that they should be formatted according to ISO 8601:2004(E).  There is no defined XML Schema datatype that corresponds exactly to ISO 8601:2004(E), therefore the entire set of possible values cannot be specified using an rdf:datatype attribute.  The XML Schema dateTime datatype (xsd:dateTime) which is effectively a subset of ISO 8601:2004(E), may be used as an rdf:datatype attribute.  However, xsd:dateTime requires the complete series of year, month, day, hour, second (e.g. 002-10-10T12:00:00) and does not permit listing only part of this hierarchy (e.g. only the year) as is allowed in ISO 8601:2004(E).
-dwc:eventTime
-It is recommended that the format described by ISO 8601:2004(E) be used.  As with the date terms, there is no XML Schema datatype that includes all of the possible values allowed in ISO 8601:2004(E), so there is no generic rdf:datatype attribute that would apply to all possible instances.  The XML Schema time datatype (xsd:time) which is effectively a subset of ISO 8601:2004(E) may be used as an rdf:datatype attribute although it is limited to values that include hours, minutes, and seconds (e.g. 13:07:56-05:00).
-dwc:individualCount
-dwc:decimalLatitude
-dwc:decimalLongitude
-dwc:coordinatePrecision
-dwc:pointRadiusSpatialFit
-dwc:coordinateUncertaintyInMeters
-dwc:minimumElevationInMeters
-dwc:maximumElevationInMeters
-dwc:minimumDepthInMeters
-dwc:maximumDepthInMeters
-dwc:minimumDistanceAboveSurfaceInMeters
-dwc:maximumDistanceAboveSurfaceInMeters
-dwc:startDayOfYear
-dwc:endDayOfYear
-dwc:year
-dwc:month
-dwc:day
-dwc:footprintSpatialFit
-These terms are expected to have literal values which are numeric.  Therefore, an rdf:datatype attribute describing the form of the number may be appropriate.
+||Darwin Core term||Notes on  expressing as RDF||
+||dwc:eventDate dwc:georeferencedDate dwc:dateIdentified dwc:measurementDeterminedDate dwc:relationshipEstablishedDate||These date terms have range rdfs:Literal 6. Best practice as specified in the term definition recommends that they should be formatted according to ISO 8601:2004(E).  There is no defined XML Schema datatype that corresponds exactly to ISO 8601:2004(E), therefore the entire set of possible values cannot be specified using an rdf:datatype attribute.  The XML Schema dateTime datatype (xsd:dateTime) which is effectively a subset of ISO 8601:2004(E), may be used as an rdf:datatype attribute.  However, xsd:dateTime requires the complete series of year, month, day, hour, second (e.g. 002-10-10T12:00:00) and does not permit listing only part of this hierarchy (e.g. only the year) as is allowed in ISO 8601:2004(E).||
+||dwc:eventTime||It is recommended that the format described by ISO 8601:2004(E) be used.  As with the date terms, there is no XML Schema datatype that includes all of the possible values allowed in ISO 8601:2004(E), so there is no generic rdf:datatype attribute that would apply to all possible instances.  The XML Schema time datatype (xsd:time) which is effectively a subset of ISO 8601:2004(E) may be used as an rdf:datatype attribute although it is limited to values that include hours, minutes, and seconds (e.g. 13:07:56-05:00).||
+||dwc:individualCount dwc:decimalLatitude dwc:decimalLongitude dwc:coordinatePrecision dwc:pointRadiusSpatialFit dwc:coordinateUncertaintyInMeters dwc:minimumElevationInMeters dwc:maximumElevationInMeters dwc:minimumDepthInMeters dwc:maximumDepthInMeters dwc:minimumDistanceAboveSurfaceInMeters dwc:maximumDistanceAboveSurfaceInMeters dwc:startDayOfYear dwc:endDayOfYear dwc:year dwc:month dwc:day dwc:footprintSpatialFit||These terms are expected to have literal values which are numeric.  Therefore, an rdf:datatype attribute describing the form of the number may be appropriate.||
 dwc:occurrenceRemarks
 dwc:eventRemarks
 dwc:locationRemarks
