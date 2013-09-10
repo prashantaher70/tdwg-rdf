@@ -976,10 +976,7 @@ The following example is taken from [http://dx.doi.org/10.1098/rsbl.2011.0228 ht
 
 
 Table 9
-|||dwc:formation|||dwc:earliestEonOrLowestEonothem dwc:latestEonOrHighestEonothem||dwc:earliestEraOrLowestErathem
-dwc:latestEraOrHighestErathem||dwc:earliestPeriodOrLowestSystem
-dwc:latestPeriodOrHighestSystem||dwc:earliestEpochOrLowestSeries
-dwc:latestEpochOrHighestSeries||
+||dwc:formation||dwc:earliestEonOrLowestEonothem dwc:latestEonOrHighestEonothem||dwc:earliestEraOrLowestErathem dwc:latestEraOrHighestErathem||dwc:earliestPeriodOrLowestSystem dwc:latestPeriodOrHighestSystem||dwc:earliestEpochOrLowestSeries dwc:latestEpochOrHighestSeries||
 ||"Jiu-longshan"||"Phanerozoic"||"Mesozoic"||"Jurassic"||"Middle"||
 
 Example 27 shows how this can be rendered as RDF using the Darwin Core stratigraphic timescale terms as convenience terms.
@@ -1046,14 +1043,12 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 ==3.3 Imported Dublin Core terms that have non-literal objects and corresponding terms that have literal objects==
 
 ||Term intended for use in RDF with non-literal objects2||range||recommended values||Term intended for use in RDF with literal objects||
-||dcterms:language||dcterms:LinguisticSystem||MARC language URI
-http://id.loc.gov/vocabulary/languages.html||dc:language||
+||dcterms:language||dcterms:LinguisticSystem||MARC language URI http://id.loc.gov/vocabulary/languages.html||dc:language||
 ||dcterms:rights3||dcterms:RightsStatement||A custom RDF rights statement can be created using the Creative Commons Rights Expression Language http://creativecommons.org/ns with a minted URI or blank node representing the object of dcterms:rights .||dc:rights||
 ||dcterms:type||rdfs:Class||DCMI Type Vocabulary
 http://dublincore.org/documents/dcmi-terms/#H7||dc:type||
 ||dcterms:rightsHolder||dcterms:Agent||URI for the agent owning or managing the rights.||xmpRights:Owner4||
-||dcterms:accessRights||dcterms:RightsStatement||A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  
-No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.5||dcterms:references||
+||dcterms:accessRights||dcterms:RightsStatement||A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.5||dcterms:references||
 ---
 URI for a publication (preferably an HTTP-proxied DOI) related to the subject resource.  
 Use dwc:identificationReferences
