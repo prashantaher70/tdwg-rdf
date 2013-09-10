@@ -898,20 +898,8 @@ It might be argued that these convenience terms would more appropriately be prop
 Consider the following example where Takuma Yun identified a spider to the species Hersilia yaeyamaensis using information in Tanikawa (1999).  The data about this identification was listed in a database as shown in Table 8.
 
 Table 8
-dwc:identificationID
-dwc:identifiedBy
-dwc:order
-dwc:family
-dwc:genus
-dwc:specificEpithet
-dwc:nameAccordingToID
-"75C9EA16-72B1-44C9-AD40-3C3A41323A09"
-"Takuma Yun"
-"Araneae"
-"Hersiliidae"
-"Hersilia"
-"yaeyamaensis"
-"75C9EA16-72B1-44C9-AD40-3C3D41323AB9"
+||dwc:identificationID||dwc:identifiedBy||dwc:order||dwc:family||dwc:genus||dwc:specificEpithet||dwc:nameAccordingToID||
+||"75C9EA16-72B1-44C9-AD40-3C3A41323A09"||"Takuma Yun"||"Araneae"||"Hersiliidae"||"Hersilia"||"yaeyamaensis"||"75C9EA16-72B1-44C9-AD40-3C3D41323AB9"||
 
 In this example, a best practice would be to link the identification instance to a taxon concept instance of Hersilia yaeyamaensis sec. Tanikawa 1999 using the object property dwcuri:toTaxonConcept as shown in Example 22.  However, the data provider may be uninterested, or unable to mint or discover a taxon concept instance to which the identification instance can be linked.  The provider may simply wish to make it easier to discover the identification instance and be unconcerned about the taxonomic relationships that might be asserted for concepts that may be defined for the listed name components.  In that case the provider can use the following RDF:
 
@@ -988,20 +976,12 @@ The following example is taken from [http://dx.doi.org/10.1098/rsbl.2011.0228 ht
 
 
 Table 9
-dwc:formation
-dwc:earliestEonOrLowestEonothem/
-dwc:latestEonOrHighestEonothem
-dwc:earliestEraOrLowestErathem/
-dwc:latestEraOrHighestErathem
-dwc:earliestPeriodOrLowestSystem/
-dwc:latestPeriodOrHighestSystem
-dwc:earliestEpochOrLowestSeries/
-dwc:latestEpochOrHighestSeries
-"Jiu-longshan"
-"Phanerozoic"
-"Mesozoic"
-"Jurassic"
-"Middle"
+|||dwc:formation|||dwc:earliestEonOrLowestEonothem/
+dwc:latestEonOrHighestEonothem||dwc:earliestEraOrLowestErathem/
+dwc:latestEraOrHighestErathem||dwc:earliestPeriodOrLowestSystem/
+dwc:latestPeriodOrHighestSystem||dwc:earliestEpochOrLowestSeries/
+dwc:latestEpochOrHighestSeries||
+||"Jiu-longshan"||"Phanerozoic"||"Mesozoic"||"Jurassic"||"Middle"||
 
 Example 27 shows how this can be rendered as RDF using the Darwin Core stratigraphic timescale terms as convenience terms.
 
