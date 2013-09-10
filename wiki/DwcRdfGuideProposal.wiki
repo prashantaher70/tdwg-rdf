@@ -856,7 +856,7 @@ Table 6
 ||ownership of collection item (Section 2.7.3)||dwcuri:inCollection||collection||col:Collection||
 ||description of a taxonomic entity (Section 2.7.4)||dwcuri:toTaxonConcept||taxon concept; taxon name use||not specified||
 ||names of geographic subdivisions (Section 2.7.5)||dwcuri:inDescribedPlace||geographic place||gn:Feature||
-||chronostratographic (geological timescale) description (Section 2.7.6)||dwcuri:earliestGeochronologicalEra||dwcuri:latestGeochronologicalEra||geochronological time period||gsml:GeochronologicEra||
+||chronostratographic (geological timescale) description (Section 2.7.6)||dwcuri:earliestGeochronologicalEra dwcuri:latestGeochronologicalEra||geochronological time period||gsml:GeochronologicEra||
 
 
 ===2.7.3 Ownership of a collection item===
