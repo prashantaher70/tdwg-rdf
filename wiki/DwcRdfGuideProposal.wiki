@@ -189,45 +189,19 @@ Table 1
 ||Darwin Core terms (string literal objects)||dwc:||http://rs.tdwg.org/dwc/terms/||
 ||Darwin Core type vocabulary||dwctype:||http://rs.tdwg.org/dwc/dwctype/||
 ||Darwin Core terms (URI reference objects)||dwcuri:||http://rs.tdwg.org/dwc/uri/||
-Dublin Core terms
-dcterms:
-http://purl.org/dc/terms/
-Dublin Core legacy terms
-dc:
-http://purl.org/dc/elements/1.1/
-Dublin Core type vocabulary
-dcmitype:
-http://purl.org/dc/dcmitype/
-FOAF vocabulary
-foaf:
-http://xmlns.com/foaf/0.1/
-DBpedia resources
-dbres:
-http://dbpedia.org/resource/
-GeoNames Ontology
-gn:
-http://www.geonames.org/ontology#
-TDWG Collections (NCD) Ontology
-col:
-http://rs.tdwg.org/ontology/voc/Collection#
-GeoSciML Geologic Timescale model Ontology
-gsml:
-http://resource.geosciml.org/ontology/timescale/gts-30#
-Virtual International Authority File
-viaf:
-http://viaf.org/viaf/
-Extensible Metadata Platform Rights Management vocabulary
-xmpRights:
-http://ns.adobe.com/xap/1.0/rights/
-Audubon Core
-ac:
-http://rs.tdwg.org/ac/terms/
-Open Annotation Data Model
-oa:
-http://www.w3.org/ns/oa#
-RDFa Core 1.1
-xhv:
-http://www.w3.org/1999/xhtml/vocab#
+||Dublin Core terms||dcterms:||http://purl.org/dc/terms/||
+||Dublin Core legacy terms||dc:||http://purl.org/dc/elements/1.1/||
+||Dublin Core type vocabulary||dcmitype:||http://purl.org/dc/dcmitype/||
+||FOAF vocabulary||foaf:||http://xmlns.com/foaf/0.1/||
+||DBpedia resources||dbres:||http://dbpedia.org/resource/||
+||GeoNames Ontology||gn:||http://www.geonames.org/ontology#||
+||TDWG Collections (NCD) Ontology||col:||http://rs.tdwg.org/ontology/voc/Collection#||
+||GeoSciML Geologic Timescale model Ontology||gsml:||http://resource.geosciml.org/ontology/timescale/gts-30#||
+||Virtual International Authority File||viaf:||http://viaf.org/viaf/||
+||Extensible Metadata Platform Rights Management vocabulary||xmpRights:||http://ns.adobe.com/xap/1.0/rights/||
+||Audubon Core||ac:||http://rs.tdwg.org/ac/terms/||
+||Open Annotation Data Model||oa:||http://www.w3.org/ns/oa#||
+||RDFa Core 1.1||xhv:||http://www.w3.org/1999/xhtml/vocab#||
  
 For brevity, the examples do not include namespace declarations, nor an rdf:RDF container element.  If a user wishes to test or validate an example, insert it into the container element defined in section 2.1.2 .
  
@@ -264,15 +238,9 @@ Statements about resources are made in RDF in the form of "triples" [http://www.
  
 Table 2
 
-Subject
-Predicate
-Object
-<http://dbpedia.org/resource/Starry_night>
-<http://xmlns.com/foaf/0.1/maker>
-<http://viaf.org/viaf/9854560>
-dbres:Starry_night
-foaf:maker
-viaf:9854560
+||Subject||Predicate||Object||
+||<http://dbpedia.org/resource/Starry_night>||<http://xmlns.com/foaf/0.1/maker>||<http://viaf.org/viaf/9854560>||
+||dbres:Starry_night||foaf:maker||viaf:9854560||
  
 In the second row of Table 2, the full URIs are given.  In the third row namespace abbreviations are used to shorten the URIs.  The following fragments of RDF shows the triple in RDF/XML and Turtle serializations:
  
@@ -782,14 +750,8 @@ Example 21:
 This example could also be represented by the following database table in which each record (row) represents an dwc:Identification instance and in which each column represents a property of the dwc:Identification instance as indicated by the column heading:
  
 Table 3
-dwc:identificationID
-dwc:identifiedBy
-dwc:dateIdentified
-dwc:taxonID
-"http://guid.mvz.org/identifications/23459"
-"Richard Sage"
-"2000"
-"urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"
+||dwc:identificationID||dwc:identifiedBy||dwc:dateIdentified||dwc:taxonID||
+||"http://guid.mvz.org/identifications/23459"||"Richard Sage"||"2000"||"urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"||
  
 In Example 21 and Table 3, the "ID" terms are used to specify both the identifier of a resource which is the subject of the record itself (using the term dwc:identificationID) and to specify an object resource related to the subject resource by a foreign key (using the term dwc:taxonID).  Because the ID terms are not designated to be used with subjects or objects specifically, the resource they identify must be made clear by the context in which they are used.  In the case of the database table, a pre-existing understanding between the data provider and consumer would indicate that the rows of the table represent dwc:Identification instances and therefore the dwc:identificationID property would provide the identifier of the subject and any other ID terms would refer to object resources that are related to that particular identification instance.  In the XML example, the type of the subject resource is made clear through the record's container element and hence a consumer would know that the dwc:identificationID property referred to the subject resource.
  
@@ -858,12 +820,8 @@ Turtle (incorrect usage)
 there would be an undesired effect if a client unfamiliar with Darwin Core performed a "dumb-down" operation (i.e. fell back to the broader meaning of the dwc:taxonID term as dcterms:identifier).   The client would infer the triple:
  
 Table 4
-Subject
-Predicate
-Object
-<http://guid.mvz.org/identifications/23459>
-dcterms:identifier
-"http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"
+||Subject||Predicate||Object||
+||<http://guid.mvz.org/identifications/23459>||dcterms:identifier||"http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"||
  
 where the value of the dwc:taxonID term was the identifier of the subject resource rather than of the object resource as intended by the data provider.  This is why data providers will generally need to look outside Darwin Core for object properties that can be used to relate instances of one class to instances of another instead of using the Darwin Core ID terms.
  
@@ -872,20 +830,8 @@ where the value of the dwc:taxonID term was the identifier of the subject resour
 In several situations, providers of Darwin Core text-based data use a set of hierarchical property/value pairs to unambiguously specify a resource.  For example, a database record for a resource collected at N 36.4024°, W 87.02219° might contain the following data: 
 
 Table 5
-dwc:decimalLatitude
-dwc:decimalLongitude
-dwc:geodeticDatum
-dwc:continent
-dwc:country
-dwc:stateProvince
-dwc:county
-"36.4024"
-"-87.02219"
-"EPSG:4326"
-"North America"
-"United States"
-"Tennessee"
-"Robertson"
+||dwc:decimalLatitude||dwc:decimalLongitude||dwc:geodeticDatum||dwc:continent||dwc:country||dwc:stateProvince||dwc:county||
+||"36.4024"||"-87.02219"||"EPSG:4326"||"North America"||"United States"||"Tennessee"||"Robertson"||
 
 The data unambiguously specifies the lowest level political subdivision (Robertson County) by including the higher level political subdivisions in the hierarchy and thus differentiates it from other places that are second-order administrative divisions identified by the string “Robertson” (e.g. Robertson County, Texas, US or Robertson County, Kentucky, US).  Darwin Core terms that are used to form a hierarchy of literal values are called convenience terms.  
 
@@ -903,27 +849,11 @@ In general, it should not be necessary for a data provider to recreate hierarchi
 There are several groups of convenience terms in the dwc: namespace which may be used to provide literal values for the purposes listed above (Section 4.6).  In the case of each of these groups, it is not expected that a provider will link to URI references for each level in the hierarchy.  Therefore, dwcuri: analogues are not defined for those convenience terms from the dwc: namespace.  Rather, for each category of convenience terms, there is a single dwcuri: namespace term (having no analogue in the dwc: namespace; Section 4.7) which can be used to link to the lowest available level in the hierarchy with the understanding that the RDF of the object resource will provide links to other URIs for higher levels of the hierarchy.  Such dwcuri: terms can refer to any level in the hierarchy if there is uncertainty about the identity of lower levels, or if lower levels do not exist. 
 
 Table 6
-Category of convenience term
-object property
-Category of object resource
-rdf:type of example resource
-ownership of collection item (Section 2.7.3)
-dwcuri:inCollection
-collection
-col:Collection
-description of a taxonomic entity (Section 2.7.4)
-dwcuri:toTaxonConcept
-taxon concept; taxon name use
-not specified
-names of geographic subdivisions (Section 2.7.5)
-dwcuri:inDescribedPlace
-geographic place
-gn:Feature
-chronostratographic (geological timescale) description (Section 2.7.6)
-dwcuri:earliestGeochronologicalEra
-dwcuri:latestGeochronologicalEra
-geochronological time period
-gsml:GeochronologicEra
+||Category of convenience term||object property||Category of object resource||rdf:type of example resource||
+||ownership of collection item (Section 2.7.3)||dwcuri:inCollection||collection||col:Collection||
+||description of a taxonomic entity (Section 2.7.4)||dwcuri:toTaxonConcept||taxon concept; taxon name use||not specified||
+||names of geographic subdivisions (Section 2.7.5)||dwcuri:inDescribedPlace||geographic place||gn:Feature||
+||chronostratographic (geological timescale) description (Section 2.7.6)||dwcuri:earliestGeochronologicalEra||dwcuri:latestGeochronologicalEra||geochronological time period||gsml:GeochronologicEra||
 
 
 ===2.7.3 Ownership of a collection item===
@@ -931,16 +861,8 @@ gsml:GeochronologicEra
 Historically, the set of values for dwc:institutionCode, dwc:collectionCode, and dwc:catalogNumber (a “Darwin Core triplet”) has been used to identify a collection item and to indicate the owning institution and collection within that institution as shown in Table 7.  
 
 Table 7
-dwc:basisOfRecord
-dwc:institutionCode
-dwc:collectionCode
-dwc:catalogNumber
-dwc:collectionID
-"PreservedSpecimen"
-"MVZ"
-"Mamm"
-"115956"
-"urn:lsid:biocol.org:col:34904"
+||dwc:basisOfRecord||dwc:institutionCode||dwc:collectionCode||dwc:catalogNumber||dwc:collectionID||
+||"PreservedSpecimen"||"MVZ"||"Mamm"||"115956"||"urn:lsid:biocol.org:col:34904"||
 
 In RDF, unique identification of collection items is done through the URI which acts as a globally unique identifier for that item.  The Darwin Core triplet properties may still be provided as literal values, but ownership/control of the collection item should be indicated using dwcuri:inCollection with an HTTP URI as the URI-reference object.  For physical specimens, the recommended best practice is to use a collection URI from a collections registry such as an HTTP-proxied LSID from the Biodiversity Collections Index Registry of Biological Repositories http://www.biodiversitycollectionsindex.org/(http://www.biorepositories.org/).  Example 24 illustrates this for the data from Table 7.
 
