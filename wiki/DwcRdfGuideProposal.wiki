@@ -976,10 +976,9 @@ The following example is taken from [http://dx.doi.org/10.1098/rsbl.2011.0228 ht
 
 
 Table 9
-|||dwc:formation|||dwc:earliestEonOrLowestEonothem/
-dwc:latestEonOrHighestEonothem||dwc:earliestEraOrLowestErathem/
-dwc:latestEraOrHighestErathem||dwc:earliestPeriodOrLowestSystem/
-dwc:latestPeriodOrHighestSystem||dwc:earliestEpochOrLowestSeries/
+|||dwc:formation|||dwc:earliestEonOrLowestEonothem dwc:latestEonOrHighestEonothem||dwc:earliestEraOrLowestErathem
+dwc:latestEraOrHighestErathem||dwc:earliestPeriodOrLowestSystem
+dwc:latestPeriodOrHighestSystem||dwc:earliestEpochOrLowestSeries
 dwc:latestEpochOrHighestSeries||
 ||"Jiu-longshan"||"Phanerozoic"||"Mesozoic"||"Jurassic"||"Middle"||
 
@@ -1031,57 +1030,30 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 ==3.1 Non-Darwin Core terms needed to express fundamental properties in RDF==
 
-term
-Notes
-rdf:type
-Used to indicate the class of which the resource is an instance.  It is considered a best practice to type resources using rdf:type, whereas type declarations using dcterms:type and dwc:basisOfRecord are optional.  See Section 2.3.1.5 for recommended classes to be used with biodiversity resources.
-dcterms:identifier
-Used to relate string literal identifiers to the subject resource.  This can include string representations of URIs if they are considered the identifier for the resource.
+||term||Notes||
+||rdf:type||Used to indicate the class of which the resource is an instance.  It is considered a best practice to type resources using rdf:type, whereas type declarations using dcterms:type and dwc:basisOfRecord are optional.  See Section 2.3.1.5 for recommended classes to be used with biodiversity resources.||
+||dcterms:identifier||Used to relate string literal identifiers to the subject resource.  This can include string representations of URIs if they are considered the identifier for the resource.||
 
 ==3.2 Imported Dublin Core terms for which only literal objects are appropriate==
 
 
-term
-domain
-range
-dcterms:modified
----
-rdfs:Literal1
-dcterms:bibliographicCitation
-dcterms:BibliographicResource
-rdfs:Literal
+||term||domain||range||
+||dcterms:modified||---||rdfs:Literal1||
+||dcterms:bibliographicCitation||dcterms:BibliographicResource||rdfs:Literal||
 
 1 Recommended format is ISO 8601:2004(E).  See notes on date terms in Section 3.4 for further information.
 
 ==3.3 Imported Dublin Core terms that have non-literal objects and corresponding terms that have literal objects==
 
-Term intended for use in RDF with non-literal objects2
-range
-recommended values
-Term intended for use in RDF with literal objects
-dcterms:language
-dcterms:Linguisticsystem
-MARC language URI
-http://id.loc.gov/vocabulary/languages.html
-dc:language
-dcterms:rights3
-dcterms:RightsStatement
-A custom RDF rights statement can be created using the Creative Commons Rights Expression Language http://creativecommons.org/ns with a minted URI or blank node representing the object of dcterms:rights .  
-dc:rights
-dcterms:type
-rdfs:Class
-DCMI Type Vocabulary
-http://dublincore.org/documents/dcmi-terms/#H7
-dc:type
-dcterms:rightsHolder
-dcterms:Agent
-URI for the agent owning or managing the rights.
-xmpRights:Owner4
-dcterms:accessRights
-dcterms:RightsStatement
-A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  
-No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.5
-dcterms:references
+||Term intended for use in RDF with non-literal objects2||range||recommended values||Term intended for use in RDF with literal objects||
+||dcterms:language||dcterms:LinguisticSystem||MARC language URI
+http://id.loc.gov/vocabulary/languages.html||dc:language||
+||dcterms:rights3||dcterms:RightsStatement||A custom RDF rights statement can be created using the Creative Commons Rights Expression Language http://creativecommons.org/ns with a minted URI or blank node representing the object of dcterms:rights .||dc:rights||
+||dcterms:type||rdfs:Class||DCMI Type Vocabulary
+http://dublincore.org/documents/dcmi-terms/#H7||dc:type||
+||dcterms:rightsHolder||dcterms:Agent||URI for the agent owning or managing the rights.||xmpRights:Owner4||
+||dcterms:accessRights||dcterms:RightsStatement||A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  
+No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.5||dcterms:references||
 ---
 URI for a publication (preferably an HTTP-proxied DOI) related to the subject resource.  
 Use dwc:identificationReferences
