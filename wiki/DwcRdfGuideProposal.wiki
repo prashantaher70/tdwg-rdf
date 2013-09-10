@@ -750,8 +750,9 @@ Example 21:
 This example could also be represented by the following database table in which each record (row) represents an dwc:Identification instance and in which each column represents a property of the dwc:Identification instance as indicated by the column heading:
  
 Table 3
+
 ||dwc:identificationID||dwc:identifiedBy||dwc:dateIdentified||dwc:taxonID||
-||"http://guid.mvz.org/identifications/23459"||"Richard Sage"||"2000"||"urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"||
+||"http://guid.mvz.org/identifications/23459"||"Richard Sage"||"2000"||"urn:lsid:"||
  
 In Example 21 and Table 3, the "ID" terms are used to specify both the identifier of a resource which is the subject of the record itself (using the term dwc:identificationID) and to specify an object resource related to the subject resource by a foreign key (using the term dwc:taxonID).  Because the ID terms are not designated to be used with subjects or objects specifically, the resource they identify must be made clear by the context in which they are used.  In the case of the database table, a pre-existing understanding between the data provider and consumer would indicate that the rows of the table represent dwc:Identification instances and therefore the dwc:identificationID property would provide the identifier of the subject and any other ID terms would refer to object resources that are related to that particular identification instance.  In the XML example, the type of the subject resource is made clear through the record's container element and hence a consumer would know that the dwc:identificationID property referred to the subject resource.
  
@@ -800,6 +801,7 @@ The previous section showed that using a Darwin Core ID term to indicate the ide
 In its normative definition, each Darwin Core ID term is declared to be rdfs:subPropertyOf dcterms:identifier .  In RDF, the purpose of a subproperty declaration is to allow a client with reasoning capability to infer a triple containing a broader (and presumably more well-known) property. In the terminology of Dublin Core, the "ID" term is a qualifier which "refines" a basic Dublin Core term [http://dublincore.org/documents/usageguide/qualifiers.shtml DC-QUALIFIER] and the process of inferring a broader meaning from a more specific term is called a "dumb-down" operation.  If a provider attempting to expose the data of Table 3 as RDF used the dwc:taxonID term as a property of the identification as shown in the (incorrect) Example 23:
  
 Example 23:
+
 RDF/XML (incorrect usage)
 {{{
 <rdf:Description rdf:about="http://guid.mvz.org/identifications/23459">
