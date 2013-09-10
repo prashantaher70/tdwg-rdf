@@ -1111,7 +1111,6 @@ See section 2.7 for more information on "convenience" terms.
 ||dwc:dynamicProperties||See the informative ancillary web pages for examples.||
 ||dwc:samplingEffort||See the informative ancillary web pages for examples.||
 ||dwc:otherCatalogNumbers||There is no simple mapping because of the kinds of identifiers people use and variety of relationships that there may be among identifiers. owl:sameAs may be used to associate other URI identifiers with the subject URI if this is appropriate.  For string values, use dwc:otherCatalogNumbers.||
-||dwc:associatedMedia||The well-known term foaf:depiction can be used to link to an image. but there is currently no object property that can be used for any kind of media item.
-dwc:associatedOccurrences, dwc:associatedSequences, dwc:associatedTaxa
-There are no known consensus object properties to replace these terms.  Use object properties from other vocabularies or ontologies or consider if the Open Annotation model can be used in your circumstance (see the informative ancillary web pages for examples)||
+||dwc:associatedMedia||The well-known term foaf:depiction can be used to link to an image. but there is currently no object property that can be used for any kind of media item.||
+||dwc:associatedOccurrences, dwc:associatedSequences, dwc:associatedTaxa||There are no known consensus object properties to replace these terms.  Use object properties from other vocabularies or ontologies or consider if the Open Annotation model can be used in your circumstance (see the informative ancillary web pages for examples)||
 ||dwc:previousIdentifications||There is no consensus object property for associating identifications with resources of other classes.  From whatever scheme you have chosen to provide object properties, use same object property as used for the most recent identification but provide an earlier dwc:dateIdentified value.||
