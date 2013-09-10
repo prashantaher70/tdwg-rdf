@@ -1045,15 +1045,9 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 ||Term intended for use in RDF with non-literal objects2||range||recommended values||Term intended for use in RDF with literal objects||
 ||dcterms:language||dcterms:LinguisticSystem||MARC language URI http://id.loc.gov/vocabulary/languages.html||dc:language||
 ||dcterms:rights3||dcterms:RightsStatement||A custom RDF rights statement can be created using the Creative Commons Rights Expression Language http://creativecommons.org/ns with a minted URI or blank node representing the object of dcterms:rights .||dc:rights||
-||dcterms:type||rdfs:Class||DCMI Type Vocabulary
-http://dublincore.org/documents/dcmi-terms/#H7||dc:type||
+||dcterms:type||rdfs:Class||DCMI Type Vocabulary http://dublincore.org/documents/dcmi-terms/#H7||dc:type||
 ||dcterms:rightsHolder||dcterms:Agent||URI for the agent owning or managing the rights.||xmpRights:Owner4||
-||dcterms:accessRights||dcterms:RightsStatement||A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.5||dcterms:references||
----
-URI for a publication (preferably an HTTP-proxied DOI) related to the subject resource.  
-Use dwc:identificationReferences
-for a reference consulted in making an taxonomic identification and
-dwc:associatedReferences for references related to occurrences.
+||dcterms:accessRights||dcterms:RightsStatement||A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  ||No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.5||dcterms:references||---||URI for a publication (preferably an HTTP-proxied DOI) related to the subject resource.||Use dwc:identificationReferences for a reference consulted in making an taxonomic identification and dwc:associatedReferences for references related to occurrences.||
 
 2 None of these dcterms: namespace terms have domain declarations.
 
