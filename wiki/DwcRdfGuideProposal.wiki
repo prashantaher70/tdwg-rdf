@@ -2,7 +2,7 @@
 
 = Darwin Core RDF Guide =
 
-* This is a draft submission under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy].  To view comments made by the RDF Task Group, view [https://docs.google.com/document/d/1OLyVFuveGX1a0Yt6Niok9FfGxkrghii-xlGYhwO8UqE/edit?usp=sharing this Google document].*  This document is still being wikified as of 2013-09-09.
+* This is a draft submission under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy].  To view comments made by the RDF Task Group, view [https://docs.google.com/document/d/1OLyVFuveGX1a0Yt6Niok9FfGxkrghii-xlGYhwO8UqE/edit?usp=sharing this Google document].*  This document is still being wikified as of 2013-09-11.
 
 *Title:* Darwin Core RDF Guide
 
@@ -10,7 +10,7 @@
 
 *Date modified:* x
 
-*Abstract:* This guide is intended to facilitate the use of Darwin Core terms in the Resource Description Framework (RDF). It explains basic features of RDF and provides details of how to expose data in the form of RDF using Darwin Core terms and terms from other key vocabularies.  It defines terms in the namespace http://rs.tdwg.org/dwc/uri/ which are intended for use excusively with non-literal objects.  
+*Abstract:* This guide is intended to facilitate the use of Darwin Core terms in the Resource Description Framework (RDF). It explains basic features of RDF and provides details of how to expose data in the form of RDF using Darwin Core terms and terms from other key vocabularies.  It defines terms in the namespace {{{http://rs.tdwg.org/dwc/uri/}}} which are intended for use excusively with non-literal objects.  
 
 *Contributors:* Steve Baskauf (TDWG RDF/OWL Task Group), John Wieczorek (TDWG Darwin Core Task Group), John Deck (Genomic Biodiversity Working Group), Campbell Webb (TDWG RDF/OWL Task Group), Mark Schildhauer (National Center for Ecological Analysis and Synthesis)
 
@@ -48,7 +48,7 @@ This section describes some of the basic features of RDF.  It is not intended as
 
 The RDF model itself is independent of any specific serialization syntax.  The following diagram represents a set of facts about an image in a graphical form easily understood by humans.
 
-Each arrow represents a statement about the image, called a "triple" in RDF.  The set of triples is called an RDF graph.  Resources (represented by ovals) are identified by URIs.  The described resource (in this example the image http://bioimages.vanderbilt.edu/kirchoff/ac1490 at the tail of the arrow) is called the subject of the triple.  Properties of the subject resource are identified by term URIs shown here with their namespaces abbreviated (e.g. dcterms: = "http://purl.org/dc/terms/").  The property is called the predicate of the triple.  The values of the properties are called the object of the statement, with literal values (consisting of text) represented by rectangles.
+Each arrow represents a statement about the image, called a "triple" in RDF.  The set of triples is called an RDF graph.  Resources (represented by ovals) are identified by URIs.  The described resource (in this example the image {{{http://bioimages.vanderbilt.edu/kirchoff/ac1490}}} at the tail of the arrow) is called the subject of the triple.  Properties of the subject resource are identified by term URIs shown here with their namespaces abbreviated (e.g. _dcterms:_ = "{{{http://purl.org/dc/terms/}}}").  The property is called the predicate of the triple.  The values of the properties are called the object of the statement, with literal values (consisting of text) represented by rectangles.
 
 This RDF graph can be serialized in a somewhat human-friendly syntax called Terse RDF Triple Language (Turtle) [http://www.w3.org/TR/turtle/ TURTLE]:
 {{{
@@ -72,11 +72,11 @@ xmlns:dcterms="http://purl.org/dc/terms/"
  </rdf:Description>
 </rdf:RDF>
 }}}
-In this document, the following formatting conventions will be used.  Full URIs will be shown in Courier type and enclosed in angle brackets, e.g.
+In this document, the following formatting conventions will be used.  Full URIs will be shown in {{{Courier type}}} and enclosed in angle brackets, e.g.
 
-<http://bioimages.vanderbilt.edu/contact/kirchoff#coblea> 
+{{{<http://bioimages.vanderbilt.edu/contact/kirchoff#coblea>}}} 
 
-Abbreviated URIs will be shown in italics in the form namespace:localName, e.g. rdf:type.  Namespace abbreviations when shown by themselves will also be shown in italics, e.g. dwc: .  Examples will be displayed in Courier type.  
+Abbreviated URIs will be shown in italics in the form _namespace:localName_, e.g. _rdf:type_.  Namespace abbreviations when shown by themselves will also be shown in italics, e.g. _dwc:_ .  Examples will be displayed in {{{Courier}}} type.  
 
 The W3C specification recommends XML for exchange of information among applications because it is the most widely understood form of serialization [http://www.w3.org/TR/rdf-concepts/#section-xml-serialization RDF-XML-SERIALIZATION].  Therefore, all examples given here will be shown as RDF/XML.  In some cases, they will also be shown in Turtle.
 For more detailed information about RDF serialization, see part 3 of the [http://code.google.com/p/tdwg-rdf/wiki/Beginners3RDFbasics Beginner's Guide to RDF] and the references cited there.
