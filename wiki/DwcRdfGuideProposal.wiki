@@ -802,7 +802,7 @@ would be valid RDF.  However, best practices (Section 2.4.2.1.1) specify that wh
 The previous section showed that using a Darwin Core ID term to indicate the identifier associated with the subject resource is not necessary because there are well-known means in RDF (the _rdf:about_ attribute and the _dcterms:identifier_ property) for exposing the subject’s identifier.  However, as shown below, using a Darwin Core ID term to identify an object resource (as shown in the non-RDF XML Example 21) would actually be problematic. 
  
 In its normative definition, each Darwin Core ID term is declared to be _rdfs:subPropertyOf_ _dcterms:identifier_.  In RDF, the purpose of a subproperty declaration is to allow a client with reasoning capability to infer a triple containing a broader (and presumably more well-known) property. In the terminology of Dublin Core, the "ID" term is a qualifier which "refines" a basic Dublin Core term [http://dublincore.org/documents/usageguide/qualifiers.shtml DC-QUALIFIER] and the process of inferring a broader meaning from a more specific term is called a "dumb-down" operation.  If a provider attempting to expose the data of Table 3 as RDF used the _dwc:taxonID_ term as a property of the identification as shown in the (incorrect) Example 23:
- 
+
 Example 23:
 
 RDF/XML (incorrect usage)
@@ -863,13 +863,13 @@ Table 6
 
 ===2.7.3 Ownership of a collection item===
 
-Historically, the set of values for dwc:institutionCode, dwc:collectionCode, and dwc:catalogNumber (a “Darwin Core triplet”) has been used to identify a collection item and to indicate the owning institution and collection within that institution as shown in Table 7.  
+Historically, the set of values for _dwc:institutionCode_, _dwc:collectionCode_, and _dwc:catalogNumber_ (a “Darwin Core triplet”) has been used to identify a collection item and to indicate the owning institution and collection within that institution as shown in Table 7.  
 
 Table 7
 ||dwc:basisOfRecord||dwc:institutionCode||dwc:collectionCode||dwc:catalogNumber||dwc:collectionID||
 ||"PreservedSpecimen"||"MVZ"||"Mamm"||"115956"||"urn:lsid:biocol.org:col:34904"||
 
-In RDF, unique identification of collection items is done through the URI which acts as a globally unique identifier for that item.  The Darwin Core triplet properties may still be provided as literal values, but ownership/control of the collection item should be indicated using dwcuri:inCollection with an HTTP URI as the URI-reference object.  For physical specimens, the recommended best practice is to use a collection URI from a collections registry such as an HTTP-proxied LSID from the Registry of Biological Repositories http://www.biorepositories.org/).  *CHECK ON THE STATUS OF THIS! * Example 24 illustrates this for the data from Table 7.
+In RDF, unique identification of collection items is done through the URI which acts as a globally unique identifier for that item.  The Darwin Core triplet properties may still be provided as literal values, but ownership/control of the collection item should be indicated using _dwcuri:inCollection_ with an HTTP URI as the URI-reference object.  For physical specimens, the recommended best practice is to use a collection URI from a collections registry such as an HTTP-proxied LSID from the Registry of Biological Repositories http://www.biorepositories.org/).  *CHECK ON THE STATUS OF THIS! * Example 24 illustrates this for the data from Table 7.
 
 Example 24:
 RDF/XML
@@ -893,17 +893,17 @@ Turtle
 }}}
 ===2.7.4 Description of a taxonomic entity===
 
-The consensus embodied in the TDWG Taxon Concept Transfer Schema (TCS) standard [http://www.tdwg.org/standards/117/ TCS-STANDARD] is that identification instances refer to taxon concept instances.  Therefore it would be a best practice to describe taxonomic entities in RDF as taxon concepts sensu TCS.  However, the general Darwin Core vocabulary does not contain sufficient terms to serve as object properties describing the components of a taxon concept and to describe the relationships between one taxon concept and another.  Therefore it is considered out of the scope of this document to specify how taxon concepts should be rendered as RDF.  Nevertheless, Darwin Core does define many convenience terms listed under the dwc:Taxon class which can be used as properties of dwc:Identification instances (Table 4.6).  
+The consensus embodied in the TDWG Taxon Concept Transfer Schema (TCS) standard [http://www.tdwg.org/standards/117/ TCS-STANDARD] is that identification instances refer to taxon concept instances.  Therefore it would be a best practice to describe taxonomic entities in RDF as taxon concepts sensu TCS.  However, the general Darwin Core vocabulary does not contain sufficient terms to serve as object properties describing the components of a taxon concept and to describe the relationships between one taxon concept and another.  Therefore it is considered out of the scope of this document to specify how taxon concepts should be rendered as RDF.  Nevertheless, Darwin Core does define many convenience terms listed under the _dwc:Taxon_ class which can be used as properties of _dwc:Identification_ instances (Table 4.6).  
 
-It might be argued that these convenience terms would more appropriately be properties of a dwctype:Taxon instance.  However, the definition of “taxon” in Darwin Core is vague and terms in the dwc:Taxon category are a mixture of properties that might describe names and concepts.  Therefore this document establishes the convention that convenience terms for taxonomic entities should be properties of dwc:Identification.  The task of defining a class for taxon concepts must be an effort outside of Darwin Core.  This guide does establish the object property dwcuri:toTaxonConcept  for use in relating a Darwin Core identification instance to a taxon concept as defined elsewhere.  
+It might be argued that these convenience terms would more appropriately be properties of a _dwctype:Taxon_ instance.  However, the definition of “taxon” in Darwin Core is vague and terms in the _dwc:Taxon_ category are a mixture of properties that might describe names and concepts.  Therefore this document establishes the convention that convenience terms for taxonomic entities should be properties of _dwc:Identification_.  The task of defining a class for taxon concepts must be an effort outside of Darwin Core.  This guide does establish the object property _dwcuri:toTaxonConcept_ for use in relating a Darwin Core identification instance to a taxon concept as defined elsewhere.  
 
-Consider the following example where Takuma Yun identified a spider to the species Hersilia yaeyamaensis using information in Tanikawa (1999).  The data about this identification was listed in a database as shown in Table 8.
+Consider the following example where Takuma Yun identified a spider to the species _Hersilia yaeyamaensis_ using information in Tanikawa (1999).  The data about this identification was listed in a database as shown in Table 8.
 
 Table 8
 ||dwc:identificationID||dwc:identifiedBy||dwc:order||dwc:family||dwc:genus||dwc:specificEpithet||dwc:nameAccordingToID||
 ||"75C9EA16-72B1-44C9-AD40-3C3A41323A09"||"Takuma Yun"||"Araneae"||"Hersiliidae"||"Hersilia"||"yaeyamaensis"||"75C9EA16-72B1-44C9-AD40-3C3D41323AB9"||
 
-In this example, a best practice would be to link the identification instance to a taxon concept instance of Hersilia yaeyamaensis sec. Tanikawa 1999 using the object property dwcuri:toTaxonConcept as shown in Example 22.  However, the data provider may be uninterested, or unable to mint or discover a taxon concept instance to which the identification instance can be linked.  The provider may simply wish to make it easier to discover the identification instance and be unconcerned about the taxonomic relationships that might be asserted for concepts that may be defined for the listed name components.  In that case the provider can use the following RDF:
+In this example, a best practice would be to link the identification instance to a taxon concept instance of _Hersilia yaeyamaensis_ sec. Tanikawa 1999 using the object property _dwcuri:toTaxonConcept_ as shown in Example 22.  However, the data provider may be uninterested, or unable to mint or discover a taxon concept instance to which the identification instance can be linked.  The provider may simply wish to make it easier to discover the identification instance and be unconcerned about the taxonomic relationships that might be asserted for concepts that may be defined for the listed name components.  In that case the provider can use the following RDF:
 
 Example 25:
 RDF/XML
@@ -933,13 +933,13 @@ In the example, providing the triple
 {{{
 <http://museum.or.jp/9AC9BD26-8B41-458A-AA35-503A4527D009> dwc:order  “Araneae”
 }}}
-should not be taken to imply that Takuma Yun asserted that the spider he identified was classified within the order Araneae, nor should the RDF be assumed to imply that Takuma Yun asserted that Aranaeae is the name of a parent taxon of the genus Hersilia.  Those sorts of assertions would need to be made using more complex RDF and a more expressive vocabulary outside of Darwin Core.  The RDF simply makes it easier for users who are looking for spider identifications to search for them by looking for identifications having dwc:order of “Araneae”, dcw:genus of “Hersilia”, and a specific epithet of “yaeyamaensis”.  If it can be determined (perhaps at a later time) that the taxon concept described by the convenience terms corresponds to a particular URI-identified instance, the identification instance can be linked to it using an object property, e.g.
+should not be taken to imply that Takuma Yun asserted that the spider he identified was classified within the order Araneae, nor should the RDF be assumed to imply that Takuma Yun asserted that Aranaeae is the name of a parent taxon of the genus _Hersilia_.  Those sorts of assertions would need to be made using more complex RDF and a more expressive vocabulary outside of Darwin Core.  The RDF simply makes it easier for users who are looking for spider identifications to search for them by looking for identifications having _dwc:order_ of “Araneae”, _dcw:genus_ of “Hersilia”, and a specific epithet of “yaeyamaensis”.  If it can be determined (perhaps at a later time) that the taxon concept described by the convenience terms corresponds to a particular URI-identified instance, the identification instance can be linked to it using an object property, e.g.
 {{{
 <http://muse.or.jp/9AC9BD26-8B41-458A-AA35-503A4527D009> dwcuri:toTaxonConcept <http://zoobank.org/75C9EA16-72B1-44C9-AD40-3C3D41323AB9>
 }}}
 ===2.7.5 Names of geographic subdivisions===
 
-The data from Table 5 can be expressed as shown in Example 26.  In the example, the term dwcuri:inDescribedPlace is used as an object property to link the dcterms:Location instance to a URI for the lowest known geographic subdivision which applies to the locality.  dwc:locality could also be used to provide a string literal description of the specific description of the place.
+The data from Table 5 can be expressed as shown in Example 26.  In the example, the term _dwcuri:inDescribedPlace_ is used as an object property to link the _dcterms:Location_ instance to a URI for the lowest known geographic subdivision which applies to the locality.  _dwc:locality_ could also be used to provide a string literal description of the specific description of the place.
 
 Example 26:
 RDF/XML
@@ -969,11 +969,11 @@ Turtle
      dwc:county "Robertson";
      dwcuri:inDescribedPlace <http://sws.geonames.org/4653638/>.
 }}}
-Because generic RDF places no restrictions on repeating properties, a dcterms:Location instance could have multiple dwcuri:inDescribedPlace properties if the location is included within several described geographic subdivisions.  For example, a particular location could be included within http://sws.geonames.org/4626068/ (The Great Smoky Mountains National Park which straddles two states) and http://sws.geonames.org/4656568/ (Sevier County, Tennessee, US, which is the lowest level political subdivision).  
+Because generic RDF places no restrictions on repeating properties, a _dcterms:Location_ instance could have multiple _dwcuri:inDescribedPlace_ properties if the location is included within several described geographic subdivisions.  For example, a particular location could be included within {{{<http://sws.geonames.org/4626068/>}}} (The Great Smoky Mountains National Park which straddles two states) and {{{<http://sws.geonames.org/4656568/>}}} (Sevier County, Tennessee, US, which is the lowest level political subdivision).  
 
 ===2.7.6 Chronostratographic (geological timescale) descriptors===
 
-The following example is taken from [http://dx.doi.org/10.1098/rsbl.2011.0228 http://dx.doi.org/10.1098/rsbl.2011.0228], which involves the geological context of a fossil serving as a holotype for a species description.  In this example (Table 9), there is a single value given for the Epoch (Middle Jurassic), so the values for each of the earliest.../latest... stratigraphic timescale term pairs are the same.  
+The following example is taken from [http://dx.doi.org/10.1098/rsbl.2011.0228 http://dx.doi.org/10.1098/rsbl.2011.0228], which involves the geological context of a fossil serving as a holotype for a species description.  In this example (Table 9), there is a single value given for the Epoch (Middle Jurassic), so the values for each of the _earliest.../latest..._ stratigraphic timescale term pairs are the same.  
 
 
 
@@ -1017,11 +1017,11 @@ Turtle
      dwcuri:earliestGeochronologicalEra <http://resource.geosciml.org/classifier/ics/ischart/MiddleJurassic>;
      dwcuri:latestGeochronologicalEra <http://resource.geosciml.org/classifier/ics/ischart/MiddleJurassic>.
 }}}
-In this example, the object properties dwcuri:earliestGeochronologicalEra and dwcuri:latestGeochronologicalEra link to a URI that identifies an instance of the gsml:GeochronologicEra class which uses SKOS to relate the Middle Jurassic epoch to higher levels in the geochronological hierarchy.
+In this example, the object properties _dwcuri:earliestGeochronologicalEra_ and _dwcuri:latestGeochronologicalEra_ link to a URI that identifies an instance of the _gsml:GeochronologicEra_ class which uses SKOS to relate the Middle Jurassic epoch to higher levels in the geochronological hierarchy.
 
 ===2.7.7 Lithostratigraphy descriptors===
 
-Since lithostratigraphic units are hierarchical, the pattern followed with the other hierarchical convenience terms applies to the Darwin Core lithostratigraphic terms categorized under the dwc:GeologicalContext class (dwc:group, dwc:formation, dwc:member, and dwc:bed).  The object property dwcuri:fromLithostratigraphicUnit can be used to link the URI for a lithostratigraphic unit at the lowest appropriate level.  
+Since lithostratigraphic units are hierarchical, the pattern followed with the other hierarchical convenience terms applies to the Darwin Core lithostratigraphic terms categorized under the _dwc:GeologicalContext_ class (_dwc:group_, _dwc:formation_, _dwc:member_, and _dwc:bed_).  The object property _dwcuri:fromLithostratigraphicUnit_ can be used to link the URI for a lithostratigraphic unit at the lowest appropriate level.  
 
 =3. Term reference=
 
@@ -1056,7 +1056,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 3 See the ancillary document “Expressing License Properties as RDF” for information about linking a creative work to its license.
 
-4 DCMI does not provide a literal object analogue of dcterms:rightsHolder.  Audubon Core recommends xmpRights:Owner for literals.  However, since xmpRights:Owner is defined as “a list of legal owners of the resource”  [http://www.adobe.com/content/dam/Adobe/en/devnet/xmp/pdfs/XMPSpecificationPart1.pdf XMP-SPECIFICATION], it can only be used to specify the rights owner, not an agent managing the rights.  
+4 DCMI does not provide a literal object analogue of _dcterms:rightsHolder_.  Audubon Core recommends _xmpRights:Owner_ for literals.  However, since _xmpRights:Owner_ is defined as “a list of legal owners of the resource”  [http://www.adobe.com/content/dam/Adobe/en/devnet/xmp/pdfs/XMPSpecificationPart1.pdf XMP-SPECIFICATION], it can only be used to specify the rights owner, not an agent managing the rights.  
 
 5 See the [http://wiki.dublincore.org/index.php/User_Guide/Publishing_Metadata#dcterms:accessRights DCMI-ACCESS-RIGHTS] guidelines for an example.
 
@@ -1070,7 +1070,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 ||dwc:catalogNumber dwc:samplingEffort dwc:verbatimEventDate dwc:verbatimLocality dwc:verbatimElevation dwc:verbatimCoordinates dwc:verbatimLatitude dwc:verbatimLongitude dwc:verbatimDepth dwc:verbatumTaxonRank||Based on their term definitions, these terms are expected to have untyped literal values||
 ||dwc:basisOfRecord||Use only with literal value strings from the Darwin Core Type Vocabulary.  Use rdf:type to refer to URIs that describe the type of the resource.||
 
-6 No Darwin Core terms defined in the Darwin Core normative RDF (as opposed to those imported from Dublin Core) have domain or range declarations as a part of their definitions.  However, the five terms in the dwc: namespace listed in the table above are defined to be rdfs:subPropertyOf of dcterms:date, which has the range rdfs:Literal.  Therefore they have the range rdfs:Literal through inheritance. 
+6 No Darwin Core terms defined in the Darwin Core normative RDF (as opposed to those imported from Dublin Core) have domain or range declarations as a part of their definitions.  However, the five terms in the _dwc:_ namespace listed in the table above are defined to be _rdfs:subPropertyOf_ of _dcterms:date_, which has the range _rdfs:Literal_.  Therefore they have the range _rdfs:Literal_ through inheritance. 
 
 ==3.5 Darwin Core convenience terms that are expected to be used only with literal values ==
 
