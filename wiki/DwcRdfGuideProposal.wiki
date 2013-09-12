@@ -452,24 +452,24 @@ Darwin Core defines two categories of classes.  Classes defined within the gener
 
 The following list summarizes the classes included in Darwin Core that should be used for typing biodiversity-related resources:
 
-_dwctype:Occurrence
-dcmitype:Event
-dcterms:Location_ [add to DwC type vocabulary, deprecate _dwctype:Location_]
-propose _dwctype:GeologicalContext_
-propose _dwctype:Identification_
-_dwctype:PreservedSpecimen
-dwctype:FossilSpecimen
-dwctype:LivingSpecimen
-dwctype:HumanObservation
-dwctype:MachineObservation
-dwctype:NomenclaturalChecklist_
+  _dwctype:Occurrence
+  dcmitype:Event
+  dcterms:Location_ [add to DwC type vocabulary, deprecate _dwctype:Location_]
+  propose _dwctype:GeologicalContext_
+  propose _dwctype:Identification_
+  _dwctype:PreservedSpecimen
+  dwctype:FossilSpecimen
+  dwctype:LivingSpecimen
+  dwctype:HumanObservation
+  dwctype:MachineObservation
+  dwctype:NomenclaturalChecklist_
 
 The following list summarizes classes included in the Dublin Core type vocabulary (but which are not part of Darwin Core) that should be used for typing biodiversity-related resources:
 
-_dcmitype:StillImage
-dcmitype:MovingImage
-dcmitype:Sound
-dcmitype:PhysicalObject_
+  _dcmitype:StillImage
+  dcmitype:MovingImage
+  dcmitype:Sound
+  dcmitype:PhysicalObject_
 
 ==2.4 Object resources==
  
