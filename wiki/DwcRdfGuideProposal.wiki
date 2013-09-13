@@ -794,7 +794,7 @@ so expressing the object reference as
 {{{
 <dwcuri:toTaxonConcept rdf:resource="urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"/>
 }}}
-would be valid RDF.  However, best practices (Section 2.4.2.1.1) specify that when LSIDs are the objects of triples, they should be in HTTP-proxied form.  In Example 22, the LSID is proxied using the TDWG LSID resolver. 
+would be valid RDF.  However, best practices ([#2.4.2.1.1_Objects_identified_by_LSIDs Section 2.4.2.1.1]) specify that when LSIDs are the objects of triples, they should be in HTTP-proxied form.  In Example 22, the LSID is proxied using the TDWG LSID resolver. 
 4. The class of the subject identification instance (_dwc:Identification_) is asserted explicitly using _rdf:type_.  The type of the object taxon concept instance is not stated directly - a client would need to dereference the URI to discover it.  
   
 ===2.6.1 Unintended consequences of using Darwin Core ID terms in RDF===
@@ -851,7 +851,7 @@ In general, it should not be necessary for a data provider to recreate hierarchi
 
 ===2.7.2 Literal convenience terms versus a single object property reference===
 
-There are several groups of convenience terms in the dwc: namespace which may be used to provide literal values for the purposes listed above (Section 4.6).  In the case of each of these groups, it is not expected that a provider will link to URI references for each level in the hierarchy.  Therefore, _dwcuri:_ analogues are not defined for those convenience terms from the _dwc:_ namespace.  Rather, for each category of convenience terms, there is a single _dwcuri:_ namespace term (having no analogue in the _dwc:_ namespace; Section 4.7) which can be used to link to the lowest available level in the hierarchy with the understanding that the RDF of the object resource will provide links to other URIs for higher levels of the hierarchy.  Such _dwcuri:_ terms can refer to any level in the hierarchy if there is uncertainty about the identity of lower levels, or if lower levels do not exist. 
+There are several groups of convenience terms in the _dwc:_ namespace which may be used to provide literal values for the purposes listed above ([#3.6_dwcuri:_terms_having_local_names_that_don%E2%80%99t_correspond_to Section 3.6]).  In the case of each of these groups, it is not expected that a provider will link to URI references for each level in the hierarchy.  Therefore, _dwcuri:_ analogues are not defined for those convenience terms from the _dwc:_ namespace.  Rather, for each category of convenience terms, there is a single _dwcuri:_ namespace term (having no analogue in the _dwc:_ namespace; [#3.7_dwc:_namespace_terms_which_have_analogues_in_the_dwcuri:_nam Section 3.7]) which can be used to link to the lowest available level in the hierarchy with the understanding that the RDF of the object resource will provide links to other URIs for higher levels of the hierarchy.  Such _dwcuri:_ terms can refer to any level in the hierarchy if there is uncertainty about the identity of lower levels, or if lower levels do not exist. 
 
 Table 6
 ||Category of convenience term||object property||Category of object resource||rdf:type of example resource||
