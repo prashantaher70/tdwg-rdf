@@ -241,7 +241,7 @@ Statements about resources are made in RDF in the form of "triples" [http://www.
  
 Table 2
 
-||*Subject*||*Predicate*||*Object*||
+|| *Subject* || *Predicate* || *Object* ||
 ||<http://dbpedia.org/resource/Starry_night>||<http://xmlns.com/foaf/0.1/maker>||<http://viaf.org/viaf/9854560>||
 ||dbres:Starry_night||foaf:maker||viaf:9854560||
  
@@ -753,7 +753,7 @@ This example could also be represented by the following database table in which 
  
 Table 3
 
-||*dwc:identificationID*||*dwc:identifiedBy*||*dwc:dateIdentified*||*dwc:taxonID*||
+|| *dwc:identificationID* || *dwc:identifiedBy* || *dwc:dateIdentified* || *dwc:taxonID* ||
 ||"http://guid.mvz.org/identifications/23459"||"Richard Sage"||"2000"||"urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"||
 
 
@@ -825,7 +825,7 @@ Turtle (incorrect usage)
 there would be an undesired effect if a client unfamiliar with Darwin Core performed a "dumb-down" operation (i.e. fell back to the broader meaning of the _dwc:taxonID_ term as _dcterms:identifier_).   The client would infer the triple:
  
 Table 4
-||*Subject*||*Predicate*||*Object*||
+|| *Subject* || *Predicate* || *Object* ||
 ||<http://guid.mvz.org/identifications/23459>||dcterms:identifier||"http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"||
  
 where the value of the _dwc:taxonID_ term was the identifier of the subject resource rather than of the object resource as intended by the data provider.  This is why data providers will generally need to look outside Darwin Core for object properties that can be used to relate instances of one class to instances of another instead of using the Darwin Core ID terms.
@@ -835,7 +835,7 @@ where the value of the _dwc:taxonID_ term was the identifier of the subject reso
 In several situations, providers of Darwin Core text-based data use a set of hierarchical property/value pairs to unambiguously specify a resource.  For example, a database record for a resource collected at N 36.4024°, W 87.02219° might contain the following data: 
 
 Table 5
-||*dwc:decimalLatitude*||*dwc:decimalLongitude*||*dwc:geodeticDatum*||*dwc:continent*||*dwc:country*||*dwc:stateProvince*||*dwc:county*||
+|| *dwc:decimalLatitude* || *dwc:decimalLongitude* || *dwc:geodeticDatum* || *dwc:continent* || *dwc:country* || *dwc:stateProvince* || *dwc:county* ||
 ||"36.4024"||"-87.02219"||"EPSG:4326"||"North America"||"United States"||"Tennessee"||"Robertson"||
 
 The data unambiguously specifies the lowest level political subdivision (Robertson County) by including the higher level political subdivisions in the hierarchy and thus differentiates it from other places that are second-order administrative divisions identified by the string “Robertson” (e.g. Robertson County, Texas, US or Robertson County, Kentucky, US).  Darwin Core terms that are used to form a hierarchy of literal values are called convenience terms.  
@@ -854,7 +854,7 @@ In general, it should not be necessary for a data provider to recreate hierarchi
 There are several groups of convenience terms in the _dwc:_ namespace which may be used to provide literal values for the purposes listed above ([#3.6_dwcuri:_terms_having_local_names_that_don%E2%80%99t_correspond_to Section 3.6]).  In the case of each of these groups, it is not expected that a provider will link to URI references for each level in the hierarchy.  Therefore, _dwcuri:_ analogues are not defined for those convenience terms from the _dwc:_ namespace.  Rather, for each category of convenience terms, there is a single _dwcuri:_ namespace term (having no analogue in the _dwc:_ namespace; [#3.7_dwc:_namespace_terms_which_have_analogues_in_the_dwcuri:_nam Section 3.7]) which can be used to link to the lowest available level in the hierarchy with the understanding that the RDF of the object resource will provide links to other URIs for higher levels of the hierarchy.  Such _dwcuri:_ terms can refer to any level in the hierarchy if there is uncertainty about the identity of lower levels, or if lower levels do not exist. 
 
 Table 6
-||*Category of convenience term*||*object property*||*Category of object resource*||*_rdf:type_ of example resource*||
+|| *Category of convenience term* || *Object property* || *Category of object resource* || *_rdf:type_ of example resource* ||
 ||ownership of collection item ([#2.7.3_Ownership_of_a_collection_item Section 2.7.3])||dwcuri:inCollection||collection||col:Collection||
 ||description of a taxonomic entity ([#2.7.4_Description_of_a_taxonomic_entity Section 2.7.4])||dwcuri:toTaxonConcept||taxon concept; taxon name use||not specified||
 ||names of geographic subdivisions ([#2.7.5_Names_of_geographic_subdivisions Section 2.7.5])||dwcuri:inDescribedPlace||geographic place||gn:Feature||
@@ -867,7 +867,7 @@ Table 6
 Historically, the set of values for _dwc:institutionCode_, _dwc:collectionCode_, and _dwc:catalogNumber_ (a “Darwin Core triplet”) has been used to identify a collection item and to indicate the owning institution and collection within that institution as shown in Table 7.  
 
 Table 7
-||*dwc:basisOfRecord*||*dwc:institutionCode*||*dwc:collectionCode*||*dwc:catalogNumber*||*dwc:collectionID*||
+|| *dwc:basisOfRecord* || *dwc:institutionCode* || *dwc:collectionCode* || *dwc:catalogNumber* || *dwc:collectionID* ||
 ||"PreservedSpecimen"||"MVZ"||"Mamm"||"115956"||"urn:lsid:biocol.org:col:34904"||
 
 In RDF, unique identification of collection items is done through the URI which acts as a globally unique identifier for that item.  The Darwin Core triplet properties may still be provided as literal values, but ownership/control of the collection item should be indicated using _dwcuri:inCollection_ with an HTTP URI as the URI-reference object.  For physical specimens, the recommended best practice is to use a collection URI from a collections registry such as an HTTP-proxied LSID from the Registry of Biological Repositories http://www.biorepositories.org/).  *CHECK ON THE STATUS OF THIS! * Example 24 illustrates this for the data from Table 7.
@@ -901,7 +901,7 @@ It might be argued that these convenience terms would more appropriately be prop
 Consider the following example where Takuma Yun identified a spider to the species _Hersilia yaeyamaensis_ using information in Tanikawa (1999).  The data about this identification was listed in a database as shown in Table 8.
 
 Table 8
-||*dwc:identificationID*||*dwc:identifiedBy*||*dwc:order*||*dwc:family*||*dwc:genus*||*dwc:specificEpithet*||*dwc:nameAccordingToID*||
+|| *dwc:identificationID* || *dwc:identifiedBy* || *dwc:order* || *dwc:family* || *dwc:genus* || *dwc:specificEpithet* || *dwc:nameAccordingToID* ||
 ||"75C9EA16-72B1-44C9-AD40-3C3A41323A09"||"Takuma Yun"||"Araneae"||"Hersiliidae"||"Hersilia"||"yaeyamaensis"||"75C9EA16-72B1-44C9-AD40-3C3D41323AB9"||
 
 In this example, a best practice would be to link the identification instance to a taxon concept instance of _Hersilia yaeyamaensis_ sec. Tanikawa 1999 using the object property _dwcuri:toTaxonConcept_ as shown in Example 22.  However, the data provider may be uninterested, or unable to mint or discover a taxon concept instance to which the identification instance can be linked.  The provider may simply wish to make it easier to discover the identification instance and be unconcerned about the taxonomic relationships that might be asserted for concepts that may be defined for the listed name components.  In that case the provider can use the following RDF:
@@ -979,7 +979,7 @@ The following example is taken from [http://dx.doi.org/10.1098/rsbl.2011.0228 ht
 
 
 Table 9
-||*dwc:formation*||*dwc:earliestEonOrLowestEonothem dwc:latestEonOrHighestEonothem*||*dwc:earliestEraOrLowestErathem dwc:latestEraOrHighestErathem*||*dwc:earliestPeriodOrLowestSystem dwc:latestPeriodOrHighestSystem*||*dwc:earliestEpochOrLowestSeries dwc:latestEpochOrHighestSeries*||
+|| *dwc:formation* || *dwc:earliestEonOrLowestEonothem dwc:latestEonOrHighestEonothem* || *dwc:earliestEraOrLowestErathem dwc:latestEraOrHighestErathem* || *dwc:earliestPeriodOrLowestSystem dwc:latestPeriodOrHighestSystem* || *dwc:earliestEpochOrLowestSeries dwc:latestEpochOrHighestSeries* ||
 ||"Jiu-longshan"||"Phanerozoic"||"Mesozoic"||"Jurassic"||"Middle"||
 
 Example 27 shows how this can be rendered as RDF using the Darwin Core stratigraphic timescale terms as convenience terms.
