@@ -99,7 +99,7 @@ First, if a non-URI globally unique identifier is used to identify a subject res
 {{{
 <urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6>
 }}}
-Similarly, ISBNs can be converted to URNs [http://tools.ietf.org/html/rfc3187 ISBN-AS-URN] as shown in Examples 13 and 14.  Although these URNs are valid URIs, they have the disadvantage that they are not actionable (see the following section).  In contrast, the "Darwin Core triplet"
+Similarly, ISBNs can be converted to URNs [http://tools.ietf.org/html/rfc3187 ISBN-AS-URN] as shown in Examples 13 and 14.  Although these URNs are valid URIs, they have the disadvantage that they are not actionable (see [#1.3.2.2_HTTP_URIs_as_self-resolving_GUIDs Section 1.3.2.2]).  In contrast, the "Darwin Core triplet"
 {{{
 MVZ:Mamm:165861
 }}}
