@@ -1030,14 +1030,14 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 ==3.1 Non-Darwin Core terms needed to express fundamental properties in RDF==
 
-||*term*||*Notes*||
+|| *term* || *Notes* ||
 ||rdf:type||Used to indicate the class of which the resource is an instance.  It is considered a best practice to type resources using rdf:type, whereas type declarations using dcterms:type and dwc:basisOfRecord are optional.  See [#2.3.1.5_Classes_to_be_used_for_type_declarations_of_resources_de Section 2.3.1.5] for recommended classes to be used with biodiversity resources.||
 ||dcterms:identifier||Used to relate string literal identifiers to the subject resource.  This can include string representations of URIs if they are considered the identifier for the resource.||
 
 ==3.2 Imported Dublin Core terms for which only literal objects are appropriate==
 
 
-||*term*||*domain*||*range*||
+|| *term* || *domain* || *range* ||
 ||dcterms:modified||---||rdfs:Literal^1^||
 ||dcterms:bibliographicCitation||dcterms:BibliographicResource||rdfs:Literal||
 
@@ -1045,7 +1045,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 ==3.3 Imported Dublin Core terms that have non-literal objects and corresponding terms that have literal objects==
 
-||*Term intended for use in RDF with non-literal objects*^2^||*range*||*recommended values*||*Term intended for use in RDF with literal objects*||
+|| *Term intended for use in RDF with non-literal objects*^2^ || *range* || *recommended values* || *Term intended for use in RDF with literal objects* ||
 ||dcterms:language||dcterms:LinguisticSystem||MARC language URI http://id.loc.gov/vocabulary/languages.html||dc:language||
 ||dcterms:rights^3^||dcterms:RightsStatement||A custom RDF rights statement can be created with a minted URI or blank node representing the object of _dcterms:rights_ .||dc:rights||
 ||dcterms:type||rdfs:Class||DCMI Type Vocabulary http://dublincore.org/documents/dcmi-terms/#H7||dc:type||
@@ -1063,7 +1063,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 ==3.4 Terms defined by Darwin Core that are expected to be used only with literal values==
 
-||*Darwin Core term*||*Notes on  expressing as RDF*||
+|| *Darwin Core term* || *Notes on  expressing as RDF* ||
 ||<dl><dt>dwc:eventDate</dt><dt>dwc:georeferencedDate</dt><dt>dwc:dateIdentified</dt><dt>dwc:measurementDeterminedDate</dt><dt>dwc:relationshipEstablishedDate</dt></dl>||These date terms have range _rdfs:Literal_ ^6^. Best practice as specified in the term definition recommends that they should be formatted according to ISO 8601:2004(E).  There is no defined XML Schema datatype that corresponds exactly to ISO 8601:2004(E), therefore the entire set of possible values cannot be specified using an _rdf:datatype_ attribute.  The XML Schema dateTime datatype (_xsd:dateTime_) which is effectively a subset of ISO 8601:2004(E), may be used as an _rdf:datatype_ attribute.  However, _xsd:dateTime_ requires the complete series of year, month, day, hour, second (e.g. 002-10-10T12:00:00) and does not permit listing only part of this hierarchy (e.g. only the year) as is allowed in ISO 8601:2004(E).||
 ||dwc:eventTime||It is recommended that the format described by ISO 8601:2004(E) be used.  As with the date terms, there is no XML Schema datatype that includes all of the possible values allowed in ISO 8601:2004(E), so there is no generic _rdf:datatype_ attribute that would apply to all possible instances.  The XML Schema time datatype (_xsd:time_) which is effectively a subset of ISO 8601:2004(E) may be used as an _rdf:datatype_ attribute although it is limited to values that include hours, minutes, and seconds (e.g. 13:07:56-05:00).||
 ||<dl><dt>dwc:individualCount</dt><dt>dwc:decimalLatitude</dt><dt>dwc:decimalLongitude</dt><dt>dwc:coordinatePrecision</dt><dt>dwc:pointRadiusSpatialFit</dt><dt>dwc:coordinateUncertaintyInMeters</dt><dt>dwc:minimumElevationInMeters</dt><dt>dwc:maximumElevationInMeters</dt><dt>dwc:minimumDepthInMeters</dt><dt>dwc:maximumDepthInMeters</dt><dt>dwc:minimumDistanceAboveSurfaceInMeters</dt><dt>dwc:maximumDistanceAboveSurfaceInMeters</dt><dt>dwc:startDayOfYear</dt><dt>dwc:endDayOfYear</dt><dt>dwc:year</dt><dt>dwc:month</dt><dt>dwc:day</dt><dt>dwc:footprintSpatialFit</dt></dl>||These terms are expected to have literal values which are numeric.  Therefore, an _rdf:datatype_ attribute describing the form of the number may be appropriate.||
@@ -1077,7 +1077,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "convenience" terms.
 
-||*Darwin Core term*||*Notes*||
+|| *Darwin Core term* || *Notes* ||
 ||<dl><dt>dwc:collectionCode</dt><dt>dwc:institutionCode</dt><dt>dwc:ownerInstitutionCode||The subject resource can be any resource that is part of a collection.  As an alternative, use the object property _dwcuri:inCollection_ to link the subject resource to a URI for the collection containing the institution that owns or controls the resource.  ||
 ||<dl><dt>dwc:kingdom</dt><dt>dwc:phylum</dt><dt>dwc:class</dt><dt>dwc:order</dt><dt>dwc:family</dt><dt>dwc:genus</dt><dt>dwc:subgenus</dt><dt>dwc:specificEpithet</dt><dt>dwc:infraspecificEpithet</dt><dt>dwc:higherClassification</dt><dt>dwc:vernacularName</dt><dt>dwc:nameAccordingTo</dt><dt>dwc:scientificName</dt><dt>dwc:taxonRank</dt><dt>dwc:scientificNameAuthorship</dt><dt>dwc:nomenclaturalStatus</dt><dt>dwc:namePublishedIn</dt><dt>dwc:namePublishedInYear</dt><dt>dwc:nomenclaturalCode</dt><dt>dwc:originalNameUsage</dt><dt>dwc:taxonomicStatus</dt><dt>dwc:parentNameUsage</dt><dt>dwc:acceptedNameUsage</dt></dl>||The subject resource should be a _dwc:Identification_ instance.  See [#2.7.4_Description_of_a_taxonomic_entity Section 2.7.4] for a discussion of why it not recommended to use these as properties of _dwctype:Taxon_ or _dwc:Taxon_ instances.  As an alternative, use the object property _dwcuri:toTaxonConcept_ to link the subject _dwc:Identification_ instance to a taxonomic entity such as a taxon concept or taxon name use.  It is likely that these taxonomic entities will have a complex structure which differentiates among name entities, name strings, application of a name to a concept, which expresses parent/child and set relationships among entities, and which tracks provenance information about the names, references, and concepts.  The flat nature of text-based Darwin Core cannot represent such a complex structure and it is beyond the scope of this guide to describe them.||
 ||<dl><dt>dwc:higherGeography</dt><dt>dwc:continent</dt><dt>dwc:waterBody</dt><dt>dwc:islandGroup</dt><dt>dwc:island</dt><dt>dwc:countryCode</dt><dt>dwc:country</dt><dt>dwc:stateProvince</dt><dt>dwc:county</dt><dt>dwc:municipality</dt><dt>dwc:locality</dt></dl>||The subject resource should be a _dcterms:Location_ instance.  As an alternative, use the object property _dwcuri:inDescribedPlace_ to link the subject resource to a standardized place described as part of a hierarchy. See [#2.7.5_Names_of_geographic_subdivisions Section 2.7.5] for details.   It is likely that providers will want to provide a text value for _dwc:locality_ even if _dwcuri:inDescribedPlace_ is used to replace the other hierarchical convenience terms in this category.  This is because it is unlikely that a place description at this most specific level (e.g. “15 km N of Essen”) would be represented by a standardized URI-identified place instance.  There is no _dwcuri:_ analogue of _dwc:locality_ because if a URI-identified place were available to represent the locality, the term _dwcuri:inDescribedPlace_ would be used to link to it.||
@@ -1086,7 +1086,7 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 
 ==3.6 dwcuri: terms having local names that don’t correspond to terms in the dwc: Darwin Core namespace==
 
-||*Darwin Core term*||*Notes*||
+|| *Darwin Core term* || *Notes* ||
 ||dwcuri:inCollection||Use to link any subject resource that is part of a collection to the collection containing the resource.  Recommended best practice is to use URIs from Registry of Biological Repositories (http://www.biorepositories.org/). See [#2.7.3_Ownership_of_a_collection_item Section 2.7.3] for details.||
 ||dwcuri:toTaxonConcept||Use to link a _dwc:Identification_ instance subject to a taxonomic entity such as a taxon concept or taxon name use.   See [#2.7.4_Description_of_a_taxonomic_entity Section 2.7.4] for details.||
 ||dwcuri:inDescribedPlace||Use to link a _dcterms:Location_ instance subject to the lowest level standardized hierarchically-described resource.  It is expected that such resources will be linked to higher levels in the hierarchy by the organization minting the URI.  Recommended best practice is to use URIs from the GeoNames geographical database (http://www.geonames.org/ ).  See [#2.7.5_Names_of_geographic_subdivisions Section 2.7.5] for details.||
@@ -1096,7 +1096,7 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 
 ==3.7 dwc: namespace terms which have analogues in the dwcuri: namespace==
 
-||*Darwin Core term having a _dwcuri:_ analogue with the same local name*||*Notes on the _dwcuri:_ analogues*||
+|| *Darwin Core term having a _dwcuri:_ analogue with the same local name* || *Notes on the _dwcuri:_ analogues* ||
 ||<dl><dt>dwc:recordedBy</dt><dt>dwc:identifiedBy</dt><dt>dwc:georeferencedBy</dt></dl>||The object is an agent; use VIAF, e.g. {{{<http://viaf.org/viaf/27063124>}}} or well-known URI||
 ||dwc:locationAccordingTo||The object is an agent or publication.  Use a well-known URI when possible, such as VIAF or an HTTP-proxied DOI.||
 ||<dl><dt>dwc:georeferenceProtocol</dt><dt>dwc:georeferenceSources</dt><dt>dwc:samplingProtocol</dt></dl>||The object is a published or well-known reference; use a URI version (preferably HTTP proxied) of doi, isbn, issn, etc. if available.||
@@ -1108,7 +1108,7 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 
 ==3.8 Darwin Core terms whose function cannot be duplicated by a dwcuri: object property==
 
-||*Darwin Core term*||*Notes*||
+|| *Darwin Core term* || *Notes* ||
 ||<dl><dt>dwc:relationshipOfResource</dt><dt>dwc:relationshipAccordingTo</dt></dl>||Use the well-known terms _oa:motivatedBy_ and _oa:annotatedBy_ See the informative ancillary web pages for examples.||
 ||<dl><dt>dwc:measurementType</dt><dt>dwc:measurementValue</dt><dt>dwc:measurementAccuracy</dt><dt>dwc:measurementUnit</dt><dt>dwc:measurementDeterminedDate</dt><dt>dwc:measurementDeterminedBy</dt><dt>dwc:measurementMethod</dt><dt>dwc:measurementRemarks</dt></dl>||See the informative ancillary web pages for examples.||
 ||dwc:dynamicProperties||See the informative ancillary web pages for examples.||
