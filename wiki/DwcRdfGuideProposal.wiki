@@ -184,7 +184,7 @@ To facilitate achieving the clarity that RDF makes possible, this guide provides
  
 Table 1
 
-||*vocabulary name*||*namespace abbreviation*||*full prefix*||
+|| *vocabulary name* || *namespace abbreviation* || *full prefix* ||
 ||Resource Description Framework||rdf:||http://www.w3.org/1999/02/22-rdf-syntax-ns#||
 ||RDF Schema||rdfs:||http://www.w3.org/2000/01/rdf-schema#||
 ||XML Schema||xsd:||http://www.w3.org/2001/XMLSchema#||
