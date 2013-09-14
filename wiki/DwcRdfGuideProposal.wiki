@@ -1,4 +1,5 @@
 #summary Draft of proposed Darwin Core RDF Guide
+#sidebar DwcRdfSidebar
 
 [http://www.tdwg.org/ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png]
 = Darwin Core RDF Guide =
