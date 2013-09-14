@@ -320,13 +320,13 @@ Turtle
 <http://biocol.org/urn:lsid:biocol.org:col:35115>
      owl:sameAs <urn:lsid:biocol.org:col:35115>.
 }}}
-Since LSIDs follow the URN URI scheme, they can serve as the subject of any RDF triple.  However, it is better to use the http-proxied form as the subject (i.e. the value of the rdf:about attribute) in the description of the resource.  See the [SameAsLSID informative ancillary web page] for more information about implementing LSIDs.  
+Since LSIDs follow the URN URI scheme, they can serve as the subject of any RDF triple.  However, it is better to use the http-proxied form as the subject (i.e. the value of the _rdf:about_ attribute) in the description of the resource.  See the [SameAsLSID informative ancillary web page] for more information about implementing LSIDs.  
 
 This practice can be extended to any URN.  For example, _owl:sameAs_ can be used to relate the URN {{{<urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6>}}} to its HTTP-proxied equivalent {{{<http://provider.org/f81d4fae-7dec-11d0-a765-00a0c91e6bf6>}}} in a manner analogous to Example 3.
  
 ==2.3 Predicates==
  
-Most terms in the Darwin Core vocabulary can be used as predicates in triples to represent properties of subject resources.  The full term URI must be used, although with an appropriate namespace declaration, the namespace can be abbreviated.  RDF does not restrict the source of predicates, therefore Darwin Core terms can be mixed with terms from other vocabularies.  This includes the important predicate _rdf:type_ which is used to indicate the class of which the subject resource is an instance.  There is no prohibition in RDF against repeating properties.
+Most terms in the Darwin Core vocabulary can be used as predicates in triples to represent properties of subject resources.  The full term URI must be used, although with an appropriate namespace declaration, the namespace can be abbreviated ([#2.1.1_Namespace_abbreviations_used_in_XML_qualified_names_(QName Section 2.1.1].  RDF does not restrict the source of predicates, therefore Darwin Core terms can be mixed with terms from other vocabularies.  This includes the important predicate _rdf:type_ which is used to indicate the class of which the subject resource is an instance.  There is no prohibition in RDF against repeating properties.
  
 ===2.3.1 Declaring the type of the resource===
  
@@ -334,11 +334,11 @@ In RDF, a resource may be characterized by declaring that it is an instance of a
  
 Because of these benefits, RDF provides several built-in mechanisms for asserting class membership, most notably the _rdf:type_ property [http://www.w3.org/TR/rdf-schema/#ch_type RDF-TYPE] which is used to state that a resource is an instance of a class.  
  
-There is nothing that prohibits assigning more than one rdf:type property to a resource.  In fact, there may be a benefit in describing a resource as a member of both a class which has specific meaning within a narrow community and a more well-known class which has a broader meaning and is therefore more likely to be understood by generic clients.  For instance, a resource may be typed as both a _dwctype:PreservedSpecimen_ and a _dcmitype:PhysicalObject_ . 
+There is nothing that prohibits assigning more than one _rdf:type_ property to a resource.  In fact, there may be a benefit in describing a resource as a member of both a class which has specific meaning within a narrow community and a more well-known class which has a broader meaning and is therefore more likely to be understood by generic clients.  For instance, a resource may be typed as both a _dwctype:PreservedSpecimen_ and a _dcmitype:PhysicalObject_ . 
  
 ====2.3.1.1 rdf:type statement====
  
-The predicate rdf:type is defined to have an object that is a class.  The class should be identified by a URI reference (not by a literal) as in Example 4:
+The predicate _rdf:type_ is defined to have an object that is a class.  The class should be identified by a URI reference (not by a literal) as in Example 4:
 
 *Example 4:*
 
@@ -346,7 +346,7 @@ RDF/XML
 {{{
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/12226">
      <rdf:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-      <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-06-11T09:37:33</dcterms:created>
+     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-06-11T09:37:33</dcterms:created>
 </rdf:Description>
 }}}
 Turtle:
@@ -355,7 +355,7 @@ Turtle:
      a dcmitype:StillImage;
      dcterms:created "2002-06-11T09:37:33"^^xsd:dateTime.
 }}}
-In XML serialization, the RDF specification provides an abbreviated way to specify the type of a described resource.  This method is called a typed node element [http://www.w3.org/TR/rdf-primer/#newresources TYPED-NODE].  The _rdf:Description_ element is replaced by an element whose name is an XML qualified name that identifies a class of which the described resource is an instance as iin Example 5:
+In XML serialization, the RDF specification provides an abbreviated way to specify the type of a described resource.  This method is called a typed node element [http://www.w3.org/TR/rdf-primer/#newresources TYPED-NODE].  The _rdf:Description_ element is replaced by an element whose name is an XML qualified name that identifies a class of which the described resource is an instance as in Example 5:
 
 *Example 5:*
 
@@ -376,7 +376,7 @@ is used to describe a subject resource, a client can infer that the subject reso
 {{{
 <rdfs:domain rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
 }}}
-in its definition.  If that term were used as the property of a specimen a client could infer that the specimen had _rdf:type_ _dcterms:BibliographicResource_:
+in its definition.  If that term were used as the property of a specimen, a client could infer that the specimen had _rdf:type_ _dcterms:BibliographicResource_:
 
 *Example 6:*
 
@@ -414,7 +414,7 @@ Turtle
 <http://dx.doi.org/10.5962/bhl.title.59991>
      dcterms:language <http://id.loc.gov/vocabulary/languages/eng>.
 }}}
-No terms defined within the Darwin Core namespace have range or domain declarations.  However, some terms imported into Darwin Core from Dublin Core do have domain or range declarations.  Part 3 of this guide gives the declared ranges and domains when they are asserted for such terms.
+No terms defined within the Darwin Core namespace have range or domain declarations.  However, some terms imported into Darwin Core from Dublin Core do have domain or range declarations.  [#3.2_Imported_Dublin_Core_terms_for_which_only_literal_objects_ar Sections 3.2] and [#3.3_Imported_Dublin_Core_terms_that_have_non-literal_objects_and 3.3] of this guide gives the declared ranges and domains when they are asserted for such terms.
  
 ====2.3.1.3 Explicit vs. inferred type declarations====
  
@@ -428,11 +428,11 @@ in the description of the image.  In fact, the provider would probably also want
 {{{
 <rdf:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
 }}}
-in the description so that clients searching for either _foaf:Image_ or _dcmitype:StillImage_ would find the image.
+in the description so that clients searching for instances of either _foaf:Image_ or _dcmitype:StillImage_ class resources would find the image.
  
 ====2.3.1.4 Other predicates used to indicate type====
  
-Both the Dublin Core and Darwin Core define terms which can be used to describe the nature of a resource: _dcterms:type_ and _dwc:basisOfRecord_ respectively.  However, using these terms to describe the nature of the subject resource is not a substitute for use of _rdf:type_.  The DCMI notes on RDF semantics [http://dublincore.org/documents/dc-rdf/#sect-5 RDF-SEMANTICS] recommend that "applications implementing this specification primarily use and understand _rdf:type_ in place of dcterms:type when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of _rdf:type_."  A similar argument could be made for the use of _rdf:type_ over _dwc:basisOfRecord_.  Including _dc:type_, _dcterms:type_, and _dwc:basisOfRecord_ in an RDF description should be considered optional, while including _rdf:type_ should be considered highly recommended.  A _dwcuri:_ analogue ([#2.5_Terms_in_the_dwcuri:_namespace Section 2.5]) of _dwc:basisOfRecord_ should not be used.  Use _rdf:type_ instead when the object is a URI reference.
+Both the Dublin Core and Darwin Core define terms which can be used to describe the nature of a resource: _dcterms:type_ and _dwc:basisOfRecord_ respectively.  However, using these terms to describe the nature of the subject resource is not a substitute for use of _rdf:type_.  The DCMI notes on RDF semantics [http://dublincore.org/documents/dc-rdf/#sect-5 RDF-SEMANTICS] recommend that "applications implementing this specification primarily use and understand _rdf:type_ in place of _dcterms:type_ when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of _rdf:type_."  A similar argument could be made for the use of _rdf:type_ over _dwc:basisOfRecord_.  Including _dc:type_, _dcterms:type_, and _dwc:basisOfRecord_ in an RDF description should be considered optional, while including _rdf:type_ should be considered highly recommended.  A _dwcuri:_ analogue ([#2.5_Terms_in_the_dwcuri:_namespace Section 2.5]) of _dwc:basisOfRecord_ should not be used.  Use _rdf:type_ instead when the object is a URI reference.
  
 Here is an example that describes a specimen using several of the terms that define the nature of a resource explicitly, including multiple _rdf:type_ declarations:
 
