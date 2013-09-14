@@ -5,6 +5,8 @@
 
 = Cover page for RDF Guide proposed addition to Darwin Core =
 
+[DwcRdfGuideProposal Link to the RDF Guide Proposal]
+
 == Background ==
 
 The [http://www.tdwg.org/standards/450/ Darwin Core] [http://www.tdwg.org/standards/status-and-categories/ technical specification] was adopted as a [http://www.tdwg.org/standards/ TDWG Standard] in 2009.  The Darwin Core standard consists of a [http://bioimages.vanderbilt.edu/pages/tdwg-stds-spec.pdf Type 1] normative document ([http://code.google.com/p/darwincore/source/browse/trunk/rdf/dwctermshistory.rdf dwctermshistory.rdf]) which defines its terms using [http://www.w3.org/TR/rdf-concepts/ Resource Description Framework (RDF)], and numerous [http://bioimages.vanderbilt.edu/pages/tdwg-stds-spec.pdf Type 2] non-normative documents which explain the standard.  Many of these non-normative standards documents can be viewed on the [http://rs.tdwg.org/dwc/index.htm Darwin Core web pages] that are part of the [http://www.tdwg.org/ TDWG website].  Among these non-normative documents are several best-practices guides (the [http://rs.tdwg.org/dwc/terms/guides/text/index.htm Text Guide] and the [http://rs.tdwg.org/dwc/terms/guides/xml/index.htm XML Guide]) which explain how to use Darwin Core terms to transmit biodiversity data.  
