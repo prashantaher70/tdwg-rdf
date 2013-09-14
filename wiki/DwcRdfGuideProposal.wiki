@@ -765,11 +765,11 @@ Darwin Core contains a number of "ID" terms intended to designate identifiers, e
 </dwc:Identification>
 }}}
 This example could also be represented by the following database table in which each record (row) represents an _dwc:Identification_ instance and in which each column represents a property of the _dwc:Identification_ instance as indicated by the column heading:
- 
+
 *Table 3*
 
 || *dwc:identificationID* || *dwc:identifiedBy* || *dwc:dateIdentified* || *dwc:taxonID* ||
-||"http://guid.mvz.org/identifications/23459"||"Richard Sage"||"2000"||"urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"||
+||{{{"http://guid.mvz.org/identifications/23459"}}}||{{{"Richard Sage"}}}||{{{"2000"}}}||{{{"urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"}}}||
 
 
 In Example 21 and Table 3, the "ID" terms are used to specify both the identifier of a resource which is the subject of the record itself (using the term _dwc:identificationID_) and to specify an object resource related to the subject resource by a foreign key (using the term _dwc:taxonID_).  Because the ID terms are not designated to be used with subjects or objects specifically, the resource they identify must be made clear by the context in which they are used.  In the case of the database table, a pre-existing understanding between the data provider and consumer would indicate that the rows of the table represent _dwc:Identification_ instances and therefore the _dwc:identificationID_ property would provide the identifier of the subject and any other ID terms would refer to object resources that are related to that particular identification instance.  In the XML example, the type of the subject resource is made clear through the record's container element and hence a consumer would know that the _dwc:identificationID_ property referred to the subject resource.
@@ -847,7 +847,7 @@ there would be an undesired effect if a client unfamiliar with Darwin Core perfo
 *Table 4*
 
 || *Subject* || *Predicate* || *Object* ||
-||<http://guid.mvz.org/identifications/23459>||dcterms:identifier||"http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"||
+||{{{<http://guid.mvz.org/identifications/23459>}}}||_dcterms:identifier_||{{{"http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"}}}||
 
 where the value of the _dwc:taxonID_ term was the identifier of the subject resource rather than of the object resource as intended by the data provider.  This is why data providers will generally need to look outside Darwin Core for object properties that can be used to relate instances of one class to instances of another instead of using the Darwin Core ID terms.
  
