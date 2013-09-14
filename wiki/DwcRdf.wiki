@@ -1,44 +1,24 @@
-#summary Landing page for DwC RDF Guide proposal
+#summary Cover page for DwC RDF Guide proposal
 #sidebar DwcRdfSidebar
 
   [http://www.tdwg.org/ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png]
 
-= Landing page for RDF Guide proposed addition to Darwin Core =
+= Cover page for RDF Guide proposed addition to Darwin Core =
 
-==1 Rationale==
+== What is the Darwin Core RDF Guide?==
 
-The draft Darwin Core RDF Guide describes how to use Darwin Core terms as predicates in RDF triples.  However, there are some aspects of text-based Darwin Core data that may be too complex to express as RDF using only terms found in the Darwin Core standard.  Since the Darwin Core RDF Guide is part of the Darwin Core standard itself and is restricted primarily to describing the use of Darwin Core terms, the additional documents provided here are intended to help data providers and consumers express relationships that are beyond the scope of Darwin Core itself.
+The DwC RDF Guide will be an addition to the Darwin Core standard under the Namespace Policy (http://rs.tdwg.org/dwc/terms/namespace/ ).  The Guide itself is a Type 2 document, meaning that it is a non-normative part of the standard.  It will be a parallel document to the two existing DwC Guides, the XML Guide (http://rs.tdwg.org/dwc/terms/guides/xml/ ) and the Text Guide (http://rs.tdwg.org/dwc/terms/guides/text/ ).  In addition to the Guide document itself, this proposed addition to DwC includes the addition of a number of terms which will be added to the normative (Type 1) RDF document and to a human-readable term reference guide. 
 
-==2 Documents==
+== What are the main features of the DwC RDF Guide? == 
+The guide includes an introduction which explains the need for the Guide and describes the major issues that the Guide will address.  It does not explain RDF in detail but provides a brief introduction with examples at the level of the other Guides.  The Implementation section describes the details of how Darwin Core terms should be used consistently in RDF to facilitate the development of applications that can more easily consume DwC data expressed as RDF.  The Term Reference section divides the Darwin Core terms into categories according to how they will be expected to be used.
 
-[ResourceRelationship Expressing Darwin Core ResourceRelationship Terms as RDF]  
+== What are the important aspects of implementing DwC as RDF which are detailed in the Guide? ==
+1. Some existing DwC terms may be used in RDF in a manner very similar to their use in text and XML.
+2. The Guide introduces analogues of existing DwC terms in a new namespace dwcuri: (http://rs.tdwg.org/dwc/uri/) which are intended to be used exclusively with URI-referenced objects (or blank nodes).
+3. The Guide recognizes that some existing text-based DwC terms cannot adequately be used in RDF and provides suggestions for alternative terms or mechanisms for expressing that information as RDF. 
+4. The Guide distinguishes some DwC terms as "convenience terms" whose purpose is to make text-based searching simpler.  It introduces several properties intended for use with non-literal objects that would be used in lieu of the convenience terms to link to URI referenced (non-literal) objects that are further described using RDF. 
+5. The Guide establishes the convention that terms in the Darwin Core Type vocabulary (in the namespace dwctype: = http://rs.tdwg.org/dwc/dwctype/ ) should be used as classes for rdf:type declarations rather than the organizational classes of the main DwC namespace (dwc: = http://rs.tdwg.org/dwc/terms/ ). 
+6. The Guide describes how the imported Dublin Core terms should be used as RDF in a manner consistent with their DCMI definitions.
 
-This document shows how to express Darwin Core !ResourceRelationship properties as RDF using the Open Annotation Data Model 
-
-[LicenseProperties Expressing License Properties as RDF]
-
-This document discusses terms which can be used to express the license properties of a resource and the circumstances under which the various terms might be used.
-
-[SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
-
-This document provides describes the implications of using {{{owl:sameAs}}} to link several URI identifiers that refer to the same resource. The particular example of LSIDs is considered. 
-
-[TaxonInRDF Describing Taxon Concepts as RDF]
-
-There is currently no TDWG standard which contains terms that are suitable for expressing taxon concepts as RDF. The Darwin Core RDF Guide discusses how {{{dwc:Taxon}}} terms can be used as convenience terms to provide metadata about taxa, but it does not specify how the taxa themselves should be described as RDF. Although not ratified standards, the TaxonConcept and TaxonName parts of the TDWG Ontology (based on the TCS Standard [http://www.tdwg.org/standards/117/]) can be used to express taxon concepts as RDF. This document discusses how some basic aspects of taxon concepts (sensu TCS) can be expressed as RDF using terms from the TDWG Ontology. 
-
-[DwcRdfExamplesTaxonConcept Examples using TaxonConcept Ontology object properties]
-
-These examples follow the Darwin Core RDF Guide. They assume the data model of the TaxonConcept? Ontology ([http://www.taxonconcept.org/]) and use its object properties to link the class instances. 
-
-[DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
-
-These examples follow the Darwin Core RDF Guide. They assume the data model of Darwin-SW (version 0.3; [http://code.google.com/p/darwin-sw/]) and use its object properties to link the class instances. 
-
-[DwcRdfExamplesBiSciCol Examples using BiSciCol object properties]
-
-These examples assume the data model of BiSciCol (http://biscicol.blogspot.com/ ) and use its object properties to link the class instances. 
-
-[DwcRdfOccurrences Examples of representing occurrences in RDF using "pure" Darwin Core]
-
-These examples assume no data model other than the one explicitly defined by Darwin Core, and use the RDF properties defined by Darwin Core to link class instances. 
+== What does the DwC RDF Guide NOT do? ==
+The Guide does not describe a domain model. It does not define ontological relationships among Darwin Core classes.  It does not mint object properties to link the main DwC classes.  
