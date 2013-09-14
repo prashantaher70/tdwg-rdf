@@ -768,7 +768,7 @@ This example could also be represented by the following database table in which 
 
 *Table 3*
 
-|| *dwc:identificationID* || *dwc:identifiedBy* || *dwc:dateIdentified* || *dwc:taxonID* ||
+|| *_dwc:identificationID_* || *_dwc:identifiedBy_* || *_dwc:dateIdentified_* || *_dwc:taxonID_* ||
 ||{{{"http://guid.mvz.org/identifications/23459"}}}||{{{"Richard Sage"}}}||{{{"2000"}}}||{{{"urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"}}}||
 
 
@@ -857,8 +857,8 @@ In several situations, providers of Darwin Core text-based data use a set of hie
 
 *Table 5*
 
-|| *dwc:decimalLatitude* || *dwc:decimalLongitude* || *dwc:geodeticDatum* || *dwc:continent* || *dwc:country* || *dwc:stateProvince* || *dwc:county* ||
-||"36.4024"||"-87.02219"||"EPSG:4326"||"North America"||"United States"||"Tennessee"||"Robertson"||
+|| *_dwc:decimalLatitude_* || *_dwc:decimalLongitude_* || *_dwc:geodeticDatum_* || *_dwc:continent* || *_dwc:country_* || *_dwc:stateProvince_* || *_dwc:county_* ||
+||{{{"36.4024"}}}||{{{"-87.02219"}}}||{{{"EPSG:4326"}}}||{{{"North America"}}}||{{{"United States"}}}||{{{"Tennessee"}}}||{{{"Robertson"}}}||
 
 The data unambiguously specifies the lowest level political subdivision (Robertson County) by including the higher level political subdivisions in the hierarchy and thus differentiates it from other places that are second-order administrative divisions identified by the string “Robertson” (e.g. Robertson County, Texas, US or Robertson County, Kentucky, US).  Darwin Core terms that are used to form a hierarchy of literal values are called convenience terms.  
 
