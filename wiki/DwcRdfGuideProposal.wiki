@@ -32,7 +32,7 @@
 
 *Table of Contents:*
 
-<wiki:toc max_depth="2" />
+<wiki:toc max_depth="5" />
 
 =1 Introduction=
 
@@ -297,11 +297,12 @@ If an HTTP URI is considered to be the identifier for a subject resource, it is 
 {{{
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/kirchoff/b5161">
      <rdf:type rdf:resource ="http://purl.org/dc/dcmitype/StillImage" />
-     <dcterms:identifier>http://bioimages.vanderbilt.edu/kirchoff/b5161</dcterms:identifier>
+     <dcterms:identifier rdf:datatype="http://purl.org/dc/terms/URI">http://bioimages.vanderbilt.edu/kirchoff/b5161</dcterms:identifier>
 </rdf:Description>
 }}}
 
- 
+In this example,an _rdf:datatype_ attribute is used to indicate that the identifier is in the form of a URI ([ Section 2.4.1.1]) 
+
 ===2.2.3 Associating a URN with its HTTP-proxied equivalent===
  
 The TDWG LSID Applicability Statement standard [http://www.tdwg.org/standards/150/ LSID-STANDARD] specifies in Recommendation 30 that "The description of all objects identified by an LSID *must* contain an _owl:sameAs_, _owl:equivalentProperty_ or _owl:equivalentClass_ statement expressing the equivalence between the object identifier in its standard form and its proxy version".  This is illustrated by Example 3:
