@@ -784,7 +784,7 @@ RDF/XML
 {{{
 <rdf:Description rdf:about="http://guid.mvz.org/identifications/23459">
      <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
-     <dcterms:identifier>http://guid.mvz.org/identifications/23459</dcterms:identifier>
+     <dcterms:identifier rdf:datatype="http://purl.org/dc/terms/URI">http://guid.mvz.org/identifications/23459</dcterms:identifier>
      <dwc:identifiedBy>Richard Sage</dwc:identifiedBy>
      <dwc:dateIdentified>2000</dwc:dateIdentified>
      <dwcuri:toTaxonConcept rdf:resource="http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"/>
@@ -794,7 +794,7 @@ Turtle:
 {{{
 <http://guid.mvz.org/identifications/23459>
      a dwc:Identification;
-     dcterms:identifier "http://guid.mvz.org/identifications/23459";
+     dcterms:identifier "http://guid.mvz.org/identifications/23459"^^dcterms:URI;
      dwc:identifiedBy "Richard Sage";
      dwc:dateIdentified "2000";
      dwcuri:toTaxonConcept <http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721>.
