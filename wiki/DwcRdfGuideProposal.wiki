@@ -743,7 +743,7 @@ Turtle
      dwcuri:recordedBy <http://viaf.org/viaf/263074474>,
                        <http://museum-x.org/personnel/akp>.
 }}}
-where {{{http://viaf.org/viaf/263074474}}} is a persistent URI identifier for the person whose name is "Oliver P. Pearson" and {{{http://museum-x.org/personnel/akp}}} is a persistent URI identifier for the person whose name is "Anita K. Pearson".
+where {{{<http://viaf.org/viaf/263074474>}}} is a persistent URI identifier for the person whose name is "Oliver P. Pearson" and {{{<http://museum-x.org/personnel/akp>}}} is a persistent URI identifier for the person whose name is "Anita K. Pearson".
  
 ===2.5.3 Expectation of clients encountering RDF containing dwc: and dwcuri: terms===
  
