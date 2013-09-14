@@ -2,7 +2,7 @@
 
 ==Darwin Core RDF Guide Submission==
 
-[DwcRdfGuideProposal RDF Guide document]
+  * [DwcRdfGuideProposal RDF Guide document]
 
 ==Informative ancillary documents not part of the standard==
 
