@@ -1,5 +1,6 @@
 #summary Draft of proposed Darwin Core RDF Guide
 
+[http://www.tdwg.org/ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png]
 = Darwin Core RDF Guide =
 
 * This is a draft submission under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy].  To view comments made by the RDF Task Group, view [https://docs.google.com/document/d/1OLyVFuveGX1a0Yt6Niok9FfGxkrghii-xlGYhwO8UqE/edit?usp=sharing this Google document].*  This document is still being wikified as of 2013-09-13.
