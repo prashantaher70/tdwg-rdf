@@ -1,0 +1,44 @@
+#summary Landing page for DwC RDF Guide proposal
+#sidebar DwcRdfSidebar
+
+  [http://www.tdwg.org/ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png]
+
+= Landing page for RDF Guide proposed addition to Darwin Core =
+
+==1 Rationale==
+
+The draft Darwin Core RDF Guide describes how to use Darwin Core terms as predicates in RDF triples.  However, there are some aspects of text-based Darwin Core data that may be too complex to express as RDF using only terms found in the Darwin Core standard.  Since the Darwin Core RDF Guide is part of the Darwin Core standard itself and is restricted primarily to describing the use of Darwin Core terms, the additional documents provided here are intended to help data providers and consumers express relationships that are beyond the scope of Darwin Core itself.
+
+==2 Documents==
+
+[ResourceRelationship Expressing Darwin Core ResourceRelationship Terms as RDF]  
+
+This document shows how to express Darwin Core !ResourceRelationship properties as RDF using the Open Annotation Data Model 
+
+[LicenseProperties Expressing License Properties as RDF]
+
+This document discusses terms which can be used to express the license properties of a resource and the circumstances under which the various terms might be used.
+
+[SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
+
+This document provides describes the implications of using {{{owl:sameAs}}} to link several URI identifiers that refer to the same resource. The particular example of LSIDs is considered. 
+
+[TaxonInRDF Describing Taxon Concepts as RDF]
+
+There is currently no TDWG standard which contains terms that are suitable for expressing taxon concepts as RDF. The Darwin Core RDF Guide discusses how {{{dwc:Taxon}}} terms can be used as convenience terms to provide metadata about taxa, but it does not specify how the taxa themselves should be described as RDF. Although not ratified standards, the TaxonConcept and TaxonName parts of the TDWG Ontology (based on the TCS Standard [http://www.tdwg.org/standards/117/]) can be used to express taxon concepts as RDF. This document discusses how some basic aspects of taxon concepts (sensu TCS) can be expressed as RDF using terms from the TDWG Ontology. 
+
+[DwcRdfExamplesTaxonConcept Examples using TaxonConcept Ontology object properties]
+
+These examples follow the Darwin Core RDF Guide. They assume the data model of the TaxonConcept? Ontology ([http://www.taxonconcept.org/]) and use its object properties to link the class instances. 
+
+[DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
+
+These examples follow the Darwin Core RDF Guide. They assume the data model of Darwin-SW (version 0.3; [http://code.google.com/p/darwin-sw/]) and use its object properties to link the class instances. 
+
+[DwcRdfExamplesBiSciCol Examples using BiSciCol object properties]
+
+These examples assume the data model of BiSciCol (http://biscicol.blogspot.com/ ) and use its object properties to link the class instances. 
+
+[DwcRdfOccurrences Examples of representing occurrences in RDF using "pure" Darwin Core]
+
+These examples assume no data model other than the one explicitly defined by Darwin Core, and use the RDF properties defined by Darwin Core to link class instances. 
