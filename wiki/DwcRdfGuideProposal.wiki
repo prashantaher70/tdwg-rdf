@@ -1141,7 +1141,7 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 || *Darwin Core term* || *Notes* ||
 ||<dl><dt>dwc:relationshipOfResource</dt><dt>dwc:relationshipAccordingTo</dt></dl>||Use the well-known terms _oa:motivatedBy_ and _oa:annotatedBy_ See the [ResourceRelationship informative ancillary web page] for examples.||
 ||<dl><dt>dwc:measurementType</dt><dt>dwc:measurementValue</dt><dt>dwc:measurementAccuracy</dt><dt>dwc:measurementUnit</dt><dt>dwc:measurementDeterminedDate</dt><dt>dwc:measurementDeterminedBy</dt><dt>dwc:measurementMethod</dt><dt>dwc:measurementRemarks</dt></dl>||See the [MeasurementOrFact informative ancillary web page] for examples.||
-||dwc:dynamicProperties||See the [DwCAncillary informative ancillary web page] for examples.||
+||dwc:dynamicProperties||See the [DynamicProperties informative ancillary web page] for examples.||
 ||dwc:otherCatalogNumbers||There is no simple mapping because of the kinds of identifiers people use and variety of relationships that there may be among identifiers. _owl:sameAs_ may be used to associate other URI identifiers with the subject URI if this is appropriate.  For string values, use _dwc:otherCatalogNumbers_.||
 ||dwc:associatedMedia||The well-known term _foaf:depiction_ can be used to link to an image.||
 ||<dl><dt>dwc:associatedOccurrences</dt><dt>dwc:associatedSequences</dt><dt>dwc:associatedTaxa</dt></dl>||There are no known consensus object properties to replace these terms.  Use object properties from other vocabularies or ontologies or consider if the Open Annotation model can be used in your circumstance (see the [DwCAncillary informative ancillary web pages] for examples)||
