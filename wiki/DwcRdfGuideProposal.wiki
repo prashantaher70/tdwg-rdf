@@ -857,7 +857,7 @@ In several situations, providers of Darwin Core text-based data use a set of hie
 
 *Table 5*
 
-|| *_dwc:decimalLatitude_* || *_dwc:decimalLongitude_* || *_dwc:geodeticDatum_* || *_dwc:continent* || *_dwc:country_* || *_dwc:stateProvince_* || *_dwc:county_* ||
+|| *_dwc:decimalLatitude_* || *_dwc:decimalLongitude_* || *_dwc:geodeticDatum_* || *_dwc:continent_* || *_dwc:country_* || *_dwc:stateProvince_* || *_dwc:county_* ||
 ||{{{"36.4024"}}}||{{{"-87.02219"}}}||{{{"EPSG:4326"}}}||{{{"North America"}}}||{{{"United States"}}}||{{{"Tennessee"}}}||{{{"Robertson"}}}||
 
 The data unambiguously specifies the lowest level political subdivision (Robertson County) by including the higher level political subdivisions in the hierarchy and thus differentiates it from other places that are second-order administrative divisions identified by the string “Robertson” (e.g. Robertson County, Texas, US or Robertson County, Kentucky, US).  Darwin Core terms that are used to form a hierarchy of literal values are called convenience terms.  
@@ -927,8 +927,8 @@ Consider the following example where Takuma Yun identified a spider to the speci
 
 *Table 8*
 
-|| *dwc:identificationID* || *dwc:identifiedBy* || *dwc:order* || *dwc:family* || *dwc:genus* || *dwc:specificEpithet* || *dwc:nameAccordingToID* ||
-||"75C9EA16-72B1-44C9-AD40-3C3A41323A09"||"Takuma Yun"||"Araneae"||"Hersiliidae"||"Hersilia"||"yaeyamaensis"||"75C9EA16-72B1-44C9-AD40-3C3D41323AB9"||
+|| *_dwc:identificationID_* || *_dwc:identifiedBy_* || *_dwc:order_* || *_dwc:family_* || *_dwc:genus_* || *_dwc:specificEpithet_* || *_dwc:nameAccordingToID_* ||
+||{{{"75C9EA16-72B1-44C9-AD40-3C3A41323A09"}}}||{{{"Takuma Yun"}}}||{{{"Araneae"}}}||{{{"Hersiliidae"}}}||{{{"Hersilia"}}}||{{{"yaeyamaensis"}}}||{{{"75C9EA16-72B1-44C9-AD40-3C3D41323AB9"}}}||
 
 In this example, a best practice would be to link the identification instance to a taxon concept instance of _Hersilia yaeyamaensis_ sec. Tanikawa 1999 using the object property _dwcuri:toTaxonConcept_ as shown in Example 22.  However, the data provider may be uninterested, or unable to mint or discover a taxon concept instance to which the identification instance can be linked.  The provider may simply wish to make it easier to discover the identification instance and be unconcerned about the taxonomic relationships that might be asserted for concepts that may be defined for the listed name components.  In that case the provider can use the following RDF:
 
@@ -1008,8 +1008,8 @@ The following example is taken from [http://dx.doi.org/10.1098/rsbl.2011.0228 ht
 
 *Table 9*
 
-|| *dwc:formation* || *dwc:earliestEonOrLowestEonothem dwc:latestEonOrHighestEonothem* || *dwc:earliestEraOrLowestErathem dwc:latestEraOrHighestErathem* || *dwc:earliestPeriodOrLowestSystem dwc:latestPeriodOrHighestSystem* || *dwc:earliestEpochOrLowestSeries dwc:latestEpochOrHighestSeries* ||
-||"Jiu-longshan"||"Phanerozoic"||"Mesozoic"||"Jurassic"||"Middle"||
+|| *_dwc:formation_* || *_dwc:earliestEonOrLowestEonothem dwc:latestEonOrHighestEonothem_* || *_dwc:earliestEraOrLowestErathem dwc:latestEraOrHighestErathem_* || *_dwc:earliestPeriodOrLowestSystem dwc:latestPeriodOrHighestSystem_* || *_dwc:earliestEpochOrLowestSeries dwc:latestEpochOrHighestSeries_* ||
+||{{{"Jiu-longshan"}}}||{{{"Phanerozoic"}}}||{{{"Mesozoic"}}}||{{{"Jurassic"}}}||{{{"Middle"}}}||
 
 Example 27 shows how this can be rendered as RDF using the Darwin Core stratigraphic timescale terms as convenience terms.
 
@@ -1061,7 +1061,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 ==3.1 Non-Darwin Core terms needed to express fundamental properties in RDF==
 
 || *term* || *Notes* ||
-||rdf:type||Used to indicate the class of which the resource is an instance.  It is considered a best practice to type resources using rdf:type, whereas type declarations using dcterms:type and dwc:basisOfRecord are optional.  See [#2.3.1.5_Classes_to_be_used_for_type_declarations_of_resources_de Section 2.3.1.5] for recommended classes to be used with biodiversity resources.||
+||rdf:type||Used to indicate the class of which the resource is an instance.  It is considered a best practice to type resources using _rdf:type_, whereas type declarations using _dcterms:type_ and _dwc:basisOfRecord_ are optional.  See [#2.3.1.5_Classes_to_be_used_for_type_declarations_of_resources_de Section 2.3.1.5] for recommended classes to be used with biodiversity resources.||
 ||dcterms:identifier||Used to relate string literal identifiers to the subject resource.  This can include string representations of URIs if they are considered the identifier for the resource.||
 
 ==3.2 Imported Dublin Core terms for which only literal objects are appropriate==
