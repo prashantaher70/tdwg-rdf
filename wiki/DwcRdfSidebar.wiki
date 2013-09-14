@@ -1,6 +1,8 @@
 #summary navigation sidebar for DwC RDF Guide ancillary documents
 
-==Darwin Core RDF Guide Ancillary Documents==
+==Darwin Core RDF Guide Documents==
+
+[DwcRdfGuideProposal The RDF Guide]
 
 Informative ancillary documents not part of the standard
 
