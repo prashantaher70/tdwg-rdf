@@ -1,7 +1,5 @@
 #summary navigation sidebar for DwC RDF Guide ancillary documents
 
-[http://rs.tdwg.org/dwc/index.htm Introduction to Darwin Core]
-
 ==Darwin Core RDF Guide Submission==
 
 [DwcRdf Cover page for proposal]
