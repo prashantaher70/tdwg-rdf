@@ -1083,7 +1083,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 ||dcterms:accessRights||dcterms:RightsStatement||A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  ||No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.^5^||
 ||dcterms:references||---||URI for a publication (preferably an HTTP-proxied DOI) related to the subject resource.||Use _dwc:identificationReferences_ for a reference consulted in making an taxonomic identification and _dwc:associatedReferences_ for references related to occurrences.||
 
-^2^ None of these dcterms: namespace terms have domain declarations.
+^2^ None of these _dcterms:_ namespace terms have domain declarations.
 
 ^3^ See the ancillary document “[LicenseProperties Expressing License Properties as RDF]” for information about linking a creative work to its license.
 
