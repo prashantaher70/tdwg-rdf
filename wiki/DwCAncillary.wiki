@@ -1,11 +1,11 @@
-#summary Landing page for ancillary documents related to the DwC RDF Guide
+#summary Cover page for ancillary documents related to the DwC RDF Guide
 #sidebar DwcRdfSidebar
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
 = Ancillary documents related to the Darwin Core RDF Guide =
 
-*Date:* (Created) 29 June 2013; (Last modified) 30 June 2013
+*Date:* (Created) 29 June 2013; (Last modified) 14 September 2013
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
 
