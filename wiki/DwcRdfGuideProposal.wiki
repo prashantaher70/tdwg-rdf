@@ -301,7 +301,7 @@ If an HTTP URI is considered to be the identifier for a subject resource, it is 
 </rdf:Description>
 }}}
 
-In this example,an _rdf:datatype_ attribute is used to indicate that the identifier is in the form of a URI ([ Section 2.4.1.1]) 
+In this example,an _rdf:datatype_ attribute is used to indicate that the identifier is in the form of a URI ([#2.4.1.1_Typed_literals Section 2.4.1.1]). 
 
 ===2.2.3 Associating a URN with its HTTP-proxied equivalent===
  
