@@ -312,7 +312,7 @@ Turtle
 <http://biocol.org/urn:lsid:biocol.org:col:35115>
      owl:sameAs <urn:lsid:biocol.org:col:35115>.
 }}}
-Since LSIDs follow the URN URI scheme, they can serve as the subject of any RDF triple.  However, it is better to use the http-proxied form as the subject (i.e. the value of the rdf:about attribute) in the description of the resource.  See the informative ancillary web pages for more information about implementing LSIDs.  
+Since LSIDs follow the URN URI scheme, they can serve as the subject of any RDF triple.  However, it is better to use the http-proxied form as the subject (i.e. the value of the rdf:about attribute) in the description of the resource.  See the [SameAsLSID informative ancillary web page] for more information about implementing LSIDs.  
 
 This practice can be extended to any URN.  For example, _owl:sameAs_ can be used to relate the URN {{{<urn:uuid:f81d4fae-7dec-11d0-a765-00a0c91e6bf6>}}} to its HTTP-proxied equivalent {{{<http://provider.org/f81d4fae-7dec-11d0-a765-00a0c91e6bf6>}}} in a manner analogous to Example 3.
  
@@ -787,7 +787,7 @@ Turtle:
 }}}
 The following points about the Example 22 should be noted:
 1. In RDF/XML use the rdf:about attribute of an _rdf:Description_ element to specify a URI identifier used with the subject ID term, i.e. the value of _dwc:identificationID_ is an HTTP URI and can therefore be used with the _rdf:about_ attribute. The _dcterms:identifier_ property can also be used to express the primary identifier for the subject resource as a literal.  In Example 22, the HTTP URI is considered the primary identifier for the Identification instance so it is included as a string value of _dcterms:identifier_ as well as the URI of the subject resource.  Refer to [#2.2.1_Identifying_subject_resources_using_URIs Section 2.2.1] and [#2.2.2_Associating_a_string_identifier_with_a_subject_resource 2.2.2] for more details.
-2. Data providers who want to relate a subject resource to related non-literal resources should use object properties (i.e. properties which relate URI-identified instances to other URI-identified instances) [http://www.w3.org/TR/owl-primer/#Object_Properties OWL-PRIMER] from a well-known vocabulary or ontology.  Darwin Core does not generally define object properties that connect its core classes and in those cases users will have to find object properties outside of Darwin Core (see the informative ancillary web pages for examples).  In this example, the term _dwcuri:toTaxonConcept_ (see [#2.7.4_Description_of_a_taxonomic_entity Section 2.7.4]) is used to relate the _dwc:Identification_ instance to a taxon concept instance.  (Please note that this is for illustration purposes only and this guide takes no position on the nature of taxon concepts or whether the resource used in this example is actually a taxon concept or not.)
+2. Data providers who want to relate a subject resource to related non-literal resources should use object properties (i.e. properties which relate URI-identified instances to other URI-identified instances) [http://www.w3.org/TR/owl-primer/#Object_Properties OWL-PRIMER] from a well-known vocabulary or ontology.  Darwin Core does not generally define object properties that connect its core classes and in those cases users will have to find object properties outside of Darwin Core (see the [DwCAncillary informative ancillary web pages] for examples).  In this example, the term _dwcuri:toTaxonConcept_ (see [#2.7.4_Description_of_a_taxonomic_entity Section 2.7.4]) is used to relate the _dwc:Identification_ instance to a taxon concept instance.  (Please note that this is for illustration purposes only and this guide takes no position on the nature of taxon concepts or whether the resource used in this example is actually a taxon concept or not.)
 3. If an identified object of a triple is a non-literal resource ([#2.4.2_Non-literal_object_resources Section 2.4.2]), RDF requires that it be referenced by a URI.  Although the UUID "d79c11aa-29c1-102b-9a4a-00304854f820:col20120721" is a globally unique and hopefully persistent identifier for the taxon, it is not a URI.  Catalog of Life has created a URI from the UUID in the form of an LSID:
 {{{
 <urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721>
@@ -1057,7 +1057,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 ^2^ None of these dcterms: namespace terms have domain declarations.
 
-^3^ See the ancillary document “Expressing License Properties as RDF” for information about linking a creative work to its license.
+^3^ See the ancillary document “[LicenseProperties Expressing License Properties as RDF]” for information about linking a creative work to its license.
 
 ^4^ DCMI does not provide a literal object analogue of _dcterms:rightsHolder_.  Audubon Core recommends _xmpRights:Owner_ for literals.  However, since _xmpRights:Owner_ is defined as “a list of legal owners of the resource”  [http://www.adobe.com/content/dam/Adobe/en/devnet/xmp/pdfs/XMPSpecificationPart1.pdf XMP-SPECIFICATION], it can only be used to specify the rights owner, not an agent managing the rights.  
 
@@ -1111,10 +1111,10 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 ==3.8 Darwin Core terms whose function cannot be duplicated by a dwcuri: object property==
 
 || *Darwin Core term* || *Notes* ||
-||<dl><dt>dwc:relationshipOfResource</dt><dt>dwc:relationshipAccordingTo</dt></dl>||Use the well-known terms _oa:motivatedBy_ and _oa:annotatedBy_ See the informative ancillary web pages for examples.||
-||<dl><dt>dwc:measurementType</dt><dt>dwc:measurementValue</dt><dt>dwc:measurementAccuracy</dt><dt>dwc:measurementUnit</dt><dt>dwc:measurementDeterminedDate</dt><dt>dwc:measurementDeterminedBy</dt><dt>dwc:measurementMethod</dt><dt>dwc:measurementRemarks</dt></dl>||See the informative ancillary web pages for examples.||
-||dwc:dynamicProperties||See the informative ancillary web pages for examples.||
+||<dl><dt>dwc:relationshipOfResource</dt><dt>dwc:relationshipAccordingTo</dt></dl>||Use the well-known terms _oa:motivatedBy_ and _oa:annotatedBy_ See the [ResourceRelationship informative ancillary web page] for examples.||
+||<dl><dt>dwc:measurementType</dt><dt>dwc:measurementValue</dt><dt>dwc:measurementAccuracy</dt><dt>dwc:measurementUnit</dt><dt>dwc:measurementDeterminedDate</dt><dt>dwc:measurementDeterminedBy</dt><dt>dwc:measurementMethod</dt><dt>dwc:measurementRemarks</dt></dl>||See the [MeasurementOrFact informative ancillary web page] for examples.||
+||dwc:dynamicProperties||See the [DwCAncillary informative ancillary web page] for examples.||
 ||dwc:otherCatalogNumbers||There is no simple mapping because of the kinds of identifiers people use and variety of relationships that there may be among identifiers. _owl:sameAs_ may be used to associate other URI identifiers with the subject URI if this is appropriate.  For string values, use dwc:otherCatalogNumbers.||
 ||dwc:associatedMedia||The well-known term _foaf:depiction_ can be used to link to an image.||
-||<dl><dt>dwc:associatedOccurrences</dt><dt>dwc:associatedSequences</dt><dt>dwc:associatedTaxa</dt></dl>||There are no known consensus object properties to replace these terms.  Use object properties from other vocabularies or ontologies or consider if the Open Annotation model can be used in your circumstance (see the informative ancillary web pages for examples)||
+||<dl><dt>dwc:associatedOccurrences</dt><dt>dwc:associatedSequences</dt><dt>dwc:associatedTaxa</dt></dl>||There are no known consensus object properties to replace these terms.  Use object properties from other vocabularies or ontologies or consider if the Open Annotation model can be used in your circumstance (see the [DwCAncillary informative ancillary web pages] for examples)||
 ||dwc:previousIdentifications||There is no consensus object property for associating identifications with resources of other classes.  From whatever scheme you have chosen to provide object properties, use same object property as used for the most recent identification but provide an earlier dwc:dateIdentified value.||
