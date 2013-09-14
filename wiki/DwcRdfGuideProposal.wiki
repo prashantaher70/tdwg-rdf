@@ -193,23 +193,23 @@ To facilitate achieving the clarity that RDF makes possible, this guide provides
 || *vocabulary name* || *namespace abbreviation* || *full prefix* ||
 ||Resource Description Framework||_rdf:_||{{{http://www.w3.org/1999/02/22-rdf-syntax-ns#}}}||
 ||RDF Schema||_rdfs:_||{{{http://www.w3.org/2000/01/rdf-schema#}}}||
-||XML Schema||_xsd:_||http://www.w3.org/2001/XMLSchema#||
-||Web Ontology Language||_owl:_||http://www.w3.org/2002/07/owl#||
-||Darwin Core terms (string literal objects)||_dwc:_||http://rs.tdwg.org/dwc/terms/||
-||Darwin Core type vocabulary||_dwctype:_||http://rs.tdwg.org/dwc/dwctype/||
-||Darwin Core terms (URI reference objects)||_dwcuri:_||http://rs.tdwg.org/dwc/uri/||
-||Dublin Core terms||_dcterms:_||http://purl.org/dc/terms/||
-||Dublin Core legacy terms||_dc:_||http://purl.org/dc/elements/1.1/||
-||Dublin Core type vocabulary||_dcmitype:_||http://purl.org/dc/dcmitype/||
-||FOAF vocabulary||_foaf:_||http://xmlns.com/foaf/0.1/||
-||DBpedia resources||_dbres:_||http://dbpedia.org/resource/||
-||GeoNames Ontology||_gn:_||http://www.geonames.org/ontology#||
-||TDWG Collections (NCD) Ontology||_col:_||http://rs.tdwg.org/ontology/voc/Collection#||
-||GeoSciML Geologic Timescale model Ontology||_gsml:_||http://resource.geosciml.org/ontology/timescale/gts-30#||
-||Virtual International Authority File||_viaf:_||http://viaf.org/viaf/||
-||Extensible Metadata Platform Rights Management vocabulary||_xmpRights:_||http://ns.adobe.com/xap/1.0/rights/||
-||Open Annotation Data Model||_oa:_||http://www.w3.org/ns/oa#||
-||RDFa Core 1.1||_xhv:_||http://www.w3.org/1999/xhtml/vocab#||
+||XML Schema||_xsd:_||{{{http://www.w3.org/2001/XMLSchema#}}}||
+||Web Ontology Language||_owl:_||{{{http://www.w3.org/2002/07/owl#}}}||
+||Darwin Core terms (string literal objects)||_dwc:_||{{{http://rs.tdwg.org/dwc/terms/}}}||
+||Darwin Core type vocabulary||_dwctype:_||{{{http://rs.tdwg.org/dwc/dwctype/}}}||
+||Darwin Core terms (URI reference objects)||_dwcuri:_||{{{http://rs.tdwg.org/dwc/uri/}}}||
+||Dublin Core terms||_dcterms:_||{{{http://purl.org/dc/terms/}}}||
+||Dublin Core legacy terms||_dc:_||{{{http://purl.org/dc/elements/1.1/}}}||
+||Dublin Core type vocabulary||_dcmitype:_||{{{http://purl.org/dc/dcmitype/}}}||
+||FOAF vocabulary||_foaf:_||{{{http://xmlns.com/foaf/0.1/}}}||
+||DBpedia resources||_dbres:_||{{{http://dbpedia.org/resource/}}}||
+||GeoNames Ontology||_gn:_||{{{http://www.geonames.org/ontology#}}}||
+||TDWG Collections (NCD) Ontology||_col:_||{{{http://rs.tdwg.org/ontology/voc/Collection#}}}||
+||GeoSciML Geologic Timescale model Ontology||_gsml:_||{{{http://resource.geosciml.org/ontology/timescale/gts-30#}}}||
+||Virtual International Authority File||_viaf:_||{{{http://viaf.org/viaf/}}}||
+||Extensible Metadata Platform Rights Management vocabulary||_xmpRights:_||{{{http://ns.adobe.com/xap/1.0/rights/}}}||
+||Open Annotation Data Model||_oa:_||{{{http://www.w3.org/ns/oa#}}}||
+||RDFa Core 1.1||_xhv:_||{{{http://www.w3.org/1999/xhtml/vocab#}}}||
 
 For brevity, the examples do not include namespace declarations, nor an _rdf:RDF_ container element.  If a user wishes to test or validate an example, insert it into the container element defined in [#2.1.2_Generating_graphical_diagrams_and_triple_tables_for_the_ex Section 2.1.2].
  
