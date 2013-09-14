@@ -5,6 +5,10 @@
 
 = Cover page for RDF Guide proposed addition to Darwin Core =
 
+== History ==
+
+The [http://rs.tdwg.org/dwc/index.htm Darwin Core ]technical specification was adopted as a TDWG Standard in 2009.  
+
 == What is the Darwin Core RDF Guide?==
 
 The DwC RDF Guide will be an addition to the Darwin Core standard under the Namespace Policy (http://rs.tdwg.org/dwc/terms/namespace/ ).  The Guide itself is a Type 2 document, meaning that it is a non-normative part of the standard.  It will be a parallel document to the two existing DwC Guides, the XML Guide (http://rs.tdwg.org/dwc/terms/guides/xml/ ) and the Text Guide (http://rs.tdwg.org/dwc/terms/guides/text/ ).  In addition to the Guide document itself, this proposed addition to DwC includes the addition of a number of terms which will be added to the normative (Type 1) RDF document and to a human-readable term reference guide. 
