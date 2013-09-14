@@ -240,7 +240,7 @@ xmlns:viaf="http://viaf.org/viaf/"
 "Resource" is a general term for any kind of entity that can be described using RDF.  Resources can be physical, conceptual, or digital entities. 
  
 Statements about resources are made in RDF in the form of "triples" [http://www.w3.org/TR/rdf-primer/#basicconcepts RDF-TRIPLES].  A triple consists of a subject, a predicate, and an object:
- 
+
 *Table 2*
 
 || *Subject* || *Predicate* || *Object* ||
@@ -462,24 +462,11 @@ Darwin Core defines two categories of classes.  Classes defined within the gener
 
 The following list summarizes the classes included in Darwin Core that should be used for typing biodiversity-related resources:
 
-  * _dwctype:Occurrence_
-  * _dcmitype:Event_
-  * _dcterms:Location_ (add to DwC type vocabulary, deprecate _dwctype:Location_)
-  * propose _dwctype:GeologicalContext_
-  * propose _dwctype:Identification_
-  * _dwctype:PreservedSpecimen_
-  * _dwctype:FossilSpecimen_
-  * _dwctype:LivingSpecimen_
-  * _dwctype:HumanObservation_
-  * _dwctype:MachineObservation_
-  * _dwctype:NomenclaturalChecklist_
+<dl><dt>_dwctype:Occurrence_</dt><dt>_dcmitype:Event_</dt><dt>_dcterms:Location_ (add to DwC type vocabulary, deprecate _dwctype:Location_)</dt><dt>propose _dwctype:GeologicalContext_</dt><dt>propose _dwctype:Identification_</dt><dt>_dwctype:PreservedSpecimen_</dt><dt>_dwctype:FossilSpecimen</dt><dt>_dwctype:LivingSpecimen_</dt><dt>_dwctype:HumanObservation_</dt><dt>_dwctype:MachineObservation_</dt><dt>_dwctype:NomenclaturalChecklist_</dt></dl>
 
 The following list summarizes classes included in the Dublin Core type vocabulary (but which are not part of Darwin Core) that should be used for typing biodiversity-related resources:
 
-  * _dcmitype:StillImage_
-  * _dcmitype:MovingImage_
-  * _dcmitype:Sound_
-  * _dcmitype:PhysicalObject_
+<dl><dt>_dcmitype:StillImage_</dt><dt>_dcmitype:MovingImage_</dt><dt>_dcmitype:Sound_</dt><dt>_dcmitype:PhysicalObject_</dt></dl>
 
 ==2.4 Object resources==
  
