@@ -248,7 +248,7 @@ Table 2
 ||dbres:Starry_night||foaf:maker||viaf:9854560||
  
 In the second row of Table 2, the full URIs are given.  In the third row namespace abbreviations are used to shorten the URIs.  The following fragments of RDF shows the triple in RDF/XML and Turtle serializations:
- 
+
 Example 1:
 RDF/XML
 {{{
@@ -299,7 +299,7 @@ Example 2:
 ===2.2.3 Associating a URN with its HTTP-proxied equivalent===
  
 The TDWG LSID Applicability Statement standard [http://www.tdwg.org/standards/150/ LSID-STANDARD] specifies in Recommendation 30 that "The description of all objects identified by an LSID *must* contain an _owl:sameAs_, _owl:equivalentProperty_ or _owl:equivalentClass_ statement expressing the equivalence between the object identifier in its standard form and its proxy version".  This is illustrated by Example 3:
- 
+
 Example 3:
 RDF/XML
 {{{
@@ -331,7 +331,7 @@ There is nothing that prohibits assigning more than one rdf:type property to a r
 ====2.3.1.1 rdf:type statement====
  
 The predicate rdf:type is defined to have an object that is a class.  The class should be identified by a URI reference (not by a literal) as in Example 4:
- 
+
 Example 4:
 RDF/XML
 {{{
@@ -347,7 +347,7 @@ Turtle:
      dcterms:created "2002-06-11T09:37:33"^^xsd:dateTime.
 }}}
 In XML serialization, the RDF specification provides an abbreviated way to specify the type of a described resource.  This method is called a typed node element [http://www.w3.org/TR/rdf-primer/#newresources TYPED-NODE].  The _rdf:Description_ element is replaced by an element whose name is an XML qualified name that identifies a class of which the described resource is an instance as iin Example 5:
- 
+
 Example 5:
 {{{
 <dcmitype:StillImage rdf:about="http://bioimages.vanderbilt.edu/baskauf/12226">
@@ -367,7 +367,7 @@ is used to describe a subject resource, a client can infer that the subject reso
 <rdfs:domain rdf:resource="http://purl.org/dc/terms/BibliographicResource"/>
 }}}
 in its definition.  If that term were used as the property of a specimen a client could infer that the specimen had _rdf:type_ _dcterms:BibliographicResource_:
- 
+
 Example 6:
 RDF/XML
 {{{
@@ -389,7 +389,7 @@ is used with a value, a client can infer that the value is an instance of class 
 <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
 }}}
 in its definition.  If the object of that term in an RDF triple is a reference to the URI for English assigned by the MARC List of Languages [http://id.loc.gov/vocabulary/languages MARC-LANGUAGES] (Example 7), then it can be inferred that {{{http://id.loc.gov/vocabulary/languages/eng}}} is a _dcterms:LingisticSystem_ even though the MARC description in RDF does not include that assertion in its definition.
- 
+
 Example 7:
 RDF/XML
 {{{
@@ -423,7 +423,7 @@ in the description so that clients searching for either _foaf:Image_ or _dcmityp
 Both the Dublin Core and Darwin Core define terms which can be used to describe the nature of a resource: _dcterms:type_ and _dwc:basisOfRecord_ respectively.  However, using these terms to describe the nature of the subject resource is not a substitute for use of _rdf:type_.  The DCMI notes on RDF semantics [http://dublincore.org/documents/dc-rdf/#sect-5 RDF-SEMANTICS] recommend that "applications implementing this specification primarily use and understand _rdf:type_ in place of dcterms:type when expressing Dublin Core metadata in RDF, as most RDF processors come with built-in knowledge of _rdf:type_."  A similar argument could be made for the use of _rdf:type_ over _dwc:basisOfRecord_.  Including _dc:type_, _dcterms:type_, and _dwc:basisOfRecord_ in an RDF description should be considered optional, while including _rdf:type_ should be considered highly recommended.  A _dwcuri:_ analogue ([#2.5_Terms_in_the_dwcuri:_namespace Section 2.5]) of _dwc:basisOfRecord_ should not be used.  Use _rdf:type_ instead when the object is a URI reference.
  
 Here is an example that describes a specimen using several of the terms that define the nature of a resource explicitly, including multiple _rdf:type_ declarations:
- 
+
 Example 8:
 RDF/XML
 {{{
@@ -488,7 +488,7 @@ Some resources such as titles, dates, and numbers can be intrinsically expressed
 Because literals cannot be the subjects of RDF triples, it is not possible to describe the properties of literals extensively in RDF.  However, literals can be typed using attributes in their containing XML element.  This provides additional information about the string that may be beneficial for allowing a client to interpret the string.
  
 If the string expresses information in a particular language, a provider may include an _xml:lang_ attribute [http://www.w3.org/TR/REC-xml/#sec-lang-tag XML-LANG] to indicate the language of the string through the RFC 4646 language code [http://www.ietf.org/rfc/rfc4646.txt LANG-CODES] for that language as in the following example:
- 
+
 Example 9:
 RDF/XML
 {{{
@@ -540,7 +540,7 @@ Resources that are physical or conceptual cannot be intrinsically represented as
 A description of the referenced non-literal object may be found within the same document, among data from another provider, or there may be no description of the object.
  
 If the RDF document will describe further properties of the non-literal, URI-identified resource, those properties can be placed within an _rdf:Description_ container element having an _rdf:about_ attribute whose value is the URI of the resource:
- 
+
 Example 11:
 {{{
 <dcterms:rightsHolder>
@@ -550,7 +550,7 @@ Example 11:
 <dcterms:rightsHolder>
 }}}
 If the non-literal object is not identified by a URI (i.e. it is a blank node), its properties can be placed within an _rdf:Description_ container element that has no _rdf:about_ attribute and which is itself within a container element for the property:
- 
+
 Example 12:
 {{{
 <dcterms:rightsHolder>
@@ -563,7 +563,7 @@ Example 12:
 ====2.4.2.1 When should non-literal object resources be described within the same document?====
  
 There are positive and negative aspects to describing a resource within the same document that references it.  If the URI is not dereferenceable either because the URI is not a type that can be dereferenced by HTTP (e.g. a URN) or because the issuer of the URI is temporarily or permanently failing to respond to HTTP calls, then providing minimal information about the resource in the referencing document may be beneficial.  For example, if a property referred to a printed book which had an ISBN but no HTTP URI, as in:
- 
+
 Example 13:
 {{{
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/taxon/30148-gleason1991">
@@ -571,7 +571,7 @@ Example 13:
 </rdf:Description>
 }}}
 a description providing basic publication data such as:
- 
+
 Example 14:
 {{{
 <rdf:Description rdf:about="urn:isbn:0893273651">
@@ -592,7 +592,7 @@ could be included as part of the document that references the ISBN in URN form. 
      dc:creator "Gleason, Henry A. and Arthur Cronquist".
 }}}
 However, if the URI references an object resource whose data are being actively managed by another provider, then any data which are included in the referencing document may become outdated.  In that case, it is probably better to simply link the URI, and let the consumer of the referring document dereference the URI to retrieve the most up-to-date data about the object resource.  In this example:
- 
+
 Example 15:
 RDF/XML
 {{{
@@ -616,7 +616,7 @@ In the previous example, the HTTP URI used as the object of the _dcterms:rightsH
 ====2.4.2.2 Objects which are blank (anonymous) nodes====
  
 Under most circumstances, it is desirable to refer to a non-literal object resource by a URI because omitting a URI reference makes it impossible to associate an external reference with the object resource.  In the following example:
- 
+
 Example 16:
 RDF/XML
 {{{
@@ -646,7 +646,7 @@ The data provider may feel that there is no need for another provider to refer t
 ===2.4.3 Object resources which have been previously represented by literals but which are actually non-literal resources===
  
 In databases the names of entities have frequently been used to represent the entities themselves.  For example, the name of a person is often used as a proxy for the person, or an abbreviation for a language has been used to represent the language itself.  Prior to the creation of the DCMI Abstract Model, many data which were described using terms in the legacy Dublin Core namespace _dc:_ ({{{http://purl.org/dc/elements/1.1/}}}) followed the historical practice of using the name of an entity to represent a non-literal entity.  Extending this practice to RDF would result in representations such as this:
- 
+
 Example 17:
 RDF/XML
 {{{
@@ -664,7 +664,7 @@ However, over time, the community of RDF users has come to consider it a best pr
 ====2.4.3.1 Literal values for non-literal resources in Dublin Core====
 
 The introduction of the DCMI Abstract Model (DCAM) and subsequent guidelines for the use of Dublin Core terms in RDF [http://dublincore.org/documents/dc-rdf/#sect-4  DC-RDF] were intended to clarify the use of Dublin Core terms with literal and non-literal objects [http://dublincore.org/documents/2008/01/14/dc-rdf-notes/#sect-3 DC-RDF-NOTES].  In particular, ranges were declared for terms in the _dcterms:_ namespace ({{{http://purl.org/dc/terms/}}}) with the intention of clarifying whether each term was intended for use with a literal or a non-literal value.  For example, _dcterms:bibliographicCitation_ has the range _rdfs:Literal_, while _dcterms:creator_ has range _dcterms:Agent_.  Because the term _dcterms:creator_ has a non-literal range, it should be used with an object that is a URI reference as illustrated in the following example:
- 
+
 Example 18:
 RDF/XML
 {{{
@@ -686,7 +686,7 @@ Many providers of non-RDF data may have used literal values for terms in the dct
 ====2.4.3.2 Literal values for non-literal resources in Darwin Core====
  
 Because there are many legacy data composed of string values of _dwc:_ namespace ({{{http://rs.tdwg.org/dwc/terms/}}}) terms whose objects actually represent non-literal entities (i.e. value strings sensu DCAM), it is likely that many providers will at least initially expose such data in RDF as string literals served directly from their existing databases [http://www.w3.org/TR/r2rml/ RDB2RDF].  To make it possible for the legacy data to be exposed as RDF while also ensuring that the meaning of those data is preserved, in RDF the literal value of an existing Darwin Core term in the _dwc:_ namespace should have the same structure as that described in the term's description, as in Example 19.
- 
+
 Example 19:
 RDF/XML
 {{{
@@ -716,7 +716,7 @@ Several terms in the _dwcuri:_ namespace do not have _dwc:_ namespace analogues 
 ===2.5.2 Using terms in the Darwin Core dwcuri: namespace with non-literal objects identified by URI references===
  
 The following example shows how the data from Example 19 could be expressed if URIs were available to identify the persons whose names composed the literal:
- 
+
 Example 20:
 RDF/XML
 {{{
@@ -740,7 +740,7 @@ A client that encounters a triple having a term from the _dwcuri:_ namespace as 
 ==2.6 Darwin Core ID terms and RDF==
  
 Darwin Core contains a number of "ID" terms intended to designate identifiers, e.g. _dwc:occurrenceID_, _dwc:identificationID_, _dwc:locationID_, etc.  The "ID" terms provide two functions, specifying the class of the resource and indicating that value of the term is an identifier.  These functions are illustrated by the following non-RDF XML below, which is part of an example provided in the Darwin Core XML Guide [http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#classes DWC-XML]:
- 
+
 Example 21:
 (non-RDF)
 {{{
@@ -764,7 +764,7 @@ In Example 21 and Table 3, the "ID" terms are used to specify both the identifie
 In RDF, the two functions (specifying type and referencing an identifier) are handled separately using _rdf:type_ declarations ([#2.3.1_Declaring_the_type_of_the_resource Section 2.3.1]) and defined mechanisms for expressing the identifier of the subject resource ([#2.2_Subject_resources Section 2.2]).  Because these mechanisms are well-known best practices outside TDWG, they should be used rather than using the Darwin Core ID terms when data are expressed as RDF. 
  
 The following example shows an appropriate way to express the information in Example 21 as RDF:
- 
+
 Example 22:
 RDF/XML
 {{{
