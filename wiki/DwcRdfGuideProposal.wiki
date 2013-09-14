@@ -215,7 +215,7 @@ For brevity, the examples do not include namespace declarations, nor an _rdf:RDF
  
 ===2.1.2 Generating graphical diagrams and triple tables for the examples===
 
-The W3C RDF Validation Service [http://www.w3.org/RDF/Validator/ W3C-VALIDATOR] can be used to generate both a tabular listing and a graphical diagram of the triples that are included in the example XML serializations.  Text from the examples can be placed inside the rdf:RDF container element below, then pasted into the validator box to generate the desired output.
+The W3C RDF Validation Service [http://www.w3.org/RDF/Validator/ W3C-VALIDATOR] can be used to generate both a tabular listing and a graphical diagram of the triples that are included in the example XML serializations.  Text from the examples can be placed inside the _rdf:RDF_ container element below, then pasted into the validator box to generate the desired output.
 
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
@@ -248,10 +248,10 @@ Statements about resources are made in RDF in the form of "triples" [http://www.
 *Table 2*
 
 || *Subject* || *Predicate* || *Object* ||
-||<http://dbpedia.org/resource/Starry_night>||<http://xmlns.com/foaf/0.1/maker>||<http://viaf.org/viaf/9854560>||
-||dbres:Starry_night||foaf:maker||viaf:9854560||
- 
-In the second row of Table 2, the full URIs are given.  In the third row namespace abbreviations are used to shorten the URIs.  The following fragments of RDF shows the triple in RDF/XML and Turtle serializations:
+||{{{<http://dbpedia.org/resource/Starry_night>}}}||{{{<http://xmlns.com/foaf/0.1/maker>}}}||{{{<http://viaf.org/viaf/9854560>}}}||
+||_dbres:Starry_night_||_foaf:maker_||_viaf:9854560_||
+
+In the second row of Table 2, the full URIs are given.  In the third row namespace abbreviations are used to shorten the URIs.  The following fragments of RDF shows the triple in RDF/XML and Turtle serializations of the triple shown in Table 2:
 
 *Example 1:*
 
