@@ -205,7 +205,7 @@ As RDF/Turtle:
 	a tc:TaxonConcept.
 }}}
 
-Because of the wide variety of formats for citing references, the TCS standard specifies the use of "signature fields" to attempt to standardize the literal values of secundum references.  The signature field is an abbreviated form of the author and year of publication.  See Section 17.2.1 of the [http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf TCS User Guide] for more information.  (Note: the user guide identifies the field as /DataSet/TaxonConcepts/TaxonConcept/AccordingTo/AuthorTeam/Simple.  However, the actual field is specified to be /DataSet/TaxonConcepts/TaxonConcept/AccordingTo/Simple in the [http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.rdf RDF that defines _tc:accordingToString_].  This is consistent with the actual [http://bioimages.vanderbilt.edu/pages/xmlspy_documentation_01.pdf XML schema].)  Because signature fields are not guaranteed to be globally unique, it is recommended that providers not rely exclusively on _tc:accordingToString_ as a means of identifying  the secundum reference but that they also use one of the following two methods to reduce the ambiguity of the reference and to reduce the burden on the consumer of parsing and interpreting the value string which represents the reference.  Note: if the provider wishes to provide a full literature reference, that is permissible as a value of _dwc:nameAccordingTo_.  However, the Darwin Core RDF Guide specifies that since _dwc:nameAccordingTo_ is a [DwcRdfGuideProposal#2.7_Darwin_Core_convenience_terms convenience property], it should be a property of the identification instance rather than of the taxon concept.  
+Because of the wide variety of formats for citing references, the TCS standard specifies the use of "signature fields" to attempt to standardize the literal values of secundum references.  The signature field is an abbreviated form of the author and year of publication.  See Section 17.2.1 of the [http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf TCS User Guide] for more information.  (Note: the user guide identifies the field as /DataSet/TaxonConcepts/TaxonConcept/AccordingTo/AuthorTeam/Simple.  However, the actual field is specified to be /DataSet/TaxonConcepts/TaxonConcept/AccordingTo/Simple in the [http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.rdf RDF that defines] _tc:accordingToString_.  This is consistent with the actual [http://bioimages.vanderbilt.edu/pages/xmlspy_documentation_01.pdf XML schema].)  Because signature fields are not guaranteed to be globally unique, it is recommended that providers not rely exclusively on _tc:accordingToString_ as a means of identifying  the secundum reference but that they also use one of the following two methods to reduce the ambiguity of the reference and to reduce the burden on the consumer of parsing and interpreting the value string which represents the reference.  Note: if the provider wishes to provide a full literature reference, that is permissible as a value of _dwc:nameAccordingTo_.  However, the Darwin Core RDF Guide specifies that since _dwc:nameAccordingTo_ is a [DwcRdfGuideProposal#2.7_Darwin_Core_convenience_terms convenience property], it should be a property of the identification instance rather than of the taxon concept.  
 
 ===3.2 Representing the reference using a blank node===
 
@@ -349,7 +349,7 @@ As RDF/XML:
    <dwcuri:toTaxonConcept>
         <tc:TaxonConcept>
              <tc:nameString>Acer nigrum</tc:nameString>
-             <tc:accordingToString>Gleason, Henry A. and Arthur Cronquist, 1991. Manual of Vascular Plants of Northeastern United States and Adjacent Canada. The New York Botanical Garden, Bronx, NY, US, p. 352.</tc:accordingToString>
+             <tc:accordingToString>Gleason Cronquist 1991</tc:accordingToString>
         </tc:TaxonConcept>
    </dwcuri:toTaxonConcept>
 </rdf:Description>
@@ -361,7 +361,7 @@ As RDF/Turtle:
 	dwcuri:toTaxonConcept 
 		[a tc:TaxonConcept ; 
 		tc:nameString "Acer nigrum" ; 
-		tc:accordingToString "Gleason, Henry A. and Arthur Cronquist, 1991. Manual of Vascular Plants of Northeastern United States and Adjacent Canada. The New York Botanical Garden, Bronx, NY, US, p. 352."];
+		tc:accordingToString "Gleason Cronquist 1991"];
 	a dwctype:Identification.
 }}}
 
