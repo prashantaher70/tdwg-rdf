@@ -5,7 +5,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Describing Taxon Concepts as RDF (draft)=
 
-*Date:* (Created) 27 April 2013; (Last modified) 30 June 2013
+*Date:* (Created) 27 April 2013; (Last modified) 15 September 2013
 
 *Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
 
@@ -40,7 +40,7 @@ The following namespace abbreviations are used in this document:
 
 == 1 Introduction ==
 
-The class {{{dwc:Taxon}}} is defined to be a category that includes information about both names and taxon concepts.  The ambiguity in this definition reflects a general lack of clarity in the TDWG community about the exact definition of a taxon.  This degree of ambiguity is not suitable for descriptions in RDF.  The TDWG Taxon Concept Transfer Schema (TCS) Standard describes a more well-defined entity, the Taxon Concept, which contains both a name and a reference component.   These name and reference components correspond to two parts of concept names under the convention of “name sec. reference” (or “name sensu reference”).  
+The class {{{dwc:Taxon}}} is defined to be a category that includes information about both names and taxon concepts.  The ambiguity in this definition reflects a general lack of clarity in the TDWG community about the exact definition of a taxon.  This degree of ambiguity is not suitable for descriptions in RDF.  The TDWG Taxon Concept Transfer Schema ([http://www.tdwg.org/standards/117/ TCS; http://www.tdwg.org/standards/117/]) Standard describes a more well-defined entity, the Taxon Concept, which contains both a name and a reference component.   These name and reference components correspond to two parts of concept names under the convention of “name sec. reference” (or “name sensu reference”).  
 
 At the time of the adoption of the Darwin Core RDF Guide, there was no existing standard for expressing the TCS Standard as RDF (TCS itself is a non-RDF XML schema).  Two parts of the TDWG Ontology, the TaxonConcept ontology and the TaxonName ontology, are based on the TCS standard.  However, given that no part of the TDWG Ontology has yet become a ratified TDWG Standard, the TDWG Ontology terms have not been recommended for use as part of the Darwin Core RDF Guide.  Nevertheless, because the TDWG Ontologies are described using RDF, they provide a means to illustrate how the metadata provided through dwc:Taxon class convenience terms (Section 2.7 of the Guide) could be rendered in a structured manner consistent with the TCS Standard.  
 
@@ -184,7 +184,7 @@ If the reference which circumscribes the taxon concept is known, it should be as
 
 ===3.1 Non-literal value string representing the reference===
 
-A {{{tc:TaxonConcept}}} instance can have the property {{{tc:accordingToString}}} whose value is a value string that represents the secundum reference. The following example illustrates the use of {{{tc:accordingToString}}}:
+A _tc:TaxonConcept_ instance can have the property _tc:accordingToString_ whose value is a value string that represents the secundum reference. The following example illustrates the use of _tc:accordingToString_ for the reference "Gleason, Henry A. and Arthur Cronquist, 1991. Manual of Vascular Plants of Northeastern United States and Adjacent Canada. The New York Botanical Garden, Bronx, NY, US, p. 352.":
 
 Example 4:
 
@@ -193,19 +193,19 @@ As RDF/XML:
 <rdf:Description rdf:about="http://museum.org/taxonconcepts/37524">
    <rdf:type rdf:resource="http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept"/>
    <tc:nameString>Acer nigrum</tc:nameString>
-   <tc:accordingToString>Gleason, Henry A. and Arthur Cronquist, 1991. Manual of Vascular Plants of Northeastern United States and Adjacent Canada. The New York Botanical Garden, Bronx, NY, US, p. 352.</tc:accordingToString>
+   <tc:accordingToString>Gleason Cronquist 1991</tc:accordingToString>
 </rdf:Description>
 }}}
 
 As RDF/Turtle:
 {{{
 <http://museum.org/taxonconcepts/37524> 
-	tc:accordingToString "Gleason, Henry A. and Arthur Cronquist, 1991. Manual of Vascular Plants of Northeastern United States and Adjacent Canada. The New York Botanical Garden, Bronx, NY, US, p. 352.";
+	tc:accordingToString "Gleason Cronquist 1991";
 	tc:nameString "Acer nigrum";
 	a tc:TaxonConcept.
 }}}
 
-Because of the wide variety of formats for citing references, it is difficult to ensure that a client will be able to unambiguously match strings which refer to the same reference.  For this reason, it is recommended that providers not rely exclusively on {{{tc:accordingToString}}} as a means of identifying  the secundum reference but that they also use one of the following two methods to reduce the ambiguity of the reference and to reduce the burden on the consumer of parsing and interpreting the value string which represents the reference.  
+Because of the wide variety of formats for citing references, the TCS standard specifies the use of "signature fields" to attempt to standardize the literal values of secundum references.  The signature field is an abbreviated form of the author and year of publication.  See Section 17.2.1 of the [http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf TCS User Guide] for more information.  (Note: the user guide identifies the field as /DataSet/TaxonConcepts/TaxonConcept/AccordingTo/AuthorTeam/Simple.  However, the actual field is specified to be /DataSet/TaxonConcepts/TaxonConcept/AccordingTo/Simple in the [http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.rdf RDF that defines _tc:accordingToString_].  This is consistent with the actual [http://bioimages.vanderbilt.edu/pages/xmlspy_documentation_01.pdf XML schema].)  Because signature fields are not guaranteed to be globally unique, it is recommended that providers not rely exclusively on _tc:accordingToString_ as a means of identifying  the secundum reference but that they also use one of the following two methods to reduce the ambiguity of the reference and to reduce the burden on the consumer of parsing and interpreting the value string which represents the reference.  Note: if the provider wishes to provide a full literature reference, that is permissible as a value of _dwc:nameAccordingTo_.  However, the Darwin Core RDF Guide specifies that since _dwc:nameAccordingTo_ is a [DwcRdfGuideProposal#2.7_Darwin_Core_convenience_terms convenience property], it should be a property of the identification instance rather than of the taxon concept.  
 
 ===3.2 Representing the reference using a blank node===
 
