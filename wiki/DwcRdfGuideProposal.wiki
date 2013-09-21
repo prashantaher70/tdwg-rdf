@@ -894,7 +894,7 @@ Historically, the set of values for _dwc:institutionCode_, _dwc:collectionCode_,
 || *_dwc:basisOfRecord_* || *_dwc:institutionCode_* || *_dwc:collectionCode_* || *_dwc:catalogNumber_* || *_dwc:collectionID_* ||
 ||{{{"PreservedSpecimen"}}}||{{{"MVZ"}}}||{{{"Mamm"}}}||{{{"115956"}}}||{{{"urn:lsid:biocol.org:col:34904"}}}||
 
-In RDF, unique identification of collection items is done through the URI which acts as a globally unique identifier for that item.  The Darwin Core triplet properties may still be provided as literal values, but ownership/control of the collection item should be indicated using _dwcuri:inCollection_ with an HTTP URI as the URI-reference object.  For physical specimens, the recommended best practice is to use a collection URI from a collections registry such as an HTTP-proxied LSID from the Registry of Biological Repositories http://www.biorepositories.org/).  *CHECK ON THE STATUS OF THIS! * Example 24 illustrates this for the data from Table 7.
+In RDF, unique identification of collection items is done through the URI which acts as a globally unique identifier for that item.  The Darwin Core triplet properties may still be provided as literal values, but ownership/control of the collection item should be indicated using _dwcuri:inCollection_ with an HTTP URI as the URI-reference object.  For physical specimens, the recommended best practice is to use a collection URI from a collections registry such as an HTTP-proxied LSID from the Registry of Biological Repositories http://www.biorepositories.org/).  Example 24 illustrates this for the data from Table 7.
 
 *Example 24:*
 
