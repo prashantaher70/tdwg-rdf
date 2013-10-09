@@ -28,7 +28,7 @@
 
 *Replaces:* N/A
 
-*Document Status:* Current Standard ([http://www.tdwg.org/standards/147/ Type 2] non-normative document) (upon acceptance under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy])
+*Document Status:* Current Standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 2] non-normative document) (upon acceptance under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy])
 
 *Table of Contents:*
 
