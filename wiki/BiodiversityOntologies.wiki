@@ -4,9 +4,9 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Summary of some ontologies/data models which provide object properties that can connect instances of biodiversity-related classes=
 
-*Date:* (Created) 16 March 2013; (Last modified) 1 July 2013
+*Date:* (Created) 16 March 2013; (Last modified) 9 October 2013
 
-*Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document)
+*Status:* Not part of any standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 3] document)
 
 *Permanent URL:* http://code.google.com/p/tdwg-rdf/wiki/BiodiversityOntologies
 
