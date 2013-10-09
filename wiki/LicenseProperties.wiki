@@ -7,7 +7,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 *Date:* (Created) 24 August 2013; (Last modified) 24 August 2013
 
-*Status:* Not part of any standard ([http://www.tdwg.org/standards/147/ Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
+*Status:* Not part of any standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
 
 *Permanent URL:* http://
 
