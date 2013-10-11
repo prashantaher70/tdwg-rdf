@@ -4,7 +4,7 @@
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 9 Oct 2013
+*Date:* (Created) 17 February 2012; (Last modified) 11 Oct 2013
 
 *Document Status:* Not part of any standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 3] document)
 
@@ -217,6 +217,8 @@ See also http://www.w3.org/RDF/ for a listing of tools relevant to RDF
 [http://www.mygrid.org.uk/OWL/Validator WonderWeb OWL Ontology Validator]
 
 [http://www.mindswap.org/2003/pellet/demo.shtml Mindswap OWL Consistency Checker]
+
+[http://www.essepuntato.it/lode Live OWL Documentation Environment] generates human-readable versions of OWL ontologies (see [http://speroni.web.cs.unibo.it/publications/peroni-2012-live-documentation-environment.pdf this documentation]
 
 [http://bioguid.info/status/ Rod Page's "Status of Biodiversity Services" checker (takes a long time to run so be patient)]
 
