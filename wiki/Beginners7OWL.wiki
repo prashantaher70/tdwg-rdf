@@ -223,7 +223,8 @@ Some reasoners which are available are listed at [#13_OWL_tools (13)].
 ===7.7.1. Some publications related to reasoning===
 A method of reasoning, which uses rules to infer triples from an OBO ontology followed by SPARQL queries, is described in Blondé et al. 2011 ([http://dx.doi.org/10.1093/bioinformatics/btr164 doi: 10.1093/bioinformatics/btr164]).
 
-Hogan et al. describe a "system for performing rule-based forward-chaining reasoning which we call SAOR: Scalable Authoritative OWL Reasoner" at [http://www.deri.ie/fileadmin/documents/DERI-TR-2009-04-21.pdf].
+Hogan et al. describe a "system for performing rule-based forward-chaining reasoning which we call SAOR: Scalable Authoritative OWL Reasoner" at [http://www.deri.ie/fileadmin/documents/DERI-TR-2009-04-21.pdf].  Aidan Hogan, Andreas Harth and Axel Polleres.  Scalable Authoritative OWL Reasoning for the Web.  International Journal on Semantic Web and
+Information Systems, 5(2), pages 49-90, April-June 2009.
 
 The principles of Referent Tracking, which can be used to represent and track "particulars" (instances which are based in objective reality), is discussed in [http://ceur-ws.org/Vol-249/submission_105.pdf Cuesters and Smith. 2007].  Referent Tracking is designed to support unique identifiers and reduce ambiguity with the ultimate goal of facilitating reasoning.
 
