@@ -213,7 +213,7 @@ None of the classes shown on the diagram have subclass relationships.
 
 == 5.4 Some object properties ==
 
-The BiSciCol relationship predicates are transitive or symmetric and are useful for graph traversal, indicating whether the graph should traversed one step in a particular direction (depends_on), one step in either direction (related_to), all steps in one direction (derives_from), or all steps in both directions (alias_of).  In terms of DwC class relationships, only two of the object properties form BiSciCol are used  (the abbreviation bsc: stands for http://biscicol.org/terms/index.html# ):
+The BiSciCol relationship predicates are transitive or symmetric and are useful for graph traversal, indicating whether the graph should be traversed one step in a particular direction (depends_on), one step in either direction (related_to), all steps in one direction (derives_from), or all steps in both directions (alias_of).  In terms of DwC class relationships, only two of the object properties form BiSciCol are used  (the abbreviation bsc: stands for http://biscicol.org/terms/index.html# ):
 
 ||Property||Subject class||Domain declared?||Object class||Range declared?||
 ||bsc:depends_on||various||no||various||no||
