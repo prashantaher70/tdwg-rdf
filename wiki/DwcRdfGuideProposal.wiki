@@ -399,20 +399,20 @@ is used with a value, a client can infer that the value is an instance of class 
 {{{
 <rdfs:range rdf:resource="http://purl.org/dc/terms/LinguisticSystem"/>
 }}}
-in its definition.  If the object of that term in an RDF triple is a reference to the URI for English assigned by the MARC List of Languages [http://id.loc.gov/vocabulary/languages MARC-LANGUAGES] (Example 7), then it can be inferred that {{{http://id.loc.gov/vocabulary/languages/eng}}} is a _dcterms:LingisticSystem_ even though the MARC description in RDF does not include that assertion in its definition.
+in its definition.  If the object of that term in an RDF triple is a reference to the URI for English assigned by the MARC ISO 639-2 Codes for the Representation of Names of Languages [http://id.loc.gov/vocabulary/iso639-2 MARC-LANGUAGES] (Example 7), then it can be inferred that {{{http://id.loc.gov/vocabulary/iso639-2/eng}}} is a _dcterms:LingisticSystem_ even though the MARC description in RDF does not assert that directly in its definition.
 
 *Example 7:*
 
 RDF/XML
 {{{
 <rdf:Description rdf:about="http://dx.doi.org/10.5962/bhl.title.59991">
-     <dcterms:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+     <dcterms:language rdf:resource="http://id.loc.gov/vocabulary/iso639-2/eng"/>
 </rdf:Description>
 }}}
 Turtle
 {{{
 <http://dx.doi.org/10.5962/bhl.title.59991>
-     dcterms:language <http://id.loc.gov/vocabulary/languages/eng>.
+     dcterms:language <http://id.loc.gov/vocabulary/iso639-2/eng>.
 }}}
 No terms defined within the Darwin Core namespace have range or domain declarations.  However, some terms imported into Darwin Core from Dublin Core do have domain or range declarations.  [#3.2_Imported_Dublin_Core_terms_for_which_only_literal_objects_ar Sections 3.2] and [#3.3_Imported_Dublin_Core_terms_that_have_non-literal_objects_and 3.3] of this guide gives the declared ranges and domains when they are asserted for such terms.
  
@@ -1076,7 +1076,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 ==3.3 Imported Dublin Core terms that have non-literal objects and corresponding terms that have literal objects==
 
 || *Term intended for use in RDF with non-literal objects*^2^ || *range* || *recommended values* || *Term intended for use in RDF with literal objects* ||
-||dcterms:language||dcterms:LinguisticSystem||MARC language URI http://id.loc.gov/vocabulary/languages.html||dc:language||
+||dcterms:language||dcterms:LinguisticSystem||MARC ISO 639-2 language URI http://id.loc.gov/vocabulary/iso639-2.html||dc:language||
 ||dcterms:rights^3^||dcterms:RightsStatement||A custom RDF rights statement can be created with a minted URI or blank node representing the object of _dcterms:rights_ .||dc:rights||
 ||dcterms:type||rdfs:Class||DCMI Type Vocabulary http://dublincore.org/documents/dcmi-terms/#H7||dc:type||
 ||dcterms:rightsHolder||dcterms:Agent||URI for the agent owning or managing the rights.||xmpRights:Owner^4^||
