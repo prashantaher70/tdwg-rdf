@@ -16,8 +16,10 @@ http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse-family-relationships.pn
 
 The RDF can be viewed as RDF/XML by [http://code.google.com/p/tdwg-rdf/source/browse/trunk/example/inverse.rdf clicking here] or downloaded by [http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse.rdf saving this link].  It can be viewed as RDF/Turtle by [http://code.google.com/p/tdwg-rdf/source/browse/trunk/example/inverse.ttl clicking here] or downloaded by [http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse.ttl saving this link].
 
-=The query=
+Note that some possible hasParent and hasChild relationships are missing.  The query in the following section will infer these missing triples that are entailed by the {{{owl:inverseOf}}} declarations.
 
+=The query=
+Here is the whole query:
 {{{
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX local: <http://bioimages.vanderbilt.edu/rdf/local#>
@@ -35,5 +37,43 @@ WHERE
  FILTER(!BOUND(?R3))
  }
 Limit 10
-
 }}}
+
+The query can be broken down into parts.  
+{{{
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX local: <http://bioimages.vanderbilt.edu/rdf/local#>
+}}}
+defines the namespace abbreviations that are used in the query.
+
+{{{
+FROM <http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse.rdf>
+}}}
+limits the query to a particular graph that has been uploaded to the triplestore.  {{{http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse.rdf}}} is the URI of that graph.
+
+
+{{{
+WHERE 
+ {
+ ?property1 owl:inverseOf ?property2.
+ ?resource2 ?property1 ?resource1.
+ }
+}}}
+binds the {{{?property1}}} variable to URIs which have declared inverses and which serve as a predicate for some triple containing {{{?resource2}}} and {{{?resource1}}}.
+
+{{{
+CONSTRUCT {?resource1 ?property2 ?resource2}
+}}}
+constructs a triple where the two resources have their subject and object positions reversed.  The predicate of that triple is the property which was declared as the inverse of the bound {{{?property1}}}.  
+
+{{{
+ OPTIONAL 
+      {
+      ?R3 ?property2 ?resource2.
+      FILTER(?R3 = ?resource1).
+      }
+ FILTER(!BOUND(?R3))
+}}}
+is a filter which excludes pre-existing inverse triples.  This ensures that only new triples will be constructed.
+
+= Performing the query =
