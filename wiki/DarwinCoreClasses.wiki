@@ -75,6 +75,7 @@ used in the assessment to make the determination. The dwc:identificationReferenc
 (Modified from [http://code.google.com/p/darwin-sw/wiki/ClassTaxon Darwin-SW wiki page ClassTaxon].)
 
 == What is a Taxon? ==
+Note added 2013-10-25 by Steve Baskauf: Since this page was originally made, there was a discussion thread about Taxon Concepts and Taxon Name Uses (TNUs) [http://code.google.com/p/tdwg-rdf/wiki/TCSthread here].  As a result, the diagram [http://code.google.com/p/tdwg-rdf/wiki/TCSBasedTaxon here] was created.  The apparent consensus reached in the discussion thread informed the document [http://code.google.com/p/tdwg-rdf/wiki/TaxonInRDF Describing Taxon Concepts as RDF] which is an ancillary document related to the proposed Darwin Core RDF Guide, although not included as part of the standard itself.
 
 A taxon is a unit of biodiversity (Hyam and Kennedy, 2006) e.g. species, genus, family, etc.  However, taxonomists consider a particular taxon to be defined not only by a name, but also by an understanding of what organisms should be included in the taxon under that name.  Taxa can be referenced in varying degrees of detail:  
  # *Nominal Taxon Concept* (a.k.a."nominal taxon" and "nominal concept") - reference is made to a taxon name but no information is available about how the user intends for that name to be applied.  Such instances could be referenced by "placeholder" Taxon instances which contained with no nameAccordingTo, and no other metadata besides the scientificName.^1^ ^2^
