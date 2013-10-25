@@ -14,7 +14,7 @@ The following graph will be used in the example:
 
 http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse-family-relationships.png
 
-The RDF can be viewed as RDF/XML by [http://code.google.com/p/tdwg-rdf/source/browse/trunk/example/inverse.rdf clicking here] or downloaded by [http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse.rdf saving this link].  
+The RDF can be viewed as RDF/XML by [http://code.google.com/p/tdwg-rdf/source/browse/trunk/example/inverse.rdf clicking here] or downloaded by [http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse.rdf saving this link].  It can be viewed as RDF/Turtle by [http://code.google.com/p/tdwg-rdf/source/browse/trunk/example/inverse.ttl clicking here] or downloaded by [http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse.ttl saving this link].
 
 =The query=
 
