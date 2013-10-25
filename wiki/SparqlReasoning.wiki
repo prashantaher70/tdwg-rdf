@@ -88,6 +88,7 @@ is a filter which excludes pre-existing inverse triples.  This ensures that only
 The result can be translated to RDF/Turtle using software such as rdfEditor (listed in the [http://code.google.com/p/tdwg-rdf/wiki/Beginners#0.3.5._Software_tools Beginner's Guide to RDF]).  It looks like this (cleaned up):
 {{{
 @prefix local: <http://bioimages.vanderbilt.edu/rdf/local#>.
+@prefix ns: <http://fake.org/>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 
 ns:jessie
