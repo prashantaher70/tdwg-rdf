@@ -18,12 +18,16 @@ The introductory paragraph of http://rs.tdwg.org/dwc/terms/history/index.htm pro
 The public review of the current standard began in July 2009 and the discussion associated with and subsequent to that review can be viewed at http://lists.tdwg.org/pipermail/tdwg-content/.  
 
 = The dcterms:Location class=
+<Note added 2013-10-25: In the discussion which led up to the creation of the Darwin Core RDF Guide, it was felt that it was desirable to use the more well-known Dublin Core classes rather than Darwin Core-defined classes.  Because of this, the RDF Guide specifies that dcmitype:Event (http://purl.org/dc/dcmitype/Event) and dcterms:Location (http://purl.org/dc/terms/Location) be included in the Darwin Core type vocabulary and used for typing resources rather than the Darwin Core-defined analogues dwc:Event (http://rs.tdwg.org/dwc/terms/Event) and dwctype:Location (http://rs.tdwg.org/dwc/dwctype/Location).>
+
 Strictly speaking, Darwin Core does not define a location class because it simply adopts the corresponding Dublin Core class http://purl.org/dc/terms/Location .  However, the Darwin Core type vocabulary does define a term dwctype:Location (http://rs.tdwg.org/dwc/dwctype/Location) which does not have any formal relationship to dcterms:Location .  
 
 It was suggested at the iDigBio meeting in March 2012 that Darwin Core should have a separate class for geolocation, since any particular dcterms:Location instance may have multiple geolocation instances.  If this were done, some terms which are currently listed under the dcterms:Location class would be moved to the new class.  However, there has not yet been any official proposal to make such a change.
 
 = The dwc:Event class =
 (Modified from [http://code.google.com/p/darwin-sw/wiki/ClassEvent Darwin-SW wiki page ClassEvent].)
+
+<Note added 2013-10-25: In the discussion which led up to the creation of the Darwin Core RDF Guide, it was felt that it was desirable to use the more well-known Dublin Core classes rather than Darwin Core-defined classes.  Because of this, the RDF Guide specifies that dcmitype:Event (http://purl.org/dc/dcmitype/Event) and dcterms:Location (http://purl.org/dc/terms/Location) be included in the Darwin Core type vocabulary and used for typing resources rather than the Darwin Core-defined analogues dwc:Event (http://rs.tdwg.org/dwc/terms/Event) and dwctype:Location (http://rs.tdwg.org/dwc/dwctype/Location).>
 
 Although it is possible to assign separate space/time coordinates (i.e. time, latitude, and longitude) to each Occurrence, some users may prefer to group multiple Occurrences within a single Event.^1^  Likewise, several Events can occur at one defined Location at different times.  Thus the Event class functions primarily as a node to connect one or  more Occurrences to an Event, and one or more Events at a Location.^2^  
 
@@ -75,7 +79,7 @@ used in the assessment to make the determination. The dwc:identificationReferenc
 (Modified from [http://code.google.com/p/darwin-sw/wiki/ClassTaxon Darwin-SW wiki page ClassTaxon].)
 
 == What is a Taxon? ==
-Note added 2013-10-25 by Steve Baskauf: Since this page was originally made, there was a discussion thread about Taxon Concepts and Taxon Name Uses (TNUs) [http://code.google.com/p/tdwg-rdf/wiki/TCSthread here].  As a result, the diagram [http://code.google.com/p/tdwg-rdf/wiki/TCSBasedTaxon here] was created.  The apparent consensus reached in the discussion thread informed the document [http://code.google.com/p/tdwg-rdf/wiki/TaxonInRDF Describing Taxon Concepts as RDF] which is an ancillary document related to the proposed Darwin Core RDF Guide, although not included as part of the standard itself.
+,Note added 2013-10-25 by Steve Baskauf: Since this page was originally made, there was a discussion thread about Taxon Concepts and Taxon Name Uses (TNUs) [http://code.google.com/p/tdwg-rdf/wiki/TCSthread here].  As a result, the diagram [http://code.google.com/p/tdwg-rdf/wiki/TCSBasedTaxon here] was created.  The apparent consensus reached in the discussion thread informed the document [http://code.google.com/p/tdwg-rdf/wiki/TaxonInRDF Describing Taxon Concepts as RDF] which is an ancillary document related to the proposed Darwin Core RDF Guide, although not included as part of the standard itself..
 
 A taxon is a unit of biodiversity (Hyam and Kennedy, 2006) e.g. species, genus, family, etc.  However, taxonomists consider a particular taxon to be defined not only by a name, but also by an understanding of what organisms should be included in the taxon under that name.  Taxa can be referenced in varying degrees of detail:  
  # *Nominal Taxon Concept* (a.k.a."nominal taxon" and "nominal concept") - reference is made to a taxon name but no information is available about how the user intends for that name to be applied.  Such instances could be referenced by "placeholder" Taxon instances which contained with no nameAccordingTo, and no other metadata besides the scientificName.^1^ ^2^
