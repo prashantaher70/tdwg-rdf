@@ -77,3 +77,26 @@ constructs a triple where the two resources have their subject and object positi
 is a filter which excludes pre-existing inverse triples.  This ensures that only new triples will be constructed.
 
 = Performing the query =
+  # Navigate to the TDWG RDF Task Group SPARQL sandbox: http://tdwg-rdf.net/store2/ The graph to which the query is restricted should already be loaded into the triplestore unless somebody has deleted it.
+  # Copy the full query from its listing above and paste it into the "SPARQL query with form" box.
+  # Set RDF Inference to "No"
+  # Click on the "Execute" button. In most browsers, the result will appear as RDF/XML.
+  # To return to the query form, use the back button of the browser.
+
+= What does the result mean?=
+
+The result can be translated to RDF/Turtle using software such as rdfEditor (listed in the [http://code.google.com/p/tdwg-rdf/wiki/Beginners#0.3.5._Software_tools Beginner's Guide to RDF]).  It looks like this (cleaned up):
+{{{
+@prefix local: <http://bioimages.vanderbilt.edu/rdf/local#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+<http://fake.org/jessie>
+     local:hasParent <http://fake.org/carol>.
+     
+<http://fake.org/carmen>
+     local:hasParent <http://fake.org/steve>.
+     
+<http://fake.org/steve>
+     local:hasChild <http://fake.org/jessie>.
+}}}
+By comparing this with the second diagram above, you can see that it provides triples that correspond to the three missing relationships.
