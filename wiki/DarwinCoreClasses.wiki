@@ -2,6 +2,11 @@
 
 Prepared 2012-04-13 by Steve Baskauf (steve.baskauf@vanderbilt.edu)
 
+*Table of Contents:*
+
+<wiki:toc max_depth="2" />
+
+=Introduction=
 This discussion summary does not include the class dwc:GeologicalContext, which has not been the subject of much discussion, nor does it include the Auxiliary Term classes (which have been the subject of some discussion that has not been summarized).
 
 A general introduction to Darwin Core is at http://rs.tdwg.org/dwc/index.htm .  An authoritative guide to the classes of Darwin Core is at http://rs.tdwg.org/dwc/terms/index.htm .  That page also groups property terms under the classes (although there are no formally defined domain relationships between property and class terms.  The abstract model which underlies Darwin Core is described at http://rs.tdwg.org/dwc/terms/guides/xml/index.htm#abstractmodel .
