@@ -1,0 +1,3 @@
+#summary Example of inferring inverse relationships.
+
+= Introduction =
