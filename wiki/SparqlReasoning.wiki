@@ -4,7 +4,7 @@
 In this scenario, we model two inverse relationships: hasParent and hasChild.  The following namespaces are used, although they could really be anything:
 {{{
 PREFIX local: <http://bioimages.vanderbilt.edu/rdf/local#>
-PREFIX ns: <http://fake.org/>
+PREFIX test: <http://fake.org/>
 }}}
 The relationships can be represented graphically like this:
 http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse-family-properties.png
