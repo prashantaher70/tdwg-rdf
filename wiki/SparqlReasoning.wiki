@@ -1,3 +1,17 @@
 #summary Example of inferring inverse relationships.
 
-= Introduction =
+= Scenario =
+In this scenario, we model two inverse relationships: hasParent and hasChild.  The following namespaces are used, although they could really be anything:
+{{{
+PREFIX local: <http://bioimages.vanderbilt.edu/rdf/local#>
+PREFIX ns: <http://fake.org/>
+}}}
+The relationships can be represented graphically like this:
+http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse-family-properties.png
+The two relationships are declared to be inversely related using the {{{owl:inverseOf}}} property.  Normally, only one of the {{{owl:inverseOf}}} declarations would be required since the second could be inferred from the first.  But to simplify the query, both have been asserted explicitly.
+
+The following graph will be used in the example:
+
+http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse-family-relationships.png
+
+The RDF can be viewed as RDF/XML by [http://code.google.com/p/tdwg-rdf/source/browse/trunk/example/inverse.rdf clicking here] or downloaded by [http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse.rdf clicking here].  
