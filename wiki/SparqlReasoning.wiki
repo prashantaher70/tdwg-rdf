@@ -4,7 +4,7 @@
 In this scenario, we model two inverse relationships: hasParent and hasChild.  The following namespaces are used, although they could really be anything:
 {{{
 PREFIX local: <http://bioimages.vanderbilt.edu/rdf/local#>
-PREFIX test: <http://fake.org/>
+PREFIX ns: <http://fake.org/>
 }}}
 The relationships can be represented graphically like this:
 http://tdwg-rdf.googlecode.com/svn/trunk/example/inverse-family-properties.png
@@ -90,13 +90,13 @@ The result can be translated to RDF/Turtle using software such as rdfEditor (lis
 @prefix local: <http://bioimages.vanderbilt.edu/rdf/local#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 
-<http://fake.org/jessie>
-     local:hasParent <http://fake.org/carol>.
+ns:jessie
+     local:hasParent ns:carol.
      
-<http://fake.org/carmen>
-     local:hasParent <http://fake.org/steve>.
+ns:carmen
+     local:hasParent ns:steve.
      
-<http://fake.org/steve>
-     local:hasChild <http://fake.org/jessie>.
+ns:steve
+     local:hasChild ns:jessie.
 }}}
 By comparing this with the second diagram above, you can see that it provides triples that correspond to the three missing relationships.
