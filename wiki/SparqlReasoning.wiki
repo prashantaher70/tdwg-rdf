@@ -1,5 +1,9 @@
 #summary Example of inferring inverse relationships.
 
+*Contents*
+
+<wiki:toc max_depth="4" />
+
 = Scenario =
 In this scenario, we model two inverse relationships: hasParent and hasChild.  The following namespaces are used, although they could really be anything:
 {{{
