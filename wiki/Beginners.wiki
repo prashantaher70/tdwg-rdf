@@ -70,7 +70,7 @@ The [http://pedantic-web.org/ Pedantic Web] group is concerned with the quality 
 
 Information Standards Quarterly had a special issue (Vol. 24, No. 2/3, [http://dx.doi.org/10.3789/isqv24n2-3.2012 doi:10.3789/isqv24n2-3.2012] devoted to Linked Data in Libraries, Archives, and Museums. 
 
-A PowerPoint presentation for and RDF Primer session at TDWG 2013 is [http://tdwg-rdf.googlecode.com/svn/trunk/file/Baskauf_RdfPrimer.pdf here].  The background video for the session is [http://youtu.be/XAGifYBiXMY here].
+A PowerPoint presentation for an RDF Primer session at TDWG 2013 is [http://tdwg-rdf.googlecode.com/svn/trunk/file/Baskauf_RdfPrimer.pdf here].  The background video for the session is [http://youtu.be/XAGifYBiXMY here].
 
 ===0.3.1. Related to Uniform Resource Identifier (URI) and GUID/Persistent Identifier===
 [http://tools.ietf.org/html/rfc3986 RFC 3986. Uniform Resource Identifier (URI): Generic Syntax]  ([http://tools.ietf.org/html/rfc3986#section-1.2.2 section 1.2.2. defining "dereference", "resolution", and "representation"])
