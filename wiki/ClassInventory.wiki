@@ -31,6 +31,8 @@ RightsStatement
 SizeOrDuration  subclass of MediaTypeOrExtent
 Standard
 }}}
+We should include Dublin Core and Darwin Core type vocabularies here.
+
 ====1.2.  Darwin Core classes [#2_Darwin_Core_Quick_Reference_Guide (2)]  ({{{dwc: = http://rs.tdwg.org/dwc/terms/}}})====
 {{{
 Occurrence
