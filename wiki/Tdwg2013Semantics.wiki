@@ -1,6 +1,42 @@
 #summary Links to talks in the Semantics of Biodiversity Symposium series
 
-Semantics for Biodiversity 0 - Primer on Semantic Technologies
-Sala dei Continenti
-04:00 PM - 05:00 PM 448. PRIMER ON SEMANTIC TECHNOLOGIES. Steve Baskauf, John
+==Primer on Semantic Technologies==
+
+04:00 PM - 05:00 PM 448. [http://www.tdwg.org/fileadmin/2013conference/slides/Baskauf_RdfPrimer.pdf PRIMER ON SEMANTIC TECHNOLOGIES]. Steve Baskauf, John
 Deck, Mark Schildhauer
+
+==Technologies, Reasoning & Annotation==
+Organizers: Benjamin Adams, John Deck, Mark Schildhauer
+
+02:32 PM - 02:41 PM 493. [http://www.tdwg.org/fileadmin/2013conference/slides/baskauf_DwcRdfGuide.pdf AN RDF GUIDE FOR THE TDWG DARWIN CORE
+STANDARD]. Steven Baskauf, John Wieczorek, John Deck, Campbell
+Webb, Mark Schildhauer
+
+02:41 PM - 02:50 PM 485. BUILDING A BIODIVERSITY INFORMATION NETWORK USING
+PERSISTENT, RESOLVABLE IDENTIFIERS. John Deck, Robert
+Guralnick, John Kunze
+
+02:50 PM - 02:59 PM 477. SEMANTIC APPROACH FOR COLLECTION DATA VIA OPEN
+DATA WEBS INSTEAD OF CLOSED SYSTEMS. Falko Glöckler,
+Alexander Kroupa, Anton Güntsch, Gregor Hagedorn
+
+02:59 PM - 03:08 PM 474. THE BISCICOL TRIPLIFIER: BRINGING LEGACY
+BIODIVERSITY DATA TO THE SEMANTIC WEB. Brian Stucky,
+Robert Guralnick, John Deck, Tom Conlin
+
+03:08 PM - 03:17 PM 480. THE INGEST AND USES OF SPECIMEN LABEL DATA INTO
+SEMANTIC KNOWLEDGE STORES. Bryan Heidorn, Steven Chong
+
+03:17 PM - 03:26 PM 481. SEMANTECO ANNOTATOR FOR LINKED DATA GENERATION
+AND GENERALIZED SEMANTIC MAPPING. Patrice Seyed, Katherine
+Chastain, Brendan Ashby, Yue Liu, Timothy Lebo, Evan Patton,
+Deborah McGuinness
+
+03:35 PM - 03:44 PM 335. SEMANTIC MATCHING OF INTERESTS TO ANNOTATIONS
+WITH SPARQL QUERIES ON REASONED TRIPLES. Paul J Morris,
+James Hanken, Maureen Kelly, David Lowery, Bertram Ludäscher,
+James A. Macklin, Robert A Morris, Tianhong Song
+
+03:44 PM - 03:53 PM 486. A FACETED SEARCH SYSTEM FOR FACILITATING THE
+UNDERSTANDING AND THE PREDICTION OF ECOSYSTEM
+CHANGES. Marie-Angélique Laporte, Eric Garnier, Isabelle Mougenot
