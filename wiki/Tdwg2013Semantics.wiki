@@ -23,7 +23,9 @@ Alexander Kroupa, Anton Güntsch, Gregor Hagedorn
 BIODIVERSITY DATA TO THE SEMANTIC WEB. Brian Stucky,
 Robert Guralnick, John Deck, Tom Conlin
 
-03:08 PM - 03:17 PM 480. [http://www.tdwg.org/fileadmin/2013conference/slides/Heidorn-Chong_SemanticKnowledgeStores4.pptx THE INGEST AND USES OF SPECIMEN LABEL DATA INTO SEMANTIC KNOWLEDGE STORES}. Bryan Heidorn, Steven Chong
+03:08 PM - 03:17 PM 480. 
+[http://www.tdwg.org/fileadmin/2013conference/slides/Heidorn-Chong_SemanticKnowledgeStores4.pptx THE INGEST AND USES OF SPECIMEN LABEL DATA INTO SEMANTIC KNOWLEDGE STORES}
+. Bryan Heidorn, Steven Chong
 
 03:17 PM - 03:26 PM 481. SEMANTECO ANNOTATOR FOR LINKED DATA GENERATION
 AND GENERALIZED SEMANTIC MAPPING. Patrice Seyed, Katherine
