@@ -38,3 +38,85 @@ James A. Macklin, Robert A Morris, Tianhong Song
 03:44 PM - 03:53 PM 486. A FACETED SEARCH SYSTEM FOR FACILITATING THE
 UNDERSTANDING AND THE PREDICTION OF ECOSYSTEM
 CHANGES. Marie-Angélique Laporte, Eric Garnier, Isabelle Mougenot
+
+==Formal Models & Ontologies== Organizers: John Deck, Nico Franz, Mark Schildhauer, Ramona L. Walls
+
+09:02 AM - 09:11 AM 497. USING DARWIN CORE AS A MODEL: AN ONTOLOGICALLY
+MINIMALIST APPROACH TO PUBLISHING OCCURRENCE DATA IN
+RDF. Joel Sachs
+
+09:11 AM - 09:20 AM 496. USING DARWIN-SW TO ANSWER QUESTIONS ABOUT
+BIODIVERSITY RESOURCES. Steven Baskauf, Campbell Webb
+
+09:20 AM - 09:33 AM 501. LINKING BIODIVERSITY DATA WITH THE BIOLOGICAL
+COLLECTIONS ONTOLOGY. Ramona Walls, John Deck, Robert
+Guralnick, John Wieczorek
+
+09:33 AM - 09:39 AM 504. A NEW METADATA CHECKLIST FOR DESCRIBING SPECIES
+INVENTORY COMPLETENESS. Rob Guralnick, Ramona Walls,
+Walter Jetz
+
+09:39 AM - 09:52 AM 491. IMPLEMENTING A SEMANTIC MEDIATOR TO INTEGRATE
+FLOWER-VISITING RECORDS FROM SOUTH AFRICAN NATURAL
+HISTORY MUSEUMS. Willem Coetzer, Deshendran Moodley, Aurona
+Gerber
+
+09:52 AM - 10:03 AM 471. A TOOLKIT FOR RECONCILING MULTIPLE TAXONOMIC
+PERSPECTIVES: EULER/X AND THE PERELLESCHUS USE
+CASE. Nico Franz, Mingmin Chen, Shizhuo Yu, Shawn Bowers,
+Bertram Ludäscher
+
+10:03 AM - 10:11 AM 472. USING ANSWER SET PROGRAMMING TO SIMULATE THE
+INTERPLAY OF TAXONOMIC AND NOMENCLATURAL
+
+==Interoperability with Genomic & Environmental Semantics==
+Organizers: John Deck, Robert P. Guralnick, Mark Schildhauer
+
+11:02 AM - 11:11 AM 456. LINKING DATA FOR REAL: HOW AND WHY THE CURRENT
+SITUATION STINKS BIG TIME. Rob Guralnick, Tom Conlin, Nico
+Cellinese, John Deck
+
+11:11 AM - 11:20 AM 465. THE EARTH MICROBIOME PROJECT: PLANETARY-SCALE
+SYSTEMS ECOLOGY.. Sean Gibbons, Jack Gilbert, Rob Knight,
+Janet Jansson, Jai Rideout, Antonio Gonzales, Emmanuel Prestat, J
+Gregory Caporaso
+
+11:20 AM - 11:29 AM 466. IDENTIFICATION OF ENVIRONMENT ONTOLOGY TERMS IN
+TEXT AND ANNOTATION OF BIODIVERSITY (ENVIRONMENTSEOL)
+AND GENOMICS (SEQENV) INFORMATION. Evangelos Pafilis,
+Sune Frankild, Umer Ijaz, Lucia Fanini, Sarah Faulwetter, Christina
+Pavloudi, Julia Schnetzer, Aikaterini Vasileiadou, Christos Arvanitidis,
+Christopher Quince, Lars Juhl Jensen
+
+11:29 AM - 11:36 AM 461. SEMANTIC TOOLS FOR AGGREGATION OF
+MORPHOLOGICAL CHARACTERS ACROSS STUDIES. James
+Balhoff, Alex Dececchi, Paula Mabee, Hilmar Lapp
+
+11:36 AM - 11:43 AM 462. COLLABORATIVELY CREATING COMPUTABLE SPECIES
+DESCRIPTIONS. Nathan Wilson
+
+11:52 AM - 12:01 PM 464. PROTOTYPING A BOTANICAL KNOWLEDGE PORTAL. James
+Macklin, Joel Sachs, Hong Cui, Heather Cole
+23
+
+12:01 PM - 12:10 PM 467. THE CROP ONTOLOGY: TOWARDS THE SEMANTIC
+INTEGRATION OF OPEN PLANT TRAIT DATA. Elizabeth Arnaud,
+Luca Matteis, Pierre-Yves Chibon, Milko Skofic, Pankaj Jaiswal, Laurel
+Cooper, Rosemary Shrestha, Mark Wilkinson, Richard Bruskiewich,
+Graham McLaren
+
+12:10 PM - 12:19 PM 463. HIERARCHICAL SEARCH IN SEMANTECO SUPPORTING
+VARIED ONTOLOGY DESIGN PATTERNS. Patrice Seyed, Evan
+Patton, Deborah McGuinness
+
+12:19 PM - 12:28 PM 459. USER-BASED SUB-ONTOLOGY EXTRACTION – A MEANS TO
+SUPPORT SEMANTIC ANNOTATION OF BIODIVERSITY
+DATA. Dennis Heimann, Birgitta König-Ries
+
+CHANGE. Nico Franz, Joohyung Lee
+10:11 AM - 10:24 AM 411. TEXT MINING FOR BIODIVERSITY ONTOLOGIES. Mark
+Schildhauer, Benjamin Adams
+
+10:24 AM - 10:30 AM 503. ONTOLOGY EXTRACTION FROM UNSTRUCTURED TEXT IN
+THE BIODIVERSITY DOMAIN. Daniele Cristina Palazzi Krempser,
+Ana Maria Moura, Maria Luiza Machado Campos, Luiz Gadelha
