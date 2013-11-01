@@ -39,7 +39,8 @@ James A. Macklin, Robert A Morris, Tianhong Song
 UNDERSTANDING AND THE PREDICTION OF ECOSYSTEM
 CHANGES. Marie-Angélique Laporte, Eric Garnier, Isabelle Mougenot
 
-==Formal Models & Ontologies== Organizers: John Deck, Nico Franz, Mark Schildhauer, Ramona L. Walls
+==Formal Models and Ontologies== 
+Organizers: John Deck, Nico Franz, Mark Schildhauer, Ramona L. Walls
 
 09:02 AM - 09:11 AM 497. USING DARWIN CORE AS A MODEL: AN ONTOLOGICALLY
 MINIMALIST APPROACH TO PUBLISHING OCCURRENCE DATA IN
@@ -67,7 +68,14 @@ CASE. Nico Franz, Mingmin Chen, Shizhuo Yu, Shawn Bowers,
 Bertram Ludäscher
 
 10:03 AM - 10:11 AM 472. USING ANSWER SET PROGRAMMING TO SIMULATE THE
-INTERPLAY OF TAXONOMIC AND NOMENCLATURAL
+INTERPLAY OF TAXONOMIC AND NOMENCLATURAL Nico Franz, Joohyung Lee
+
+10:11 AM - 10:24 AM 411. TEXT MINING FOR BIODIVERSITY ONTOLOGIES. Mark
+Schildhauer, Benjamin Adams
+
+10:24 AM - 10:30 AM 503. ONTOLOGY EXTRACTION FROM UNSTRUCTURED TEXT IN
+THE BIODIVERSITY DOMAIN. Daniele Cristina Palazzi Krempser,
+Ana Maria Moura, Maria Luiza Machado Campos, Luiz Gadelha
 
 ==Interoperability with Genomic & Environmental Semantics==
 Organizers: John Deck, Robert P. Guralnick, Mark Schildhauer
