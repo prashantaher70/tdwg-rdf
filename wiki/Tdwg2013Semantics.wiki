@@ -38,9 +38,7 @@ WITH SPARQL QUERIES ON REASONED TRIPLES. Paul J Morris,
 James Hanken, Maureen Kelly, David Lowery, Bertram Ludäscher,
 James A. Macklin, Robert A Morris, Tianhong Song
 
-03:44 PM - 03:53 PM 486. A FACETED SEARCH SYSTEM FOR FACILITATING THE
-UNDERSTANDING AND THE PREDICTION OF ECOSYSTEM
-CHANGES. Marie-Angélique Laporte, Eric Garnier, Isabelle Mougenot
+03:44 PM - 03:53 PM 486. [http://www.tdwg.org/fileadmin/2013conference/slides/Laporte_facetedSearchSystem.pdf A FACETED SEARCH SYSTEM FOR FACILITATING THE UNDERSTANDING AND THE PREDICTION OF ECOSYSTEM CHANGES]. Marie-Angélique Laporte, Eric Garnier, Isabelle Mougenot
 
 ==Formal Models and Ontologies== 
 1 November 2013
@@ -61,9 +59,7 @@ Guralnick, John Wieczorek
 09:33 AM - 09:39 AM 504. A NEW METADATA CHECKLIST FOR DESCRIBING SPECIES INVENTORY COMPLETENESS. Rob Guralnick, Ramona Walls,
 Walter Jetz
 
-09:39 AM - 09:52 AM 491. IMPLEMENTING A SEMANTIC MEDIATOR TO INTEGRATE
-FLOWER-VISITING RECORDS FROM SOUTH AFRICAN NATURAL HISTORY MUSEUMS. Willem Coetzer, Deshendran Moodley, Aurona
-Gerber
+09:39 AM - 09:52 AM 491. [http://www.tdwg.org/fileadmin/2013conference/slides/Coetzer_SemanticMediation_FlowerVisiting.pptx IMPLEMENTING A SEMANTIC MEDIATOR TO INTEGRATE FLOWER-VISITING RECORDS FROM SOUTH AFRICAN NATURAL HISTORY MUSEUMS]. Willem Coetzer, Deshendran Moodley, Aurona Gerber
 
 09:52 AM - 10:03 AM 471. [http://www.tdwg.org/fileadmin/2013conference/slides/FranzEtAl-EulerToolkitReconcilingMultipleTaxonomiesPerelleschus-TDWG2013.pptx A TOOLKIT FOR RECONCILING MULTIPLE TAXONOMIC PERSPECTIVES: EULER/X AND THE PERELLESCHUS USE CASE]. Nico Franz, Mingmin Chen, Shizhuo Yu, Shawn Bowers, Bertram Ludäscher
 
@@ -120,9 +116,7 @@ Graham McLaren
 VARIED ONTOLOGY DESIGN PATTERNS. Patrice Seyed, Evan
 Patton, Deborah McGuinness
 
-12:19 PM - 12:28 PM 459. USER-BASED SUB-ONTOLOGY EXTRACTION – A MEANS TO
-SUPPORT SEMANTIC ANNOTATION OF BIODIVERSITY
-DATA. Dennis Heimann, Birgitta König-Ries
+12:19 PM - 12:28 PM 459. [http://www.tdwg.org/fileadmin/2013conference/slides/Heimann_Subontologies.pdf USER-BASED SUB-ONTOLOGY EXTRACTION – A MEANS TO SUPPORT SEMANTIC ANNOTATION OF BIODIVERSITY DATA]. Dennis Heimann, Birgitta König-Ries
 
 CHANGE. Nico Franz, Joohyung Lee
 10:11 AM - 10:24 AM 411. TEXT MINING FOR BIODIVERSITY ONTOLOGIES. Mark
