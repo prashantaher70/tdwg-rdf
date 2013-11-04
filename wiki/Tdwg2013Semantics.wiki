@@ -71,8 +71,8 @@ Walter Jetz
 
 09:52 AM - 10:03 AM 471. [http://www.tdwg.org/fileadmin/2013conference/slides/FranzEtAl-EulerToolkitReconcilingMultipleTaxonomiesPerelleschus-TDWG2013.pptx A TOOLKIT FOR RECONCILING MULTIPLE TAXONOMIC PERSPECTIVES: EULER/X AND THE PERELLESCHUS USE CASE]. Nico Franz, Mingmin Chen, Shizhuo Yu, Shawn Bowers, Bertram Ludäscher
 
-10:03 AM - 10:11 AM 472. USING ANSWER SET PROGRAMMING TO SIMULATE THE
-INTERPLAY OF TAXONOMIC AND NOMENCLATURAL Nico Franz, Joohyung Lee
+10:03 AM - 10:11 AM 472. [http://www.slideshare.net/taxonbytes/franz-et-al-using-asp-to-simulate-the-interplay-of-taxonomic-and-nomenclatural-change USING ANSWER SET PROGRAMMING TO SIMULATE THE
+INTERPLAY OF TAXONOMIC AND NOMENCLATURAL CHANGE] Nico Franz, Joohyung Lee, Chao Zhang
 
 10:11 AM - 10:24 AM 411. TEXT MINING FOR BIODIVERSITY ONTOLOGIES. Mark
 Schildhauer, Benjamin Adams
