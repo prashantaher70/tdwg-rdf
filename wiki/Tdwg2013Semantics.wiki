@@ -40,6 +40,14 @@ James A. Macklin, Robert A Morris, Tianhong Song
 
 03:44 PM - 03:53 PM 486. [http://www.tdwg.org/fileadmin/2013conference/slides/Laporte_facetedSearchSystem.pdf A FACETED SEARCH SYSTEM FOR FACILITATING THE UNDERSTANDING AND THE PREDICTION OF ECOSYSTEM CHANGES]. Marie-Angélique Laporte, Eric Garnier, Isabelle Mougenot
 
+== Semantic Tools and Ontologies proposed new Interest Group==
+30 October 2013
+
+Organizers: Luca Matteis, Marie-Angelique Laporte, Elizabeth Armaud
+
+[http://www.tdwg.org/fileadmin/2013conference/slides/Matteis%26Laporte_DiscussionGroupForSemanticStandarsLOD.pptx Powerpoint with introduction and discussion points]
+
+
 ==Formal Models and Ontologies== 
 1 November 2013
 
