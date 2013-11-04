@@ -1,11 +1,14 @@
 #summary Links to talks in the Semantics of Biodiversity Symposium series
 
 ==Primer on Semantic Technologies==
+29 October 2013
 
 04:00 PM - 05:00 PM 448. [http://www.tdwg.org/fileadmin/2013conference/slides/Baskauf_RdfPrimer.pdf PRIMER ON SEMANTIC TECHNOLOGIES]. Steve Baskauf, John
 Deck, Mark Schildhauer
 
 ==Technologies, Reasoning & Annotation==
+30 October 2013
+
 Organizers: Benjamin Adams, John Deck, Mark Schildhauer
 
 02:32 PM - 02:41 PM 493. [http://www.tdwg.org/fileadmin/2013conference/slides/baskauf_DwcRdfGuide.pdf AN RDF GUIDE FOR THE TDWG DARWIN CORE STANDARD]. Steven Baskauf, John Wieczorek, John Deck, Campbell
@@ -40,6 +43,8 @@ UNDERSTANDING AND THE PREDICTION OF ECOSYSTEM
 CHANGES. Marie-Angélique Laporte, Eric Garnier, Isabelle Mougenot
 
 ==Formal Models and Ontologies== 
+1 November 2013
+
 Organizers: John Deck, Nico Franz, Mark Schildhauer, Ramona L. Walls
 
 09:02 AM - 09:11 AM 497. USING DARWIN CORE AS A MODEL: AN ONTOLOGICALLY
@@ -78,6 +83,8 @@ THE BIODIVERSITY DOMAIN. Daniele Cristina Palazzi Krempser,
 Ana Maria Moura, Maria Luiza Machado Campos, Luiz Gadelha
 
 ==Interoperability with Genomic & Environmental Semantics==
+1 November 2013
+
 Organizers: John Deck, Robert P. Guralnick, Mark Schildhauer
 
 11:02 AM - 11:11 AM 456. LINKING DATA FOR REAL: HOW AND WHY THE CURRENT
@@ -96,8 +103,7 @@ Sune Frankild, Umer Ijaz, Lucia Fanini, Sarah Faulwetter, Christina
 Pavloudi, Julia Schnetzer, Aikaterini Vasileiadou, Christos Arvanitidis,
 Christopher Quince, Lars Juhl Jensen
 
-11:29 AM - 11:36 AM 461. SEMANTIC TOOLS FOR AGGREGATION OF
-MORPHOLOGICAL CHARACTERS ACROSS STUDIES. James
+11:29 AM - 11:36 AM 461. [http://www.slideshare.net/balhoff/semantic-tools-for-aggregation-of-morphological-characters-across-studies SEMANTIC TOOLS FOR AGGREGATION OF MORPHOLOGICAL CHARACTERS ACROSS STUDIES]. James
 Balhoff, Alex Dececchi, Paula Mabee, Hilmar Lapp
 
 Don't have talk title. Cyndi Parr
