@@ -99,8 +99,7 @@ Balhoff, Alex Dececchi, Paula Mabee, Hilmar Lapp
 
 Don't have talk title. Cyndi Parr
 
-11:36 AM - 11:43 AM 462. COLLABORATIVELY CREATING COMPUTABLE SPECIES
-DESCRIPTIONS. Nathan Wilson
+11:36 AM - 11:43 AM 462. [http://www.tdwg.org/fileadmin/2013conference/slides/Wilson-Computable-Descriptions.pdf COLLABORATIVELY CREATING COMPUTABLE SPECIES DESCRIPTIONS]. Nathan Wilson
 
 11:52 AM - 12:01 PM 464. PROTOTYPING A BOTANICAL KNOWLEDGE PORTAL. James
 Macklin, Joel Sachs, Hong Cui, Heather Cole
