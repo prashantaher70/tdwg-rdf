@@ -33,10 +33,7 @@ AND GENERALIZED SEMANTIC MAPPING. Patrice Seyed, Katherine
 Chastain, Brendan Ashby, Yue Liu, Timothy Lebo, Evan Patton,
 Deborah McGuinness
 
-03:35 PM - 03:44 PM 335. SEMANTIC MATCHING OF INTERESTS TO ANNOTATIONS
-WITH SPARQL QUERIES ON REASONED TRIPLES. Paul J Morris,
-James Hanken, Maureen Kelly, David Lowery, Bertram Ludäscher,
-James A. Macklin, Robert A Morris, Tianhong Song
+03:35 PM - 03:44 PM 335. [http://www.tdwg.org/fileadmin/2013conference/slides/Morris_SemanticMatchingInterestsAnnotations.pdf SEMANTIC MATCHING OF INTERESTS TO ANNOTATIONS WITH SPARQL QUERIES ON REASONED TRIPLES]. Paul J Morris, James Hanken, Maureen Kelly, David Lowery, Bertram Ludäscher, James A. Macklin, Robert A Morris, Tianhong Song
 
 03:44 PM - 03:53 PM 486. [http://www.tdwg.org/fileadmin/2013conference/slides/Laporte_facetedSearchSystem.pdf A FACETED SEARCH SYSTEM FOR FACILITATING THE UNDERSTANDING AND THE PREDICTION OF ECOSYSTEM CHANGES]. Marie-Angélique Laporte, Eric Garnier, Isabelle Mougenot
 
