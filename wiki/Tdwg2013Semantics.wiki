@@ -3,6 +3,8 @@
 ==Primer on Semantic Technologies==
 29 October 2013
 
+[http://youtu.be/XAGifYBiXMY Video introduction to RDF]
+
 04:00 PM - 05:00 PM 448. [http://www.tdwg.org/fileadmin/2013conference/slides/Baskauf_RdfPrimer.pdf PRIMER ON SEMANTIC TECHNOLOGIES]. Steve Baskauf, John
 Deck, Mark Schildhauer
 
