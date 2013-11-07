@@ -81,10 +81,7 @@ Organizers: John Deck, Robert P. Guralnick, Mark Schildhauer
 SITUATION STINKS BIG TIME. Rob Guralnick, Tom Conlin, Nico
 Cellinese, John Deck
 
-11:11 AM - 11:20 AM 465. THE EARTH MICROBIOME PROJECT: PLANETARY-SCALE
-SYSTEMS ECOLOGY.. Sean Gibbons, Jack Gilbert, Rob Knight,
-Janet Jansson, Jai Rideout, Antonio Gonzales, Emmanuel Prestat, J
-Gregory Caporaso
+11:11 AM - 11:20 AM 465. [http://www.tdwg.org/fileadmin/2013conference/slides/Gibbons_EarthMicrobiomeProject.pptx THE EARTH MICROBIOME PROJECT: PLANETARY-SCALE SYSTEMS ECOLOGY]. Sean Gibbons, Jack Gilbert, Rob Knight, Janet Jansson, Jai Rideout, Antonio Gonzales, Emmanuel Prestat, J Gregory Caporaso
 
 11:20 AM - 11:29 AM 466. IDENTIFICATION OF ENVIRONMENT ONTOLOGY TERMS IN
 TEXT AND ANNOTATION OF BIODIVERSITY (ENVIRONMENTSEOL)
