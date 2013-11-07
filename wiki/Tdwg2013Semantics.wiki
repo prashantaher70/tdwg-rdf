@@ -20,9 +20,7 @@ Webb, Mark Schildhauer
 PERSISTENT, RESOLVABLE IDENTIFIERS. John Deck, Robert
 Guralnick, John Kunze
 
-02:50 PM - 02:59 PM 477. SEMANTIC APPROACH FOR COLLECTION DATA VIA OPEN
-DATA WEBS INSTEAD OF CLOSED SYSTEMS. Falko Glöckler,
-Alexander Kroupa, Anton Güntsch, Gregor Hagedorn
+02:50 PM - 02:59 PM 477. [http://www.tdwg.org/fileadmin/2013conference/slides/Gloeckler_Semantics4CollectionData.pdf SEMANTIC APPROACH FOR COLLECTION DATA VIA OPEN DATA WEBS INSTEAD OF CLOSED SYSTEMS]. Falko Glöckler, Alexander Kroupa, Anton Güntsch, Gregor Hagedorn
 
 02:59 PM - 03:08 PM 474. THE BISCICOL TRIPLIFIER: BRINGING LEGACY
 BIODIVERSITY DATA TO THE SEMANTIC WEB. Brian Stucky,
