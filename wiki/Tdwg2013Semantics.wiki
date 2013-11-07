@@ -104,11 +104,7 @@ Don't have talk title. Cyndi Parr
 Macklin, Joel Sachs, Hong Cui, Heather Cole
 23
 
-12:01 PM - 12:10 PM 467. THE CROP ONTOLOGY: TOWARDS THE SEMANTIC
-INTEGRATION OF OPEN PLANT TRAIT DATA. Elizabeth Arnaud,
-Luca Matteis, Pierre-Yves Chibon, Milko Skofic, Pankaj Jaiswal, Laurel
-Cooper, Rosemary Shrestha, Mark Wilkinson, Richard Bruskiewich,
-Graham McLaren
+12:01 PM - 12:10 PM 467. [http://www.tdwg.org/fileadmin/2013conference/slides/Arnaud_CropOntology.ppt THE CROP ONTOLOGY: TOWARDS THE SEMANTIC INTEGRATION OF OPEN PLANT TRAIT DATA]. Elizabeth Arnaud, Luca Matteis, Pierre-Yves Chibon, Milko Skofic, Pankaj Jaiswal, Laurel Cooper, Rosemary Shrestha, Mark Wilkinson, Richard Bruskiewich, Graham McLaren
 
 12:10 PM - 12:19 PM 463. HIERARCHICAL SEARCH IN SEMANTECO SUPPORTING
 VARIED ONTOLOGY DESIGN PATTERNS. Patrice Seyed, Evan
