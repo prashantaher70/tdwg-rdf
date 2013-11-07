@@ -59,8 +59,7 @@ RDF. Joel Sachs
 COLLECTIONS ONTOLOGY. Ramona Walls, John Deck, Robert
 Guralnick, John Wieczorek
 
-09:33 AM - 09:39 AM 504. A NEW METADATA CHECKLIST FOR DESCRIBING SPECIES INVENTORY COMPLETENESS. Rob Guralnick, Ramona Walls,
-Walter Jetz
+09:33 AM - 09:39 AM 504. [http://www.tdwg.org/fileadmin/2013conference/slides/Guralnick_SpeciesInventory.pptx A NEW METADATA CHECKLIST FOR DESCRIBING SPECIES INVENTORY COMPLETENESS]. Rob Guralnick, Ramona Walls, Walter Jetz
 
 09:39 AM - 09:52 AM 491. [http://www.tdwg.org/fileadmin/2013conference/slides/Coetzer_SemanticMediation_FlowerVisiting.pptx IMPLEMENTING A SEMANTIC MEDIATOR TO INTEGRATE FLOWER-VISITING RECORDS FROM SOUTH AFRICAN NATURAL HISTORY MUSEUMS]. Willem Coetzer, Deshendran Moodley, Aurona Gerber
 
