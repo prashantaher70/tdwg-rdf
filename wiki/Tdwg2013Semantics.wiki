@@ -70,9 +70,7 @@ Guralnick, John Wieczorek
 10:11 AM - 10:24 AM 411. TEXT MINING FOR BIODIVERSITY ONTOLOGIES. Mark
 Schildhauer, Benjamin Adams
 
-10:24 AM - 10:30 AM 503. ONTOLOGY EXTRACTION FROM UNSTRUCTURED TEXT IN
-THE BIODIVERSITY DOMAIN. Daniele Cristina Palazzi Krempser,
-Ana Maria Moura, Maria Luiza Machado Campos, Luiz Gadelha
+10:24 AM - 10:30 AM 503. [http://www.tdwg.org/fileadmin/2013conference/slides/Kempser_OntologyExtractionUnstructuredText.pdf ONTOLOGY EXTRACTION FROM UNSTRUCTURED TEXT IN THE BIODIVERSITY DOMAIN]. Daniele Cristina Palazzi Krempser,Ana Maria Moura, Maria Luiza Machado Campos, Luiz Gadelha
 
 ==Interoperability with Genomic & Environmental Semantics==
 1 November 2013
