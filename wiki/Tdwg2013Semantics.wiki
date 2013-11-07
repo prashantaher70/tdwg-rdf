@@ -5,8 +5,7 @@
 
 [http://youtu.be/XAGifYBiXMY Video introduction to RDF]
 
-04:00 PM - 05:00 PM 448. [http://www.tdwg.org/fileadmin/2013conference/slides/Baskauf_RdfPrimer.pdf PRIMER ON SEMANTIC TECHNOLOGIES]. Steve Baskauf, John
-Deck, Mark Schildhauer
+04:00 PM - 05:00 PM 448. PRIMER ON SEMANTIC TECHNOLOGIES [http://www.tdwg.org/fileadmin/2013conference/slides/Baskauf_RdfPrimer.pdf part 1] [http://www.tdwg.org/fileadmin/2013conference/slides/Schildhauer_RdfPrimerII.pptx part 2]. Steve Baskauf, Mark Schildhauer
 
 ==Technologies, Reasoning & Annotation==
 30 October 2013
