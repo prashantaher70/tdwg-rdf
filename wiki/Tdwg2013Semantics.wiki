@@ -107,6 +107,4 @@ Patton, Deborah McGuinness
 
 12:19 PM - 12:28 PM 459. [http://www.tdwg.org/fileadmin/2013conference/slides/Heimann_Subontologies.pdf USER-BASED SUB-ONTOLOGY EXTRACTION – A MEANS TO SUPPORT SEMANTIC ANNOTATION OF BIODIVERSITY DATA]. Dennis Heimann, Birgitta König-Ries
 
-CHANGE. Nico Franz, Joohyung Lee
-
-SKOS-SL: PART OF THE SOLUTION OR PART OF THE PROBLEM? Bob Morris
+[http://www.tdwg.org/fileadmin/2013conference/slides/Morris_SkosXl.ppt SKOS-SL: PART OF THE SOLUTION OR PART OF THE PROBLEM?] Bob Morris
