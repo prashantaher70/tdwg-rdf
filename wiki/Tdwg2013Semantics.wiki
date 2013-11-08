@@ -21,9 +21,7 @@ Guralnick, John Kunze
 
 02:50 PM - 02:59 PM 477. [http://www.tdwg.org/fileadmin/2013conference/slides/Gloeckler_Semantics4CollectionData.pdf SEMANTIC APPROACH FOR COLLECTION DATA VIA OPEN DATA WEBS INSTEAD OF CLOSED SYSTEMS]. Falko Glöckler, Alexander Kroupa, Anton Güntsch, Gregor Hagedorn
 
-02:59 PM - 03:08 PM 474. THE BISCICOL TRIPLIFIER: BRINGING LEGACY
-BIODIVERSITY DATA TO THE SEMANTIC WEB. Brian Stucky,
-Robert Guralnick, John Deck, Tom Conlin
+02:59 PM - 03:08 PM 474. [http://www.tdwg.org/fileadmin/2013conference/slides/Stucky_et_al-BiSciCol_Triplifier.pdf THE BISCICOL TRIPLIFIER: BRINGING LEGACY BIODIVERSITY DATA TO THE SEMANTIC WEB]. Brian Stucky, Robert Guralnick, John Deck, Tom Conlin
 
 03:08 PM - 03:17 PM 480. [http://www.tdwg.org/fileadmin/2013conference/slides/Heidorn-Chong_SemanticKnowledgeStores4.pptx THE INGEST AND USES OF SPECIMEN LABEL DATA INTO SEMANTIC KNOWLEDGE STORES]. Bryan Heidorn, Steven Chong
 
