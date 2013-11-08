@@ -81,12 +81,8 @@ Cellinese, John Deck
 
 11:11 AM - 11:20 AM 465. [http://www.tdwg.org/fileadmin/2013conference/slides/Gibbons_EarthMicrobiomeProject.pptx THE EARTH MICROBIOME PROJECT: PLANETARY-SCALE SYSTEMS ECOLOGY]. Sean Gibbons, Jack Gilbert, Rob Knight, Janet Jansson, Jai Rideout, Antonio Gonzales, Emmanuel Prestat, J Gregory Caporaso
 
-11:20 AM - 11:29 AM 466. IDENTIFICATION OF ENVIRONMENT ONTOLOGY TERMS IN
-TEXT AND ANNOTATION OF BIODIVERSITY (ENVIRONMENTSEOL)
-AND GENOMICS (SEQENV) INFORMATION. Evangelos Pafilis,
-Sune Frankild, Umer Ijaz, Lucia Fanini, Sarah Faulwetter, Christina
-Pavloudi, Julia Schnetzer, Aikaterini Vasileiadou, Christos Arvanitidis,
-Christopher Quince, Lars Juhl Jensen
+11:20 AM - 11:29 AM 466. [http://www.tdwg.org/fileadmin/2013conference/slides/Parfilis_IdentificationOfEnvoTermsInText.pdf IDENTIFICATION OF ENVIRONMENT ONTOLOGY TERMS IN TEXT AND ANNOTATION OF BIODIVERSITY (ENVIRONMENTSEOL) AND GENOMICS (SEQENV) INFORMATION]. Evangelos Pafilis, Sune Frankild, Umer Ijaz, Lucia Fanini, Sarah Faulwetter, Christina
+Pavloudi, Julia Schnetzer, Aikaterini Vasileiadou, Christos Arvanitidis, Christopher Quince, Lars Juhl Jensen
 
 11:29 AM - 11:36 AM 461. [http://www.slideshare.net/balhoff/semantic-tools-for-aggregation-of-morphological-characters-across-studies SEMANTIC TOOLS FOR AGGREGATION OF MORPHOLOGICAL CHARACTERS ACROSS STUDIES]. James
 Balhoff, Alex Dececchi, Paula Mabee, Hilmar Lapp
