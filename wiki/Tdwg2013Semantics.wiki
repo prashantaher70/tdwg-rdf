@@ -93,7 +93,7 @@ Christopher Quince, Lars Juhl Jensen
 11:29 AM - 11:36 AM 461. [http://www.slideshare.net/balhoff/semantic-tools-for-aggregation-of-morphological-characters-across-studies SEMANTIC TOOLS FOR AGGREGATION OF MORPHOLOGICAL CHARACTERS ACROSS STUDIES]. James
 Balhoff, Alex Dececchi, Paula Mabee, Hilmar Lapp
 
-Don't have talk title. Cyndi Parr
+[http://www.tdwg.org/fileadmin/2013conference/slides/Parr_EOLInteroperabilitySemantics.pptx PRACTICAL INTEROPERABILITY ACROSS SEMANTIC STORES OF DATA FOR ECOLOGICAL, TAXONOMIC, PHYLOGENETIC, AND METAGENOMICS RESEARCH]. Cynthia Parr
 
 11:36 AM - 11:43 AM 462. [http://www.tdwg.org/fileadmin/2013conference/slides/Wilson-Computable-Descriptions.pdf COLLABORATIVELY CREATING COMPUTABLE SPECIES DESCRIPTIONS]. Nathan Wilson
 
