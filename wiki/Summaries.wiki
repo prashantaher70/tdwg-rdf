@@ -11,6 +11,10 @@ This use case collection was originally assembled in preparation for the May 201
 
 A collection of competency questions related to Darwin Core.
 
+[DataInventory Biodiversity RDF data in the wild]
+
+Descriptions of RDF datasets "in the wild" with links to SPARQL endpoints.  
+
 [ClassInventory Inventory of classes relevant to biodiversity informatics]
 
 This page summarizes classes defined by Dublin Core, Darwin Core, FOAF, and the TDWG Ontology.  It includes the DCMI and Dublin Core type vocabularies.
