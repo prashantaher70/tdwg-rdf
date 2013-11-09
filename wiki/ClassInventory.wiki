@@ -1,4 +1,5 @@
 #summary Inventory of classes relevant to biodiversity informatics
+#sidebar SummariesSidebar
 
 = Inventory of Classes Relevant to Biodiversity Informatics =
 
