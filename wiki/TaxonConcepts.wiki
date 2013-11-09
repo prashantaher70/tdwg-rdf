@@ -10,4 +10,4 @@ An email thread from about 2012-11 to 2012-12 which started off as a discussion 
 
 [TCSBasedTaxon RDF representation of a tc:TaxonConcept? instance and its associated reference]
 
-This document was produced following an extended email discussion about the meaning of taxon concepts in the context of RDF.
+This document was produced following an extended email discussion about the meaning of taxon concepts in the context of RDF.  It contains (among other things) a diagram which graphically represents a taxon concept.  It also includes examples in RDF/XML and RDF/Turtle.
