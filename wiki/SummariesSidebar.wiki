@@ -3,6 +3,7 @@
 
 ===Contents===
   * [Summaries Landing page]
+  * [UseCases Use case collection]
   * [ClassInventory Inventory of Classes]
   * [DarwinCoreClasses Darwin Core classes discussion summary]
   * [BiodiversityOntologies Comparison of four biodiversity-related ontologies]
