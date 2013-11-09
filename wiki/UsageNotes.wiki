@@ -42,3 +42,7 @@ This document is a stub in which notes could be placed on using functional and i
 [TaxonConcepts Taxon Concepts landing page]
 
 This is a page with links to a number of documents whose topic is taxon concepts as RDF
+
+[OpenAnnotationAndTDWG Comparison of Open Annotation data model with TDWG terms]
+
+This page contains diagrams that compare the W3C Open Annotation (OA) data model with the Darwin Core ResourceRelationship terms and the TDWG TaxonConcept Ontology Relationship model.  It includes links to emails from Robert Sanderson, a lead author of the recommendation which discuss the appropriateness of using OA in unconventional ways.  This discussion led to [ResourceRelationship this document] which is included in the ancillary documents associated with the draft Darwin Core RDF Guide.  Note: Paul Morris does not think the recommendation of the ancillary document is consistent with the OA model.  See also [OAThread this email thread] which led up to the creation of the comparison document linked above.
