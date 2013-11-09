@@ -1,4 +1,5 @@
 #summary Notes on a meeting about use of Darwin Core string terms in RDF
+#sidebar UsageSidebar
 
 <h1>Notes from meeting on 2012-03-30 to discuss use of Darwin Core terms in RDF</h1>
 
