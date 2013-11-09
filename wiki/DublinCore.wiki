@@ -5,7 +5,9 @@ For a brief summary of this document see [UsageDcterms usage notes on dcterms: t
 
 <h1>Dublin Core in RDF</h1>
 
-Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Created: 2012-02-24; Modified: 2013-06-26
+Steve Baskauf - TDWG RDF/OWL Best Practices Task Group - Created: 2012-02-24; Modified: 2013-11-09
+
+*NOTE:* This document has not been updated to reflect the recommendations of the [DwcRdf Darwin Core RDF Guide] and the final version of the [http://terms.tdwg.org/wiki/Audubon_Core Audubon Core TDWG Standard].
 
 *Table of Contents:*
 
