@@ -38,3 +38,7 @@ This document provides describes the implications of using {{{owl:sameAs}}} to l
 [UsageFunctionalProperty Notes on appropriate use of owl:FunctionalProperty? and owl:InverseFunctionalProperty]
 
 This document is a stub in which notes could be placed on using functional and inverse functional properties.  Somebody should write it!
+
+[TaxonConcepts Taxon Concepts landing page]
+
+This is a page with links to a number of documents whose topic is taxon concepts as RDF
