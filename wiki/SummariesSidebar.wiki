@@ -1,13 +1,6 @@
 #summary Sidebar for Summaries pages.
+==Summaries pages==
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+===Contents===
+  * [Summaries Landing page]
+  * [ClassInventory Inventory of Classes]
