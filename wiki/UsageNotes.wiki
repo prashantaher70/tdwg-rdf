@@ -46,3 +46,7 @@ This is a page with links to a number of documents whose topic is taxon concepts
 [OpenAnnotationAndTDWG Comparison of Open Annotation data model with TDWG terms]
 
 This page contains diagrams that compare the W3C Open Annotation (OA) data model with the Darwin Core ResourceRelationship terms and the TDWG TaxonConcept Ontology Relationship model.  It includes links to emails from Robert Sanderson, a lead author of the recommendation which discuss the appropriateness of using OA in unconventional ways.  This discussion led to [ResourceRelationship this document] which is included in the ancillary documents associated with the draft Darwin Core RDF Guide.  Note: Paul Morris does not think the recommendation of the ancillary document is consistent with the OA model.  See also [OAThread this email thread] which led up to the creation of the comparison document linked above.
+
+[FewClassesVsMany Under what circumstances is it more beneficial to use many classes vs. few in a model?]
+
+This is a rather incomplete page which links to some documents and emails on the subject of few classes vs. many.  There are more emails about this on tdwg-content that aren't linked here.
