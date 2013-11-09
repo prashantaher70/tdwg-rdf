@@ -15,4 +15,4 @@ This document was produced following an extended email discussion about the mean
 
 [TaxonInRDF Describing Taxon Concepts as RDF]
 
-This is an ancillary document associated with the Darwin Core RDF Guide.  The Darwin Core RDF Guide recommends against using the dwc:Taxon class terms to construct taxon concept instances (although they can be used as convenience properties).  This document provides suggestions for using terms outside of Darwin Core (i.e. the non-standard TDWG TaxonConcept and TaxonName ontology terms) to construct taxon concept or taxon name use (TNU) instances.
+This is an ancillary document associated with the Darwin Core RDF Guide.  The Darwin Core RDF Guide recommends against using the dwc:Taxon class terms to construct taxon concept instances (although they can be used as convenience properties).  This document provides suggestions for using terms outside of Darwin Core (i.e. the non-standard TDWG TaxonConcept and TaxonName ontology terms) to construct taxon concept or taxon name use (TNU) instances.  This document was informed by the TCS/TaxonConcept ontology thread (linked above) and the TCS-based taxon diagram (linked above).
