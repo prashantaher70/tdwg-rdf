@@ -25,7 +25,7 @@ This is the cover page for the draft Darwin Core RDF Guide and ancillary documen
 
 [UsageDcterms Terms in the dcterms: namespace]
 
-This document summarizes the use of Dublin Core terms in the {{{dcterms:}}} namespace and provides examples of their use in RDF.  A more extensive document examining the DCMI Abstract model and its implications for RDF is [DublinCore here]. 
+This document summarizes the use of Dublin Core terms in the {{{dcterms:}}} namespace and provides examples of their use in RDF.  A more extensive document examining the DCMI Abstract model and its implications for RDF is [DublinCore here]. However, it has not been updated to reflect the recommendations of the [DwcRdf Darwin Core RDF Guide] and the final version of the [http://terms.tdwg.org/wiki/Audubon_Core Audubon Core TDWG Standard].
 
 [LicenseProperties Expressing License Properties as RDF]
 
