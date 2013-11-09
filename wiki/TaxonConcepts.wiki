@@ -4,6 +4,10 @@
 
 This page contains links to various documents related to taxon concepts
 
+[TCSthread Summary and links to a thread related to TCS and Taxon Concepts]
+
+An email thread from about 2012-11 to 2012-12 which started off as a discussion of the TDWG TCS Standard and ended up on a discussion of the TaxonConcept Ontology of the TDWG Ontologies
+
 [TCSBasedTaxon RDF representation of a tc:TaxonConcept? instance and its associated reference]
 
 This document was produced following an extended email discussion about the meaning of taxon concepts in the context of RDF.
