@@ -1,4 +1,5 @@
 #summary Usage Note - dcterms: terms
+#sidebar UsageSidebar
 
 [UsageNotes return to list of usage notes]
 
