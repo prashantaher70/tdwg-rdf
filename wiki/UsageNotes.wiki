@@ -21,3 +21,13 @@ http://i.creativecommons.org/l/by/3.0/88x31.png All documents in this series are
 
 ==List of usage notes==
 [UsageDcterms Terms in the dcterms: namespace]
+
+This document summarizes the use of Dublin Core terms in the {{{dcterms:}}} namespace and provides examples of their use in RDF
+
+[LicenseProperties Expressing License Properties as RDF]
+
+This document discusses terms which can be used to express the license properties of a resource and the circumstances under which the various terms might be used.
+
+[SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
+
+This document provides describes the implications of using {{{owl:sameAs}}} to link several URI identifiers that refer to the same resource. The particular example of LSIDs is considered. 
