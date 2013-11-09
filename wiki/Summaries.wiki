@@ -1,0 +1,7 @@
+#summary Landing page for wiki pages summarizing use cases, examples, etc.
+
+= Landing page for use cases, competency questions, class inventory, examples, etc. =
+
+[ClassInventory Inventory of classes relevant to biodiversity informatics]
+
+This page summarizes classes defined by Dublin Core, Darwin Core, FOAF, and the TDWG Ontology.  It includes the DCMI and Dublin Core type vocabularies.
