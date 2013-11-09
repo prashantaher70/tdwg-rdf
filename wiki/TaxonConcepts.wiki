@@ -21,4 +21,4 @@ This is an ancillary document associated with the Darwin Core RDF Guide.  The Da
 
 [http://code.google.com/p/darwin-sw/wiki/ClassTaxon Notes and email references on the taxon class]
 
-This is a (somewhat outdated) page from the Darwin-SW website which contains a lot of links to emails and references to various points of view related to taxa and taxon concepts.  
+This is a (somewhat outdated) page from the Darwin-SW website which contains a lot of links to emails and references to various points of view related to taxa and taxon concepts.  There is a somewhat abbreviated version of this [DarwinCoreClasses#The_dwc:Taxon_class here].
