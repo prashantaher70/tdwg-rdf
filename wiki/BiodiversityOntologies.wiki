@@ -1,4 +1,5 @@
 #summary Summary of class structure and object properties of some biodiversity ontologies/data models
+#sidebar SummariesSidebar
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
