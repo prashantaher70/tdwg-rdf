@@ -13,7 +13,7 @@ A collection of competency questions related to Darwin Core.
 
 [DataInventory Biodiversity RDF data in the wild]
 
-Descriptions of RDF datasets "in the wild" with links to SPARQL endpoints.  
+Descriptions of RDF datasets "in the wild" with links to SPARQL endpoints. See also the [RodPageChallenge Rod Page's Challenge document] which has some SPARQL query examples based on real frog data loaded into the task group's sandbox triplestores.
 
 [ClassInventory Inventory of classes relevant to biodiversity informatics]
 
