@@ -1,4 +1,5 @@
 #summary Landing page for wiki pages summarizing use cases, examples, etc.
+#sidebar SummariesSidebar
 
 = Landing page for use cases, competency questions, class inventory, examples, etc. =
 
