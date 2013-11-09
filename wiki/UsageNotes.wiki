@@ -20,6 +20,9 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 http://i.creativecommons.org/l/by/3.0/88x31.png All documents in this series are licensed under a [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
 
 ==List of usage notes==
+[DwcRdf Darwin Core RDF Guide and ancillary documents]
+This is the cover page for the draft Darwin Core RDF Guide and ancillary documents that describe strategies for dealing with Darwin Core terms that can't easily be handled using the strategies described in the guide.  There are also examples.
+
 [UsageDcterms Terms in the dcterms: namespace]
 
 This document summarizes the use of Dublin Core terms in the {{{dcterms:}}} namespace and provides examples of their use in RDF
