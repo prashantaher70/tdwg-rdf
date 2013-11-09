@@ -1,0 +1,6 @@
+#summary Landing page for email thread summaries.
+#sidebar SideBar
+
+= Thread Summaries =
+
+This is a list of attempts to summarize some important discussions that have happened on the task group's email list
