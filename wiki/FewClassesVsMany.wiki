@@ -5,6 +5,8 @@
 
 The eventual purpose of this page is to provide guidance for deciding whether it is more beneficial to create a model with many classes or few classes having many instances.  At this point I'm going to paste in some information from posts to the email list.  Hopefully somebody will take up the task of creating a more useful and user-friendly resource.
 
+Note on 2013-11-09: this topic reared its head again last month on tdwg-content http://lists.tdwg.org/pipermail/tdwg-content/2013-October/003166.html which caused me to look up the old "[http://wiki.tdwg.org/twiki/bin/view/TAG/SubclassOrNot Subclass or not?]" post: which either Bob Morris or Roger Hyam (or both) wrote.  I can't remember...
+
 == Situations where fewer classes and more instances would be beneficial ==
 From Steve Baskauf's post of 2012-03-11:
 
