@@ -3,6 +3,7 @@
 ==Usage Notes==
 
 ===Contents===
+  * [DwcRdf Darwin Core RDF Guide and ancillary documents]
   * [UsageNotes Landing page]
   * [UsageDcterms Terms in the dcterms: namespace]
   * [UsageFunctionalProperty owl:FunctionalProperty? and owl:InverseFunctionalProperty placeholder page]
