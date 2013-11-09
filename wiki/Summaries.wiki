@@ -11,4 +11,6 @@ This page summarizes classes defined by Dublin Core, Darwin Core, FOAF, and the 
 
 This page contains links to many emails and documents which discuss the meaning of core classes in Darwin Core.
 
+[BiodiversityOntologies Comparison of biodiversity ontologies]
 
+This document summarizes four vocabularies/ontologies which mint object properties that could be used to link instances of core classes in the biodiversity informatics domain. It includes diagrams which are color coded to show the similarities among the models.
