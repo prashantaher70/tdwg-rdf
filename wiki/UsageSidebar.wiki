@@ -11,3 +11,4 @@
   * [LicenseProperties Expressing License Properties as RDF]
   * [TaxonConcepts Landing page for various documents related to taxon concepts]
   * [OpenAnnotationAndTDWG Open Annotation (OA) W3C model and TDWG terms]
+  * [FewClassesVsMany Few classes vs. many]
