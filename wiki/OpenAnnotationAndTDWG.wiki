@@ -1,4 +1,5 @@
 #summary Comparison of the W3C Open Annotation Core data model to existing TDWG terms
+#sidebar UsageSidebar
 
 = General notes=
 The following abbreviations are used for namespaces on this page:
