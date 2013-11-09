@@ -12,3 +12,7 @@ An email thread from about 2012-11 to 2012-12 which started off as a discussion 
 [TCSBasedTaxon RDF representation of a tc:TaxonConcept? instance and its associated reference]
 
 This document was produced following an extended email discussion about the meaning of taxon concepts in the context of RDF.  It contains (among other things) a diagram which graphically represents a taxon concept.  It also includes examples in RDF/XML and RDF/Turtle.
+
+[TaxonInRDF Describing Taxon Concepts as RDF]
+
+This is an ancillary document associated with the Darwin Core RDF Guide.  The Darwin Core RDF Guide recommends against using the dwc:Taxon class terms to construct taxon concept instances (although they can be used as convenience properties).  This document provides suggestions for using terms outside of Darwin Core (i.e. the non-standard TDWG TaxonConcept and TaxonName ontology terms) to construct taxon concept or taxon name use (TNU) instances.
