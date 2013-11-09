@@ -50,3 +50,7 @@ This page contains diagrams that compare the W3C Open Annotation (OA) data model
 [FewClassesVsMany Under what circumstances is it more beneficial to use many classes vs. few in a model?]
 
 This is a rather incomplete page which links to some documents and emails on the subject of few classes vs. many.  There are more emails about this on tdwg-content that aren't linked here.
+
+[DwcStringTermsAsRdf Strategies for appropriate use of Darwin Core terms with literals and URI references]
+
+This document is included here for historical purposes.  It contains notes from an informal meeting in which the problem of inconsistent use of Darwin Core terms with strings and URIs was discussed.  Since the time when this document was written, the [http://terms.tdwg.org/wiki/Audubon_Core Audubon Core standard] was adopted.  It chose to differentiate between literal and URI-reference terms by appending a "Literal" suffix to the names of terms intended to be used with literals.  In contrast, the [DwcRdfGuideProposal#2.5_Terms_in_the_dwcuri:_namespace Darwin Core RDF Guide] differentiates between the two by creating a new namespace "dwcuri:" whose terms are intended to be used exclusively with URI-reference values (or blank nodes).  Also relevant is [UsageDcterms this document] which discusses the approach Dublin Core has taken with the issue.
