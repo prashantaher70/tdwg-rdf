@@ -4,3 +4,6 @@
 
 This page contains links to various documents related to taxon concepts
 
+[TCSBasedTaxon RDF representation of a tc:TaxonConcept? instance and its associated reference]
+
+This document was produced following an extended email discussion about the meaning of taxon concepts in the context of RDF.
