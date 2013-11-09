@@ -1,4 +1,5 @@
 #summary A summary of discussions about the Darwin Core classes
+#sidebar SummariesSidebar
 
 Prepared 2012-04-13 by Steve Baskauf (steve.baskauf@vanderbilt.edu)
 
