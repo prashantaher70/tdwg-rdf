@@ -6,3 +6,9 @@
 [ClassInventory Inventory of classes relevant to biodiversity informatics]
 
 This page summarizes classes defined by Dublin Core, Darwin Core, FOAF, and the TDWG Ontology.  It includes the DCMI and Dublin Core type vocabularies.
+
+[DarwinCoreClasses Summary of discussions about the Darwin Core classes]
+
+This page contains links to many emails and documents which discuss the meaning of core classes in Darwin Core.
+
+
