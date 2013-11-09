@@ -31,3 +31,7 @@ This document discusses terms which can be used to express the license propertie
 [SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
 
 This document provides describes the implications of using {{{owl:sameAs}}} to link several URI identifiers that refer to the same resource. The particular example of LSIDs is considered. 
+
+[UsageFunctionalProperty Notes on appropriate use of owl:FunctionalProperty? and owl:InverseFunctionalProperty]
+
+This document is a stub in which notes could be placed on using functional and inverse functional properties.  Somebody should write it!
