@@ -7,3 +7,4 @@
   * [UsageDcterms Terms in the dcterms: namespace]
   * [UsageFunctionalProperty owl:FunctionalProperty? and owl:InverseFunctionalProperty placeholder page]
   * [SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
+  * [LicenseProperties Expressing License Properties as RDF]
