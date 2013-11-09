@@ -5,6 +5,7 @@
   * [Summaries Landing page]
   * [UseCases Use case collection]
   * [CompetencyQuestions Darwin Core competency questions]
+  * [DataInventory Inventory of Biodiversity RDF data]
   * [ClassInventory Inventory of Classes]
   * [DarwinCoreClasses Darwin Core classes discussion summary]
   * [BiodiversityOntologies Comparison of four biodiversity-related ontologies]
