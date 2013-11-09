@@ -1,4 +1,5 @@
 #summary Dublin Core in RDF
+#sidebar SummariesSidebar
 
 For a brief summary of this document see [UsageDcterms usage notes on dcterms: terms]
 
