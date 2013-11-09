@@ -1,4 +1,5 @@
 #summary RDF/OWL Usage Notes - index
+#sidebar UsageSidebar
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
