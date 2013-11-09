@@ -1,4 +1,5 @@
 #summary Under what circumstances is it more beneficial to use many classes vs. few in a model?
+#sidebar UsageSidebar
 
 = Under what circumstances is it more beneficial to use many classes vs. few in a model?=
 
