@@ -7,6 +7,10 @@
 
 This use case collection was originally assembled in preparation for the May 2012 Semantics of Biodiversity workshop.  Additional examples have been added since then.
 
+[CompetencyQuestions Darwin Core-related competency questions]
+
+A collection of competency questions related to Darwin Core.
+
 [ClassInventory Inventory of classes relevant to biodiversity informatics]
 
 This page summarizes classes defined by Dublin Core, Darwin Core, FOAF, and the TDWG Ontology.  It includes the DCMI and Dublin Core type vocabularies.
