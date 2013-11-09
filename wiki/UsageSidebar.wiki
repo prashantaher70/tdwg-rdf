@@ -3,8 +3,8 @@
 ==Usage Notes==
 
 ===Contents===
-  * [DwcRdf Darwin Core RDF Guide and ancillary documents]
   * [UsageNotes Landing page]
+  * [DwcRdf Darwin Core RDF Guide and ancillary documents]
   * [UsageDcterms Terms in the dcterms: namespace]
   * [UsageFunctionalProperty owl:FunctionalProperty? and owl:InverseFunctionalProperty placeholder page]
   * [SameAsLSID owl:sameAs, LSIDs, and identifier proliferation]
