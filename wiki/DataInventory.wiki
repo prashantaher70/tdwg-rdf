@@ -10,7 +10,7 @@ In response to [http://lists.tdwg.org/pipermail/tdwg-tag/2011-September/002381.h
   * Natural Solutions virtuoso triple store: so far we have put in Rod's datasets on frogs.http://82.96.149.133:8890/sparql
 Feel Free to play with the sparql interface.
 
-===Royal Botanic Garden Edinburgh===
+===Specimens at Royal Botanic Garden Edinburgh===
 
 Described in Hyam, R.D., Drinkwater, R.E. & Harris, D.J. Stable citations for herbarium specimens on the internet: an illustration from a taxonomic revision of Duboscia (Malvaceae) Phytotaxa 73: 17–30 (2012). http://www.mapress.com/phytotaxa/content/2012/f/pt00073p030.pdf
 
@@ -127,7 +127,7 @@ RDF/Turtle:
 }}}
 Note: this RDF uses a bit of fanciful Darwin Core (incorrect case, dwc:Collector, etc.)
 
-===University of Alaska Museum of the North===
+===Specimens in ARCTOS/University of Alaska Museum of the North===
 
 HTTP URIs for specimens such as http://arctos.database.museum/guid/UAM:Ento:230092 which is the same for all specimens in the ARCTOS system.  However, UA Museum of the north also uses DOIs such as http://dx.doi.org/10.7299/X7VQ32SJ which redirect in a browser to the same web page as the ARCTOS HTTP URI.  
 
