@@ -9,3 +9,119 @@ In response to [http://lists.tdwg.org/pipermail/tdwg-tag/2011-September/002381.h
   * taxonconcept.org http://www.taxonconcept.org/sparql-endpoint/ This SPARQL endpoint has 23 million triples and includes some other related databases. Queries can be done directly on that endpoint at http://lsd.taxonconcept.org/sparql for a generic web interface and at http://lsd.taxonconcept.org/isparql for a human-friendly interface.  Datasets include the Global Name Index (GNI), DBpedia, geonames, etc. in addition to Pete's taxonconcept.org database.  The Bioimages images and IndividualOrganism datasets are also loaded into the triplestore, so queries based on Darwin-SW can also be tested here.
   * Natural Solutions virtuoso triple store: so far we have put in Rod's datasets on frogs.http://82.96.149.133:8890/sparql
 Feel Free to play with the sparql interface.
+
+===Royal Botanic Garden Edinburgh===
+
+Described in Hyam, R.D., Drinkwater, R.E. & Harris, D.J. Stable citations for herbarium specimens on the internet: an illustration from a taxonomic revision of Duboscia (Malvaceae) Phytotaxa 73: 17–30 (2012). http://www.mapress.com/phytotaxa/content/2012/f/pt00073p030.pdf
+
+Example resource: http://data.rbge.org.uk/herb/E00435912 which dereferences to a web page or RDF/XML via a 303 redirect.  
+
+RDF/XML:
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tap="http://rs.tdwg.org/tapir/1.0"
+xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:hyam="http://hyam.net/tapir2sw#"
+xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/"
+xmlns:dc="http://purl.org/dc/terms/"
+xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+
+<!--This is metadata about this metadata document-->
+<rdf:Description
+rdf:about="http://data.rbge.org.uk/service/rdf/herb.php?guid=http://data.rbge.org.uk/herb/E00435912">
+<dc:creator>Simple PHP RDF Script</dc:creator>
+<dc:created>2013-11-10T01:46:58+00:00</dc:created>
+<dc:hasVersion rdf:resource="http://elmer.rbge.org.uk/bgbase/vherb/bgbasevherb.php?cfg=bgbase/vherb/fulldetails.cfg%26amp;specimens_specimen__num=E00435912" />
+</rdf:Description>
+
+<!--This is metadata about this specimen-->
+<rdf:Description rdf:about="http://data.rbge.org.uk/herb/E00435912">
+
+<!-- Assertions made in simple Dublin Core -->
+<dc:title>Goldsmith, M. #207 Duboscia macrocarpa Bocq.</dc:title>
+<dc:description>A herbarium specimen of Duboscia macrocarpa Bocq. collected by Goldsmith, M. #207 </dc:description>
+<dc:creator>Goldsmith, M.</dc:creator>
+<dc:created>1973</dc:created>
+
+<!-- <geo:Point> -->
+<geo:lat>2.866667</geo:lat>
+<geo:long>16.466667</geo:long>
+<!-- </geo:Point> -->
+
+<!-- Assertions based on experimental version of Darwin Core -->
+<dwc:SampleID>http://data.rbge.org.uk/herb/E00435912</dwc:SampleID>
+<dc:modified>2011-08-19 00:00:00</dc:modified>
+<dwc:BasisOfRecord>Specimen</dwc:BasisOfRecord>
+<dwc:InstitutionCode>http://biocol.org/urn:lsid:biocol.org:col:15670</dwc:InstitutionCode>
+<dwc:CollectionCode>E</dwc:CollectionCode>
+<dwc:CatalogNumber>E00435912</dwc:CatalogNumber>
+<dwc:ScientificName>Duboscia macrocarpa Bocq.</dwc:ScientificName>
+<dwc:Family>Malvaceae</dwc:Family>
+<dwc:Genus>Duboscia</dwc:Genus>
+<dwc:SpecificEpithet>macrocarpa</dwc:SpecificEpithet>
+<dwc:HigherGeography>Tropical Africa</dwc:HigherGeography>
+<dwc:Country>CF</dwc:Country>
+<dwc:StateProvince>Sangha-Mbaere</dwc:StateProvince>
+<dwc:Locality>Bai Hoku.</dwc:Locality>
+<dwc:DecimalLongitude>16.466667</dwc:DecimalLongitude>
+<dwc:DecimalLatitude>2.866667</dwc:DecimalLatitude>
+<dwc:EarliestDateCollected>1973</dwc:EarliestDateCollected>
+<dwc:Collector>Goldsmith, M.</dwc:Collector>
+<dc:relation><rdf:Description rdf:about="http://data.rbge.org.uk/images/393342" ><dc:identifier rdf:resource="http://data.rbge.org.uk/images/393342" /><dc:type rdf:resource="http://purl.org/dc/dcmitype/Image" /><dc:subject rdf:resource="http://data.rbge.org.uk/herb/E00435912" /><dc:format>image/jpeg</dc:format><dc:description xml:lang="en">Image of herbarium specimen</dc:description><dc:created>2011-08-22T11:38:48Z</dc:created></rdf:Description></dc:relation>
+</rdf:Description>
+
+</rdf:RDF> 
+}}}
+
+RDF/Turtle:
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance>.
+@prefix tap: <http://rs.tdwg.org/tapir/1.0>.
+@prefix xs: <http://www.w3.org/2001/XMLSchema>.
+@prefix hyam: <http://hyam.net/tapir2sw#>.
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
+@prefix dwcc: <http://rs.tdwg.org/dwc/curatorial/>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+
+<http://data.rbge.org.uk/herb/E00435912> 
+	dc:created "1973";
+	dc:creator "Goldsmith, M.";
+	dc:description "A herbarium specimen of Duboscia macrocarpa Bocq. collected by Goldsmith, M. #207 ";
+	dc:modified "2011-08-19 00:00:00";
+	dc:relation <http://data.rbge.org.uk/images/393342>;
+	dc:title "Goldsmith, M. #207 Duboscia macrocarpa Bocq.";
+	dwc:BasisOfRecord "Specimen";
+	dwc:CatalogNumber "E00435912";
+	dwc:CollectionCode "E";
+	dwc:Collector "Goldsmith, M.";
+	dwc:Country "CF";
+	dwc:DecimalLatitude "2.866667";
+	dwc:DecimalLongitude "16.466667";
+	dwc:EarliestDateCollected "1973";
+	dwc:Family "Malvaceae";
+	dwc:Genus "Duboscia";
+	dwc:HigherGeography "Tropical Africa";
+	dwc:InstitutionCode "http://biocol.org/urn:lsid:biocol.org:col:15670";
+	dwc:Locality "Bai Hoku.";
+	dwc:SampleID "http://data.rbge.org.uk/herb/E00435912";
+	dwc:ScientificName "Duboscia macrocarpa Bocq.";
+	dwc:SpecificEpithet "macrocarpa";
+	dwc:StateProvince "Sangha-Mbaere";
+	geo:lat "2.866667";
+	geo:long "16.466667".
+<http://data.rbge.org.uk/images/393342> 
+	dc:created "2011-08-22T11:38:48Z";
+	dc:description "Image of herbarium specimen"@en;
+	dc:format "image/jpeg";
+	dc:identifier <http://data.rbge.org.uk/images/393342>;
+	dc:subject <http://data.rbge.org.uk/herb/E00435912>;
+	dc:type <http://purl.org/dc/dcmitype/Image>.
+<http://data.rbge.org.uk/service/rdf/herb.php?guid=http://data.rbge.org.uk/herb/E00435912> 
+	dc:created "2013-11-10T01:46:58+00:00";
+	dc:creator "Simple PHP RDF Script";
+	dc:hasVersion <http://elmer.rbge.org.uk/bgbase/vherb/bgbasevherb.php?cfg=bgbase/vherb/fulldetails.cfg%26amp;specimens_specimen__num=E00435912>.
+}}}
