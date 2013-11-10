@@ -125,3 +125,210 @@ RDF/Turtle:
 	dc:creator "Simple PHP RDF Script";
 	dc:hasVersion <http://elmer.rbge.org.uk/bgbase/vherb/bgbasevherb.php?cfg=bgbase/vherb/fulldetails.cfg%26amp;specimens_specimen__num=E00435912>.
 }}}
+Note: this RDF uses a bit of fanciful Darwin Core (incorrect case, dwc:Collector, etc.)
+
+===University of Alaska Museum of the North===
+
+HTTP URIs for specimens such as http://arctos.database.museum/guid/UAM:Ento:230092 but also DOIs such as http://dx.doi.org/10.7299/X7VQ32SJ which redirect in a browser to the same web page.  
+
+Dereferencing the DOI requesting RDF/XML gets:
+{{{
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns:j.0="http://purl.org/dc/terms/" >
+<rdf:Description rdf:about="http://dx.doi.org/10.7299/X7VQ32SJ">
+<j.0:creator>Derek S. Sikes</j.0:creator>
+<j.0:publisher>University of Alaska Museum</j.0:publisher>
+<j.0:title>UAM:Ento:230092 - Grylloblatta campodeiformis</j.0:title>
+<j.0:date>2004</j.0:date>
+<owl:sameAs>doi:10.7299/X7VQ32SJ</owl:sameAs>
+<owl:sameAs>info:doi/10.7299/X7VQ32SJ</owl:sameAs>
+<j.0:identifier>10.7299/X7VQ32SJ</j.0:identifier>
+</rdf:Description>
+</rdf:RDF>
+}}}
+
+In RDF/Turtle:
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+<http://dx.doi.org/10.7299/X7VQ32SJ> 
+	<http://purl.org/dc/terms/creator> "Derek S. Sikes";
+	<http://purl.org/dc/terms/date> "2004";
+	<http://purl.org/dc/terms/identifier> "10.7299/X7VQ32SJ";
+	<http://purl.org/dc/terms/publisher> "University of Alaska Museum";
+	<http://purl.org/dc/terms/title> "UAM:Ento:230092 - Grylloblatta campodeiformis";
+	owl:sameAs "doi:10.7299/X7VQ32SJ",
+	        "info:doi/10.7299/X7VQ32SJ".
+}}}
+
+Dereferencing the HTTP URI requesting RDF/XML gets this file (which has some validation problems):
+{{{
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tap="http://rs.tdwg.org/tapir/1.0"
+xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:hyam="http://hyam.net/tapir2sw#"
+xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:dwcc="http://rs.tdwg.org/dwc/curatorial/"
+xmlns:dc="http://purl.org/dc/terms/"
+xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+<!--
+So, we pretty much just made this all up. It's a
+nifty way to test out content negotiation, but we have no idea
+if the RDF is actually useful to anyone.
+If you have actual use for rdf, and would like us to do something different,
+just drop up an email (you probably know who we are, right?) or fill
+out the contact form at http://arctos.database.museum/contact.cfm
+We'd love to hear your feedback. Or just tell us you found this thing.
+
+This document in no way represents all information available from Arctos.
+-->
+<rdf:Description rdf:about="http://arctos.database.museum/guid/UAM:Ento:230092">
+<dc:creator>Sayde Ridling</dc:creator>
+<dc:created>2012-11-29</dc:created>
+<dc:hasVersion rdf:resource="http://arctos.database.museum/guid/UAM:Ento:230092" />
+</rdf:Description>
+<!-- This is metadata about this specimen -->
+<rdf:Description rdf:about="http://arctos.database.museum/guid/UAM:Ento:230092">
+<dc:title>UAM:Ento:230092 - UAM Insects 230092 Grylloblatta campodeiformis</dc:title>
+<dc:description>UAM Insects 230092 Grylloblatta campodeiformis</dc:description>
+<geo:Point>
+<geo:lat>50.8657666667</geo:lat>
+<geo:long>-115.2110333333</geo:long>
+</geo:Point>
+<!-- Assertions based on experimental version of Darwin Core -->
+<dc:modified>2013-09-18</dc:modified>
+<dwc:SampleID>http://arctos.database.museum/guid/UAM:Ento:230092</dwc:SampleID>
+<dwc:BasisOfRecord>PreservedSpecimen</dwc:BasisOfRecord>
+<dwc:InstitutionCode>UAM</dwc:InstitutionCode>
+<dwc:CollectionCode>Ento</dwc:CollectionCode>
+<dwc:CatalogNumber>230092</dwc:CatalogNumber>
+<dwc:ScientificName>Grylloblatta campodeiformis</dwc:ScientificName>
+<dwc:HigherTaxon>Animalia Arthropoda Insecta Gryllablattodea Grylloblattidae Grylloblatta campodeiformis Walker 1914</dwc:HigherTaxon>
+<dwc:Kingdom></dwc:Kingdom>
+<dwc:Phylum>Arthropoda</dwc:Phylum>
+<dwc:Class>Insecta</dwc:Class>
+<dwc:Order>Gryllablattodea</dwc:Order>
+<dwc:Family>Grylloblattidae</dwc:Family>
+<dwc:Genus>Grylloblatta</dwc:Genus>
+<dwc:Species>Grylloblatta campodeiformis</dwc:Species>
+<dwc:Subspecies></dwc:Subspecies>
+<dwc:IdentifiedBy>Karl J. Jarvis</dwc:IdentifiedBy>
+<dwc:HigherGeography>North America, Canada, Alberta</dwc:HigherGeography>
+<dwc:ContinentOcean>North America</dwc:ContinentOcean>
+<dwc:Country>Canada</dwc:Country>
+<dwc:StateProvince>Alberta</dwc:StateProvince>
+<dwc:IslandGroup></dwc:IslandGroup>
+<dwc:Island></dwc:Island>
+<dwc:County></dwc:County>
+<dwc:Locality>Kananaskis. Galatca, trail to Lilian Lake N of Rt. 40 S of Kananaskis Village</dwc:Locality>
+<dwc:DecimalLongitude>50.8657666667</dwc:DecimalLongitude>
+<dwc:DecimalLatitude>-115.2110333333</dwc:DecimalLatitude>
+<dwc:HorizontalDatum>World Geodetic System 1984</dwc:HorizontalDatum>
+<dwc:OriginalCoordinateSystem>degrees dec. minutes</dwc:OriginalCoordinateSystem>
+<dwc:VerbatimCoordinates>50d 51.946m N/115d 12.662m W</dwc:VerbatimCoordinates>
+<dwc:GeoreferenceSource>Field GPS Unit</dwc:GeoreferenceSource>
+<dwc:GeoreferenceProtocol>MaNIS georeferencing guidelines</dwc:GeoreferenceProtocol>
+<dwc:CoordinateUncertaintyInMeters>10</dwc:CoordinateUncertaintyInMeters>
+<dwc:MinimumElevationInMeters>1761.744</dwc:MinimumElevationInMeters>
+<dwc:MaximumElevationInMeters>1798.32</dwc:MaximumElevationInMeters>
+<dwc:VerbatimElevation>5780-5900 ft</dwc:VerbatimElevation>
+<dwc:MinimumDepthInMeters></dwc:MinimumDepthInMeters>
+<dwc:MaximumDepthInMeters></dwc:MaximumDepthInMeters>
+<dwc:TypeStatus>voucher of <a href="http://arctos.database.museum/name/Grylloblatta campodeiformis"><i>Grylloblatta campodeiformis</i> Walker 1914</a>, page 227 in <a href="http://arctos.database.museum/publication/10006536">Jarvis %26amp; Whiting 2006</a></dwc:TypeStatus>
+<dwc:Sex>female </dwc:Sex>
+<dwc:Preparations>vial (100% ethanol) whole organism</dwc:Preparations>
+<dwc:IndividualCount>1</dwc:IndividualCount>
+<dwc:AgeClass>adult </dwc:AgeClass>
+<dwc:OtherCatalogNumbers>GenBank=DQ457228; GenBank=DQ457263; GenBank=DQ457300; secondary identifier=BYU_gb32.1</dwc:OtherCatalogNumbers>
+<dwc:GenBankNum>http://www.ncbi.nlm.nih.gov/nuccore/DQ457228; http://www.ncbi.nlm.nih.gov/nuccore/DQ457263; http://www.ncbi.nlm.nih.gov/nuccore/DQ457300</dwc:GenBankNum>
+<dwc:RelatedCatalogedItems></dwc:RelatedCatalogedItems>
+<dwc:Collector>Derek S. Sikes</dwc:Collector>
+<dwc:EarliestDateCollected>2004-10-09</dwc:EarliestDateCollected>
+<dwc:LatestDateCollected>2004-10-09</dwc:LatestDateCollected>
+<dwc:VerbatimCollectingDate>9 Oct 2004</dwc:VerbatimCollectingDate>
+<dwc:Remarks>DNA Holotype GB 32.1 left side mid and hind legs removed for molecular data, hind leg in vial with specimen.</dwc:Remarks>
+<dwc:ImageURL>http://arctos.database.museum/MediaSearch.cfm?action=search%26amp;media_id=10322363,10322362</dwc:ImageURL>
+</rdf:Description>
+</rdf:RDF>
+}}}
+
+In RDF/Turtle (after fixing invalid RDF):
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xsi: <http://www.w3.org/2001/XMLSchema-instance>.
+@prefix tap: <http://rs.tdwg.org/tapir/1.0>.
+@prefix xs: <http://www.w3.org/2001/XMLSchema>.
+@prefix hyam: <http://hyam.net/tapir2sw#>.
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
+@prefix dwcc: <http://rs.tdwg.org/dwc/curatorial/>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+
+<http://arctos.database.museum/guid/UAM:Ento:230092> 
+	dc:created "2012-11-29";
+	dc:creator "Sayde Ridling";
+	dc:description "UAM Insects 230092 Grylloblatta campodeiformis";
+	dc:hasVersion <http://arctos.database.museum/guid/UAM:Ento:230092>;
+	dc:modified "2013-09-18";
+	dc:title "UAM:Ento:230092 - UAM Insects 230092 Grylloblatta campodeiformis";
+	dwc:AgeClass "adult ";
+	dwc:BasisOfRecord "PreservedSpecimen";
+	dwc:CatalogNumber "230092";
+	dwc:Class "Insecta";
+	dwc:CollectionCode "Ento";
+	dwc:Collector "Derek S. Sikes";
+	dwc:ContinentOcean "North America";
+	dwc:CoordinateUncertaintyInMeters "10";
+	dwc:Country "Canada";
+	dwc:County "";
+	dwc:DecimalLatitude "-115.2110333333";
+	dwc:DecimalLongitude "50.8657666667";
+	dwc:EarliestDateCollected "2004-10-09";
+	dwc:Family "Grylloblattidae";
+	dwc:GenBankNum "http://www.ncbi.nlm.nih.gov/nuccore/DQ457228; http://www.ncbi.nlm.nih.gov/nuccore/DQ457263; http://www.ncbi.nlm.nih.gov/nuccore/DQ457300";
+	dwc:Genus "Grylloblatta";
+	dwc:GeoreferenceProtocol "MaNIS georeferencing guidelines";
+	dwc:GeoreferenceSource "Field GPS Unit";
+	dwc:HigherGeography "North America, Canada, Alberta";
+	dwc:HigherTaxon "Animalia Arthropoda Insecta Gryllablattodea Grylloblattidae Grylloblatta campodeiformis Walker 1914";
+	dwc:HorizontalDatum "World Geodetic System 1984";
+	dwc:IdentifiedBy "Karl J. Jarvis";
+	dwc:ImageURL "http://arctos.database.museum/MediaSearch.cfm?action=search%26amp;media_id=10322363,10322362";
+	dwc:IndividualCount "1";
+	dwc:InstitutionCode "UAM";
+	dwc:Island "";
+	dwc:IslandGroup "";
+	dwc:Kingdom "";
+	dwc:LatestDateCollected "2004-10-09";
+	dwc:Locality "Kananaskis. Galatca, trail to Lilian Lake N of Rt. 40 S of Kananaskis Village";
+	dwc:MaximumDepthInMeters "";
+	dwc:MaximumElevationInMeters "1798.32";
+	dwc:MinimumDepthInMeters "";
+	dwc:MinimumElevationInMeters "1761.744";
+	dwc:Order "Gryllablattodea";
+	dwc:OriginalCoordinateSystem "degrees dec. minutes";
+	dwc:OtherCatalogNumbers "GenBank=DQ457228; GenBank=DQ457263; GenBank=DQ457300; secondary identifier=BYU_gb32.1";
+	dwc:Phylum "Arthropoda";
+	dwc:Preparations "vial (100% ethanol) whole organism";
+	dwc:RelatedCatalogedItems "";
+	dwc:Remarks "DNA Holotype GB 32.1 left side mid and hind legs removed for molecular data, hind leg in vial with specimen.";
+	dwc:SampleID "http://arctos.database.museum/guid/UAM:Ento:230092";
+	dwc:ScientificName "Grylloblatta campodeiformis";
+	dwc:Sex "female ";
+	dwc:Species "Grylloblatta campodeiformis";
+	dwc:StateProvince "Alberta";
+	dwc:Subspecies "";
+	dwc:TypeStatus "voucher of Grylloblatta campodeiformis Walker 1914, page 227 in Jarvis %26amp; Whiting 2006";
+	dwc:VerbatimCollectingDate "9 Oct 2004";
+	dwc:VerbatimCoordinates "50d 51.946m N/115d 12.662m W";
+	dwc:VerbatimElevation "5780-5900 ft";
+	geo:lat "50.8657666667";
+	geo:long "-115.2110333333".
+}}}
+Also contains some non-standard Darwin Core (incorrect case, dwc:Collector, dwc:AgeClass, etc.)
