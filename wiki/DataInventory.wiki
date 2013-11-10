@@ -338,7 +338,7 @@ In RDF/Turtle (after fixing invalid RDF):
 }}}
 Also contains some non-standard Darwin Core (incorrect case, dwc:Collector, dwc:AgeClass, etc.)
 
-==Specimen in Linked Open Data Of Ecology==
+===Specimen in Linked Open Data Of Ecology===
 
 Example HTTP URI: http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023
 
