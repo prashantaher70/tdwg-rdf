@@ -129,7 +129,7 @@ Note: this RDF uses a bit of fanciful Darwin Core (incorrect case, dwc:Collector
 
 ===University of Alaska Museum of the North===
 
-HTTP URIs for specimens such as http://arctos.database.museum/guid/UAM:Ento:230092 but also DOIs such as http://dx.doi.org/10.7299/X7VQ32SJ which redirect in a browser to the same web page.  
+HTTP URIs for specimens such as http://arctos.database.museum/guid/UAM:Ento:230092 which is the same for all specimens in the ARCTOS system.  However, UA Museum of the north also uses DOIs such as http://dx.doi.org/10.7299/X7VQ32SJ which redirect in a browser to the same web page as the ARCTOS HTTP URI.  
 
 Dereferencing the DOI requesting RDF/XML gets:
 {{{
