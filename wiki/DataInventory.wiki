@@ -1,4 +1,9 @@
 #summary Links to data sources and SPARQL endpoints
+#sidebar SummariesSidebar
+
+*Contents*
+
+<wiki:toc max_depth="4" />
 
 == Introduction ==
 
@@ -332,3 +337,235 @@ In RDF/Turtle (after fixing invalid RDF):
 	geo:long "-115.2110333333".
 }}}
 Also contains some non-standard Darwin Core (incorrect case, dwc:Collector, dwc:AgeClass, etc.)
+
+==Specimen in Linked Open Data Of Ecology==
+
+Example HTTP URI: http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023
+
+Dereferences in a browser showing results of a SPARQL query.  Dereferences as RDF/XML through 303 redirect.
+
+In RDF/XML:
+{{{
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:muo="http://purl.oclc.org/NET/muo/muo#"
+    xmlns:geospecies="http://rdf.geospecies.org/ont/geospecies#"
+    xmlns:fdp="http://ecowlim.tfri.gov.tw/lode/resource/fdp/"
+    xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
+    xmlns:taif="http://ecowlim.tfri.gov.tw/lode/resource/taif/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dbp_void="http://dbpedia.org/void/"
+    xmlns:taif_lit="http://ecowlim.tfri.gov.tw/lode/resource/lit/taif/"
+    xmlns:dc="http://purl.org/dc/terms/"
+    xmlns:eco_lit="http://ecowlim.tfri.gov.tw/lode/resource/lit/eco/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:prv="http://purl.org/net/provenance/ns#"
+    xmlns:fdp_lit="http://ecowlim.tfri.gov.tw/lode/resource/lit/fdp/"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:dbpprop="http://dbpedia.org/property/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:flyhorse_lit="http://ecowlim.tfri.gov.tw/lode/resource/lit/flyhorse/"
+    xmlns:id="http://purl.org/twc/ontologies/identity.owl#"
+    xmlns:event="http://purl.org/NET/c4dm/event.owl#"
+    xmlns:tl="http://purl.org/NET/c4dm/timeline.owl#"
+    xmlns:protons="http://proton.semanticweb.org/2005/04/protons#"
+    xmlns:taibnet_lit="http://ecowlim.tfri.gov.tw/lode/resource/lit/taibnet/"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:firedb_lit="http://ecowlim.tfri.gov.tw/lode/resource/lit/firedb/"
+    xmlns:lode_void="http://ecowlim.tfri.gov.tw/lode/resource/void/"
+    xmlns:eco="http://ecowlim.tfri.gov.tw/lode/resource/eco/"
+    xmlns:firedb="http://ecowlim.tfri.gov.tw/lode/resource/firedb/"
+    xmlns:d2r="http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#"
+    xmlns:scovo="http://purl.org/NET/scovo#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ucum_area="http://purl.oclc.org/NET/muo/ucum/unit/area/"
+    xmlns:flyhorse="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/"
+    xmlns:taibnet="http://ecowlim.tfri.gov.tw/lode/resource/taibnet/"
+    xmlns:dbpowl="http://dbpedia.org/ontology/"
+    xmlns:ucum_length="http://purl.oclc.org/NET/muo/ucum/unit/length/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <rdf:Description rdf:about="http://ecowlim.tfri.gov.tw/lode/data/flyhorse/Specimen/5023?output=xml">
+    <rdfs:label>RDF description of Flyhorse DB Insect Specimen #5023</rdfs:label>
+    <foaf:primaryTopic>
+      <owl:Thing rdf:about="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023">
+        <foaf:depiction>http://fact.tfri.gov.tw/smec/TFRI/m_images/00013880.jpg</foaf:depiction>
+        <geo:location rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Prestray/33L1-11"/>
+        <dwc:identifiedBy xml:lang="en">W. Hwang</dwc:identifiedBy>
+        <eco:collectedInEvent>
+          <rdf:Description rdf:about="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/CollectingEvent/1002">
+            <event:product rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023"/>
+            <event:hasProduct rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023"/>
+          </rdf:Description>
+        </eco:collectedInEvent>
+        <dwc:identifiedBy xml:lang="zh-tw">黃文伯</dwc:identifiedBy>
+        <flyhorse:dateIdentified rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2004-03-19"/>
+        <eco:inPreservationTray rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Prestray/33L1-11"/>
+        <eco:dateTime rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2004-03-19"/>
+        <rdf:type rdf:parseType="Resource">
+          <rdfs:seeAlso rdf:resource="http://ecowlim.tfri.gov.tw/lode/pathdata/rdf:type/flyhorse/Specimen/5023"/>
+        </rdf:type>
+        <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <dwc:maximumElevationInMeters rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >0</dwc:maximumElevationInMeters>
+        <eco:isSampleOfSpecies>
+          <rdf:Description rdf:about="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Species/Papilio_bianor_takasago">
+            <eco:hasSample rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023"/>
+            <flyhorse:hasSample rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023"/>
+          </rdf:Description>
+        </eco:isSampleOfSpecies>
+        <eco:identifiedBy rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Person/W.Hwang"/>
+        <flyhorse:identifiedBy rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Person/W.Hwang"/>
+        <eco:dateTime rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2006-07-11"/>
+        <dwc:country xml:lang="en">Taiwan</dwc:country>
+        <dwc:recordedBy xml:lang="zh-tw">張玉珍</dwc:recordedBy>
+        <eco_lit:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1985-07-25</eco_lit:dateTime>
+        <flyhorse:inPreservationTray rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Prestray/33L1-11"/>
+        <flyhorse:changedDate rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2006-07-11"/>
+        <rdfs:label>Flyhorse DB Insect Specimen #5023</rdfs:label>
+        <dwc:locality xml:lang="en">Yangmingshan</dwc:locality>
+        <dwc:dateIdentified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >2004-03-19</dwc:dateIdentified>
+        <flyhorse:recordedBy rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Person/Y.C.Chang"/>
+        <dwc:minimumElevationInMeters rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+        >0</dwc:minimumElevationInMeters>
+        <eco:recordedBy rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Person/Y.C.Chang"/>
+        <dwc:country xml:lang="zh-tw">中華民國台灣</dwc:country>
+        <dwc:recordedBy xml:lang="en">Y. C. Chang</dwc:recordedBy>
+        <foaf:based_near rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Prestray/33L1-11"/>
+        <event:producedIn rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/CollectingEvent/1002"/>
+        <flyhorse:isSampleOfSpecies rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Species/Papilio_bianor_takasago"/>
+        <eco:dateIdentified rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2004-03-19"/>
+        <flyhorse:collectedInEvent rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/CollectingEvent/1002"/>
+        <eco_lit:dateCollected rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1985-07-25</eco_lit:dateCollected>
+        <rdf:type rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/eco/Specimen"/>
+        <rdf:type rdf:resource="http://purl.org/NET/c4dm/event.owl#Product"/>
+        <dwc:county xml:lang="en">Taipei City</dwc:county>
+        <rdf:type rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen"/>
+        <dwc:locality xml:lang="zh-tw">陽明山</dwc:locality>
+        <rdf:type rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <flyhorse_lit:spcmID xml:lang="en">5023</flyhorse_lit:spcmID>
+        <dwc:county xml:lang="zh-tw">台北市</dwc:county>
+        <event:produced_in rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/CollectingEvent/1002"/>
+        <flyhorse_lit:dateCollected rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+        >1985-07-25</flyhorse_lit:dateCollected>
+        <eco:location rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Prestray/33L1-11"/>
+        <flyhorse_lit:localityCode xml:lang="en">TC13</flyhorse_lit:localityCode>
+        <flyhorse_lit:countyCode xml:lang="en">TC</flyhorse_lit:countyCode>
+        <eco:changedDate rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2006-07-11"/>
+      </owl:Thing>
+    </foaf:primaryTopic>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://ecowlim.tfri.gov.tw/lode/resource/void/Dataset">
+    <void:exampleResource rdf:resource="http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023"/>
+  </rdf:Description>
+</rdf:RDF>
+}}}
+
+In RDF/Turtle:
+{{{
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix muo: <http://purl.oclc.org/NET/muo/muo#>.
+@prefix geospecies: <http://rdf.geospecies.org/ont/geospecies#>.
+@prefix fdp: <http://ecowlim.tfri.gov.tw/lode/resource/fdp/>.
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
+@prefix taif: <http://ecowlim.tfri.gov.tw/lode/resource/taif/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dbp_void: <http://dbpedia.org/void/>.
+@prefix taif_lit: <http://ecowlim.tfri.gov.tw/lode/resource/lit/taif/>.
+@prefix dc: <http://purl.org/dc/terms/>.
+@prefix eco_lit: <http://ecowlim.tfri.gov.tw/lode/resource/lit/eco/>.
+@prefix prv: <http://purl.org/net/provenance/ns#>.
+@prefix fdp_lit: <http://ecowlim.tfri.gov.tw/lode/resource/lit/fdp/>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix dbpprop: <http://dbpedia.org/property/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix flyhorse_lit: <http://ecowlim.tfri.gov.tw/lode/resource/lit/flyhorse/>.
+@prefix id: <http://purl.org/twc/ontologies/identity.owl#>.
+@prefix event: <http://purl.org/NET/c4dm/event.owl#>.
+@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#>.
+@prefix protons: <http://proton.semanticweb.org/2005/04/protons#>.
+@prefix taibnet_lit: <http://ecowlim.tfri.gov.tw/lode/resource/lit/taibnet/>.
+@prefix time: <http://www.w3.org/2006/time#>.
+@prefix dbpedia: <http://dbpedia.org/resource/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix firedb_lit: <http://ecowlim.tfri.gov.tw/lode/resource/lit/firedb/>.
+@prefix lode_void: <http://ecowlim.tfri.gov.tw/lode/resource/void/>.
+@prefix eco: <http://ecowlim.tfri.gov.tw/lode/resource/eco/>.
+@prefix firedb: <http://ecowlim.tfri.gov.tw/lode/resource/firedb/>.
+@prefix d2r: <http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#>.
+@prefix scovo: <http://purl.org/NET/scovo#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix ucum_area: <http://purl.oclc.org/NET/muo/ucum/unit/area/>.
+@prefix flyhorse: <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/>.
+@prefix taibnet: <http://ecowlim.tfri.gov.tw/lode/resource/taibnet/>.
+@prefix dbpowl: <http://dbpedia.org/ontology/>.
+@prefix ucum_length: <http://purl.oclc.org/NET/muo/ucum/unit/length/>.
+
+<http://ecowlim.tfri.gov.tw/lode/data/flyhorse/Specimen/5023?output=xml> 
+	rdfs:label "RDF description of Flyhorse DB Insect Specimen #5023";
+	foaf:primaryTopic <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023>.
+<http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/CollectingEvent/1002> 
+	event:hasProduct <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023>;
+	event:product <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023>.
+<http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Species/Papilio_bianor_takasago> 
+	eco:hasSample <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023>;
+	flyhorse:hasSample <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023>.
+<http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023> 
+	eco:changedDate <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2006-07-11>;
+	eco:collectedInEvent <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/CollectingEvent/1002>;
+	eco:dateIdentified <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2004-03-19>;
+	eco:dateTime <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2004-03-19>,
+	           <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2006-07-11>;
+	eco:identifiedBy <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Person/W.Hwang>;
+	eco:inPreservationTray <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Prestray/33L1-11>;
+	eco:isSampleOfSpecies <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Species/Papilio_bianor_takasago>;
+	eco:location <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Prestray/33L1-11>;
+	eco:recordedBy <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Person/Y.C.Chang>;
+	flyhorse:changedDate <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2006-07-11>;
+	flyhorse:collectedInEvent <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/CollectingEvent/1002>;
+	flyhorse:dateIdentified <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Date/2004-03-19>;
+	flyhorse:identifiedBy <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Person/W.Hwang>;
+	flyhorse:inPreservationTray <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Prestray/33L1-11>;
+	flyhorse:isSampleOfSpecies <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Species/Papilio_bianor_takasago>;
+	flyhorse:recordedBy <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Person/Y.C.Chang>;
+	eco_lit:dateCollected "1985-07-25"^^xsd:date;
+	eco_lit:dateTime "1985-07-25"^^xsd:date;
+	flyhorse_lit:countyCode "TC"@en;
+	flyhorse_lit:dateCollected "1985-07-25"^^xsd:date;
+	flyhorse_lit:localityCode "TC13"@en;
+	flyhorse_lit:spcmID "5023"@en;
+	event:producedIn <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/CollectingEvent/1002>;
+	event:produced_in <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/CollectingEvent/1002>;
+	dwc:country "Taiwan"@en,
+	          "中華民國台灣"@zh-tw;
+	dwc:county "Taipei City"@en,
+	         "台北市"@zh-tw;
+	dwc:dateIdentified "2004-03-19"^^xsd:date;
+	dwc:identifiedBy "W. Hwang"@en,
+	               "黃文伯"@zh-tw;
+	dwc:locality "Yangmingshan"@en,
+	           "陽明山"@zh-tw;
+	dwc:maximumElevationInMeters "0"^^xsd:float;
+	dwc:minimumElevationInMeters "0"^^xsd:float;
+	dwc:recordedBy "Y. C. Chang"@en,
+	             "張玉珍"@zh-tw;
+	a [rdfs:seeAlso <http://ecowlim.tfri.gov.tw/lode/pathdata/rdf:type/flyhorse/Specimen/5023>],
+	eco:Specimen,
+	flyhorse:Specimen,
+	event:Product,
+	rdfs:Resource,
+	owl:Thing,
+	geo:SpatialThing;
+	rdfs:label "Flyhorse DB Insect Specimen #5023";
+	geo:location <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Prestray/33L1-11>;
+	foaf:based_near <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Prestray/33L1-11>;
+	foaf:depiction "http://fact.tfri.gov.tw/smec/TFRI/m_images/00013880.jpg".
+lode_void:Dataset void:exampleResource <http://ecowlim.tfri.gov.tw/lode/resource/flyhorse/Specimen/5023>.
+}}}
