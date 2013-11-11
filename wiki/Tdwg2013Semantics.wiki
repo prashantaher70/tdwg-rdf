@@ -53,9 +53,7 @@ RDF. Joel Sachs
 
 09:11 AM - 09:20 AM 496. [http://www.tdwg.org/fileadmin/2013conference/slides/Baskauf_Darwin-SW.pdf USING DARWIN-SW TO ANSWER QUESTIONS ABOUT BIODIVERSITY RESOURCES]. Steven Baskauf, Campbell Webb
 
-09:20 AM - 09:33 AM 501. LINKING BIODIVERSITY DATA WITH THE BIOLOGICAL
-COLLECTIONS ONTOLOGY. Ramona Walls, John Deck, Robert
-Guralnick, John Wieczorek
+09:20 AM - 09:33 AM 501. [http://youtu.be/j37IH9PIeaA LINKING BIODIVERSITY DATA WITH THE BIOLOGICAL COLLECTIONS ONTOLOGY]. Ramona Walls, John Deck, Robert Guralnick, John Wieczorek
 
 09:33 AM - 09:39 AM 504. [http://www.tdwg.org/fileadmin/2013conference/slides/Guralnick_SpeciesInventory.pptx A NEW METADATA CHECKLIST FOR DESCRIBING SPECIES INVENTORY COMPLETENESS]. Rob Guralnick, Ramona Walls, Walter Jetz
 
