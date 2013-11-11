@@ -23,10 +23,7 @@ Webb, Mark Schildhauer
 
 03:08 PM - 03:17 PM 480. [http://www.tdwg.org/fileadmin/2013conference/slides/Heidorn-Chong_SemanticKnowledgeStores4.pptx THE INGEST AND USES OF SPECIMEN LABEL DATA INTO SEMANTIC KNOWLEDGE STORES]. Bryan Heidorn, Steven Chong
 
-03:17 PM - 03:26 PM 481. SEMANTECO ANNOTATOR FOR LINKED DATA GENERATION
-AND GENERALIZED SEMANTIC MAPPING. Patrice Seyed, Katherine
-Chastain, Brendan Ashby, Yue Liu, Timothy Lebo, Evan Patton,
-Deborah McGuinness
+03:17 PM - 03:26 PM 481. [http://www.tdwg.org/fileadmin/2013conference/slides/Seyed_SemantEcoAnnotator.ppt SEMANTECO ANNOTATOR FOR LINKED DATA GENERATION AND GENERALIZED SEMANTIC MAPPING]. Patrice Seyed, Katherine Chastain, Brendan Ashby, Yue Liu, Timothy Lebo, Evan Patton, Deborah McGuinness
 
 03:35 PM - 03:44 PM 335. [http://www.tdwg.org/fileadmin/2013conference/slides/Morris_SemanticMatchingInterestsAnnotations.pdf SEMANTIC MATCHING OF INTERESTS TO ANNOTATIONS WITH SPARQL QUERIES ON REASONED TRIPLES]. Paul J Morris, James Hanken, Maureen Kelly, David Lowery, Bertram Ludäscher, James A. Macklin, Robert A Morris, Tianhong Song
 
