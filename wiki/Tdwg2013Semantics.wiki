@@ -15,9 +15,7 @@ Organizers: Benjamin Adams, John Deck, Mark Schildhauer
 02:32 PM - 02:41 PM 493. [http://www.tdwg.org/fileadmin/2013conference/slides/baskauf_DwcRdfGuide.pdf AN RDF GUIDE FOR THE TDWG DARWIN CORE STANDARD]. Steven Baskauf, John Wieczorek, John Deck, Campbell
 Webb, Mark Schildhauer
 
-02:41 PM - 02:50 PM 485. BUILDING A BIODIVERSITY INFORMATION NETWORK USING
-PERSISTENT, RESOLVABLE IDENTIFIERS. John Deck, Robert
-Guralnick, John Kunze
+02:41 PM - 02:50 PM 485. [http://www.tdwg.org/fileadmin/2013conference/slides/Deck_IdentifiersForAGlobalBiodiversityNetwork.pdf BUILDING A BIODIVERSITY INFORMATION NETWORK USING PERSISTENT, RESOLVABLE IDENTIFIERS]. John Deck, Robert Guralnick, John Kunze
 
 02:50 PM - 02:59 PM 477. [http://www.tdwg.org/fileadmin/2013conference/slides/Gloeckler_Semantics4CollectionData.pdf SEMANTIC APPROACH FOR COLLECTION DATA VIA OPEN DATA WEBS INSTEAD OF CLOSED SYSTEMS]. Falko Glöckler, Alexander Kroupa, Anton Güntsch, Gregor Hagedorn
 
