@@ -4,7 +4,7 @@
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 13 Oct 2013
+*Date:* (Created) 17 February 2012; (Last modified) 13 Nov 2013
 
 *Document Status:* Not part of any standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 3] document)
 
@@ -76,6 +76,8 @@ A PowerPoint presentation for an RDF Primer session at TDWG 2013 is [http://tdwg
 [http://tools.ietf.org/html/rfc3986 RFC 3986. Uniform Resource Identifier (URI): Generic Syntax]  ([http://tools.ietf.org/html/rfc3986#section-1.2.2 section 1.2.2. defining "dereference", "resolution", and "representation"])
 
 [http://tools.ietf.org/html/rfc3987 RFC 3987. Internationalized Resource Identifiers (IRIs)]
+
+[http://www.w3.org/TR/curie/ Compact URI (CURIE) Syntax 1.0 W3C Working Group Note]
 
 [http://www.w3.org/TR/cooluris/ Cool URIs for the Semantic Web]
 
