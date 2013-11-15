@@ -10,7 +10,7 @@
 
 ===Contents===
   * [DwCAncillary Cover page for ancillary documents]
-  * [ResourceRelationship Expressing Darwin Core ResourceRelationship Terms as RDF]
+  * [ResourceRelationship Expressing Darwin Core ResourceRelationship Terms as RDF (vaporware)]
   * [MeasurementOrFact Expressing Darwin Core MeasurementOrFact Terms as RDF (vaporware)]
   * [DynamicProperties Expressing the Darwin Core dwc:dynamicProperties Term as RDF (vaporware)]
   * [TaxonInRDF Describing Taxon Concepts as RDF]
