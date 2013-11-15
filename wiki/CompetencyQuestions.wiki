@@ -29,7 +29,7 @@ Terms in *_bold italic_* represent the GUID that would appear in a query.
   # Find all evidence for *_occurrence_*.
   # Find all evidence to support the identification of *_individual_*
 
-=== Querying biodivesity occurrences based on genomic characters ===
+=== Querying biodiversity occurrences based on genomic characters ===
   # Find all occurrences of taxa whose genome includes a homolog of *_gene_*.
  
 
