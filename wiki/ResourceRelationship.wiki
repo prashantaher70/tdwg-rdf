@@ -3,9 +3,9 @@
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
-=Darwin Core Resource Relationship terms as RDF (draft)=
+=Darwin Core Resource Relationship terms as RDF (vaporware)=
 
-*Date:* (Created) 27 April 2013; (Last modified) 9 October 2013
+*Date:* (Created) 27 April 2013; (Last modified) 15 November 2013
 
 *Status:* Not part of any standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
 
@@ -15,9 +15,13 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 *Contributors:* [mailto:steve.baskauf@vanderbilt.edu?subject=RDFguide Steve Baskauf] (TDWG RDF/OWL Task Group)
 
-*Abstract:* This document shows how to express Darwin Core ResourceRelationship properties as RDF using the Open Annotation Data Model  
+*Abstract:* This document shows how to express Darwin Core ResourceRelationship properties as RDF (vaporware)  
 
 http://i.creativecommons.org/l/by/3.0/88x31.png Licensed under [http://creativecommons.org/licenses/by/3.0/deed Creative Commons Attribution 3.0 License]
+
+= Note: the approach suggested in this document is no longer recommended due to concerns expressed by task group members about use of the Open Annotations model in this way =
+
+* The content has been left here for the record and as a starting point for future discussion on how to handle ResourceRelationship class Darwin Core terms.*
 
 The following namespace abbreviations are used in this document:
 
