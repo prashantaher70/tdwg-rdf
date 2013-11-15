@@ -208,7 +208,6 @@ To facilitate achieving the clarity that RDF makes possible, this guide provides
 ||GeoSciML Geologic Timescale model Ontology||_gsml:_||{{{http://resource.geosciml.org/ontology/timescale/gts-30#}}}||
 ||Virtual International Authority File||_viaf:_||{{{http://viaf.org/viaf/}}}||
 ||Extensible Metadata Platform Rights Management vocabulary||_xmpRights:_||{{{http://ns.adobe.com/xap/1.0/rights/}}}||
-||Open Annotation Data Model||_oa:_||{{{http://www.w3.org/ns/oa#}}}||
 ||RDFa Core 1.1||_xhv:_||{{{http://www.w3.org/1999/xhtml/vocab#}}}||
 
 For brevity, the examples do not include namespace declarations, nor an _rdf:RDF_ container element.  If a user wishes to test or validate an example, insert it into the container element defined in [#2.1.2_Generating_graphical_diagrams_and_triple_tables_for_the_ex Section 2.1.2].
@@ -1139,7 +1138,7 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 ==3.8 Darwin Core terms whose function cannot be duplicated by a dwcuri: object property==
 
 || *Darwin Core term* || *Notes* ||
-||<dl><dt>dwc:relationshipOfResource</dt><dt>dwc:relationshipAccordingTo</dt></dl>||Use the well-known terms _oa:motivatedBy_ and _oa:annotatedBy_ See the [ResourceRelationship informative ancillary web page] for examples.||
+||<dl><dt>dwc:relationshipOfResource</dt><dt>dwc:relationshipAccordingTo</dt></dl>||See the [ResourceRelationship informative ancillary web page] for examples.||
 ||<dl><dt>dwc:measurementType</dt><dt>dwc:measurementValue</dt><dt>dwc:measurementAccuracy</dt><dt>dwc:measurementUnit</dt><dt>dwc:measurementDeterminedDate</dt><dt>dwc:measurementDeterminedBy</dt><dt>dwc:measurementMethod</dt><dt>dwc:measurementRemarks</dt></dl>||See the [MeasurementOrFact informative ancillary web page] for examples.||
 ||dwc:dynamicProperties||See the [DynamicProperties informative ancillary web page] for examples.||
 ||dwc:otherCatalogNumbers||There is no simple mapping because of the kinds of identifiers people use and variety of relationships that there may be among identifiers. _owl:sameAs_ may be used to associate other URI identifiers with the subject URI if this is appropriate.  For string values, use _dwc:otherCatalogNumbers_.||
