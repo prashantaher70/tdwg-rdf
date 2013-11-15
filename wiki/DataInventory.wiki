@@ -12,8 +12,8 @@ In response to [http://lists.tdwg.org/pipermail/tdwg-tag/2011-September/002381.h
 == Biodiversity RDF datasets and other semantic web infrastructure == 
 
   * taxonconcept.org http://www.taxonconcept.org/sparql-endpoint/ This SPARQL endpoint has 23 million triples and includes some other related databases. Queries can be done directly on that endpoint at http://lsd.taxonconcept.org/sparql for a generic web interface and at http://lsd.taxonconcept.org/isparql for a human-friendly interface.  Datasets include the Global Name Index (GNI), DBpedia, geonames, etc. in addition to Pete's taxonconcept.org database.  
-  * Natural Solutions virtuoso triple store: so far we have put in Rod's datasets on frogs.http://82.96.149.133:8890/sparql
-Feel Free to play with the sparql interface.
+  * Natural Solutions virtuoso triple store: so far we have put in Rod's datasets on frogs. http://82.96.149.133:8890/sparql
+Feel Free to play with the SPARQL interface.
 
 ===Specimens at Royal Botanic Garden Edinburgh===
 
@@ -134,7 +134,7 @@ Note: this RDF uses a bit of fanciful Darwin Core (incorrect case, dwc:Collector
 
 ===Specimens in ARCTOS/University of Alaska Museum of the North===
 
-HTTP URIs for specimens such as http://arctos.database.museum/guid/UAM:Ento:230092 which is the same for all specimens in the ARCTOS system.  However, UA Museum of the north also uses DOIs such as http://dx.doi.org/10.7299/X7VQ32SJ which redirect in a browser to the same web page as the ARCTOS HTTP URI.  
+HTTP URIs for specimens such as http://arctos.database.museum/guid/UAM:Ento:230092 which is the same for all specimens in the ARCTOS system.  However, UA Museum of the North also uses DOIs such as http://dx.doi.org/10.7299/X7VQ32SJ which redirect in a browser to the same web page as the ARCTOS HTTP URI.  
 
 Dereferencing the DOI requesting RDF/XML gets:
 {{{
