@@ -42,9 +42,9 @@ Organizers: Luca Matteis, Marie-Angelique Laporte, Elizabeth Armaud
 
 Organizers: John Deck, Nico Franz, Mark Schildhauer, Ramona L. Walls
 
-09:02 AM - 09:11 AM 497. USING DARWIN CORE AS A MODEL: AN ONTOLOGICALLY
+09:02 AM - 09:11 AM 497. [http://www.tdwg.org/fileadmin/2013conference/slides/Sachs_DwC_as_a_Model.pptx] USING DARWIN CORE AS A MODEL: AN ONTOLOGICALLY
 MINIMALIST APPROACH TO PUBLISHING OCCURRENCE DATA IN
-RDF. Joel Sachs
+RDF]. Joel Sachs
 
 09:11 AM - 09:20 AM 496. [http://www.tdwg.org/fileadmin/2013conference/slides/Baskauf_Darwin-SW.pdf USING DARWIN-SW TO ANSWER QUESTIONS ABOUT BIODIVERSITY RESOURCES]. Steven Baskauf, Campbell Webb
 
