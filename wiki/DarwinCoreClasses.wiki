@@ -112,6 +112,8 @@ Kennedy, J.B., R. Kukla, and T. Paterson. 2005. Scientific names are ambiguous a
 
 Pyle, R.L. 2004. Taxonomer: a relational data model for managing information relevant to taxonomic research.  PhyloInformatics 1:1-54.  http://systbio.org/files/phyloinformatics/1.pdf
 
+Franz, N.M. and J. Cardona-Duque. 2013. Description of two new species and phylogenetic reassessment of Perelleschus O’Brien & Wibmer, 1986 (Coleoptera: Curculionidae), with a complete taxonomic concept history of Perelleschus sec. Franz & Cardona-Duque, 2013.  Systematics and Biodiversity 11:209-236. http://dx.doi.org/10.1080/14772000.2013.806371 
+
 ^1^ http://lists.tdwg.org/pipermail/tdwg-content/2010-October/001703.html
 
 ^2^ http://lists.tdwg.org/pipermail/tdwg-content/2010-October/001814.html
