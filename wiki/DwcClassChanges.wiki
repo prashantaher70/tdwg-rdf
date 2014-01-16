@@ -4,6 +4,9 @@
 
 John Wieczorek, Joel Sachs, James Macklin, Markus Döring, Rich Pyle, Tim Robertson, Bob Morris, Hilmar Lapp, and Steve Baskauf.
 
+== Date:==
+2014-01-16
+
 == Justification:==
 
 A number of problems related to classes in Darwin Core were identified and discussed at the Documenting Darwin Core workshop at TDWG 2013.  There was an apparent consensus at the meeting regarding steps that should be taken to fix these problems.  In particular:
