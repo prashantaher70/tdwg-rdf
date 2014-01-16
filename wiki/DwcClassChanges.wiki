@@ -1,0 +1,20 @@
+#summary Summary of proposed Darwin Core class changes
+
+== Submitters: ==
+
+John Wieczorek, Joel Sachs, James Macklin, Markus Döring, Rich Pyle, Tim Robertson, Bob Morris, Hilmar Lapp, and Steve Baskauf.
+
+== Justification==
+
+A number of problems related to classes in Darwin Core were identified and discussed at the Documenting Darwin Core workshop at TDWG 2013.  There was an apparent consensus at the meeting regarding steps that should be taken to fix these problems.  In particular:
+  * Darwin Core classes exist in two namespaces, dwc: (http://rs.tdwg.org/dwc/terms/) and dwctype: (http://rs.tdwg.org/dwc/dwctype/).  In some cases, there are parallel terms in both namespaces.  To reduce confusion when typing resources, all Darwin Core-defined classes should be in a single namespace.
+  * The class definitions contain phrases such as "The category of information pertaining to " and "A resource describing " which make it unclear what entities should be considered instances of those classes.  The class definitions should define the types of the entities themselves and not categories or records related to the entities.
+  * Some class definitions are unclear, e.g. are circular or contain ambiguous terms.  Class definitions should be clear enough that users will know what entities should be included in the class.
+  * Concerns about the inclusion of an "Individual" or "Organism" class (Issue 69) seemed to have been allayed and an adequate constituency felt that its inclusion in Darwin Core would be beneficial and would help in clarifying the definitions of some of the ambiguous classes.
+
+An ad hoc group (the submitters of this issue) volunteered or were drafted to turn this consensus into concrete proposals for clarifying the Darwin Core class terms.  That group proposes the following general changes to address the problems identified above:  
+  # All Darwin Core-defined class terms will be defined in the http://rs.tdwg.org/dwc/terms/ (dwc:) namespace.
+  # dcterms:Location, which is imported into Darwin Core from Dublin Core will continue to be used as a class in Darwin Core.
+  # The terms in the http://rs.tdwg.org/dwc/dwctype/ (dwctype:) namespace, which are all class terms, will be deprecated.  dwc: namespace analogues will be created for any dwctype: classes that don't already have analogues.  This deprecation includes no longer importing dcmitype:Event (http://purl.org/dc/dcmitype/Event), whose definition is confusing in the presence of an Occurrence class.  
+  # Issue 69 will be resolved by the addition of the dwc:Organism class (http://rs.tdwg.org/dwc/terms/Organism).
+5. Each class term definition will be modified so that it defines the entities included in the class rather that a "category" or data record about the entity.  This generally means removing the phrases "The category of information pertaining to " and "A resource describing " from the definition.
