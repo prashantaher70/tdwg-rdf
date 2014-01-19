@@ -10,7 +10,7 @@ In addition to classes within Darwin Core, the following classes from the Dublin
 
 <dl><dt>_dcmitype:StillImage_</dt><dt>_dcmitype:MovingImage_</dt><dt>_dcmitype:Sound_</dt><dt>_dcmitype:PhysicalObject_</dt></dl>
 
-As of the writing of this guide, there are no rigorously defined classes for taxon concepts and taxon names as they are described in the TDWG Taxon Concept Transfer Schema (TCS) Standard (although the class dwc:Taxon approximates a taxon concept).  As of the writing of this guide, there is not yet guidance for using property terms from a ratified TDWG standard to construct descriptions of taxon concepts.  When such descriptions are available, the term _dwcuri:toTaxonConcept_ may be used to link to them.  Until that time, Darwin Core convenience terms listed under the _dwc:Taxon_ class may be used as properties of _dwc:Identification_ instances to facilitate searching ([#2.7.4_Description_of_a_taxonomic_entity Section 2.7.4]).
+As of the writing of this guide, there are no rigorously defined classes for taxon concepts and taxon names as they are described in the TDWG Taxon Concept Transfer Schema Standard  [http://www.tdwg.org/standards/117/ TCS] (although the class _dwc:Taxon_ approximates a taxon concept).  As of the writing of this guide, there is not yet guidance for using property terms from a ratified TDWG standard to construct descriptions of taxon concepts.  When such descriptions are available, the term _dwcuri:toTaxonConcept_ may be used to link to them.  Until that time, Darwin Core convenience terms listed under the _dwc:Taxon_ class may be used as properties of _dwc:Identification_ instances to facilitate searching ([#2.7.4_Description_of_a_taxonomic_entity Section 2.7.4]).
 
 
 ==Additional changes==
