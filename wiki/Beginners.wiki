@@ -126,6 +126,12 @@ Thanks to Rod Page and Chris Freeland for this information.
 
 [http://www.w3.org/TR/rdf-syntax-grammar/ RDF/XML Syntax Specification (normative)]
 
+[http://www.w3.org/TR/turtle/ Terse RDF Triple Language (Turtle)]
+
+[http://www.w3.org/TR/rdfa-syntax/ RDFa Core 1.1]
+
+[http://www.w3.org/TR/json-ld/ JSON-LD JSON-based Serialization for Linked Data]
+
 [http://www.w3.org/TR/rdf-mt/ RDF Semantics (normative)]
 
 [http://www.w3.org/TR/rdf-schema/ RDF Vocabulary Description Language 1.0: RDF Schema (RDFS)]
