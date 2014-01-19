@@ -1,5 +1,6 @@
 #summary Proposed revisions to the RDF Guide based on class proposal.
 
+==Major revision of Section 2.3.1.5 caused by class proposal==
 ====2.3.1.5 Classes to be used for type declarations of resources described using Darwin Core====
 
 The TDWG GUID Applicability Statement standard [http://www.tdwg.org/standards/150/ GUID-STANDARD] specifies that an object in the biodiversity domain that is identified by a GUID should be typed using a well-known vocabulary. With this recommendation in mind, it should be considered a best practice to provide information about the type (i.e. class membership) of any resource that is assigned a persistent identifier in the form of a URI.  Since Darwin Core is a well-known vocabulary and a ratified TDWG standard, its classes should be used for typing in preference to classes in parts of the TDWG ontology which are not ratified standards.  This guide does not specify what specific kinds of resources should be included within particular Darwin Core classes since that is a matter for community consensus ([#1.4.4_Limitations_of_this_guide Section 1.4.4]).
