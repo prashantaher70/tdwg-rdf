@@ -6,6 +6,8 @@
 
 * This is a draft submission under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy].  To view comments made by the RDF Task Group, view [https://docs.google.com/document/d/1OLyVFuveGX1a0Yt6Niok9FfGxkrghii-xlGYhwO8UqE/edit?usp=sharing this Google document].*  
 
+*Possible errata:* invalid rdf:datatype="http://purl.org/dc/terms/URI" attributes
+
 *Title:* Darwin Core RDF Guide
 
 *Date issued:* x
