@@ -1,5 +1,7 @@
 #summary Proposed revisions to the RDF Guide based on class proposal.
 
+See [DwcClassChanges this page] for a summary of the proposed changese.
+
 ==Major revision of Section 2.3.1.5 caused by class proposal==
 ====2.3.1.5 Classes to be used for type declarations of resources described using Darwin Core====
 
