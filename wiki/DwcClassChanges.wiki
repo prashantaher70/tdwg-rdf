@@ -9,6 +9,8 @@ John Wieczorek, Joel Sachs, James Macklin, Markus Döring, Rich Pyle, Tim Robert
 
 == Justification:==
 
+This material is taken from [http://code.google.com/p/darwincore/issues/detail?id=204 Issue 204] of the Darwin Core Issue Tracker.
+
 A number of problems related to classes in Darwin Core were identified and discussed at the Documenting Darwin Core workshop at TDWG 2013.  There was an apparent consensus at the meeting regarding steps that should be taken to fix these problems.  In particular:
   * Darwin Core classes exist in two namespaces, {{{dwc:}}} ({{{http://rs.tdwg.org/dwc/terms/}}}) and {{{dwctype:}}} ({{{http://rs.tdwg.org/dwc/dwctype/}}}).  In some cases, there are parallel terms in both namespaces.  To reduce confusion when typing resources, all Darwin Core-defined classes should be in a single namespace.
   * The class definitions contain phrases such as "The category of information pertaining to " and "A resource describing " which make it unclear what entities should be considered instances of those classes.  The class definitions should define the types of the entities themselves and not categories or records related to the entities.
