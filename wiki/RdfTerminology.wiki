@@ -73,8 +73,8 @@ The object of the triple:
   * is a URI.
   * is a URI reference.
   * is a node.
-  * denotes the place named named "Contra Costa County, California".
-  * identifies the place named named "Contra Costa County, California". 
+  * denotes the place named "Contra Costa County, California".
+  * identifies the place named "Contra Costa County, California". 
 ----
 The object of the triple:
 {{{
