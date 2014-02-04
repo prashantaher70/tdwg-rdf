@@ -31,4 +31,4 @@ The normative sections 5 and 6 of the rdf-concepts document define these terms m
   * URIs identify resources and properties.  A URI reference (a.k.a. URI) used as a node identifies what the node represents.  A URI reference used as a predicate identifies a relationship.  
   * A typed literal denotes a member of the identified datype's value space (i.e., a literal typed as xsd:integer denotes an integer number)
   * An untyped literal is self-denoting (i.e., it denotes the text that it consists of)
-  * A blank node denotes a related resource that is unnamed (does not have a URI or literal value).
+  * A blank node denotes a related resource that is unnamed (because the node does not have a URI or literal value).
