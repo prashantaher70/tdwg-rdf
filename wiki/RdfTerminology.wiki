@@ -52,7 +52,9 @@ _:bnode1
 == Statements about the example==
 The URI <http://sws.geonames.org/5339268/> is composed of 32 characters.
 
-The URI <http://sws.geonames.org/5339268/> is the object of a triple and is a URI reference.
+The URI <http://sws.geonames.org/5339268/> is the object of a triple.
+
+The URI <http://sws.geonames.org/5339268/> is a URI reference.
 
 The URI <http://sws.geonames.org/5339268/> identifies the place named "Contra Costa County, California".
 
