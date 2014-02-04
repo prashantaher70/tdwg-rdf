@@ -83,7 +83,7 @@ The object of the triple:
   * is a literal.
   * is a typed literal.
   * is a node.
-  * denotes the integer number.
+  * denotes an integer number.
 ----
 The object of the triple:
 {{{
