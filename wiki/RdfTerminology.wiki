@@ -108,4 +108,17 @@ The predicate of the triple:
 }}}
   * is a property.
   * is a URI.
+----
+{{{
+_:bnode1 dsw:locatedAt <http://bioimages.vanderbilt.edu/baskauf/67045#loc>.
+}}}
+  * is an RDF triple.
+  * has a subject that is a blank node.
+  * has a predicate that is a URI.
+  * has an object that is a URI.
+  * has an object that is a URI reference.
+  * has a subject that denotes an event.
+  * has an object that denotes a location.  
+  * represents a statement of the relationship between an event and a location.
+
   
