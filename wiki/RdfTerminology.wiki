@@ -70,6 +70,7 @@ The object of the triple:
 }}}
   * is a URI.
   * is a URI reference.
+  * is a node.
   * denotes the place named named "Contra Costa County, California".
   * identifies the place named named "Contra Costa County, California". 
 ----
@@ -79,6 +80,7 @@ The object of the triple:
 }}}
   * is a literal.
   * is a typed literal.
+  * is a node.
   * denotes the integer number.
 ----
 The object of the triple:
@@ -87,6 +89,7 @@ The object of the triple:
 }}}
   * is a literal.
   * is an untyped literal.
+  * is a node.
   * denotes two unicode characters.
 ----
 The subject of the triple:
@@ -96,3 +99,11 @@ _:bnode1 dwc:eventDate "2008-07-20T17:17:41-07:00"^^xsd:dateTime.
   * is a blank node.
   * denotes an event that happened at 5:17:41 Pacific Daylight time on 20 July 2008.
   * is not identified.
+----
+The predicate of the triple: 
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/67045#loc> dwc:countryCode "US".
+}}}
+  * is a property.
+  * is a URI.
+  
