@@ -22,7 +22,6 @@ The normative sections 5 and 6 of the rdf-concepts document define these terms m
 
 =Conclusions=
   # URIs are a sequence of characters that identify resources (things, entities).
-
   # "URI" and "URI reference" and "URIref" mean the same thing.
   # An RDF triple has "subject","predicate", and "object" as parts.  "Subject" and "object" are "nodes".  
   # An RDF triple represents a statement of a relationship between resources (things, entities) between the nodes it links. 
