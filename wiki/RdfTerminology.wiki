@@ -24,7 +24,7 @@ The normative sections 5 and 6 of the rdf-concepts document define these terms m
   # URIs are a sequence of characters that identify resources (things, entities).
   # "URI" and "URI reference" and "URIref" mean the same thing.
   # An RDF triple has "subject","predicate", and "object" as parts.  "Subject" and "object" are "nodes".  
-  # An RDF triple represents a statement of a relationship between resources (things, entities) between the nodes it links. 
+  # An RDF triple represents a statement of a relationship between resources (things, entities) denoted by the nodes it links. 
   # The various RDF triple parts can be: URIs (almost always referred to as "URI references" in the context of triples), typed literals, untyped literals, and blank nodes.  Subjects and predicates are restricted to subsets of these.
   # URIs identify resources.  URIs used as nodes denote related resources.  URIs used as predicates denote relationships.  "identify" and "denote" are both used to indicate the relationship between URIs and resources.  "represents" is also used.
   # The kinds of triple parts denote various things:
