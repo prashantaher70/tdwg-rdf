@@ -114,7 +114,7 @@ _:bnode1 dsw:locatedAt <http://bioimages.vanderbilt.edu/baskauf/67045#loc>.
 }}}
   * is an RDF triple.
   * has a subject that is a blank node.
-  * has a subject that is a URI reference.
+  * has a subject that is a unidentified.
   * has a predicate that is a URI.
   * has an object that is a URI.
   * has an object that is a URI reference.
