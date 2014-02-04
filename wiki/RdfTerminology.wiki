@@ -58,12 +58,12 @@ The URI <http://sws.geonames.org/5339268/> identifies the place named "Contra Co
 
 The URI <http://sws.geonames.org/5339268/> denotes the place named "Contra Costa County, California".
 
-The blank node _:bnode1 denotes an event that happened at 5:17:41 Pacific Daylight time on 20 July 2008.
+The blank node {{{_:bnode1}}} denotes an event that happened at 5:17:41 Pacific Daylight time on 20 July 2008.
 
 The typed literal "190"^^xsd:int denotes the integer number whose value is 190.
 
 The untyped literal "US" denotes the sequence of unicode characters "U" and "S".  
-
+----
 The object of the triple:
 {{{
 <http://bioimages.vanderbilt.edu/baskauf/67045#loc> dwcuri:inDescribedPlace <http://sws.geonames.org/5339268/>.
@@ -72,7 +72,7 @@ The object of the triple:
   * is a URI reference.
   * denotes the place named named "Contra Costa County, California".
   * identifies the place named named "Contra Costa County, California". 
-
+----
 The object of the triple:
 {{{
 <http://bioimages.vanderbilt.edu/baskauf/67045#loc> dwc:minimumElevationInMeters "190"^^xsd:int.
@@ -80,7 +80,7 @@ The object of the triple:
   * is a literal.
   * is a typed literal.
   * denotes the integer number.
-
+----
 The object of the triple:
 {{{
 <http://bioimages.vanderbilt.edu/baskauf/67045#loc> dwc:countryCode "US".
@@ -88,7 +88,7 @@ The object of the triple:
   * is a literal.
   * is an untyped literal.
   * denotes two unicode characters.
-
+----
 The subject of the triple:
 {{{
 _:bnode1 dwc:eventDate "2008-07-20T17:17:41-07:00"^^xsd:dateTime.
