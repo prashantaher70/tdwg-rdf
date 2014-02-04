@@ -98,6 +98,7 @@ The subject of the triple:
 {{{
 _:bnode1 dwc:eventDate "2008-07-20T17:17:41-07:00"^^xsd:dateTime.
 }}}
+  * is a node.
   * is a blank node.
   * denotes an event that happened at 5:17:41 Pacific Daylight time on 20 July 2008.
   * is not identified.
