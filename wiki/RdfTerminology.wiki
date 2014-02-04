@@ -20,6 +20,8 @@ The normative sections 5 and 6 of the rdf-concepts document define these terms m
 
 {{{[3]}}} http://www.w3.org/TR/2004/REC-rdf-mt-20040210/#urisandlit
 
+[http://lists.w3.org/Archives/Public/public-rdf-comments/2013Oct/0096.html An email discussing the distinction between "identifies" and "denotes"]
+
 =Conclusions=
   # URIs are a sequence of characters that identify resources (things, entities).
   # "URI" and "URI reference" and "URIref" mean the same thing.
@@ -32,3 +34,65 @@ The normative sections 5 and 6 of the rdf-concepts document define these terms m
   * A typed literal denotes a member of the identified datype's value space (i.e., a literal typed as xsd:integer denotes an integer number)
   * An untyped literal is self-denoting (i.e., it denotes the text that it consists of)
   * A blank node denotes a related resource that is unnamed (because the node does not have a URI or literal value).
+
+=Example =
+==RDF/Turtle snippet==
+
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/67045#loc>
+     a dcterms:Location;
+     dwc:countryCode "US";
+     dwc:minimumElevationInMeters "190"^^xsd:int;
+     dwcuri:inDescribedPlace <http://sws.geonames.org/5339268/>.
+_:bnode1
+     a dwc:Event;
+     dwc:eventDate "2008-07-20T17:17:41-07:00"^^xsd:dateTime;
+     dsw:locatedAt <http://bioimages.vanderbilt.edu/baskauf/67045#loc>.
+}}}
+== Statements about the example==
+The URI <http://sws.geonames.org/5339268/> is composed of 32 characters.
+
+The URI <http://sws.geonames.org/5339268/> is the object of a triple and is a URI reference.
+
+The URI <http://sws.geonames.org/5339268/> identifies the place named "Contra Costa County, California".
+
+The URI <http://sws.geonames.org/5339268/> denotes the place named "Contra Costa County, California".
+
+The blank node _:bnode1 denotes an event that happened at 5:17:41 Pacific Daylight time on 20 July 2008.
+
+The typed literal "190"^^xsd:int denotes the integer number whose value is 190.
+
+The untyped literal "US" denotes the sequence of unicode characters "U" and "S".  
+
+The object of the triple:
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/67045#loc> dwcuri:inDescribedPlace <http://sws.geonames.org/5339268/>.
+}}}
+  * is a URI.
+  * is a URI reference.
+  * denotes the place named named "Contra Costa County, California".
+  * identifies the place named named "Contra Costa County, California". 
+
+The object of the triple:
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/67045#loc> dwc:minimumElevationInMeters "190"^^xsd:int.
+}}}
+  * is a literal.
+  * is a typed literal.
+  * denotes the integer number.
+
+The object of the triple:
+{{{
+<http://bioimages.vanderbilt.edu/baskauf/67045#loc> dwc:countryCode "US".
+}}}
+  * is a literal.
+  * is an untyped literal.
+  * denotes two unicode characters.
+
+The subject of the triple:
+{{{
+_:bnode1 dwc:eventDate "2008-07-20T17:17:41-07:00"^^xsd:dateTime.
+}}}
+  * is a blank node.
+  * denotes an event that happened at 5:17:41 Pacific Daylight time on 20 July 2008.
+  * is not identified.
