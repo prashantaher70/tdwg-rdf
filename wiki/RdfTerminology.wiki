@@ -2,7 +2,7 @@
 
 = Introduction =
 
-This was instigated by a thread on the RDF TG mailing list under the subject line: "[tdwg-rdf: 316] What is the meaning of the object of a triple?"
+This was instigated by a thread on the RDF TG mailing list under the subject line: "{{{[tdwg-rdf: 316]}}} [https://groups.google.com/d/msg/tdwg-rdf/2Ahae48_myg/F4FDMcMBoPQJ What is the meaning of the object of a triple?]"
 
 = Quotes from RFC 3986 (the URI spec) and W3C recs on RDF =
 
