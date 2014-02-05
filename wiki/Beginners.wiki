@@ -150,6 +150,8 @@ Thanks to Rod Page and Chris Freeland for this information.
 
 [http://www.w3.org/QA/2010/07/new_opportunities_for_linked_d.html Proposal for linking metadata to the web pages they describe]
 
+Information about the draft Shape Expressions language for validating RDF [http://www.w3.org/2013/ShEx/Primer Shape Expressions primer] [http://www.w3.org/2013/ShEx/Definition Shape Expressions definition]
+
 ===0.3.3. Related to the Dublin Core Metadata Initiative (DCMI) Abstract Model===
 [http://dublincore.org/documents/abstract-model/ DCMI Abstract Model (DCAM) specification]   ([http://dublincore.org/documents/abstract-model/#sect-5 Relationship between DCAM and RDFS])
 
