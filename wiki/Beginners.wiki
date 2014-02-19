@@ -4,7 +4,7 @@
 
 =Beginner's Guide to RDF=
 
-*Date:* (Created) 17 February 2012; (Last modified) 15 Feb 2014
+*Date:* (Created) 17 February 2012; (Last modified) 19 Feb 2014
 
 *Document Status:* Not part of any standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 3] document)
 
@@ -61,6 +61,8 @@ A beginner who wants to gain a basic understanding of RDF and OWL should start w
 
 ==0.3 Significant documents, tools, and RDF implementations==
 The mention of any document or tool in this guide does not imply the endorsement of TDWG or the RDF/OWL TG.  (The exception to this is ratified [http://www.tdwg.org/standards/ TDWG standards] which are official recommendations of TDWG.)  The referenced items below are simply ones which have been found to be helpful.  The lists are not exhaustive; resources may be added when discovered or removed if they cease to be available.  
+
+An important general reference is [http://www.w3.org/TR/webarch/ Architecture of the World Wide Web], a W3C Recommendation.
 
 The document [http://linkeddatabook.com/book Linked Data: Evolving the Web into a Global Data Space] provides a general overview of Linked Data issues and implementation strategies.
 
