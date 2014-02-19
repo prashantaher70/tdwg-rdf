@@ -104,6 +104,8 @@ You can test the above examples to see what happens.
 
 
 = References: =
+An important general reference on this subject is [http://www.w3.org/TR/webarch/ Architecture of the World Wide Web], a W3C Recommendation.
+
 ===1. RFC 3986.  Uniform Resource Identifier (URI): Generic Syntax=== 
 http://tools.ietf.org/html/rfc3986
 
