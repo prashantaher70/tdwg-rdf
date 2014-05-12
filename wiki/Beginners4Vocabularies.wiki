@@ -261,7 +261,7 @@ kimage:ac1490  rdf:type  dctype:StillImage
 }}}
 not only does it assert that {{{kimage:ac1490}}} is an instance of {{{dctype:StillImage}}}, but it also declares {{{dctype:StillImage}}} to be an {{{rdfs:Class}}}.  As it turns out, {{{dctype:StillImage}}} is already declared to be an {{{rdfs:Class}}} in its term definition [#24_Definition_of_dcterms:_StillImage (24)], but if it hadn't already been a class, one would be asserting that it was one by using it as the object of the type declaration.  
 
-===4.7.2. What can we find classes to use in {{{rdf:type}}} statements?===
+===4.7.2. Where can we find classes to use in {{{rdf:type}}} statements?===
 The RDFS schema is silent about what constitutes appropriate classes or types in a particular situation.  Users are free to use any pre-existing types/classes or to define their own.  
 
 However, since the purpose of having classes seems to be to allow different users to know that they are both talking about the same kind of resource, it is a best practice to use well-known types rather than making up ad hoc types.[#25_Typing_using_well-known_vocabularies (25)]  The wiki page [ClassInventory ClassInventory] lists classes defined in some well-known vocabularies and ontologies.   
