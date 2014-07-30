@@ -81,7 +81,7 @@ constructs a triple where the two resources have their subject and object positi
 is a filter which excludes pre-existing inverse triples.  This ensures that only new triples will be constructed.
 
 = Performing the query =
-  # Navigate to the TDWG RDF Task Group SPARQL sandbox: http://tdwg-rdf.net/store2/ The graph to which the query is restricted should already be loaded into the triplestore unless somebody has deleted it.
+  # Navigate to the TDWG RDF Task Group SPARQL sandbox: http://tdwg-rdf.phylodiversity.net/store2/ The graph to which the query is restricted should already be loaded into the triplestore unless somebody has deleted it.
   # Copy the full query from its listing above and paste it into the "SPARQL query with form" box.
   # Set RDF Inference to "No"
   # Click on the "Execute" button. In most browsers, the result will appear as RDF/XML.
