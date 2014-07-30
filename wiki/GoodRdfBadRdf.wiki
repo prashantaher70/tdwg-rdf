@@ -139,7 +139,7 @@ _:autos1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> "Author 5".
 =SPARQL queries=
 Use Firefox or Opera if you want to view the results directly in the browser window rather than having the results file opened by a helper application.
 
-The queries were performed on the dataset http://bioimages.vanderbilt.edu/rdf/examples/good-rdf-bad-rdf-test.rdf loaded into the TG sandbox at http://tdwg-rdf.net/store2/ . 
+The queries were performed on the dataset http://bioimages.vanderbilt.edu/rdf/examples/good-rdf-bad-rdf-test.rdf loaded into the TG sandbox at http://tdwg-rdf.phylodiversity.net/store2/ . 
 
 All queries use the following prefixes:
 {{{
