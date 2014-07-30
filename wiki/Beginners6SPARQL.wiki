@@ -109,7 +109,7 @@ Click the Run Query button ("play").  On the Results tab, click on the "55 more.
 
 == 6.3. Loading metadata into a private triple store for querying==
 
-The TDWG TDF/OWL Task Group has several sandboxes for experimenting with SPARQL queries at http://tdwg-rdf.net/ .  To obtain access, contact Cam Webb via the link on the page.  The query interfaces are similar to those described in the previous sections.  However, loaded datasets are restricted to those loaded by participants in the Task Group, so the results may be somewhat more predictable than results from public triplestores.  Also, the stability of the triples might be somewhat better than the unknown stability of the public stores (assuming the members of the TDWG-RDF group do not unload datasets that are currently present there).  
+The TDWG TDF/OWL Task Group has several sandboxes for experimenting with SPARQL queries at http://tdwg-rdf.phylodiversity.net/ .  To obtain access, contact Cam Webb via the link on the page.  The query interfaces are similar to those described in the previous sections.  However, loaded datasets are restricted to those loaded by participants in the Task Group, so the results may be somewhat more predictable than results from public triplestores.  Also, the stability of the triples might be somewhat better than the unknown stability of the public stores (assuming the members of the TDWG-RDF group do not unload datasets that are currently present there).  
 
 ==6.4. Basic SPARQL queries==
 
@@ -307,7 +307,7 @@ LIMIT 10
 The resulting triples contain a subject which was the object of one of the pattern triples and an object from a different pattern triple.  The constructed triple also has a made-up predicate (not actually even present in the dwc:namespace!).  CONSTRUCT will create whatever triple you specify regardless of whether the statements made by the created triples make sense or are actually true.
 
 ==6.5. Examples of more complex queries==
-A more complex version of the query in [#6.4.3.1._Eliminating_duplicate_results_using_DISTINCT section 6.4.3.1.] can be made at the endpoint http://tdwg-rdf.net/store2/ as follows:
+A more complex version of the query in [#6.4.3.1._Eliminating_duplicate_results_using_DISTINCT section 6.4.3.1.] can be made at the endpoint http://tdwg-rdf.phylodiversity.net/store2/ as follows:
 {{{
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
