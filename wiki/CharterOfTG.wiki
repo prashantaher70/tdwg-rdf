@@ -70,4 +70,4 @@ The main output of this task group will be well documented and validated example
 Online resources used and promoted by the group, including Wiki, mailing list, presentations, tutorials, repository.
   * [http://code.google.com/p/tdwg-rdf/ Code and Interest Group on Google Code]
   * [http://code.google.com/p/tdwg-rdf/w/list Wiki] 
-  * Development platform ("sandbox"): http://tdwg-rdf.net/
+  * Development platform ("sandbox"): http://tdwg-rdf.phylodiversity.net/
