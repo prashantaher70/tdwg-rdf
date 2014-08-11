@@ -47,6 +47,6 @@ See the [http://code.google.com/p/darwincore/issues/list Darwin Core Issue Track
 ||dwc:PreservedSpecimen||A preserved specimen.||none||dwctype:PreservedSpecimen||[http://code.google.com/p/darwincore/issues/detail?id=206 206]||
 ||dwc:FossilSpecimen||A fossilized specimen.||none||dwctype:FossilSpecimen||[http://code.google.com/p/darwincore/issues/detail?id=207 207]||
 ||dwc:LivingSpecimen||A living specimen.||none||dwctype:LivingSpecimen||[http://code.google.com/p/darwincore/issues/detail?id=208 208]||
-||dwc:HumanObservation||An observation made by one or more people.||none||dwctype:HumanObservation|| ||
-||dwc:MachineObservation||An observation made by a machine.||none||dwctype:MachineObservation|| ||
-||dwc:NomenclaturalChecklist||A nomenclatural checklist.||none||dwctype:NomenclaturalChecklist|| ||
+||dwc:HumanObservation||An observation made by one or more people.||none||dwctype:HumanObservation||[http://code.google.com/p/darwincore/issues/detail?id=209 209]||
+||dwc:MachineObservation||An observation made by a machine.||none||dwctype:MachineObservation||[http://code.google.com/p/darwincore/issues/detail?id=210 210]||
+||dwc:NomenclaturalChecklist||A nomenclatural checklist.||none||dwctype:NomenclaturalChecklist|| [http://code.google.com/p/darwincore/issues/detail?id=211 211]||
