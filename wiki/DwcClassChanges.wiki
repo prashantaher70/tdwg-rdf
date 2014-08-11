@@ -44,7 +44,7 @@ See the [http://code.google.com/p/darwincore/issues/list Darwin Core Issue Track
 ||dwc:Taxon||A group of organisms considered by taxonomists to form a homogeneous unit. An organism in the sense used here is defined as OBI:0100026 (http://purl.obolibrary.org/obo/OBI_0100026).||dwc:Taxon||dwctype:Taxon|| ||
 ||dwc:ResourceRelationship||A relationship of one rdfs:Resource (http://www.w3.org/2000/01/rdf-schema#Resource) such as an Occurrence, Taxon, Location, etc., to another.||dwc:ResourceRelationship||none|| ||
 ||dwc:MeasurementOrFact||A measurement or fact about an rdfs:Resource (http://www.w3.org/2000/01/rdf-schema#Resource) such as an Occurrence, MaterialSample, GeologicalContext, etc.||dwc:MeasurementOrFact||none|| ||
-||dwc:PreservedSpecimen||A preserved specimen.||none||dwctype:PreservedSpecimen|| ||
+||dwc:PreservedSpecimen||A preserved specimen.||none||dwctype:PreservedSpecimen||Issue 206||
 ||dwc:FossilSpecimen||A fossilized specimen.||none||dwctype:FossilSpecimen|| ||
 ||dwc:LivingSpecimen||A living specimen.||none||dwctype:LivingSpecimen||  ||
 ||dwc:HumanObservation||An observation made by one or more people.||none||dwctype:HumanObservation|| ||
