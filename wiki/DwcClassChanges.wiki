@@ -45,8 +45,8 @@ See the [http://code.google.com/p/darwincore/issues/list Darwin Core Issue Track
 ||dwc:ResourceRelationship||A relationship of one rdfs:Resource (http://www.w3.org/2000/01/rdf-schema#Resource) such as an Occurrence, Taxon, Location, etc., to another.||dwc:ResourceRelationship||none|| ||
 ||dwc:MeasurementOrFact||A measurement or fact about an rdfs:Resource (http://www.w3.org/2000/01/rdf-schema#Resource) such as an Occurrence, MaterialSample, GeologicalContext, etc.||dwc:MeasurementOrFact||none|| ||
 ||dwc:PreservedSpecimen||A preserved specimen.||none||dwctype:PreservedSpecimen||[http://code.google.com/p/darwincore/issues/detail?id=206 206]||
-||dwc:FossilSpecimen||A fossilized specimen.||none||dwctype:FossilSpecimen|| ||
-||dwc:LivingSpecimen||A living specimen.||none||dwctype:LivingSpecimen||  ||
+||dwc:FossilSpecimen||A fossilized specimen.||none||dwctype:FossilSpecimen||[http://code.google.com/p/darwincore/issues/detail?id=207 207]||
+||dwc:LivingSpecimen||A living specimen.||none||dwctype:LivingSpecimen||[http://code.google.com/p/darwincore/issues/detail?id=208 208]||
 ||dwc:HumanObservation||An observation made by one or more people.||none||dwctype:HumanObservation|| ||
 ||dwc:MachineObservation||An observation made by a machine.||none||dwctype:MachineObservation|| ||
 ||dwc:NomenclaturalChecklist||A nomenclatural checklist.||none||dwctype:NomenclaturalChecklist|| ||
