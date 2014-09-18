@@ -311,6 +311,8 @@ OBO foundry (http://www.obofoundry.org/ ) ontologies:
 
 [http://www.w3.org/2009/08/skos-reference/skos.html SKOS Simple Knowledge Organization System Namespace Document] ([http://www.w3.org/2009/08/skos-reference/skos.rdf in RDF])
 
+[http://www.ldf.fi/schema/taxmeon/index.html Taxon Meta-Ontology TaxMeOn] Associated paper: Making species checklists understandable to machines - a shift from relational databases to ontologies http://dx.doi.org/10.1186/2041-1480-5-40
+
 [http://www.tdwg.org/standards/117/ Taxonomic Concept Transfer Schema (TCS) (TDWG Standard)] [http://bioimages.vanderbilt.edu/pages/TCS-Schema-UserGuide-v1.3.pdf (Users Guide PDF viewable in browser)] [http://bioimages.vanderbilt.edu/pages/xmlspy_documentation_01.pdf (XML schema details PDF viewable in browser)] ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonConcept.rdf TaxonConcept in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/TaxonName.rdf TaxonName in RDF])  ([http://code.google.com/p/tdwg-ontology/source/browse/trunk/ontology/voc/Common.rdf Common in RDF])  [http://www.jbiomedsem.com/content/2/1/7 Journal of Biomedical Semantics 2:7 article on application of LSIDs and TCS at Catalogue of Life]
 
 [http://www.taxonconcept.org/ontologies/ TaxonConcept Ontologies] ([http://lod.taxonconcept.org/ontology/txn.owl in RDF])
