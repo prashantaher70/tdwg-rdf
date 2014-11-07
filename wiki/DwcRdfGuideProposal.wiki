@@ -1,6 +1,8 @@
 #summary Draft of proposed Darwin Core RDF Guide
 #sidebar DwcRdfSidebar
 
+* This version is the one that was recommended by the RDF Task Group in July 2013, with minor edits made after that date.  A revised version is under preparation (in November 2014) to be subject to the 30 day public comment.  *
+
 [http://www.tdwg.org/ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png]
 = Darwin Core RDF Guide =
 
