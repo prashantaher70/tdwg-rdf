@@ -1,7 +1,7 @@
 #summary Cover page for DwC RDF Guide proposal
 #sidebar DwcRdfSidebar
 
-* This cover page was created after the RDF Task Group recommended the proposed guide in July 2013.  A updated version will be created (in November 2014) in advance of the 30 day public comment period.  *
+* This cover page was created after the RDF Task Group recommended the proposed guide in July 2013.  A updated version will be created (in November 2014) in advance of the 30 day public comment period on the proposed guide document.  *
 
   [http://www.tdwg.org/ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png]
 
