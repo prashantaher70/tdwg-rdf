@@ -68,7 +68,7 @@ This RDF graph can be serialized in a somewhat human-friendly syntax called Ters
 @prefix dcterms: <http://purl.org/dc/terms/>.
 <http://bioimages.vanderbilt.edu/kirchoff/ac1490>
        a <http://purl.org/dc/dcmitype/StillImage>;
-       dcterms:created "2010-09-01T03:41:31" ~~^^xsd:dateTime~~ ;
+       dcterms:created "2010-09-01T03:41:31" *^^xsd:dateTime* ;
        dcterms:creator <http://bioimages.vanderbilt.edu/contact/kirchoff#coblea>.
 }}}
 Here is the graph in RDF/XML syntax [http://www.w3.org/TR/REC-rdf-syntax/ RDF-XML-SYNTAX]:
@@ -80,7 +80,7 @@ xmlns:dcterms="http://purl.org/dc/terms/"
  <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/kirchoff/ac1490">
    <rdf:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
    <dcterms:creator rdf:resource="http://bioimages.vanderbilt.edu/contact/kirchoff#coblea"/>
-   <dcterms:created ~~rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"~~ >2010-09-01T03:41:31</dcterms:created>
+   <dcterms:created *rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"* >2010-09-01T03:41:31</dcterms:created>
  </rdf:Description>
 </rdf:RDF>
 }}}
@@ -648,8 +648,8 @@ Turtle
 {{{
 <http://museum.org/accession/12312>
      dcterms:references [a foaf:Document ;
-                         dcterms:date "2003" ~~^^xsd:gYear~~ ;
-                         dcterms:title "Collection notes" ~~@en~~ ;
+                         dcterms:date "2003" *^^xsd:gYear* ;
+                         dcterms:title "Collection notes" *@en* ;
                          dc:creator "Joe Curator"].
 }}}
 the described subject resource refers to an object resource that is not identified with a URI, that is, an object resource represented by a blank node.  From the properties of the unidentified resource we know that the object resource is a _foaf:Document_ from 2003 entitled "Collection notes" and created by Joe Curator.  By using a blank node to represent the resource, the properties of that resource can be described and collectively associated with the _dcterms:references_ property without requiring the data provider to mint a URI for that resource. 
