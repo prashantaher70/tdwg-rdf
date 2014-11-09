@@ -198,7 +198,6 @@ To facilitate achieving the clarity that RDF makes possible, this guide provides
 ||XML Schema||_xsd:_||{{{http://www.w3.org/2001/XMLSchema#}}}||
 ||Web Ontology Language||_owl:_||{{{http://www.w3.org/2002/07/owl#}}}||
 ||Darwin Core terms (string literal objects)||_dwc:_||{{{http://rs.tdwg.org/dwc/terms/}}}||
-||Darwin Core type vocabulary||_dwctype:_||{{{http://rs.tdwg.org/dwc/dwctype/}}}||
 ||Darwin Core terms (IRI reference objects)||_dwciri:_||{{{http://rs.tdwg.org/dwc/iri/}}}||
 ||Dublin Core terms||_dcterms:_||{{{http://purl.org/dc/terms/}}}||
 ||Dublin Core legacy terms||_dc:_||{{{http://purl.org/dc/elements/1.1/}}}||
@@ -336,7 +335,7 @@ In RDF, a resource may be characterized by declaring that it is an instance of a
  
 Because of these benefits, RDF provides several built-in mechanisms for asserting class membership, most notably the _rdf:type_ property [http://www.w3.org/TR/rdf-schema/#ch_type RDF-TYPE] which is used to state that a resource is an instance of a class.  
  
-There is nothing that prohibits assigning more than one _rdf:type_ property to a resource.  In fact, there may be a benefit in describing a resource as a member of both a class which has specific meaning within a narrow community and a more well-known class which has a broader meaning and is therefore more likely to be understood by generic clients.  For instance, a resource may be typed as both a _dwctype:PreservedSpecimen_ and a _dcmitype:PhysicalObject_ . 
+There is nothing that prohibits assigning more than one _rdf:type_ property to a resource.  In fact, there may be a benefit in describing a resource as a member of both a class which has specific meaning within a narrow community and a more well-known class which has a broader meaning and is therefore more likely to be understood by generic clients.  For instance, a resource may be typed as both a _dwc:PreservedSpecimen_ and a _dcmitype:PhysicalObject_ . 
  
 ====2.3.1.1 rdf:type statement====
  
@@ -453,7 +452,7 @@ RDF/XML
 Turtle
 {{{
 <http://arctos.database.museum/guid/MVZ:Mamm:165861>
-     a dwctype:PreservedSpecimen,
+     a dwc:PreservedSpecimen,
        dcmitype:PhysicalObject;
      dc:type "PhysicalObject";
      dcterms:type dcmitype:PhysicalObject;
@@ -785,7 +784,7 @@ The following example shows an appropriate way to express the information in Exa
 RDF/XML
 {{{
 <rdf:Description rdf:about="http://guid.mvz.org/identifications/23459">
-     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/Identification"/>
+     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
      <dcterms:identifier>http://guid.mvz.org/identifications/23459</dcterms:identifier>
      <dwc:identifiedBy>Richard Sage</dwc:identifiedBy>
      <dwc:dateIdentified rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2000</dwc:dateIdentified>
@@ -795,7 +794,7 @@ RDF/XML
 Turtle:
 {{{
 <http://guid.mvz.org/identifications/23459>
-     a dwctype:Identification;
+     a dwc:Identification;
      dcterms:identifier "http://guid.mvz.org/identifications/23459";
      dwc:identifiedBy "Richard Sage";
      dwc:dateIdentified "2000"^^xsd:gYear;
@@ -830,7 +829,7 @@ In its normative definition, each Darwin Core ID term is declared to be _rdfs:su
 RDF/XML (incorrect usage)
 {{{
 <rdf:Description rdf:about="http://guid.mvz.org/identifications/23459">
-     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/Identification"/>
+     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
      <dwc:identifiedBy>Richard Sage</dwc:identifiedBy>
      <dwc:dateIdentified rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">2000</dwc:dateIdentified>
      <dwc:taxonID>http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721</dwc:taxonID>
@@ -839,7 +838,7 @@ RDF/XML (incorrect usage)
 Turtle (incorrect usage)
 {{{
 <http://guid.mvz.org/identifications/23459>
-     a dwctype:Identification;
+     a dwc:Identification;
      dwc:identifiedBy "Richard Sage";
      dwc:dateIdentified "2000"^^xsd:gYear;
      dwc:taxonID "http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721".
@@ -903,7 +902,7 @@ In RDF, unique identification of collection items is done through the IRI which 
 RDF/XML
 {{{
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:115956">
-     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen"/>
+     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/PreservedSpecimen"/>
      <dwc:institutionCode>MVZ</dwc:institutionCode>
      <dwc:collectionCode>Mamm</dwc:collectionCode>
      <dwc:catalogNumber>115956</dwc:catalogNumber>
@@ -913,7 +912,7 @@ RDF/XML
 Turtle
 {{{
 <http://arctos.database.museum/guid/MVZ:Mamm:115956>
-     a dwctype:PreservedSpecimen;
+     a dwc:PreservedSpecimen;
      dwc:collectionCode "Mamm";
      dwc:institutionCode "MVZ";
      dwc:catalogNumber "115956";
@@ -939,7 +938,7 @@ In this example, a best practice would be to link the identification instance to
 RDF/XML
 {{{
 <rdf:Description rdf:about="http://museum.or.jp/9AC9BD26-8B41-458A-AA35-503A4527D009">
-     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/Identification"/>
+     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Identification"/>
      <dwc:identifiedBy>Takuma Yun</dwc:identifiedBy>
      <dwc:order>Araneae</dwc:order>
      <dwc:family>Hersiliidae</dwc:family>
@@ -951,7 +950,7 @@ RDF/XML
 Turtle:
 {{{
 <http://museum.or.jp/9AC9BD26-8B41-458A-AA35-503A4527D009>
-     a dwctype:Identification;
+     a dwc:Identification;
      dwc:identifiedBy "Takuma Yun";
      dwc:order "Araneae";
      dwc:family "Hersiliidae";
@@ -1020,7 +1019,7 @@ Example 27 shows how this can be rendered as RDF using the Darwin Core stratigra
 RDF/XML
 {{{
 <rdf:Description rdf:about="http://paleo.cnu.edu.cn/ara/nn2010008#context">
-    <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/GeologicalContext"/>
+    <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/GeologicalContext"/>
     <dwc:formation>Jiu-longshan</dwc:formation>
     <dwc:earliestEonOrLowestEonothem>Phanerozoic</dwc:earliestEonOrLowestEonothem>
     <dwc:latestEonOrHighestEonothem>Phanerozoic</dwc:latestEonOrHighestEonothem>
@@ -1037,7 +1036,7 @@ RDF/XML
 Turtle
 {{{
 <http://paleo.cnu.edu.cn/ara/nn2010008#context>
-     a dwctype:GeologicalContext;
+     a dwc:GeologicalContext;
      dwc:formation "Jiu-longshan";
      dwc:earliestEonOrLowestEonothem "Phanerozoic";
      dwc:latestEonOrHighestEonothem "Phanerozoic";
