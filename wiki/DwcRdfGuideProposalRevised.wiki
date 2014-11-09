@@ -723,7 +723,7 @@ If a term in the _dwciri:_ namespace has a corresponding term with the same loca
   * when a _dwciri:_ term is used as an RDF predicate, its non-literal object will be identified by a IRI reference rather than a string literal
   * the object of the _dwciri:_ term predicate will be a single resource.  If the _dwc:_ term definition specifies that multiple values should be a concatenated list, the resource described by a _dwciri:_ property should be the subject of a triple for each value on the list.  Alternatively, a single triple can be used to describe the subject if the object is a single resource composed of component resources described using additional RDF triples.
 
-Several terms in the _dwciri:_ namespace do not have _dwc:_ namespace analogues (_dwciri:inCollection_, _dwciri:toTaxonConcept_, _dwciri:inDescribedPlace_, _dwciri:earliestGeochronologicalEra_, _dwciri:latestGeochronologicalEra_, _dwciri:fromLithostratigraphicUnit_, and dwciri:inDataset).  Their definitions are given in the normative RDF for _dwciri:_ properties and are described in [#3.6_dwciri:_terms_having_local_names_that_don%E2%80%99t_correspond_to Section 3.6].  
+Several terms in the _dwciri:_ namespace do not have _dwc:_ namespace analogues (_dwciri:inCollection_, _dwciri:toTaxonConcept_, _dwciri:inDescribedPlace_, _dwciri:earliestGeochronologicalEra_, _dwciri:latestGeochronologicalEra_, _dwciri:fromLithostratigraphicUnit_, and _dwciri:inDataset_).  Their definitions are given in the normative RDF for _dwciri:_ properties and are described in [#3.6_dwciri:_terms_having_local_names_that_don%E2%80%99t_correspond_to Section 3.6].  
  
 ===2.5.2 Using terms in the Darwin Core dwciri: namespace with non-literal objects identified by IRI references===
  
