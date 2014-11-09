@@ -564,7 +564,7 @@ If the non-literal object is not identified by a URI (i.e. it is a blank node), 
 {{{
 <dcterms:rightsHolder>
      <rdf:Description>
-           <dcterms:title>Trustees of the University of Lavonia</dcterms:title>
+           <dcterms:title *xml:lang="en"* >Trustees of the University of Lavonia</dcterms:title>
      </rdf:Description>
 <dcterms:rightsHolder>
 }}}
