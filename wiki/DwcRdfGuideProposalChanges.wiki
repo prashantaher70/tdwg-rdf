@@ -587,7 +587,7 @@ a description providing basic publication data such as:
 {{{
 <rdf:Description rdf:about="urn:isbn:0893273651">
      <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-     <dcterms:date>1991</dcterms:date>
+     <dcterms:date ~~rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"~~ >1991</dcterms:date>
      <dcterms:title xml:lang="en">Manual of Vascular Plants of Northeastern United States and Adjacent Canada</dcterms:title>
      <dc:creator>Gleason, Henry A. and Arthur Cronquist</dc:creator>
 </rdf:Description>
@@ -598,7 +598,7 @@ could be included as part of the document that references the ISBN in URN form. 
      dcterms:references <urn:isbn:0893273651>.
 <urn:isbn:0893273651>
      a foaf:Document;
-     dcterms:date "1991";
+     dcterms:date "1991" *^^xsd:gYear* ;
      dcterms:title "Manual of Vascular Plants of Northeastern United States and Adjacent Canada"@en;
      dc:creator "Gleason, Henry A. and Arthur Cronquist".
 }}}
@@ -791,7 +791,7 @@ RDF/XML
      <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/Identification"/>
      <dcterms:identifier ~~rdf:datatype="http://purl.org/dc/terms/URI"~~>http://guid.mvz.org/identifications/23459</dcterms:identifier>
      <dwc:identifiedBy>Richard Sage</dwc:identifiedBy>
-     <dwc:dateIdentified>2000</dwc:dateIdentified>
+     <dwc:dateIdentified *rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"* >2000</dwc:dateIdentified>
      <dwcuri:toTaxonConcept rdf:resource="http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721"/>
 </rdf:Description>
 }}}
@@ -801,7 +801,7 @@ Turtle:
      a dwctype:Identification;
      dcterms:identifier "http://guid.mvz.org/identifications/23459"^^dcterms:URI;
      dwc:identifiedBy "Richard Sage";
-     dwc:dateIdentified "2000";
+     dwc:dateIdentified "2000" *^^xsd:gYear* ;
      dwcuri:toTaxonConcept <http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721>.
 }}}
 The following points about the Example 22 should be noted:
@@ -835,7 +835,7 @@ RDF/XML (incorrect usage)
 <rdf:Description rdf:about="http://guid.mvz.org/identifications/23459">
      <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/Identification"/>
      <dwc:identifiedBy>Richard Sage</dwc:identifiedBy>
-     <dwc:dateIdentified>2000</dwc:dateIdentified>
+     <dwc:dateIdentified *rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"* >2000</dwc:dateIdentified>
      <dwc:taxonID>http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721</dwc:taxonID>
 </rdf:Description>
 }}}
@@ -844,7 +844,7 @@ Turtle (incorrect usage)
 <http://guid.mvz.org/identifications/23459>
      a dwctype:Identification;
      dwc:identifiedBy "Richard Sage";
-     dwc:dateIdentified "2000";
+     dwc:dateIdentified "2000" *^^xsd:gYear* ;
      dwc:taxonID "http://lsid.tdwg.org/urn:lsid:catalogueoflife.org:taxon:d79c11aa-29c1-102b-9a4a-00304854f820:col20120721".
 }}}
 there would be an undesired effect if a client unfamiliar with Darwin Core performed a "dumb-down" operation (i.e. fell back to the broader meaning of the _dwc:taxonID_ term as _dcterms:identifier_).   The client would infer the triple:
@@ -980,8 +980,8 @@ RDF/XML
 {{{
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/00001#loc">
      <rdf:type rdf:resource="http://purl.org/dc/terms/Location"/>
-     <dwc:decimalLatitude>36.4024</dwc:decimalLatitude>
-     <dwc:decimalLongitude>-87.02219</dwc:decimalLongitude>
+     <dwc:decimalLatitude *rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"* >36.4024</dwc:decimalLatitude>
+     <dwc:decimalLongitude *rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"* >-87.02219</dwc:decimalLongitude>
      <dwc:geodeticDatum>EPSG:4326</dwc:geodeticDatum>
      <dwc:continent>North America</dwc:continent>
      <dwc:country>United States</dwc:country>
@@ -994,8 +994,8 @@ Turtle
 {{{
 <http://bioimages.vanderbilt.edu/baskauf/00001#loc>
      a dcterms:Location;
-     dwc:decimalLatitude "36.4024";
-     dwc:decimalLongitude "-87.02219";
+     dwc:decimalLatitude "36.4024" *^^xsd:decimal* ;
+     dwc:decimalLongitude "-87.02219" *^^xsd:decimal* ;
      dwc:geodeticDatum "EPSG:4326";
      dwc:continent "North America";
      dwc:country "United States";
