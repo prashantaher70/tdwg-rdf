@@ -885,7 +885,7 @@ There are several groups of convenience terms in the _dwc:_ namespace which may 
 
 || *Category of convenience term* || *Object property* || *Category of object resource* || *_rdf:type_ of example resource* ||
 ||ownership of collection item ([#2.7.3_Ownership_of_a_collection_item Section 2.7.3])||_dwcuri:inCollection_||collection||_col:Collection_||
-||description of a taxonomic entity ([#2.7.4_Description_of_a_taxonomic_entity Section 2.7.4])||_dwcuri:toTaxon ~~Concept~~ _||taxon concept; taxon name use||not specified||
+||description of a taxonomic entity ([#2.7.4_Description_of_a_taxonomic_entity Section 2.7.4])||_dwcuri:toTaxon ~~Concept~~ _||taxon concept; taxon name use|| ~~not specified~~ *_dwc:Taxon_*||
 ||names of geographic subdivisions ([#2.7.5_Names_of_geographic_subdivisions Section 2.7.5])||_dwcuri:inDescribedPlace_||geographic place||_gn:Feature_||
 ||chronostratographic (geological timescale) description ([#2.7.6_Chronostratographic_(geological_timescale)_descriptors Section 2.7.6])||_dwcuri:earliestGeochronologicalEra_ dwcuri:latestGeochronologicalEra||geochronological time period||_gsml:GeochronologicEra_||
 ||lithostratigraphy descriptors ([#2.7.7_Lithostratigraphy_descriptors Section 2.7.7])||_dwcuri:fromLithostratigraphicUnit_||lithostratigraphic unit||not specified||
