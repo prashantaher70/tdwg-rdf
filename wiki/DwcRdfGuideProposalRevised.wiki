@@ -302,8 +302,6 @@ If an HTTP IRI is considered to be the identifier for a subject resource, it is 
 </rdf:Description>
 }}}
 
-In this example,an _rdf:datatype_ attribute is used to indicate that the identifier is in the form of a IRI ([#2.4.1.1_Typed_literals Section 2.4.1.1]). 
-
 ===2.2.3 Associating a URN with its HTTP-proxied equivalent===
  
 The TDWG LSID Applicability Statement standard [http://www.tdwg.org/standards/150/ LSID-STANDARD] specifies in Recommendation 30 that "The description of all objects identified by an LSID *must* contain an _owl:sameAs_, _owl:equivalentProperty_ or _owl:equivalentClass_ statement expressing the equivalence between the object identifier in its standard form and its proxy version".  This is illustrated by Example 3:
@@ -480,7 +478,7 @@ Some resources such as titles, dates, and numbers can be intrinsically expressed
 }}}
 ====2.4.1.1 Typed literals====
  
-Because literals cannot be the subjects of RDF triples, it is not possible to describe the properties of literals extensively in RDF.  However, literals can be typed using attributes in their containing XML element.  This provides additional information about the string that may be beneficial for allowing a client to interpret the string.
+Because literals cannot be the subjects of RDF triples, it is not possible to describe the properties of literals extensively in RDF.  However, providing a datatype URI for a literal provides a mechanism that allows an client to process the string in order to recognize the nature of the resource that the string denotes.
  
 If the string expresses information in a particular language, a provider may include an _xml:lang_ attribute [http://www.w3.org/TR/REC-xml/#sec-lang-tag XML-LANG] to indicate the language of the string through the RFC 4646 language code [http://www.ietf.org/rfc/rfc4646.txt LANG-CODES] for that language as in the following example:
 
