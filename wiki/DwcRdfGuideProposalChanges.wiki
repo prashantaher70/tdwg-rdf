@@ -536,7 +536,7 @@ Turtle
 }}}
 
 
-[#3.4_Terms_defined_by_Darwin_Core_that_are_expected_to_be_used_on Section 3.4] suggests which Darwin Core terms might be appropriately used with datatype or language attributes.
+[#3.4_Terms_defined_by_Darwin_Core_that_are_expected_to_be_used_on Section 3.4] ~~suggests~~ *indicates* which Darwin Core terms ~~might~~ *would* be appropriately used with datatype or language attributes.
  
 ====2.4.1.2 Terms intended for use with literal objects====
  
