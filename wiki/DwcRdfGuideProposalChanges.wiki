@@ -491,28 +491,13 @@ Some resources such as titles, dates, and numbers can be intrinsically expressed
 }}}
 ====2.4.1.1 Typed literals====
  
-Because literals cannot be the subjects of RDF triples, it is not possible to describe the properties of literals extensively in RDF.  However, ~~literals can be typed using attributes in their containing XML element.~~ providing a datatype URI for a literal provides a mechanism that allows an client to process the string in order to recognize the nature of the resource that the string denotes.  ~~This provides additional information about the string that may be beneficial for allowing a client to interpret the string.~~
- 
-If the string expresses information in a particular language, a provider may include an _xml:lang_ attribute [http://www.w3.org/TR/REC-xml/#sec-lang-tag XML-LANG] to indicate the language of the string through the RFC 4646 language code [http://www.ietf.org/rfc/rfc4646.txt LANG-CODES] for that language as in the following example:
+Because literals cannot be the subjects of RDF triples, it is not possible to describe the properties of literals extensively in RDF.  However, ~~literals can be typed using attributes in their containing XML element. This provides additional information about the string that may be beneficial for allowing a client to interpret the string~~ *specifying a datatype IRI for a literal provides a mechanism that allows an client to interpret the nature of the resource that the string denotes. [http://www.w3.org/TR/rdf11-mt/#literals-and-datatypes DATATYPES]* ~~[http://www.w3.org/TR/REC-rdf-syntax/#section-Syntax-datatyped-literals RDF-DATATYPE]~~ *[http://www.w3.org/TR/rdf-syntax-grammar/#section-Syntax-datatyped-literals RDF-DATATYPE]*
+
+*(Note: I reversed position of examples 9 and 10)*
+
+The rdf datatype attribute ~~can also be used to indicate~~ *indicates* that the string conforms to a particular format ~~, such as an~~ *(* integer, date, etc. *) that maps the string to its abstract value.* ~~:~~
 
 *Example 9:*
-
-RDF/XML
-{{{
-<rdf:Description rdf:about="http://dx.doi.org/10.1525/auk.2009.09022">
-     <dcterms:bibliographicCitation xml:lang="en">S. Claramunt, et al. 2009. Polyphyly of Campylorhamphus, and Description of a New Genus for C. pucherani (Dendrocolaptinae). The Awk 127(2):430-439.</dcterms:bibliographicCitation>
-     <dcterms:bibliographicCitation xml:lang="es">S. Claramunt, et al. 2009. Polifilia de Campylorhamphus y la Descripción de un Nuevo Género para C. pucherani (Dendrocolaptinae). The Awk 127(2):430-439.</dcterms:bibliographicCitation>
-</rdf:Description>
-}}}
-Turtle
-{{{
-<http://dx.doi.org/10.1525/auk.2009.09022>
-     dcterms:bibliographicCitation "S. Claramunt, et al. 2009. Polyphyly of Campylorhamphus, and Description of a New Genus for C. pucherani (Dendrocolaptinae). The Awk 127(2):430-439."@en,
-                                   "S. Claramunt, et al. 2009. Polifilia de Campylorhamphus y la Descripción de un Nuevo Género para C. pucherani (Dendrocolaptinae). The Awk 127(2):430-439."@es.
-}}}
-The rdf datatype attribute [http://www.w3.org/TR/REC-rdf-syntax/#section-Syntax-datatyped-literals RDF-DATATYPE] can also be used to indicate that the string conforms to a particular format, such as an integer, date, etc.:
-
-*Example 10:*
 
 RDF/XML
 {{{
@@ -531,6 +516,26 @@ Turtle
      dwc:decimalLongitude "-86.298055"^^xsd:decimal;
      dwc:coordinateUncertaintyInMeters "20"^^xsd:int.
 }}}
+ 
+If the string expresses information in a particular language, a provider ~~may~~ *should* include an _xml:lang_ attribute [http://www.w3.org/TR/REC-xml/#sec-lang-tag XML-LANG] to indicate the language of the string through the RFC 4646 language code [http://www.ietf.org/rfc/rfc4646.txt LANG-CODES] for that language ~~as in the following example:~~ *. In addition to specifying the language of the string, providing a language tag entails that the described resource has the datatype _rdf:langString_.*  
+
+*Example 10:*
+
+RDF/XML
+{{{
+<rdf:Description rdf:about="http://dx.doi.org/10.1525/auk.2009.09022">
+     <dcterms:bibliographicCitation xml:lang="en">S. Claramunt, et al. 2009. Polyphyly of Campylorhamphus, and Description of a New Genus for C. pucherani (Dendrocolaptinae). The Awk 127(2):430-439.</dcterms:bibliographicCitation>
+     <dcterms:bibliographicCitation xml:lang="es">S. Claramunt, et al. 2009. Polifilia de Campylorhamphus y la Descripción de un Nuevo Género para C. pucherani (Dendrocolaptinae). The Awk 127(2):430-439.</dcterms:bibliographicCitation>
+</rdf:Description>
+}}}
+Turtle
+{{{
+<http://dx.doi.org/10.1525/auk.2009.09022>
+     dcterms:bibliographicCitation "S. Claramunt, et al. 2009. Polyphyly of Campylorhamphus, and Description of a New Genus for C. pucherani (Dendrocolaptinae). The Awk 127(2):430-439."@en,
+                                   "S. Claramunt, et al. 2009. Polifilia de Campylorhamphus y la Descripción de un Nuevo Género para C. pucherani (Dendrocolaptinae). The Awk 127(2):430-439."@es.
+}}}
+
+
 [#3.4_Terms_defined_by_Darwin_Core_that_are_expected_to_be_used_on Section 3.4] suggests which Darwin Core terms might be appropriately used with datatype or language attributes.
  
 ====2.4.1.2 Terms intended for use with literal objects====
