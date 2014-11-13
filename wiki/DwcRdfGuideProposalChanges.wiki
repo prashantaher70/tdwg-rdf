@@ -517,7 +517,7 @@ Turtle
      dwc:coordinateUncertaintyInMeters "20"^^xsd:int.
 }}}
  
-If the string expresses information in a particular language, a provider ~~may~~ *should* include an _xml:lang_ attribute [http://www.w3.org/TR/REC-xml/#sec-lang-tag XML-LANG] to indicate the language of the string through the RFC 4646 language code [http://www.ietf.org/rfc/rfc4646.txt LANG-CODES] for that language ~~as in the following example:~~ *. In addition to specifying the language of the string, providing a language tag entails that the described resource has the datatype _rdf:langString_.*  
+If the string expresses information in a particular language, a provider ~~may~~ *should* include an _xml:lang_ attribute [http://www.w3.org/TR/REC-xml/#sec-lang-tag XML-LANG] to indicate the language of the string through the RFC 4646 language code [http://www.ietf.org/rfc/rfc4646.txt LANG-CODES] for that language ~~as in the following example:~~ *. In addition to specifying the language of the string, providing a language tag entails that the described resource has the type _rdf:langString_.*  
 
 *Example 10:*
 
