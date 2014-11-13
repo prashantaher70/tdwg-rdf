@@ -759,7 +759,7 @@ where {{{<http://viaf.org/viaf/263074474>}}} is a persistent URI identifier for 
  
 ===2.5.3 Expectation of clients encountering RDF containing dwc: and dwcuri: terms===
  
-A client that encounters a triple having a term from the _dwcuri:_ namespace as its predicate can expect the object of the triple to be a URI reference and subsequently be able to dereference that URI to obtain additional information about the entity that it represents.  A client encountering a triple having a term from the _dwc:_ namespace should be prepared to accept a literal object, although it is possible that some data providers unaware of this guide may have used _dwc:_ terms with URI references as _rdf:resource_ attributes.  Application developers should be flexible in their expectations for the values of properties from the _dwc:_ namespace. 
+A client that encounters a triple having a term from the _dwcuri:_ namespace as its predicate can expect the object of the triple to be a URI reference and subsequently *may* be able to dereference that URI to obtain additional information about the entity that it represents.  A client encountering a triple having a term from the _dwc:_ namespace should be prepared to accept a literal object, although it is possible that some data providers unaware of this guide may have used _dwc:_ terms with URI references as _rdf:resource_ attributes.  Application developers should be flexible in their expectations for the values of properties from the _dwc:_ namespace. 
  
 ==2.6 Darwin Core ID terms and RDF==
  
