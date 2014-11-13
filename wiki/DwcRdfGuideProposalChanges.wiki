@@ -491,7 +491,7 @@ Some resources such as titles, dates, and numbers can be intrinsically expressed
 }}}
 ====2.4.1.1 Typed literals====
  
-Because literals cannot be the subjects of RDF triples, it is not possible to describe the properties of literals extensively in RDF.  However, ~~literals can be typed using attributes in their containing XML element. This provides additional information about the string that may be beneficial for allowing a client to interpret the string~~ *specifying a datatype IRI for a literal provides a mechanism that allows an client to interpret the nature of the resource that the string denotes. [http://www.w3.org/TR/rdf11-mt/#literals-and-datatypes DATATYPES]* ~~[http://www.w3.org/TR/REC-rdf-syntax/#section-Syntax-datatyped-literals RDF-DATATYPE]~~ *[http://www.w3.org/TR/rdf-syntax-grammar/#section-Syntax-datatyped-literals RDF-DATATYPE]*
+Because literals cannot be the subjects of RDF triples, it is not possible to describe the properties of literals extensively in RDF.  However, ~~literals can be typed using attributes in their containing XML element. This provides additional information about the string that may be beneficial for allowing a client to interpret the string~~ *specifying a datatype IRI for a literal provides a mechanism that allows an client to interpret the nature of the resource that the string denotes. [http://www.w3.org/TR/rdf11-mt/#literals-and-datatypes DATATYPE-SEMANTICS]* ~~[http://www.w3.org/TR/REC-rdf-syntax/#section-Syntax-datatyped-literals RDF-DATATYPE]~~ *[http://www.w3.org/TR/rdf-syntax-grammar/#section-Syntax-datatyped-literals RDF-DATATYPE]*
 
 *(Note: I reversed position of examples 9 and 10)*
 
