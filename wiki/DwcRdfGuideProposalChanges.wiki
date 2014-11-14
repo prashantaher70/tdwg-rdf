@@ -1089,7 +1089,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 || *Term intended for use in RDF with non-literal objects*^2^ || *range* || *recommended values*^3^ || *Term intended for use in RDF with literal objects* ||
 ||dcterms:language||dcterms:LinguisticSystem||MARC ISO 639-2 language URI ~~http://id.loc.gov/vocabulary/iso639-2.html ~~||dc:language||
-||dcterms:rights^4^||dcterms:RightsStatement||A custom RDF rights statement can be created with a minted URI or blank node representing the object of _dcterms:rights_ .||dc:rights||
+|| ~~dcterms:rights~~ *dcterms:license* ^4^|| ~~dcterms:RightsStatement~~ *dcterms:LicenseDocument* || ~~A custom RDF rights statement can be created with a minted URI or blank node representing the object of _dcterms:rights_ .~~ *Creative Commons license IRI* ||~~dc:rights~~ *No literal object analogue exists for this term.* ||
 ||dcterms:type||rdfs:Class||DCMI Type Vocabulary ~~http://dublincore.org/documents/dcmi-terms/#H7 ~~ ||dc:type||
 ||dcterms:rightsHolder||dcterms:Agent||URI for the agent owning or managing the rights.||xmpRights:Owner^5^||
 ||dcterms:accessRights||dcterms:RightsStatement||A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  ||No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.^6^||
