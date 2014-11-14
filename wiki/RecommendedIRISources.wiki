@@ -30,6 +30,18 @@ The following namespace abbreviations are used in this document:
 ||Darwin Core terms (string literal objects)||dwc:||http://rs.tdwg.org/dwc/terms/||
 ||Darwin Core terms (IRI reference objects)||dwciri:||http://rs.tdwg.org/dwc/iri/||
 ||Dublin Core legacy terms||dc:||http://purl.org/dc/elements/1.1/||
+||Dublin Core terms||_dcterms:_||http://purl.org/dc/terms/||
 ||Dublin Core type vocabulary||dcmitype:||http://purl.org/dc/dcmitype/||
 
 ==1 Introduction==
+Terms in the Darwin Core _dwciri:_ namespace and some terms imported from the Dublin Core _dcterms:_ namespace should have values that are IRIs.  It is considered a best practice to use well-known IRIs for this purpose rather than minting ad hoc IRIs that are not likely to be reused.  The purpose of this document is to provide an up-to-date list of sources of IRIs that are recommended for use as values for properties in Darwin Core.
+
+==2 Sources of IRIs=
+|| *Term intended for use in RDF with non-literal objects* || *source* || *access URL* ||
+||dcterms:language||MARC ISO 639-2 language codes||http://id.loc.gov/vocabulary/iso639-2.html||
+||dcterms:license||Creative Commons 4.0 International licenses||http://creativecommons.org/licenses/||
+||dcterms:type||DCMI Type Vocabulary||http://dublincore.org/documents/dcmi-terms/#H7||
+||dwciri:earliestGeochronologicalEra dwciri:latestGeochronologicalEra||International Commission on Stratigraphy (http://www.stratigraphy.org/ )||http://resource.geosciml.org/vocabulary/timescale/isc2014.rdf||
+||dwcuri:inCollection||Global Registry of Biorepositories||http://grbio.org/||
+||dwcuri:inDescribedPlace||GeoNames geographical database||http://www.geonames.org/||
+||dwc:recordedBy dwc:identifiedBy dwc:georeferencedBy dwc:locationAccordingTo (if agent is a person)||Virtual International Authority File (VIAF) Open Researcher and Contributor ID (ORCID)||http://viaf.org/ http://orcid.org/||
