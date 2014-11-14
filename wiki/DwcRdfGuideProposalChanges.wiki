@@ -229,7 +229,7 @@ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:owl="http://www.w3.org/2002/07/owl#"
 xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
-xmlns:dwctype="http://rs.tdwg.org/dwc/dwctype/"
+~~xmlns:dwctype="http://rs.tdwg.org/dwc/dwctype/"~~
 xmlns:dwcuri="http://rs.tdwg.org/dwc/uri/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -237,7 +237,7 @@ xmlns:dcmitype="http://purl.org/dc/dcmitype/"
 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 xmlns:dbres="http://dbpedia.org/resource/"
 xmlns:gn="http://www.geonames.org/ontology#"
-xmlns:col="http://rs.tdwg.org/ontology/voc/Collection#"
+~~xmlns:col="http://rs.tdwg.org/ontology/voc/Collection#"~~
 xmlns:gsml="http://resource.geosciml.org/ontology/timescale/gts-30#"
 xmlns:viaf="http://viaf.org/viaf/"
 >
