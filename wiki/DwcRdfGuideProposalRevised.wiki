@@ -1072,7 +1072,7 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 || *Term intended for use in RDF with non-literal objects*^2^ || *range* || *recommended values*^3^ || *Term intended for use in RDF with literal objects* ||
 ||dcterms:language||dcterms:LinguisticSystem||MARC ISO 639-2 language IRI||dc:language||
-||dcterms:rights^4^||dcterms:RightsStatement||A custom RDF rights statement can be created with a minted IRI or blank node representing the object of _dcterms:rights_ .||dc:rights||
+||dcterms:license^4^||dcterms:LicenseDocument||Creative Commons license IRI||No literal object analogue exists for this term.  ||
 ||dcterms:type||rdfs:Class||DCMI Type Vocabulary||dc:type||
 ||dcterms:rightsHolder||dcterms:Agent||IRI for the agent owning or managing the rights.||xmpRights:Owner^5^||
 ||dcterms:accessRights||dcterms:RightsStatement||A custom RDF rights statement could be created describing who can access the resource or an indication of its security status.  ||No literal object analogue exists for this term.  The string value can be expressed as a property of a blank node.^6^||
