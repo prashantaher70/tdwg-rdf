@@ -5,7 +5,9 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Describing Taxon Concepts as RDF (draft)=
 
-*Date:* (Created) 27 April 2013; (Last modified) 9 October 2013
+*_Note: since this document was originally written, the definition of dwc:Taxon was changed to make it more clear.  In addition, there is a growing consensus that the TDWG Ontologies are effectively deprecated.  Therefore, this document should be considered as a starting point for discussion rather than a recommendation.  It is uncertain whether it will undergo further revisions._*
+
+*Date:* (Created) 27 April 2013; (Last modified) 13 November 2014
 
 *Status:* Not part of any standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
 
