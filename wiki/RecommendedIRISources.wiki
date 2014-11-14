@@ -36,7 +36,7 @@ The following namespace abbreviations are used in this document:
 ==1 Introduction==
 Terms in the Darwin Core _dwciri:_ namespace and some terms imported from the Dublin Core _dcterms:_ namespace should have values that are IRIs.  It is considered a best practice to use well-known IRIs for this purpose rather than minting ad hoc IRIs that are not likely to be reused.  The purpose of this document is to provide an up-to-date list of sources of IRIs that are recommended for use as values for properties in Darwin Core.
 
-==2 Sources of IRIs=
+==2 Recommended sources of IRIs=
 || *Term intended for use in RDF with non-literal objects* || *source* || *access URL* ||
 ||dcterms:language||MARC ISO 639-2 language codes||http://id.loc.gov/vocabulary/iso639-2.html||
 ||dcterms:license||Creative Commons 4.0 International licenses||http://creativecommons.org/licenses/||
