@@ -1,7 +1,7 @@
 #summary Version of RDF guide showing changes prior to public comment.
 #sidebar DwcRdfSidebar
 
-* This is a version of the guide showing changes made in November 2014 to the version approved by the RDF Task Group in July 2013.  *
+* This is a version of the guide showing changes made in November 2014 to the version approved by the RDF Task Group in July 2013.*  Deletions are shown as ~~strikethrough~~ text and additions are shown in *bold*.
 
 [http://www.tdwg.org/ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png]
 = Darwin Core RDF Guide =
