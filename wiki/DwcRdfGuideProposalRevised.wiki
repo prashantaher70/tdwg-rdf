@@ -245,7 +245,7 @@ Statements about resources are made in RDF in the form of "triples" [http://www.
 ||_dbres:Starry_night_||_foaf:maker_||_viaf:9854560_||
 
 In the second row of Table 2, the full IRIs are given.  In the third row namespace abbreviations are used to shorten the 
-iRIs.  The following fragments of RDF shows the triple in RDF/XML and Turtle serializations of the triple shown in Table 2:
+IRIs.  The following fragments of RDF shows the triple in RDF/XML and Turtle serializations of the triple shown in Table 2:
 
 *Example 1:*
 
