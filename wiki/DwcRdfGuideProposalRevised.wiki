@@ -34,7 +34,7 @@
 
 =1 Introduction=
 
-Each method of encoding information using Darwin Core [http://rs.tdwg.org/dwc/index.htm DWC] has a guide explaining how to use the Darwin Core terms in that situation.  This is the guide for encoding biodiversity data using the Resource Description Framework (RDF) [http://www.w3.org/TR/rdf-concepts/ RDF].  
+Each method of encoding information using Darwin Core [http://rs.tdwg.org/dwc/index.htm DWC] has a guide explaining how to use the Darwin Core terms in that situation.  This is the guide for encoding biodiversity data using the Resource Description Framework (RDF) [http://www.w3.org/TR/rdf11-concepts/ RDF].  
 
 ==1.1 Audience==
 
