@@ -4,7 +4,7 @@
 
 [DwcRdf Cover page for proposal]
 
-[DwcRdfGuideProposal RDF Guide document]
+[DwcRdfGuideProposalRevised RDF Guide document]
 
 ==Informative ancillary documents not part of the standard==
 
