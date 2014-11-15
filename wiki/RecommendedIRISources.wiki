@@ -30,7 +30,7 @@ The following namespace abbreviations are used in this document:
 ||Darwin Core terms (string literal objects)||dwc:||http://rs.tdwg.org/dwc/terms/||
 ||Darwin Core terms (IRI reference objects)||dwciri:||http://rs.tdwg.org/dwc/iri/||
 ||Dublin Core legacy terms||dc:||http://purl.org/dc/elements/1.1/||
-||Dublin Core terms||_dcterms:_||http://purl.org/dc/terms/||
+||Dublin Core terms||dcterms:||http://purl.org/dc/terms/||
 ||Dublin Core type vocabulary||dcmitype:||http://purl.org/dc/dcmitype/||
 
 ==1 Introduction==
