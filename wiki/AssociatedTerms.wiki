@@ -14,21 +14,21 @@ Creating these 6 analogs does not feel right to me for the same reason that crea
 
 =Possible options=
 
-==Option 1==
+==Option 1: do nothing==
 Do nothing.  Leave the guide as it is and leave this as a problem for the future.
 
 *Pros:* This would be the easy way out and would not slow down the process of adoption of the guide.
 
 *Cons:* This is a problem that really needs to be dealt with since the dwc:associateWhatever terms are actually used by providers.  Paul already need some resolution of this issue for his current work.  
 
-==Option 2==
+==Option 2: create dwciri:associatedWhatever terms==
 Create dwciri:associatedMedia, dwciri:associatedOccurrences, dwciri:associatedSequences, dwciri:associatedTaxa, dwciri:associatedReferences, and dwciri:associatedOrganisms.
 
 *Pros:* This would also be very easy to do.  Just move the four dwc:associatedWhatever terms from [#3.8_Darwin_Core_terms_whose_function_cannot_be_duplicated_by_a_d the table in section 3.8] to [#3.7_dwc:_namespace_terms_which_have_analogues_in_the_dwciri:_nam the table in section 3.7].  This also would not slow down the process of the adoption of the guide, unless it was questioned in the 30 day comment period and a later revision of the guide were required. 
 
 *Cons:* This feels like a hack to me for the reasons I described above. I feel like it will create a problem that will have to be fixed later.
 
-==Option 3==
+==Option 3: create a single dwciri:associatedWith term==
 Create the single term dwciri:associatedWith and specify that it should be used as the IRI analog for all of the dwc:associatedWhatever terms.
 
 *Pros* This would make it possible for providers to "translate" existing dwc:associatedWhatever properties into RDF.  The guide as it currently stands leaves users with no guidance. 
@@ -77,6 +77,6 @@ A SPARQL query that would find the images.
 {{{
 SELECT ?resource WHERE {
  <uri1>  dwciri:associatedWith ?resource.
- ?resource a dcmitype:Image.
+ ?resource a dcmitype:StillImage.
  }
 }}}
