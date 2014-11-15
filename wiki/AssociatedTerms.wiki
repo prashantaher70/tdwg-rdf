@@ -40,13 +40,14 @@ Create the single term dwciri:associatedWith and specify that it should be used 
 In these examples, {{{<iri1>}}} identifies an organism, {{{<iri2>}}} identifies some other organism with an unspecified relationship to the first organism, {{{<iri3>}}} identifies a reference document (e.g. publication) that refers to the organism, {{{<iri4>}}} identifies a photograph of the organism, and {{{<iri5>}}} identifies some other photograph of the organism that is associated in an unspecified way (perhaps a photograph of the organism's habitat).
 
 == Examples using dwciri:associatedWhatever terms==
+{{{
 <iri1> a dwc:Organism.
 <iri1> dwciri:associatedOrganisms <iri2>.
 <iri1> dwciri:associatedReferences <iri3>.
 <iri1> dwciri:associatedMedia <iri4>.
 <iri1> dwciri:associatedMedia <iri5>.
 <iri1> foaf:depiction <iri4>.
-
+}}}
 
 == Example using dwciri:associatedWith==
 {{{
