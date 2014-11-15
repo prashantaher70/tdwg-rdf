@@ -31,7 +31,7 @@ Create dwciri:associatedMedia, dwciri:associatedOccurrences, dwciri:associatedSe
 ==Option 3: create a single dwciri:associatedWith term==
 Create the single term dwciri:associatedWith and specify that it should be used as the IRI analog for all of the dwc:associatedWhatever terms.
 
-*Pros* This would make it possible for providers to "translate" existing dwc:associatedWhatever properties into RDF.  The guide as it currently stands leaves users with no guidance. 
+*Pros* This would make it possible for providers to "translate" existing dwc:associatedWhatever properties into RDF with the creation of only a single new term rather than six terms that essentially mean the same thing.  The guide as it currently stands leaves users with no guidance. 
 
 *Cons:* A new section would have to be added to the guide explaining the rationale for this approach and a new table would need to be created in the tables section at the end of the Guide, since this would really be a different category of terms.  I am willing to do this writing on a fast track, but it will delay initiation of public comment, which otherwise could probably begin as early as several days from now.  On the other hand, if the Task Group signs off on this approach, I think that there is little chance that the general TDWG public will object to it and we may end up saving time in the long time if there is a complex email exchange on the topic during public comment.
 
