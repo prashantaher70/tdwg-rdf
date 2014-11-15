@@ -7,7 +7,7 @@
 
 = Cover page for RDF Guide proposed addition to Darwin Core =
 
-[DwcRdfGuideProposal Link to the RDF Guide Proposal]
+[DwcRdfGuideProposalRevised Current version of the RDF Guide Proposal] See below for version history.
 
 == Background ==
 
@@ -46,3 +46,10 @@ The Guide does not describe a domain model. It does not define ontological relat
 == What process has/will occur in the ratification of this proposal? ==
 
 Informal discussions on the [http://code.google.com/p/tdwg-rdf/ TDWG RDF/OWL Task Group]'s [http://groups.google.com/group/tdwg-rdf email list] and at several meetings resulted in sufficient consensus to begin work on an RDF guide.  Members of the RDF and Darwin Core Task Groups volunteered to write a draft document.  Following a 30 day comment period during which the other task group members were invited to read and comment on the draft, the [https://docs.google.com/document/d/1OLyVFuveGX1a0Yt6Niok9FfGxkrghii-xlGYhwO8UqE/edit?usp=sharing document was revised].  The RDF Task Group then recommended that the draft move forward to official submission as an addition to Darwin Core according to the provisions of the Darwin Core Namespace Policy.  The documents linked to this cover page are available for review by the public during the required 30 day public comment period.  Following public comment, the proposal will be modified as necessary and submitted for official ratification to become part of the Darwin Core standard.
+
+== Version history==
+[https://docs.google.com/document/d/1OLyVFuveGX1a0Yt6Niok9FfGxkrghii-xlGYhwO8UqE/edit Document showing comments made by the RDF Task Group during its review]
+[DwcRdfGuideProposal Version of proposed addition as recommended by the task group in July 2013]
+[DwcRdfGuideProposalChanges Version showing changes made to the July 2013 version after the October 2014 changes to the Darwin Core classes]
+[https://docs.google.com/document/d/153h1_kyfMllKGgfehVLB7ubzRDDaWtnaGHDDwJ6nkwE/edit?usp=sharing Document summarizing the changes made to the July 2013 version]
+[DwcRdfGuideProposalRevised Revised version under consideration during 30 public comment period]
