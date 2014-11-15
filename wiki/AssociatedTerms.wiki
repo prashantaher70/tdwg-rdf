@@ -49,6 +49,14 @@ In these examples, {{{<iri1>}}} identifies an organism, {{{<iri2>}}} identifies 
 <iri1> foaf:depiction <iri4>.
 }}}
 
+A SPARQL query that would find the images.
+{{{
+SELECT ?resource WHERE {
+ <uri1>  dwciri:associatedMedia ?resource.
+ }
+}}}
+Of course, there is nothing to prevent the metadata providers of {{{<iri2>}}} through {{{<iri5>}}} from specifying a specific type for those resources.  But this mechanism doesn't require it.
+
 == Example using dwciri:associatedWith==
 {{{
 <iri1> dwciri:associatedWith <iri2>.
@@ -62,4 +70,12 @@ In these examples, {{{<iri1>}}} identifies an organism, {{{<iri2>}}} identifies 
 <iri3> a foaf:Document.
 <iri4> a dcmitype:StillImage.
 <iri5> a dcmitype:StillImage.
+}}}
+
+A SPARQL query that would find the images.
+{{{
+SELECT ?resource WHERE {
+ <uri1>  dwciri:associatedWith ?resource.
+ ?resource a dcmitype:Image.
+ }
 }}}
