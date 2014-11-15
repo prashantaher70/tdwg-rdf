@@ -20,7 +20,7 @@
 
 *Creator:* Darwin Core and RDF/OWL Task Groups
 
-*Identifier:* http://rs.tdwg.org/dwc/2013-xx-xx/terms/guides/rdf/ (eventually)
+*Identifier:* http://rs.tdwg.org/dwc/2014-xx-xx/terms/guides/rdf/ (eventually)
 
 *Latest Version* http://rs.tdwg.org/dwc/terms/guides/rdf/ (eventually)
 
