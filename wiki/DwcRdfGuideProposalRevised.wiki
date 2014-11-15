@@ -66,7 +66,7 @@ This RDF graph can be serialized in a somewhat human-friendly syntax called Ters
        dcterms:created "2010-09-01T03:41:31"^^xsd:dateTime;
        dcterms:creator <http://bioimages.vanderbilt.edu/contact/kirchoff#coblea>.
 }}}
-Here is the graph in RDF/XML syntax [http://www.w3.org/TR/REC-rdf-syntax/ RDF-XML-SYNTAX]:
+Here is the graph in RDF/XML syntax [http://www.w3.org/TR/rdf-syntax-grammar/ RDF-XML-SYNTAX]:
 {{{
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
