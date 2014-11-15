@@ -1,14 +1,10 @@
 #summary Version of RDF guide revised for public comment
 #sidebar DwcRdfSidebar
 
-* This is a clean version of the guide revised for public comment. *
-
 [http://www.tdwg.org/ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png]
 = Darwin Core RDF Guide =
 
-* This is a draft submission under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy].  To view comments made by the RDF Task Group, view [https://docs.google.com/document/d/1OLyVFuveGX1a0Yt6Niok9FfGxkrghii-xlGYhwO8UqE/edit?usp=sharing this Google document].*  
-
-*Title:* Darwin Core RDF Guide
+*Title:* Darwin Core RDF Guide (draft submission)
 
 *Date issued:* x
 
