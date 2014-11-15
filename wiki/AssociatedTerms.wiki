@@ -37,7 +37,7 @@ Create the single term dwciri:associatedWith and specify that it should be used 
 
 = Examples =
 
-In these examples, <iri1> identifies an organism, <iri2> identifies some other organism with an unspecified relationship to the first organism, <iri3> identifies a reference document (e.g. publication) that refers to the organism, <iri4> identifies a photograph of the organism, and <iri5> identifies some other photograph of the organism that is associated in an unspecified way (perhaps a photograph of the organism's habitat).
+In these examples, {{{<iri1>}}} identifies an organism, {{{<iri2>}}} identifies some other organism with an unspecified relationship to the first organism, {{{<iri3>}}} identifies a reference document (e.g. publication) that refers to the organism, {{{<iri4>}}} identifies a photograph of the organism, and {{{<iri5>}}} identifies some other photograph of the organism that is associated in an unspecified way (perhaps a photograph of the organism's habitat).
 
 == Examples using dwciri:associatedWhatever terms==
 <iri1> a dwc:Organism.
