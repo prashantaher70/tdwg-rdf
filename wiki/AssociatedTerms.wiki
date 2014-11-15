@@ -4,7 +4,7 @@
 
 Steve Baskauf - 2014-11-15
 
-The [DwcRdfGuideProposalRevised current version of the RDF Guide] places the terms [http://rs.tdwg.org/dwc/terms/associatedMedia dwc:associatedMedia], [http://rs.tdwg.org/dwc/terms/associatedOccurrences dwc:associatedOccurrences], [http://rs.tdwg.org/dwc/terms/associatedSequences dwc:associatedSequences], [http://rs.tdwg.org/dwc/terms/associatedTaxa dwc:associatedTaxa], [	http://rs.tdwg.org/dwc/terms/associatedReferences dwc:associatedReferences] and [http://rs.tdwg.org/dwc/terms/associatedOrganisms dwc:associatedOrganisms] into the category "[#3.8_Darwin_Core_terms_whose_function_cannot_be_duplicated_by_a_d Darwin Core terms whose function cannot be duplicated by a dwciri: object property]". 
+The [DwcRdfGuideProposalRevised current version of the RDF Guide] places the terms [http://rs.tdwg.org/dwc/terms/associatedMedia dwc:associatedMedia], [http://rs.tdwg.org/dwc/terms/associatedOccurrences dwc:associatedOccurrences], [http://rs.tdwg.org/dwc/terms/associatedSequences dwc:associatedSequences], [http://rs.tdwg.org/dwc/terms/associatedTaxa dwc:associatedTaxa], [http://rs.tdwg.org/dwc/terms/associatedReferences dwc:associatedReferences] and [http://rs.tdwg.org/dwc/terms/associatedOrganisms dwc:associatedOrganisms] into the category "[#3.8_Darwin_Core_terms_whose_function_cannot_be_duplicated_by_a_d Darwin Core terms whose function cannot be duplicated by a dwciri: object property]". 
 
 In an off-list email conversation that included Bob Morris, Paul Morris, and me, we discussed the reasons why these terms were placed in this category and why there we chose not to just create dwciri: versions of each of them.  
 
