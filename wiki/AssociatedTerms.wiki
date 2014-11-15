@@ -46,6 +46,7 @@ In these examples, {{{<iri1>}}} identifies an organism, {{{<iri2>}}} identifies 
 <iri1> dwciri:associatedReferences <iri3>.
 <iri1> dwciri:associatedMedia <iri4>.
 <iri1> dwciri:associatedMedia <iri5>.
+<iri1> dcterms:isReferencedBy <iri3>.
 <iri1> foaf:depiction <iri4>.
 }}}
 
