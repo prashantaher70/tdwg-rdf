@@ -114,7 +114,7 @@ has been turned into an actionable IRI by appending it to the base string "{{{ht
 }}}
 Second, if a provider refers to a resource using an URL that provides data about the resource, the provider should take care to ensure that the URL does not change over time (e.g. if the content moves to a different server, if the directory structure changes, or if a new version of the database is introduced).  It may be preferable to use content negotiation [http://www.w3.org/TR/cooluris/ CONTENT-NEGOTIATION] to redirect the user from a persistent IRI which refers to the resource, to the URL of a web page which describes the resource.
 
-For a more detailed introduction to persistent identifiers, see the [http://www.gbif.org/orc/?doc_id=2428 GBIF Beginner's Guide to Persistent Identifiers].
+For a more detailed introduction to persistent identifiers, see the [http://www.gbif.org/resources/2575 GBIF Beginner's Guide to Persistent Identifiers].
 
 Based on the precedent set by the TDWG LSID Applicability Statement standard [http://www.tdwg.org/standards/150/ LSID-STANDARD], it is recommended that URN-based IRIs be related to HTTP-proxied equivalents (if they exist) as described in [#2.2.3_Associating_a_URN_with_its_HTTP-proxied_equivalent Section 2.2.3].
 
