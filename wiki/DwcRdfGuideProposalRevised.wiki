@@ -38,7 +38,7 @@ Each method of encoding information using Darwin Core [http://rs.tdwg.org/dwc/in
 
 ==1.1 Audience==
 
-The Darwin Core RDF Guide is targeted toward those who wish to share biodiversity data described by Darwin Core (DwC) properties using RDF.  It describes how community best practices for expressing fundamental information about resources using RDF relate to Darwin Core terms, and clarifies how Darwin Core terms should be used in RDF with literal (string) and non-literal (IRI reference) objects.  It is not intended to explain the model and syntax of RDF.  For a general introduction to RDF in a biodiversity context, see the [http://code.google.com/p/tdwg-rdf/wiki/Beginners BEGINNERS-GUIDE].  For a more detailed introduction to RDF, see the [http://www.w3.org/TR/rdf-primer/ RDF-PRIMER].  
+The Darwin Core RDF Guide is targeted toward those who wish to share biodiversity data described by Darwin Core (DwC) properties using RDF.  It describes how community best practices for expressing fundamental information about resources using RDF relate to Darwin Core terms, and clarifies how Darwin Core terms should be used in RDF with literal (string) and non-literal (IRI reference) objects.  It is not intended to explain the model and syntax of RDF.  For a general introduction to RDF in a biodiversity context, see the [http://code.google.com/p/tdwg-rdf/wiki/Beginners BEGINNERS-GUIDE].  For a more detailed introduction to RDF, see the [http://www.w3.org/TR/rdf11-primer/ RDF-PRIMER].  
 
 ==1.2 Rationale==
 
