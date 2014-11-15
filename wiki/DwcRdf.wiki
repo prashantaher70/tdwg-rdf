@@ -7,7 +7,7 @@
 
 = Cover page for RDF Guide proposed addition to Darwin Core =
 
-[DwcRdfGuideProposalRevised Current version of the RDF Guide Proposal] See below for version history.
+[DwcRdfGuideProposalRevised Current version of the RDF Guide Proposal] See [#Version_history below] for version history.
 
 == Background ==
 
