@@ -49,6 +49,7 @@ Informal discussions on the [http://code.google.com/p/tdwg-rdf/ TDWG RDF/OWL Tas
 [DwcRdfGuideProposal Version of proposed addition as recommended by the task group in July 2013]
 
 [DwcRdfGuideProposalChanges Version showing changes made to the July 2013 version after the October 2014 changes to the Darwin Core classes]
+
 [https://docs.google.com/document/d/153h1_kyfMllKGgfehVLB7ubzRDDaWtnaGHDDwJ6nkwE/edit?usp=sharing Document summarizing the changes made to the July 2013 version]
 
 [DwcRdfGuideProposalRevised Revised version under consideration during 30 public comment period]
