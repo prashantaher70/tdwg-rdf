@@ -59,6 +59,7 @@ Each arrow represents a statement about the image, called a "triple" in RDF.  Th
 This RDF graph can be serialized in a somewhat human-friendly syntax called Terse RDF Triple Language (Turtle) [http://www.w3.org/TR/turtle/ TURTLE]:
 {{{
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 <http://bioimages.vanderbilt.edu/kirchoff/ac1490>
        a <http://purl.org/dc/dcmitype/StillImage>;
