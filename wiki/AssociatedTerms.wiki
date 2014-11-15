@@ -21,7 +21,7 @@ Do nothing.  Leave the guide as it is and leave this as a problem for the future
 
 *Cons:* This is a problem that really needs to be dealt with since the dwc:associateWhatever terms are actually used by providers.  Paul already need some resolution of this issue for his current work.  
 
-==Option 2: create dwciri:associatedWhatever terms==
+==Option 2: create six dwciri:associatedWhatever terms==
 Create dwciri:associatedMedia, dwciri:associatedOccurrences, dwciri:associatedSequences, dwciri:associatedTaxa, dwciri:associatedReferences, and dwciri:associatedOrganisms.
 
 *Pros:* This would also be very easy to do.  Just move the four dwc:associatedWhatever terms from [#3.8_Darwin_Core_terms_whose_function_cannot_be_duplicated_by_a_d the table in section 3.8] to [#3.7_dwc:_namespace_terms_which_have_analogues_in_the_dwciri:_nam the table in section 3.7].  This also would not slow down the process of the adoption of the guide, unless it was questioned in the 30 day comment period and a later revision of the guide were required. 
