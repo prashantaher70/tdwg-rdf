@@ -691,13 +691,13 @@ Because there are many legacy data composed of string values of _dwc:_ namespace
 RDF/XML
 {{{
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:115956">
-     <dwc:recordedBy>Oliver P. Pearson; Anita K. Pearson</dwc:recordedBy>
+     <dwc:recordedBy>Oliver P. Pearson|Anita K. Pearson</dwc:recordedBy>
 </rdf:Description>
 }}}
 Turtle
 {{{
 <http://arctos.database.museum/guid/MVZ:Mamm:115956>
-     dwc:recordedBy "Oliver P. Pearson; Anita K. Pearson".
+     dwc:recordedBy "Oliver P. Pearson|Anita K. Pearson".
 }}}
 The terms in the _dwc:_ namespace should NOT be used for IRI reference objects, even if the term definition suggests that the object resource is of a non-literal type.  Instead, IRI reference objects should be used with terms in the _dwciri:_ namespace as defined by this guide in [#2.5_Terms_in_the_dwciri:_namespace Section 2.5].  When a string value is provided as the object of a _dwc:_ namespace term whose definition suggests that the object is of a non-literal type, that string is understood to be serving as a value string.  
  
