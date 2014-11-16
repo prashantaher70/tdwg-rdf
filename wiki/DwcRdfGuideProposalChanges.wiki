@@ -641,20 +641,20 @@ Under most circumstances, it is desirable to refer to a non-literal object resou
 RDF/XML
 {{{
 <rdf:Description rdf:about="http://museum.org/accession/12312">
-     <dcterms:references>
+     <dcterms:~~references~~ *isReferencedBy*>
           <rdf:Description>
                <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
                <dcterms:date ~~rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear"~~ >2003</dcterms:date>
                <dcterms:title ~~xml:lang="en"~~ >Collection notes</dcterms:title>
                <dc:creator>Joe Curator</dc:creator>
           </rdf:Description>
-     </dcterms:references>
+     </dcterms:~~references~~ *isReferencedBy*>
 </rdf:Description>
 }}}
 Turtle
 {{{
 <http://museum.org/accession/12312>
-     dcterms:references [a foaf:Document ;
+     dcterms:~~references~~ *isReferencedBy* [a foaf:Document ;
                          dcterms:date "2003" *^^xsd:gYear* ;
                          dcterms:title "Collection notes" *@en* ;
                          dc:creator "Joe Curator"].
