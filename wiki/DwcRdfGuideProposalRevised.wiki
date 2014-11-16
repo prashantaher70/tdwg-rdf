@@ -347,7 +347,7 @@ Turtle:
      a dcmitype:StillImage;
      dcterms:created "2002-06-11T09:37:33"^^xsd:dateTime.
 }}}
-In Turtle serialization, _rdf:type_ can be abbreviated as "_a_" (Example 4).  In XML serialization, the RDF specification provides an abbreviated way to specify the type of a described resource.  This method is called a typed node element [http://www.w3.org/TR/rdf-primer/#newresources TYPED-NODE].  The _rdf:Description_ element is replaced by an element whose name is an XML qualified name that identifies a class of which the described resource is an instance as in Example 5:
+In Turtle serialization, _rdf:type_ can be abbreviated as "_a_" (Example 4).  In XML serialization, the RDF specification provides an abbreviated way to specify the type of a described resource.  This method is called a typed node element [http://www.w3.org/TR/rdf-syntax-grammar/#section-Syntax-typed-nodes TYPED-NODE].  The _rdf:Description_ element is replaced by an element whose name is an XML qualified name that identifies a class of which the described resource is an instance as in Example 5:
 
 *Example 5:*
 
