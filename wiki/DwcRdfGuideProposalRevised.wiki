@@ -524,7 +524,7 @@ In the case of Darwin Core terms in the _dwc:_ ({{{http://rs.tdwg.org/dwc/terms/
  
 ===2.4.2 Non-literal object resources===
  
-Resources that are physical or conceptual cannot be intrinsically represented as string literals and if identified, they are referenced in RDF by IRIs.  Digital resources (e.g. images, web pages, etc.) could be represented as literals (the encoded content of the resource), but because many characters would be required to do that, they are usually referenced as independent entities through IRIs.  In RDF/XML a IRI reference to a non-literal object can be made using the attribute _rdf:resource_ in an empty XML element:
+Resources that are physical or conceptual often cannot be intrinsically represented as string literals and if identified, they are referenced in RDF by IRIs.  Digital resources (e.g. images, web pages, etc.) could be represented as literals (the encoded content of the resource), but because many characters would be required to do that, they are usually referenced as independent entities through IRIs.  In RDF/XML a IRI reference to a non-literal object can be made using the attribute _rdf:resource_ in an empty XML element:
 {{{
 <dcterms:rightsHolder rdf:resource="http://biocol.org/urn:lsid:biocol.org:col:15666"/>
 }}}
