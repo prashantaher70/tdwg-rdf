@@ -555,7 +555,7 @@ If the non-literal object is not identified by a IRI (i.e. it is a blank node), 
  
 ====2.4.2.1 When should non-literal object resources be described within the same document?====
  
-There are positive and negative aspects to describing a resource within the same document that references it.  If the IRI is not dereferenceable either because the IRI is not a type that can be dereferenced by HTTP (e.g. a URN) or because the issuer of the IRI is temporarily or permanently failing to respond to HTTP calls, then providing minimal information about the resource in the referencing document may be beneficial.  For example, if a property referred to a printed book which had an ISBN but no HTTP IRI, as in:
+There are positive and negative aspects to describing a resource within the same document that references it.  If the IRI is not dereferenceable, either because the IRI is not a type that can be dereferenced by HTTP (e.g. a URN) or because the issuer of the IRI is temporarily or permanently failing to respond to HTTP calls, then providing minimal information about the resource in the referencing document may be beneficial.  For example, if a property referred to a printed book which had an ISBN but no HTTP IRI, as in:
 
 *Example 13:*
 
