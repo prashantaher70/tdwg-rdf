@@ -135,7 +135,7 @@ Inappropriate use of terms as RDF predicates can have unintended consequences be
 
 For these reasons, terms should be used as predicates in RDF only after the data provider has carefully examined the documentation and usage guidelines associated with the vocabulary or ontology which defines the term and has determined that use of that term is consistent with the meaning which the provider intends to impart to the triple in which the term is to be used as a predicate.
 
-For more detailed information about the implications of using terms which have range, domain, and subproperty declarations in RDF, see part 4 of the [http://code.google.com/p/tdwg-rdf/wiki/Beginners4Vocabularies Beginner's Guide to RDF].  For more detailed information about how OWL is used to define complex properties of terms in RDF, see part 7 of the [http://code.google.com/p/tdwg-rdf/wiki/Beginners7OWL Beginner's Guide to RDF].
+For more detailed information about the implications of using terms that have range, domain, and subproperty declarations in RDF, see part 4 of the [http://code.google.com/p/tdwg-rdf/wiki/Beginners4Vocabularies Beginner's Guide to RDF].  For more detailed information about how OWL is used to define complex properties of terms in RDF, see part 7 of the [http://code.google.com/p/tdwg-rdf/wiki/Beginners7OWL Beginner's Guide to RDF].
 
 ===1.4.3 Use of Darwin Core terms in RDF===
 
@@ -640,7 +640,7 @@ the described subject resource refers to an object resource that is not identifi
  
 The data provider may feel that there is no need for another provider to refer to that resource, or the provider may be unwilling or unable to maintain a separate identifier for the resource.  For example, in Example 12, the data provider may not have had access to an IRI identifier for the Trustees of the University of Lavonia and might not be interested in taking on the job of assigning one.  At some future point, the provider could replace the blank node with an IRI reference if an IRI for the Trustees of the University of Lavonia were discovered.
  
-===2.4.3 Object resources which have been previously represented by literals but which are actually non-literal resources===
+===2.4.3 Object resources that have been previously represented by literals but which are actually non-literal resources===
  
 In databases the names of entities have frequently been used to represent the entities themselves.  For example, the name of a person is often used as a proxy for the person, or an abbreviation for a language has been used to represent the language itself.  Prior to the creation of the DCMI Abstract Model, many data which were described using terms in the legacy Dublin Core namespace _dc:_ ({{{http://purl.org/dc/elements/1.1/}}}) followed the historical practice of using the name of an entity to represent a non-literal entity.  Extending this practice to RDF would result in representations such as this:
 
@@ -855,7 +855,7 @@ The data unambiguously specifies the lowest level political subdivision (Roberts
 
 When expressing the data about resources collected in Robertson County in RDF, it really isn’t necessary to indicate in every record that North America is a parent feature of the United States, that the United States is a parent feature of Tennessee, and that Tennessee is a parent feature of Robertson County.  It is only necessary to link the record to an IRI for Robertson County such as {{{<http://sws.geonames.org/4653638/>}}} and a semantic client can discover the parent features by traversing the _gn:parentFeature_ property of features included in the hierarchy.  Once a client has discovered the higher level parts of the hierarchy in which it is interested, no additional retrieval of data about the hierarchy is required.  
 
-In general, it should not be necessary for a data provider to recreate hierarchical RDF relationships which have already been expressed by a centralized service.  For that reason, this guide does not describe best-practices for expressing such relationships in RDF.  Nevertheless, there are several reasons why it may be convenient for a data provider to expose literal values from existing text-based data: 
+In general, it should not be necessary for a data provider to recreate hierarchical RDF relationships that have already been expressed by a centralized service.  For that reason, this guide does not describe best-practices for expressing such relationships in RDF.  Nevertheless, there are several reasons why it may be convenient for a data provider to expose literal values from existing text-based data: 
   * the provider may be unable or unwilling to discover and link to an IRI for the lowest level of the hierarchy, yet wish to facilitate future discovery of such IRIs through string matching by applications or aggregators.  
   * the provider may want to facilitate simple string-based queries (e.g. SPARQL) at any level of the hierarchy.
   * the provider may wish to make it easier for consuming applications to create human-friendly representations of the data in which presenting the string hierarchy would be meaningful.
@@ -1117,7 +1117,7 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 ||dwciri:fromLithostratigraphicUnit||Use to link a _dwc:GeologicalContext_ instance to an IRI-identified lithostratigraphic unit at the lowest possible level in a hierarchy.  It is expected that such resources will be linked to higher levels in the hierarchy by the organization minting the IRI.  See [#2.7.7_Lithostratigraphy_descriptors Section 2.7.7] for usage details.||
 ||dwciri:inDataset||This object property is provided to link a subject dataset record to the dataset which contains it.  A string literal name of the dataset can be provided using the term _dwc:datasetName_.||
 
-==3.7 dwc: namespace terms which have analogues in the dwciri: namespace==
+==3.7 dwc: namespace terms that have analogues in the dwciri: namespace==
 
 || *Darwin Core term having a _dwciri:_ analogue with the same local name* || *Notes on the _dwciri:_ analogues* ||
 ||<dl><dt>dwc:recordedBy</dt><dt>dwc:identifiedBy</dt><dt>dwc:georeferencedBy</dt></dl>||The object is an agent; use a well-known IRI such as those referenced in the [RecommendedIRISources informative ancillary list of sources of controlled values]||
