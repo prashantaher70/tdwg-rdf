@@ -318,7 +318,7 @@ This practice can be extended to any URN.  For example, _owl:sameAs_ can be used
  
 ==2.3 Predicates==
  
-Most terms in the Darwin Core vocabulary can be used as predicates in triples to represent properties of subject resources.  The full term IRI must be used, although with an appropriate namespace declaration, the namespace can be abbreviated ([#2.1.1_Namespace_abbreviations_used_in_XML_qualified_names_(QName Section 2.1.1].  RDF does not restrict the source of predicates, therefore Darwin Core terms can be mixed with terms from other vocabularies.  This includes the important predicate _rdf:type_ which is used to indicate the class of which the subject resource is an instance.  There is no prohibition in RDF against repeating properties.
+Most terms in the Darwin Core vocabulary can be used as predicates in triples to represent properties of subject resources.  The full term IRI must be used, although with an appropriate namespace declaration, the namespace can be abbreviated ([#2.1.1_Namespace_abbreviations_used_in_XML_qualified_names_(QName Section 2.1.1]).  RDF does not restrict the source of predicates, therefore Darwin Core terms can be mixed with terms from other vocabularies.  This includes the important predicate _rdf:type_ which is used to indicate the class of which the subject resource is an instance.  There is no prohibition in RDF against repeating properties.
  
 ===2.3.1 Declaring the type of the resource===
  
