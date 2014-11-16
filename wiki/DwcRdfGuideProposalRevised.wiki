@@ -433,7 +433,7 @@ Here is an example that describes a specimen using several of the terms that def
 RDF/XML
 {{{
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861">
-     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen"/>
+     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/PreservedSpecimen"/>
      <rdf:type rdf:resource="http://purl.org/dc/dcmitype/PhysicalObject"/>
      <dc:type>PhysicalObject</dc:type>
      <dcterms:type rdf:resource="http://purl.org/dc/dcmitype/PhysicalObject"/>     
