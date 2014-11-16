@@ -1078,9 +1078,9 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 
 ^4^ See the ancillary document "[LicenseProperties Expressing License Properties as RDF]" for more information about linking a creative work to its license.
 
-^5^ DCMI does not provide a literal object analogue of _dcterms:license_.  Audubon Core recommends _xmpRights:UsageTerms_ for literals.  
+^5^ DCMI does not provide a literal object analogue of _dcterms:license_.  Audubon Core [http://terms.tdwg.org/wiki/Audubon_Core AUDUBON-CORE] recommends _xmpRights:UsageTerms_ for literals.  
 
-^6^ DCMI does not provide a literal object analogue of _dcterms:rightsHolder_.  Audubon Core recommends _xmpRights:Owner_ for literals.  However, since _xmpRights:Owner_ is defined as "a list of legal owners of the resource"  [http://www.adobe.com/content/dam/Adobe/en/devnet/xmp/pdfs/XMPSpecificationPart1.pdf XMP-SPECIFICATION], it can only be used to specify the rights owner, not an agent managing the rights.  
+^6^ DCMI does not provide a literal object analogue of _dcterms:rightsHolder_.  Audubon Core [http://terms.tdwg.org/wiki/Audubon_Core AUDUBON-CORE] recommends _xmpRights:Owner_ for literals.  However, since _xmpRights:Owner_ is defined as "a list of legal owners of the resource"  [http://www.adobe.com/content/dam/Adobe/en/devnet/xmp/pdfs/XMPSpecificationPart1.pdf XMP-SPECIFICATION], it can only be used to specify the rights owner, not an agent managing the rights.  
 
 ^7^ See the [http://wiki.dublincore.org/index.php/User_Guide/Publishing_Metadata#dcterms:accessRights DCMI-ACCESS-RIGHTS] guidelines for an example.
 
