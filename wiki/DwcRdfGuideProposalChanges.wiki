@@ -1066,6 +1066,118 @@ In this example, the object properties _dwcuri:earliestGeochronologicalEra_ and 
 
 Since lithostratigraphic units are hierarchical, the pattern followed with the other hierarchical convenience terms applies to the Darwin Core lithostratigraphic terms categorized under the _dwc:GeologicalContext_ class (_dwc:group_, _dwc:formation_, _dwc:member_, and _dwc:bed_).  The object property _dwcuri:fromLithostratigraphicUnit_ can be used to link the URI for a lithostratigraphic unit at the lowest appropriate level.  
 
+*_Note: Sections 2.8 through 2.8.3 were added after the initial approval by the task group.  For convenience, they have not been shown in bold text_*
+
+==2.8 Darwin Core association terms==
+
+Darwin Core contains a number of terms whose local name begins with "associated" (_dwc:associatedMedia_, _dwc:associatedOccurrences_, etc.), which are referred to as "association terms" in this guide.  Because these terms were designed to link the subject resource to one or more related resources within a flat, text-based data system, they need special handling to represent their values as IRI-reference objects.  
+
+===2.8.1 What is the purpose of association terms?===
+
+The information encoded by Darwin Core association term and its value can be broken down into three components:
+  * a link to a related resource
+  * a designation of the type of the related resource
+  * (for some terms) a description of the nature of the relationship and the direction of the relationship
+The related resource is designated by some sort of identifier present in the literal value.  The type of the related resource is implied by the second part of the local name (e.g. "Media", "Occurrences", etc.).  The definitions of some of the terms (_dwc:associatedTaxa_, _dwc:associatedOccurrences_, and _dwc:associatedOrganisms_) also specify that the nature of the association with the subject resource should also be included in the literal value ("sibling of", "predator of ", etc.).  
+
+===2.8.2 Expressing Darwin Core association terms as RDF with literal values===
+
+A database might contain the information shown in Table 10.
+
+*Table 10*
+
+|| *_dwc:organismID_* || *_dwc:associatedOrganisms_* || *_dwc:associatedMedia_* ||
+||"http://bioimages.vanderbilt.edu/ind-durandp/dd343"||"sibling of AX3467"||"http://bioimages.vanderbilt.edu/durandp/dd343|http://bioimages.vanderbilt.edu/durandp/dd344"||
+
+These data can be serialized as RDF using the _dwc:_  namespace literal value terms _dwc:associatedOrganisms_ and  _dwc:associatedMedia_ as shown in Example 28.
+
+*Example 28:*
+
+RDF/XML
+
+{{{
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-durandp/dd343">
+     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Organism"/>
+      <dwc:associatedOrganisms>sibling of AX3467</dwc:associatedOrganisms>
+     <dwc:associatedMedia>http://bioimages.vanderbilt.edu/durandp/dd343|http://bioimages.vanderbilt.edu/durandp/dd344</dwc:associatedMedia>
+</rdf:Description>
+}}}
+
+Turtle:
+
+{{{
+<http://bioimages.vanderbilt.edu/ind-durandp/dd343>
+     a dwc:Organism;
+     dwc:associatedOrganisms "sibling of AX3467";
+     dwc:associatedMedia "http://bioimages.vanderbilt.edu/durandp/dd343|http://bioimages.vanderbilt.edu/durandp/dd344".
+}}}
+
+Because the values of the association terms are literals, a consuming client would need to carry out additional processing to determine the identity of the associated resources described in the literals.  In the case of the value for _dwc:associatedOrgansims_, the client would have to determine that the substring "AX3467" was an identifier for the organism and determine the nature of the relationship represented by the substring "sibling of".  In the case of the value for _dwc:associatedMedia_, the client would need to parse the identifiers included in the value string, then determine that those substrings were IRIs.
+
+The advantage of presenting the literal values of Darwin Core association properties via RDF is that a provider could easily expose existing data with little effort.  The disadvantage is that there would be a significant processing burden on consuming clients.  It is possible that some literal values would be uninterpretable without additional information from another source.  For example, how can the organism identified by "AX3467" be distinguished globally from other organims that might have also been assigned the identifier "AX3467" ?  
+
+===2.8.3 Expressing Darwin Core association terms as RDF with URI references===
+
+Because a Darwin Core association property/value pair actually encodes two or more discrete "facts", it is probably better to represent the information contained in that property/value pair by more than a single triple.  
+
+The well-known Dublin Core term _dcterms:relation_  ({{{http://purl.org/dc/terms/relation}}}) can be used to link related resources.  _dcterms:relation_ does not specify the exact nature of the relationship, although it has a number of declared subproperties that more precisely specify kinds and directions of the relationships (for example: _dcterms:hasPart_, _dcterms:isPartOf_, _dcterms:hasFormat_, _dcterms:isFormatOf_, _dcterms:references_, _dcterms:isVersionOf_, etc.).  So _dcterms:relation_ is a generic term that may be used to indicate that a resource has an unspecified association with some other resource.
+
+The term _rdf:type_ ([#2.3.1_Declaring_the_type_of_the_resource Section 2.3.1]) is the standard property for indicating the type of a resource in RDF.  So it should be used to declare the type of the object resource of a Darwin Core association property/value pair.  
+
+The nature and direction of the association between the subject and object resource can be described more precisely if an appropriate term exists for that purpose.  For example, in many cases, the relationship between a subject and object resource that are linked by _dwc:associatedMedia_ is depiction.  Thus the well known term _foaf:depiction_ can be used to link two resources in lieu of, or in addition to _dcterms:relation_.
+
+Example 29 shows how the data presented in Table 10 may be expressed as RDF using URI-reference properties instead of Darwin Core association properties.
+
+*Example 29:*
+
+RDF/XML
+
+{{{
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-durandp/dd343">
+     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Organism"/>
+     <dcterms:relation rdf:resource="http://museum.org/individuals/ax3467"/>
+     <dcterms:relation rdf:resource="http://bioimages.vanderbilt.edu/durandp/dd343"/>
+     <foaf:depiction rdf:resource="http://bioimages.vanderbilt.edu/durandp/dd343"/>
+     <dcterms:relation rdf:resource="http://bioimages.vanderbilt.edu/durandp/dd344"/>
+     <foaf:depiction rdf:resource="http://bioimages.vanderbilt.edu/durandp/dd344"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://museum.org/individuals/ax3467">
+     <dcterms:identifier>AX3467</dcterms:identifier>
+     <rdf:type rdf:resource="http://rs.tdwg.org/dwc/terms/Organism"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/durandp/dd343">
+     <rdf:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+</rdf:Description>
+<rdf:Description rdf:about="http://bioimages.vanderbilt.edu/durandp/dd344">
+     <rdf:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+</rdf:Description>
+}}}
+
+Turtle:
+
+{{{
+<http://bioimages.vanderbilt.edu/ind-durandp/dd343>
+     a dwc:Organism;
+     dcterms:relation <http://museum.org/individuals/ax3467>;
+     dcterms:relation <http://bioimages.vanderbilt.edu/durandp/dd343>;
+     foaf:depiction <http://bioimages.vanderbilt.edu/durandp/dd343>;
+     dcterms:relation <http://bioimages.vanderbilt.edu/durandp/dd344>;
+     foaf:depiction <http://bioimages.vanderbilt.edu/durandp/dd345>.
+<http://museum.org/individuals/ax3467>
+     dcterms:identifier "AX3467";
+     a dwc:Organism.
+<http://bioimages.vanderbilt.edu/durandp/dd343>
+     a dcmitype:StillImage.
+<http://bioimages.vanderbilt.edu/durandp/dd344>
+     a dcmitype:StillImage.
+}}}
+
+Notes:
+
+1. Because there is no well-known term for expressing the relationship "sibling of", the nature of the relation between the two associated organisms was not represented in the triples.  
+
+2. In this example, both of the associated media items were depictions of the subject organism, so _foaf:depiction_ was used to indicate that.  However, it is likely that many associated media items will not depict the subject resource.  For example, specimen labels do not depict specimens with which they are associated nor do still images of habitats depict organisms with which they are associated.  Therefore, there is a need for more expressive terms to describe these types of relations more precisely.  However,  creating such terms is beyond the scope of this guide.  
+
 =3. Term reference=
 
 This section organizes terms from Darwin Core and other key vocabularies according to their use in RDF.  If the use of a term has additional restrictions or implications (e.g. domain and range assertions), they are noted.  Recommended formats and values are given when appropriate.
