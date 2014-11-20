@@ -1181,7 +1181,7 @@ Notes:
 
 ===2.8.4 Querying for associated resources===
 
-If the strategy outlined in section 2.8.3 were used, resources associated with a subject resource could be discovered using a SPARQL query similar to Example 30.  In that example, {{{<iri1}}} is the IRI of a subject resource, and _dcmitype:StillImage_ is the type of associated media that will be discovered.  
+If the strategy outlined in section 2.8.3 were used, resources associated with a subject resource could be discovered using a SPARQL query similar to Example 30.  In that example, {{{<iri1>}}} is the IRI of a subject resource, and _dcmitype:StillImage_ is the type of associated media that will be discovered.  
 
 *Example 30:*
 
