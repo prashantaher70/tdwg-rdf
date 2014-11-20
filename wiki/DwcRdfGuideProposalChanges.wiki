@@ -1188,6 +1188,9 @@ If the strategy outlined in [#2.8.3_Expressing_Darwin_Core_association_terms_as_
 SPARQL
 
 {{{
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
+
 SELECT ?resource WHERE {
  <iri1>  dcterms:relation ?resource.
  ?resource a dcmitype:StillImage.
