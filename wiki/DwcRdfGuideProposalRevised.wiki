@@ -1156,7 +1156,7 @@ Notes:
 
 ===2.8.4 Querying for associated resources===
 
-If the strategy outlined in [#2.8.3_Expressing_Darwin_Core_association_terms_as_RDF_with_URI_r Section 2.8.3] were used, resources associated with a subject resource could be discovered using a SPARQL query similar to Example 30.  In that example, {{{<iri1>}}} is the IRI of a subject resource, and _dcmitype:StillImage_ is the type of associated media that would be discovered.  
+If the strategy outlined in [#2.8.3_Expressing_Darwin_Core_association_terms_as_RDF_with_URI_r Section 2.8.3] were used, resources associated with a subject resource could be discovered using a SPARQL query [http://www.w3.org/TR/sparql11-query/ SPARQL] similar to Example 30.  In that example, {{{<iri1>}}} is the IRI of a subject resource, and _dcmitype:StillImage_ is the type of associated media that would be discovered.  
 
 *Example 30:*
 
