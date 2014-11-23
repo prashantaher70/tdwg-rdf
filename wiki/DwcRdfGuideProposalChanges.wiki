@@ -1336,8 +1336,7 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 ||dwc:recordNumber||_dwcuri:recordNumber_ is an object property whose subject is an occurrence and and whose object is a (possibly URI-identified) resource that is the field notes. ||
 
 
-== 3.8 ~~Darwin Core terms whose function cannot be duplicated by~~ *Darwin Core terms for which this guide does not recommend the use
-of* a dwcuri: object property ==
+== 3.8 ~~Darwin Core terms whose function cannot be duplicated by~~ *Darwin Core terms for which this guide does not recommend the use of* a dwcuri: object property ==
 
 || *Darwin Core term* || *Notes* ||
 ||<dl><dt>dwc:relationshipOfResource</dt><dt>dwc:relationshipAccordingTo</dt></dl>|| *The non-RDF use of terms organized under the _dwc:!ResourceRelationship_ class depends on values for _dwc:resourceID_ and _dwc:relatedResourceID_, which cannot be used in RDF for reasons discussed in [#2.6_Darwin_Core_ID_terms_and_RDF Section 2.6]. As of November 2014, the RDF/OWL Task Group is seeking a way to express resource relationships as RDF. For the present, _dwciri:_ analogues have not been adopted for these two terms.* See the [ResourceRelationship informative ancillary web page] ~~for examples.~~ *for further discussion.* ||
