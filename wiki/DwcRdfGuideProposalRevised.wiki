@@ -1172,7 +1172,7 @@ SELECT ?resource WHERE {
  }
 }}}
 
-==2.9 dwc:MeasurementOrFact instances==
+==2.9 dwc:!MeasurementOrFact instances==
 
 Darwin Core provides a mechanism for expressing measurements and factual information associated with resources that are described using Darwin Core using properties organized in the _dwc:MeasurementOrFact_ class.  The _dwc:_ namespace terms were designed to express this information in using string values in flat files.  The information can be also expressed as RDF using a combination of literal value _dwc:_ namespace terms and IRI value _dwciri:_  terms.  It is likely that the information could also be mapped to more expressive terms, such as those in the OBOE ontology.  However, that sort of translation is beyond the scope of this guide.
 
