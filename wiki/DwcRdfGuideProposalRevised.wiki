@@ -1214,7 +1214,7 @@ Turtle
           dwc:measurementValue "25"^^xsd:int ; 
           dwc:measurementUnit "mm" ; 
           dwciri:measurementUnit <http://mimi.case.edu/ontologies/2009/1/UnitsOntology#millimeter> ; 
-          dwc:measurementAccuracy 0.5 ; 
+          dwc:measurementAccuracy "0.5"^^xsd:decimal ; 
           dwc:measurementDeterminedDate "2009-08-22"^^xsd:dateTime ; 
           dwc:measurementDeterminedBy "Ryan B Stephens" ; 
           dwciri:measurementDeterminedBy <http://scholar.google.com/citations?user=RAsUdjoAAAAJ> ; 
