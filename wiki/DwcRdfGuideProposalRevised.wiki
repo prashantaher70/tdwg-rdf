@@ -1311,7 +1311,7 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 ||dwc:recordNumber||_dwciri:recordNumber_ is an object property whose subject is an occurrence and and whose object is a (possibly IRI-identified) resource that is the field notes. ||
 
 
-==3.8 Darwin Core terms whose function cannot be duplicated by a dwciri: object property==
+==3.8 Use of a dwciri: object property analog not recommended==
 
 || *Darwin Core term* || *Notes* ||
 ||<dl><dt>dwc:relationshipOfResource</dt><dt>dwc:relationshipAccordingTo</dt></dl>||See the [ResourceRelationship informative ancillary web page] for examples.||
