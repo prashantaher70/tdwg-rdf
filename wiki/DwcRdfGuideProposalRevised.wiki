@@ -1314,7 +1314,6 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 
 || *Darwin Core term* || *Notes* ||
 ||<dl><dt>dwc:relationshipOfResource</dt><dt>dwc:relationshipAccordingTo</dt></dl>||See the [ResourceRelationship informative ancillary web page] for examples.||
-||</dt><dt>dwc:measurementAccuracy</dt></dl>||See the [MeasurementOrFact informative ancillary web page] for examples.||
 ||dwc:dynamicProperties||See the [DynamicProperties informative ancillary web page] for examples.||
 ||dwc:otherCatalogNumbers||There is no simple mapping because of the kinds of identifiers people use and variety of relationships that there may be among identifiers. _owl:sameAs_ may be used to associate other IRI identifiers with the subject IRI if this is appropriate.  For string values, use _dwc:otherCatalogNumbers_.||
 ||<dl><dt>dwc:associatedOccurrences</dt><dt>dwc:associatedMedia</dt><dt>dwc:associatedSequences</dt><dt>dwc:associatedTaxa</dt><dt>dwc:associatedOrganisms</dt></dl>||Use _dcterms:relation_ and _rdf:type_, or terms that indicate more specific relationships as described in [#2.8_Darwin_Core_association_terms Section 2.8] (Darwin Core association terms).||
