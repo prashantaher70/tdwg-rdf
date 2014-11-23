@@ -1066,7 +1066,7 @@ In this example, the object properties _dwcuri:earliestGeochronologicalEra_ and 
 
 Since lithostratigraphic units are hierarchical, the pattern followed with the other hierarchical convenience terms applies to the Darwin Core lithostratigraphic terms categorized under the _dwc:GeologicalContext_ class (_dwc:group_, _dwc:formation_, _dwc:member_, and _dwc:bed_).  The object property _dwcuri:fromLithostratigraphicUnit_ can be used to link the URI for a lithostratigraphic unit at the lowest appropriate level.  
 
-*_Note: Sections 2.8 through 2.8.3 were added after the initial approval by the task group.  For convenience, they have not been shown in bold text_*
+*_Note: Sections 2.8 through 2.9 were added after the initial approval by the task group.  For convenience, they have not been shown in bold text_*
 
 ==2.8 Darwin Core association terms==
 
@@ -1197,6 +1197,56 @@ SELECT ?resource WHERE {
  }
 }}}
 
+==2.9 !MeasurementOrFact instances==
+
+Darwin Core provides a mechanism for expressing measurements and factual information associated with resources that are described using Darwin Core using properties organized in the _dwc:!MeasurementOrFact_ class.  The _dwc:_ namespace terms were designed to express this information in using string values in flat files.  The information can be also expressed as RDF using a combination of literal value _dwc:_ namespace terms and IRI value _dwciri:_  terms.  It is likely that the information could also be mapped to more expressive terms, such as those in the OBOE ontology.  However, that sort of translation is beyond the scope of this guide.
+
+Measurement properties can be grouped as part of a _dwc:!MeasurementOrFact_ instance as shown in Example 31.  In order for that instance to have meaning, it must be linked to some other resource that is the measured entity.  In Example 31, the measurement took place when an occurrence was documented by the collection of a preserved specimen.  A part of the collected organism was measured and given that the organism was preserved, the measurement also applies to the corresponding part of the preserved specimen.  Darwin Core does not provide the object properties that would be required to describe precisely how the _dwc:!MeasurementOrFact_ instance was related to the _dwc:Occurrence_ instance, the _dwc:Organism_ that was collected, and the _dwc:!PreservedSpecimen_ that was accessioned.  In the example, _dcterms:relation_ was used to link the _dwc:!MeasurementOrFact_ instance to the _dwc:Occurrence_ instance that was the subject of the database record that served as the source of the data serialized as RDF in Example 31.  Providers may link _dwc:!MeasurementOrFact_ instances using more expressive object properties outside of Darwin Core.  See the informative ancillary documents for more information.
+
+*Example 31*
+
+RDF/XML
+
+{{{
+<dwc:Occurrence rdf:about="http://mczbase.mcz.harvard.edu/guid/MCZ:Mamm:67231">
+  <dcterms:relation> 
+    <dwc:MeasurementOrFact>
+      <dwc:measurementType>tail length</dwc:measurementType>
+      <dwciri:measurementType rdf:resource="http://purl.obolibrary.org/obo/VT_0002758" />
+      <dwc:measurementValue rdf:datatype="http://www.w3.org/2001/XMLSchema#int">25</dwc:measurementValue>
+      <dwc:measurementUnit>mm</dwc:measurementUnit> 
+      <dwciri:measurementUnit rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#millimeter"/>
+      <dwc:measurementAccuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</dwc:measurementAccuracy>
+      <dwc:measurementDeterminedDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-08-22</dwc:measurementDeterminedDate>
+      <dwc:measurementDeterminedBy>Ryan B Stephens</dwc:measurementDeterminedBy>
+      <dwciri:measurementDeterminedBy rdf:resource="http://scholar.google.com/citations?user=RAsUdjoAAAAJ" />
+      <dwc:measurementMethod>unspecified</dwc:measurementMethod>
+      <dwciri:measurementMethod rdf:resource="http://purl.obolibrary.org/obo/MMO_0000160" />
+      <dwc:measurementRemarks xml:lang="en">Accuracy from significant digits.</dwc:measurementRemarks> 
+    </dwc:MeasurementOrFact>
+  </dcterms:relation>
+</dwc:Occurrence>
+}}}
+
+Turtle
+
+{{{
+<http://mczbase.mcz.harvard.edu/guid/MCZ:Mamm:67231> 
+     a dwc:Occurrence;
+     dcterms:relation [a dwc:MeasurementOrFact ; 
+          dwc:measurementType "tail length" ; 
+          dwciri:measurementType <http://purl.obolibrary.org/obo/VT_0002758> ; 
+          dwc:measurementValue "25"^^xsd:int ; 
+          dwc:measurementUnit "mm" ; 
+          dwciri:measurementUnit <http://mimi.case.edu/ontologies/2009/1/UnitsOntology#millimeter> ; 
+          dwc:measurementAccuracy "0.5"^^xsd:decimal ; 
+          dwc:measurementDeterminedDate "2009-08-22"^^xsd:dateTime ; 
+          dwc:measurementDeterminedBy "Ryan B Stephens" ; 
+          dwciri:measurementDeterminedBy <http://scholar.google.com/citations?user=RAsUdjoAAAAJ> ; 
+          dwc:measurementMethod "unspecified" ; 
+          dwciri:measurementMethod <http://purl.obolibrary.org/obo/MMO_0000160> ; 
+          dwc:measurementRemarks "Accuracy from significant digits."@en].
+}}}
 
 =3. Term reference=
 
@@ -1243,10 +1293,10 @@ This section organizes terms from Darwin Core and other key vocabularies accordi
 ==3.4 Terms defined by Darwin Core that are expected to be used only with literal values==
 
 || *Darwin Core term* || *Notes on  expressing as RDF* ||
-||<dl><dt>dwc:eventDate</dt><dt>dwc:georeferencedDate</dt><dt>dwc:dateIdentified</dt><dt> ~~dwc:measurementDeterminedDate~~ </dt><dt>dwc:relationshipEstablishedDate</dt></dl>||These date terms have range _rdfs:Literal_ ^8^. Best practice as specified in the term definition recommends that they should be formatted according to ISO 8601:2004(E).  There is no defined XML Schema datatype that corresponds exactly to ISO 8601:2004(E), therefore the entire set of possible values cannot be specified using an _rdf:datatype_ attribute.  The XML Schema dateTime datatype (_xsd:dateTime_) which is effectively a subset of ISO 8601:2004(E), may be used as an _rdf:datatype_ attribute.  However, _xsd:dateTime_ requires the complete series of year, month, day, hour, second (e.g. 002-10-10T12:00:00) and does not permit listing only part of this hierarchy (e.g. only the year) as is allowed in ISO 8601:2004(E).||
+||<dl><dt>dwc:eventDate</dt><dt>dwc:georeferencedDate</dt><dt>dwc:dateIdentified</dt><dt>dwc:measurementDeterminedDate</dt><dt>dwc:relationshipEstablishedDate</dt></dl>||These date terms have range _rdfs:Literal_ ^8^. Best practice as specified in the term definition recommends that they should be formatted according to ISO 8601:2004(E).  There is no defined XML Schema datatype that corresponds exactly to ISO 8601:2004(E), therefore the entire set of possible values cannot be specified using an _rdf:datatype_ attribute.  The XML Schema dateTime datatype (_xsd:dateTime_) which is effectively a subset of ISO 8601:2004(E), may be used as an _rdf:datatype_ attribute.  However, _xsd:dateTime_ requires the complete series of year, month, day, hour, second (e.g. 002-10-10T12:00:00) and does not permit listing only part of this hierarchy (e.g. only the year) as is allowed in ISO 8601:2004(E).||
 ||dwc:eventTime||It is recommended that the format described by ISO 8601:2004(E) be used.  As with the date terms, there is no XML Schema datatype that includes all of the possible values allowed in ISO 8601:2004(E), so there is no generic _rdf:datatype_ attribute that would apply to all possible instances.  The XML Schema time datatype (_xsd:time_) which is effectively a subset of ISO 8601:2004(E) may be used as an _rdf:datatype_ attribute although it is limited to values that include hours, minutes, and seconds (e.g. 13:07:56-05:00).||
 ||<dl><dt>dwc:individualCount</dt><dt>dwc:decimalLatitude</dt><dt>dwc:decimalLongitude</dt><dt>dwc:coordinatePrecision</dt><dt>dwc:pointRadiusSpatialFit</dt><dt>dwc:coordinateUncertaintyInMeters</dt><dt>dwc:minimumElevationInMeters</dt><dt>dwc:maximumElevationInMeters</dt><dt>dwc:minimumDepthInMeters</dt><dt>dwc:maximumDepthInMeters</dt><dt>dwc:minimumDistanceAboveSurfaceInMeters</dt><dt>dwc:maximumDistanceAboveSurfaceInMeters</dt><dt>dwc:startDayOfYear</dt><dt>dwc:endDayOfYear</dt><dt>dwc:year</dt><dt>dwc:month</dt><dt>dwc:day</dt><dt>dwc:footprintSpatialFit</dt></dl>||These terms are expected to have literal values ~~which~~ *that* are numeric.  Therefore, an _rdf:datatype_ attribute describing the form of the number ~~may be appropriate~~ *should be used* .||
-||<dl><dt>dwc:occurrenceRemarks</dt><dt>dwc:eventRemarks</dt><dt>dwc:locationRemarks</dt><dt>dwc:georeferenceRemarks</dt><dt>dwc:identificationRemarks</dt><dt>dwc:taxonRemarks</dt><dt>*dwc:organismRemarks*</dt><dt> ~~dwc:measurementRemarks~~ </dt><dt>dwc:relationshipRemarks</dt></dl>||Because these are remarks, they are expected to have literal values ~~.  An~~ *with an* _xml:lang_ attribute ~~would be appropriate~~ .||
+||<dl><dt>dwc:occurrenceRemarks</dt><dt>dwc:eventRemarks</dt><dt>dwc:locationRemarks</dt><dt>dwc:georeferenceRemarks</dt><dt>dwc:identificationRemarks</dt><dt>dwc:taxonRemarks</dt><dt>*dwc:organismRemarks*</dt><dt> ~~dwc:measurementRemarks~~ </dt><dt>dwc:relationshipRemarks</dt><dt>dwc:measurementRemarks</dt></dl>||Because these are remarks, they are expected to have literal values ~~.  An~~ *with an* _xml:lang_ attribute ~~would be appropriate~~ .||
 ||<dl><dt>dwc:catalogNumber</dt><dt>dwc:samplingEffort</dt><dt>*dwc:organismName*</dt><dt>dwc:verbatimEventDate</dt><dt>dwc:verbatimLocality</dt><dt>dwc:verbatimElevation</dt><dt>dwc:verbatimCoordinates</dt><dt>dwc:verbatimLatitude</dt><dt>dwc:verbatimLongitude</dt><dt>dwc:verbatimDepth</dt><dt>dwc:verbatumTaxonRank</dt></dl>||Based on their term definitions, these terms are expected to have untyped literal values||
 ||dwc:basisOfRecord||Use only with literal value strings ~~from the Darwin Core Type Vocabulary~~ *consisting of the local name component of Darwin Core class IRIs* .  Use _rdf:type_ to refer to URIs that describe the type of the resource.||
 
@@ -1276,10 +1326,10 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 ==3.7 dwc: namespace terms which have analogues in the dwcuri: namespace==
 
 || *Darwin Core term having a _dwcuri:_ analogue with the same local name* || *Notes on the _dwcuri:_ analogues* ||
-||<dl><dt>dwc:recordedBy</dt><dt>dwc:identifiedBy</dt><dt>dwc:georeferencedBy</dt></dl>||The object is an agent; use ~~VIAF, e.g. {{{<http://viaf.org/viaf/27063124>}}} or~~ *a* well-known URI *such as those referenced in the [RecommendedIRISources informative ancillary list of sources of controlled values]*||
+||<dl><dt>dwc:recordedBy</dt><dt>dwc:identifiedBy</dt><dt>dwc:georeferencedBy</dt><dt>dwc:measurementDeterminedBy</dt></dl>||The object is an agent; use ~~VIAF, e.g. {{{<http://viaf.org/viaf/27063124>}}} or~~ *a* well-known URI *such as those referenced in the [RecommendedIRISources informative ancillary list of sources of controlled values]*||
 ||dwc:locationAccordingTo||The object is an agent or publication.  Use a well-known URI when possible, such as ~~VIAF or~~ an HTTP-proxied DOI.||
 ||<dl><dt>dwc:georeferenceProtocol</dt><dt>dwc:georeferenceSources</dt><dt>dwc:samplingProtocol</dt></dl>||The object is a published or well-known reference; use a URI version (preferably HTTP proxied) of doi, isbn, issn, etc. if available.||
-||<dl><dt>dwc:sex</dt><dt>dwc:lifeStage</dt><dt>dwc:reproductiveCondition</dt><dt>dwc:establishmentMeans</dt><dt>dwc:behavior</dt><dt>dwc:occurrenceStatus</dt><dt>*dwc:organismScope*</dt><dt>dwc:disposition</dt><dt>dwc:verbatimCoordinateSystem</dt><dt>dwc:verbatimSRS</dt><dt>dwc:geodeticDatum</dt><dt>dwc:georeferenceVerificationStatus</dt><dt>dwc:footprintWKT</dt><dt>dwc:footprintSRS</dt><dt>dwc:lowestBiostratigraphicZone</dt><dt>dwc:highestBiostratigraphicZone</dt><dt>dwc:identificationVerificationStatus</dt><dt>dwc:identificationQualifier</dt><dt>dwc:preparations</dt><dt>dwc:typeStatus</dt></dl>||Recommended best practice is to use a controlled vocabulary if one is available.||
+||<dl><dt>dwc:sex</dt><dt>dwc:lifeStage</dt><dt>dwc:reproductiveCondition</dt><dt>dwc:establishmentMeans</dt><dt>dwc:behavior</dt><dt>dwc:occurrenceStatus</dt><dt>*dwc:organismScope*</dt><dt>dwc:disposition</dt><dt>dwc:verbatimCoordinateSystem</dt><dt>dwc:verbatimSRS</dt><dt>dwc:geodeticDatum</dt><dt>dwc:georeferenceVerificationStatus</dt><dt>dwc:footprintWKT</dt><dt>dwc:footprintSRS</dt><dt>dwc:lowestBiostratigraphicZone</dt><dt>dwc:highestBiostratigraphicZone</dt><dt>dwc:identificationVerificationStatus</dt><dt>dwc:identificationQualifier</dt><dt>dwc:preparations</dt><dt>dwc:typeStatus</dt><dt>dwc:measurementType</dt><dt>dwc:measurementUnit</dt><dt>dwc:measurementMethod</dt></dl>||Recommended best practice is to use a controlled vocabulary if one is available.||
 ||<dl><dt>dwc:informationWithheld</dt><dt>dwc:dataGeneralizations</dt><dt>dwc:habitat</dt></dl>||If the object property (_dwcuri:_ analogue) is used rather than the _dwc:_ property, the object property should point to a stable resource which might be a controlled vocabulary *or content-as-rdf instance* .||
 ||<dl><dt>dwc:fieldNumber</dt><dt>dwc:fieldNotes</dt></dl>||_dwcuri:fieldNumber_ is an object property whose subject is a (possibly URI-identified) resource that is the field notes and whose object is a _dcmitype:Event_ instance.  _dwcuri:fieldNotes_ is an object property whose subject is a _dcmitype:Event_ instance and whose object is a (possibly URI-identified) resource that is the field notes.||
 ||dwc:recordNumber||_dwcuri:recordNumber_ is an object property whose subject is an occurrence and and whose object is a (possibly URI-identified) resource that is the field notes. ||
@@ -1289,7 +1339,7 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 
 || *Darwin Core term* || *Notes* ||
 ||<dl><dt>dwc:relationshipOfResource</dt><dt>dwc:relationshipAccordingTo</dt></dl>||See the [ResourceRelationship informative ancillary web page] for examples.||
-||<dl><dt>dwc:measurementType</dt><dt>dwc:measurementValue</dt><dt>dwc:measurementAccuracy</dt><dt>dwc:measurementUnit</dt><dt>dwc:measurementDeterminedDate</dt><dt>dwc:measurementDeterminedBy</dt><dt>dwc:measurementMethod</dt><dt>dwc:measurementRemarks</dt></dl>||See the [MeasurementOrFact informative ancillary web page] for examples.||
+||<dl><dt> ~~dwc:measurementType~~ </dt><dt>dwc:measurementValue</dt><dt>dwc:measurementAccuracy</dt><dt> ~~dwc:measurementUnit~~ </dt><dt> ~~dwc:measurementDeterminedDate~~ </dt><dt> ~~dwc:measurementDeterminedBy~~ </dt><dt> ~~dwc:measurementMethod~~ </dt><dt> ~~dwc:measurementRemarks~~ </dt></dl>||See the [MeasurementOrFact informative ancillary web page] for examples.||
 ||dwc:dynamicProperties||See the [DynamicProperties informative ancillary web page] for examples.||
 ||dwc:otherCatalogNumbers||There is no simple mapping because of the kinds of identifiers people use and variety of relationships that there may be among identifiers. _owl:sameAs_ may be used to associate other URI identifiers with the subject URI if this is appropriate.  For string values, use _dwc:otherCatalogNumbers_.||
 || ~~dwc:associatedMedia~~ || ~~The well-known term _foaf:depiction_ can be used to link to an image.~~ ||
