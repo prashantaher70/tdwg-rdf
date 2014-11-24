@@ -475,7 +475,7 @@ The TDWG GUID Applicability Statement standard [http://www.tdwg.org/standards/15
 <dl><dt>_dwctype:Occurrence_</dt><dt>_dcmitype:Event_</dt><dt>_dcterms:Location_ (add to DwC type vocabulary, deprecate _dwctype:Location_)</dt><dt>propose _dwctype:GeologicalContext_</dt><dt>propose _dwctype:Identification_</dt><dt>_dwctype:PreservedSpecimen_</dt><dt>_dwctype:FossilSpecimen_</dt><dt>_dwctype:LivingSpecimen_</dt><dt>_dwctype:HumanObservation_</dt><dt>_dwctype:MachineObservation_</dt><dt>_dwctype:NomenclaturalChecklist_</dt><dt>_dwctype:MaterialSample_</dt></dl>
 ~~(Note: the list above is all stricken from the guide, but the strikeout text will not display.)~~
 
-*Any Darwin Core class may be used as a value for _rdf:type_, although it is questionable whether _dwc:!MeasurementOrFact_ and _dwc:!ResourceRelationship_ instances make sense in the context of RDF.* The following list summarizes classes included in the Dublin Core type vocabulary (but which are not part of Darwin Core) that should *also* be used for typing biodiversity-related resources:
+*Any Darwin Core class may be used as a value for _rdf:type_, although it is not clear whether _dwc:!ResourceRelationship_ instances make sense in the context of RDF.* The following list summarizes classes included in the Dublin Core type vocabulary (but which are not part of Darwin Core) that should *also* be used for typing biodiversity-related resources:
 
 <dl><dt>_dcmitype:StillImage_</dt><dt>_dcmitype:MovingImage_</dt><dt>_dcmitype:Sound_</dt><dt>_dcmitype:PhysicalObject_</dt></dl>
 
