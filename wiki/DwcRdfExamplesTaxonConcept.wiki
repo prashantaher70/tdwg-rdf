@@ -108,7 +108,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
      <dwc:basisOfRecord>PreservedSpecimen</dwc:basisOfRecord>
      <dc:creator>University of California Berkeley Museum of Vertebrate Zoology</dc:creator>
      <dcterms:creator rdf:resource="http://biocol.org/urn:lsid:biocol.org:col:34777" />
-     <dcterms:created>1983-11-16</dcterms:created>
+     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-11-16</dcterms:created>
      <dwc:institutionCode>MVZ</dwc:institutionCode>
      <dwc:collectionCode>Mamm</dwc:collectionCode>
      <dwc:catalogNumber>165861</dwc:catalogNumber>
@@ -270,7 +270,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 	txn:occurrenceHasSpeciesConcept <http://lod.taxonconcept.org/ses/3tYE7#Species>;
 	txn:startDate "1983-11-16"^^xsd:date;
 	dc:creator "University of California Berkeley Museum of Vertebrate Zoology";
-	dcterms:created "1983-11-16";
+	dcterms:created "1983-11-16"^^xsd:date;
 	dcterms:creator <http://biocol.org/urn:lsid:biocol.org:col:34777>;
 	dcterms:description "Preserved specimen http://arctos.database.museum/guid/MVZ:Mamm:165861"@en;
 	dcterms:identifier 
