@@ -482,8 +482,8 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<ac:variant>Best Quality</ac:variant>
 	<ac:accessURL>http://www.morphbank.net/?id=829502&amp;imgType=jpeg</ac:accessURL>
 	<dc:format>image/jpeg</dc:format>
-	<mix:imageWidth>3456</mix:imageWidth>
-	<mix:imageHeight>2304</mix:imageHeight>
+	<mix:imageWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3456</mix:imageWidth>
+	<mix:imageHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2304</mix:imageHeight>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87880#tn">
@@ -491,8 +491,8 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<ac:variant>Thumbnail</ac:variant>
 	<ac:accessURL>http://bioimages.vanderbilt.edu/tn/baskauf/t87880.jpg</ac:accessURL>
 	<dc:format>image/jpeg</dc:format>
-	<mix:imageWidth>100</mix:imageWidth>
-	<mix:imageHeight>67</mix:imageHeight>
+	<mix:imageWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</mix:imageWidth>
+	<mix:imageHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">67</mix:imageHeight>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87880#lq">
@@ -500,8 +500,8 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<ac:variant>Lower Quality</ac:variant>
 	<ac:accessURL>http://bioimages.vanderbilt.edu/lq/baskauf/w87880.jpg</ac:accessURL>
 	<dc:format>image/jpeg</dc:format>
-	<mix:imageWidth>480</mix:imageWidth>
-	<mix:imageHeight>320</mix:imageHeight>
+	<mix:imageWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">480</mix:imageWidth>
+	<mix:imageHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">320</mix:imageHeight>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87880#gq">
@@ -509,8 +509,8 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<ac:variant>Good Quality</ac:variant>
 	<ac:accessURL>http://bioimages.vanderbilt.edu/gq/baskauf/g87880.jpg</ac:accessURL>
 	<dc:format>image/jpeg</dc:format>
-	<mix:imageWidth>1024</mix:imageWidth>
-	<mix:imageHeight>683</mix:imageHeight>
+	<mix:imageWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1024</mix:imageWidth>
+	<mix:imageHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">683</mix:imageHeight>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87937">
@@ -573,8 +573,8 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<ac:variant>Best Quality</ac:variant>
 	<ac:accessURL>http://www.morphbank.net/?id=829509&amp;imgType=jpeg</ac:accessURL>
 	<dc:format>image/jpeg</dc:format>
-	<mix:imageWidth>2304</mix:imageWidth>
-	<mix:imageHeight>3456</mix:imageHeight>
+	<mix:imageWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2304</mix:imageWidth>
+	<mix:imageHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3456</mix:imageHeight>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87937#tn">
@@ -582,8 +582,8 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<ac:variant>Thumbnail</ac:variant>
 	<ac:accessURL>http://bioimages.vanderbilt.edu/tn/baskauf/t87880.jpg</ac:accessURL>
 	<dc:format>image/jpeg</dc:format>
-	<mix:imageWidth>67</mix:imageWidth>
-	<mix:imageHeight>100</mix:imageHeight>
+	<mix:imageWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">67</mix:imageWidth>
+	<mix:imageHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</mix:imageHeight>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87937#lq">
@@ -591,8 +591,8 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<ac:variant>Lower Quality</ac:variant>
 	<ac:accessURL>http://bioimages.vanderbilt.edu/lq/baskauf/w87880.jpg</ac:accessURL>
 	<dc:format>image/jpeg</dc:format>
-	<mix:imageWidth>320</mix:imageWidth>
-	<mix:imageHeight>480</mix:imageHeight>
+	<mix:imageWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">320</mix:imageWidth>
+	<mix:imageHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">480</mix:imageHeight>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87937#gq">
@@ -600,8 +600,8 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<ac:variant>Good Quality</ac:variant>
 	<ac:accessURL>http://bioimages.vanderbilt.edu/gq/baskauf/g87880.jpg</ac:accessURL>
 	<dc:format>image/jpeg</dc:format>
-	<mix:imageWidth>683</mix:imageWidth>
-	<mix:imageHeight>1024</mix:imageHeight>
+	<mix:imageWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#int">683</mix:imageWidth>
+	<mix:imageHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1024</mix:imageHeight>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://apsc.apsu.edu/APSC:vascular:39274">
@@ -817,29 +817,29 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dc:format "image/jpeg";
 	ac:accessURL "http://www.morphbank.net/?id=829502&imgType=jpeg";
 	ac:variant "Best Quality";
-	mix:imageHeight "2304";
-	mix:imageWidth "3456";
+	mix:imageHeight "2304"^^xsd:int;
+	mix:imageWidth "3456"^^xsd:int;
 	a <http://rs.tdwg.org/ac/type/ServiceAccessPoint>.
 <http://bioimages.vanderbilt.edu/baskauf/87880#gq> 
 	dc:format "image/jpeg";
 	ac:accessURL "http://bioimages.vanderbilt.edu/gq/baskauf/g87880.jpg";
 	ac:variant "Good Quality";
-	mix:imageHeight "683";
-	mix:imageWidth "1024";
+	mix:imageHeight "683"^^xsd:int;
+	mix:imageWidth "1024"^^xsd:int;
 	a <http://rs.tdwg.org/ac/type/ServiceAccessPoint>.
 <http://bioimages.vanderbilt.edu/baskauf/87880#lq> 
 	dc:format "image/jpeg";
 	ac:accessURL "http://bioimages.vanderbilt.edu/lq/baskauf/w87880.jpg";
 	ac:variant "Lower Quality";
-	mix:imageHeight "320";
-	mix:imageWidth "480";
+	mix:imageHeight "320"^^xsd:int;
+	mix:imageWidth "480"^^xsd:int;
 	a <http://rs.tdwg.org/ac/type/ServiceAccessPoint>.
 <http://bioimages.vanderbilt.edu/baskauf/87880#tn> 
 	dc:format "image/jpeg";
 	ac:accessURL "http://bioimages.vanderbilt.edu/tn/baskauf/t87880.jpg";
 	ac:variant "Thumbnail";
-	mix:imageHeight "67";
-	mix:imageWidth "100";
+	mix:imageHeight "67"^^xsd:int;
+	mix:imageWidth "100"^^xsd:int;
 	a <http://rs.tdwg.org/ac/type/ServiceAccessPoint>.
 	
 <http://bioimages.vanderbilt.edu/baskauf/87937> 
@@ -876,29 +876,29 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dc:format "image/jpeg";
 	ac:accessURL "http://www.morphbank.net/?id=829509&imgType=jpeg";
 	ac:variant "Best Quality";
-	mix:imageHeight "3456";
-	mix:imageWidth "2304";
+	mix:imageHeight "3456"^^xsd:int;
+	mix:imageWidth "2304"^^xsd:int;
 	a <http://rs.tdwg.org/ac/type/ServiceAccessPoint>.
 <http://bioimages.vanderbilt.edu/baskauf/87937#gq> 
 	dc:format "image/jpeg";
 	ac:accessURL "http://bioimages.vanderbilt.edu/gq/baskauf/g87880.jpg";
 	ac:variant "Good Quality";
-	mix:imageHeight "1024";
-	mix:imageWidth "683";
+	mix:imageHeight "1024"^^xsd:int;
+	mix:imageWidth "683"^^xsd:int;
 	a <http://rs.tdwg.org/ac/type/ServiceAccessPoint>.
 <http://bioimages.vanderbilt.edu/baskauf/87937#lq> 
 	dc:format "image/jpeg";
 	ac:accessURL "http://bioimages.vanderbilt.edu/lq/baskauf/w87880.jpg";
 	ac:variant "Lower Quality";
-	mix:imageHeight "480";
-	mix:imageWidth "320";
+	mix:imageHeight "480"^^xsd:int;
+	mix:imageWidth "320"^^xsd:int;
 	a <http://rs.tdwg.org/ac/type/ServiceAccessPoint>.
 <http://bioimages.vanderbilt.edu/baskauf/87937#tn> 
 	dc:format "image/jpeg";
 	ac:accessURL "http://bioimages.vanderbilt.edu/tn/baskauf/t87880.jpg";
 	ac:variant "Thumbnail";
-	mix:imageHeight "100";
-	mix:imageWidth "67";
+	mix:imageHeight "100"^^xsd:int;
+	mix:imageWidth "67"^^xsd:int;
 	a <http://rs.tdwg.org/ac/type/ServiceAccessPoint>.
 	
 	
