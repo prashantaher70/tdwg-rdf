@@ -16,4 +16,5 @@
   * [DwcRdfExamplesTaxonConcept Examples using TaxonConcept Ontology object properties]
   * [DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
   * [DwcRdfExamplesBiSciCol Examples using BiSciCol object properties]
+  * [DwcRdfOccurrences Examples using "pure" Darwin Core]
   * [UsageNotes TDWG RDF Task Group usage guides landing page]
