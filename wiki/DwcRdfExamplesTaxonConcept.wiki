@@ -210,8 +210,8 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 	dwc:country "Argentina";
 	dwc:countryCode "AR";
 	dwc:county "Los Lagos";
-	dwc:decimalLatitude -40.9684722^^xsd:decimal;
-	dwc:decimalLongitude -71.1918056^^xsd:decimal;
+	dwc:decimalLatitude "-40.9684722"^^xsd:decimal;
+	dwc:decimalLongitude "-71.1918056"^^xsd:decimal;
 	dwc:geodeticDatum "EPSG:4326";
 	dwc:georeferenceProtocol "MaNIS georeferencing guidelines";
 	dwc:georeferenceSources "Google Earth (assumed v.6)";
