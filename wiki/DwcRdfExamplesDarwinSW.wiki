@@ -368,7 +368,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Identification" />
 	<dwc:identifiedBy>Steven J. Baskauf</dwc:identifiedBy>
 	<dwciri:identifiedBy rdf:resource ="http://viaf.org/viaf/63557389" />
-	<dwc:dateIdentified>2013-05-08</dwc:dateIdentified>
+	<dwc:dateIdentified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-08</dwc:dateIdentified>
     <dwc:scientificName>Hedyotis crassifolia Raf.</dwc:scientificName>
     <dwc:vernacularName xml:lang="en">small bluet</dwc:vernacularName>
     <dwc:family>Rubiaceae</dwc:family>
@@ -388,7 +388,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 	<dcterms:description xml:lang="en">Determination of Houstonia pusilla Schoepf sensu Terrell 1996 for the organism http://bioimages.vanderbilt.edu/ind-baskauf/87880</dcterms:description>
 	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Identification" />
 	<dwc:identifiedBy>L. Dwayne Estes</dwc:identifiedBy>
-	<dwc:dateIdentified>2013-08-21</dwc:dateIdentified>
+	<dwc:dateIdentified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-08-21</dwc:dateIdentified>
     <dwc:scientificName>Houstonia pusilla Schoepf</dwc:scientificName>
     <dwc:vernacularName xml:lang="en">tiny bluet</dwc:vernacularName>
     <dwc:family>Rubiaceae</dwc:family>
@@ -634,7 +634,7 @@ Information about the metadata document itself
 	<dcterms:creator rdf:resource="http://biocol.org/urn:lsid:biocol.org:col:35115"/>
 	<dc:language>en</dc:language>
 	<dcterms:language rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
-	<dcterms:modified>2013-09-01T20:05:13</dcterms:modified>
+	<dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-09-01T20:05:13</dcterms:modified>
 	<dcterms:references rdf:resource="http://bioimages.vanderbilt.edu/ind-baskauf/87880"/>
 	<dcterms:references rdf:resource="http://bioimages.vanderbilt.edu/ind-baskauf/87880#2013-05-08baskauf"/>
 	<dcterms:references rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87880"/>
@@ -707,7 +707,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 		<http://bioimages.vanderbilt.edu/baskauf/87880>,
 		<http://bioimages.vanderbilt.edu/baskauf/87937>;
 	dsw:identifies <http://bioimages.vanderbilt.edu/ind-baskauf/87880>;
-	dwc:dateIdentified "2013-05-08";
+	dwc:dateIdentified "2013-05-08"^^xsd:date;
 	dwc:family "Rubiaceae";
 	dwc:genus "Hedyotis";
 	dwc:identifiedBy "Steven J. Baskauf";
@@ -724,7 +724,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dcterms:description "Determination of Houstonia pusilla Schoepf sensu Terrell 1996 for the organism http://bioimages.vanderbilt.edu/ind-baskauf/87880"@en;
 	dsw:idBasedOn <http://apsc.apsu.edu/APSC:vascular:39274>;
 	dsw:identifies <http://bioimages.vanderbilt.edu/ind-baskauf/87880>;
-	dwc:dateIdentified "2013-08-21";
+	dwc:dateIdentified "2013-08-21"^^xsd:date;
 	dwc:family "Rubiaceae";
 	dwc:genus "Houstonia";
 	dwc:identifiedBy "L. Dwayne Estes";
@@ -928,7 +928,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
     dcterms:creator <http://biocol.org/urn:lsid:biocol.org:col:35115>;
     dcterms:identifier "http://bioimages.vanderbilt.edu/ind-baskauf/87880.rdf";
     dcterms:language <http://id.loc.gov/vocabulary/languages/eng>;
-    dcterms:modified "2013-09-01T20:05:13";
+    dcterms:modified "2013-09-01T20:05:13"^^xsd:dateTime;
     dcterms:references 
     	<http://apsc.apsu.edu/APSC:vascular:39274>,
 		<http://bioimages.vanderbilt.edu/baskauf/87880>,
