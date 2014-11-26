@@ -411,7 +411,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 	<dcterms:identifier>http://bioimages.vanderbilt.edu/baskauf/87880</dcterms:identifier>
 	<dc:creator>Steven J. Baskauf</dc:creator>
 	<dcterms:creator rdf:resource ="http://viaf.org/viaf/63557389" />
-	<dcterms:created>2013-03-17T13:52:28</dcterms:created>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-17T13:52:28</dcterms:created>
 	<dwciri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:35115" />
 	
 	<!--Other properties of the image related to intellectual property rights, use and attribution guidelines, etc. -->
@@ -521,7 +521,7 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<dcterms:identifier>http://bioimages.vanderbilt.edu/baskauf/87937</dcterms:identifier>
 	<dc:creator>Steven J. Baskauf</dc:creator>
 	<dcterms:creator rdf:resource ="http://viaf.org/viaf/63557389" />
-	<dcterms:created>2013-04-29T18:31:15</dcterms:created>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-04-29T18:31:15</dcterms:created>
 	<dwciri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:35115" />
 	
 	<!--Other properties of the image related to intellectual property rights, use and attribution guidelines, etc. -->
@@ -611,7 +611,7 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<dwc:basisOfRecord>PreservedSpecimen</dwc:basisOfRecord>
 	<dc:creator>Austin Peay State University Herbarium (APSC)</dc:creator>
 	<dcterms:creator rdf:resource="http://biocol.org/urn:lsid:biocol.org:col:xxxxx" />
-	<dcterms:created>2013-08-21</dcterms:created>
+	<dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-08-21</dcterms:created>
 	<dwc:institutionCode>APSC</dwc:institutionCode>
 	<dwc:collectionCode>vascular</dwc:collectionCode>
 	<dwc:catalogNumber>39274</dwc:catalogNumber>
@@ -790,7 +790,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	xmpRights:owner "Steven J. Baskauf";
 	dc:creator "Steven J. Baskauf";
 	dc:rights "(c) 2013 Steven J. Baskauf";
-	dcterms:created "2013-03-17T13:52:28";
+	dcterms:created "2013-03-17T13:52:28"^^xsd:dateTime;
 	dcterms:creator <http://viaf.org/viaf/63557389>;
 	dcterms:description "Image of Hedyotis crassifolia (Rubiaceae) - whole plant - in flower - general view"@en;
 	dcterms:identifier "http://bioimages.vanderbilt.edu/baskauf/87880";
@@ -849,7 +849,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	xmpRights:owner "Steven J. Baskauf";
 	dc:creator "Steven J. Baskauf";
 	dc:rights "(c) 2013 Steven J. Baskauf";
-	dcterms:created "2013-04-29T18:31:15";
+	dcterms:created "2013-04-29T18:31:15"^^xsd:dateTime;
 	dcterms:creator <http://viaf.org/viaf/63557389>;
 	dcterms:description "Image of Hedyotis crassifolia (Rubiaceae) - fruit - lateral or general close-up"@en;
 	dcterms:identifier "http://bioimages.vanderbilt.edu/baskauf/87937";
@@ -904,7 +904,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	
 <http://apsc.apsu.edu/APSC:vascular:39274> 
 	dc:creator "Austin Peay State University Herbarium (APSC)";
-	dcterms:created "2013-08-21";
+	dcterms:created "2013-08-21"^^xsd:date;
 	dcterms:creator <http://biocol.org/urn:lsid:biocol.org:col:xxxxx>;
 	dcterms:description "Preserved specimen http://apsc.apsu.edu/APSC:vascular:39274"@en;
 	dcterms:identifier "http://apsc.apsu.edu/APSC:vascular:39274";
