@@ -59,9 +59,9 @@ xmlns:bibo="http://purl.org/ontology/bibo/"
 xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
 >
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#ind">
-     <rdf:type rdf:resource ="http://purl.org/dsw/IndividualOrganism" />
+     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Organism" />
      <dcterms:type rdf:resource ="http://purl.org/dc/dcmitype/PhysicalObject" />
-     <dcterms:description xml:lang="en">Individual organism http://arctos.database.museum/guid/MVZ:Mamm:165861#ind</dcterms:description>
+     <dcterms:description xml:lang="en">Organism http://arctos.database.museum/guid/MVZ:Mamm:165861#ind</dcterms:description>
      <dsw:hasIdentification rdf:resource ="http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson" />
      <dsw:hasOccurrence rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#occ" />
      <dsw:hasDerivative rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861" />
@@ -247,12 +247,12 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 	a dcmitype:Event.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#ind> 
-	dcterms:description "Individual organism http://arctos.database.museum/guid/MVZ:Mamm:165861#ind"@en;
+	dcterms:description "Organism http://arctos.database.museum/guid/MVZ:Mamm:165861#ind"@en;
 	dcterms:type dcmitype:PhysicalObject;
 	dsw:hasDerivative <http://arctos.database.museum/guid/MVZ:Mamm:165861>;
 	dsw:hasIdentification <http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson>;
 	dsw:hasOccurrence <http://arctos.database.museum/guid/MVZ:Mamm:165861#occ>;
-	a dsw:IndividualOrganism.
+	a dwc:Organism.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#loc> 
 	dsw:locates <http://arctos.database.museum/guid/MVZ:Mamm:165861#eve>;
@@ -303,7 +303,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 
 This is a complex example based on a real situation where several images and a specimen were collected to document a seed collection.  It uses terms from Darwin Core and the draft Audubon Core for multimedia metadata.  The resource IRIs are real except for the specimen and the identification associated with it (a specimen was collected, but it's metadata are not yet available.)
 
-In this example, two events are linked to a single location.  There are two occurrences (one associated with each event).  One occurrence is documented by a single image.  A later occurrence is documented by both a specimen and an image.  The IndividualOrganism instance is a small population of plants, documented by the occurrences and from which the images and specimen were derived.  The population has two Identification instances.  One is based on the two images while the other is based on the specimen.  Each image has four ServiceAccessPoints from which size variants can be acquired. Although there are only several resources involved, it demonstrates how RDF can describe complex situations in a highly normalized way.
+In this example, two events are linked to a single location.  There are two occurrences (one associated with each event).  One occurrence is documented by a single image.  A later occurrence is documented by both a specimen and an image.  The Organism instance is a small population of plants, documented by the occurrences and from which the images and specimen were derived.  The population has two Identification instances.  One is based on the two images while the other is based on the specimen.  Each image has four ServiceAccessPoints from which size variants can be acquired. Although there are only several resources involved, it demonstrates how RDF can describe complex situations in a highly normalized way.
 
 <img src="http://tdwg-rdf.googlecode.com/svn/trunk/file/images-obj-pro-only.png" height="200" width="3855"/>
 
@@ -340,14 +340,14 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 >
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-baskauf/87880">
-	<rdf:type rdf:resource ="http://purl.org/dsw/IndividualOrganism" />
-	<!--Basic information about the individual-->
+	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Organism" />
+	<!--Basic information about the organism-->
 	<dcterms:identifier>http://bioimages.vanderbilt.edu/ind-baskauf/87880</dcterms:identifier>
-	<dsw:individualOrganismRemarks xml:lang="en">Individual represents a small population within a radius of about 1 m.</dsw:individualOrganismRemarks>
-	<!-- It is not clear exactly what establishmentMeans should be a property of.  Some say dwc:Occurrence rather than an IndividualOrganism -->
+	<dwc:organismRemarks xml:lang="en">Organism represents a small population within a radius of about 1 m.</dwc:organismRemarks>
+	<!-- It is not clear exactly what establishmentMeans should be a property of.  Some say dwc:Occurrence rather than an Organism -->
 	<dwc:establishmentMeans>native</dwc:establishmentMeans>
 	
-	<!-- Resources derived from the individual -->
+	<!-- Resources derived from the organism -->
 	<foaf:depiction rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87880"/>
 	<foaf:depiction rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87937"/>
 	<dcterms:hasPart rdf:resource="http://apsc.apsu.edu/APSC:vascular:39274"/>
@@ -355,17 +355,17 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 	<dsw:hasDerivative rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87937"/>
 	<dsw:hasDerivative rdf:resource="http://apsc.apsu.edu/APSC:vascular:39274"/>
 	
-	<!-- Documented Occurrences of the individual -->
+	<!-- Documented Occurrences of the organism -->
 	<dsw:hasOccurrence rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87880#occ"/>
 	<dsw:hasOccurrence rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87937#occ"/>
 	
-	<!-- Identifications applied to the individual-->
+	<!-- Identifications applied to the organism-->
 	<dsw:hasIdentification rdf:resource ="http://bioimages.vanderbilt.edu/ind-baskauf/87880#2013-05-08baskauf" />
 	<dsw:hasIdentification rdf:resource ="http://bioimages.vanderbilt.edu/ind-baskauf/35052#2013-08-21estesld" />
 </rdf:Description>
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-baskauf/87880#2013-05-08baskauf">
-	<dcterms:description xml:lang="en">Determination of Hedyotis crassifolia Raf.  sensu Gleason Cronquist 1991 for the individual http://bioimages.vanderbilt.edu/ind-baskauf/87880</dcterms:description>
+	<dcterms:description xml:lang="en">Determination of Hedyotis crassifolia Raf.  sensu Gleason Cronquist 1991 for the organism http://bioimages.vanderbilt.edu/ind-baskauf/87880</dcterms:description>
 	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
 	<dwc:identifiedBy>Steven J. Baskauf</dwc:identifiedBy>
 	<dwciri:identifiedBy rdf:resource ="http://viaf.org/viaf/63557389" />
@@ -386,7 +386,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 </rdf:Description>
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-baskauf/35052#2013-08-21estesld">
-	<dcterms:description xml:lang="en">Determination of Houstonia pusilla Schoepf sensu Terrell 1996 for the individual http://bioimages.vanderbilt.edu/ind-baskauf/87880</dcterms:description>
+	<dcterms:description xml:lang="en">Determination of Houstonia pusilla Schoepf sensu Terrell 1996 for the organism http://bioimages.vanderbilt.edu/ind-baskauf/87880</dcterms:description>
 	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
 	<dwc:identifiedBy>L. Dwayne Estes</dwc:identifiedBy>
 	<dwc:dateIdentified>2013-08-21</dwc:dateIdentified>
@@ -695,15 +695,15 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dsw:hasOccurrence 
 		<http://bioimages.vanderbilt.edu/baskauf/87880#occ>,
 		<http://bioimages.vanderbilt.edu/baskauf/87937#occ>;
-	dsw:individualOrganismRemarks "Individual represents a small population within a radius of about 1 m."@en;
+	dwc:organismRemarks "Organism represents a small population within a radius of about 1 m."@en;
 	dwc:establishmentMeans "native";
-	a dsw:IndividualOrganism;
+	a dwc:Organism;
 	foaf:depiction 
 		<http://bioimages.vanderbilt.edu/baskauf/87880>,
 		<http://bioimages.vanderbilt.edu/baskauf/87937>.
 		
 <http://bioimages.vanderbilt.edu/ind-baskauf/87880#2013-05-08baskauf> 
-	dcterms:description "Determination of Hedyotis crassifolia Raf.  sensu Gleason Cronquist 1991 for the individual http://bioimages.vanderbilt.edu/ind-baskauf/87880"@en;
+	dcterms:description "Determination of Hedyotis crassifolia Raf.  sensu Gleason Cronquist 1991 for the organism http://bioimages.vanderbilt.edu/ind-baskauf/87880"@en;
 	dsw:idBasedOn 
 		<http://bioimages.vanderbilt.edu/baskauf/87880>,
 		<http://bioimages.vanderbilt.edu/baskauf/87937>;
@@ -722,7 +722,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	a dwctype:Identification.
 	
 <http://bioimages.vanderbilt.edu/ind-baskauf/35052#2013-08-21estesld> 
-	dcterms:description "Determination of Houstonia pusilla Schoepf sensu Terrell 1996 for the individual http://bioimages.vanderbilt.edu/ind-baskauf/87880"@en;
+	dcterms:description "Determination of Houstonia pusilla Schoepf sensu Terrell 1996 for the organism http://bioimages.vanderbilt.edu/ind-baskauf/87880"@en;
 	dsw:idBasedOn <http://apsc.apsu.edu/APSC:vascular:39274>;
 	dsw:identifies <http://bioimages.vanderbilt.edu/ind-baskauf/87880>;
 	dwc:dateIdentified "2013-08-21";
