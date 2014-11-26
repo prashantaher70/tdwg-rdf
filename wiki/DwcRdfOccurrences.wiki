@@ -1,4 +1,5 @@
 #summary Examples of representing Darwin Core occurrences in RDF.
+#sidebar DwcRdfSidebar
 
 http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.org/ http://www.tdwg.org]
 
