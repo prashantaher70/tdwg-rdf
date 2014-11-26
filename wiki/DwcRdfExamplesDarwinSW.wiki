@@ -71,7 +71,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
     <dwc:identifiedBy>Oliver P. Pearson</dwc:identifiedBy>
     <dwciri:identifiedBy rdf:resource ="http://viaf.org/viaf/263074474" />
-    <dwc:dateIdentified>1999-01-27</dwc:dateIdentified>
+    <dwc:dateIdentified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-27</dwc:dateIdentified>
     <dwc:scientificName>Ctenomys sociabilis Pearson and Christie, 1985</dwc:scientificName>
     <dwc:vernacularName xml:lang="en">colonial tuco-tuco</dwc:vernacularName>
     <dwc:vernacularName xml:lang="es">tuco-tuco colonial</dwc:vernacularName>
@@ -124,7 +124,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
 </rdf:Description>
 
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#eve">
-     <dwc:eventDate>1983-11-16</dwc:eventDate>
+     <dwc:eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-11-16</dwc:eventDate>
      <rdf:type rdf:resource ="http://purl.org/dc/dcmitype/Event" />
      <dsw:eventOf rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#occ" />
      <dsw:locatedAt rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#loc" />
@@ -221,7 +221,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 	dsw:idBasedOn <http://arctos.database.museum/guid/MVZ:Mamm:165861>;
 	dsw:identifies <http://arctos.database.museum/guid/MVZ:Mamm:165861#ind>;
 	dwc:class "Mammalia";
-	dwc:dateIdentified "1999-01-27";
+	dwc:dateIdentified "1999-01-27"^^xsd:date;
 	dwc:family "Ctenomyidae";
 	dwc:genus "Ctenomys";
 	dwc:identificationRemarks "ID from citation in Pearson 1985."@en;
@@ -243,7 +243,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#eve> 
 	dsw:eventOf <http://arctos.database.museum/guid/MVZ:Mamm:165861#occ>;
 	dsw:locatedAt <http://arctos.database.museum/guid/MVZ:Mamm:165861#loc>;
-	dwc:eventDate "1983-11-16";
+	dwc:eventDate "1983-11-16"^^xsd:date;
 	a dcmitype:Event.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#ind> 
