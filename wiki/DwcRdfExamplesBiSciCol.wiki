@@ -5,7 +5,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Examples of Darwin Core as RDF using !BiSciCol object properties=
 
-*Date:* (Created) 1 July 2013; (Last modified) 9 October 2013
+*Date:* (Created) 1 July 2013; (Last modified) 26 November 2014
 
 *Status:* Not part of any standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
 
@@ -46,7 +46,6 @@ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:owl="http://www.w3.org/2002/07/owl#"
 xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
-xmlns:dwctype="http://rs.tdwg.org/dwc/dwctype/"
 xmlns:dwcuri="http://rs.tdwg.org/dwc/uri/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -64,14 +63,14 @@ xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
 >
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861">
      <!-- In the BiSciCol blog example, a specimen is considered a subclass of an occurrence, so typed as both here -->
-     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen" />
-     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
+     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/PreservedSpecimen" />
+     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Occurrence" />
      <dcterms:type rdf:resource ="http://purl.org/dc/dcmitype/PhysicalObject" />
      <dcterms:description xml:lang="en">Preserved specimen http://arctos.database.museum/guid/MVZ:Mamm:165861</dcterms:description>
      <dwc:basisOfRecord>PreservedSpecimen</dwc:basisOfRecord>
      <dc:creator>University of California Berkeley Museum of Vertebrate Zoology</dc:creator>
      <dcterms:creator rdf:resource="http://biocol.org/urn:lsid:biocol.org:col:34777" />
-     <dcterms:created>1983-11-16</dcterms:created>
+     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-11-16</dcterms:created>
      <dwc:institutionCode>MVZ</dwc:institutionCode>
      <dwc:collectionCode>Mamm</dwc:collectionCode>
      <dwc:catalogNumber>165861</dwc:catalogNumber>
@@ -88,10 +87,10 @@ xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
 </rdf:Description>
 
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson">
-    <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
+    <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Identification" />
     <dwc:identifiedBy>Oliver P. Pearson</dwc:identifiedBy>
     <dwcuri:identifiedBy rdf:resource ="http://viaf.org/viaf/263074474" />
-    <dwc:dateIdentified>1999-01-27</dwc:dateIdentified>
+    <dwc:dateIdentified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-27</dwc:dateIdentified>
     <dwc:scientificName>Ctenomys sociabilis Pearson and Christie, 1985</dwc:scientificName>
     <dwc:vernacularName xml:lang="en">colonial tuco-tuco</dwc:vernacularName>
     <dwc:vernacularName xml:lang="es">tuco-tuco colonial</dwc:vernacularName>
@@ -112,7 +111,7 @@ xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
 </rdf:Description>
 
 <rdf:Description rdf:about="http://n2t.net/ark:/21547/Et2">
-     <dwc:eventDate>1983-11-16</dwc:eventDate>
+     <dwc:eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-11-16</dwc:eventDate>
      <rdf:type rdf:resource ="http://purl.org/dc/dcmitype/Event" />
      <bsc:related_to rdf:resource="http://n2t.net/ark:/21547/c2" />
 </rdf:Description>
@@ -166,7 +165,6 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/biscicol-specimen.ttl
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
-@prefix dwctype: <http://rs.tdwg.org/dwc/dwctype/>.
 @prefix dwcuri: <http://rs.tdwg.org/dwc/uri/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
@@ -184,7 +182,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/biscicol-specimen.ttl
 
 <http://arctos.database.museum/guid/MVZ:Mamm:165861> 
 	dc:creator "University of California Berkeley Museum of Vertebrate Zoology";
-	dcterms:created "1983-11-16";
+	dcterms:created "1983-11-16"^^xsd:date;
 	dcterms:creator <http://biocol.org/urn:lsid:biocol.org:col:34777>;
 	dcterms:description "Preserved specimen http://arctos.database.museum/guid/MVZ:Mamm:165861"@en;
 	dcterms:identifier 
@@ -203,12 +201,12 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/biscicol-specimen.ttl
 	dwcuri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:34777>;
 	dwcuri:recordedBy <http://viaf.org/viaf/263074474>;
 	bsc:depends_on <http://n2t.net/ark:/21547/Et2>;
-	a 	dwctype:Occurrence,
-		dwctype:PreservedSpecimen.
+	a 	dwc:Occurrence,
+		dwc:PreservedSpecimen.
 		
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson> 
 	dwc:class "Mammalia";
-	dwc:dateIdentified "1999-01-27";
+	dwc:dateIdentified "1999-01-27"^^xsd:date;
 	dwc:family "Ctenomyidae";
 	dwc:genus "Ctenomys";
 	dwc:identificationRemarks "ID from citation in Pearson 1985."@en;
@@ -229,10 +227,10 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/biscicol-specimen.ttl
 	bsc:depends_on 
 		<http://arctos.database.museum/guid/MVZ:Mamm:165861>,
 		<http://zoobank.org/306F5618-D154-47D5-81BB-697CB2A83EE7>;
-	a dwctype:Identification.
+	a dwc:Identification.
 	
 <http://n2t.net/ark:/21547/Et2> 
-	dwc:eventDate "1983-11-16";
+	dwc:eventDate "1983-11-16"^^xsd:date;
 	bsc:related_to <http://n2t.net/ark:/21547/c2>;
 	a dcmitype:Event.
                                 
@@ -242,8 +240,8 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/biscicol-specimen.ttl
 	dwc:country "Argentina";
 	dwc:countryCode "AR";
 	dwc:county "Los Lagos";
-	dwc:decimalLatitude -40.9684722;
-	dwc:decimalLongitude -71.1918056;
+	dwc:decimalLatitude "-40.9684722"^^xsd:decimal;
+	dwc:decimalLongitude "-71.1918056"^^xsd:decimal;
 	dwc:geodeticDatum "EPSG:4326";
 	dwc:georeferenceProtocol "MaNIS georeferencing guidelines";
 	dwc:georeferenceSources "Google Earth (assumed v.6)";
