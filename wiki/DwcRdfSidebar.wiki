@@ -13,7 +13,7 @@
   * [RecommendedIRISources Sources of well-known controlled value IRIs]
   * [ResourceRelationship Expressing Darwin Core ResourceRelationship Terms as RDF (vaporware)]
   * [DynamicProperties Expressing the Darwin Core dwc:dynamicProperties Term as RDF (vaporware)]
-  * [TaxonInRDF Describing Taxon Concepts as RDF]
+  * [TaxonInRDF Describing Taxon Concepts as RDF (for reference only)]
   * [DwcRdfExamplesTaxonConcept Examples using TaxonConcept Ontology object properties]
   * [DwcRdfExamplesDarwinSW Examples using Darwin-SW object properties]
   * [DwcRdfExamplesBiSciCol Examples using BiSciCol object properties]
