@@ -25,10 +25,6 @@ The draft Darwin Core RDF Guide describes how to use Darwin Core terms as predic
 
 ==2 Documents==
 
-[ResourceRelationship Expressing Darwin Core ResourceRelationship Terms as RDF]  
-
-This document shows how to express Darwin Core !ResourceRelationship properties as RDF using the Open Annotation Data Model 
-
 [TaxonInRDF Describing Taxon Concepts as RDF]
 
 There is currently no TDWG standard which contains terms that are suitable for expressing taxon concepts as RDF. The Darwin Core RDF Guide discusses how {{{dwc:Taxon}}} terms can be used as convenience terms to provide metadata about taxa, but it does not specify how the taxa themselves should be described as RDF. Although not ratified standards, the TaxonConcept and TaxonName parts of the TDWG Ontology (based on the TCS Standard [http://www.tdwg.org/standards/117/]) can be used to express taxon concepts as RDF. This document discusses how some basic aspects of taxon concepts (sensu TCS) can be expressed as RDF using terms from the TDWG Ontology. 
