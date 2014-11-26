@@ -18,7 +18,7 @@
 
 *Abstract:* This guide is intended to facilitate the use of Darwin Core terms in the Resource Description Framework (RDF). It explains basic features of RDF and provides details of how to expose data in the form of RDF using Darwin Core terms and terms from other key vocabularies.  It defines terms in the namespace {{{http://rs.tdwg.org/dwc/iri/}}} which are intended for use excusively with non-literal objects.  
 
-*Contributors:* Steve Baskauf (TDWG RDF/OWL Task Group), John Wieczorek (TDWG Darwin Core Task Group), John Deck (Genomic Biodiversity Working Group), Campbell Webb (TDWG RDF/OWL Task Group), Mark Schildhauer (National Center for Ecological Analysis and Synthesis)
+*Contributors:* Steve Baskauf (TDWG RDF/OWL Task Group), John Wieczorek (TDWG Darwin Core Task Group), John Deck (Genomic Biodiversity Working Group), Campbell Webb (TDWG RDF/OWL Task Group), *Paul J. Morris (Harvard University Herbaria/Museum of Comparative Zoölogy),* Mark Schildhauer (National Center for Ecological Analysis and Synthesis)
 
 *Legal:* This document is governed by the standard legal, copyright, licensing provisions and disclaimers issued by the Taxonomic Databases Working Group.   
 
