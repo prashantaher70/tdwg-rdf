@@ -450,7 +450,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87880#eve">
 	<rdf:type rdf:resource ="http://purl.org/dc/dcmitype/Event" />
-	<dwc:eventDate>2013-03-17T13:52:28</dwc:eventDate>
+	<dwc:eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-17T13:52:28</dwc:eventDate>
 	<dsw:eventOf rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87880#occ" />
 	<dsw:locatedAt rdf:resource ="http://bioimages.vanderbilt.edu/baskauf/87880#loc" />
 </rdf:Description>
@@ -560,7 +560,7 @@ ServiceAccessPoints provide information about alternative versions of the image 
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87937#eve">
 	<rdf:type rdf:resource ="http://purl.org/dc/dcmitype/Event" />
-	<dwc:eventDate>2013-04-29T18:31:15</dwc:eventDate>
+	<dwc:eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-04-29T18:31:15</dwc:eventDate>
 	<dsw:eventOf rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87937#occ" />
 	<dsw:locatedAt rdf:resource ="http://bioimages.vanderbilt.edu/baskauf/87880#loc" />
 </rdf:Description>
@@ -747,7 +747,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 <http://bioimages.vanderbilt.edu/baskauf/87880#eve> 
 	dsw:eventOf <http://bioimages.vanderbilt.edu/baskauf/87880#occ>;
 	dsw:locatedAt <http://bioimages.vanderbilt.edu/baskauf/87880#loc>;
-	dwc:eventDate "2013-03-17T13:52:28";
+	dwc:eventDate "2013-03-17T13:52:28"^^xsd:dateTime;
 	a dcmitype:Event.
 	
 <http://bioimages.vanderbilt.edu/baskauf/87937#occ> 
@@ -760,7 +760,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 <http://bioimages.vanderbilt.edu/baskauf/87937#eve> 
 	dsw:eventOf <http://bioimages.vanderbilt.edu/baskauf/87937#occ>;
 	dsw:locatedAt <http://bioimages.vanderbilt.edu/baskauf/87880#loc>;
-	dwc:eventDate "2013-04-29T18:31:15";
+	dwc:eventDate "2013-04-29T18:31:15"^^xsd:dateTime;
 	a dcmitype:Event.
 	
 <http://bioimages.vanderbilt.edu/baskauf/87880#loc> 
