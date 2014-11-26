@@ -5,7 +5,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Examples of Darwin Core as RDF using Darwin-SW object properties=
 
-*Date:* (Created) 27 June 2013; (Last modified) 9 October 2013
+*Date:* (Created) 27 June 2013; (Last modified) 26 November 2014
 
 *Status:* Not part of any standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
 
@@ -45,7 +45,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:owl="http://www.w3.org/2002/07/owl#"
 xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
 xmlns:dwctype="http://rs.tdwg.org/dwc/dwctype/"
-xmlns:dwcuri="http://rs.tdwg.org/dwc/uri/"
+xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:dcmitype="http://purl.org/dc/dcmitype/"
@@ -70,7 +70,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson">
     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
     <dwc:identifiedBy>Oliver P. Pearson</dwc:identifiedBy>
-    <dwcuri:identifiedBy rdf:resource ="http://viaf.org/viaf/263074474" />
+    <dwciri:identifiedBy rdf:resource ="http://viaf.org/viaf/263074474" />
     <dwc:dateIdentified>1999-01-27</dwc:dateIdentified>
     <dwc:scientificName>Ctenomys sociabilis Pearson and Christie, 1985</dwc:scientificName>
     <dwc:vernacularName xml:lang="en">colonial tuco-tuco</dwc:vernacularName>
@@ -86,7 +86,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
     <dwc:taxonRank>species</dwc:taxonRank>
     <dwc:nameAccordingTo>Oliver P. Pearson. 1985. Los tuco-tucos (genera Ctenomys) de los Parques Nacionales Lanin y Nahuel Huapi, Argentina. Historia Natural 5(37):337-343.</dwc:nameAccordingTo>
     <dwc:identificationRemarks xml:lang="en">ID from citation in Pearson 1985.</dwc:identificationRemarks>
-    <dwcuri:toTaxonConcept rdf:resource="http://zoobank.org/306F5618-D154-47D5-81BB-697CB2A83EE7"/>
+    <dwciri:toTaxon rdf:resource="http://zoobank.org/306F5618-D154-47D5-81BB-697CB2A83EE7"/>
     <dsw:identifies rdf:resource ="http://arctos.database.museum/guid/MVZ:Mamm:165861#ind" />
     <dsw:idBasedOn rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861"/>
 </rdf:Description>
@@ -105,7 +105,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      <dwc:otherCatalogNumbers>12272</dwc:otherCatalogNumbers>
      <dcterms:identifier>MVZ:Mamm:165861</dcterms:identifier>
      <dcterms:identifier>http://arctos.database.museum/guid/MVZ:Mamm:165861</dcterms:identifier>     
-     <dwcuri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:34777" />
+     <dwciri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:34777" />
      <dwc:preparations>skin; skull; skeleton</dwc:preparations>
      <dwc:sex>female</dwc:sex>
      <dsw:derivedFrom rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#ind" />
@@ -116,7 +116,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#occ">
      <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
      <dwc:recordedBy>Oliver P. Pearson</dwc:recordedBy>
-     <dwcuri:recordedBy rdf:resource ="http://viaf.org/viaf/263074474" />
+     <dwciri:recordedBy rdf:resource ="http://viaf.org/viaf/263074474" />
      <dwc:recordNumber>7101</dwc:recordNumber>
      <dsw:atEvent rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#eve" />
      <dsw:occurrenceOf rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#ind" />
@@ -148,7 +148,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
      <dwc:locationRemarks xml:lang="en">The colony was just N of the fence and just E of the stream according to Michael Christie, who verified on Google Earth (about 40. 58' 06 to 07" and 71. 11' 30 to 31")</dwc:locationRemarks>
      <dwc:georeferenceSources>Google Earth (assumed v.6)</dwc:georeferenceSources>
      <dwc:georeferenceProtocol>MaNIS georeferencing guidelines</dwc:georeferenceProtocol>
-     <dwcuri:inDescribedPlace rdf:resource="http://sws.geonames.org/3846077/"/>
+     <dwciri:inDescribedPlace rdf:resource="http://sws.geonames.org/3846077/"/>
      <dsw:locates rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#eve" />
 </rdf:Description>
 
@@ -183,7 +183,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
 @prefix dwctype: <http://rs.tdwg.org/dwc/dwctype/>.
-@prefix dwcuri: <http://rs.tdwg.org/dwc/uri/>.
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
 @prefix dcmitype: <http://purl.org/dc/dcmitype/>.
@@ -214,7 +214,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 	dwc:otherCatalogNumbers "12272";
 	dwc:preparations "skin; skull; skeleton";
 	dwc:sex "female";
-	dwcuri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:34777>;
+	dwciri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:34777>;
 	a dwctype:PreservedSpecimen.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson> 
@@ -236,8 +236,8 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 	dwc:typeStatus "holotype of Ctenomys sociabilis. Pearson O. P., and M. I. Christie. 1985. Historia Natural, 5(37):388";
 	dwc:vernacularName "colonial tuco-tuco"@en,
 	                  "tuco-tuco colonial"@es;
-	dwcuri:identifiedBy <http://viaf.org/viaf/263074474>;
-	dwcuri:toTaxonConcept <http://zoobank.org/306F5618-D154-47D5-81BB-697CB2A83EE7>;
+	dwciri:identifiedBy <http://viaf.org/viaf/263074474>;
+	dwciri:toTaxon <http://zoobank.org/306F5618-D154-47D5-81BB-697CB2A83EE7>;
 	a dwctype:Identification.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#eve> 
@@ -272,7 +272,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 	dwc:minimumElevationInMeters "1075"^^xsd:int;
 	dwc:stateProvince "Neuquen";
 	dwc:verbatimLocality "Estancia Fortin Chacabuco, 3 km S and 2 km W Co. Puntudo";
-	dwcuri:inDescribedPlace <http://sws.geonames.org/3846077/>;
+	dwciri:inDescribedPlace <http://sws.geonames.org/3846077/>;
 	a dcterms:Location.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#occ> 
@@ -281,7 +281,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 	dsw:occurrenceOf <http://arctos.database.museum/guid/MVZ:Mamm:165861#ind>;
 	dwc:recordNumber "7101";
 	dwc:recordedBy "Oliver P. Pearson";
-	dwcuri:recordedBy <http://viaf.org/viaf/263074474>;
+	dwciri:recordedBy <http://viaf.org/viaf/263074474>;
 	a dwctype:Occurrence.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861.rdf> 
@@ -301,7 +301,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 
 == 2 Complex example ==
 
-This is a complex example based on a real situation where several images and a specimen were collected to document a seed collection.  It uses terms from Darwin Core and the draft Audubon Core for multimedia metadata.  The resource URIs are real except for the specimen and the identification associated with it (a specimen was collected, but it's metadata are not yet available.)
+This is a complex example based on a real situation where several images and a specimen were collected to document a seed collection.  It uses terms from Darwin Core and the draft Audubon Core for multimedia metadata.  The resource IRIs are real except for the specimen and the identification associated with it (a specimen was collected, but it's metadata are not yet available.)
 
 In this example, two events are linked to a single location.  There are two occurrences (one associated with each event).  One occurrence is documented by a single image.  A later occurrence is documented by both a specimen and an image.  The IndividualOrganism instance is a small population of plants, documented by the occurrences and from which the images and specimen were derived.  The population has two Identification instances.  One is based on the two images while the other is based on the specimen.  Each image has four ServiceAccessPoints from which size variants can be acquired. Although there are only several resources involved, it demonstrates how RDF can describe complex situations in a highly normalized way.
 
@@ -323,7 +323,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:owl="http://www.w3.org/2002/07/owl#"
 xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
 xmlns:dwctype="http://rs.tdwg.org/dwc/dwctype/"
-xmlns:dwcuri="http://rs.tdwg.org/dwc/uri/"
+xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:dcmitype="http://purl.org/dc/dcmitype/"
@@ -368,7 +368,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 	<dcterms:description xml:lang="en">Determination of Hedyotis crassifolia Raf.  sensu Gleason Cronquist 1991 for the individual http://bioimages.vanderbilt.edu/ind-baskauf/87880</dcterms:description>
 	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
 	<dwc:identifiedBy>Steven J. Baskauf</dwc:identifiedBy>
-	<dwcuri:identifiedBy rdf:resource ="http://viaf.org/viaf/63557389" />
+	<dwciri:identifiedBy rdf:resource ="http://viaf.org/viaf/63557389" />
 	<dwc:dateIdentified>2013-05-08</dwc:dateIdentified>
     <dwc:scientificName>Hedyotis crassifolia Raf.</dwc:scientificName>
     <dwc:vernacularName xml:lang="en">small bluet</dwc:vernacularName>
@@ -413,7 +413,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 	<dc:creator>Steven J. Baskauf</dc:creator>
 	<dcterms:creator rdf:resource ="http://viaf.org/viaf/63557389" />
 	<dcterms:created>2013-03-17T13:52:28</dcterms:created>
-	<dwcuri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:35115" />
+	<dwciri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:35115" />
 	
 	<!--Other properties of the image related to intellectual property rights, use and attribution guidelines, etc. -->
 	<dc:rights>(c) 2013 Steven J. Baskauf</dc:rights>
@@ -443,7 +443,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87880#occ">
 	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
 	<dwc:recordedBy>Steven J. Baskauf</dwc:recordedBy>
-	<dwcuri:recordedBy rdf:resource ="http://viaf.org/viaf/63557389" />
+	<dwciri:recordedBy rdf:resource ="http://viaf.org/viaf/63557389" />
 	<dsw:atEvent rdf:resource ="http://bioimages.vanderbilt.edu/baskauf/87880#eve" />
 	<dsw:occurrenceOf rdf:resource="http://bioimages.vanderbilt.edu/ind-baskauf/87880" />
 	<dsw:hasEvidence rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87880" />
@@ -470,7 +470,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 	<dwc:stateProvince>Tennessee</dwc:stateProvince>
 	<dwc:county>Cheatham</dwc:county>
 	<dwc:locality>Keri Dr., Pleasant View</dwc:locality>
-	<dwcuri:inDescribedPlace rdf:resource="http://sws.geonames.org/4612891/"/>
+	<dwciri:inDescribedPlace rdf:resource="http://sws.geonames.org/4612891/"/>
 	<dsw:locates rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87880#eve" />
 	<dsw:locates rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87937#eve" />
 </rdf:Description>
@@ -523,7 +523,7 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<dc:creator>Steven J. Baskauf</dc:creator>
 	<dcterms:creator rdf:resource ="http://viaf.org/viaf/63557389" />
 	<dcterms:created>2013-04-29T18:31:15</dcterms:created>
-	<dwcuri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:35115" />
+	<dwciri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:35115" />
 	
 	<!--Other properties of the image related to intellectual property rights, use and attribution guidelines, etc. -->
 	<dc:rights>(c) 2013 Steven J. Baskauf</dc:rights>
@@ -553,7 +553,7 @@ ServiceAccessPoints provide information about alternative versions of the image 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87937#occ">
 	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
 	<dwc:recordedBy>Steven J. Baskauf</dwc:recordedBy>
-	<dwcuri:recordedBy rdf:resource ="http://viaf.org/viaf/63557389" />
+	<dwciri:recordedBy rdf:resource ="http://viaf.org/viaf/63557389" />
 	<dsw:atEvent rdf:resource ="http://bioimages.vanderbilt.edu/baskauf/87937#eve" />
 	<dsw:occurrenceOf rdf:resource="http://bioimages.vanderbilt.edu/ind-baskauf/87880" />
 	<dsw:hasEvidence rdf:resource="http://bioimages.vanderbilt.edu/baskauf/87937" />
@@ -617,7 +617,7 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<dwc:collectionCode>vascular</dwc:collectionCode>
 	<dwc:catalogNumber>39274</dwc:catalogNumber>
 	<dcterms:identifier>http://apsc.apsu.edu/APSC:vascular:39274</dcterms:identifier>     
-	<dwcuri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:xxxxx" />
+	<dwciri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:xxxxx" />
 	<dwc:preparations>whole plant - dried</dwc:preparations>
 	<dcterms:isPartOf rdf:resource="http://bioimages.vanderbilt.edu/ind-baskauf/87880"/>
 	<dsw:derivedFrom rdf:resource="http://bioimages.vanderbilt.edu/ind-baskauf/87880" />
@@ -669,7 +669,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
 @prefix dwctype: <http://rs.tdwg.org/dwc/dwctype/>.
-@prefix dwcuri: <http://rs.tdwg.org/dwc/uri/>.
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
 @prefix dcmitype: <http://purl.org/dc/dcmitype/>.
@@ -718,7 +718,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dwc:specificEpithet "crassifolia";
 	dwc:taxonRank "species";
 	dwc:vernacularName "small bluet"@en;
-	dwcuri:identifiedBy <http://viaf.org/viaf/63557389>;
+	dwciri:identifiedBy <http://viaf.org/viaf/63557389>;
 	a dwctype:Identification.
 	
 <http://bioimages.vanderbilt.edu/ind-baskauf/35052#2013-08-21estesld> 
@@ -743,7 +743,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dsw:hasEvidence <http://bioimages.vanderbilt.edu/baskauf/87880>;
 	dsw:occurrenceOf <http://bioimages.vanderbilt.edu/ind-baskauf/87880>;
 	dwc:recordedBy "Steven J. Baskauf";
-	dwcuri:recordedBy <http://viaf.org/viaf/63557389>;
+	dwciri:recordedBy <http://viaf.org/viaf/63557389>;
 	a dwctype:Occurrence.
 <http://bioimages.vanderbilt.edu/baskauf/87880#eve> 
 	dsw:eventOf <http://bioimages.vanderbilt.edu/baskauf/87880#occ>;
@@ -756,7 +756,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dsw:hasEvidence <http://bioimages.vanderbilt.edu/baskauf/87937>;
 	dsw:occurrenceOf <http://bioimages.vanderbilt.edu/ind-baskauf/87880>;
 	dwc:recordedBy "Steven J. Baskauf";
-	dwcuri:recordedBy <http://viaf.org/viaf/63557389>;
+	dwciri:recordedBy <http://viaf.org/viaf/63557389>;
 	a dwctype:Occurrence.
 <http://bioimages.vanderbilt.edu/baskauf/87937#eve> 
 	dsw:eventOf <http://bioimages.vanderbilt.edu/baskauf/87937#occ>;
@@ -780,7 +780,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dwc:maximumElevationInMeters "200"^^xsd:int;
 	dwc:minimumElevationInMeters "200"^^xsd:int;
 	dwc:stateProvince "Tennessee";
-	dwcuri:inDescribedPlace <http://sws.geonames.org/4612891/>;
+	dwciri:inDescribedPlace <http://sws.geonames.org/4612891/>;
 	a dcterms:Location.
 
 
@@ -808,7 +808,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 		<http://bioimages.vanderbilt.edu/baskauf/87880#lq>,
 		<http://bioimages.vanderbilt.edu/baskauf/87880#tn>;
 	ac:metadataLanguage "en";
-	dwcuri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:35115>;
+	dwciri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:35115>;
 	mbank:view "463267";
 	a dcmitype:StillImage;
 	foaf:depicts <http://bioimages.vanderbilt.edu/ind-baskauf/87880>;
@@ -867,7 +867,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 		<http://bioimages.vanderbilt.edu/baskauf/87937#lq>,
 		<http://bioimages.vanderbilt.edu/baskauf/87937#tn>;
 	ac:metadataLanguage "en";
-	dwcuri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:35115>;
+	dwciri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:35115>;
 	mbank:view "463931";
 	a dcmitype:StillImage;
 	foaf:depicts <http://bioimages.vanderbilt.edu/ind-baskauf/87880>;
@@ -919,7 +919,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dwc:collectionCode "vascular";
 	dwc:institutionCode "APSC";
 	dwc:preparations "whole plant - dried";
-	dwcuri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:xxxxx>;
+	dwciri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:xxxxx>;
 	a dwctype:PreservedSpecimen.
 	
 
