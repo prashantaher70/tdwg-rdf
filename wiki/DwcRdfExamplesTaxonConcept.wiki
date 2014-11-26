@@ -49,7 +49,6 @@ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:owl="http://www.w3.org/2002/07/owl#"
 xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
-xmlns:dwctype="http://rs.tdwg.org/dwc/dwctype/"
 xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -74,7 +73,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 </rdf:Description>
 
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#Identification_0001">
-    <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
+    <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Identification" />
     <rdf:type rdf:resource ="http://lod.taxonconcept.org/ontology/txn.owl#Identification" />
     <dwc:identifiedBy>Oliver P. Pearson</dwc:identifiedBy>
     <dwciri:identifiedBy rdf:resource ="http://viaf.org/viaf/263074474" />
@@ -101,8 +100,8 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#Occurrence">
      <!-- This example combines the metadata for the Occurrence and PreservedSpecimen (i.e. considers the specimen to be an occurrence) -->
-     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen" />
-     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
+     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/PreservedSpecimen" />
+     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Occurrence" />
      <rdf:type rdf:resource ="http://lod.taxonconcept.org/ontology/txn.owl#Occurrence" />
      <dcterms:type rdf:resource ="http://purl.org/dc/dcmitype/PhysicalObject" />
      <dcterms:description xml:lang="en">Preserved specimen http://arctos.database.museum/guid/MVZ:Mamm:165861</dcterms:description>
@@ -188,7 +187,6 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
-@prefix dwctype: <http://rs.tdwg.org/dwc/dwctype/>.
 @prefix dwciri: <http://rs.tdwg.org/dwc/iri/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
@@ -255,7 +253,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 	dwciri:identifiedBy <http://viaf.org/viaf/263074474>;
 	dwciri:toTaxonConcept <http://lod.taxonconcept.org/ses/3tYE7#Species>;
 	a 	txn:Identification,
-		dwctype:Identification.
+		dwc:Identification.
 		
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#Individual> 
 	txn:individualHasCurrentIdentificationAssertion <http://arctos.database.museum/guid/MVZ:Mamm:165861#Identification_0001>;
@@ -292,8 +290,8 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 	dwciri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:34777>;
 	dwciri:recordedBy <http://viaf.org/viaf/263074474>;
 	a 	txn:Occurrence,
-		dwctype:Occurrence,
-		dwctype:PreservedSpecimen.
+		dwc:Occurrence,
+		dwc:PreservedSpecimen.
 		
 <http://arctos.database.museum/guid/MVZ:Mamm:165861.rdf> 
 	dc:creator "Arctos Museum Database";
