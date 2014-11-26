@@ -77,7 +77,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
     <rdf:type rdf:resource ="http://lod.taxonconcept.org/ontology/txn.owl#Identification" />
     <dwc:identifiedBy>Oliver P. Pearson</dwc:identifiedBy>
     <dwciri:identifiedBy rdf:resource ="http://viaf.org/viaf/263074474" />
-    <dwc:dateIdentified>1999-01-27</dwc:dateIdentified>
+    <dwc:dateIdentified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-27</dwc:dateIdentified>
     <dwc:scientificName>Ctenomys sociabilis Pearson and Christie, 1985</dwc:scientificName>
     <dwc:vernacularName xml:lang="en">colonial tuco-tuco</dwc:vernacularName>
     <dwc:vernacularName xml:lang="es">tuco-tuco colonial</dwc:vernacularName>
@@ -122,9 +122,9 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
      <dwciri:recordedBy rdf:resource ="http://viaf.org/viaf/263074474" />
      <dwc:recordNumber>7101</dwc:recordNumber>
      <!-- the TaxonConcept Ontology does not represent Event as a separate class -->
-     <dwc:eventDate>1983-11-16</dwc:eventDate>
-     <txn:startDate>1983-11-16</txn:startDate>
-     <txn:endDate>1983-11-16</txn:endDate>     
+     <dwc:eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-11-16</dwc:eventDate>
+     <txn:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-11-16</txn:startDate>
+     <txn:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1983-11-16</txn:endDate>     
      <txn:occurrenceHasIndividual rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#Individual" />
      <txn:occurrenceHasSpeciesConcept rdf:resource="http://lod.taxonconcept.org/ses/3tYE7#Species" />
      <txn:occurrenceHasArea rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#Area" />
@@ -234,7 +234,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 	txn:identificationHasSpeciesConcept <http://lod.taxonconcept.org/ses/3tYE7#Species>;
 	txn:identificationOfIndividual <http://arctos.database.museum/guid/MVZ:Mamm:165861#Individual>;
 	dwc:class "Mammalia";
-	dwc:dateIdentified "1999-01-27";
+	dwc:dateIdentified "1999-01-27"^^xsd:date;
 	dwc:family "Ctenomyidae";
 	dwc:genus "Ctenomys";
 	dwc:identificationRemarks "ID from citation in Pearson 1985."@en;
@@ -264,11 +264,11 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 	a 	txn:SpeciesIndividual.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#Occurrence> 
-	txn:endDate "1983-11-16";
+	txn:endDate "1983-11-16"^^xsd:date;
 	txn:occurrenceHasArea <http://arctos.database.museum/guid/MVZ:Mamm:165861#Area>;
 	txn:occurrenceHasIndividual <http://arctos.database.museum/guid/MVZ:Mamm:165861#Individual>;
 	txn:occurrenceHasSpeciesConcept <http://lod.taxonconcept.org/ses/3tYE7#Species>;
-	txn:startDate "1983-11-16";
+	txn:startDate "1983-11-16"^^xsd:date;
 	dc:creator "University of California Berkeley Museum of Vertebrate Zoology";
 	dcterms:created "1983-11-16";
 	dcterms:creator <http://biocol.org/urn:lsid:biocol.org:col:34777>;
@@ -280,7 +280,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 	dwc:basisOfRecord "PreservedSpecimen";
 	dwc:catalogNumber "165861";
 	dwc:collectionCode "Mamm";
-	dwc:eventDate "1983-11-16";
+	dwc:eventDate "1983-11-16"^^xsd:date;
 	dwc:institutionCode "MVZ";
 	dwc:otherCatalogNumbers "12272";
 	dwc:preparations "skin; skull; skeleton";
