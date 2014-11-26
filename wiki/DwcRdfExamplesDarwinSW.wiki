@@ -55,7 +55,6 @@ xmlns:xmpRights="http://ns.adobe.com/xap/1.0/rights/"
 xmlns:dsw="http://purl.org/dsw/"
 xmlns:mix="http://www.loc.gov/mix/v20"
 xmlns:bibo="http://purl.org/ontology/bibo/"
-xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
 >
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#ind">
      <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Organism" />
@@ -193,7 +192,6 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 @prefix dsw: <http://purl.org/dsw/>.
 @prefix mix: <http://www.loc.gov/mix/v20>.
 @prefix bibo: <http://purl.org/ontology/bibo/>.
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 
 <http://arctos.database.museum/guid/MVZ:Mamm:165861> 
 	dc:creator "University of California Berkeley Museum of Vertebrate Zoology";
@@ -334,8 +332,6 @@ xmlns:Iptc4xmpExt="http://iptc.org/std/Iptc4xmpExt/2008-02-29/"
 xmlns:dsw="http://purl.org/dsw/"
 xmlns:mix="http://www.loc.gov/mix/v20"
 xmlns:mbank="http://www.morphbank.net/schema/morphbank#"
-xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
-xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 >
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-baskauf/87880">
