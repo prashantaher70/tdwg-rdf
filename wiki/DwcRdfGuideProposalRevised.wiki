@@ -1192,7 +1192,7 @@ RDF/XML
       <dwc:measurementUnit>mm</dwc:measurementUnit> 
       <dwciri:measurementUnit rdf:resource="http://mimi.case.edu/ontologies/2009/1/UnitsOntology#millimeter"/>
       <dwc:measurementAccuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</dwc:measurementAccuracy>
-      <dwc:measurementDeterminedDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-08-22</dwc:measurementDeterminedDate>
+      <dwc:measurementDeterminedDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-08-22</dwc:measurementDeterminedDate>
       <dwc:measurementDeterminedBy>Ryan B Stephens</dwc:measurementDeterminedBy>
       <dwciri:measurementDeterminedBy rdf:resource="http://scholar.google.com/citations?user=RAsUdjoAAAAJ" />
       <dwc:measurementMethod>unspecified</dwc:measurementMethod>
@@ -1215,7 +1215,7 @@ Turtle
           dwc:measurementUnit "mm" ; 
           dwciri:measurementUnit <http://mimi.case.edu/ontologies/2009/1/UnitsOntology#millimeter> ; 
           dwc:measurementAccuracy "0.5"^^xsd:decimal ; 
-          dwc:measurementDeterminedDate "2009-08-22"^^xsd:dateTime ; 
+          dwc:measurementDeterminedDate "2009-08-22"^^xsd:date ; 
           dwc:measurementDeterminedBy "Ryan B Stephens" ; 
           dwciri:measurementDeterminedBy <http://scholar.google.com/citations?user=RAsUdjoAAAAJ> ; 
           dwc:measurementMethod "unspecified" ; 
