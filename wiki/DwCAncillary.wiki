@@ -25,9 +25,9 @@ The draft Darwin Core RDF Guide describes how to use Darwin Core terms as predic
 
 ==2 Documents==
 
-[TaxonInRDF Describing Taxon Concepts as RDF]
+[RecommendedIRISources Sources of IRIs recommended for use as controlled values]
 
-There is currently no TDWG standard which contains terms that are suitable for expressing taxon concepts as RDF. The Darwin Core RDF Guide discusses how {{{dwc:Taxon}}} terms can be used as convenience terms to provide metadata about taxa, but it does not specify how the taxa themselves should be described as RDF. Although not ratified standards, the TaxonConcept and TaxonName parts of the TDWG Ontology (based on the TCS Standard [http://www.tdwg.org/standards/117/]) can be used to express taxon concepts as RDF. This document discusses how some basic aspects of taxon concepts (sensu TCS) can be expressed as RDF using terms from the TDWG Ontology. 
+A number of terms in the _dwciri:_ namespace recommend the use of well-known, controlled value IRIs.  This document lists terms that are intended for use with IRI values and sources of IRIs that are appropriate values for those terms.
 
 [DwcRdfExamplesTaxonConcept Examples using TaxonConcept Ontology object properties]
 
@@ -44,3 +44,9 @@ These examples assume the data model of BiSciCol (http://biscicol.blogspot.com/ 
 [DwcRdfOccurrences Examples of representing occurrences in RDF using "pure" Darwin Core]
 
 These examples assume no data model other than the one explicitly defined by Darwin Core, and use the RDF properties defined by Darwin Core to link class instances. 
+
+[TaxonInRDF Describing Taxon Concepts as RDF]
+
+Note: this document is being maintained for reference purposes.  It does not contain recommended strategies for expressing Taxon Concepts as RDF.  
+
+There is currently no TDWG standard which contains terms that are suitable for expressing taxon concepts as RDF. The Darwin Core RDF Guide discusses how {{{dwc:Taxon}}} terms can be used as convenience terms to provide metadata about taxa, but it does not specify how the taxa themselves should be described as RDF. Although not ratified standards, the TaxonConcept and TaxonName parts of the TDWG Ontology (based on the TCS Standard [http://www.tdwg.org/standards/117/]) can be used to express taxon concepts as RDF. This document discusses how some basic aspects of taxon concepts (sensu TCS) can be expressed as RDF using terms from the TDWG Ontology. 
