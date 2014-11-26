@@ -420,7 +420,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 	<Iptc4xmpExt:creditLine>Steven J. Baskauf http://bioimages.vanderbilt.edu/</Iptc4xmpExt:creditLine>
 	<mbank:view>463267</mbank:view>
 	<dcterms:title xml:lang="en">Hedyotis crassifolia (Rubiaceae) - whole plant - in flower - general view</dcterms:title>
-	<xmpRights:UsageTerms>Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license</xmpRights:UsageTerms>
+	<xmpRights:UsageTerms xml:lang="en">Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license</xmpRights:UsageTerms>
 	<xmpRights:WebStatement>http://creativecommons.org/licenses/by-nc-sa/3.0/</xmpRights:WebStatement>
 	<dcterms:description xml:lang="en">Image of Hedyotis crassifolia (Rubiaceae) - whole plant - in flower - general view</dcterms:description>
 	<ac:attributionLinkURL>http://bioimages.vanderbilt.edu/contact/baskauf.htm</ac:attributionLinkURL>
@@ -530,7 +530,7 @@ ServiceAccessPoints provide information about alternative versions of the image 
 	<Iptc4xmpExt:creditLine>Steven J. Baskauf http://bioimages.vanderbilt.edu/</Iptc4xmpExt:creditLine>
 	<mbank:view>463931</mbank:view>
 	<dcterms:title xml:lang="en">Hedyotis crassifolia (Rubiaceae) - fruit - lateral or general close-up</dcterms:title>
-	<xmpRights:UsageTerms>Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license</xmpRights:UsageTerms>
+	<xmpRights:UsageTerms xml:lang="en">Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license</xmpRights:UsageTerms>
 	<xmpRights:WebStatement>http://creativecommons.org/licenses/by-nc-sa/3.0/</xmpRights:WebStatement>
 	<dcterms:description xml:lang="en">Image of Hedyotis crassifolia (Rubiaceae) - fruit - lateral or general close-up</dcterms:description>
 	<ac:attributionLinkURL>http://bioimages.vanderbilt.edu/contact/baskauf.htm</ac:attributionLinkURL>
@@ -785,7 +785,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 
 <http://bioimages.vanderbilt.edu/baskauf/87880> 
 	Iptc4xmpExt:creditLine "Steven J. Baskauf http://bioimages.vanderbilt.edu/";
-	xmpRights:UsageTerms "Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license";
+	xmpRights:UsageTerms "Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license"@en;
 	xmpRights:WebStatement "http://creativecommons.org/licenses/by-nc-sa/3.0/";
 	xmpRights:owner "Steven J. Baskauf";
 	dc:creator "Steven J. Baskauf";
@@ -844,7 +844,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	
 <http://bioimages.vanderbilt.edu/baskauf/87937> 
 	Iptc4xmpExt:creditLine "Steven J. Baskauf http://bioimages.vanderbilt.edu/";
-	xmpRights:UsageTerms "Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license";
+	xmpRights:UsageTerms "Available under Creative Commons Attribution-Noncommercial-Share Alike 3.0 license"@en;
 	xmpRights:WebStatement "http://creativecommons.org/licenses/by-nc-sa/3.0/";
 	xmpRights:owner "Steven J. Baskauf";
 	dc:creator "Steven J. Baskauf";
