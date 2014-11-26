@@ -60,6 +60,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
 >
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#ind">
      <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Organism" />
+     <dwc:organismScope>multicellular organism</dwc:organismScope>
      <dcterms:type rdf:resource ="http://purl.org/dc/dcmitype/PhysicalObject" />
      <dcterms:description xml:lang="en">Organism http://arctos.database.museum/guid/MVZ:Mamm:165861#ind</dcterms:description>
      <dsw:hasIdentification rdf:resource ="http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson" />
@@ -252,6 +253,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 	dsw:hasDerivative <http://arctos.database.museum/guid/MVZ:Mamm:165861>;
 	dsw:hasIdentification <http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson>;
 	dsw:hasOccurrence <http://arctos.database.museum/guid/MVZ:Mamm:165861#occ>;
+        dwc:organismScope "multicellular organism";
 	a dwc:Organism.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#loc> 
