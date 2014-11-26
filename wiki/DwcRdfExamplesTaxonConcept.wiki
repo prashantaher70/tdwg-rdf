@@ -5,7 +5,7 @@ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png  [http://www.tdwg.or
 
 =Examples of Darwin Core as RDF using !TaxonConcept Ontology object properties=
 
-*Date:* (Created) 30 June 2013; (Last modified) 9 October 2013
+*Date:* (Created) 30 June 2013; (Last modified) 26 November 2014
 
 *Status:* Not part of any standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 3] document); intended to complement the RDF Guide of the Darwin Core Standard ([http://www.tdwg.org/standards/450/])
 
@@ -28,7 +28,7 @@ In some cases, the TaxonConcept object properties have range and domain properti
 
 For an example of an occurrence record marked up using the TaxonConcept Ontology exclusively, see http://ocs.taxonconcept.org/ocs/f522444a-2dd9-400e-be59-47213ef38cb9.rdf .  That file was used as a reference for the creation of this example.  In that example, the occurrence was documented by an image and the basisOfRecord was given as the image.  It is not clear whether the example given here is correct in including the specimen information as part of the metadata for the occurrence instance (there is no known property for relating occurrences to specimens in the ontology). Thus this use reflects the conceptual view that specimens are subClassOf occurrence, which is not necessarily the view of the TaxonConcept Ontology.   
 
-Also note that the taxon concept to which the {{{dwcuri:toTaxonConcept}}} property links is not specifically based on the TDWG TCS Model, but on the somewhat broader view of a taxon concept that is embodied in the TaxonConcept Ontology.  
+Also note that the taxon concept to which the {{{dwciri:toTaxonConcept}}} property links is not specifically based on the TDWG TCS Model, but on the somewhat broader view of a taxon concept that is embodied in the TaxonConcept Ontology.  
 
 == 1 A specimen and its associated occurrence ==
 
@@ -50,7 +50,7 @@ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:owl="http://www.w3.org/2002/07/owl#"
 xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
 xmlns:dwctype="http://rs.tdwg.org/dwc/dwctype/"
-xmlns:dwcuri="http://rs.tdwg.org/dwc/uri/"
+xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:dcmitype="http://purl.org/dc/dcmitype/"
@@ -77,7 +77,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
     <rdf:type rdf:resource ="http://lod.taxonconcept.org/ontology/txn.owl#Identification" />
     <dwc:identifiedBy>Oliver P. Pearson</dwc:identifiedBy>
-    <dwcuri:identifiedBy rdf:resource ="http://viaf.org/viaf/263074474" />
+    <dwciri:identifiedBy rdf:resource ="http://viaf.org/viaf/263074474" />
     <dwc:dateIdentified>1999-01-27</dwc:dateIdentified>
     <dwc:scientificName>Ctenomys sociabilis Pearson and Christie, 1985</dwc:scientificName>
     <dwc:vernacularName xml:lang="en">colonial tuco-tuco</dwc:vernacularName>
@@ -93,7 +93,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
     <dwc:taxonRank>species</dwc:taxonRank>
     <dwc:nameAccordingTo>Oliver P. Pearson. 1985. Los tuco-tucos (genera Ctenomys) de los Parques Nacionales Lanin y Nahuel Huapi, Argentina. Historia Natural 5(37):337-343.</dwc:nameAccordingTo>
     <dwc:identificationRemarks xml:lang="en">ID from citation in Pearson 1985.</dwc:identificationRemarks>
-    <dwcuri:toTaxonConcept rdf:resource="http://lod.taxonconcept.org/ses/3tYE7#Species"/>
+    <dwciri:toTaxon rdf:resource="http://lod.taxonconcept.org/ses/3tYE7#Species"/>
     <txn:identificationHasSpeciesConcept rdf:resource="http://lod.taxonconcept.org/ses/3tYE7#Species"/>
     <txn:identificationOfIndividual rdf:resource ="http://arctos.database.museum/guid/MVZ:Mamm:165861#Individual" />
     <txn:identificationHasOccurrence rdf:resource ="http://arctos.database.museum/guid/MVZ:Mamm:165861#Occurrence" />
@@ -116,11 +116,11 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
      <dwc:otherCatalogNumbers>12272</dwc:otherCatalogNumbers>
      <dcterms:identifier>MVZ:Mamm:165861</dcterms:identifier>
      <dcterms:identifier>http://arctos.database.museum/guid/MVZ:Mamm:165861</dcterms:identifier>     
-     <dwcuri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:34777" />
+     <dwciri:inCollection rdf:resource ="http://biocol.org/urn:lsid:biocol.org:col:34777" />
      <dwc:preparations>skin; skull; skeleton</dwc:preparations>
      <dwc:sex>female</dwc:sex>
      <dwc:recordedBy>Oliver P. Pearson</dwc:recordedBy>
-     <dwcuri:recordedBy rdf:resource ="http://viaf.org/viaf/263074474" />
+     <dwciri:recordedBy rdf:resource ="http://viaf.org/viaf/263074474" />
      <dwc:recordNumber>7101</dwc:recordNumber>
      <!-- the TaxonConcept Ontology does not represent Event as a separate class -->
      <dwc:eventDate>1983-11-16</dwc:eventDate>
@@ -154,7 +154,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
      <dwc:locationRemarks xml:lang="en">The colony was just N of the fence and just E of the stream according to Michael Christie, who verified on Google Earth (about 40. 58' 06 to 07" and 71. 11' 30 to 31")</dwc:locationRemarks>
      <dwc:georeferenceSources>Google Earth (assumed v.6)</dwc:georeferenceSources>
      <dwc:georeferenceProtocol>MaNIS georeferencing guidelines</dwc:georeferenceProtocol>
-     <dwcuri:inDescribedPlace rdf:resource="http://sws.geonames.org/3846077/"/>
+     <dwciri:inDescribedPlace rdf:resource="http://sws.geonames.org/3846077/"/>
      <txn:areaHasOccurrence rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#Occurrence" />
      <txn:areaHasIndividual rdf:resource="http://arctos.database.museum/guid/MVZ:Mamm:165861#Individual" />
      <txn:areaHasObservedSpeciesConcept rdf:resource="http://lod.taxonconcept.org/ses/3tYE7#Species" />
@@ -189,7 +189,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
 @prefix dwctype: <http://rs.tdwg.org/dwc/dwctype/>.
-@prefix dwcuri: <http://rs.tdwg.org/dwc/uri/>.
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
 @prefix dcmitype: <http://purl.org/dc/dcmitype/>.
@@ -223,7 +223,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 	dwc:minimumElevationInMeters "1075"^^xsd:int;
 	dwc:stateProvince "Neuquen";
 	dwc:verbatimLocality "Estancia Fortin Chacabuco, 3 km S and 2 km W Co. Puntudo";
-	dwcuri:inDescribedPlace <http://sws.geonames.org/3846077/>;
+	dwciri:inDescribedPlace <http://sws.geonames.org/3846077/>;
 	a 	txn:Area,
 	dcterms:Location;
 	owl:sameAs <http://www.w3.org/2003/01/geo/wgs84_pos#-40.9684722,-71.1918056;u=30>;
@@ -252,8 +252,8 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 	dwc:vernacularName 
 		"colonial tuco-tuco"@en,
 		"tuco-tuco colonial"@es;
-	dwcuri:identifiedBy <http://viaf.org/viaf/263074474>;
-	dwcuri:toTaxonConcept <http://lod.taxonconcept.org/ses/3tYE7#Species>;
+	dwciri:identifiedBy <http://viaf.org/viaf/263074474>;
+	dwciri:toTaxonConcept <http://lod.taxonconcept.org/ses/3tYE7#Species>;
 	a 	txn:Identification,
 		dwctype:Identification.
 		
@@ -289,8 +289,8 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/taxonconcept-occurren
 	dwc:recordNumber "7101";
 	dwc:recordedBy "Oliver P. Pearson";
 	dwc:sex "female";
-	dwcuri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:34777>;
-	dwcuri:recordedBy <http://viaf.org/viaf/263074474>;
+	dwciri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:34777>;
+	dwciri:recordedBy <http://viaf.org/viaf/263074474>;
 	a 	txn:Occurrence,
 		dwctype:Occurrence,
 		dwctype:PreservedSpecimen.
