@@ -44,7 +44,6 @@ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:owl="http://www.w3.org/2002/07/owl#"
 xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
-xmlns:dwctype="http://rs.tdwg.org/dwc/dwctype/"
 xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -69,7 +68,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
 </rdf:Description>
 
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson">
-    <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
+    <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Identification" />
     <dwc:identifiedBy>Oliver P. Pearson</dwc:identifiedBy>
     <dwciri:identifiedBy rdf:resource ="http://viaf.org/viaf/263074474" />
     <dwc:dateIdentified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-27</dwc:dateIdentified>
@@ -93,7 +92,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
 </rdf:Description>
 
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861">
-     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen" />
+     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/PreservedSpecimen" />
      <dcterms:type rdf:resource ="http://purl.org/dc/dcmitype/PhysicalObject" />
      <dcterms:description xml:lang="en">Preserved specimen http://arctos.database.museum/guid/MVZ:Mamm:165861</dcterms:description>
      <dwc:basisOfRecord>PreservedSpecimen</dwc:basisOfRecord>
@@ -115,7 +114,7 @@ xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
 </rdf:Description>
 
 <rdf:Description rdf:about="http://arctos.database.museum/guid/MVZ:Mamm:165861#occ">
-     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
+     <rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Occurrence" />
      <dwc:recordedBy>Oliver P. Pearson</dwc:recordedBy>
      <dwciri:recordedBy rdf:resource ="http://viaf.org/viaf/263074474" />
      <dwc:recordNumber>7101</dwc:recordNumber>
@@ -183,7 +182,6 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
-@prefix dwctype: <http://rs.tdwg.org/dwc/dwctype/>.
 @prefix dwciri: <http://rs.tdwg.org/dwc/iri/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
@@ -216,7 +214,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 	dwc:preparations "skin; skull; skeleton";
 	dwc:sex "female";
 	dwciri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:34777>;
-	a dwctype:PreservedSpecimen.
+	a dwc:PreservedSpecimen.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#1999-01-27pearson> 
 	dsw:idBasedOn <http://arctos.database.museum/guid/MVZ:Mamm:165861>;
@@ -239,7 +237,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 	                  "tuco-tuco colonial"@es;
 	dwciri:identifiedBy <http://viaf.org/viaf/263074474>;
 	dwciri:toTaxon <http://zoobank.org/306F5618-D154-47D5-81BB-697CB2A83EE7>;
-	a dwctype:Identification.
+	a dwc:Identification.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861#eve> 
 	dsw:eventOf <http://arctos.database.museum/guid/MVZ:Mamm:165861#occ>;
@@ -284,7 +282,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-specimen.ttl 
 	dwc:recordNumber "7101";
 	dwc:recordedBy "Oliver P. Pearson";
 	dwciri:recordedBy <http://viaf.org/viaf/263074474>;
-	a dwctype:Occurrence.
+	a dwc:Occurrence.
 	
 <http://arctos.database.museum/guid/MVZ:Mamm:165861.rdf> 
 	dc:creator "Arctos Museum Database";
@@ -324,7 +322,6 @@ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 xmlns:owl="http://www.w3.org/2002/07/owl#"
 xmlns:dwc="http://rs.tdwg.org/dwc/terms/"
-xmlns:dwctype="http://rs.tdwg.org/dwc/dwctype/"
 xmlns:dwciri="http://rs.tdwg.org/dwc/iri/"
 xmlns:dcterms="http://purl.org/dc/terms/"
 xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -368,7 +365,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-baskauf/87880#2013-05-08baskauf">
 	<dcterms:description xml:lang="en">Determination of Hedyotis crassifolia Raf.  sensu Gleason Cronquist 1991 for the organism http://bioimages.vanderbilt.edu/ind-baskauf/87880</dcterms:description>
-	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
+	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Identification" />
 	<dwc:identifiedBy>Steven J. Baskauf</dwc:identifiedBy>
 	<dwciri:identifiedBy rdf:resource ="http://viaf.org/viaf/63557389" />
 	<dwc:dateIdentified>2013-05-08</dwc:dateIdentified>
@@ -389,7 +386,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/ind-baskauf/35052#2013-08-21estesld">
 	<dcterms:description xml:lang="en">Determination of Houstonia pusilla Schoepf sensu Terrell 1996 for the organism http://bioimages.vanderbilt.edu/ind-baskauf/87880</dcterms:description>
-	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Identification" />
+	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Identification" />
 	<dwc:identifiedBy>L. Dwayne Estes</dwc:identifiedBy>
 	<dwc:dateIdentified>2013-08-21</dwc:dateIdentified>
     <dwc:scientificName>Houstonia pusilla Schoepf</dwc:scientificName>
@@ -443,7 +440,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 </rdf:Description>
 	
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87880#occ">
-	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
+	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Occurrence" />
 	<dwc:recordedBy>Steven J. Baskauf</dwc:recordedBy>
 	<dwciri:recordedBy rdf:resource ="http://viaf.org/viaf/63557389" />
 	<dsw:atEvent rdf:resource ="http://bioimages.vanderbilt.edu/baskauf/87880#eve" />
@@ -553,7 +550,7 @@ ServiceAccessPoints provide information about alternative versions of the image 
 </rdf:Description>
 	
 <rdf:Description rdf:about="http://bioimages.vanderbilt.edu/baskauf/87937#occ">
-	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/Occurrence" />
+	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/Occurrence" />
 	<dwc:recordedBy>Steven J. Baskauf</dwc:recordedBy>
 	<dwciri:recordedBy rdf:resource ="http://viaf.org/viaf/63557389" />
 	<dsw:atEvent rdf:resource ="http://bioimages.vanderbilt.edu/baskauf/87937#eve" />
@@ -608,7 +605,7 @@ ServiceAccessPoints provide information about alternative versions of the image 
 </rdf:Description>
 
 <rdf:Description rdf:about="http://apsc.apsu.edu/APSC:vascular:39274">
-	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/dwctype/PreservedSpecimen" />
+	<rdf:type rdf:resource ="http://rs.tdwg.org/dwc/terms/PreservedSpecimen" />
 	<dcterms:type rdf:resource ="http://purl.org/dc/dcmitype/PhysicalObject" />
 	<dcterms:description xml:lang="en">Preserved specimen http://apsc.apsu.edu/APSC:vascular:39274</dcterms:description>
 	<dwc:basisOfRecord>PreservedSpecimen</dwc:basisOfRecord>
@@ -670,7 +667,6 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/>.
-@prefix dwctype: <http://rs.tdwg.org/dwc/dwctype/>.
 @prefix dwciri: <http://rs.tdwg.org/dwc/iri/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
@@ -722,7 +718,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dwc:taxonRank "species";
 	dwc:vernacularName "small bluet"@en;
 	dwciri:identifiedBy <http://viaf.org/viaf/63557389>;
-	a dwctype:Identification.
+	a dwc:Identification.
 	
 <http://bioimages.vanderbilt.edu/ind-baskauf/35052#2013-08-21estesld> 
 	dcterms:description "Determination of Houstonia pusilla Schoepf sensu Terrell 1996 for the organism http://bioimages.vanderbilt.edu/ind-baskauf/87880"@en;
@@ -738,7 +734,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dwc:specificEpithet "pusilla";
 	dwc:taxonRank "species";
 	dwc:vernacularName "tiny bluet"@en;
-	a dwctype:Identification.	
+	a dwc:Identification.	
 	
 		
 <http://bioimages.vanderbilt.edu/baskauf/87880#occ> 
@@ -747,7 +743,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dsw:occurrenceOf <http://bioimages.vanderbilt.edu/ind-baskauf/87880>;
 	dwc:recordedBy "Steven J. Baskauf";
 	dwciri:recordedBy <http://viaf.org/viaf/63557389>;
-	a dwctype:Occurrence.
+	a dwc:Occurrence.
 <http://bioimages.vanderbilt.edu/baskauf/87880#eve> 
 	dsw:eventOf <http://bioimages.vanderbilt.edu/baskauf/87880#occ>;
 	dsw:locatedAt <http://bioimages.vanderbilt.edu/baskauf/87880#loc>;
@@ -760,7 +756,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dsw:occurrenceOf <http://bioimages.vanderbilt.edu/ind-baskauf/87880>;
 	dwc:recordedBy "Steven J. Baskauf";
 	dwciri:recordedBy <http://viaf.org/viaf/63557389>;
-	a dwctype:Occurrence.
+	a dwc:Occurrence.
 <http://bioimages.vanderbilt.edu/baskauf/87937#eve> 
 	dsw:eventOf <http://bioimages.vanderbilt.edu/baskauf/87937#occ>;
 	dsw:locatedAt <http://bioimages.vanderbilt.edu/baskauf/87880#loc>;
@@ -923,7 +919,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 	dwc:institutionCode "APSC";
 	dwc:preparations "whole plant - dried";
 	dwciri:inCollection <http://biocol.org/urn:lsid:biocol.org:col:xxxxx>;
-	a dwctype:PreservedSpecimen.
+	a dwc:PreservedSpecimen.
 	
 
 <http://bioimages.vanderbilt.edu/ind-baskauf/87880.rdf> 
