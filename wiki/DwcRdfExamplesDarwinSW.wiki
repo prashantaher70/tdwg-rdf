@@ -344,7 +344,7 @@ xmlns:txn="http://lod.taxonconcept.org/ontology/txn.owl#"
 	<!--Basic information about the organism-->
 	<dcterms:identifier>http://bioimages.vanderbilt.edu/ind-baskauf/87880</dcterms:identifier>
 	<dwc:organismRemarks xml:lang="en">Organism represents a small population within a radius of about 1 m.</dwc:organismRemarks>
-	<!-- It is not clear exactly what establishmentMeans should be a property of.  Some say dwc:Occurrence rather than an Organism -->
+	<dwc:organismScope>colony</dwc:organismScope>	<!-- It is not clear exactly what establishmentMeans should be a property of.  Some say dwc:Occurrence rather than an Organism -->
 	<dwc:establishmentMeans>native</dwc:establishmentMeans>
 	
 	<!-- Resources derived from the organism -->
@@ -696,6 +696,7 @@ Download [http://tdwg-rdf.googlecode.com/svn/trunk/example/dsw-0-3-images.ttl th
 		<http://bioimages.vanderbilt.edu/baskauf/87880#occ>,
 		<http://bioimages.vanderbilt.edu/baskauf/87937#occ>;
 	dwc:organismRemarks "Organism represents a small population within a radius of about 1 m."@en;
+        dwc:organismScope "colony";
 	dwc:establishmentMeans "native";
 	a dwc:Organism;
 	foaf:depiction 
