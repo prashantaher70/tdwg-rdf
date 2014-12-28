@@ -5,7 +5,7 @@
 
 = Cover page for RDF Guide proposed addition to Darwin Core =
 
-[DwcRdfGuideFinal Final version of the RDF Guide Proposal] See [#Version_history below] for version history.  This document was revised in December 2014.
+[DwcRdfGuideFinal Final version of the RDF Guide Proposal]. See [#Version_history below] for version history.  This document was revised in December 2014.
 
 == Background ==
 
