@@ -1,14 +1,14 @@
-#summary Version of RDF guide for submission to TDWG Executive
+#summary Version of RDF guide approved by the TDWG Executive
 #sidebar DwcRdfSidebar
 
 [http://www.tdwg.org/ http://tdwg-rdf.googlecode.com/svn/trunk/file/tdwg-logo.png]
 = Darwin Core RDF Guide =
 
-*Title:* Darwin Core RDF Guide (final submission)
+*Title:* Darwin Core RDF Guide
 
-*Date issued:* x
+*Date issued:* 2015-03-27
 
-*Date modified:* x
+*Date modified:* 2015-03-27
 
 *Abstract:* This guide is intended to facilitate the use of Darwin Core terms in the Resource Description Framework (RDF). It explains basic features of RDF and provides details of how to expose data in the form of RDF using Darwin Core terms and terms from other key vocabularies.  It defines terms in the namespace {{{http://rs.tdwg.org/dwc/iri/}}} which are intended for use excusively with non-literal objects.  
 
@@ -20,13 +20,13 @@
 
 *Creator:* Darwin Core and RDF/OWL Task Groups
 
-*Identifier:* http://rs.tdwg.org/dwc/2014-xx-xx/terms/guides/rdf/ (eventually)
+*Identifier:* http://rs.tdwg.org/dwc/2015-xx-xx/terms/guides/rdf/ (eventually)
 
 *Latest Version* http://rs.tdwg.org/dwc/terms/guides/rdf/ (eventually)
 
 *Replaces:* N/A
 
-*Document Status:* Current Standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 2] non-normative document) (upon acceptance under the [http://rs.tdwg.org/dwc/terms/namespace/index.htm Darwin Core Namespace Policy])
+*Document Status:* Current Standard ([http://www.tdwg.org/fileadmin/tdwg_std_drafts/tdwg_standards_documentation_specification.html#a_3 Type 2] non-normative document)
 
 *Table of Contents:*
 
@@ -1320,6 +1320,6 @@ See [#2.7_Darwin_Core_convenience_terms Section 2.7] for more information on "co
 ||dwc:previousIdentifications||There is no consensus object property for associating identifications with resources of other classes.  From whatever scheme you have chosen to provide object properties, use same object property as used for the most recent identification but provide an earlier _dwc:dateIdentified_ value.||
 ||dwc:organismScope||Use _rdf:type_ with a non-literal object.  See the comment at [http://rs.tdwg.org/dwc/terms/organismScope].||
 
-[http://creativecommons.org/licenses/by/3.0/us/ http://i.creativecommons.org/l/by/3.0/88x31.png] Copyright 2014 - Biodiversity Information Standards - TDWG - [http://www.tdwg.org/about-tdwg/contact-us/ Contact Us]
+[http://creativecommons.org/licenses/by/3.0/us/ http://i.creativecommons.org/l/by/3.0/88x31.png] Copyright 2015 - Biodiversity Information Standards - TDWG - [http://www.tdwg.org/about-tdwg/contact-us/ Contact Us]
 
 Except where otherwise noted, content on this site is licensed under a [http://creativecommons.org/licenses/by/4.0/ Creative Commons Attribution 4.0 International License].
